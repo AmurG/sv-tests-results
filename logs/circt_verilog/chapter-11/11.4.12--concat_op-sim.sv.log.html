@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>concat_op_sim</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>concatenation operator simulation test</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>11.4.12</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-11/11.4.12--concat_op-sim.sv.html" target="file-frame">tests/chapter-11/11.4.12--concat_op-sim.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:10</dd></div>
+        <div><dt>time elapsed</dt><dd>0.044s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-11/11.4.12--concat_op-sim.sv.html" target="file-frame">tests/chapter-11/11.4.12--concat_op-sim.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %c-30446_i16 = hw.constant -30446 : i16</pre>
+      <pre>    %0 = sim.fmt.literal &#34;)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;:assert: (0x8912 == &#34;</pre>
+      <pre>    %2 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i16 = hw.constant 0 : i16</pre>
+      <pre>    %a = llhd.sig %c0_i16 : i16</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %a, %c-30446_i16 after %2 : i16</pre>
+      <pre>      %3 = llhd.prb %a : i16</pre>
+      <pre>      %4 = sim.fmt.int 10 0 0 %3 : i16</pre>
+      <pre>      %5 = sim.fmt.concat (%1, %4, %0)</pre>
+      <pre>      sim.proc.print %5</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

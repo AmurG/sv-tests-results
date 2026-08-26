@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_pr1866215b_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr1866215b.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr1866215b.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.046s</dd></div>
+        <div><dt>ram usage</dt><dd>23296 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr1866215b.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr1866215b.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @A(out CH : !hw.struct&lt;value: i16, unknown: i16&gt;, out CL : !hw.struct&lt;value: i32, unknown: i32&gt;, out SH : !hw.struct&lt;value: i16, unknown: i16&gt;, out SL : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %0 = hw.aggregate_constant [1431655765 : i32, 0 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1431655766 : i32, 0 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %2 = hw.aggregate_constant [255 : i16, 0 : i16] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %3 = hw.aggregate_constant [-1 : i6, 0 : i6] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>    %4 = hw.aggregate_constant [-1 : i7, 0 : i7] : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    hw.instance &#34;B0&#34; @B(CH: %3: !hw.struct&lt;value: i6, unknown: i6&gt;, CL: %0: !hw.struct&lt;value: i32, unknown: i32&gt;, SH: %4: !hw.struct&lt;value: i7, unknown: i7&gt;, SL: %1: !hw.struct&lt;value: i32, unknown: i32&gt;) -&gt; ()</pre>
+      <pre>    hw.output %2, %0, %2, %1 : !hw.struct&lt;value: i16, unknown: i16&gt;, !hw.struct&lt;value: i32, unknown: i32&gt;, !hw.struct&lt;value: i16, unknown: i16&gt;, !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>  }</pre>
+      <pre>  hw.module private @B(in %CH : !hw.struct&lt;value: i6, unknown: i6&gt;, in %CL : !hw.struct&lt;value: i32, unknown: i32&gt;, in %SH : !hw.struct&lt;value: i7, unknown: i7&gt;, in %SL : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %value = hw.struct_extract %CH[&#34;value&#34;] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %CH[&#34;unknown&#34;] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>    %0 = comb.concat %false, %value : i1, i6</pre>
+      <pre>    %1 = comb.concat %false, %unknown : i1, i6</pre>
+      <pre>    %2 = hw.struct_create (%0, %1) : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %value_0 = hw.struct_extract %SH[&#34;value&#34;] : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %unknown_1 = hw.struct_extract %SH[&#34;unknown&#34;] : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %3 = comb.concat %false, %value_0 : i1, i7</pre>
+      <pre>    %4 = comb.concat %false, %unknown_1 : i1, i7</pre>
+      <pre>    %5 = hw.struct_create (%3, %4) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    hw.instance &#34;C0&#34; @C(CH: %2: !hw.struct&lt;value: i7, unknown: i7&gt;, CL: %CL: !hw.struct&lt;value: i32, unknown: i32&gt;, SH: %5: !hw.struct&lt;value: i8, unknown: i8&gt;, SL: %SL: !hw.struct&lt;value: i32, unknown: i32&gt;) -&gt; ()</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>  hw.module private @C(in %CH : !hw.struct&lt;value: i7, unknown: i7&gt;, in %CL : !hw.struct&lt;value: i32, unknown: i32&gt;, in %SH : !hw.struct&lt;value: i8, unknown: i8&gt;, in %SL : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %0 = hw.aggregate_constant [-1 : i8, -1 : i8] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %2 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;, SL=&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;, SH=&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;, CL=&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;CH=&#34;</pre>
+      <pre>    %8 = llhd.constant_time &lt;1000000fs, 0d, 0e&gt;</pre>
+      <pre>    %9 = hw.aggregate_constant [-1 : i7, -1 : i7] : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %CH_0 = llhd.sig name &#34;CH&#34; %9 : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %10 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    llhd.drv %CH_0, %10 after %2 : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %CH_0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i7, unknown: i7&gt;&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %CH_0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i7, unknown: i7&gt;&gt;</pre>
+      <pre>    %CL_1 = llhd.sig name &#34;CL&#34; %1 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %13 = hw.struct_create (%value_4, %unknown_5) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %CL_1, %13 after %2 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %CL_1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %15 = llhd.sig.struct_extract %CL_1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %SH_2 = llhd.sig name &#34;SH&#34; %0 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %16 = hw.struct_create (%value_6, %unknown_7) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %SH_2, %16 after %2 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %17 = llhd.sig.struct_extract %SH_2[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %18 = llhd.sig.struct_extract %SH_2[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %SL_3 = llhd.sig name &#34;SL&#34; %1 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %19 = hw.struct_create (%value_8, %unknown_9) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %SL_3, %19 after %2 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %20 = llhd.sig.struct_extract %SL_3[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %21 = llhd.sig.struct_extract %SL_3[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.wait delay %8, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %22 = llhd.prb %11 : i7</pre>
+      <pre>      %23 = llhd.prb %12 : i7</pre>
+      <pre>      %24 = sim.fmt.fvint 16 2 4 %22, %23 : i7</pre>
+      <pre>      %25 = llhd.prb %14 : i32</pre>
+      <pre>      %26 = llhd.prb %15 : i32</pre>
+      <pre>      %27 = sim.fmt.fvint 16 8 4 %25, %26 : i32</pre>
+      <pre>      %28 = llhd.prb %17 : i8</pre>
+      <pre>      %29 = llhd.prb %18 : i8</pre>
+      <pre>      %30 = sim.fmt.fvint 16 2 4 %28, %29 : i8</pre>
+      <pre>      %31 = llhd.prb %20 : i32</pre>
+      <pre>      %32 = llhd.prb %21 : i32</pre>
+      <pre>      %33 = sim.fmt.fvint 16 8 4 %31, %32 : i32</pre>
+      <pre>      %34 = sim.fmt.concat (%7, %24, %6, %27, %5, %30, %4, %33, %3)</pre>
+      <pre>      sim.proc.print %34</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    %value = hw.struct_extract %CH[&#34;value&#34;] : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %CH[&#34;unknown&#34;] : !hw.struct&lt;value: i7, unknown: i7&gt;</pre>
+      <pre>    %value_4 = hw.struct_extract %CL[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown_5 = hw.struct_extract %CL[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %value_6 = hw.struct_extract %SH[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %unknown_7 = hw.struct_extract %SH[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %value_8 = hw.struct_extract %SL[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown_9 = hw.struct_extract %SL[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

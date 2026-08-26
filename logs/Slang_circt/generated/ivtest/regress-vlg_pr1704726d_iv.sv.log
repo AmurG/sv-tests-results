@@ -1,0 +1,110 @@
+name: regress-vlg_pr1704726d_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08515310287475586
+user_time: 0.020252
+system_time: 0.09594
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:40
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:12:8: error: redefinition of 'name0_s' with a different type: 'logic' vs 'logic signed[31:0]'
+  wire name0_s;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:4:13: note: previous definition here
+  parameter name0_s = 1; // signal
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:21:8: error: redefinition of 'name0_v'
+  wire name0_v;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:15:10: note: previous definition here
+  genvar name0_v;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:27:8: error: redefinition of 'name1_st'
+  wire name1_st;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:24:8: note: previous definition here
+  task name1_st;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:34:8: error: redefinition of 'name2_sf'
+  wire name2_sf;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:30:12: note: previous definition here
+  function name2_sf;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:37:8: error: redefinition of 'name3_si'
+  test name3_si(out[0]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:38:8: note: previous definition here
+  wire name3_si;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:44:8: error: redefinition of 'name4_sb'
+  wire name4_sb;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:41:18: note: previous definition here
+  initial begin: name4_sb
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:48:8: error: redefinition of 'name5_se' with a different type: 'logic' vs 'event'
+  wire name5_se;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:47:9: note: previous definition here
+  event name5_se;
+        ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:53:43: error: redefinition of 'name6_sgl'
+    for (i = 0; i < 2 ; i = i + 1) begin: name6_sgl
+                                          ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:57:8: note: previous definition here
+  wire name6_sgl;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:61:27: error: redefinition of 'name7_sgi'
+    if (parm == 1) begin: name7_sgi
+                          ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:65:8: note: previous definition here
+  wire name7_sgi;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:70:17: error: redefinition of 'name8_sgc'
+      1: begin: name8_sgc
+                ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:78:8: note: previous definition here
+  wire name8_sgc;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:73:23: error: redefinition of 'name8_sgc'
+      default: begin: name8_sgc
+                      ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:78:8: note: previous definition here
+  wire name8_sgc;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:82:12: error: redefinition of 'name9_sgb'
+    begin: name9_sgb
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:86:8: note: previous definition here
+  wire name9_sgb;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:37:17: warning: output net port 'out' coerced to 'inout' [-Wport-coercion]
+  test name3_si(out[0]);
+                ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726d.v:18:14: note: driven here
+      assign out[name0_v] = name0_v;
+             ^~~~~~~~~~~~
+Top level design units:
+    top
+
+
+Build failed: 12 errors, 1 warning

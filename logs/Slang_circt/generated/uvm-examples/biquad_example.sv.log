@@ -1,0 +1,66 @@
+name: biquad_example
+description: UVM example - biquad_example
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+tags: uvm-examples uvm-1.2
+type: simulation elaboration parsing
+timeout: 360
+unsynthesizable: 1
+simvariants: UVM_TESTNAME=biquad_smoke_test UVM_TESTNAME=biquad_test
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.8848686218261719
+user_time: 1.073687
+system_time: 1.131885
+ram_usage: 161232
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+in file included from ../../../third_party/tests/uvm-examples/biquad_example/tb/agents/apb_agent/apb_agent_pkg.sv:24:
+../../../third_party/tests/uvm-examples/biquad_example/tb/agents/apb_agent/apb_seq_item.svh:109:20: error: no member named 'sprint' in 'm_uvm_printer_knobs'
+  if(printer.knobs.sprint == 0) begin
+     ~~~~~~~~~~~~~ ^
+in file included from ../../../third_party/tests/uvm-examples/biquad_example/tb/agents/apb_agent/apb_agent_pkg.sv:28:
+../../../third_party/tests/uvm-examples/biquad_example/tb/agents/apb_agent/apb_coverage_monitor.svh:37:20: error: identifier 'analysis_txn' used before its declaration
+OPCODE: coverpoint analysis_txn.we {
+                   ^~~~~~~~~~~~
+../../../third_party/tests/uvm-examples/biquad_example/tb/agents/apb_agent/apb_coverage_monitor.svh:46:14: note: declared here
+apb_seq_item analysis_txn;
+             ^
+in file included from ../../../third_party/tests/uvm-examples/biquad_example/tb/agents/signal_agent/signal_agent_pkg.sv:25:
+../../../third_party/tests/uvm-examples/biquad_example/tb/agents/signal_agent/signal_seq_item.svh:80:20: error: no member named 'sprint' in 'm_uvm_printer_knobs'
+  if(printer.knobs.sprint == 0) begin
+     ~~~~~~~~~~~~~ ^
+in file included from ../../../third_party/tests/uvm-examples/biquad_example/tb/agents/signal_agent/signal_agent_pkg.sv:27:
+../../../third_party/tests/uvm-examples/biquad_example/tb/agents/signal_agent/signal_driver.svh:20:10: error: time scale declaration must come before all other items in scope
+timeunit 1ns;
+         ^~~
+../../../third_party/tests/uvm-examples/biquad_example/tb/agents/signal_agent/signal_driver.svh:21:15: error: time scale declaration must come before all other items in scope
+timeprecision 1ps;
+              ^~~
+in file included from ../../../third_party/tests/uvm-examples/biquad_example/tb/sequences/biquad_vseq_pkg.sv:12:
+../../../third_party/tests/uvm-examples/biquad_example/tb/sequences/biquad_vseq.svh:36:1: error: 'setup_coefficients' is not a type
+setup_coefficients c_setup = setup_coefficients::type_id::create("c_setup");
+^~~~~~~~~~~~~~~~~~
+../../../third_party/tests/uvm-examples/biquad_example/tb/sequences/biquad_vseq.svh:36:30: error: unknown class or package 'setup_coefficients'
+setup_coefficients c_setup = setup_coefficients::type_id::create("c_setup");
+                             ^~~~~~~~~~~~~~~~~~
+Top level design units:
+    biquad_tb
+
+
+Build failed: 7 errors, 1 warning

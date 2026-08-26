@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>operations-on-unpacked-arrays-rw</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test unpacked arrays operations support (R &amp; W)</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.4.3</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../tests/chapter-7/arrays/unpacked/operations.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/operations.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.046s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../tests/chapter-7/arrays/unpacked/operations.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/operations.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;&#39; == &#39;1010_1101&#39;)\0A&#34;</pre>
+      <pre>    %1 = hw.aggregate_constant [true, false, true, false, true, true, false, true] : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;&#39; == &#39;1101_1110&#39;)\0A&#34;</pre>
+      <pre>    %3 = hw.aggregate_constant [true, true, false, true, true, true, true, false] : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;&#39; == &#39;0000_0000&#39;)\0A&#34;</pre>
+      <pre>    %5 = hw.aggregate_constant [false, false, false, false, false, false, false, false] : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %c1_i3 = hw.constant 1 : i3</pre>
+      <pre>    %c2_i3 = hw.constant 2 : i3</pre>
+      <pre>    %c3_i3 = hw.constant 3 : i3</pre>
+      <pre>    %6 = sim.fmt.literal &#34;_&#34;</pre>
+      <pre>    %c-4_i3 = hw.constant -4 : i3</pre>
+      <pre>    %c-3_i3 = hw.constant -3 : i3</pre>
+      <pre>    %c-2_i3 = hw.constant -2 : i3</pre>
+      <pre>    %c-1_i3 = hw.constant -1 : i3</pre>
+      <pre>    %7 = sim.fmt.literal &#34;:assert: (&#39;&#34;</pre>
+      <pre>    %8 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %9 = hw.bitcast %c0_i8 : (i8) -&gt; !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %arr = llhd.sig %9 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %arr, %5 after %8 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %10 = llhd.prb %arr : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %11 = hw.array_get %10[%c-1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %12 = sim.fmt.int 2 1 4 %11 : i1</pre>
+      <pre>      %13 = hw.array_get %10[%c-2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %14 = sim.fmt.int 2 1 4 %13 : i1</pre>
+      <pre>      %15 = hw.array_get %10[%c-3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %16 = sim.fmt.int 2 1 4 %15 : i1</pre>
+      <pre>      %17 = hw.array_get %10[%c-4_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %18 = sim.fmt.int 2 1 4 %17 : i1</pre>
+      <pre>      %19 = hw.array_get %10[%c3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %20 = sim.fmt.int 2 1 4 %19 : i1</pre>
+      <pre>      %21 = hw.array_get %10[%c2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %22 = sim.fmt.int 2 1 4 %21 : i1</pre>
+      <pre>      %23 = hw.array_get %10[%c1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %24 = sim.fmt.int 2 1 4 %23 : i1</pre>
+      <pre>      %25 = hw.array_get %10[%c0_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %26 = sim.fmt.int 2 1 4 %25 : i1</pre>
+      <pre>      %27 = sim.fmt.concat (%7, %12, %14, %16, %18, %6, %20, %22, %24, %26, %4)</pre>
+      <pre>      sim.proc.print %27</pre>
+      <pre>      llhd.drv %arr, %3 after %8 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %28 = llhd.prb %arr : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %29 = hw.array_get %28[%c-1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %30 = sim.fmt.int 2 1 4 %29 : i1</pre>
+      <pre>      %31 = hw.array_get %28[%c-2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %32 = sim.fmt.int 2 1 4 %31 : i1</pre>
+      <pre>      %33 = hw.array_get %28[%c-3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %34 = sim.fmt.int 2 1 4 %33 : i1</pre>
+      <pre>      %35 = hw.array_get %28[%c-4_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %36 = sim.fmt.int 2 1 4 %35 : i1</pre>
+      <pre>      %37 = hw.array_get %28[%c3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %38 = sim.fmt.int 2 1 4 %37 : i1</pre>
+      <pre>      %39 = hw.array_get %28[%c2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %40 = sim.fmt.int 2 1 4 %39 : i1</pre>
+      <pre>      %41 = hw.array_get %28[%c1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %42 = sim.fmt.int 2 1 4 %41 : i1</pre>
+      <pre>      %43 = hw.array_get %28[%c0_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %44 = sim.fmt.int 2 1 4 %43 : i1</pre>
+      <pre>      %45 = sim.fmt.concat (%7, %30, %32, %34, %36, %6, %38, %40, %42, %44, %2)</pre>
+      <pre>      sim.proc.print %45</pre>
+      <pre>      llhd.drv %arr, %1 after %8 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %46 = llhd.prb %arr : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %47 = hw.array_get %46[%c-1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %48 = sim.fmt.int 2 1 4 %47 : i1</pre>
+      <pre>      %49 = hw.array_get %46[%c-2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %50 = sim.fmt.int 2 1 4 %49 : i1</pre>
+      <pre>      %51 = hw.array_get %46[%c-3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %52 = sim.fmt.int 2 1 4 %51 : i1</pre>
+      <pre>      %53 = hw.array_get %46[%c-4_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %54 = sim.fmt.int 2 1 4 %53 : i1</pre>
+      <pre>      %55 = hw.array_get %46[%c3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %56 = sim.fmt.int 2 1 4 %55 : i1</pre>
+      <pre>      %57 = hw.array_get %46[%c2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %58 = sim.fmt.int 2 1 4 %57 : i1</pre>
+      <pre>      %59 = hw.array_get %46[%c1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %60 = sim.fmt.int 2 1 4 %59 : i1</pre>
+      <pre>      %61 = hw.array_get %46[%c0_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %62 = sim.fmt.int 2 1 4 %61 : i1</pre>
+      <pre>      %63 = sim.fmt.concat (%7, %48, %50, %52, %54, %6, %56, %58, %60, %62, %0)</pre>
+      <pre>      sim.proc.print %63</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

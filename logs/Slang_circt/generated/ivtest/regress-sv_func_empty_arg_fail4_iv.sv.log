@@ -1,0 +1,38 @@
+name: regress-sv_func_empty_arg_fail4_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10699319839477539
+user_time: 0.022847
+system_time: 0.136431
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:41
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/func_empty_arg_fail4.v:7:31: error: use of undeclared identifier 'c'
+    return a + 10 * b + 100 * c;
+                              ^
+../../../third_party/tools/icarus/ivtest/ivltests/func_empty_arg_fail4.v:12:12: error: argument 'a' cannot be empty because it does not have a default value
+    x = f( , 3); // This should fail. No default value specified.
+           ^
+Top level design units:
+    test
+
+
+Build failed: 2 errors, 0 warnings

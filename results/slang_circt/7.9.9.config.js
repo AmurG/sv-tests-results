@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","associative-arrays-assignment",1,"logs/Slang/chapter-7/arrays/associative/assignment.sv.log.html","tests/chapter-7/arrays/associative/assignment.sv.html"]]

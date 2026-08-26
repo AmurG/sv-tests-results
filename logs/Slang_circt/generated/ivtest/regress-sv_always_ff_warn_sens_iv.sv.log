@@ -1,0 +1,35 @@
+name: regress-sv_always_ff_warn_sens_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.13010954856872559
+user_time: 0.029772
+system_time: 0.111193
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:44
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/always_ff_warn_sens.v:53:38: warning: edge of expression of type 'reg[5:4]' will only trigger on changes to the first bit [-Wmultibit-edge]
+  always_ff @(posedge clk or posedge rst) begin
+                                     ^~~
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 1 warning

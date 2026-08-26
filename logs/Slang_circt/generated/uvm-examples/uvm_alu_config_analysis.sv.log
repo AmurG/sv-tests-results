@@ -1,0 +1,46 @@
+name: uvm_alu_config_analysis
+description: UVM example - uvm_alu_config_analysis
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path> <redacted-local-path>
+tags: uvm-examples uvm
+type: simulation elaboration parsing
+timeout: 360
+unsynthesizable: 1
+simvariants: UVM_TESTNAME=test_all_parallel
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.7999382019042969
+user_time: 0.814302
+system_time: 0.591447
+ram_usage: 152320
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+../../../third_party/tests/uvm-examples/uvm_alu_config_analysis/tb/hdl_top.sv:71:24: error: invalid expression for pass by reference; only variables, class properties, and members of unpacked structs and arrays are allowed
+               .txn_id(txn_id),
+                       ^~~~~~
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:62:
+../../../third_party/tests/uvm/src/base/uvm_registry.svh:73:11: error: cannot create instance of virtual class 'analysis_group_base'
+    obj = new(name, parent);
+          ^~~~~~~~~~~~~~~~~
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+Top level design units:
+    hdl_top
+    hvl_top
+
+
+Build failed: 2 errors, 1 warning

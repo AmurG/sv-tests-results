@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>associative-arrays-last</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test support of associative arrays methods (last)</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.9.5 7.9</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../../tests/chapter-7/arrays/associative/methods/last.sv.html" target="file-frame">tests/chapter-7/arrays/associative/methods/last.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.046s</dd></div>
+        <div><dt>ram usage</dt><dd>21504 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../../tests/chapter-7/arrays/associative/methods/last.sv.html" target="file-frame">tests/chapter-7/arrays/associative/methods/last.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_assoc_set_str_i32(i32, !hw.string, i32)</pre>
+      <pre>  func.func private @circt_sv_assoc_last_rc_str_i32(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_assoc_last_key_str_i32(i32) -&gt; !hw.string</pre>
+      <pre>  func.func private @circt_sv_assoc_alloc_str_i32() -&gt; i32</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;&#39; == &#39;world&#39;))\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34; == 0)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34; == 1) and (&#39;&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;:assert: ((&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;:assert: (&#34;</pre>
+      <pre>    %5 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %6 = llhd.combinational -&gt; i32 {</pre>
+      <pre>      %9 = func.call @circt_sv_assoc_alloc_str_i32() : () -&gt; i32</pre>
+      <pre>      llhd.yield %9 : i32</pre>
+      <pre>    }</pre>
+      <pre>    %map = llhd.sig %6 : i32</pre>
+      <pre>    %7 = llhd.prb %map : i32</pre>
+      <pre>    %8 = sv.constantStr &#34;&#34;</pre>
+      <pre>    %s = llhd.sig %8 : !hw.string</pre>
+      <pre>    %rc = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %9 = func.call @circt_sv_assoc_last_key_str_i32(%7) : (i32) -&gt; !hw.string</pre>
+      <pre>      llhd.drv %s, %9 after %5 : !hw.string</pre>
+      <pre>      %10 = func.call @circt_sv_assoc_last_rc_str_i32(%7) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %rc, %10 after %5 : i32</pre>
+      <pre>      %11 = llhd.prb %rc : i32</pre>
+      <pre>      %12 = sim.fmt.int 10 0 0 %11 : i32</pre>
+      <pre>      %13 = sim.fmt.concat (%4, %12, %1)</pre>
+      <pre>      sim.proc.print %13</pre>
+      <pre>      %14 = llhd.prb %map : i32</pre>
+      <pre>      %15 = sv.constantStr &#34;hello&#34;</pre>
+      <pre>      func.call @circt_sv_assoc_set_str_i32(%14, %15, %c1_i32) : (i32, !hw.string, i32) -&gt; ()</pre>
+      <pre>      %16 = llhd.prb %map : i32</pre>
+      <pre>      %17 = sv.constantStr &#34;sad&#34;</pre>
+      <pre>      func.call @circt_sv_assoc_set_str_i32(%16, %17, %c2_i32) : (i32, !hw.string, i32) -&gt; ()</pre>
+      <pre>      %18 = llhd.prb %map : i32</pre>
+      <pre>      %19 = sv.constantStr &#34;world&#34;</pre>
+      <pre>      func.call @circt_sv_assoc_set_str_i32(%18, %19, %c3_i32) : (i32, !hw.string, i32) -&gt; ()</pre>
+      <pre>      %20 = llhd.prb %map : i32</pre>
+      <pre>      %21 = func.call @circt_sv_assoc_last_key_str_i32(%20) : (i32) -&gt; !hw.string</pre>
+      <pre>      llhd.drv %s, %21 after %5 : !hw.string</pre>
+      <pre>      %22 = func.call @circt_sv_assoc_last_rc_str_i32(%20) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %rc, %22 after %5 : i32</pre>
+      <pre>      %23 = llhd.prb %rc : i32</pre>
+      <pre>      %24 = sim.fmt.int 10 0 0 %23 : i32</pre>
+      <pre>      %25 = llhd.prb %s : !hw.string</pre>
+      <pre>      %26 = sim.fmt.str %25</pre>
+      <pre>      %27 = sim.fmt.concat (%3, %24, %2, %26, %0)</pre>
+      <pre>      sim.proc.print %27</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

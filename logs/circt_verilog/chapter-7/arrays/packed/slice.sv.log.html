@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>operations-on-packed-arrays-slice-rw</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test packed arrays operations support (R&amp;W slice)</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.4.3</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../tests/chapter-7/arrays/packed/slice.sv.html" target="file-frame">tests/chapter-7/arrays/packed/slice.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.041s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../tests/chapter-7/arrays/packed/slice.sv.html" target="file-frame">tests/chapter-7/arrays/packed/slice.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;&#39; == &#39;00111000&#39;)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;&#39; == &#39;00&#39;))\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (&#39;&#34;</pre>
+      <pre>    %c3_i3 = hw.constant 3 : i3</pre>
+      <pre>    %3 = sim.fmt.literal &#34;&#39; == &#39;ff&#39;) and (&#39;&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;:assert: ((&#39;&#34;</pre>
+      <pre>    %5 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %c-1_i8 = hw.constant -1 : i8</pre>
+      <pre>    %arr_a = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %arr_b = llhd.sig %c0_i8 : i8</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %arr_a, %c-1_i8 after %5 : i8</pre>
+      <pre>      llhd.drv %arr_b, %c0_i8 after %5 : i8</pre>
+      <pre>      %6 = llhd.prb %arr_a : i8</pre>
+      <pre>      %7 = sim.fmt.int 16 2 4 %6 : i8</pre>
+      <pre>      %8 = llhd.prb %arr_b : i8</pre>
+      <pre>      %9 = sim.fmt.int 16 2 4 %8 : i8</pre>
+      <pre>      %10 = sim.fmt.concat (%4, %7, %3, %9, %1)</pre>
+      <pre>      sim.proc.print %10</pre>
+      <pre>      %11 = llhd.sig.extract %arr_b from %c3_i3 : &lt;i8&gt; -&gt; &lt;i3&gt;</pre>
+      <pre>      %12 = llhd.prb %arr_a : i8</pre>
+      <pre>      %13 = comb.extract %12 from 0 : (i8) -&gt; i3</pre>
+      <pre>      llhd.drv %11, %13 after %5 : i3</pre>
+      <pre>      %14 = llhd.prb %arr_b : i8</pre>
+      <pre>      %15 = sim.fmt.int 2 8 4 %14 : i8</pre>
+      <pre>      %16 = sim.fmt.concat (%2, %15, %0)</pre>
+      <pre>      sim.proc.print %16</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

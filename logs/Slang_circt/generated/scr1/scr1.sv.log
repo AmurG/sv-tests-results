@@ -1,0 +1,287 @@
+name: scr1
+description: Full scr1 core test
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: scr1
+top_module: scr1_top_tb_axi
+results_group: cores
+timeout: 100
+type: parsing elaboration
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.22385740280151367
+user_time: 0.11695699999999999
+system_time: 0.268789
+ram_usage: 25088
+date_completed: 2026-07-02 03:18:38
+
+slang-driver --single-unit --timescale=1ns/1ns --top=scr1_top_tb_axi -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_tdu.sv:173:36: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+                tdu2csr_rdata_o = {'0, csr_tselect_ff};
+                                   ^~
+../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_exu.sv:940:29: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+                         : {'0, exu_queue.rs1_addr}; // zimm
+                            ^~
+../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_ialu.sv:467:26: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+                      ? {'0, div_quo_bit}
+                         ^~
+../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_ifu.sv:710:47: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+        ifu2idu_instr_o = `SCR1_IMEM_DWIDTH'({'0, hdu2ifu_pbuf_instr_i});
+                                              ^~
+../../../third_party/cores/scr1/src/core/scr1_tapc.sv:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:34:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:35:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:35:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:10:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:36:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:36:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:11:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:36:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:11:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_csr.svh:10:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_hdu.sv:36:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:11:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_csr.svh:11:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_tdu.sv:34:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_tdu.sv:35:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_tdu.svh:16:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_ipic.sv:38:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_csr.sv:34:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_csr.sv:35:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_csr.sv:36:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_csr.sv:38:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_csr.sv:41:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_exu.sv:41:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_exu.sv:42:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_exu.sv:43:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_exu.sv:44:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_exu.sv:47:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_ialu.sv:26:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_idu.sv:18:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_idu.sv:19:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_idu.sv:20:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_ifu.sv:27:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_ifu.sv:30:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_lsu.sv:23:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_lsu.sv:24:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_lsu.sv:25:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_mprf.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_top.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_top.sv:8:
+../../../third_party/cores/scr1/src/includes/scr1_riscv_isa_decoding.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_top.sv:9:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_top.sv:12:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_pipe_top.sv:16:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_tapc.sv:29:
+../../../third_party/cores/scr1/src/includes/scr1_tapc.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_tapc.sv:30:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_dm.svh:10:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_tapc.sv:30:
+in file included from ../../../third_party/cores/scr1/src/includes/scr1_dm.svh:11:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_tapc_synchronizer.sv:9:
+../../../third_party/cores/scr1/src/includes/scr1_tapc.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_core_top.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_core_top.sv:8:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_core_top.sv:11:
+../../../third_party/cores/scr1/src/includes/scr1_tapc.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_core_top.sv:13:
+../../../third_party/cores/scr1/src/includes/scr1_hdu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_core_top.sv:17:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_dm.sv:43:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/scr1_scu.sv:30:
+../../../third_party/cores/scr1/src/includes/scr1_scu.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_dmem_router.sv:5:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_imem_router.sv:5:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_tcm.sv:6:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_timer.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_mem_axi.sv:6:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_top_axi.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_memif.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/top/scr1_top_axi.sv:9:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_tracelog.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_arch_types.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/core/pipeline/scr1_tracelog.sv:8:
+../../../third_party/cores/scr1/src/includes/scr1_csr.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/tb/scr1_memory_tb_axi.sv:7:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+in file included from ../../../third_party/cores/scr1/src/tb/scr1_top_tb_axi.sv:8:
+../../../third_party/cores/scr1/src/includes/scr1_ipic.svh:1:32: warning: invalid UTF-8 sequence in source text [-Winvalid-source-encoding]
+/// Copyright by Syntacore LLC <A9> 2016-2021. See LICENSE for details
+                               ^
+Top level design units:
+    scr1_top_tb_axi
+
+
+Build succeeded: 0 errors, 63 warnings

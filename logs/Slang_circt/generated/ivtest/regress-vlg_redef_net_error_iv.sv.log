@@ -1,0 +1,38 @@
+name: regress-vlg_redef_net_error_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.12220597267150879
+user_time: 0.027004
+system_time: 0.10875699999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:41
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/redef_net_error.v:3:19: error: redefinition of 'value'
+wire [7:0] value, value;
+                  ^
+../../../third_party/tools/icarus/ivtest/ivltests/redef_net_error.v:3:12: note: previous definition here
+wire [7:0] value, value;
+           ^
+Top level design units:
+    test
+
+
+Build failed: 1 error, 0 warnings

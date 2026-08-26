@@ -1,0 +1,30 @@
+name: 22.12--line-illegal-3
+description: The number parameter shall be a positive integer that specifies the new line number
+should_fail_because: The number parameter shall be a positive integer that specifies the new line number
+tags: 22.12
+type: preprocessing
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: preprocessing
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.004197120666503906
+user_time: 0.001911
+system_time: 0.004333
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver -E --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-22/22.12--line-illegal-3.sv:17:6: error: expected integer literal
+`line -12 "somefile" 3
+     ^

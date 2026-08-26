@@ -1,0 +1,33 @@
+name: 22.9--unconnected_drive-invalid-3
+description: Test
+should_fail_because: use a strength keyword with `nounconnected_drive macro
+tags: 22.9
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.07481813430786133
+user_time: 0.032022
+system_time: 0.11535999999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-22/22.9--unconnected_drive-invalid-3.sv:18:22: error: expected member
+`nounconnected_drive pull0
+                     ^~~~~
+warning: no top-level modules found in design [-Wmissing-top]
+
+Build failed: 1 error, 1 warning

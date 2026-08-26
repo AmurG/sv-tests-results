@@ -1,0 +1,38 @@
+name: class_member_test_5
+description: Test
+should_fail_because: pure virtual methods can only be declared in virtual classes
+tags: 8.3
+type: elaboration
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11870431900024414
+user_time: 0.02567
+system_time: 0.094118
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/generic/member/class_member_test_5.sv:19:19: error: pure virtual methods can only be declared in virtual classes
+pure virtual task pure_task1;
+                  ^~~~~~~~~~
+../../../tests/generic/member/class_member_test_5.sv:20:19: error: pure virtual methods can only be declared in virtual classes
+pure virtual task pure_task2(int arg);
+                  ^~~~~~~~~~
+Top level design units:
+    test
+
+
+Build failed: 2 errors, 0 warnings

@@ -1,0 +1,54 @@
+name: regress-vlg_porttest3_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+runner_verilator_flags: -Werror-ASSIGNIN
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11375737190246582
+user_time: 0.021009
+system_time: 0.11674799999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:42
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:10:22: error: variable port 'data' cannot have direction 'inout'
+        inout [15:0] data;
+                     ^
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:35:17: error: 'address' cannot be connected to 'inout' port (only nets are allowed)
+        CPU fm (address, data, rw, clock, reset);
+                ^~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:32:20: note: declared here
+        reg [15:0] address, data;
+                   ^
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:21:17: error: cannot assign to input port 'rw'
+                rw <= 1'b1;
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:17:13: note: declared here
+        reg rw; // error on rw
+            ^~
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:25:17: error: cannot assign to input port 'rw'
+                rw <= 1'b0;
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/port-test3.v:17:13: note: declared here
+        reg rw; // error on rw
+            ^~
+Top level design units:
+    BENCH
+
+
+Build failed: 4 errors, 0 warnings

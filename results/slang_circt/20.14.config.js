@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","coverage_routines",1,"logs/Slang/chapter-20/20.14--coverage.sv.log.html","tests/chapter-20/20.14--coverage.sv.html"]]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>event_implicit</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>event implicit list</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>9.4.2.2</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-9/9.4.2.2--event_implicit.sv.html" target="file-frame">tests/chapter-9/9.4.2.2--event_implicit.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.040s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../tests/chapter-9/9.4.2.2--event_implicit.sv.html" target="file-frame">tests/chapter-9/9.4.2.2--event_implicit.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @block_tb() {</pre>
+      <pre>    %0 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %2 = hw.aggregate_constant [false, false] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %a = llhd.sig %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %a[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %a[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %b = llhd.sig %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %b[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %b[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %c = llhd.sig %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %c[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %c[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %d = llhd.sig %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %d[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %d[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %out = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %out[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %out[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %13 = llhd.prb %3 : i1</pre>
+      <pre>      %14 = llhd.prb %4 : i1</pre>
+      <pre>      %15 = llhd.prb %5 : i1</pre>
+      <pre>      %16 = llhd.prb %6 : i1</pre>
+      <pre>      %17 = comb.xor %14, %true : i1</pre>
+      <pre>      %18 = comb.xor %16, %true : i1</pre>
+      <pre>      %19 = comb.xor %13, %true : i1</pre>
+      <pre>      %20 = comb.xor %15, %true : i1</pre>
+      <pre>      %21 = comb.and %17, %13 : i1</pre>
+      <pre>      %22 = comb.and %18, %15 : i1</pre>
+      <pre>      %23 = comb.and %17, %19, %18, %20 : i1</pre>
+      <pre>      %24 = comb.or %21, %22 : i1</pre>
+      <pre>      %25 = comb.or %23, %21, %22 : i1</pre>
+      <pre>      %26 = llhd.prb %7 : i1</pre>
+      <pre>      %27 = llhd.prb %8 : i1</pre>
+      <pre>      %28 = llhd.prb %9 : i1</pre>
+      <pre>      %29 = llhd.prb %10 : i1</pre>
+      <pre>      %30 = comb.xor %27, %true : i1</pre>
+      <pre>      %31 = comb.xor %29, %true : i1</pre>
+      <pre>      %32 = comb.xor %26, %true : i1</pre>
+      <pre>      %33 = comb.xor %28, %true : i1</pre>
+      <pre>      %34 = comb.and %30, %26 : i1</pre>
+      <pre>      %35 = comb.and %31, %28 : i1</pre>
+      <pre>      %36 = comb.and %30, %32, %31, %33 : i1</pre>
+      <pre>      %37 = comb.or %34, %35 : i1</pre>
+      <pre>      %38 = comb.or %36, %34, %35 : i1</pre>
+      <pre>      %39 = comb.xor %24, %true : i1</pre>
+      <pre>      %40 = comb.xor %37, %true : i1</pre>
+      <pre>      %41 = comb.and %25, %39 : i1</pre>
+      <pre>      %42 = comb.and %38, %40 : i1</pre>
+      <pre>      %43 = comb.and %25, %24, %38, %37 : i1</pre>
+      <pre>      %44 = comb.or %41, %42, %43 : i1</pre>
+      <pre>      %45 = comb.xor %44, %true : i1</pre>
+      <pre>      llhd.drv %11, %43 after %1 : i1</pre>
+      <pre>      llhd.drv %12, %45 after %1 : i1</pre>
+      <pre>      llhd.wait ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

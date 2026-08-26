@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>regress-vlg_div16_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/contrib/div16.v.html" target="file-frame">third_party/tools/icarus/ivtest/contrib/div16.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:41:43</dd></div>
+        <div><dt>time elapsed</dt><dd>10.683s</dd></div>
+        <div><dt>ram usage</dt><dd>205772 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=simulation top=</pre>
+      <pre>[Arcilator] mode=simulation top=</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/contrib/div16.v.html" target="file-frame">third_party/tools/icarus/ivtest/contrib/div16.v</a></pre>
+      <pre>+ echo [Arcilator] Arcilator backend stage</pre>
+      <pre>[Arcilator] Arcilator backend stage</pre>
+      <pre>+ echo [Arcilator] arc lower-to-llvm stage</pre>
+      <pre>[Arcilator] arc lower-to-llvm stage</pre>
+      <pre>+ <redacted-local-path> --observe-ports --observe-wires --observe-registers --observe-named-values --state-file <redacted-local-path> --emit-llvm <redacted-local-path> -o <redacted-local-path></pre>
+      <pre>+ echo [Arcilator] header-gen stage</pre>
+      <pre>[Arcilator] header-gen stage</pre>
+      <pre>+ python3 <redacted-local-path> <redacted-local-path></pre>
+      <pre>+ echo [Arcilator] gen-driver stage</pre>
+      <pre>[Arcilator] gen-driver stage</pre>
+      <pre>+ python3 <a href="../../../../tools/arcilator_gen_driver.py.html" target="file-frame">tools/arcilator_gen_driver.py</a> <redacted-local-path> <redacted-local-path>  128 2 1 10 regress-vlg_div16_iv ivtest <redacted-local-path> [] 0</pre>
+      <pre>+ echo [Arcilator] llc stage</pre>
+      <pre>[Arcilator] llc stage</pre>
+      <pre>+ <redacted-local-path> -O0 --filetype=obj <redacted-local-path> -o <redacted-local-path></pre>
+      <pre>+ echo [Arcilator] driver link stage</pre>
+      <pre>[Arcilator] driver link stage</pre>
+      <pre>+ /usr/bin/clang++ -std=c++17 -O1 <redacted-local-path> <redacted-local-path> -I<redacted-local-path> -I<redacted-local-path> -o <redacted-local-path> -no-pie -latomic</pre>
+      <pre>+ echo [Arcilator] native run stage</pre>
+      <pre>[Arcilator] native run stage</pre>
+      <pre>+ <redacted-local-path> <redacted-local-path></pre>
+      <pre>16-bit Dividend, 8-bit divisor</pre>
+      <pre>Circuit: 23745 / 103 = 230, rem = 55		......... Reality: 230, rem = 55</pre>
+      <pre>Circuit: 21854 / 11 = 1986, rem = 8		......... Reality: 1986, rem = 8</pre>
+      <pre>Circuit: 46521 / 128 = 363, rem = 57		......... Reality: 363, rem = 57</pre>
+      <pre>Circuit: 15525 / 117 = 132, rem = 81		......... Reality: 132, rem = 81</pre>
+      <pre>Circuit: 15784 / 150 = 105, rem = 34		......... Reality: 105, rem = 34</pre>
+      <pre>Circuit: 20321 / 254 = 80, rem = 1		......... Reality: 80, rem = 1</pre>
+      <pre>Circuit: 24000 / 138 = 173, rem = 126		......... Reality: 173, rem = 126</pre>
+      <pre>Circuit: 22440 / 59 = 380, rem = 20		......... Reality: 380, rem = 20</pre>
+      <pre>Circuit: 2915 / 241 = 12, rem = 23		......... Reality: 12, rem = 23</pre>
+      <pre>Circuit: 35310 / 8 = 4413, rem = 6		......... Reality: 4413, rem = 6</pre>
+      <pre>Circuit: 34630 / 156 = 221, rem = 154		......... Reality: 221, rem = 154</pre>
+      <pre>Circuit: 36813 / 172 = 214, rem = 5		......... Reality: 214, rem = 5</pre>
+      <pre>Circuit: 47519 / 247 = 192, rem = 95		......... Reality: 192, rem = 95</pre>
+      <pre>Circuit: 28981 / 171 = 169, rem = 82		......... Reality: 169, rem = 82</pre>
+      <pre>Circuit: 52519 / 138 = 380, rem = 79		......... Reality: 380, rem = 79</pre>
+      <pre>Circuit: 53380 / 186 = 286, rem = 184		......... Reality: 286, rem = 184</pre>
+      <pre>Circuit: 11373 / 28 = 406, rem = 5		......... Reality: 406, rem = 5</pre>
+      <pre>Circuit: 64535 / 12 = 5377, rem = 11		......... Reality: 5377, rem = 11</pre>
+      <pre>Circuit: 57589 / 193 = 298, rem = 75		......... Reality: 298, rem = 75</pre>
+      <pre>Circuit: 40216 / 60 = 670, rem = 16		......... Reality: 670, rem = 16</pre>
+      <pre>Circuit: 11398 / 7 = 1628, rem = 2		......... Reality: 1628, rem = 2</pre>
+      <pre>Circuit: 33123 / 178 = 186, rem = 15		......... Reality: 186, rem = 15</pre>
+      <pre>Circuit: 24705 / 56 = 441, rem = 9		......... Reality: 441, rem = 9</pre>
+      <pre>Circuit: 26718 / 150 = 178, rem = 18		......... Reality: 178, rem = 18</pre>
+      <pre>Circuit: 12403 / 122 = 101, rem = 81		......... Reality: 101, rem = 81</pre>
+      <pre></pre>
+      <pre>16-bit Dividend, 12-bit divisor</pre>
+      <pre>Circuit: 1396 / 3813 = 0, rem = 1396		......... Reality: 0, rem = 1396</pre>
+      <pre>Circuit: 59640 / 1936 = 30, rem = 1560		......... Reality: 30, rem = 1560</pre>
+      <pre>Circuit: 19087 / 3247 = 5, rem = 2852		......... Reality: 5, rem = 2852</pre>
+      <pre>Circuit: 31407 / 1228 = 25, rem = 707		......... Reality: 25, rem = 707</pre>
+      <pre>Circuit: 25170 / 2130 = 11, rem = 1740		......... Reality: 11, rem = 1740</pre>
+      <pre>Circuit: 52756 / 1919 = 27, rem = 943		......... Reality: 27, rem = 943</pre>
+      <pre>Circuit: 65468 / 603 = 108, rem = 344		......... Reality: 108, rem = 344</pre>
+      <pre>Circuit: 2914 / 4012 = 0, rem = 2914		......... Reality: 0, rem = 2914</pre>
+      <pre>Circuit: 57587 / 875 = 65, rem = 712		......... Reality: 65, rem = 712</pre>
+      <pre>Circuit: 26281 / 955 = 27, rem = 496		......... Reality: 27, rem = 496</pre>
+      <pre>Circuit: 9569 / 391 = 24, rem = 185		......... Reality: 24, rem = 185</pre>
+      <pre>Circuit: 54645 / 3955 = 13, rem = 3230		......... Reality: 13, rem = 3230</pre>
+      <pre>Circuit: 13070 / 1859 = 7, rem = 57		......... Reality: 7, rem = 57</pre>
+      <pre>Circuit: 43603 / 958 = 45, rem = 493		......... Reality: 45, rem = 493</pre>
+      <pre>Circuit: 64341 / 1949 = 33, rem = 24		......... Reality: 33, rem = 24</pre>
+      <pre>Circuit: 32569 / 3297 = 9, rem = 2896		......... Reality: 9, rem = 2896</pre>
+      <pre>Circuit: 18903 / 1010 = 18, rem = 723		......... Reality: 18, rem = 723</pre>
+      <pre>Circuit: 24841 / 3761 = 6, rem = 2275		......... Reality: 6, rem = 2275</pre>
+      <pre>Circuit: 50041 / 622 = 80, rem = 281		......... Reality: 80, rem = 281</pre>
+      <pre>Circuit: 12636 / 2624 = 4, rem = 2140		......... Reality: 4, rem = 2140</pre>
+      <pre>Circuit: 20904 / 2110 = 9, rem = 1914		......... Reality: 9, rem = 1914</pre>
+      <pre>Circuit: 4290 / 2379 = 1, rem = 1911		......... Reality: 1, rem = 1911</pre>
+      <pre>Circuit: 34478 / 504 = 68, rem = 206		......... Reality: 68, rem = 206</pre>
+      <pre>Circuit: 19073 / 912 = 20, rem = 833		......... Reality: 20, rem = 833</pre>
+      <pre>Circuit: 9458 / 2385 = 3, rem = 2303		......... Reality: 3, rem = 2303</pre>
+      <pre></pre>
+      <pre>16-bit Dividend, 16-bit divisor</pre>
+      <pre>Circuit: 7425 / 60499 = 0, rem = 7425		......... Reality: 0, rem = 7425</pre>
+      <pre>Circuit: 44635 / 52114 = 0, rem = 44635		......... Reality: 0, rem = 44635</pre>
+      <pre>Circuit: 19237 / 11531 = 1, rem = 7706		......... Reality: 1, rem = 7706</pre>
+      <pre>Circuit: 15983 / 58838 = 0, rem = 15983		......... Reality: 0, rem = 15983</pre>
+      <pre>Circuit: 36716 / 20859 = 1, rem = 15857		......... Reality: 1, rem = 15857</pre>
+      <pre>Circuit: 31834 / 17446 = 1, rem = 14388		......... Reality: 1, rem = 14388</pre>
+      <pre>Circuit: 9054 / 60578 = 0, rem = 9054		......... Reality: 0, rem = 9054</pre>
+      <pre>Circuit: 40727 / 14866 = 2, rem = 10995		......... Reality: 2, rem = 10995</pre>
+      <pre>Circuit: 26927 / 19652 = 1, rem = 7275		......... Reality: 1, rem = 7275</pre>
+      <pre>Circuit: 41218 / 23995 = 1, rem = 17223		......... Reality: 1, rem = 17223</pre>
+      <pre>Circuit: 16930 / 30942 = 0, rem = 16930		......... Reality: 0, rem = 16930</pre>
+      <pre>Circuit: 31647 / 29808 = 1, rem = 1839		......... Reality: 1, rem = 1839</pre>
+      <pre>Circuit: 27504 / 28371 = 0, rem = 27504		......... Reality: 0, rem = 27504</pre>
+      <pre>Circuit: 19869 / 52036 = 0, rem = 19869		......... Reality: 0, rem = 19869</pre>
+      <pre>Circuit: 54149 / 53240 = 1, rem = 909		......... Reality: 1, rem = 909</pre>
+      <pre>Circuit: 59117 / 27286 = 2, rem = 4545		......... Reality: 2, rem = 4545</pre>
+      <pre>Circuit: 43632 / 27456 = 1, rem = 16176		......... Reality: 1, rem = 16176</pre>
+      <pre>Circuit: 6805 / 58070 = 0, rem = 6805		......... Reality: 0, rem = 6805</pre>
+      <pre>Circuit: 10706 / 41747 = 0, rem = 10706		......... Reality: 0, rem = 10706</pre>
+      <pre>Circuit: 57068 / 46578 = 1, rem = 10490		......... Reality: 1, rem = 10490</pre>
+      <pre>Circuit: 41450 / 62387 = 0, rem = 41450		......... Reality: 0, rem = 41450</pre>
+      <pre>Circuit: 50723 / 46357 = 1, rem = 4366		......... Reality: 1, rem = 4366</pre>
+      <pre>Circuit: 38541 / 27108 = 1, rem = 11433		......... Reality: 1, rem = 11433</pre>
+      <pre>Circuit: 40893 / 25215 = 1, rem = 15678		......... Reality: 1, rem = 15678</pre>
+      <pre>Circuit: 18436 / 41366 = 0, rem = 18436		......... Reality: 0, rem = 18436</pre>
+      <pre></pre>
+      <pre>Special Cases:</pre>
+      <pre>Circuit: 65535 / 65535 = 1, rem = 0		......... Reality: 1, rem = 0</pre>
+      <pre>Circuit: 312 / 1 = 312, rem = 0		......... Reality: 312, rem = 0</pre>
+      <pre>Circuit: 0 / 42 = 0, rem = 0		......... Reality: 0, rem = 0</pre>
+      <pre>Circuit: 312 / 0 = 65535, rem = 312		......... Reality: 312, rem = 0</pre>
+      <pre></pre>
+      <pre></pre>
+      <pre>PASSED</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+name: regress-sv_bitsel_real_idx_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.13270831108093262
+user_time: 0.023615999999999998
+system_time: 0.118999
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:42
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:11:19: error: expression type 'real' is not integral
+  assign cav = in[ridx];
+                  ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:12:19: error: expression type 'real' is not integral
+  assign cac = in[0.5];
+                  ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:13:15: error: expression type 'real' is not integral
+  assign calv[ridx] = 1'b1;
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:14:15: error: expression type 'real' is not integral
+  assign calc[0.5] = 1'b1;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:20:13: error: expression type 'real' is not integral
+    vv = in[ridx];
+            ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:21:13: error: expression type 'real' is not integral
+    vc = in[0.5];
+            ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:22:9: error: expression type 'real' is not integral
+    vlv[ridx] = 1'b1;
+        ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:23:9: error: expression type 'real' is not integral
+    vlc[0.5] = 1'b1;
+        ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:24:15: error: expression type 'real' is not integral
+    pv = pval[ridx];
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:25:15: error: expression type 'real' is not integral
+    pc = pval[0.5];
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:26:15: error: expression type 'real' is not integral
+    sv = sval[ridx];
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:27:15: error: expression type 'real' is not integral
+    sc = sval[0.5];
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:28:10: error: expression type 'real' is not integral
+    strv[ridx] = "a";
+         ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/bitsel_real_idx.v:29:10: error: expression type 'real' is not integral
+    strc[0.5] = "a";
+         ^~~
+Top level design units:
+    top
+
+
+Build failed: 14 errors, 0 warnings

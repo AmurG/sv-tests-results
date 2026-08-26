@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>random_weighted_case_randcase_0</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>randcase test</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>18.16</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-18/18.16--random-weighted-case-randcase_0.sv.html" target="file-frame">tests/chapter-18/18.16--random-weighted-case-randcase_0.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>23296 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-18/18.16--random-weighted-case-randcase_0.sv.html" target="file-frame">tests/chapter-18/18.16--random-weighted-case-randcase_0.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_urandom_u32() -&gt; i32</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %c10_i32 = hw.constant 10 : i32</pre>
+      <pre>    %0 = sim.fmt.literal &#34;)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;:assert: (10 == &#34;</pre>
+      <pre>    %2 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %x = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %3 = func.call @circt_sv_urandom_u32() : () -&gt; i32</pre>
+      <pre>      llhd.drv %x, %c10_i32 after %2 : i32</pre>
+      <pre>      %4 = llhd.prb %x : i32</pre>
+      <pre>      %5 = sim.fmt.int 10 0 0 %4 : i32</pre>
+      <pre>      %6 = sim.fmt.concat (%1, %5, %0)</pre>
+      <pre>      sim.proc.print %6</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

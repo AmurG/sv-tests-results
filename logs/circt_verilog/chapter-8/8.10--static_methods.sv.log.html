@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>static_methods</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>static class methods test</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>8.10</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-8/8.10--static_methods.sv.html" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.050s</dd></div>
+        <div><dt>ram usage</dt><dd>20608 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../tests/chapter-8/8.10--static_methods.sv.html" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_class_alloc(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_class_set_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_class_get_i32(i32, i32) -&gt; i32</pre>
+      <pre>  hw.module @class_tb() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %1 = func.call @circt_sv_class_alloc(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      %2 = func.call @circt_sv_class_alloc(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      %3 = func.call @circt_sv_class_get_i32(%c0_i32, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %4 = comb.add %3, %c1_i32 : i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%c0_i32, %c1_i32, %4) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %5 = func.call @circt_sv_class_get_i32(%c0_i32, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %6 = sim.fmt.int 10 0 0 %5 : i32</pre>
+      <pre>      %7 = sim.fmt.concat (%6, %0)</pre>
+      <pre>      sim.proc.print %7</pre>
+      <pre>      %8 = func.call @circt_sv_class_get_i32(%c0_i32, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %9 = comb.add %8, %c1_i32 : i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%c0_i32, %c1_i32, %9) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %10 = func.call @circt_sv_class_get_i32(%c0_i32, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %11 = sim.fmt.int 10 0 0 %10 : i32</pre>
+      <pre>      %12 = sim.fmt.concat (%11, %0)</pre>
+      <pre>      sim.proc.print %12</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_string_events_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/string_events.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/string_events.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.048s</dd></div>
+        <div><dt>ram usage</dt><dd>23296 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/string_events.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/string_events.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_process_fork_end()</pre>
+      <pre>  func.func private @circt_sv_process_fork_begin()</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;str2 = &#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;str1 = &#34;</pre>
+      <pre>    %c2000000_i64 = hw.constant 2000000 : i64</pre>
+      <pre>    %c1000000_i64 = hw.constant 1000000 : i64</pre>
+      <pre>    %2 = llhd.constant_time &lt;2000000fs, 0d, 0e&gt;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;str = &#34;</pre>
+      <pre>    %6 = llhd.constant_time &lt;1000000fs, 0d, 0e&gt;</pre>
+      <pre>    %7 = sv.constantStr &#34;&#34;</pre>
+      <pre>    %str = llhd.sig %7 : !hw.string</pre>
+      <pre>    %8 = llhd.prb %str : !hw.string</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb2</pre>
+      <pre>      %9 = llhd.prb %str : !hw.string</pre>
+      <pre>      llhd.wait (%8, %9 : !hw.string, !hw.string), ^bb2(%9 : !hw.string)</pre>
+      <pre>    ^bb2(%10: !hw.string):  // pred: ^bb1</pre>
+      <pre>      %11 = llhd.prb %str : !hw.string</pre>
+      <pre>      %12 = sim.fmt.str %11</pre>
+      <pre>      %13 = sim.fmt.concat (%5, %12, %4)</pre>
+      <pre>      sim.proc.print %13</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.wait delay %6, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %9 = sv.constantStr &#34;hello&#34;</pre>
+      <pre>      llhd.drv %str, %9 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %6, ^bb2</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      llhd.drv %str, %9 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %6, ^bb3</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %10 = sv.constantStr &#34;world&#34;</pre>
+      <pre>      llhd.drv %str, %10 after %3 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %11 = sv.constantStr &#34;hello1&#34;</pre>
+      <pre>      %12 = sv.constantStr &#34;world1&#34;</pre>
+      <pre>      %str_0 = llhd.sig name &#34;str&#34; %7 : !hw.string</pre>
+      <pre>      %13 = llhd.prb %str_0 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %14 = llhd.prb %str_0 : !hw.string</pre>
+      <pre>      llhd.wait (%13, %14 : !hw.string, !hw.string), ^bb4(%14 : !hw.string)</pre>
+      <pre>    ^bb4(%15: !hw.string):  // pred: ^bb3</pre>
+      <pre>      %16 = llhd.prb %str_0 : !hw.string</pre>
+      <pre>      %17 = sim.fmt.str %16</pre>
+      <pre>      %18 = sim.fmt.concat (%1, %17, %4)</pre>
+      <pre>      sim.proc.print %18</pre>
+      <pre>      %19 = llhd.prb %str_0 : !hw.string</pre>
+      <pre>      llhd.wait (%13, %19 : !hw.string, !hw.string), ^bb5(%19 : !hw.string)</pre>
+      <pre>    ^bb5(%20: !hw.string):  // pred: ^bb4</pre>
+      <pre>      %21 = llhd.prb %str_0 : !hw.string</pre>
+      <pre>      %22 = sim.fmt.str %21</pre>
+      <pre>      %23 = sim.fmt.concat (%1, %22, %4)</pre>
+      <pre>      sim.proc.print %23</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %24 = llhd.int_to_time %c1000000_i64</pre>
+      <pre>      llhd.wait delay %24, ^bb6</pre>
+      <pre>    ^bb6:  // pred: ^bb5</pre>
+      <pre>      llhd.wait delay %2, ^bb7</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      llhd.drv %str_0, %11 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb8</pre>
+      <pre>    ^bb8:  // pred: ^bb7</pre>
+      <pre>      llhd.drv %str_0, %11 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb9</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      llhd.drv %str_0, %12 after %3 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %25 = sv.constantStr &#34;hello2&#34;</pre>
+      <pre>      %26 = sv.constantStr &#34;world2&#34;</pre>
+      <pre>      %str_1 = llhd.sig name &#34;str&#34; %7 : !hw.string</pre>
+      <pre>      %27 = llhd.prb %str_1 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %28 = llhd.prb %str_1 : !hw.string</pre>
+      <pre>      llhd.wait (%27, %28 : !hw.string, !hw.string), ^bb10(%28 : !hw.string)</pre>
+      <pre>    ^bb10(%29: !hw.string):  // pred: ^bb9</pre>
+      <pre>      %30 = llhd.prb %str_1 : !hw.string</pre>
+      <pre>      %31 = sim.fmt.str %30</pre>
+      <pre>      %32 = sim.fmt.concat (%0, %31, %4)</pre>
+      <pre>      sim.proc.print %32</pre>
+      <pre>      %33 = llhd.prb %str_1 : !hw.string</pre>
+      <pre>      llhd.wait (%27, %33 : !hw.string, !hw.string), ^bb11(%33 : !hw.string)</pre>
+      <pre>    ^bb11(%34: !hw.string):  // pred: ^bb10</pre>
+      <pre>      %35 = llhd.prb %str_1 : !hw.string</pre>
+      <pre>      %36 = sim.fmt.str %35</pre>
+      <pre>      %37 = sim.fmt.concat (%0, %36, %4)</pre>
+      <pre>      sim.proc.print %37</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %38 = llhd.int_to_time %c2000000_i64</pre>
+      <pre>      llhd.wait delay %38, ^bb12</pre>
+      <pre>    ^bb12:  // pred: ^bb11</pre>
+      <pre>      llhd.wait delay %2, ^bb13</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      llhd.drv %str_1, %25 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb14</pre>
+      <pre>    ^bb14:  // pred: ^bb13</pre>
+      <pre>      llhd.drv %str_1, %25 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb15</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      llhd.drv %str_1, %26 after %3 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %str_2 = llhd.sig name &#34;str&#34; %7 : !hw.string</pre>
+      <pre>      %39 = llhd.prb %str_2 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %40 = llhd.prb %str_2 : !hw.string</pre>
+      <pre>      llhd.wait (%39, %40 : !hw.string, !hw.string), ^bb16(%40 : !hw.string)</pre>
+      <pre>    ^bb16(%41: !hw.string):  // pred: ^bb15</pre>
+      <pre>      %42 = llhd.prb %str_2 : !hw.string</pre>
+      <pre>      %43 = sim.fmt.str %42</pre>
+      <pre>      %44 = sim.fmt.concat (%1, %43, %4)</pre>
+      <pre>      sim.proc.print %44</pre>
+      <pre>      %45 = llhd.prb %str_2 : !hw.string</pre>
+      <pre>      llhd.wait (%39, %45 : !hw.string, !hw.string), ^bb17(%45 : !hw.string)</pre>
+      <pre>    ^bb17(%46: !hw.string):  // pred: ^bb16</pre>
+      <pre>      %47 = llhd.prb %str_2 : !hw.string</pre>
+      <pre>      %48 = sim.fmt.str %47</pre>
+      <pre>      %49 = sim.fmt.concat (%1, %48, %4)</pre>
+      <pre>      sim.proc.print %49</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      llhd.wait delay %24, ^bb18</pre>
+      <pre>    ^bb18:  // pred: ^bb17</pre>
+      <pre>      llhd.wait delay %2, ^bb19</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      llhd.drv %str_2, %12 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb20</pre>
+      <pre>    ^bb20:  // pred: ^bb19</pre>
+      <pre>      llhd.drv %str_2, %12 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb21</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      llhd.drv %str_2, %11 after %3 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %str_3 = llhd.sig name &#34;str&#34; %7 : !hw.string</pre>
+      <pre>      %50 = llhd.prb %str_3 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      %51 = llhd.prb %str_3 : !hw.string</pre>
+      <pre>      llhd.wait (%50, %51 : !hw.string, !hw.string), ^bb22(%51 : !hw.string)</pre>
+      <pre>    ^bb22(%52: !hw.string):  // pred: ^bb21</pre>
+      <pre>      %53 = llhd.prb %str_3 : !hw.string</pre>
+      <pre>      %54 = sim.fmt.str %53</pre>
+      <pre>      %55 = sim.fmt.concat (%0, %54, %4)</pre>
+      <pre>      sim.proc.print %55</pre>
+      <pre>      %56 = llhd.prb %str_3 : !hw.string</pre>
+      <pre>      llhd.wait (%50, %56 : !hw.string, !hw.string), ^bb23(%56 : !hw.string)</pre>
+      <pre>    ^bb23(%57: !hw.string):  // pred: ^bb22</pre>
+      <pre>      %58 = llhd.prb %str_3 : !hw.string</pre>
+      <pre>      %59 = sim.fmt.str %58</pre>
+      <pre>      %60 = sim.fmt.concat (%0, %59, %4)</pre>
+      <pre>      sim.proc.print %60</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_begin() : () -&gt; ()</pre>
+      <pre>      llhd.wait delay %38, ^bb24</pre>
+      <pre>    ^bb24:  // pred: ^bb23</pre>
+      <pre>      llhd.wait delay %2, ^bb25</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      llhd.drv %str_3, %26 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb26</pre>
+      <pre>    ^bb26:  // pred: ^bb25</pre>
+      <pre>      llhd.drv %str_3, %26 after %3 : !hw.string</pre>
+      <pre>      llhd.wait delay %2, ^bb27</pre>
+      <pre>    ^bb27:  // pred: ^bb26</pre>
+      <pre>      llhd.drv %str_3, %25 after %3 : !hw.string</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      func.call @circt_sv_process_fork_end() : () -&gt; ()</pre>
+      <pre>      llhd.wait delay %6, ^bb28</pre>
+      <pre>    ^bb28:  // pred: ^bb27</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_sv_packed_port2_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_packed_port2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_packed_port2.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:16</dd></div>
+        <div><dt>time elapsed</dt><dd>0.068s</dd></div>
+        <div><dt>ram usage</dt><dd>21504 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_packed_port2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_packed_port2.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @main() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = hw.aggregate_constant [0 : i8, -1 : i8] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED -- oval=&#34;</pre>
+      <pre>    %c-983056_i64 = hw.constant -983056 : i64</pre>
+      <pre>    %c-71777214293737713_i64 = hw.constant -71777214293737713 : i64</pre>
+      <pre>    %3 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;, oval = &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;ival = &#34;</pre>
+      <pre>    %c4042322160_i64 = hw.constant 4042322160 : i64</pre>
+      <pre>    %c50462976_i64 = hw.constant 50462976 : i64</pre>
+      <pre>    %6 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-1_i2 = hw.constant -1 : i2</pre>
+      <pre>    %c-2_i2 = hw.constant -2 : i2</pre>
+      <pre>    %c1_i2 = hw.constant 1 : i2</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %7 = llhd.constant_time &lt;1000000fs, 0d, 0e&gt;</pre>
+      <pre>    %8 = hw.aggregate_constant [0, -1] : !hw.struct&lt;value: i64, unknown: i64&gt;</pre>
+      <pre>    %ival = llhd.sig %8 : !hw.struct&lt;value: i64, unknown: i64&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %ival[&#34;value&#34;] : &lt;!hw.struct&lt;value: i64, unknown: i64&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %ival[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i64, unknown: i64&gt;&gt;</pre>
+      <pre>    %oval.3.0 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %11 = hw.struct_create (%93, %94) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %oval.3.0, %11 after %6 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %oval.3.0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %oval.3.0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.3.1 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %oval.3.1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %15 = llhd.sig.struct_extract %oval.3.1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.1.0 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %16 = hw.struct_create (%71, %72) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %oval.1.0, %16 after %6 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %17 = llhd.sig.struct_extract %oval.1.0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %18 = llhd.sig.struct_extract %oval.1.0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.1.1 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %19 = llhd.sig.struct_extract %oval.1.1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %20 = llhd.sig.struct_extract %oval.1.1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.2.0 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %21 = hw.struct_create (%82, %83) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %oval.2.0, %21 after %6 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %22 = llhd.sig.struct_extract %oval.2.0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %23 = llhd.sig.struct_extract %oval.2.0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.2.1 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %24 = llhd.sig.struct_extract %oval.2.1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %25 = llhd.sig.struct_extract %oval.2.1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.0.0 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %26 = hw.struct_create (%60, %61) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %oval.0.0, %26 after %6 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %27 = llhd.sig.struct_extract %oval.0.0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %28 = llhd.sig.struct_extract %oval.0.0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %oval.0.1 = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %29 = llhd.sig.struct_extract %oval.0.1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %30 = llhd.sig.struct_extract %oval.0.1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %31 = llhd.prb %9 : i64</pre>
+      <pre>    %32 = llhd.prb %10 : i64</pre>
+      <pre>    %33 = hw.bitcast %31 : (i64) -&gt; !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;</pre>
+      <pre>    %34 = hw.bitcast %32 : (i64) -&gt; !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;</pre>
+      <pre>    %35 = hw.array_get %33[%c0_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %36 = hw.array_get %34[%c0_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %37 = hw.array_get %35[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %38 = hw.array_get %36[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %adr = hw.struct_extract %37[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_0 = hw.struct_extract %38[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val = hw.struct_extract %37[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_1 = hw.struct_extract %38[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %39 = hw.array_get %33[%c1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %40 = hw.array_get %34[%c1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %41 = hw.array_get %39[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %42 = hw.array_get %40[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %adr_2 = hw.struct_extract %41[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_3 = hw.struct_extract %42[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_4 = hw.struct_extract %41[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_5 = hw.struct_extract %42[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %43 = hw.array_get %33[%c-2_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %44 = hw.array_get %34[%c-2_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %45 = hw.array_get %43[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %46 = hw.array_get %44[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %adr_6 = hw.struct_extract %45[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_7 = hw.struct_extract %46[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_8 = hw.struct_extract %45[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_9 = hw.struct_extract %46[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %47 = hw.array_get %33[%c-1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %48 = hw.array_get %34[%c-1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>    %49 = hw.array_get %47[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %50 = hw.array_get %48[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>    %adr_10 = hw.struct_extract %49[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_11 = hw.struct_extract %50[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_12 = hw.struct_extract %49[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_13 = hw.struct_extract %50[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %51 = hw.struct_create (%adr, %val) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %52 = hw.struct_create (%adr_0, %val_1) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %53 = hw.bitcast %51 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %54 = hw.bitcast %52 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %55 = hw.struct_create (%53, %54) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %loop_0.dut.out = hw.instance &#34;loop_0.dut&#34; @TEST(in: %55: !hw.struct&lt;value: i8, unknown: i8&gt;) -&gt; (out: !hw.struct&lt;value: i8, unknown: i8&gt;)</pre>
+      <pre>    %value = hw.struct_extract %loop_0.dut.out[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %56 = hw.bitcast %value : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %loop_0.dut.out[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %57 = hw.bitcast %unknown : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_14 = hw.struct_extract %56[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_15 = hw.struct_extract %57[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_16 = hw.struct_extract %56[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_17 = hw.struct_extract %57[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %58 = hw.struct_create (%adr_14, %val_16) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %59 = hw.struct_create (%adr_15, %val_17) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %60 = hw.bitcast %58 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %61 = hw.bitcast %59 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %62 = hw.struct_create (%adr_2, %val_4) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %63 = hw.struct_create (%adr_3, %val_5) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %64 = hw.bitcast %62 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %65 = hw.bitcast %63 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %66 = hw.struct_create (%64, %65) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %loop_1.dut.out = hw.instance &#34;loop_1.dut&#34; @TEST(in: %66: !hw.struct&lt;value: i8, unknown: i8&gt;) -&gt; (out: !hw.struct&lt;value: i8, unknown: i8&gt;)</pre>
+      <pre>    %value_18 = hw.struct_extract %loop_1.dut.out[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %67 = hw.bitcast %value_18 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %unknown_19 = hw.struct_extract %loop_1.dut.out[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %68 = hw.bitcast %unknown_19 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_20 = hw.struct_extract %67[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_21 = hw.struct_extract %68[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_22 = hw.struct_extract %67[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_23 = hw.struct_extract %68[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %69 = hw.struct_create (%adr_20, %val_22) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %70 = hw.struct_create (%adr_21, %val_23) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %71 = hw.bitcast %69 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %72 = hw.bitcast %70 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %73 = hw.struct_create (%adr_6, %val_8) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %74 = hw.struct_create (%adr_7, %val_9) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %75 = hw.bitcast %73 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %76 = hw.bitcast %74 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %77 = hw.struct_create (%75, %76) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %loop_2.dut.out = hw.instance &#34;loop_2.dut&#34; @TEST(in: %77: !hw.struct&lt;value: i8, unknown: i8&gt;) -&gt; (out: !hw.struct&lt;value: i8, unknown: i8&gt;)</pre>
+      <pre>    %value_24 = hw.struct_extract %loop_2.dut.out[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %78 = hw.bitcast %value_24 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %unknown_25 = hw.struct_extract %loop_2.dut.out[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %79 = hw.bitcast %unknown_25 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_26 = hw.struct_extract %78[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_27 = hw.struct_extract %79[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_28 = hw.struct_extract %78[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_29 = hw.struct_extract %79[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %80 = hw.struct_create (%adr_26, %val_28) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %81 = hw.struct_create (%adr_27, %val_29) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %82 = hw.bitcast %80 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %83 = hw.bitcast %81 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %84 = hw.struct_create (%adr_10, %val_12) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %85 = hw.struct_create (%adr_11, %val_13) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %86 = hw.bitcast %84 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %87 = hw.bitcast %85 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %88 = hw.struct_create (%86, %87) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %loop_3.dut.out = hw.instance &#34;loop_3.dut&#34; @TEST(in: %88: !hw.struct&lt;value: i8, unknown: i8&gt;) -&gt; (out: !hw.struct&lt;value: i8, unknown: i8&gt;)</pre>
+      <pre>    %value_30 = hw.struct_extract %loop_3.dut.out[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %89 = hw.bitcast %value_30 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %unknown_31 = hw.struct_extract %loop_3.dut.out[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %90 = hw.bitcast %unknown_31 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_32 = hw.struct_extract %89[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %adr_33 = hw.struct_extract %90[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_34 = hw.struct_extract %89[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %val_35 = hw.struct_extract %90[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %91 = hw.struct_create (%adr_32, %val_34) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %92 = hw.struct_create (%adr_33, %val_35) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>    %93 = hw.bitcast %91 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    %94 = hw.bitcast %92 : (!hw.struct&lt;adr: i4, val: i4&gt;) -&gt; i8</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %95 = hw.bitcast %c50462976_i64 : (i64) -&gt; !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;</pre>
+      <pre>      %96 = hw.bitcast %c4042322160_i64 : (i64) -&gt; !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;</pre>
+      <pre>      %97 = hw.array_get %95[%c0_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %98 = hw.array_get %96[%c0_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %99 = hw.array_get %97[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %100 = hw.array_get %98[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_36 = hw.struct_extract %99[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_37 = hw.struct_extract %100[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_38 = hw.struct_extract %99[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_39 = hw.struct_extract %100[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %101 = hw.array_get %97[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %102 = hw.array_get %98[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_40 = hw.struct_extract %101[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_41 = hw.struct_extract %102[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_42 = hw.struct_extract %101[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_43 = hw.struct_extract %102[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %103 = hw.array_get %95[%c1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %104 = hw.array_get %96[%c1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %105 = hw.array_get %103[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %106 = hw.array_get %104[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_44 = hw.struct_extract %105[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_45 = hw.struct_extract %106[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_46 = hw.struct_extract %105[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_47 = hw.struct_extract %106[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %107 = hw.array_get %103[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %108 = hw.array_get %104[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_48 = hw.struct_extract %107[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_49 = hw.struct_extract %108[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_50 = hw.struct_extract %107[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_51 = hw.struct_extract %108[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %109 = hw.array_get %95[%c-2_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %110 = hw.array_get %96[%c-2_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %111 = hw.array_get %109[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %112 = hw.array_get %110[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_52 = hw.struct_extract %111[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_53 = hw.struct_extract %112[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_54 = hw.struct_extract %111[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_55 = hw.struct_extract %112[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %113 = hw.array_get %109[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %114 = hw.array_get %110[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_56 = hw.struct_extract %113[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_57 = hw.struct_extract %114[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_58 = hw.struct_extract %113[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_59 = hw.struct_extract %114[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %115 = hw.array_get %95[%c-1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %116 = hw.array_get %96[%c-1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %117 = hw.array_get %115[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %118 = hw.array_get %116[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_60 = hw.struct_extract %117[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_61 = hw.struct_extract %118[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_62 = hw.struct_extract %117[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_63 = hw.struct_extract %118[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %119 = hw.array_get %115[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %120 = hw.array_get %116[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_64 = hw.struct_extract %119[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_65 = hw.struct_extract %120[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_66 = hw.struct_extract %119[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_67 = hw.struct_extract %120[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %121 = hw.struct_create (%adr_36, %val_38) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %122 = hw.struct_create (%adr_37, %val_39) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %123 = hw.struct_create (%adr_40, %val_42) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %124 = hw.struct_create (%adr_41, %val_43) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %125 = hw.array_create %123, %121 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %126 = hw.array_create %124, %122 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %127 = hw.struct_create (%adr_44, %val_46) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %128 = hw.struct_create (%adr_45, %val_47) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %129 = hw.struct_create (%adr_48, %val_50) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %130 = hw.struct_create (%adr_49, %val_51) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %131 = hw.array_create %129, %127 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %132 = hw.array_create %130, %128 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %133 = hw.struct_create (%adr_52, %val_54) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %134 = hw.struct_create (%adr_53, %val_55) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %135 = hw.struct_create (%adr_56, %val_58) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %136 = hw.struct_create (%adr_57, %val_59) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %137 = hw.array_create %135, %133 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %138 = hw.array_create %136, %134 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %139 = hw.struct_create (%adr_60, %val_62) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %140 = hw.struct_create (%adr_61, %val_63) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %141 = hw.struct_create (%adr_64, %val_66) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %142 = hw.struct_create (%adr_65, %val_67) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %143 = hw.array_create %141, %139 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %144 = hw.array_create %142, %140 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %145 = hw.array_create %143, %137, %131, %125 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %146 = hw.array_create %144, %138, %132, %126 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %147 = hw.bitcast %145 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %148 = hw.bitcast %146 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      llhd.drv %9, %147 after %6 : i64</pre>
+      <pre>      llhd.drv %10, %148 after %6 : i64</pre>
+      <pre>      llhd.wait delay %7, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %149 = llhd.prb %9 : i64</pre>
+      <pre>      %150 = llhd.prb %10 : i64</pre>
+      <pre>      %151 = hw.bitcast %149 : (i64) -&gt; !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;</pre>
+      <pre>      %152 = hw.bitcast %150 : (i64) -&gt; !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;</pre>
+      <pre>      %153 = hw.array_get %151[%c0_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %154 = hw.array_get %152[%c0_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %155 = hw.array_get %153[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %156 = hw.array_get %154[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_68 = hw.struct_extract %155[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_69 = hw.struct_extract %156[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_70 = hw.struct_extract %155[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_71 = hw.struct_extract %156[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %157 = hw.array_get %153[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %158 = hw.array_get %154[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_72 = hw.struct_extract %157[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_73 = hw.struct_extract %158[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_74 = hw.struct_extract %157[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_75 = hw.struct_extract %158[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %159 = hw.array_get %151[%c1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %160 = hw.array_get %152[%c1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %161 = hw.array_get %159[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %162 = hw.array_get %160[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_76 = hw.struct_extract %161[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_77 = hw.struct_extract %162[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_78 = hw.struct_extract %161[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_79 = hw.struct_extract %162[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %163 = hw.array_get %159[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %164 = hw.array_get %160[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_80 = hw.struct_extract %163[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_81 = hw.struct_extract %164[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_82 = hw.struct_extract %163[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_83 = hw.struct_extract %164[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %165 = hw.array_get %151[%c-2_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %166 = hw.array_get %152[%c-2_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %167 = hw.array_get %165[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %168 = hw.array_get %166[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_84 = hw.struct_extract %167[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_85 = hw.struct_extract %168[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_86 = hw.struct_extract %167[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_87 = hw.struct_extract %168[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %169 = hw.array_get %165[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %170 = hw.array_get %166[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_88 = hw.struct_extract %169[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_89 = hw.struct_extract %170[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_90 = hw.struct_extract %169[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_91 = hw.struct_extract %170[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %171 = hw.array_get %151[%c-1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %172 = hw.array_get %152[%c-1_i2] : !hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;, i2</pre>
+      <pre>      %173 = hw.array_get %171[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %174 = hw.array_get %172[%false] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_92 = hw.struct_extract %173[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_93 = hw.struct_extract %174[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_94 = hw.struct_extract %173[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_95 = hw.struct_extract %174[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %175 = hw.array_get %171[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %176 = hw.array_get %172[%true] : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;, i1</pre>
+      <pre>      %adr_96 = hw.struct_extract %175[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_97 = hw.struct_extract %176[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_98 = hw.struct_extract %175[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_99 = hw.struct_extract %176[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %177 = hw.struct_create (%adr_68, %val_70) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %178 = hw.struct_create (%adr_69, %val_71) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %179 = hw.struct_create (%adr_72, %val_74) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %180 = hw.struct_create (%adr_73, %val_75) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %181 = hw.array_create %179, %177 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %182 = hw.array_create %180, %178 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %183 = hw.struct_create (%adr_76, %val_78) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %184 = hw.struct_create (%adr_77, %val_79) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %185 = hw.struct_create (%adr_80, %val_82) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %186 = hw.struct_create (%adr_81, %val_83) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %187 = hw.array_create %185, %183 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %188 = hw.array_create %186, %184 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %189 = hw.struct_create (%adr_84, %val_86) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %190 = hw.struct_create (%adr_85, %val_87) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %191 = hw.struct_create (%adr_88, %val_90) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %192 = hw.struct_create (%adr_89, %val_91) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %193 = hw.array_create %191, %189 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %194 = hw.array_create %192, %190 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %195 = hw.struct_create (%adr_92, %val_94) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %196 = hw.struct_create (%adr_93, %val_95) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %197 = hw.struct_create (%adr_96, %val_98) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %198 = hw.struct_create (%adr_97, %val_99) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %199 = hw.array_create %197, %195 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %200 = hw.array_create %198, %196 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %201 = hw.array_create %199, %193, %187, %181 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %202 = hw.array_create %200, %194, %188, %182 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %203 = hw.bitcast %201 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %204 = hw.bitcast %202 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %205 = sim.fmt.fvint 16 16 4 %203, %204 : i64</pre>
+      <pre>      %206 = llhd.prb %27 : i8</pre>
+      <pre>      %207 = llhd.prb %28 : i8</pre>
+      <pre>      %208 = hw.bitcast %206 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %209 = hw.bitcast %207 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_100 = hw.struct_extract %208[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_101 = hw.struct_extract %209[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_102 = hw.struct_extract %208[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_103 = hw.struct_extract %209[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %210 = llhd.prb %29 : i8</pre>
+      <pre>      %211 = llhd.prb %30 : i8</pre>
+      <pre>      %212 = hw.bitcast %210 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %213 = hw.bitcast %211 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_104 = hw.struct_extract %212[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_105 = hw.struct_extract %213[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_106 = hw.struct_extract %212[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_107 = hw.struct_extract %213[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %214 = llhd.prb %17 : i8</pre>
+      <pre>      %215 = llhd.prb %18 : i8</pre>
+      <pre>      %216 = hw.bitcast %214 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %217 = hw.bitcast %215 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_108 = hw.struct_extract %216[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_109 = hw.struct_extract %217[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_110 = hw.struct_extract %216[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_111 = hw.struct_extract %217[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %218 = llhd.prb %19 : i8</pre>
+      <pre>      %219 = llhd.prb %20 : i8</pre>
+      <pre>      %220 = hw.bitcast %218 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %221 = hw.bitcast %219 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_112 = hw.struct_extract %220[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_113 = hw.struct_extract %221[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_114 = hw.struct_extract %220[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_115 = hw.struct_extract %221[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %222 = llhd.prb %22 : i8</pre>
+      <pre>      %223 = llhd.prb %23 : i8</pre>
+      <pre>      %224 = hw.bitcast %222 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %225 = hw.bitcast %223 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_116 = hw.struct_extract %224[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_117 = hw.struct_extract %225[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_118 = hw.struct_extract %224[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_119 = hw.struct_extract %225[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %226 = llhd.prb %24 : i8</pre>
+      <pre>      %227 = llhd.prb %25 : i8</pre>
+      <pre>      %228 = hw.bitcast %226 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %229 = hw.bitcast %227 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_120 = hw.struct_extract %228[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_121 = hw.struct_extract %229[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_122 = hw.struct_extract %228[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_123 = hw.struct_extract %229[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %230 = llhd.prb %12 : i8</pre>
+      <pre>      %231 = llhd.prb %13 : i8</pre>
+      <pre>      %232 = hw.bitcast %230 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %233 = hw.bitcast %231 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_124 = hw.struct_extract %232[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_125 = hw.struct_extract %233[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_126 = hw.struct_extract %232[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_127 = hw.struct_extract %233[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %234 = llhd.prb %14 : i8</pre>
+      <pre>      %235 = llhd.prb %15 : i8</pre>
+      <pre>      %236 = hw.bitcast %234 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %237 = hw.bitcast %235 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_128 = hw.struct_extract %236[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_129 = hw.struct_extract %237[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_130 = hw.struct_extract %236[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_131 = hw.struct_extract %237[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %238 = hw.struct_create (%adr_100, %val_102) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %239 = hw.struct_create (%adr_101, %val_103) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %240 = hw.struct_create (%adr_104, %val_106) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %241 = hw.struct_create (%adr_105, %val_107) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %242 = hw.array_create %240, %238 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %243 = hw.array_create %241, %239 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %244 = hw.struct_create (%adr_108, %val_110) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %245 = hw.struct_create (%adr_109, %val_111) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %246 = hw.struct_create (%adr_112, %val_114) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %247 = hw.struct_create (%adr_113, %val_115) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %248 = hw.array_create %246, %244 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %249 = hw.array_create %247, %245 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %250 = hw.struct_create (%adr_116, %val_118) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %251 = hw.struct_create (%adr_117, %val_119) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %252 = hw.struct_create (%adr_120, %val_122) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %253 = hw.struct_create (%adr_121, %val_123) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %254 = hw.array_create %252, %250 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %255 = hw.array_create %253, %251 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %256 = hw.struct_create (%adr_124, %val_126) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %257 = hw.struct_create (%adr_125, %val_127) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %258 = hw.struct_create (%adr_128, %val_130) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %259 = hw.struct_create (%adr_129, %val_131) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %260 = hw.array_create %258, %256 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %261 = hw.array_create %259, %257 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %262 = hw.array_create %260, %254, %248, %242 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %263 = hw.array_create %261, %255, %249, %243 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %264 = hw.bitcast %262 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %265 = hw.bitcast %263 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %266 = sim.fmt.fvint 16 16 4 %264, %265 : i64</pre>
+      <pre>      %267 = sim.fmt.concat (%5, %205, %4, %266, %3)</pre>
+      <pre>      sim.proc.print %267</pre>
+      <pre>      %268 = llhd.prb %27 : i8</pre>
+      <pre>      %269 = llhd.prb %28 : i8</pre>
+      <pre>      %270 = hw.bitcast %268 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %271 = hw.bitcast %269 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_132 = hw.struct_extract %270[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_133 = hw.struct_extract %271[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_134 = hw.struct_extract %270[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_135 = hw.struct_extract %271[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %272 = llhd.prb %29 : i8</pre>
+      <pre>      %273 = llhd.prb %30 : i8</pre>
+      <pre>      %274 = hw.bitcast %272 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %275 = hw.bitcast %273 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_136 = hw.struct_extract %274[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_137 = hw.struct_extract %275[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_138 = hw.struct_extract %274[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_139 = hw.struct_extract %275[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %276 = llhd.prb %17 : i8</pre>
+      <pre>      %277 = llhd.prb %18 : i8</pre>
+      <pre>      %278 = hw.bitcast %276 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %279 = hw.bitcast %277 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_140 = hw.struct_extract %278[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_141 = hw.struct_extract %279[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_142 = hw.struct_extract %278[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_143 = hw.struct_extract %279[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %280 = llhd.prb %19 : i8</pre>
+      <pre>      %281 = llhd.prb %20 : i8</pre>
+      <pre>      %282 = hw.bitcast %280 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %283 = hw.bitcast %281 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_144 = hw.struct_extract %282[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_145 = hw.struct_extract %283[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_146 = hw.struct_extract %282[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_147 = hw.struct_extract %283[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %284 = llhd.prb %22 : i8</pre>
+      <pre>      %285 = llhd.prb %23 : i8</pre>
+      <pre>      %286 = hw.bitcast %284 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %287 = hw.bitcast %285 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_148 = hw.struct_extract %286[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_149 = hw.struct_extract %287[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_150 = hw.struct_extract %286[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_151 = hw.struct_extract %287[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %288 = llhd.prb %24 : i8</pre>
+      <pre>      %289 = llhd.prb %25 : i8</pre>
+      <pre>      %290 = hw.bitcast %288 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %291 = hw.bitcast %289 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_152 = hw.struct_extract %290[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_153 = hw.struct_extract %291[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_154 = hw.struct_extract %290[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_155 = hw.struct_extract %291[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %292 = llhd.prb %12 : i8</pre>
+      <pre>      %293 = llhd.prb %13 : i8</pre>
+      <pre>      %294 = hw.bitcast %292 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %295 = hw.bitcast %293 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_156 = hw.struct_extract %294[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_157 = hw.struct_extract %295[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_158 = hw.struct_extract %294[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_159 = hw.struct_extract %295[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %296 = llhd.prb %14 : i8</pre>
+      <pre>      %297 = llhd.prb %15 : i8</pre>
+      <pre>      %298 = hw.bitcast %296 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %299 = hw.bitcast %297 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_160 = hw.struct_extract %298[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_161 = hw.struct_extract %299[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_162 = hw.struct_extract %298[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_163 = hw.struct_extract %299[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %300 = hw.struct_create (%adr_132, %val_134) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %301 = hw.struct_create (%adr_133, %val_135) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %302 = hw.struct_create (%adr_136, %val_138) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %303 = hw.struct_create (%adr_137, %val_139) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %304 = hw.array_create %302, %300 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %305 = hw.array_create %303, %301 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %306 = hw.struct_create (%adr_140, %val_142) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %307 = hw.struct_create (%adr_141, %val_143) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %308 = hw.struct_create (%adr_144, %val_146) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %309 = hw.struct_create (%adr_145, %val_147) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %310 = hw.array_create %308, %306 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %311 = hw.array_create %309, %307 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %312 = hw.struct_create (%adr_148, %val_150) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %313 = hw.struct_create (%adr_149, %val_151) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %314 = hw.struct_create (%adr_152, %val_154) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %315 = hw.struct_create (%adr_153, %val_155) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %316 = hw.array_create %314, %312 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %317 = hw.array_create %315, %313 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %318 = hw.struct_create (%adr_156, %val_158) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %319 = hw.struct_create (%adr_157, %val_159) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %320 = hw.struct_create (%adr_160, %val_162) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %321 = hw.struct_create (%adr_161, %val_163) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %322 = hw.array_create %320, %318 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %323 = hw.array_create %321, %319 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %324 = hw.array_create %322, %316, %310, %304 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %325 = hw.array_create %323, %317, %311, %305 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %326 = hw.bitcast %324 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %327 = hw.bitcast %325 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %328 = comb.icmp eq %326, %c-71777214293737713_i64 : i64</pre>
+      <pre>      %329 = comb.icmp eq %327, %c-983056_i64 : i64</pre>
+      <pre>      %330 = comb.and %328, %329 : i1</pre>
+      <pre>      %331 = comb.xor %330, %true : i1</pre>
+      <pre>      cf.cond_br %331, ^bb2, ^bb3</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      %332 = llhd.prb %27 : i8</pre>
+      <pre>      %333 = llhd.prb %28 : i8</pre>
+      <pre>      %334 = hw.bitcast %332 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %335 = hw.bitcast %333 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_164 = hw.struct_extract %334[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_165 = hw.struct_extract %335[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_166 = hw.struct_extract %334[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_167 = hw.struct_extract %335[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %336 = llhd.prb %29 : i8</pre>
+      <pre>      %337 = llhd.prb %30 : i8</pre>
+      <pre>      %338 = hw.bitcast %336 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %339 = hw.bitcast %337 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_168 = hw.struct_extract %338[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_169 = hw.struct_extract %339[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_170 = hw.struct_extract %338[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_171 = hw.struct_extract %339[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %340 = llhd.prb %17 : i8</pre>
+      <pre>      %341 = llhd.prb %18 : i8</pre>
+      <pre>      %342 = hw.bitcast %340 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %343 = hw.bitcast %341 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_172 = hw.struct_extract %342[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_173 = hw.struct_extract %343[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_174 = hw.struct_extract %342[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_175 = hw.struct_extract %343[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %344 = llhd.prb %19 : i8</pre>
+      <pre>      %345 = llhd.prb %20 : i8</pre>
+      <pre>      %346 = hw.bitcast %344 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %347 = hw.bitcast %345 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_176 = hw.struct_extract %346[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_177 = hw.struct_extract %347[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_178 = hw.struct_extract %346[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_179 = hw.struct_extract %347[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %348 = llhd.prb %22 : i8</pre>
+      <pre>      %349 = llhd.prb %23 : i8</pre>
+      <pre>      %350 = hw.bitcast %348 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %351 = hw.bitcast %349 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_180 = hw.struct_extract %350[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_181 = hw.struct_extract %351[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_182 = hw.struct_extract %350[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_183 = hw.struct_extract %351[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %352 = llhd.prb %24 : i8</pre>
+      <pre>      %353 = llhd.prb %25 : i8</pre>
+      <pre>      %354 = hw.bitcast %352 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %355 = hw.bitcast %353 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_184 = hw.struct_extract %354[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_185 = hw.struct_extract %355[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_186 = hw.struct_extract %354[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_187 = hw.struct_extract %355[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %356 = llhd.prb %12 : i8</pre>
+      <pre>      %357 = llhd.prb %13 : i8</pre>
+      <pre>      %358 = hw.bitcast %356 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %359 = hw.bitcast %357 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_188 = hw.struct_extract %358[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_189 = hw.struct_extract %359[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_190 = hw.struct_extract %358[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_191 = hw.struct_extract %359[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %360 = llhd.prb %14 : i8</pre>
+      <pre>      %361 = llhd.prb %15 : i8</pre>
+      <pre>      %362 = hw.bitcast %360 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %363 = hw.bitcast %361 : (i8) -&gt; !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_192 = hw.struct_extract %362[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %adr_193 = hw.struct_extract %363[&#34;adr&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_194 = hw.struct_extract %362[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %val_195 = hw.struct_extract %363[&#34;val&#34;] : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %364 = hw.struct_create (%adr_164, %val_166) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %365 = hw.struct_create (%adr_165, %val_167) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %366 = hw.struct_create (%adr_168, %val_170) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %367 = hw.struct_create (%adr_169, %val_171) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %368 = hw.array_create %366, %364 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %369 = hw.array_create %367, %365 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %370 = hw.struct_create (%adr_172, %val_174) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %371 = hw.struct_create (%adr_173, %val_175) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %372 = hw.struct_create (%adr_176, %val_178) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %373 = hw.struct_create (%adr_177, %val_179) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %374 = hw.array_create %372, %370 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %375 = hw.array_create %373, %371 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %376 = hw.struct_create (%adr_180, %val_182) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %377 = hw.struct_create (%adr_181, %val_183) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %378 = hw.struct_create (%adr_184, %val_186) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %379 = hw.struct_create (%adr_185, %val_187) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %380 = hw.array_create %378, %376 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %381 = hw.array_create %379, %377 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %382 = hw.struct_create (%adr_188, %val_190) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %383 = hw.struct_create (%adr_189, %val_191) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %384 = hw.struct_create (%adr_192, %val_194) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %385 = hw.struct_create (%adr_193, %val_195) : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %386 = hw.array_create %384, %382 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %387 = hw.array_create %385, %383 : !hw.struct&lt;adr: i4, val: i4&gt;</pre>
+      <pre>      %388 = hw.array_create %386, %380, %374, %368 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %389 = hw.array_create %387, %381, %375, %369 : !hw.array&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;</pre>
+      <pre>      %390 = hw.bitcast %388 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %391 = hw.bitcast %389 : (!hw.array&lt;4xarray&lt;2xstruct&lt;adr: i4, val: i4&gt;&gt;&gt;) -&gt; i64</pre>
+      <pre>      %392 = sim.fmt.fvint 16 16 4 %390, %391 : i64</pre>
+      <pre>      %393 = sim.fmt.concat (%2, %392, %3)</pre>
+      <pre>      sim.proc.print %393</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb3:  // pred: ^bb1</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>  hw.module private @TEST(in %in : !hw.struct&lt;value: i8, unknown: i8&gt;, out out : !hw.struct&lt;value: i8, unknown: i8&gt;) {</pre>
+      <pre>    %c-1_i8 = hw.constant -1 : i8</pre>
+      <pre>    %value = hw.struct_extract %in[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %in[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %0 = comb.xor %value, %c-1_i8 : i8</pre>
+      <pre>    %1 = comb.xor %unknown, %c-1_i8 : i8</pre>
+      <pre>    %2 = comb.and %0, %1 : i8</pre>
+      <pre>    %3 = hw.struct_create (%2, %unknown) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    hw.output %3 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

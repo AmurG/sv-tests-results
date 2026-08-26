@@ -1,0 +1,44 @@
+name: keyword_endcase
+description: The 'endcase' keyword should be reserved
+should_fail_because: The 'endcase' keyword should be reserved
+tags: 5.6.2
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11094307899475098
+user_time: 0.011276
+system_time: 0.07198299999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:34
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/generated/keywords/5.6.2--keyword_endcase.sv:8:9: error: expected a declaration name
+    bit endcase;
+        ^
+../../../tests/generated/keywords/5.6.2--keyword_endcase.sv:8:9: error: unexpected 'endcase' delimiter
+    bit endcase;
+        ^~~~~~~
+../../../tests/generated/keywords/5.6.2--keyword_endcase.sv:7:11: note: last complete block started here
+module top();
+          ^
+../../../tests/generated/keywords/5.6.2--keyword_endcase.sv:7:12: note: and ended here
+module top();
+           ^
+Top level design units:
+    top
+
+
+Build failed: 2 errors, 0 warnings

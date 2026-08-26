@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>regress-sv_br_gh418_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh418.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:47:50</dd></div>
+        <div><dt>time elapsed</dt><dd>0.022s</dd></div>
+        <div><dt>ram usage</dt><dd>15232 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=simulation top=</pre>
+      <pre>[Arcilator] mode=simulation top=</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh418.v</a></pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:10:17: error: cannot materialize captured value at call site; non-symbol source: moore.variable</pre>
+      <pre>  function void func2();</pre>
+      <pre>                ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:10:17: note: see current operation: </pre>
+      <pre>&#34;func.func&#34;() &lt;{function_type = (!moore.ref&lt;l32&gt;) -&gt; (), sym_name = &#34;func2&#34;, sym_visibility = &#34;private&#34;}&gt; ({</pre>
+      <pre>^bb0(%arg0: !moore.ref&lt;l32&gt;):</pre>
+      <pre>  %0 = &#34;moore.read&#34;(%arg0) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %1 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %2 = &#34;moore.add&#34;(%0, %1) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%arg0, %2) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  %3 = &#34;moore.read&#34;(%arg0) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %4 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;10 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %5 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;10 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %6 = &#34;moore.ult&#34;(%3, %5) : (!moore.l32, !moore.l32) -&gt; !moore.l1</pre>
+      <pre>  %7 = &#34;moore.logic_to_int&#34;(%6) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>  %8 = &#34;moore.to_builtin_int&#34;(%7) : (!moore.i1) -&gt; i1</pre>
+      <pre>  &#34;cf.cond_br&#34;(%8)[^bb1, ^bb2] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>^bb1:  // pred: ^bb0</pre>
+      <pre>  &#34;func.call&#34;() &lt;{callee = @func1}&gt; : () -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb2] : () -&gt; ()</pre>
+      <pre>^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>  &#34;func.return&#34;() : () -&gt; ()</pre>
+      <pre>}) : () -&gt; ()</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:7:21: error: failed to convert expression statement</pre>
+      <pre>    if (count &lt; 10) func2();</pre>
+      <pre>                    ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:7:21: note: expression kind: Call</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:7:21: note: call target: func2</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:7:5: error: failed to convert statement Conditional</pre>
+      <pre>    if (count &lt; 10) func2();</pre>
+      <pre>    ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/br_gh418.v:5:17: error: failed to convert module `m` member `func1` (Subroutine)</pre>
+      <pre>  function void func1();</pre>
+      <pre>                ^</pre>
+      <pre>&lt;unknown&gt;:0: error: import failed without diagnostics</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

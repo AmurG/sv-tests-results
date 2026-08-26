@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","dyn-arr-basic",1,"logs/Slang/chapter-7/arrays/dynamic/basic.sv.log.html","tests/chapter-7/arrays/dynamic/basic.sv.html"]]

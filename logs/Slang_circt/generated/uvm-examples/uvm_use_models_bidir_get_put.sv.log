@@ -1,0 +1,46 @@
+name: uvm_use_models_bidir_get_put
+description: UVM example - uvm_use_models_bidir_get_put
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path>
+tags: uvm-examples uvm
+type: simulation elaboration parsing
+timeout: 360
+unsynthesizable: 1
+simvariants:  
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.8786942958831787
+user_time: 0.7689809999999999
+system_time: 0.753949
+ram_usage: 143360
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path>
+../../../third_party/tests/uvm-examples/uvm_use_models_bidir_get_put/top_tb.sv:28:9: warning: macro 'uvm_record_field' redefined [-Wredef-macro]
+`define uvm_record_field(NAME,VALUE)
+        ^~~~~~~~~~~~~~~~
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:37:
+in file included from ../../../third_party/tests/uvm/src/uvm_macros.svh:85:
+../../../third_party/tests/uvm/src/macros/uvm_recorder_defines.svh:191:9: note: previous definition here
+`define uvm_record_field(NAME,VALUE,RECORDER=recorder) \
+        ^
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+Top level design units:
+    top_hdl
+    top_tb
+
+
+Build succeeded: 0 errors, 2 warnings

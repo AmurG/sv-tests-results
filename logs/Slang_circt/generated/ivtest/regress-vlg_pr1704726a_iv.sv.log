@@ -1,0 +1,104 @@
+name: regress-vlg_pr1704726a_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10530686378479004
+user_time: 0.020388999999999997
+system_time: 0.094691
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:45
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:8:13: error: redefinition of 'name_pp'
+  parameter name_pp = 0;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:7:13: note: previous definition here
+  parameter name_pp = 1;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:11:14: error: redefinition of 'name_pl'
+  localparam name_pl = 0;
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:10:13: note: previous definition here
+  parameter name_pl = 1;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:14:13: error: redefinition of 'name_lp'
+  parameter name_lp = 1;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:13:14: note: previous definition here
+  localparam name_lp = 0;
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:17:14: error: redefinition of 'name_ll'
+  localparam name_ll = 0;
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:16:14: note: previous definition here
+  localparam name_ll = 1;
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:24:10: error: redefinition of 'name_vv'
+  genvar name_vv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:23:10: note: previous definition here
+  genvar name_vv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:33:8: error: redefinition of 'name_tt'
+  task name_tt;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:30:8: note: previous definition here
+  task name_tt;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:43:12: error: redefinition of 'name_tt'
+      task name_tt;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:40:12: note: previous definition here
+      task name_tt;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:57:12: error: redefinition of 'name_ff'
+  function name_ff;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:53:12: note: previous definition here
+  function name_ff;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:64:12: error: redefinition of 'task_blk'
+    begin: task_blk
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:39:12: note: previous definition here
+    begin: task_blk
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:69:16: error: redefinition of 'name_ff'
+      function name_ff;
+               ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:65:16: note: previous definition here
+      function name_ff;
+               ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:81:9: error: redefinition of 'name_ee'
+  event name_ee;
+        ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:80:9: note: previous definition here
+  event name_ee;
+        ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:87:15: error: redefinition of 'name_ss'
+    specparam name_ss = 0;
+              ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726a.v:86:15: note: previous definition here
+    specparam name_ss = 1;
+              ^
+Top level design units:
+    top
+
+
+Build failed: 12 errors, 0 warnings

@@ -1,0 +1,35 @@
+name: dist_erlang_function
+description: $dist_erlang test
+tags: 20.15
+type: simulation elaboration parsing
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.13292288780212402
+user_time: 0.009453
+system_time: 0.100869
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-20/20.15--dist_erlang.sv:20:17: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+        integer seed = 1234;
+                ^~~~
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 1 warning

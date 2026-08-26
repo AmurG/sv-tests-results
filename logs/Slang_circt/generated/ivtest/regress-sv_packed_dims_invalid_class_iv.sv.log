@@ -1,0 +1,68 @@
+name: regress-sv_packed_dims_invalid_class_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.09555864334106445
+user_time: 0.029112
+system_time: 0.10568599999999999
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:44
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:4:15: error: dimension requires a constant range
+typedef logic [] T1;
+              ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:5:16: error: value must be positive
+typedef logic [0] T2;
+               ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:6:16: error: value must be positive
+typedef logic [-1] T3;
+               ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:7:15: error: dimension requires a constant range
+typedef logic [$] T4;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:10:15: error: dimension requires a constant range
+        logic [$] a;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:12:13: error: unbounded literal '$' not allowed here
+        T1 [$] c;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:14:16: error: value must be positive
+        logic [0] d;
+               ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:16:13: error: value must be positive
+        T2 [0] f;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:18:16: error: value must be positive
+        logic [-1] g;
+               ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:20:13: error: value must be positive
+        T3 [-1] i;
+            ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:22:15: error: dimension requires a constant range
+        logic [$] j;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_class.v:24:13: error: unbounded literal '$' not allowed here
+        T4 [$] l;
+            ^
+Top level design units:
+    test
+
+
+Build failed: 12 errors, 0 warnings

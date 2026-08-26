@@ -1,0 +1,35 @@
+name: typedef_test_28__bad
+description: Test
+should_fail_because: missing forward typedef declaration, type_identifier does not resolve to a data type.
+tags: 6.18
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11229515075683594
+user_time: 0.017603
+system_time: 0.11623299999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/generic/typedef/typedef_test_28__bad.sv:23:9: error: forward typedef 'missing_forward_typedef' does not resolve to a data type
+typedef missing_forward_typedef;
+        ^
+Top level design units:
+    test
+
+
+Build failed: 1 error, 0 warnings

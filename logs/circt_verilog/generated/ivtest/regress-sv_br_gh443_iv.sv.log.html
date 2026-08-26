@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_br_gh443_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh443.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh443.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh443.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh443.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;In function &lt;%m&gt;()\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;In task &lt;%m&gt;()\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;In &lt;%m&gt;.final\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;In &lt;%m&gt;.initial\0A&#34;</pre>
+      <pre>    %c1000000_i64 = hw.constant 1000000 : i64</pre>
+      <pre>    %c0_i64 = hw.constant 0 : i64</pre>
+      <pre>    %5 = sim.fmt.literal &#34;Done with simulation at &#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %7 = llhd.constant_time &lt;10000000fs, 0d, 0e&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      sim.proc.print %4</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.wait delay %7, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %8 = llhd.current_time</pre>
+      <pre>      %9 = llhd.time_to_int %8</pre>
+      <pre>      %10 = comb.divu %9, %c1000000_i64 : i64</pre>
+      <pre>      %11 = sim.fmt.fvint 10 0 0 %10, %c0_i64 : i64</pre>
+      <pre>      %12 = sim.fmt.concat (%5, %11, %6)</pre>
+      <pre>      sim.proc.print %12</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    llhd.final {</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      sim.proc.print %3</pre>
+      <pre>      sim.proc.print %2</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

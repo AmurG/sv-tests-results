@@ -1,0 +1,38 @@
+name: pragma-directive
+description: Try to set a pragma
+tags: 5.6.4
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11475467681884766
+user_time: 0.024978999999999998
+system_time: 0.09607399999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-5/5.6.4--compiler-directives-pragma.sv:17:16: warning: expected pragma protect keyword [-Wexpected-protect-keyword]
+`pragma protect
+               ^
+../../../tests/chapter-5/5.6.4--compiler-directives-pragma.sv:19:17: warning: pragma protect 'end' seen without corresponding start of block [-Wextra-protect-end]
+`pragma protect end
+                ^~~
+Top level design units:
+    ts
+
+
+Build succeeded: 0 errors, 2 warnings

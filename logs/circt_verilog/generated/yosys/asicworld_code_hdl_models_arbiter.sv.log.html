@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>asicworld_code_hdl_models_arbiter</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/asicworld_code_hdl_models_arbiter.sv.html" target="file-frame">tests/generated/yosys/asicworld_code_hdl_models_arbiter.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.096s</dd></div>
+        <div><dt>ram usage</dt><dd>25088 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/asicworld_code_hdl_models_arbiter.sv.html" target="file-frame">tests/generated/yosys/asicworld_code_hdl_models_arbiter.sv</a> <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @arbiter(in %clk : !hw.struct&lt;value: i1, unknown: i1&gt;, in %rst : !hw.struct&lt;value: i1, unknown: i1&gt;, in %req3 : !hw.struct&lt;value: i1, unknown: i1&gt;, in %req2 : !hw.struct&lt;value: i1, unknown: i1&gt;, in %req1 : !hw.struct&lt;value: i1, unknown: i1&gt;, in %req0 : !hw.struct&lt;value: i1, unknown: i1&gt;, out gnt3 : !hw.struct&lt;value: i1, unknown: i1&gt;, out gnt2 : !hw.struct&lt;value: i1, unknown: i1&gt;, out gnt1 : !hw.struct&lt;value: i1, unknown: i1&gt;, out gnt0 : !hw.struct&lt;value: i1, unknown: i1&gt;) {</pre>
+      <pre>    %0 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i2, -1 : i2] : !hw.struct&lt;value: i2, unknown: i2&gt;</pre>
+      <pre>    %2 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 1d, 0e&gt;</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %4 = hw.aggregate_constant [true, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %clk_0 = llhd.sig name &#34;clk&#34; %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %5 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %clk_0, %5 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %clk_0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %clk_0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %rst_1 = llhd.sig name &#34;rst&#34; %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %8 = hw.struct_create (%value_6, %unknown_7) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %rst_1, %8 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %rst_1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %rst_1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %req3_2 = llhd.sig name &#34;req3&#34; %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %11 = hw.struct_create (%value_8, %unknown_9) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %req3_2, %11 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %req3_2[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %req3_2[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %req2_3 = llhd.sig name &#34;req2&#34; %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %14 = hw.struct_create (%value_10, %unknown_11) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %req2_3, %14 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %15 = llhd.sig.struct_extract %req2_3[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %16 = llhd.sig.struct_extract %req2_3[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %req1_4 = llhd.sig name &#34;req1&#34; %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %17 = hw.struct_create (%value_12, %unknown_13) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %req1_4, %17 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %18 = llhd.sig.struct_extract %req1_4[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %19 = llhd.sig.struct_extract %req1_4[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %req0_5 = llhd.sig name &#34;req0&#34; %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %20 = hw.struct_create (%value_14, %unknown_15) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %req0_5, %20 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %21 = llhd.sig.struct_extract %req0_5[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %22 = llhd.sig.struct_extract %req0_5[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %beg = llhd.sig %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %23 = hw.struct_create (%94, %96) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %beg, %23 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %24 = llhd.sig.struct_extract %beg[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %25 = llhd.sig.struct_extract %beg[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lgnt = llhd.sig %1 : !hw.struct&lt;value: i2, unknown: i2&gt;</pre>
+      <pre>    %26 = hw.struct_create (%158, %159) : !hw.struct&lt;value: i2, unknown: i2&gt;</pre>
+      <pre>    llhd.drv %lgnt, %26 after %2 : !hw.struct&lt;value: i2, unknown: i2&gt;</pre>
+      <pre>    %27 = llhd.sig.struct_extract %lgnt[&#34;value&#34;] : &lt;!hw.struct&lt;value: i2, unknown: i2&gt;&gt;</pre>
+      <pre>    %28 = llhd.sig.struct_extract %lgnt[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i2, unknown: i2&gt;&gt;</pre>
+      <pre>    %lcomreq = llhd.sig %4 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %29 = hw.struct_create (%147, %149) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %lcomreq, %29 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %30 = llhd.sig.struct_extract %lcomreq[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %31 = llhd.sig.struct_extract %lcomreq[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lgnt0 = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %32 = llhd.sig.struct_extract %lgnt0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %33 = llhd.sig.struct_extract %lgnt0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lgnt1 = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %34 = llhd.sig.struct_extract %lgnt1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %35 = llhd.sig.struct_extract %lgnt1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lgnt2 = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %36 = llhd.sig.struct_extract %lgnt2[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %37 = llhd.sig.struct_extract %lgnt2[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lgnt3 = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %38 = llhd.sig.struct_extract %lgnt3[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %39 = llhd.sig.struct_extract %lgnt3[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lasmask = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %40 = llhd.sig.struct_extract %lasmask[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %41 = llhd.sig.struct_extract %lasmask[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lmask0 = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %42 = llhd.sig.struct_extract %lmask0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %43 = llhd.sig.struct_extract %lmask0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %lmask1 = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %44 = llhd.sig.struct_extract %lmask1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %45 = llhd.sig.struct_extract %lmask1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %ledge = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %46 = llhd.sig.struct_extract %ledge[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %47 = llhd.sig.struct_extract %ledge[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 4 preds: ^bb0, ^bb2, ^bb4, ^bb5</pre>
+      <pre>      %164 = llhd.prb %6 : i1</pre>
+      <pre>      %165 = llhd.prb %7 : i1</pre>
+      <pre>      %166 = hw.struct_create (%164, %165) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.wait (%166 : !hw.struct&lt;value: i1, unknown: i1&gt;), ^bb2(%166 : !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    ^bb2(%167: !hw.struct&lt;value: i1, unknown: i1&gt;):  // pred: ^bb1</pre>
+      <pre>      %168 = llhd.prb %6 : i1</pre>
+      <pre>      %169 = llhd.prb %7 : i1</pre>
+      <pre>      %value_16 = hw.struct_extract %167[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown_17 = hw.struct_extract %167[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %170 = comb.xor bin %169, %true : i1</pre>
+      <pre>      %171 = comb.xor bin %value_16, %true : i1</pre>
+      <pre>      %172 = comb.or bin %unknown_17, %171 : i1</pre>
+      <pre>      %173 = comb.and bin %170, %168, %172 : i1</pre>
+      <pre>      cf.cond_br %173, ^bb3, ^bb1</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %174 = llhd.prb %9 : i1</pre>
+      <pre>      %175 = llhd.prb %10 : i1</pre>
+      <pre>      %176 = comb.xor %175, %true : i1</pre>
+      <pre>      %177 = comb.and %174, %176 : i1</pre>
+      <pre>      cf.cond_br %177, ^bb4, ^bb5</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      llhd.drv %32, %false after %3 : i1</pre>
+      <pre>      llhd.drv %33, %false after %3 : i1</pre>
+      <pre>      llhd.drv %34, %false after %3 : i1</pre>
+      <pre>      llhd.drv %35, %false after %3 : i1</pre>
+      <pre>      llhd.drv %36, %false after %3 : i1</pre>
+      <pre>      llhd.drv %37, %false after %3 : i1</pre>
+      <pre>      llhd.drv %38, %false after %3 : i1</pre>
+      <pre>      llhd.drv %39, %false after %3 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb5:  // pred: ^bb3</pre>
+      <pre>      %178 = llhd.prb %30 : i1</pre>
+      <pre>      %179 = llhd.prb %31 : i1</pre>
+      <pre>      %180 = comb.xor %178, %true : i1</pre>
+      <pre>      %181 = comb.xor %179, %true : i1</pre>
+      <pre>      %182 = comb.and %180, %181 : i1</pre>
+      <pre>      %183 = llhd.prb %44 : i1</pre>
+      <pre>      %184 = llhd.prb %45 : i1</pre>
+      <pre>      %185 = comb.xor %183, %true : i1</pre>
+      <pre>      %186 = comb.xor %184, %true : i1</pre>
+      <pre>      %187 = comb.and %185, %186 : i1</pre>
+      <pre>      %188 = comb.xor %182, %true : i1</pre>
+      <pre>      %189 = comb.xor %187, %true : i1</pre>
+      <pre>      %190 = comb.and %181, %188 : i1</pre>
+      <pre>      %191 = comb.and %186, %189 : i1</pre>
+      <pre>      %192 = comb.and %182, %187 : i1</pre>
+      <pre>      %193 = comb.or %190, %191, %192 : i1</pre>
+      <pre>      %194 = llhd.prb %42 : i1</pre>
+      <pre>      %195 = llhd.prb %43 : i1</pre>
+      <pre>      %196 = comb.xor %194, %true : i1</pre>
+      <pre>      %197 = comb.xor %195, %true : i1</pre>
+      <pre>      %198 = comb.and %196, %197 : i1</pre>
+      <pre>      %199 = comb.xor %192, %true : i1</pre>
+      <pre>      %200 = comb.xor %198, %true : i1</pre>
+      <pre>      %201 = comb.and %193, %199 : i1</pre>
+      <pre>      %202 = comb.and %197, %200 : i1</pre>
+      <pre>      %203 = comb.and %193, %192 : i1</pre>
+      <pre>      %204 = comb.and %203, %198 : i1</pre>
+      <pre>      %205 = comb.or %201, %202, %204 : i1</pre>
+      <pre>      %206 = llhd.prb %12 : i1</pre>
+      <pre>      %207 = llhd.prb %13 : i1</pre>
+      <pre>      %208 = comb.xor %206, %true : i1</pre>
+      <pre>      %209 = comb.xor %207, %true : i1</pre>
+      <pre>      %210 = comb.and %208, %209 : i1</pre>
+      <pre>      %211 = comb.xor %204, %true : i1</pre>
+      <pre>      %212 = comb.xor %210, %true : i1</pre>
+      <pre>      %213 = comb.and %205, %211 : i1</pre>
+      <pre>      %214 = comb.and %209, %212 : i1</pre>
+      <pre>      %215 = comb.and %205, %204, %210 : i1</pre>
+      <pre>      %216 = comb.or %213, %214, %215 : i1</pre>
+      <pre>      %217 = llhd.prb %15 : i1</pre>
+      <pre>      %218 = llhd.prb %16 : i1</pre>
+      <pre>      %219 = comb.xor %217, %true : i1</pre>
+      <pre>      %220 = comb.xor %218, %true : i1</pre>
+      <pre>      %221 = comb.and %219, %220 : i1</pre>
+      <pre>      %222 = comb.xor %215, %true : i1</pre>
+      <pre>      %223 = comb.xor %221, %true : i1</pre>
+      <pre>      %224 = comb.and %216, %222 : i1</pre>
+      <pre>      %225 = comb.and %220, %223 : i1</pre>
+      <pre>      %226 = comb.and %216, %215, %221 : i1</pre>
+      <pre>      %227 = comb.or %224, %225, %226 : i1</pre>
+      <pre>      %228 = llhd.prb %18 : i1</pre>
+      <pre>      %229 = llhd.prb %19 : i1</pre>
+      <pre>      %230 = comb.xor %228, %true : i1</pre>
+      <pre>      %231 = comb.xor %229, %true : i1</pre>
+      <pre>      %232 = comb.and %230, %231 : i1</pre>
+      <pre>      %233 = comb.xor %226, %true : i1</pre>
+      <pre>      %234 = comb.xor %232, %true : i1</pre>
+      <pre>      %235 = comb.and %227, %233 : i1</pre>
+      <pre>      %236 = comb.and %231, %234 : i1</pre>
+      <pre>      %237 = comb.and %227, %226, %232 : i1</pre>
+      <pre>      %238 = comb.or %235, %236, %237 : i1</pre>
+      <pre>      %239 = llhd.prb %21 : i1</pre>
+      <pre>      %240 = llhd.prb %22 : i1</pre>
+      <pre>      %241 = comb.xor %240, %true : i1</pre>
+      <pre>      %242 = comb.xor %237, %true : i1</pre>
+      <pre>      %243 = comb.xor %239, %true : i1</pre>
+      <pre>      %244 = comb.and %238, %242 : i1</pre>
+      <pre>      %245 = comb.and %241, %243 : i1</pre>
+      <pre>      %246 = comb.and %241, %239 : i1</pre>
+      <pre>      %247 = comb.and %238, %237, %246 : i1</pre>
+      <pre>      %248 = comb.or %244, %245, %247 : i1</pre>
+      <pre>      %249 = comb.and %197, %194 : i1</pre>
+      <pre>      %250 = comb.and %203, %249 : i1</pre>
+      <pre>      %251 = comb.or %201, %198, %250 : i1</pre>
+      <pre>      %252 = comb.xor %250, %true : i1</pre>
+      <pre>      %253 = comb.and %251, %252 : i1</pre>
+      <pre>      %254 = comb.and %251, %250, %210 : i1</pre>
+      <pre>      %255 = comb.or %253, %214, %254 : i1</pre>
+      <pre>      %256 = comb.xor %254, %true : i1</pre>
+      <pre>      %257 = comb.and %255, %256 : i1</pre>
+      <pre>      %258 = comb.and %255, %254, %221 : i1</pre>
+      <pre>      %259 = comb.or %257, %225, %258 : i1</pre>
+      <pre>      %260 = comb.xor %258, %true : i1</pre>
+      <pre>      %261 = comb.and %259, %260 : i1</pre>
+      <pre>      %262 = comb.and %259, %258, %246 : i1</pre>
+      <pre>      %263 = comb.or %261, %245, %262 : i1</pre>
+      <pre>      %264 = comb.xor %247, %true : i1</pre>
+      <pre>      %265 = comb.xor %262, %true : i1</pre>
+      <pre>      %266 = comb.and %248, %247 : i1</pre>
+      <pre>      %267 = comb.and %263, %262 : i1</pre>
+      <pre>      %268 = comb.and %248, %264, %263, %265 : i1</pre>
+      <pre>      %269 = comb.or %266, %267 : i1</pre>
+      <pre>      %270 = comb.or %268, %266, %267 : i1</pre>
+      <pre>      %271 = comb.and %182, %186, %183 : i1</pre>
+      <pre>      %272 = comb.or %190, %187, %271 : i1</pre>
+      <pre>      %273 = comb.xor %271, %true : i1</pre>
+      <pre>      %274 = comb.and %272, %273 : i1</pre>
+      <pre>      %275 = comb.and %272, %271 : i1</pre>
+      <pre>      %276 = comb.and %275, %198 : i1</pre>
+      <pre>      %277 = comb.or %274, %202, %276 : i1</pre>
+      <pre>      %278 = comb.xor %276, %true : i1</pre>
+      <pre>      %279 = comb.and %277, %278 : i1</pre>
+      <pre>      %280 = comb.and %277, %276, %210 : i1</pre>
+      <pre>      %281 = comb.or %279, %214, %280 : i1</pre>
+      <pre>      %282 = comb.xor %280, %true : i1</pre>
+      <pre>      %283 = comb.and %281, %282 : i1</pre>
+      <pre>      %284 = comb.and %281, %280, %246 : i1</pre>
+      <pre>      %285 = comb.or %283, %245, %284 : i1</pre>
+      <pre>      %286 = comb.xor %269, %true : i1</pre>
+      <pre>      %287 = comb.xor %284, %true : i1</pre>
+      <pre>      %288 = comb.and %270, %269 : i1</pre>
+      <pre>      %289 = comb.and %285, %284 : i1</pre>
+      <pre>      %290 = comb.and %270, %286, %285, %287 : i1</pre>
+      <pre>      %291 = comb.or %288, %289 : i1</pre>
+      <pre>      %292 = comb.or %290, %288, %289 : i1</pre>
+      <pre>      %293 = comb.and %275, %249 : i1</pre>
+      <pre>      %294 = comb.or %274, %198, %293 : i1</pre>
+      <pre>      %295 = comb.xor %293, %true : i1</pre>
+      <pre>      %296 = comb.and %294, %295 : i1</pre>
+      <pre>      %297 = comb.and %294, %293, %246 : i1</pre>
+      <pre>      %298 = comb.or %296, %245, %297 : i1</pre>
+      <pre>      %299 = comb.xor %291, %true : i1</pre>
+      <pre>      %300 = comb.xor %297, %true : i1</pre>
+      <pre>      %301 = comb.and %292, %291 : i1</pre>
+      <pre>      %302 = comb.and %298, %297 : i1</pre>
+      <pre>      %303 = comb.and %292, %299, %298, %300 : i1</pre>
+      <pre>      %304 = comb.or %301, %302 : i1</pre>
+      <pre>      %305 = comb.or %303, %301, %302 : i1</pre>
+      <pre>      %306 = llhd.prb %32 : i1</pre>
+      <pre>      %307 = llhd.prb %33 : i1</pre>
+      <pre>      %308 = comb.xor %307, %true : i1</pre>
+      <pre>      %309 = comb.xor %306, %true : i1</pre>
+      <pre>      %310 = comb.and %308, %309 : i1</pre>
+      <pre>      %311 = comb.and %181, %178, %308, %306 : i1</pre>
+      <pre>      %312 = comb.or %182, %310, %311 : i1</pre>
+      <pre>      %313 = comb.xor %304, %true : i1</pre>
+      <pre>      %314 = comb.xor %311, %true : i1</pre>
+      <pre>      %315 = comb.and %305, %304 : i1</pre>
+      <pre>      %316 = comb.and %312, %311 : i1</pre>
+      <pre>      %317 = comb.and %305, %313, %312, %314 : i1</pre>
+      <pre>      %318 = comb.or %315, %316 : i1</pre>
+      <pre>      %319 = comb.or %317, %315, %316 : i1</pre>
+      <pre>      %320 = comb.xor %319, %true : i1</pre>
+      <pre>      llhd.drv %32, %318 after %3 : i1</pre>
+      <pre>      llhd.drv %33, %320 after %3 : i1</pre>
+      <pre>      %321 = llhd.prb %30 : i1</pre>
+      <pre>      %322 = llhd.prb %31 : i1</pre>
+      <pre>      %323 = comb.xor %321, %true : i1</pre>
+      <pre>      %324 = comb.xor %322, %true : i1</pre>
+      <pre>      %325 = comb.and %323, %324 : i1</pre>
+      <pre>      %326 = llhd.prb %44 : i1</pre>
+      <pre>      %327 = llhd.prb %45 : i1</pre>
+      <pre>      %328 = comb.xor %326, %true : i1</pre>
+      <pre>      %329 = comb.xor %327, %true : i1</pre>
+      <pre>      %330 = comb.and %328, %329 : i1</pre>
+      <pre>      %331 = comb.xor %325, %true : i1</pre>
+      <pre>      %332 = comb.xor %330, %true : i1</pre>
+      <pre>      %333 = comb.and %324, %331 : i1</pre>
+      <pre>      %334 = comb.and %329, %332 : i1</pre>
+      <pre>      %335 = comb.and %325, %330 : i1</pre>
+      <pre>      %336 = comb.or %333, %334, %335 : i1</pre>
+      <pre>      %337 = llhd.prb %42 : i1</pre>
+      <pre>      %338 = llhd.prb %43 : i1</pre>
+      <pre>      %339 = comb.xor %337, %true : i1</pre>
+      <pre>      %340 = comb.xor %338, %true : i1</pre>
+      <pre>      %341 = comb.and %339, %340 : i1</pre>
+      <pre>      %342 = comb.xor %335, %true : i1</pre>
+      <pre>      %343 = comb.xor %341, %true : i1</pre>
+      <pre>      %344 = comb.and %336, %342 : i1</pre>
+      <pre>      %345 = comb.and %340, %343 : i1</pre>
+      <pre>      %346 = comb.and %336, %335 : i1</pre>
+      <pre>      %347 = comb.and %346, %341 : i1</pre>
+      <pre>      %348 = comb.or %344, %345, %347 : i1</pre>
+      <pre>      %349 = llhd.prb %18 : i1</pre>
+      <pre>      %350 = llhd.prb %19 : i1</pre>
+      <pre>      %351 = comb.xor %350, %true : i1</pre>
+      <pre>      %352 = comb.xor %347, %true : i1</pre>
+      <pre>      %353 = comb.xor %349, %true : i1</pre>
+      <pre>      %354 = comb.and %348, %352 : i1</pre>
+      <pre>      %355 = comb.and %351, %353 : i1</pre>
+      <pre>      %356 = comb.and %351, %349 : i1</pre>
+      <pre>      %357 = comb.and %348, %347, %356 : i1</pre>
+      <pre>      %358 = comb.or %354, %355, %357 : i1</pre>
+      <pre>      %359 = comb.and %340, %337 : i1</pre>
+      <pre>      %360 = comb.and %346, %359 : i1</pre>
+      <pre>      %361 = comb.or %344, %341, %360 : i1</pre>
+      <pre>      %362 = llhd.prb %12 : i1</pre>
+      <pre>      %363 = llhd.prb %13 : i1</pre>
+      <pre>      %364 = comb.xor %362, %true : i1</pre>
+      <pre>      %365 = comb.xor %363, %true : i1</pre>
+      <pre>      %366 = comb.and %364, %365 : i1</pre>
+      <pre>      %367 = comb.xor %360, %true : i1</pre>
+      <pre>      %368 = comb.xor %366, %true : i1</pre>
+      <pre>      %369 = comb.and %361, %367 : i1</pre>
+      <pre>      %370 = comb.and %365, %368 : i1</pre>
+      <pre>      %371 = comb.and %361, %360, %366 : i1</pre>
+      <pre>      %372 = comb.or %369, %370, %371 : i1</pre>
+      <pre>      %373 = llhd.prb %15 : i1</pre>
+      <pre>      %374 = llhd.prb %16 : i1</pre>
+      <pre>      %375 = comb.xor %373, %true : i1</pre>
+      <pre>      %376 = comb.xor %374, %true : i1</pre>
+      <pre>      %377 = comb.and %375, %376 : i1</pre>
+      <pre>      %378 = comb.xor %371, %true : i1</pre>
+      <pre>      %379 = comb.xor %377, %true : i1</pre>
+      <pre>      %380 = comb.and %372, %378 : i1</pre>
+      <pre>      %381 = comb.and %376, %379 : i1</pre>
+      <pre>      %382 = comb.and %372, %371, %377 : i1</pre>
+      <pre>      %383 = comb.or %380, %381, %382 : i1</pre>
+      <pre>      %384 = comb.xor %382, %true : i1</pre>
+      <pre>      %385 = comb.and %383, %384 : i1</pre>
+      <pre>      %386 = comb.and %383, %382, %356 : i1</pre>
+      <pre>      %387 = comb.or %385, %355, %386 : i1</pre>
+      <pre>      %388 = llhd.prb %21 : i1</pre>
+      <pre>      %389 = llhd.prb %22 : i1</pre>
+      <pre>      %390 = comb.xor %388, %true : i1</pre>
+      <pre>      %391 = comb.xor %389, %true : i1</pre>
+      <pre>      %392 = comb.and %390, %391 : i1</pre>
+      <pre>      %393 = comb.xor %386, %true : i1</pre>
+      <pre>      %394 = comb.xor %392, %true : i1</pre>
+      <pre>      %395 = comb.and %387, %393 : i1</pre>
+      <pre>      %396 = comb.and %391, %394 : i1</pre>
+      <pre>      %397 = comb.and %387, %386, %392 : i1</pre>
+      <pre>      %398 = comb.or %395, %396, %397 : i1</pre>
+      <pre>      %399 = comb.xor %357, %true : i1</pre>
+      <pre>      %400 = comb.xor %397, %true : i1</pre>
+      <pre>      %401 = comb.and %358, %357 : i1</pre>
+      <pre>      %402 = comb.and %398, %397 : i1</pre>
+      <pre>      %403 = comb.and %358, %399, %398, %400 : i1</pre>
+      <pre>      %404 = comb.or %401, %402 : i1</pre>
+      <pre>      %405 = comb.or %403, %401, %402 : i1</pre>
+      <pre>      %406 = comb.and %325, %329, %326 : i1</pre>
+      <pre>      %407 = comb.or %333, %330, %406 : i1</pre>
+      <pre>      %408 = comb.xor %406, %true : i1</pre>
+      <pre>      %409 = comb.and %407, %408 : i1</pre>
+      <pre>      %410 = comb.and %407, %406 : i1</pre>
+      <pre>      %411 = comb.and %410, %341 : i1</pre>
+      <pre>      %412 = comb.or %409, %345, %411 : i1</pre>
+      <pre>      %413 = comb.xor %411, %true : i1</pre>
+      <pre>      %414 = comb.and %412, %413 : i1</pre>
+      <pre>      %415 = comb.and %412, %411, %366 : i1</pre>
+      <pre>      %416 = comb.or %414, %370, %415 : i1</pre>
+      <pre>      %417 = comb.xor %415, %true : i1</pre>
+      <pre>      %418 = comb.and %416, %417 : i1</pre>
+      <pre>      %419 = comb.and %416, %415, %356 : i1</pre>
+      <pre>      %420 = comb.or %418, %355, %419 : i1</pre>
+      <pre>      %421 = comb.xor %419, %true : i1</pre>
+      <pre>      %422 = comb.and %420, %421 : i1</pre>
+      <pre>      %423 = comb.and %420, %419, %392 : i1</pre>
+      <pre>      %424 = comb.or %422, %396, %423 : i1</pre>
+      <pre>      %425 = comb.xor %404, %true : i1</pre>
+      <pre>      %426 = comb.xor %423, %true : i1</pre>
+      <pre>      %427 = comb.and %405, %404 : i1</pre>
+      <pre>      %428 = comb.and %424, %423 : i1</pre>
+      <pre>      %429 = comb.and %405, %425, %424, %426 : i1</pre>
+      <pre>      %430 = comb.or %427, %428 : i1</pre>
+      <pre>      %431 = comb.or %429, %427, %428 : i1</pre>
+      <pre>      %432 = comb.and %410, %359 : i1</pre>
+      <pre>      %433 = comb.or %409, %341, %432 : i1</pre>
+      <pre>      %434 = comb.xor %432, %true : i1</pre>
+      <pre>      %435 = comb.and %433, %434 : i1</pre>
+      <pre>      %436 = comb.and %433, %432, %356 : i1</pre>
+      <pre>      %437 = comb.or %435, %355, %436 : i1</pre>
+      <pre>      %438 = comb.xor %436, %true : i1</pre>
+      <pre>      %439 = comb.and %437, %438 : i1</pre>
+      <pre>      %440 = comb.and %437, %436, %392 : i1</pre>
+      <pre>      %441 = comb.or %439, %396, %440 : i1</pre>
+      <pre>      %442 = comb.xor %430, %true : i1</pre>
+      <pre>      %443 = comb.xor %440, %true : i1</pre>
+      <pre>      %444 = comb.and %431, %430 : i1</pre>
+      <pre>      %445 = comb.and %441, %440 : i1</pre>
+      <pre>      %446 = comb.and %431, %442, %441, %443 : i1</pre>
+      <pre>      %447 = comb.or %444, %445 : i1</pre>
+      <pre>      %448 = comb.or %446, %444, %445 : i1</pre>
+      <pre>      %449 = llhd.prb %34 : i1</pre>
+      <pre>      %450 = llhd.prb %35 : i1</pre>
+      <pre>      %451 = comb.xor %450, %true : i1</pre>
+      <pre>      %452 = comb.xor %449, %true : i1</pre>
+      <pre>      %453 = comb.and %451, %452 : i1</pre>
+      <pre>      %454 = comb.and %324, %321, %451, %449 : i1</pre>
+      <pre>      %455 = comb.or %325, %453, %454 : i1</pre>
+      <pre>      %456 = comb.xor %447, %true : i1</pre>
+      <pre>      %457 = comb.xor %454, %true : i1</pre>
+      <pre>      %458 = comb.and %448, %447 : i1</pre>
+      <pre>      %459 = comb.and %455, %454 : i1</pre>
+      <pre>      %460 = comb.and %448, %456, %455, %457 : i1</pre>
+      <pre>      %461 = comb.or %458, %459 : i1</pre>
+      <pre>      %462 = comb.or %460, %458, %459 : i1</pre>
+      <pre>      %463 = comb.xor %462, %true : i1</pre>
+      <pre>      llhd.drv %34, %461 after %3 : i1</pre>
+      <pre>      llhd.drv %35, %463 after %3 : i1</pre>
+      <pre>      %464 = llhd.prb %30 : i1</pre>
+      <pre>      %465 = llhd.prb %31 : i1</pre>
+      <pre>      %466 = comb.xor %464, %true : i1</pre>
+      <pre>      %467 = comb.xor %465, %true : i1</pre>
+      <pre>      %468 = comb.and %466, %467 : i1</pre>
+      <pre>      %469 = llhd.prb %44 : i1</pre>
+      <pre>      %470 = llhd.prb %45 : i1</pre>
+      <pre>      %471 = comb.xor %469, %true : i1</pre>
+      <pre>      %472 = comb.xor %470, %true : i1</pre>
+      <pre>      %473 = comb.and %471, %472 : i1</pre>
+      <pre>      %474 = comb.xor %468, %true : i1</pre>
+      <pre>      %475 = comb.xor %473, %true : i1</pre>
+      <pre>      %476 = comb.and %467, %474 : i1</pre>
+      <pre>      %477 = comb.and %472, %475 : i1</pre>
+      <pre>      %478 = comb.and %468, %473 : i1</pre>
+      <pre>      %479 = comb.or %476, %477, %478 : i1</pre>
+      <pre>      %480 = llhd.prb %42 : i1</pre>
+      <pre>      %481 = llhd.prb %43 : i1</pre>
+      <pre>      %482 = comb.xor %480, %true : i1</pre>
+      <pre>      %483 = comb.xor %481, %true : i1</pre>
+      <pre>      %484 = comb.and %482, %483 : i1</pre>
+      <pre>      %485 = comb.xor %478, %true : i1</pre>
+      <pre>      %486 = comb.xor %484, %true : i1</pre>
+      <pre>      %487 = comb.and %479, %485 : i1</pre>
+      <pre>      %488 = comb.and %483, %486 : i1</pre>
+      <pre>      %489 = comb.and %479, %478 : i1</pre>
+      <pre>      %490 = comb.and %489, %484 : i1</pre>
+      <pre>      %491 = comb.or %487, %488, %490 : i1</pre>
+      <pre>      %492 = llhd.prb %15 : i1</pre>
+      <pre>      %493 = llhd.prb %16 : i1</pre>
+      <pre>      %494 = comb.xor %493, %true : i1</pre>
+      <pre>      %495 = comb.xor %490, %true : i1</pre>
+      <pre>      %496 = comb.xor %492, %true : i1</pre>
+      <pre>      %497 = comb.and %491, %495 : i1</pre>
+      <pre>      %498 = comb.and %494, %496 : i1</pre>
+      <pre>      %499 = comb.and %494, %492 : i1</pre>
+      <pre>      %500 = comb.and %491, %490, %499 : i1</pre>
+      <pre>      %501 = comb.or %497, %498, %500 : i1</pre>
+      <pre>      %502 = llhd.prb %18 : i1</pre>
+      <pre>      %503 = llhd.prb %19 : i1</pre>
+      <pre>      %504 = comb.xor %502, %true : i1</pre>
+      <pre>      %505 = comb.xor %503, %true : i1</pre>
+      <pre>      %506 = comb.and %504, %505 : i1</pre>
+      <pre>      %507 = comb.xor %500, %true : i1</pre>
+      <pre>      %508 = comb.xor %506, %true : i1</pre>
+      <pre>      %509 = comb.and %501, %507 : i1</pre>
+      <pre>      %510 = comb.and %505, %508 : i1</pre>
+      <pre>      %511 = comb.and %501, %500, %506 : i1</pre>
+      <pre>      %512 = comb.or %509, %510, %511 : i1</pre>
+      <pre>      %513 = comb.and %483, %480 : i1</pre>
+      <pre>      %514 = comb.and %489, %513 : i1</pre>
+      <pre>      %515 = comb.or %487, %484, %514 : i1</pre>
+      <pre>      %516 = comb.xor %514, %true : i1</pre>
+      <pre>      %517 = comb.and %515, %516 : i1</pre>
+      <pre>      %518 = comb.and %515, %514, %499 : i1</pre>
+      <pre>      %519 = comb.or %517, %498, %518 : i1</pre>
+      <pre>      %520 = comb.xor %511, %true : i1</pre>
+      <pre>      %521 = comb.xor %518, %true : i1</pre>
+      <pre>      %522 = comb.and %512, %511 : i1</pre>
+      <pre>      %523 = comb.and %519, %518 : i1</pre>
+      <pre>      %524 = comb.and %512, %520, %519, %521 : i1</pre>
+      <pre>      %525 = comb.or %522, %523 : i1</pre>
+      <pre>      %526 = comb.or %524, %522, %523 : i1</pre>
+      <pre>      %527 = comb.and %468, %472, %469 : i1</pre>
+      <pre>      %528 = comb.or %476, %473, %527 : i1</pre>
+      <pre>      %529 = comb.xor %527, %true : i1</pre>
+      <pre>      %530 = comb.and %528, %529 : i1</pre>
+      <pre>      %531 = comb.and %528, %527 : i1</pre>
+      <pre>      %532 = comb.and %531, %484 : i1</pre>
+      <pre>      %533 = comb.or %530, %488, %532 : i1</pre>
+      <pre>      %534 = llhd.prb %12 : i1</pre>
+      <pre>      %535 = llhd.prb %13 : i1</pre>
+      <pre>      %536 = comb.xor %534, %true : i1</pre>
+      <pre>      %537 = comb.xor %535, %true : i1</pre>
+      <pre>      %538 = comb.and %536, %537 : i1</pre>
+      <pre>      %539 = comb.xor %532, %true : i1</pre>
+      <pre>      %540 = comb.xor %538, %true : i1</pre>
+      <pre>      %541 = comb.and %533, %539 : i1</pre>
+      <pre>      %542 = comb.and %537, %540 : i1</pre>
+      <pre>      %543 = comb.and %533, %532, %538 : i1</pre>
+      <pre>      %544 = comb.or %541, %542, %543 : i1</pre>
+      <pre>      %545 = comb.xor %543, %true : i1</pre>
+      <pre>      %546 = comb.and %544, %545 : i1</pre>
+      <pre>      %547 = comb.and %544, %543, %499 : i1</pre>
+      <pre>      %548 = comb.or %546, %498, %547 : i1</pre>
+      <pre>      %549 = comb.xor %547, %true : i1</pre>
+      <pre>      %550 = comb.and %548, %549 : i1</pre>
+      <pre>      %551 = comb.and %548, %547, %506 : i1</pre>
+      <pre>      %552 = comb.or %550, %510, %551 : i1</pre>
+      <pre>      %553 = llhd.prb %21 : i1</pre>
+      <pre>      %554 = llhd.prb %22 : i1</pre>
+      <pre>      %555 = comb.xor %553, %true : i1</pre>
+      <pre>      %556 = comb.xor %554, %true : i1</pre>
+      <pre>      %557 = comb.and %555, %556 : i1</pre>
+      <pre>      %558 = comb.xor %551, %true : i1</pre>
+      <pre>      %559 = comb.xor %557, %true : i1</pre>
+      <pre>      %560 = comb.and %552, %558 : i1</pre>
+      <pre>      %561 = comb.and %556, %559 : i1</pre>
+      <pre>      %562 = comb.and %552, %551, %557 : i1</pre>
+      <pre>      %563 = comb.or %560, %561, %562 : i1</pre>
+      <pre>      %564 = comb.xor %525, %true : i1</pre>
+      <pre>      %565 = comb.xor %562, %true : i1</pre>
+      <pre>      %566 = comb.and %526, %525 : i1</pre>
+      <pre>      %567 = comb.and %563, %562 : i1</pre>
+      <pre>      %568 = comb.and %526, %564, %563, %565 : i1</pre>
+      <pre>      %569 = comb.or %566, %567 : i1</pre>
+      <pre>      %570 = comb.or %568, %566, %567 : i1</pre>
+      <pre>      %571 = comb.and %531, %513 : i1</pre>
+      <pre>      %572 = comb.or %530, %484, %571 : i1</pre>
+      <pre>      %573 = comb.xor %571, %true : i1</pre>
+      <pre>      %574 = comb.and %572, %573 : i1</pre>
+      <pre>      %575 = comb.and %572, %571, %499 : i1</pre>
+      <pre>      %576 = comb.or %574, %498, %575 : i1</pre>
+      <pre>      %577 = comb.xor %575, %true : i1</pre>
+      <pre>      %578 = comb.and %576, %577 : i1</pre>
+      <pre>      %579 = comb.and %576, %575, %506 : i1</pre>
+      <pre>      %580 = comb.or %578, %510, %579 : i1</pre>
+      <pre>      %581 = comb.xor %579, %true : i1</pre>
+      <pre>      %582 = comb.and %580, %581 : i1</pre>
+      <pre>      %583 = comb.and %580, %579, %557 : i1</pre>
+      <pre>      %584 = comb.or %582, %561, %583 : i1</pre>
+      <pre>      %585 = comb.xor %569, %true : i1</pre>
+      <pre>      %586 = comb.xor %583, %true : i1</pre>
+      <pre>      %587 = comb.and %570, %569 : i1</pre>
+      <pre>      %588 = comb.and %584, %583 : i1</pre>
+      <pre>      %589 = comb.and %570, %585, %584, %586 : i1</pre>
+      <pre>      %590 = comb.or %587, %588 : i1</pre>
+      <pre>      %591 = comb.or %589, %587, %588 : i1</pre>
+      <pre>      %592 = llhd.prb %36 : i1</pre>
+      <pre>      %593 = llhd.prb %37 : i1</pre>
+      <pre>      %594 = comb.xor %593, %true : i1</pre>
+      <pre>      %595 = comb.xor %592, %true : i1</pre>
+      <pre>      %596 = comb.and %594, %595 : i1</pre>
+      <pre>      %597 = comb.and %467, %464, %594, %592 : i1</pre>
+      <pre>      %598 = comb.or %468, %596, %597 : i1</pre>
+      <pre>      %599 = comb.xor %590, %true : i1</pre>
+      <pre>      %600 = comb.xor %597, %true : i1</pre>
+      <pre>      %601 = comb.and %591, %590 : i1</pre>
+      <pre>      %602 = comb.and %598, %597 : i1</pre>
+      <pre>      %603 = comb.and %591, %599, %598, %600 : i1</pre>
+      <pre>      %604 = comb.or %601, %602 : i1</pre>
+      <pre>      %605 = comb.or %603, %601, %602 : i1</pre>
+      <pre>      %606 = comb.xor %605, %true : i1</pre>
+      <pre>      llhd.drv %36, %604 after %3 : i1</pre>
+      <pre>      llhd.drv %37, %606 after %3 : i1</pre>
+      <pre>      %607 = llhd.prb %30 : i1</pre>
+      <pre>      %608 = llhd.prb %31 : i1</pre>
+      <pre>      %609 = comb.xor %607, %true : i1</pre>
+      <pre>      %610 = comb.xor %608, %true : i1</pre>
+      <pre>      %611 = comb.and %609, %610 : i1</pre>
+      <pre>      %612 = llhd.prb %44 : i1</pre>
+      <pre>      %613 = llhd.prb %45 : i1</pre>
+      <pre>      %614 = comb.xor %612, %true : i1</pre>
+      <pre>      %615 = comb.xor %613, %true : i1</pre>
+      <pre>      %616 = comb.and %614, %615 : i1</pre>
+      <pre>      %617 = comb.xor %611, %true : i1</pre>
+      <pre>      %618 = comb.xor %616, %true : i1</pre>
+      <pre>      %619 = comb.and %610, %617 : i1</pre>
+      <pre>      %620 = comb.and %615, %618 : i1</pre>
+      <pre>      %621 = comb.and %611, %616 : i1</pre>
+      <pre>      %622 = comb.or %619, %620, %621 : i1</pre>
+      <pre>      %623 = llhd.prb %42 : i1</pre>
+      <pre>      %624 = llhd.prb %43 : i1</pre>
+      <pre>      %625 = comb.xor %623, %true : i1</pre>
+      <pre>      %626 = comb.xor %624, %true : i1</pre>
+      <pre>      %627 = comb.and %625, %626 : i1</pre>
+      <pre>      %628 = comb.xor %621, %true : i1</pre>
+      <pre>      %629 = comb.xor %627, %true : i1</pre>
+      <pre>      %630 = comb.and %622, %628 : i1</pre>
+      <pre>      %631 = comb.and %626, %629 : i1</pre>
+      <pre>      %632 = comb.and %622, %621 : i1</pre>
+      <pre>      %633 = comb.and %632, %627 : i1</pre>
+      <pre>      %634 = comb.or %630, %631, %633 : i1</pre>
+      <pre>      %635 = llhd.prb %12 : i1</pre>
+      <pre>      %636 = llhd.prb %13 : i1</pre>
+      <pre>      %637 = comb.xor %636, %true : i1</pre>
+      <pre>      %638 = comb.xor %633, %true : i1</pre>
+      <pre>      %639 = comb.xor %635, %true : i1</pre>
+      <pre>      %640 = comb.and %634, %638 : i1</pre>
+      <pre>      %641 = comb.and %637, %639 : i1</pre>
+      <pre>      %642 = comb.and %637, %635 : i1</pre>
+      <pre>      %643 = comb.and %634, %633, %642 : i1</pre>
+      <pre>      %644 = comb.or %640, %641, %643 : i1</pre>
+      <pre>      %645 = llhd.prb %15 : i1</pre>
+      <pre>      %646 = llhd.prb %16 : i1</pre>
+      <pre>      %647 = comb.xor %645, %true : i1</pre>
+      <pre>      %648 = comb.xor %646, %true : i1</pre>
+      <pre>      %649 = comb.and %647, %648 : i1</pre>
+      <pre>      %650 = comb.xor %643, %true : i1</pre>
+      <pre>      %651 = comb.xor %649, %true : i1</pre>
+      <pre>      %652 = comb.and %644, %650 : i1</pre>
+      <pre>      %653 = comb.and %648, %651 : i1</pre>
+      <pre>      %654 = comb.and %644, %643, %649 : i1</pre>
+      <pre>      %655 = comb.or %652, %653, %654 : i1</pre>
+      <pre>      %656 = llhd.prb %18 : i1</pre>
+      <pre>      %657 = llhd.prb %19 : i1</pre>
+      <pre>      %658 = comb.xor %656, %true : i1</pre>
+      <pre>      %659 = comb.xor %657, %true : i1</pre>
+      <pre>      %660 = comb.and %658, %659 : i1</pre>
+      <pre>      %661 = comb.xor %654, %true : i1</pre>
+      <pre>      %662 = comb.xor %660, %true : i1</pre>
+      <pre>      %663 = comb.and %655, %661 : i1</pre>
+      <pre>      %664 = comb.and %659, %662 : i1</pre>
+      <pre>      %665 = comb.and %655, %654, %660 : i1</pre>
+      <pre>      %666 = comb.or %663, %664, %665 : i1</pre>
+      <pre>      %667 = comb.and %626, %623 : i1</pre>
+      <pre>      %668 = comb.and %632, %667 : i1</pre>
+      <pre>      %669 = comb.or %630, %627, %668 : i1</pre>
+      <pre>      %670 = comb.xor %668, %true : i1</pre>
+      <pre>      %671 = comb.and %669, %670 : i1</pre>
+      <pre>      %672 = comb.and %669, %668, %642 : i1</pre>
+      <pre>      %673 = comb.or %671, %641, %672 : i1</pre>
+      <pre>      %674 = comb.xor %672, %true : i1</pre>
+      <pre>      %675 = comb.and %673, %674 : i1</pre>
+      <pre>      %676 = comb.and %673, %672, %649 : i1</pre>
+      <pre>      %677 = comb.or %675, %653, %676 : i1</pre>
+      <pre>      %678 = comb.xor %665, %true : i1</pre>
+      <pre>      %679 = comb.xor %676, %true : i1</pre>
+      <pre>      %680 = comb.and %666, %665 : i1</pre>
+      <pre>      %681 = comb.and %677, %676 : i1</pre>
+      <pre>      %682 = comb.and %666, %678, %677, %679 : i1</pre>
+      <pre>      %683 = comb.or %680, %681 : i1</pre>
+      <pre>      %684 = comb.or %682, %680, %681 : i1</pre>
+      <pre>      %685 = comb.and %611, %615, %612 : i1</pre>
+      <pre>      %686 = comb.or %619, %616, %685 : i1</pre>
+      <pre>      %687 = comb.xor %685, %true : i1</pre>
+      <pre>      %688 = comb.and %686, %687 : i1</pre>
+      <pre>      %689 = comb.and %686, %685 : i1</pre>
+      <pre>      %690 = comb.and %689, %627 : i1</pre>
+      <pre>      %691 = comb.or %688, %631, %690 : i1</pre>
+      <pre>      %692 = comb.xor %690, %true : i1</pre>
+      <pre>      %693 = comb.and %691, %692 : i1</pre>
+      <pre>      %694 = comb.and %691, %690, %642 : i1</pre>
+      <pre>      %695 = comb.or %693, %641, %694 : i1</pre>
+      <pre>      %696 = comb.xor %683, %true : i1</pre>
+      <pre>      %697 = comb.xor %694, %true : i1</pre>
+      <pre>      %698 = comb.and %684, %683 : i1</pre>
+      <pre>      %699 = comb.and %695, %694 : i1</pre>
+      <pre>      %700 = comb.and %684, %696, %695, %697 : i1</pre>
+      <pre>      %701 = comb.or %698, %699 : i1</pre>
+      <pre>      %702 = comb.or %700, %698, %699 : i1</pre>
+      <pre>      %703 = comb.and %689, %667 : i1</pre>
+      <pre>      %704 = comb.or %688, %627, %703 : i1</pre>
+      <pre>      %705 = comb.xor %703, %true : i1</pre>
+      <pre>      %706 = comb.and %704, %705 : i1</pre>
+      <pre>      %707 = comb.and %704, %703, %642 : i1</pre>
+      <pre>      %708 = comb.or %706, %641, %707 : i1</pre>
+      <pre>      %709 = comb.xor %707, %true : i1</pre>
+      <pre>      %710 = comb.and %708, %709 : i1</pre>
+      <pre>      %711 = comb.and %708, %707, %649 : i1</pre>
+      <pre>      %712 = comb.or %710, %653, %711 : i1</pre>
+      <pre>      %713 = comb.xor %711, %true : i1</pre>
+      <pre>      %714 = comb.and %712, %713 : i1</pre>
+      <pre>      %715 = comb.and %712, %711, %660 : i1</pre>
+      <pre>      %716 = comb.or %714, %664, %715 : i1</pre>
+      <pre>      %717 = llhd.prb %21 : i1</pre>
+      <pre>      %718 = llhd.prb %22 : i1</pre>
+      <pre>      %719 = comb.xor %717, %true : i1</pre>
+      <pre>      %720 = comb.xor %718, %true : i1</pre>
+      <pre>      %721 = comb.and %719, %720 : i1</pre>
+      <pre>      %722 = comb.xor %715, %true : i1</pre>
+      <pre>      %723 = comb.xor %721, %true : i1</pre>
+      <pre>      %724 = comb.and %716, %722 : i1</pre>
+      <pre>      %725 = comb.and %720, %723 : i1</pre>
+      <pre>      %726 = comb.and %716, %715, %721 : i1</pre>
+      <pre>      %727 = comb.or %724, %725, %726 : i1</pre>
+      <pre>      %728 = comb.xor %701, %true : i1</pre>
+      <pre>      %729 = comb.xor %726, %true : i1</pre>
+      <pre>      %730 = comb.and %702, %701 : i1</pre>
+      <pre>      %731 = comb.and %727, %726 : i1</pre>
+      <pre>      %732 = comb.and %702, %728, %727, %729 : i1</pre>
+      <pre>      %733 = comb.or %730, %731 : i1</pre>
+      <pre>      %734 = comb.or %732, %730, %731 : i1</pre>
+      <pre>      %735 = llhd.prb %38 : i1</pre>
+      <pre>      %736 = llhd.prb %39 : i1</pre>
+      <pre>      %737 = comb.xor %736, %true : i1</pre>
+      <pre>      %738 = comb.xor %735, %true : i1</pre>
+      <pre>      %739 = comb.and %737, %738 : i1</pre>
+      <pre>      %740 = comb.and %610, %607, %737, %735 : i1</pre>
+      <pre>      %741 = comb.or %611, %739, %740 : i1</pre>
+      <pre>      %742 = comb.xor %733, %true : i1</pre>
+      <pre>      %743 = comb.xor %740, %true : i1</pre>
+      <pre>      %744 = comb.and %734, %733 : i1</pre>
+      <pre>      %745 = comb.and %741, %740 : i1</pre>
+      <pre>      %746 = comb.and %734, %742, %741, %743 : i1</pre>
+      <pre>      %747 = comb.or %744, %745 : i1</pre>
+      <pre>      %748 = comb.or %746, %744, %745 : i1</pre>
+      <pre>      %749 = comb.xor %748, %true : i1</pre>
+      <pre>      llhd.drv %38, %747 after %3 : i1</pre>
+      <pre>      llhd.drv %39, %749 after %3 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    %48 = llhd.prb %12 : i1</pre>
+      <pre>    %49 = llhd.prb %13 : i1</pre>
+      <pre>    %50 = llhd.prb %15 : i1</pre>
+      <pre>    %51 = llhd.prb %16 : i1</pre>
+      <pre>    %52 = comb.xor %49, %true : i1</pre>
+      <pre>    %53 = comb.xor %51, %true : i1</pre>
+      <pre>    %54 = comb.xor %48, %true : i1</pre>
+      <pre>    %55 = comb.xor %50, %true : i1</pre>
+      <pre>    %56 = comb.and %52, %54 : i1</pre>
+      <pre>    %57 = comb.and %53, %55 : i1</pre>
+      <pre>    %58 = comb.and %52, %48 : i1</pre>
+      <pre>    %59 = comb.and %53, %50 : i1</pre>
+      <pre>    %60 = comb.and %56, %57 : i1</pre>
+      <pre>    %61 = comb.or %58, %59 : i1</pre>
+      <pre>    %62 = comb.or %60, %58, %59 : i1</pre>
+      <pre>    %63 = llhd.prb %18 : i1</pre>
+      <pre>    %64 = llhd.prb %19 : i1</pre>
+      <pre>    %65 = comb.xor %64, %true : i1</pre>
+      <pre>    %66 = comb.xor %61, %true : i1</pre>
+      <pre>    %67 = comb.xor %63, %true : i1</pre>
+      <pre>    %68 = comb.and %65, %67 : i1</pre>
+      <pre>    %69 = comb.and %62, %61 : i1</pre>
+      <pre>    %70 = comb.and %65, %63 : i1</pre>
+      <pre>    %71 = comb.and %62, %66, %68 : i1</pre>
+      <pre>    %72 = comb.or %69, %70 : i1</pre>
+      <pre>    %73 = comb.or %71, %69, %70 : i1</pre>
+      <pre>    %74 = llhd.prb %21 : i1</pre>
+      <pre>    %75 = llhd.prb %22 : i1</pre>
+      <pre>    %76 = comb.xor %75, %true : i1</pre>
+      <pre>    %77 = comb.xor %72, %true : i1</pre>
+      <pre>    %78 = comb.xor %74, %true : i1</pre>
+      <pre>    %79 = comb.and %76, %78 : i1</pre>
+      <pre>    %80 = comb.and %73, %72 : i1</pre>
+      <pre>    %81 = comb.and %76, %74 : i1</pre>
+      <pre>    %82 = comb.and %73, %77, %79 : i1</pre>
+      <pre>    %83 = comb.or %80, %81 : i1</pre>
+      <pre>    %84 = comb.or %82, %80, %81 : i1</pre>
+      <pre>    %85 = llhd.prb %30 : i1</pre>
+      <pre>    %86 = llhd.prb %31 : i1</pre>
+      <pre>    %87 = comb.xor %85, %true : i1</pre>
+      <pre>    %88 = comb.xor %86, %true : i1</pre>
+      <pre>    %89 = comb.and %87, %88 : i1</pre>
+      <pre>    %90 = comb.xor %83, %true : i1</pre>
+      <pre>    %91 = comb.xor %89, %true : i1</pre>
+      <pre>    %92 = comb.and %84, %90 : i1</pre>
+      <pre>    %93 = comb.and %88, %91 : i1</pre>
+      <pre>    %94 = comb.and %84, %83, %89 : i1</pre>
+      <pre>    %95 = comb.or %92, %93, %94 : i1</pre>
+      <pre>    %96 = comb.xor %95, %true : i1</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 3 preds: ^bb0, ^bb2, ^bb3</pre>
+      <pre>      %164 = llhd.prb %6 : i1</pre>
+      <pre>      %165 = llhd.prb %7 : i1</pre>
+      <pre>      %166 = hw.struct_create (%164, %165) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.wait (%166 : !hw.struct&lt;value: i1, unknown: i1&gt;), ^bb2(%166 : !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    ^bb2(%167: !hw.struct&lt;value: i1, unknown: i1&gt;):  // pred: ^bb1</pre>
+      <pre>      %168 = llhd.prb %6 : i1</pre>
+      <pre>      %169 = llhd.prb %7 : i1</pre>
+      <pre>      %value_16 = hw.struct_extract %167[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown_17 = hw.struct_extract %167[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %170 = comb.xor bin %169, %true : i1</pre>
+      <pre>      %171 = comb.xor bin %value_16, %true : i1</pre>
+      <pre>      %172 = comb.or bin %unknown_17, %171 : i1</pre>
+      <pre>      %173 = comb.and bin %170, %168, %172 : i1</pre>
+      <pre>      cf.cond_br %173, ^bb3, ^bb1</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %174 = llhd.prb %24 : i1</pre>
+      <pre>      %175 = llhd.prb %25 : i1</pre>
+      <pre>      %176 = llhd.prb %46 : i1</pre>
+      <pre>      %177 = llhd.prb %47 : i1</pre>
+      <pre>      %178 = comb.xor %176, %true : i1</pre>
+      <pre>      %179 = comb.xor %177, %true : i1</pre>
+      <pre>      %180 = comb.and %178, %179 : i1</pre>
+      <pre>      %181 = comb.xor %175, %true : i1</pre>
+      <pre>      %182 = comb.xor %174, %true : i1</pre>
+      <pre>      %183 = comb.xor %180, %true : i1</pre>
+      <pre>      %184 = comb.and %181, %182 : i1</pre>
+      <pre>      %185 = comb.and %179, %183 : i1</pre>
+      <pre>      %186 = comb.and %181, %174, %180 : i1</pre>
+      <pre>      %187 = comb.or %184, %185, %186 : i1</pre>
+      <pre>      %188 = llhd.prb %40 : i1</pre>
+      <pre>      %189 = llhd.prb %41 : i1</pre>
+      <pre>      %190 = comb.xor %188, %true : i1</pre>
+      <pre>      %191 = comb.xor %189, %true : i1</pre>
+      <pre>      %192 = comb.and %190, %191 : i1</pre>
+      <pre>      %193 = comb.xor %186, %true : i1</pre>
+      <pre>      %194 = comb.xor %192, %true : i1</pre>
+      <pre>      %195 = comb.and %187, %193 : i1</pre>
+      <pre>      %196 = comb.and %191, %194 : i1</pre>
+      <pre>      %197 = comb.and %187, %186, %192 : i1</pre>
+      <pre>      %198 = comb.or %195, %196, %197 : i1</pre>
+      <pre>      %199 = comb.xor %198, %true : i1</pre>
+      <pre>      llhd.drv %40, %197 after %3 : i1</pre>
+      <pre>      llhd.drv %41, %199 after %3 : i1</pre>
+      <pre>      %200 = llhd.prb %24 : i1</pre>
+      <pre>      %201 = llhd.prb %25 : i1</pre>
+      <pre>      %202 = llhd.prb %46 : i1</pre>
+      <pre>      %203 = llhd.prb %47 : i1</pre>
+      <pre>      %204 = comb.xor %202, %true : i1</pre>
+      <pre>      %205 = comb.xor %203, %true : i1</pre>
+      <pre>      %206 = comb.and %204, %205 : i1</pre>
+      <pre>      %207 = comb.xor %201, %true : i1</pre>
+      <pre>      %208 = comb.xor %200, %true : i1</pre>
+      <pre>      %209 = comb.xor %206, %true : i1</pre>
+      <pre>      %210 = comb.and %207, %208 : i1</pre>
+      <pre>      %211 = comb.and %205, %209 : i1</pre>
+      <pre>      %212 = comb.and %207, %200 : i1</pre>
+      <pre>      %213 = comb.and %212, %206 : i1</pre>
+      <pre>      %214 = comb.or %210, %211, %213 : i1</pre>
+      <pre>      %215 = llhd.prb %40 : i1</pre>
+      <pre>      %216 = llhd.prb %41 : i1</pre>
+      <pre>      %217 = comb.xor %216, %true : i1</pre>
+      <pre>      %218 = comb.xor %213, %true : i1</pre>
+      <pre>      %219 = comb.xor %215, %true : i1</pre>
+      <pre>      %220 = comb.and %214, %218 : i1</pre>
+      <pre>      %221 = comb.and %217, %219 : i1</pre>
+      <pre>      %222 = comb.and %214, %213, %217, %215 : i1</pre>
+      <pre>      %223 = comb.or %220, %221, %222 : i1</pre>
+      <pre>      %224 = comb.and %212, %205, %202 : i1</pre>
+      <pre>      %225 = comb.or %210, %206, %224 : i1</pre>
+      <pre>      %226 = comb.xor %224, %true : i1</pre>
+      <pre>      %227 = comb.xor %221, %true : i1</pre>
+      <pre>      %228 = comb.and %225, %226 : i1</pre>
+      <pre>      %229 = comb.and %217, %227 : i1</pre>
+      <pre>      %230 = comb.and %225, %224, %221 : i1</pre>
+      <pre>      %231 = comb.or %228, %229, %230 : i1</pre>
+      <pre>      %232 = comb.xor %222, %true : i1</pre>
+      <pre>      %233 = comb.xor %230, %true : i1</pre>
+      <pre>      %234 = comb.and %223, %222 : i1</pre>
+      <pre>      %235 = comb.and %231, %230 : i1</pre>
+      <pre>      %236 = comb.and %223, %232, %231, %233 : i1</pre>
+      <pre>      %237 = comb.or %234, %235 : i1</pre>
+      <pre>      %238 = comb.or %236, %234, %235 : i1</pre>
+      <pre>      %239 = comb.xor %238, %true : i1</pre>
+      <pre>      llhd.drv %46, %237 after %3 : i1</pre>
+      <pre>      llhd.drv %47, %239 after %3 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    %97 = llhd.prb %38 : i1</pre>
+      <pre>    %98 = llhd.prb %39 : i1</pre>
+      <pre>    %99 = comb.xor %98, %true : i1</pre>
+      <pre>    %100 = comb.xor %97, %true : i1</pre>
+      <pre>    %101 = comb.and %99, %100 : i1</pre>
+      <pre>    %102 = comb.and %99, %97 : i1</pre>
+      <pre>    %103 = comb.and %58, %102 : i1</pre>
+      <pre>    %104 = comb.or %56, %101, %103 : i1</pre>
+      <pre>    %105 = llhd.prb %36 : i1</pre>
+      <pre>    %106 = llhd.prb %37 : i1</pre>
+      <pre>    %107 = comb.xor %106, %true : i1</pre>
+      <pre>    %108 = comb.xor %105, %true : i1</pre>
+      <pre>    %109 = comb.and %107, %108 : i1</pre>
+      <pre>    %110 = comb.and %107, %105 : i1</pre>
+      <pre>    %111 = comb.and %59, %110 : i1</pre>
+      <pre>    %112 = comb.or %57, %109, %111 : i1</pre>
+      <pre>    %113 = comb.xor %103, %true : i1</pre>
+      <pre>    %114 = comb.xor %111, %true : i1</pre>
+      <pre>    %115 = comb.and %104, %103 : i1</pre>
+      <pre>    %116 = comb.and %112, %111 : i1</pre>
+      <pre>    %117 = comb.and %104, %113, %112, %114 : i1</pre>
+      <pre>    %118 = comb.or %115, %116 : i1</pre>
+      <pre>    %119 = comb.or %117, %115, %116 : i1</pre>
+      <pre>    %120 = llhd.prb %34 : i1</pre>
+      <pre>    %121 = llhd.prb %35 : i1</pre>
+      <pre>    %122 = comb.xor %121, %true : i1</pre>
+      <pre>    %123 = comb.xor %120, %true : i1</pre>
+      <pre>    %124 = comb.and %122, %123 : i1</pre>
+      <pre>    %125 = comb.and %122, %120 : i1</pre>
+      <pre>    %126 = comb.and %70, %125 : i1</pre>
+      <pre>    %127 = comb.or %68, %124, %126 : i1</pre>
+      <pre>    %128 = comb.xor %118, %true : i1</pre>
+      <pre>    %129 = comb.xor %126, %true : i1</pre>
+      <pre>    %130 = comb.and %119, %118 : i1</pre>
+      <pre>    %131 = comb.and %127, %126 : i1</pre>
+      <pre>    %132 = comb.and %119, %128, %127, %129 : i1</pre>
+      <pre>    %133 = comb.or %130, %131 : i1</pre>
+      <pre>    %134 = comb.or %132, %130, %131 : i1</pre>
+      <pre>    %135 = llhd.prb %32 : i1</pre>
+      <pre>    %136 = llhd.prb %33 : i1</pre>
+      <pre>    %137 = comb.xor %136, %true : i1</pre>
+      <pre>    %138 = comb.xor %135, %true : i1</pre>
+      <pre>    %139 = comb.and %137, %138 : i1</pre>
+      <pre>    %140 = comb.and %81, %137, %135 : i1</pre>
+      <pre>    %141 = comb.or %79, %139, %140 : i1</pre>
+      <pre>    %142 = comb.xor %133, %true : i1</pre>
+      <pre>    %143 = comb.xor %140, %true : i1</pre>
+      <pre>    %144 = comb.and %134, %133 : i1</pre>
+      <pre>    %145 = comb.and %141, %140 : i1</pre>
+      <pre>    %146 = comb.and %134, %142, %141, %143 : i1</pre>
+      <pre>    %147 = comb.or %144, %145 : i1</pre>
+      <pre>    %148 = comb.or %146, %144, %145 : i1</pre>
+      <pre>    %149 = comb.xor %148, %true : i1</pre>
+      <pre>    %150 = comb.and %101, %109 : i1</pre>
+      <pre>    %151 = comb.or %102, %110 : i1</pre>
+      <pre>    %152 = comb.or %150, %102, %110 : i1</pre>
+      <pre>    %153 = comb.xor %152, %true : i1</pre>
+      <pre>    %154 = comb.and %101, %124 : i1</pre>
+      <pre>    %155 = comb.or %102, %125 : i1</pre>
+      <pre>    %156 = comb.or %154, %102, %125 : i1</pre>
+      <pre>    %157 = comb.xor %156, %true : i1</pre>
+      <pre>    %158 = comb.concat %151, %155 : i1, i1</pre>
+      <pre>    %159 = comb.concat %153, %157 : i1, i1</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 5 preds: ^bb0, ^bb2, ^bb4, ^bb6, ^bb7</pre>
+      <pre>      %164 = llhd.prb %6 : i1</pre>
+      <pre>      %165 = llhd.prb %7 : i1</pre>
+      <pre>      %166 = hw.struct_create (%164, %165) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.wait (%166 : !hw.struct&lt;value: i1, unknown: i1&gt;), ^bb2(%166 : !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    ^bb2(%167: !hw.struct&lt;value: i1, unknown: i1&gt;):  // pred: ^bb1</pre>
+      <pre>      %168 = llhd.prb %6 : i1</pre>
+      <pre>      %169 = llhd.prb %7 : i1</pre>
+      <pre>      %value_16 = hw.struct_extract %167[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown_17 = hw.struct_extract %167[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %170 = comb.xor bin %169, %true : i1</pre>
+      <pre>      %171 = comb.xor bin %value_16, %true : i1</pre>
+      <pre>      %172 = comb.or bin %unknown_17, %171 : i1</pre>
+      <pre>      %173 = comb.and bin %170, %168, %172 : i1</pre>
+      <pre>      cf.cond_br %173, ^bb3, ^bb1</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %174 = llhd.prb %9 : i1</pre>
+      <pre>      %175 = llhd.prb %10 : i1</pre>
+      <pre>      %176 = comb.xor %175, %true : i1</pre>
+      <pre>      %177 = comb.and %174, %176 : i1</pre>
+      <pre>      cf.cond_br %177, ^bb4, ^bb5</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      llhd.drv %44, %false after %3 : i1</pre>
+      <pre>      llhd.drv %45, %false after %3 : i1</pre>
+      <pre>      llhd.drv %42, %false after %3 : i1</pre>
+      <pre>      llhd.drv %43, %false after %3 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb5:  // pred: ^bb3</pre>
+      <pre>      %178 = llhd.prb %40 : i1</pre>
+      <pre>      %179 = llhd.prb %41 : i1</pre>
+      <pre>      %180 = comb.xor %179, %true : i1</pre>
+      <pre>      %181 = comb.and %178, %180 : i1</pre>
+      <pre>      cf.cond_br %181, ^bb6, ^bb7</pre>
+      <pre>    ^bb6:  // pred: ^bb5</pre>
+      <pre>      %182 = llhd.prb %27 : i2</pre>
+      <pre>      %183 = llhd.prb %28 : i2</pre>
+      <pre>      %184 = comb.extract %182 from 1 : (i2) -&gt; i1</pre>
+      <pre>      %185 = comb.extract %183 from 1 : (i2) -&gt; i1</pre>
+      <pre>      llhd.drv %44, %184 after %3 : i1</pre>
+      <pre>      llhd.drv %45, %185 after %3 : i1</pre>
+      <pre>      %186 = llhd.prb %27 : i2</pre>
+      <pre>      %187 = llhd.prb %28 : i2</pre>
+      <pre>      %188 = comb.extract %186 from 0 : (i2) -&gt; i1</pre>
+      <pre>      %189 = comb.extract %187 from 0 : (i2) -&gt; i1</pre>
+      <pre>      llhd.drv %42, %188 after %3 : i1</pre>
+      <pre>      llhd.drv %43, %189 after %3 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb7:  // pred: ^bb5</pre>
+      <pre>      %190 = llhd.prb %44 : i1</pre>
+      <pre>      %191 = llhd.prb %45 : i1</pre>
+      <pre>      llhd.drv %44, %190 after %3 : i1</pre>
+      <pre>      llhd.drv %45, %191 after %3 : i1</pre>
+      <pre>      %192 = llhd.prb %42 : i1</pre>
+      <pre>      %193 = llhd.prb %43 : i1</pre>
+      <pre>      llhd.drv %42, %192 after %3 : i1</pre>
+      <pre>      llhd.drv %43, %193 after %3 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    %160 = hw.struct_create (%97, %98) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %161 = hw.struct_create (%105, %106) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %162 = hw.struct_create (%120, %121) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %163 = hw.struct_create (%135, %136) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value = hw.struct_extract %clk[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %clk[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_6 = hw.struct_extract %rst[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_7 = hw.struct_extract %rst[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_8 = hw.struct_extract %req3[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_9 = hw.struct_extract %req3[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_10 = hw.struct_extract %req2[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_11 = hw.struct_extract %req2[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_12 = hw.struct_extract %req1[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_13 = hw.struct_extract %req1[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_14 = hw.struct_extract %req0[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_15 = hw.struct_extract %req0[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    hw.output %160, %161, %162, %163 : !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

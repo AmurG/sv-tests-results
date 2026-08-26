@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","associative-arrays-next",1,"logs/Slang/chapter-7/arrays/associative/methods/next.sv.log.html","tests/chapter-7/arrays/associative/methods/next.sv.html"]]

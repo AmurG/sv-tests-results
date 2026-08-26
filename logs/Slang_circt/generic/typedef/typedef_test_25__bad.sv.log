@@ -1,0 +1,44 @@
+name: typedef_test_25__bad
+description: Test
+should_fail_because: Using undefined parameters
+tags: 6.18
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10254979133605957
+user_time: 0.019548
+system_time: 0.09297
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/generic/typedef/typedef_test_25__bad.sv:21:9: error: use of undeclared identifier 'A'
+  reg  [A-1:0] addr;
+        ^
+../../../tests/generic/typedef/typedef_test_25__bad.sv:22:8: error: use of undeclared identifier 'D'
+  reg [D-1:0] data;
+       ^
+../../../tests/generic/typedef/typedef_test_25__bad.sv:24:9: error: use of undeclared identifier 'E'
+  reg  [E-1:0] ecc;
+        ^
+../../../tests/generic/typedef/typedef_test_25__bad.sv:26:10: error: use of undeclared identifier 'M'
+  reg   [M-1:0] mask;
+         ^
+Top level design units:
+    test
+
+
+Build failed: 4 errors, 0 warnings

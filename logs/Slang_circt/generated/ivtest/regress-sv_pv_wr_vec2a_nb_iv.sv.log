@@ -1,0 +1,50 @@
+name: regress-sv_pv_wr_vec2a_nb_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.14957928657531738
+user_time: 0.030275
+system_time: 0.124777
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:44
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec2a_nb.v:28:10: warning: cannot select range of [4:-1] from 'bit[3:0]' [-Wrange-oob]
+    x[0][4:-1] <= 6'b101010;
+         ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec2a_nb.v:34:10: warning: cannot select range of [0:-1] from 'bit[3:0]' [-Wrange-oob]
+    x[0][0:-1] <= 2'b10;
+         ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec2a_nb.v:40:10: warning: cannot select range of [4:3] from 'bit[3:0]' [-Wrange-oob]
+    x[0][4:3] <= 2'b01;
+         ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec2a_nb.v:46:10: warning: cannot select range of [-1:-2] from 'bit[3:0]' [-Wrange-oob]
+    x[0][-1:-2] <= 2'b11;
+         ^~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec2a_nb.v:52:10: warning: cannot select range of [6:5] from 'bit[3:0]' [-Wrange-oob]
+    x[0][6:5] <= 2'b11;
+         ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec2a_nb.v:68:13: warning: cannot select range of 6 elements from 'bit[3:0]' [-Wrange-width-oob]
+    x[0][i+:6] <= 6'b101010;
+            ^
+Top level design units:
+    test
+
+
+Build succeeded: 0 errors, 6 warnings

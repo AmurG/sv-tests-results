@@ -1,0 +1,39 @@
+name: veer-eh1
+description: Full VeeR EH1 core test
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path> <redacted-local-path>
+defines: 
+top_module: tb_top
+tags: veer-eh1
+timeout: 180
+results_group: cores
+compatible-runners: verilator Arcilator slang circt-verilog
+type: parsing elaboration simulation_without_run
+runner_verilator_flags: -CFLAGS -I<redacted-local-path> -CFLAGS -I<redacted-local-path> -CFLAGS -I<redacted-local-path> --trace -Wno-fatal
+should_fail: 0
+should_fail_because: 
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.41646265983581543
+user_time: 0.26250999999999997
+system_time: 0.34357899999999997
+ram_usage: 73472
+date_completed: 2026-07-02 03:18:38
+
+slang-driver --single-unit --timescale=1ns/1ns --top=tb_top -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+../../../build/veer-eh1_sim/src/chipsalliance.org_cores_VeeR_EH1_1.8/testbench/ahb_sif.sv:62:40: warning: if statement has empty body (put the semicolon on a separate line to silence this warning) [-Wempty-body]
+    if ($value$plusargs("iws=%d", iws));
+                                       ^
+../../../build/veer-eh1_sim/src/chipsalliance.org_cores_VeeR_EH1_1.8/testbench/ahb_sif.sv:63:40: warning: if statement has empty body (put the semicolon on a separate line to silence this warning) [-Wempty-body]
+    if ($value$plusargs("dws=%d", dws));
+                                       ^
+Top level design units:
+    tb_top
+
+
+Build succeeded: 0 errors, 2 warnings

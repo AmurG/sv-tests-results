@@ -1,0 +1,38 @@
+name: prot_from_outside
+description: encapsulation test
+should_fail_because: It is illegal to access protected variable from class instance.
+tags: 8.18
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08468914031982422
+user_time: 0.026529
+system_time: 0.11369299999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:35
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/generated/encapsulation/8.18--prot_from_outside.sv:25:20: error: 'b_prot' is a protected member of 'b_cls'
+    $display(b_obj.b_prot);
+                   ^~~~~~
+../../../tests/generated/encapsulation/8.18--prot_from_outside.sv:16:19: note: declared here
+    protected int b_prot = 32;
+                  ^
+Top level design units:
+    top
+
+
+Build failed: 1 error, 0 warnings

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>mod_operator_sim_1</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>% operator test in simulation</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>11.4.3</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/operators_sim/11.4.3--mod_operator_sim_1.sv.html" target="file-frame">tests/generated/operators_sim/11.4.3--mod_operator_sim_1.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:07</dd></div>
+        <div><dt>time elapsed</dt><dd>0.038s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../tests/generated/operators_sim/11.4.3--mod_operator_sim_1.sv.html" target="file-frame">tests/generated/operators_sim/11.4.3--mod_operator_sim_1.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = hw.aggregate_constant [0 : i32, 0 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (int(4%4) == &#34;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %4 = hw.aggregate_constant [-1 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %c = llhd.sig %4 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %c, %0 after %3 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %c[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %6 = llhd.prb %5 : i32</pre>
+      <pre>    %7 = llhd.sig.struct_extract %c[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %8 = llhd.prb %7 : i32</pre>
+      <pre>    llhd.final {</pre>
+      <pre>      %9 = sim.fmt.fvint 10 0 0 %6, %8 : i32</pre>
+      <pre>      %10 = sim.fmt.concat (%2, %9, %1)</pre>
+      <pre>      sim.proc.print %10</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

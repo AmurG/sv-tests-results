@@ -1,0 +1,35 @@
+name: case_production_statements_0
+description: randcase case statement test
+type: simulation elaboration parsing
+tags: 18.17.3
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.07772469520568848
+user_time: 0.027496999999999997
+system_time: 0.124246
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-18/18.17.3--case-production-statements_0.sv:20:9: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+    int switch = 1;
+        ^~~~~~
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 1 warning

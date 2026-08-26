@@ -1,0 +1,39 @@
+name: unpack_stream_inv
+description: invalid stream unpack test
+should_fail_because: stream is wider than assignment target
+tags: 11.4.14.3
+runner_verilator_flags: -Werror-WIDTH
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.09145116806030273
+user_time: 0.025675
+system_time: 0.09275499999999999
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:37
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv:25:13: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+        int d = {<<{a, b, c}};
+            ^
+../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv:25:15: error: streaming operator target size 32 does not fit source size 96
+        int d = {<<{a, b, c}};
+              ^ ~~~~~~~~~~~~~
+Top level design units:
+    top
+
+
+Build failed: 1 error, 1 warning

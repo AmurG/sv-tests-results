@@ -1,0 +1,35 @@
+name: fork_return
+description: illegal return from fork
+should_fail_because: illegal return from fork
+tags: 9.3.3
+type: simulation elaboration
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10256028175354004
+user_time: 0.022126999999999997
+system_time: 0.087616
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-9/9.3.3--fork_return.sv:22:25: error: return statement is not allowed in fork-join block
+                        return;
+                        ^~~~~~~
+Top level design units:
+    block_tb
+
+
+Build failed: 1 error, 0 warnings

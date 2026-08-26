@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_escape2a_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/escape2a.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/escape2a.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/escape2a.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/escape2a.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @part1(in %_6A_A &#34;6A_A&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, out &#34;6Y_A&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, in %VCC : !hw.struct&lt;value: i1, unknown: i1&gt;, in %GND : !hw.struct&lt;value: i1, unknown: i1&gt;, in %_6A_B &#34;6A_B&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, out &#34;6Y_B&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, in %_6A_C &#34;6A_C&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, out &#34;6Y_C&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, in %_6A_D &#34;6A_D&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, out &#34;6Y_D&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, in %_6A_E &#34;6A_E&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;, out &#34;6Y_E&#34; : !hw.struct&lt;value: i1, unknown: i1&gt;) {</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %value = hw.struct_extract %_6A_A[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %_6A_A[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %0 = comb.xor %value, %true : i1</pre>
+      <pre>    %1 = comb.xor %unknown, %true : i1</pre>
+      <pre>    %2 = comb.and %0, %1 : i1</pre>
+      <pre>    %3 = hw.struct_create (%2, %unknown) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_0 = hw.struct_extract %_6A_B[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_1 = hw.struct_extract %_6A_B[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %4 = comb.xor %value_0, %true : i1</pre>
+      <pre>    %5 = comb.xor %unknown_1, %true : i1</pre>
+      <pre>    %6 = comb.and %4, %5 : i1</pre>
+      <pre>    %7 = hw.struct_create (%6, %unknown_1) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_2 = hw.struct_extract %_6A_C[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_3 = hw.struct_extract %_6A_C[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %8 = comb.xor %value_2, %true : i1</pre>
+      <pre>    %9 = comb.xor %unknown_3, %true : i1</pre>
+      <pre>    %10 = comb.and %8, %9 : i1</pre>
+      <pre>    %11 = hw.struct_create (%10, %unknown_3) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_4 = hw.struct_extract %_6A_D[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_5 = hw.struct_extract %_6A_D[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %12 = comb.xor %value_4, %true : i1</pre>
+      <pre>    %13 = comb.xor %unknown_5, %true : i1</pre>
+      <pre>    %14 = comb.and %12, %13 : i1</pre>
+      <pre>    %15 = hw.struct_create (%14, %unknown_5) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_6 = hw.struct_extract %_6A_E[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_7 = hw.struct_extract %_6A_E[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %16 = comb.xor %value_6, %true : i1</pre>
+      <pre>    %17 = comb.xor %unknown_7, %true : i1</pre>
+      <pre>    %18 = comb.and %16, %17 : i1</pre>
+      <pre>    %19 = hw.struct_create (%18, %unknown_7) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    hw.output %3, %7, %11, %15, %19 : !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

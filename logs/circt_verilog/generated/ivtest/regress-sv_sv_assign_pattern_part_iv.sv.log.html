@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_sv_assign_pattern_part_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_part.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_part.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:13</dd></div>
+        <div><dt>time elapsed</dt><dd>0.054s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_part.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_part.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_dynarray_get_i32(i32, i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_dynarray_set_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_dynarray_alloc_i32(i32) -&gt; i32</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED: `x[i-:5]`, got &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED: `x[i+:8]`, got &#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;FAILED: `x[23-:5]`, got &#34;</pre>
+      <pre>    %c-1_i5 = hw.constant -1 : i5</pre>
+      <pre>    %c-1_i27 = hw.constant -1 : i27</pre>
+      <pre>    %4 = sim.fmt.literal &#34;FAILED: `x[3+:8]`, got &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;FAILED: `x[7:0]`, got &#34;</pre>
+      <pre>    %c-1_i8 = hw.constant -1 : i8</pre>
+      <pre>    %6 = sim.fmt.literal &#34;FAILED: `x[0]`, got &#34;</pre>
+      <pre>    %c-1_i31 = hw.constant -1 : i31</pre>
+      <pre>    %7 = hw.aggregate_constant [0 : i24, -1 : i24] : !hw.struct&lt;value: i24, unknown: i24&gt;</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %c0_i27 = hw.constant 0 : i27</pre>
+      <pre>    %8 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %9 = sim.fmt.literal &#34;, expected &#34;</pre>
+      <pre>    %c0_i31 = hw.constant 0 : i31</pre>
+      <pre>    %c-5921371_i24 = hw.constant -5921371 : i24</pre>
+      <pre>    %10 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-1_i24 = hw.constant -1 : i24</pre>
+      <pre>    %c0_i24 = hw.constant 0 : i24</pre>
+      <pre>    %c-4_i32 = hw.constant -4 : i32</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c13_i32 = hw.constant 13 : i32</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %d = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %11 = llhd.prb %d : i32</pre>
+      <pre>    %tmp = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %failed = llhd.sig %false : i1</pre>
+      <pre>    %x = llhd.sig %7 : !hw.struct&lt;value: i24, unknown: i24&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %x[&#34;value&#34;] : &lt;!hw.struct&lt;value: i24, unknown: i24&gt;&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %x[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i24, unknown: i24&gt;&gt;</pre>
+      <pre>    %i = llhd.sig %c13_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %12, %c-5921371_i24 after %10 : i24</pre>
+      <pre>      llhd.drv %13, %c0_i24 after %10 : i24</pre>
+      <pre>      %14 = llhd.prb %12 : i24</pre>
+      <pre>      %15 = llhd.prb %13 : i24</pre>
+      <pre>      %16 = comb.extract %14 from 0 : (i24) -&gt; i1</pre>
+      <pre>      %17 = comb.extract %15 from 0 : (i24) -&gt; i1</pre>
+      <pre>      %18 = comb.concat %c0_i31, %16 : i31, i1</pre>
+      <pre>      %19 = comb.xor %17, %true : i1</pre>
+      <pre>      %20 = comb.concat %c-1_i31, %19 : i31, i1</pre>
+      <pre>      %21 = comb.and %18, %20 : i32</pre>
+      <pre>      %22 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%22, %c0_i32, %21) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %22 after %10 : i32</pre>
+      <pre>      %23 = llhd.prb %12 : i24</pre>
+      <pre>      %24 = llhd.prb %13 : i24</pre>
+      <pre>      %25 = comb.extract %23 from 0 : (i24) -&gt; i1</pre>
+      <pre>      %26 = comb.extract %24 from 0 : (i24) -&gt; i1</pre>
+      <pre>      %27 = comb.concat %c0_i31, %25 : i31, i1</pre>
+      <pre>      %28 = comb.xor %26, %true : i1</pre>
+      <pre>      %29 = comb.concat %c-1_i31, %28 : i31, i1</pre>
+      <pre>      %30 = comb.and %27, %29 : i32</pre>
+      <pre>      llhd.drv %tmp, %30 after %10 : i32</pre>
+      <pre>      %31 = llhd.prb %d : i32</pre>
+      <pre>      %32 = func.call @circt_sv_dynarray_get_i32(%31, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %33 = llhd.prb %tmp : i32</pre>
+      <pre>      %34 = comb.icmp cne %32, %33 : i32</pre>
+      <pre>      cf.cond_br %34, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %35 = func.call @circt_sv_dynarray_get_i32(%11, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %36 = sim.fmt.int 10 0 0 %35 : i32</pre>
+      <pre>      %37 = llhd.prb %tmp : i32</pre>
+      <pre>      %38 = sim.fmt.int 10 0 0 %37 : i32</pre>
+      <pre>      %39 = sim.fmt.concat (%6, %36, %9, %38, %8)</pre>
+      <pre>      sim.proc.print %39</pre>
+      <pre>      llhd.drv %failed, %true after %10 : i1</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %40 = llhd.prb %12 : i24</pre>
+      <pre>      %41 = llhd.prb %13 : i24</pre>
+      <pre>      %42 = comb.extract %40 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %43 = comb.extract %41 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %44 = comb.concat %c0_i24, %42 : i24, i8</pre>
+      <pre>      %45 = comb.xor %43, %c-1_i8 : i8</pre>
+      <pre>      %46 = comb.concat %c-1_i24, %45 : i24, i8</pre>
+      <pre>      %47 = comb.and %44, %46 : i32</pre>
+      <pre>      %48 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%48, %c0_i32, %47) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %48 after %10 : i32</pre>
+      <pre>      %49 = llhd.prb %12 : i24</pre>
+      <pre>      %50 = llhd.prb %13 : i24</pre>
+      <pre>      %51 = comb.extract %49 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %52 = comb.extract %50 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %53 = comb.concat %c0_i24, %51 : i24, i8</pre>
+      <pre>      %54 = comb.xor %52, %c-1_i8 : i8</pre>
+      <pre>      %55 = comb.concat %c-1_i24, %54 : i24, i8</pre>
+      <pre>      %56 = comb.and %53, %55 : i32</pre>
+      <pre>      llhd.drv %tmp, %56 after %10 : i32</pre>
+      <pre>      %57 = llhd.prb %d : i32</pre>
+      <pre>      %58 = func.call @circt_sv_dynarray_get_i32(%57, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %59 = llhd.prb %tmp : i32</pre>
+      <pre>      %60 = comb.icmp cne %58, %59 : i32</pre>
+      <pre>      cf.cond_br %60, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %61 = llhd.prb %d : i32</pre>
+      <pre>      %62 = func.call @circt_sv_dynarray_get_i32(%61, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %63 = sim.fmt.int 10 0 0 %62 : i32</pre>
+      <pre>      %64 = llhd.prb %tmp : i32</pre>
+      <pre>      %65 = sim.fmt.int 10 0 0 %64 : i32</pre>
+      <pre>      %66 = sim.fmt.concat (%5, %63, %9, %65, %8)</pre>
+      <pre>      sim.proc.print %66</pre>
+      <pre>      llhd.drv %failed, %true after %10 : i1</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %67 = llhd.prb %12 : i24</pre>
+      <pre>      %68 = llhd.prb %13 : i24</pre>
+      <pre>      %69 = comb.extract %67 from 3 : (i24) -&gt; i8</pre>
+      <pre>      %70 = comb.extract %68 from 3 : (i24) -&gt; i8</pre>
+      <pre>      %71 = comb.concat %c0_i24, %69 : i24, i8</pre>
+      <pre>      %72 = comb.xor %70, %c-1_i8 : i8</pre>
+      <pre>      %73 = comb.concat %c-1_i24, %72 : i24, i8</pre>
+      <pre>      %74 = comb.and %71, %73 : i32</pre>
+      <pre>      %75 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%75, %c0_i32, %74) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %75 after %10 : i32</pre>
+      <pre>      %76 = llhd.prb %12 : i24</pre>
+      <pre>      %77 = llhd.prb %13 : i24</pre>
+      <pre>      %78 = comb.extract %76 from 3 : (i24) -&gt; i8</pre>
+      <pre>      %79 = comb.extract %77 from 3 : (i24) -&gt; i8</pre>
+      <pre>      %80 = comb.concat %c0_i24, %78 : i24, i8</pre>
+      <pre>      %81 = comb.xor %79, %c-1_i8 : i8</pre>
+      <pre>      %82 = comb.concat %c-1_i24, %81 : i24, i8</pre>
+      <pre>      %83 = comb.and %80, %82 : i32</pre>
+      <pre>      llhd.drv %tmp, %83 after %10 : i32</pre>
+      <pre>      %84 = llhd.prb %d : i32</pre>
+      <pre>      %85 = func.call @circt_sv_dynarray_get_i32(%84, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %86 = llhd.prb %tmp : i32</pre>
+      <pre>      %87 = comb.icmp cne %85, %86 : i32</pre>
+      <pre>      cf.cond_br %87, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %88 = llhd.prb %d : i32</pre>
+      <pre>      %89 = func.call @circt_sv_dynarray_get_i32(%88, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %90 = sim.fmt.int 10 0 0 %89 : i32</pre>
+      <pre>      %91 = llhd.prb %tmp : i32</pre>
+      <pre>      %92 = sim.fmt.int 10 0 0 %91 : i32</pre>
+      <pre>      %93 = sim.fmt.concat (%4, %90, %9, %92, %8)</pre>
+      <pre>      sim.proc.print %93</pre>
+      <pre>      llhd.drv %failed, %true after %10 : i1</pre>
+      <pre>      cf.br ^bb6</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %94 = llhd.prb %12 : i24</pre>
+      <pre>      %95 = llhd.prb %13 : i24</pre>
+      <pre>      %96 = comb.extract %94 from 19 : (i24) -&gt; i5</pre>
+      <pre>      %97 = comb.extract %95 from 19 : (i24) -&gt; i5</pre>
+      <pre>      %98 = comb.concat %c0_i27, %96 : i27, i5</pre>
+      <pre>      %99 = comb.xor %97, %c-1_i5 : i5</pre>
+      <pre>      %100 = comb.concat %c-1_i27, %99 : i27, i5</pre>
+      <pre>      %101 = comb.and %98, %100 : i32</pre>
+      <pre>      %102 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%102, %c0_i32, %101) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %102 after %10 : i32</pre>
+      <pre>      %103 = llhd.prb %12 : i24</pre>
+      <pre>      %104 = llhd.prb %13 : i24</pre>
+      <pre>      %105 = comb.extract %103 from 19 : (i24) -&gt; i5</pre>
+      <pre>      %106 = comb.extract %104 from 19 : (i24) -&gt; i5</pre>
+      <pre>      %107 = comb.concat %c0_i27, %105 : i27, i5</pre>
+      <pre>      %108 = comb.xor %106, %c-1_i5 : i5</pre>
+      <pre>      %109 = comb.concat %c-1_i27, %108 : i27, i5</pre>
+      <pre>      %110 = comb.and %107, %109 : i32</pre>
+      <pre>      llhd.drv %tmp, %110 after %10 : i32</pre>
+      <pre>      %111 = llhd.prb %d : i32</pre>
+      <pre>      %112 = func.call @circt_sv_dynarray_get_i32(%111, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %113 = llhd.prb %tmp : i32</pre>
+      <pre>      %114 = comb.icmp cne %112, %113 : i32</pre>
+      <pre>      cf.cond_br %114, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %115 = llhd.prb %d : i32</pre>
+      <pre>      %116 = func.call @circt_sv_dynarray_get_i32(%115, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %117 = sim.fmt.int 10 0 0 %116 : i32</pre>
+      <pre>      %118 = llhd.prb %tmp : i32</pre>
+      <pre>      %119 = sim.fmt.int 10 0 0 %118 : i32</pre>
+      <pre>      %120 = sim.fmt.concat (%3, %117, %9, %119, %8)</pre>
+      <pre>      sim.proc.print %120</pre>
+      <pre>      llhd.drv %failed, %true after %10 : i1</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %121 = llhd.prb %12 : i24</pre>
+      <pre>      %122 = llhd.prb %13 : i24</pre>
+      <pre>      %123 = llhd.prb %i : i32</pre>
+      <pre>      %124 = comb.extract %123 from 24 : (i32) -&gt; i8</pre>
+      <pre>      %125 = comb.icmp eq %124, %c0_i8 : i8</pre>
+      <pre>      %126 = comb.extract %123 from 0 : (i32) -&gt; i24</pre>
+      <pre>      %127 = comb.mux %125, %126, %c-1_i24 : i24</pre>
+      <pre>      %128 = comb.shru %121, %127 : i24</pre>
+      <pre>      %129 = comb.shru %122, %127 : i24</pre>
+      <pre>      %130 = comb.extract %128 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %131 = comb.extract %129 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %132 = comb.concat %c0_i24, %130 : i24, i8</pre>
+      <pre>      %133 = comb.xor %131, %c-1_i8 : i8</pre>
+      <pre>      %134 = comb.concat %c-1_i24, %133 : i24, i8</pre>
+      <pre>      %135 = comb.and %132, %134 : i32</pre>
+      <pre>      %136 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%136, %c0_i32, %135) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %136 after %10 : i32</pre>
+      <pre>      %137 = llhd.prb %12 : i24</pre>
+      <pre>      %138 = llhd.prb %13 : i24</pre>
+      <pre>      %139 = llhd.prb %i : i32</pre>
+      <pre>      %140 = comb.extract %139 from 24 : (i32) -&gt; i8</pre>
+      <pre>      %141 = comb.icmp eq %140, %c0_i8 : i8</pre>
+      <pre>      %142 = comb.extract %139 from 0 : (i32) -&gt; i24</pre>
+      <pre>      %143 = comb.mux %141, %142, %c-1_i24 : i24</pre>
+      <pre>      %144 = comb.shru %137, %143 : i24</pre>
+      <pre>      %145 = comb.shru %138, %143 : i24</pre>
+      <pre>      %146 = comb.extract %144 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %147 = comb.extract %145 from 0 : (i24) -&gt; i8</pre>
+      <pre>      %148 = comb.concat %c0_i24, %146 : i24, i8</pre>
+      <pre>      %149 = comb.xor %147, %c-1_i8 : i8</pre>
+      <pre>      %150 = comb.concat %c-1_i24, %149 : i24, i8</pre>
+      <pre>      %151 = comb.and %148, %150 : i32</pre>
+      <pre>      llhd.drv %tmp, %151 after %10 : i32</pre>
+      <pre>      %152 = llhd.prb %d : i32</pre>
+      <pre>      %153 = func.call @circt_sv_dynarray_get_i32(%152, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %154 = llhd.prb %tmp : i32</pre>
+      <pre>      %155 = comb.icmp cne %153, %154 : i32</pre>
+      <pre>      cf.cond_br %155, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      %156 = llhd.prb %d : i32</pre>
+      <pre>      %157 = func.call @circt_sv_dynarray_get_i32(%156, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %158 = sim.fmt.int 10 0 0 %157 : i32</pre>
+      <pre>      %159 = llhd.prb %tmp : i32</pre>
+      <pre>      %160 = sim.fmt.int 10 0 0 %159 : i32</pre>
+      <pre>      %161 = sim.fmt.concat (%2, %158, %9, %160, %8)</pre>
+      <pre>      sim.proc.print %161</pre>
+      <pre>      llhd.drv %failed, %true after %10 : i1</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %162 = llhd.prb %12 : i24</pre>
+      <pre>      %163 = llhd.prb %13 : i24</pre>
+      <pre>      %164 = llhd.prb %i : i32</pre>
+      <pre>      %165 = comb.add %164, %c-4_i32 : i32</pre>
+      <pre>      %166 = comb.extract %165 from 24 : (i32) -&gt; i8</pre>
+      <pre>      %167 = comb.icmp eq %166, %c0_i8 : i8</pre>
+      <pre>      %168 = comb.extract %165 from 0 : (i32) -&gt; i24</pre>
+      <pre>      %169 = comb.mux %167, %168, %c-1_i24 : i24</pre>
+      <pre>      %170 = comb.shru %162, %169 : i24</pre>
+      <pre>      %171 = comb.shru %163, %169 : i24</pre>
+      <pre>      %172 = comb.extract %170 from 0 : (i24) -&gt; i5</pre>
+      <pre>      %173 = comb.extract %171 from 0 : (i24) -&gt; i5</pre>
+      <pre>      %174 = comb.concat %c0_i27, %172 : i27, i5</pre>
+      <pre>      %175 = comb.xor %173, %c-1_i5 : i5</pre>
+      <pre>      %176 = comb.concat %c-1_i27, %175 : i27, i5</pre>
+      <pre>      %177 = comb.and %174, %176 : i32</pre>
+      <pre>      %178 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%178, %c0_i32, %177) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %178 after %10 : i32</pre>
+      <pre>      %179 = llhd.prb %12 : i24</pre>
+      <pre>      %180 = llhd.prb %13 : i24</pre>
+      <pre>      %181 = llhd.prb %i : i32</pre>
+      <pre>      %182 = comb.add %181, %c-4_i32 : i32</pre>
+      <pre>      %183 = comb.extract %182 from 24 : (i32) -&gt; i8</pre>
+      <pre>      %184 = comb.icmp eq %183, %c0_i8 : i8</pre>
+      <pre>      %185 = comb.extract %182 from 0 : (i32) -&gt; i24</pre>
+      <pre>      %186 = comb.mux %184, %185, %c-1_i24 : i24</pre>
+      <pre>      %187 = comb.shru %179, %186 : i24</pre>
+      <pre>      %188 = comb.shru %180, %186 : i24</pre>
+      <pre>      %189 = comb.extract %187 from 0 : (i24) -&gt; i5</pre>
+      <pre>      %190 = comb.extract %188 from 0 : (i24) -&gt; i5</pre>
+      <pre>      %191 = comb.concat %c0_i27, %189 : i27, i5</pre>
+      <pre>      %192 = comb.xor %190, %c-1_i5 : i5</pre>
+      <pre>      %193 = comb.concat %c-1_i27, %192 : i27, i5</pre>
+      <pre>      %194 = comb.and %191, %193 : i32</pre>
+      <pre>      llhd.drv %tmp, %194 after %10 : i32</pre>
+      <pre>      %195 = llhd.prb %d : i32</pre>
+      <pre>      %196 = func.call @circt_sv_dynarray_get_i32(%195, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %197 = llhd.prb %tmp : i32</pre>
+      <pre>      %198 = comb.icmp cne %196, %197 : i32</pre>
+      <pre>      cf.cond_br %198, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      %199 = llhd.prb %d : i32</pre>
+      <pre>      %200 = func.call @circt_sv_dynarray_get_i32(%199, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %201 = sim.fmt.int 10 0 0 %200 : i32</pre>
+      <pre>      %202 = llhd.prb %tmp : i32</pre>
+      <pre>      %203 = sim.fmt.int 10 0 0 %202 : i32</pre>
+      <pre>      %204 = sim.fmt.concat (%1, %201, %9, %203, %8)</pre>
+      <pre>      sim.proc.print %204</pre>
+      <pre>      llhd.drv %failed, %true after %10 : i1</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb10, ^bb11</pre>
+      <pre>      %205 = llhd.prb %failed : i1</pre>
+      <pre>      %206 = comb.xor %205, %true : i1</pre>
+      <pre>      cf.cond_br %206, ^bb13, ^bb14</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb14</pre>
+      <pre>    ^bb14:  // 2 preds: ^bb12, ^bb13</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+name: enum_num
+description: enum num method tests
+tags: 6.19.5.5
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.19088983535766602
+user_time: 0.018248
+system_time: 0.096428
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:37
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-6/6.19.5.5--enum_num.sv:19:19: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+                e val = a;
+                  ^~~
+../../../tests/chapter-6/6.19.5.5--enum_num.sv:20:21: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+                int n = val.num();
+                    ^
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 2 warnings

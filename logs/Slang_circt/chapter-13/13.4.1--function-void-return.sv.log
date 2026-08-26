@@ -1,0 +1,38 @@
+name: function_void_return
+description: void function return value test
+should_fail_because: void function returns value
+tags: 13.4.1
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.0717916488647461
+user_time: 0.013854
+system_time: 0.075859
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-13/13.4.1--function-void-return.sv:21:9: error: value of type 'int' cannot be assigned to type 'void'
+        return a + b;
+        ^~~~~~ ~~~~~
+../../../tests/chapter-13/13.4.1--function-void-return.sv:25:24: error: value of type 'void' is invalid for '%d' format specifier
+        $display("%d", add(45, 90));
+                  ~~   ^~~~~~~~~~~
+Top level design units:
+    top
+
+
+Build failed: 2 errors, 0 warnings

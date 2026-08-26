@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_pr2605006_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr2605006.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr2605006.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.051s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr2605006.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr2605006.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %c1_i14 = hw.constant 1 : i14</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %c0_i14 = hw.constant 0 : i14</pre>
+      <pre>    %c2_i14 = hw.constant 2 : i14</pre>
+      <pre>    %2 = hw.aggregate_constant [0 : i6, -1 : i6] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>    %3 = hw.aggregate_constant [0 : i16, -1 : i16] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %c0_i6 = hw.constant 0 : i6</pre>
+      <pre>    %c-32_i6 = hw.constant -32 : i6</pre>
+      <pre>    %c9_i16 = hw.constant 9 : i16</pre>
+      <pre>    %c5_i16 = hw.constant 5 : i16</pre>
+      <pre>    %4 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i16 = hw.constant 0 : i16</pre>
+      <pre>    %c0_i5 = hw.constant 0 : i5</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %5 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %clk = llhd.sig %5 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %clk[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %clk[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %usb_shadow.4 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %usb_shadow.4[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %9 = llhd.prb %8 : i16</pre>
+      <pre>    %10 = llhd.sig.struct_extract %usb_shadow.4[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %11 = llhd.prb %10 : i16</pre>
+      <pre>    %usb_shadow.3 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %usb_shadow.3[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %13 = llhd.prb %12 : i16</pre>
+      <pre>    %14 = llhd.sig.struct_extract %usb_shadow.3[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %15 = llhd.prb %14 : i16</pre>
+      <pre>    %usb_shadow.6 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %16 = llhd.sig.struct_extract %usb_shadow.6[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %17 = llhd.prb %16 : i16</pre>
+      <pre>    %18 = llhd.sig.struct_extract %usb_shadow.6[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %19 = llhd.prb %18 : i16</pre>
+      <pre>    %usb_shadow.5 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %20 = llhd.sig.struct_extract %usb_shadow.5[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %21 = llhd.prb %20 : i16</pre>
+      <pre>    %22 = llhd.sig.struct_extract %usb_shadow.5[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %23 = llhd.prb %22 : i16</pre>
+      <pre>    %usb_shadow.0 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %24 = llhd.sig.struct_extract %usb_shadow.0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %25 = llhd.prb %24 : i16</pre>
+      <pre>    %26 = llhd.sig.struct_extract %usb_shadow.0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %27 = llhd.prb %26 : i16</pre>
+      <pre>    %usb_shadow.2 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %28 = llhd.sig.struct_extract %usb_shadow.2[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %29 = llhd.prb %28 : i16</pre>
+      <pre>    %30 = llhd.sig.struct_extract %usb_shadow.2[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %31 = llhd.prb %30 : i16</pre>
+      <pre>    %usb_shadow.1 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %32 = llhd.sig.struct_extract %usb_shadow.1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %33 = llhd.prb %32 : i16</pre>
+      <pre>    %34 = llhd.sig.struct_extract %usb_shadow.1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %35 = llhd.prb %34 : i16</pre>
+      <pre>    %usb_shadow.29 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %36 = llhd.sig.struct_extract %usb_shadow.29[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %37 = llhd.prb %36 : i16</pre>
+      <pre>    %38 = llhd.sig.struct_extract %usb_shadow.29[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %39 = llhd.prb %38 : i16</pre>
+      <pre>    %usb_shadow.30 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %40 = llhd.sig.struct_extract %usb_shadow.30[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %41 = llhd.prb %40 : i16</pre>
+      <pre>    %42 = llhd.sig.struct_extract %usb_shadow.30[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %43 = llhd.prb %42 : i16</pre>
+      <pre>    %usb_shadow.27 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %44 = llhd.sig.struct_extract %usb_shadow.27[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %45 = llhd.prb %44 : i16</pre>
+      <pre>    %46 = llhd.sig.struct_extract %usb_shadow.27[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %47 = llhd.prb %46 : i16</pre>
+      <pre>    %usb_shadow.28 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %48 = llhd.sig.struct_extract %usb_shadow.28[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %49 = llhd.prb %48 : i16</pre>
+      <pre>    %50 = llhd.sig.struct_extract %usb_shadow.28[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %51 = llhd.prb %50 : i16</pre>
+      <pre>    %usb_shadow.25 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %52 = llhd.sig.struct_extract %usb_shadow.25[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %53 = llhd.prb %52 : i16</pre>
+      <pre>    %54 = llhd.sig.struct_extract %usb_shadow.25[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %55 = llhd.prb %54 : i16</pre>
+      <pre>    %usb_shadow.26 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %56 = llhd.sig.struct_extract %usb_shadow.26[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %57 = llhd.prb %56 : i16</pre>
+      <pre>    %58 = llhd.sig.struct_extract %usb_shadow.26[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %59 = llhd.prb %58 : i16</pre>
+      <pre>    %usb_shadow.23 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %60 = llhd.sig.struct_extract %usb_shadow.23[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %61 = llhd.prb %60 : i16</pre>
+      <pre>    %62 = llhd.sig.struct_extract %usb_shadow.23[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %63 = llhd.prb %62 : i16</pre>
+      <pre>    %usb_shadow.24 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %64 = llhd.sig.struct_extract %usb_shadow.24[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %65 = llhd.prb %64 : i16</pre>
+      <pre>    %66 = llhd.sig.struct_extract %usb_shadow.24[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %67 = llhd.prb %66 : i16</pre>
+      <pre>    %usb_shadow.31 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %68 = llhd.sig.struct_extract %usb_shadow.31[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %69 = llhd.prb %68 : i16</pre>
+      <pre>    %70 = llhd.sig.struct_extract %usb_shadow.31[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %71 = llhd.prb %70 : i16</pre>
+      <pre>    %usb_shadow.32 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %72 = llhd.sig.struct_extract %usb_shadow.32[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %73 = llhd.prb %72 : i16</pre>
+      <pre>    %74 = llhd.sig.struct_extract %usb_shadow.32[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %75 = llhd.prb %74 : i16</pre>
+      <pre>    %usb_shadow.13 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %76 = llhd.sig.struct_extract %usb_shadow.13[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %77 = llhd.prb %76 : i16</pre>
+      <pre>    %78 = llhd.sig.struct_extract %usb_shadow.13[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %79 = llhd.prb %78 : i16</pre>
+      <pre>    %usb_shadow.14 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %80 = llhd.sig.struct_extract %usb_shadow.14[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %81 = llhd.prb %80 : i16</pre>
+      <pre>    %82 = llhd.sig.struct_extract %usb_shadow.14[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %83 = llhd.prb %82 : i16</pre>
+      <pre>    %usb_shadow.11 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %84 = llhd.sig.struct_extract %usb_shadow.11[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %85 = llhd.prb %84 : i16</pre>
+      <pre>    %86 = llhd.sig.struct_extract %usb_shadow.11[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %87 = llhd.prb %86 : i16</pre>
+      <pre>    %usb_shadow.12 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %88 = llhd.sig.struct_extract %usb_shadow.12[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %89 = llhd.prb %88 : i16</pre>
+      <pre>    %90 = llhd.sig.struct_extract %usb_shadow.12[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %91 = llhd.prb %90 : i16</pre>
+      <pre>    %usb_shadow.9 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %92 = llhd.sig.struct_extract %usb_shadow.9[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %93 = llhd.prb %92 : i16</pre>
+      <pre>    %94 = llhd.sig.struct_extract %usb_shadow.9[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %95 = llhd.prb %94 : i16</pre>
+      <pre>    %usb_shadow.10 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %96 = llhd.sig.struct_extract %usb_shadow.10[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %97 = llhd.prb %96 : i16</pre>
+      <pre>    %98 = llhd.sig.struct_extract %usb_shadow.10[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %99 = llhd.prb %98 : i16</pre>
+      <pre>    %usb_shadow.7 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %100 = llhd.sig.struct_extract %usb_shadow.7[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %101 = llhd.prb %100 : i16</pre>
+      <pre>    %102 = llhd.sig.struct_extract %usb_shadow.7[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %103 = llhd.prb %102 : i16</pre>
+      <pre>    %usb_shadow.8 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %104 = llhd.sig.struct_extract %usb_shadow.8[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %105 = llhd.prb %104 : i16</pre>
+      <pre>    %106 = llhd.sig.struct_extract %usb_shadow.8[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %107 = llhd.prb %106 : i16</pre>
+      <pre>    %usb_shadow.21 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %108 = llhd.sig.struct_extract %usb_shadow.21[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %109 = llhd.prb %108 : i16</pre>
+      <pre>    %110 = llhd.sig.struct_extract %usb_shadow.21[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %111 = llhd.prb %110 : i16</pre>
+      <pre>    %usb_shadow.22 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %112 = llhd.sig.struct_extract %usb_shadow.22[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %113 = llhd.prb %112 : i16</pre>
+      <pre>    %114 = llhd.sig.struct_extract %usb_shadow.22[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %115 = llhd.prb %114 : i16</pre>
+      <pre>    %usb_shadow.19 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %116 = llhd.sig.struct_extract %usb_shadow.19[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %117 = llhd.prb %116 : i16</pre>
+      <pre>    %118 = llhd.sig.struct_extract %usb_shadow.19[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %119 = llhd.prb %118 : i16</pre>
+      <pre>    %usb_shadow.20 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %120 = llhd.sig.struct_extract %usb_shadow.20[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %121 = llhd.prb %120 : i16</pre>
+      <pre>    %122 = llhd.sig.struct_extract %usb_shadow.20[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %123 = llhd.prb %122 : i16</pre>
+      <pre>    %usb_shadow.17 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %124 = llhd.sig.struct_extract %usb_shadow.17[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %125 = llhd.prb %124 : i16</pre>
+      <pre>    %126 = llhd.sig.struct_extract %usb_shadow.17[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %127 = llhd.prb %126 : i16</pre>
+      <pre>    %usb_shadow.18 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %128 = llhd.sig.struct_extract %usb_shadow.18[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %129 = llhd.prb %128 : i16</pre>
+      <pre>    %130 = llhd.sig.struct_extract %usb_shadow.18[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %131 = llhd.prb %130 : i16</pre>
+      <pre>    %usb_shadow.15 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %132 = llhd.sig.struct_extract %usb_shadow.15[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %133 = llhd.prb %132 : i16</pre>
+      <pre>    %134 = llhd.sig.struct_extract %usb_shadow.15[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %135 = llhd.prb %134 : i16</pre>
+      <pre>    %usb_shadow.16 = llhd.sig %3 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %136 = llhd.sig.struct_extract %usb_shadow.16[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %137 = llhd.prb %136 : i16</pre>
+      <pre>    %138 = llhd.sig.struct_extract %usb_shadow.16[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %139 = llhd.prb %138 : i16</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %72, %c5_i16 after %4 : i16</pre>
+      <pre>      llhd.drv %74, %c0_i16 after %4 : i16</pre>
+      <pre>      llhd.drv %24, %c9_i16 after %4 : i16</pre>
+      <pre>      llhd.drv %26, %c0_i16 after %4 : i16</pre>
+      <pre>      llhd.drv %6, %false after %4 : i1</pre>
+      <pre>      llhd.drv %7, %false after %4 : i1</pre>
+      <pre>      %140 = llhd.prb %24 : i16</pre>
+      <pre>      %141 = llhd.prb %26 : i16</pre>
+      <pre>      %142 = hw.struct_create (%140, %141) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %143 = hw.struct_create (%33, %35) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %144 = hw.struct_create (%29, %31) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %145 = hw.struct_create (%13, %15) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %146 = hw.struct_create (%9, %11) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %147 = hw.struct_create (%21, %23) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %148 = hw.struct_create (%17, %19) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %149 = hw.struct_create (%101, %103) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %150 = hw.struct_create (%105, %107) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %151 = hw.struct_create (%93, %95) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %152 = hw.struct_create (%97, %99) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %153 = hw.struct_create (%85, %87) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %154 = hw.struct_create (%89, %91) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %155 = hw.struct_create (%77, %79) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %156 = hw.struct_create (%81, %83) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %157 = hw.struct_create (%133, %135) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %158 = hw.struct_create (%137, %139) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %159 = hw.struct_create (%125, %127) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %160 = hw.struct_create (%129, %131) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %161 = hw.struct_create (%117, %119) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %162 = hw.struct_create (%121, %123) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %163 = hw.struct_create (%109, %111) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %164 = hw.struct_create (%113, %115) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %165 = hw.struct_create (%61, %63) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %166 = hw.struct_create (%65, %67) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %167 = hw.struct_create (%53, %55) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %168 = hw.struct_create (%57, %59) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %169 = hw.struct_create (%45, %47) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %170 = hw.struct_create (%49, %51) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %171 = hw.struct_create (%37, %39) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %172 = hw.struct_create (%41, %43) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %173 = hw.struct_create (%69, %71) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %174 = llhd.prb %72 : i16</pre>
+      <pre>      %175 = llhd.prb %74 : i16</pre>
+      <pre>      %176 = hw.struct_create (%174, %175) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %177 = hw.array_create %176, %173, %172, %171, %170, %169, %168, %167, %166, %165, %164, %163, %162, %161, %160, %159, %158, %157, %156, %155, %154, %153, %152, %151, %150, %149, %148, %147, %146, %145, %144, %143, %142 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %178 = llhd.prb %6 : i1</pre>
+      <pre>      %179 = llhd.prb %7 : i1</pre>
+      <pre>      %180 = comb.xor %178, %true : i1</pre>
+      <pre>      %181 = comb.xor %179, %true : i1</pre>
+      <pre>      %182 = comb.and %180, %181 : i1</pre>
+      <pre>      %183 = comb.concat %182, %c0_i5 : i1, i5</pre>
+      <pre>      %184 = comb.sub %c-32_i6, %183 : i6</pre>
+      <pre>      %185 = hw.struct_create (%184, %c0_i6) : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %186 = comb.mux %179, %2, %185 : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %value = hw.struct_extract %186[&#34;value&#34;] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %186[&#34;unknown&#34;] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %187 = comb.icmp ne %unknown, %c0_i6 : i6</pre>
+      <pre>      %188 = hw.array_get %177[%value] : !hw.array&lt;33xstruct&lt;value: i16, unknown: i16&gt;&gt;, i6</pre>
+      <pre>      %189 = comb.mux %187, %3, %188 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %value_0 = hw.struct_extract %189[&#34;value&#34;] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %unknown_1 = hw.struct_extract %189[&#34;unknown&#34;] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %190 = comb.extract %value_0 from 2 : (i16) -&gt; i14</pre>
+      <pre>      %191 = comb.extract %unknown_1 from 2 : (i16) -&gt; i14</pre>
+      <pre>      %192 = comb.icmp eq %190, %c2_i14 : i14</pre>
+      <pre>      %193 = comb.icmp eq %191, %c0_i14 : i14</pre>
+      <pre>      %194 = comb.and %192, %193 : i1</pre>
+      <pre>      %195 = comb.xor %194, %true : i1</pre>
+      <pre>      cf.cond_br %195, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb2:  // pred: ^bb0</pre>
+      <pre>      llhd.drv %6, %true after %4 : i1</pre>
+      <pre>      llhd.drv %7, %false after %4 : i1</pre>
+      <pre>      %196 = hw.struct_create (%25, %27) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %197 = hw.struct_create (%73, %75) : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %198 = hw.array_create %197, %173, %172, %171, %170, %169, %168, %167, %166, %165, %164, %163, %162, %161, %160, %159, %158, %157, %156, %155, %154, %153, %152, %151, %150, %149, %148, %147, %146, %145, %144, %143, %196 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %199 = llhd.prb %6 : i1</pre>
+      <pre>      %200 = llhd.prb %7 : i1</pre>
+      <pre>      %201 = comb.xor %199, %true : i1</pre>
+      <pre>      %202 = comb.xor %200, %true : i1</pre>
+      <pre>      %203 = comb.and %201, %202 : i1</pre>
+      <pre>      %204 = comb.concat %203, %c0_i5 : i1, i5</pre>
+      <pre>      %205 = comb.sub %c-32_i6, %204 : i6</pre>
+      <pre>      %206 = hw.struct_create (%205, %c0_i6) : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %207 = comb.mux %200, %2, %206 : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %value_2 = hw.struct_extract %207[&#34;value&#34;] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %unknown_3 = hw.struct_extract %207[&#34;unknown&#34;] : !hw.struct&lt;value: i6, unknown: i6&gt;</pre>
+      <pre>      %208 = comb.icmp ne %unknown_3, %c0_i6 : i6</pre>
+      <pre>      %209 = hw.array_get %198[%value_2] : !hw.array&lt;33xstruct&lt;value: i16, unknown: i16&gt;&gt;, i6</pre>
+      <pre>      %210 = comb.mux %208, %3, %209 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %value_4 = hw.struct_extract %210[&#34;value&#34;] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %unknown_5 = hw.struct_extract %210[&#34;unknown&#34;] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>      %211 = comb.extract %value_4 from 2 : (i16) -&gt; i14</pre>
+      <pre>      %212 = comb.extract %unknown_5 from 2 : (i16) -&gt; i14</pre>
+      <pre>      %213 = comb.icmp eq %211, %c1_i14 : i14</pre>
+      <pre>      %214 = comb.icmp eq %212, %c0_i14 : i14</pre>
+      <pre>      %215 = comb.and %213, %214 : i1</pre>
+      <pre>      %216 = comb.xor %215, %true : i1</pre>
+      <pre>      cf.cond_br %216, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

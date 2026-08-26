@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_pr312_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr312.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr312.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:13</dd></div>
+        <div><dt>time elapsed</dt><dd>0.042s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr312.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr312.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @main() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;) != 3&#39;b000\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;) != 3&#39;b010\0A&#34;</pre>
+      <pre>    %3 = hw.aggregate_constant [0 : i3, -1 : i3] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;FAILED -- y (&#34;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c2_i3 = hw.constant 2 : i3</pre>
+      <pre>    %c1_i2 = hw.constant 1 : i2</pre>
+      <pre>    %5 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %6 = hw.aggregate_constant [0 : i2, -1 : i2] : !hw.struct&lt;value: i2, unknown: i2&gt;</pre>
+      <pre>    %x = llhd.sig %6 : !hw.struct&lt;value: i2, unknown: i2&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %x[&#34;value&#34;] : &lt;!hw.struct&lt;value: i2, unknown: i2&gt;&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %x[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i2, unknown: i2&gt;&gt;</pre>
+      <pre>    %y = llhd.sig %3 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %y[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %10 = llhd.prb %9 : i3</pre>
+      <pre>    %11 = llhd.sig.struct_extract %y[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %12 = llhd.prb %11 : i3</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %7, %c1_i2 after %5 : i2</pre>
+      <pre>      llhd.drv %8, %c0_i2 after %5 : i2</pre>
+      <pre>      %13 = llhd.prb %7 : i2</pre>
+      <pre>      %14 = llhd.prb %8 : i2</pre>
+      <pre>      %15 = comb.extract %13 from 0 : (i2) -&gt; i1</pre>
+      <pre>      %16 = comb.extract %14 from 0 : (i2) -&gt; i1</pre>
+      <pre>      %17 = comb.concat %false, %15, %false : i1, i1, i1</pre>
+      <pre>      %18 = comb.concat %false, %16, %false : i1, i1, i1</pre>
+      <pre>      llhd.drv %9, %17 after %5 : i3</pre>
+      <pre>      llhd.drv %11, %18 after %5 : i3</pre>
+      <pre>      %19 = llhd.prb %9 : i3</pre>
+      <pre>      %20 = llhd.prb %11 : i3</pre>
+      <pre>      %21 = comb.icmp eq %19, %c2_i3 : i3</pre>
+      <pre>      %22 = comb.icmp eq %20, %c0_i3 : i3</pre>
+      <pre>      %23 = comb.and %21, %22 : i1</pre>
+      <pre>      %24 = comb.xor %23, %true : i1</pre>
+      <pre>      cf.cond_br %24, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %25 = sim.fmt.fvint 2 3 4 %10, %12 : i3</pre>
+      <pre>      %26 = sim.fmt.concat (%4, %25, %2)</pre>
+      <pre>      sim.proc.print %26</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb2:  // pred: ^bb0</pre>
+      <pre>      llhd.drv %9, %c0_i3 after %5 : i3</pre>
+      <pre>      llhd.drv %11, %c0_i3 after %5 : i3</pre>
+      <pre>      %27 = llhd.prb %9 : i3</pre>
+      <pre>      %28 = llhd.prb %11 : i3</pre>
+      <pre>      %29 = comb.icmp eq %27, %c0_i3 : i3</pre>
+      <pre>      %30 = comb.icmp eq %28, %c0_i3 : i3</pre>
+      <pre>      %31 = comb.and %29, %30 : i1</pre>
+      <pre>      %32 = comb.xor %31, %true : i1</pre>
+      <pre>      cf.cond_br %32, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %33 = llhd.prb %9 : i3</pre>
+      <pre>      %34 = llhd.prb %11 : i3</pre>
+      <pre>      %35 = sim.fmt.fvint 2 3 4 %33, %34 : i3</pre>
+      <pre>      %36 = sim.fmt.concat (%4, %35, %1)</pre>
+      <pre>      sim.proc.print %36</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

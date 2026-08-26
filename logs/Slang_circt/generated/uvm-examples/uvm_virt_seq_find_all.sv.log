@@ -1,0 +1,61 @@
+name: uvm_virt_seq_find_all
+description: UVM example - uvm_virt_seq_find_all
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: uvm-examples uvm-1.2
+type: simulation elaboration parsing
+timeout: 360
+unsynthesizable: 1
+simvariants:  
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.5637104511260986
+user_time: 0.563881
+system_time: 0.38973199999999997
+ram_usage: 148736
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path>
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/top.sv:247:11: error: value of type 'T' (aka 'uvm_sequence_base') cannot be assigned to type 'simple_seq'
+    init1 = simple_seq::type_id::create("initialization");
+    ~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/top.sv:250:11: error: value of type 'T' (aka 'uvm_sequence_base') cannot be assigned to type 'simple_seq'
+    init2 = simple_seq::type_id::create("initialization");
+    ~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/top.sv:253:11: error: value of type 'T' (aka 'uvm_sequence_base') cannot be assigned to type 'simple_seq'
+    init3 = simple_seq::type_id::create("initialization");
+    ~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+in file included from ../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_pkg.sv:30:
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_sequencer.svh:23:5: error: unknown macro or compiler directive '`uvm_sequencer_utils'
+    `uvm_sequencer_utils(simple_sequencer)
+    ^~~~~~~~~~~~~~~~~~~~
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_sequencer.svh:27:7: error: use of undeclared identifier 'count'
+      count = 0;
+      ^~~~~
+in file included from ../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_pkg.sv:32:
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_seq.svh:27:5: error: unknown macro or compiler directive '`uvm_sequence_utils'
+    `uvm_sequence_utils(simple_seq, simple_sequencer)
+    ^~~~~~~~~~~~~~~~~~~
+in file included from ../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_pkg.sv:33:
+../../../third_party/tests/uvm-examples/uvm_virt_seq_find_all/simple_ovc/simple_agent.svh:33:17: error: value of type 'T' (aka 'uvm_sequencer') cannot be assigned to type 'simple_sequencer'
+      sequencer = simple_sequencer::type_id::create("sequencer", this);
+      ~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Top level design units:
+    top
+
+
+Build failed: 7 errors, 1 warning

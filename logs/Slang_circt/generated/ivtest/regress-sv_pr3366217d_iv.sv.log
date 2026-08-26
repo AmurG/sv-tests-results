@@ -1,0 +1,92 @@
+name: regress-sv_pr3366217d_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10801219940185547
+user_time: 0.029197999999999998
+system_time: 0.10180499999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:42
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:3:14: error: value must not have any unknown bits
+  enum {udef[1'bx]} udef1;
+             ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:4:15: error: value must not have any unknown bits
+  enum {udef1[1'bx:1]} udef2;
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:5:17: error: value must not have any unknown bits
+  enum {udef2[1:1'bx]} udef3;
+                ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:6:15: error: value must not have any unknown bits
+  enum {udefb[1'bx:1'bx]} udef4;
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:6:20: error: value must not have any unknown bits
+  enum {udefb[1'bx:1'bx]} udef4;
+                   ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:7:14: error: value must not have any unknown bits
+  enum {uval[1'bx] = 1} uval1;
+             ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:8:15: error: value must not have any unknown bits
+  enum {uval1[1'bx:1] = 1} uval2;
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:9:17: error: value must not have any unknown bits
+  enum {uval2[1:1'bx] = 1} uval3;
+                ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:10:15: error: value must not have any unknown bits
+  enum {uvalb[1'bx:1'bx] = 1} uval4;
+              ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:10:20: error: value must not have any unknown bits
+  enum {uvalb[1'bx:1'bx] = 1} uval4;
+                   ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:13:14: error: value must be positive
+  enum {zdef[0]} zdef1;
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:14:14: error: value must be positive
+  enum {zval[0] = 1} zval1;
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:17:14: error: value must be positive
+  enum {ndef[-1]} ndef1;
+             ^~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:18:14: error: value must be positive
+  enum {ndef1[-1:0]} ndef2;
+             ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:19:14: error: value must be positive
+  enum {ndef2[0:-1]} ndef3;
+             ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:20:14: error: value must be positive
+  enum {ndefb[-1:-1]} ndef4;
+             ^~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:21:14: error: value must be positive
+  enum {nval[-1] = 1} nval1;
+             ^~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:22:14: error: value must be positive
+  enum {nval1[-1:0] = 1} nval2;
+             ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:23:14: error: value must be positive
+  enum {nval2[0:-1] = 1} nval3;
+             ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr3366217d.v:24:14: error: value must be positive
+  enum {nvalb[-1:-1] = 1} nval4;
+             ^~~~~~~
+Top level design units:
+    top
+
+
+Build failed: 20 errors, 0 warnings

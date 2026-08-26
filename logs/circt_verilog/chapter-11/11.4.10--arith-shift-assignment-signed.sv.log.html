@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>arith_shift_assignment_signed</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>arithmetic shift assignment operator test</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>11.4.10</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-11/11.4.10--arith-shift-assignment-signed.sv.html" target="file-frame">tests/chapter-11/11.4.10--arith-shift-assignment-signed.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:10</dd></div>
+        <div><dt>time elapsed</dt><dd>0.040s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-11/11.4.10--arith-shift-assignment-signed.sv.html" target="file-frame">tests/chapter-11/11.4.10--arith-shift-assignment-signed.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;)\0A&#34;</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %1 = sim.fmt.literal &#34;:assert: ( -15 == &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (  64 == &#34;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-120_i8 = hw.constant -120 : i8</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %4 = hw.aggregate_constant [0 : i8, -1 : i8] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %a = llhd.sig %4 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %a[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %a[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %b = llhd.sig %4 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %b[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %b[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %c = llhd.sig %4 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %c[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %c[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %5, %c-120_i8 after %3 : i8</pre>
+      <pre>      llhd.drv %6, %c0_i8 after %3 : i8</pre>
+      <pre>      %11 = llhd.prb %5 : i8</pre>
+      <pre>      %12 = llhd.prb %6 : i8</pre>
+      <pre>      llhd.drv %7, %11 after %3 : i8</pre>
+      <pre>      llhd.drv %8, %12 after %3 : i8</pre>
+      <pre>      %13 = llhd.prb %5 : i8</pre>
+      <pre>      %14 = llhd.prb %6 : i8</pre>
+      <pre>      llhd.drv %9, %13 after %3 : i8</pre>
+      <pre>      llhd.drv %10, %14 after %3 : i8</pre>
+      <pre>      %15 = llhd.prb %7 : i8</pre>
+      <pre>      %16 = llhd.prb %8 : i8</pre>
+      <pre>      %17 = comb.extract %15 from 0 : (i8) -&gt; i5</pre>
+      <pre>      %18 = comb.concat %17, %c0_i3 : i5, i3</pre>
+      <pre>      %19 = comb.extract %16 from 0 : (i8) -&gt; i5</pre>
+      <pre>      %20 = comb.concat %19, %c0_i3 : i5, i3</pre>
+      <pre>      llhd.drv %7, %18 after %3 : i8</pre>
+      <pre>      llhd.drv %8, %20 after %3 : i8</pre>
+      <pre>      %21 = llhd.prb %9 : i8</pre>
+      <pre>      %22 = llhd.prb %10 : i8</pre>
+      <pre>      %23 = comb.extract %21 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %24 = comb.replicate %23 : (i1) -&gt; i3</pre>
+      <pre>      %25 = comb.extract %21 from 3 : (i8) -&gt; i5</pre>
+      <pre>      %26 = comb.concat %24, %25 : i3, i5</pre>
+      <pre>      %27 = comb.extract %22 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %28 = comb.replicate %27 : (i1) -&gt; i3</pre>
+      <pre>      %29 = comb.extract %22 from 3 : (i8) -&gt; i5</pre>
+      <pre>      %30 = comb.concat %28, %29 : i3, i5</pre>
+      <pre>      llhd.drv %9, %26 after %3 : i8</pre>
+      <pre>      llhd.drv %10, %30 after %3 : i8</pre>
+      <pre>      %31 = llhd.prb %7 : i8</pre>
+      <pre>      %32 = llhd.prb %8 : i8</pre>
+      <pre>      %33 = sim.fmt.fvint 10 0 0 %31, %32 : i8</pre>
+      <pre>      %34 = sim.fmt.concat (%2, %33, %0)</pre>
+      <pre>      sim.proc.print %34</pre>
+      <pre>      %35 = llhd.prb %9 : i8</pre>
+      <pre>      %36 = llhd.prb %10 : i8</pre>
+      <pre>      %37 = sim.fmt.fvint 10 0 0 %35, %36 : i8</pre>
+      <pre>      %38 = sim.fmt.concat (%1, %37, %0)</pre>
+      <pre>      sim.proc.print %38</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

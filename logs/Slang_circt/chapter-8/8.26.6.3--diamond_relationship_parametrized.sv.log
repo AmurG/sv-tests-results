@@ -1,0 +1,50 @@
+name: diamond_relationship_parametrized
+description: different specializations of an interface class are treated as unique interface class types
+should_fail_because: different specializations of an interface class are treated as unique interface class types
+tags: 8.26.6.3
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.0998544692993164
+user_time: 0.02213
+system_time: 0.09353399999999999
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:30:42: error: 'fn' in 'ic2' conflicts with another member already inherited from 'ibase'
+        interface class ic3 extends ic1, ic2;
+                                         ^~~
+../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:19:44: note: declared here
+                pure virtual function void fn(T val);
+                                           ^
+../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:19:44: note: declared here
+                pure virtual function void fn(T val);
+                                           ^
+../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:30:42: error: 'T' in 'ic2' conflicts with another member already inherited from 'ibase'
+        interface class ic3 extends ic1, ic2;
+                                         ^~~
+../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:18:37: note: declared here
+        interface class ibase#(type T = logic);
+                                    ^
+../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:18:37: note: declared here
+        interface class ibase#(type T = logic);
+                                    ^
+Top level design units:
+    class_tb
+
+
+Build failed: 2 errors, 0 warnings

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>basic-union</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test basic union support</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.3</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../tests/chapter-7/unions/unpacked/basic.sv.html" target="file-frame">tests/chapter-7/unions/unpacked/basic.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../tests/chapter-7/unions/unpacked/basic.sv.html" target="file-frame">tests/chapter-7/unions/unpacked/basic.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34; == 12)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34; == 140)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (&#34;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-116_i8 = hw.constant -116 : i8</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %4 = hw.bitcast %c0_i8 : (i8) -&gt; !hw.union&lt;v1: i8, v2: i4&gt;</pre>
+      <pre>    %un = llhd.sig %4 : !hw.union&lt;v1: i8, v2: i4&gt;</pre>
+      <pre>    %5 = llhd.prb %un : !hw.union&lt;v1: i8, v2: i4&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %6 = llhd.sig.struct_extract %un[&#34;v1&#34;] : &lt;!hw.union&lt;v1: i8, v2: i4&gt;&gt;</pre>
+      <pre>      llhd.drv %6, %c-116_i8 after %3 : i8</pre>
+      <pre>      %7 = hw.union_extract %5[&#34;v1&#34;] : !hw.union&lt;v1: i8, v2: i4&gt;</pre>
+      <pre>      %8 = sim.fmt.int 10 0 0 %7 : i8</pre>
+      <pre>      %9 = sim.fmt.concat (%2, %8, %1)</pre>
+      <pre>      sim.proc.print %9</pre>
+      <pre>      %10 = llhd.prb %un : !hw.union&lt;v1: i8, v2: i4&gt;</pre>
+      <pre>      %11 = hw.union_extract %10[&#34;v2&#34;] : !hw.union&lt;v1: i8, v2: i4&gt;</pre>
+      <pre>      %12 = sim.fmt.int 10 0 0 %11 : i4</pre>
+      <pre>      %13 = sim.fmt.concat (%2, %12, %0)</pre>
+      <pre>      sim.proc.print %13</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

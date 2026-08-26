@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>regress-sv_always_comb_rfunc_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:43:46</dd></div>
+        <div><dt>time elapsed</dt><dd>0.035s</dd></div>
+        <div><dt>ram usage</dt><dd>15232 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=simulation top=</pre>
+      <pre>[Arcilator] mode=simulation top=</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v</a></pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v:11:30: error: cannot materialize captured value at call site; non-symbol source: moore.variable</pre>
+      <pre>  function automatic integer count_ones(input integer start);</pre>
+      <pre>                             ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v:11:30: note: see current operation: </pre>
+      <pre>&#34;func.func&#34;() &lt;{function_type = (!moore.l32, !moore.ref&lt;l8&gt;) -&gt; !moore.l32, sym_name = &#34;count_ones&#34;, sym_visibility = &#34;private&#34;}&gt; ({</pre>
+      <pre>^bb0(%arg0: !moore.l32, %arg1: !moore.ref&lt;l8&gt;):</pre>
+      <pre>  %0 = &#34;moore.variable&#34;() : () -&gt; !moore.ref&lt;l32&gt;</pre>
+      <pre>  %1 = &#34;moore.bool_cast&#34;(%arg0) : (!moore.l32) -&gt; !moore.l1</pre>
+      <pre>  %2 = &#34;moore.logic_to_int&#34;(%1) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>  %3 = &#34;moore.to_builtin_int&#34;(%2) : (!moore.i1) -&gt; i1</pre>
+      <pre>  &#34;cf.cond_br&#34;(%3)[^bb1, ^bb2] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>^bb1:  // pred: ^bb0</pre>
+      <pre>  %4 = &#34;moore.read&#34;(%arg1) : (!moore.ref&lt;l8&gt;) -&gt; !moore.l8</pre>
+      <pre>  %5 = &#34;moore.dyn_extract&#34;(%4, %arg0) : (!moore.l8, !moore.l32) -&gt; !moore.l1</pre>
+      <pre>  %6 = &#34;moore.conditional&#34;(%5) ({</pre>
+      <pre>    %22 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>    %23 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>    &#34;moore.yield&#34;(%23) : (!moore.l32) -&gt; ()</pre>
+      <pre>  }, {</pre>
+      <pre>    %20 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>    %21 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>    &#34;moore.yield&#34;(%21) : (!moore.l32) -&gt; ()</pre>
+      <pre>  }) : (!moore.l1) -&gt; !moore.l32</pre>
+      <pre>  %7 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %8 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %9 = &#34;moore.sub&#34;(%arg0, %8) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  %10 = &#34;func.call&#34;(%9) &lt;{callee = @count_by_one}&gt; : (!moore.l32) -&gt; !moore.l32</pre>
+      <pre>  %11 = &#34;moore.add&#34;(%6, %10) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%0, %11) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb3] : () -&gt; ()</pre>
+      <pre>^bb2:  // pred: ^bb0</pre>
+      <pre>  %12 = &#34;moore.read&#34;(%arg1) : (!moore.ref&lt;l8&gt;) -&gt; !moore.l8</pre>
+      <pre>  %13 = &#34;moore.dyn_extract&#34;(%12, %arg0) : (!moore.l8, !moore.l32) -&gt; !moore.l1</pre>
+      <pre>  %14 = &#34;moore.conditional&#34;(%13) ({</pre>
+      <pre>    %18 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>    %19 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>    &#34;moore.yield&#34;(%19) : (!moore.l32) -&gt; ()</pre>
+      <pre>  }, {</pre>
+      <pre>    %16 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>    %17 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>    &#34;moore.yield&#34;(%17) : (!moore.l32) -&gt; ()</pre>
+      <pre>  }) : (!moore.l1) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%0, %14) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb3] : () -&gt; ()</pre>
+      <pre>^bb3:  // 2 preds: ^bb1, ^bb2</pre>
+      <pre>  %15 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  &#34;func.return&#34;(%15) : (!moore.l32) -&gt; ()</pre>
+      <pre>}) : () -&gt; ()</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v:7:16: error: failed to convert expression statement</pre>
+      <pre>    if (start) count_by_one = (value[start] ? 1 : 0) + count_ones(start-1);</pre>
+      <pre>               ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v:7:16: note: expression kind: Assignment</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/always_comb_rfunc.v:6:30: error: failed to convert module `top` member `count_by_one` (Subroutine)</pre>
+      <pre>  function automatic integer count_by_one(input integer start);</pre>
+      <pre>                             ^</pre>
+      <pre>&lt;unknown&gt;:0: error: import failed without diagnostics</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+name: regress-vlg_pr2039632_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11500167846679688
+user_time: 0.015328999999999999
+system_time: 0.109758
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:40
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pr2039632.v:3:16: error: use of undeclared identifier 'foo'
+  generate if (foo != "bar") initial $display("In conditional");
+               ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr2039632.v:7:17: error: use of undeclared identifier 'lp'
+  generate for (lp = foo; lp < 1; lp = lp + 1) initial $display("Loop %f", lp);
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/pr2039632.v:10:17: error: use of undeclared identifier 'lp'
+  generate for (lp = 0; lp < foo; lp = lp + 1) initial $display("Loop %f", lp);
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/pr2039632.v:13:17: error: use of undeclared identifier 'lp'
+  generate for (lp = 5; lp < 6; lp = lp + foo) initial $display("Loop %f", lp);
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/pr2039632.v:17:18: error: use of undeclared identifier 'foo'
+  generate case (foo)
+                 ^~~
+Top level design units:
+    top
+
+
+Build failed: 5 errors, 0 warnings

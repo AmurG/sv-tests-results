@@ -1,0 +1,52 @@
+name: sequence_and_op_test_uvm
+description: sequence with "and" operator in UVM
+type: simulation elaboration parsing
+tags: uvm uvm-assertions
+timeout: 300
+unsynthesizable: 1
+files: <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.6576554775238037
+user_time: 1.3351790000000001
+system_time: 2.080125
+ram_usage: 133504
+date_completed: 2026-07-02 03:18:37
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path>
+../../../tests/chapter-16/16.7--sequence-and-uvm.sv:103:12: warning: port 'clk' has no connection [-Wunconnected-port]
+    mod_if dif();
+           ^
+../../../tests/chapter-16/16.7--sequence-and-uvm.sv:103:12: warning: port 'req' has no connection [-Wunconnected-port]
+    mod_if dif();
+           ^
+../../../tests/chapter-16/16.7--sequence-and-uvm.sv:103:12: warning: port 'gnt0' has no connection [-Wunconnected-port]
+    mod_if dif();
+           ^
+../../../tests/chapter-16/16.7--sequence-and-uvm.sv:103:12: warning: port 'gnt1' has no connection [-Wunconnected-port]
+    mod_if dif();
+           ^
+../../../tests/chapter-16/16.7--sequence-and-uvm.sv:103:12: warning: port 'gnt2' has no connection [-Wunconnected-port]
+    mod_if dif();
+           ^
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 6 warnings

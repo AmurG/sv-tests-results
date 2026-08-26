@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_cfunc_assign_op_real_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/cfunc_assign_op_real.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/cfunc_assign_op_real.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:16</dd></div>
+        <div><dt>time elapsed</dt><dd>0.053s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/cfunc_assign_op_real.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/cfunc_assign_op_real.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %cst = arith.constant 0.000000e+00 : f64</pre>
+      <pre>    %cst_0 = arith.constant 1.000000e+00 : f64</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %cst_1 = arith.constant 5.000000e+00 : f64</pre>
+      <pre>    %cst_2 = arith.constant 1.250000e+00 : f64</pre>
+      <pre>    %2 = sim.fmt.literal &#34;div4_5 = &#34;</pre>
+      <pre>    %cst_3 = arith.constant 1.500000e+01 : f64</pre>
+      <pre>    %3 = sim.fmt.literal &#34;mul3_5 = &#34;</pre>
+      <pre>    %cst_4 = arith.constant 2.000000e+00 : f64</pre>
+      <pre>    %4 = sim.fmt.literal &#34;sub3_5 = &#34;</pre>
+      <pre>    %cst_5 = arith.constant 8.000000e+00 : f64</pre>
+      <pre>    %5 = sim.fmt.literal &#34;add3_5 = &#34;</pre>
+      <pre>    %cst_6 = arith.constant 2.500000e+00 : f64</pre>
+      <pre>    %6 = sim.fmt.literal &#34;div2_5 = &#34;</pre>
+      <pre>    %cst_7 = arith.constant 1.000000e+01 : f64</pre>
+      <pre>    %7 = sim.fmt.literal &#34;mul2_5 = &#34;</pre>
+      <pre>    %cst_8 = arith.constant 3.000000e+00 : f64</pre>
+      <pre>    %8 = sim.fmt.literal &#34;sub2_5 = &#34;</pre>
+      <pre>    %cst_9 = arith.constant 7.000000e+00 : f64</pre>
+      <pre>    %9 = sim.fmt.literal &#34;add2_5 = &#34;</pre>
+      <pre>    %10 = sim.fmt.literal &#34;post_dec_5 = &#34;</pre>
+      <pre>    %11 = sim.fmt.literal &#34;post_inc_5 = &#34;</pre>
+      <pre>    %cst_10 = arith.constant 4.000000e+00 : f64</pre>
+      <pre>    %12 = sim.fmt.literal &#34;pre_dec_5 = &#34;</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %13 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %14 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %cst_11 = arith.constant 6.000000e+00 : f64</pre>
+      <pre>    %15 = sim.fmt.literal &#34;pre_inc_5 = &#34;</pre>
+      <pre>    %16 = hw.aggregate_constant [false, false] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %failed = llhd.sig %16 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %17 = llhd.sig.struct_extract %failed[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %18 = llhd.sig.struct_extract %failed[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %19 = sim.fmt.flt %cst_11 : f64</pre>
+      <pre>      %20 = sim.fmt.concat (%15, %19, %14)</pre>
+      <pre>      sim.proc.print %20</pre>
+      <pre>      %21 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %21, %cst_1 after %13 : f64</pre>
+      <pre>      %22 = llhd.sig %cst : f64</pre>
+      <pre>      %23 = llhd.prb %21 : f64</pre>
+      <pre>      %24 = arith.addf %23, %cst_0 : f64</pre>
+      <pre>      llhd.drv %21, %24 after %13 : f64</pre>
+      <pre>      %25 = llhd.prb %21 : f64</pre>
+      <pre>      llhd.drv %22, %25 after %13 : f64</pre>
+      <pre>      %26 = llhd.prb %22 : f64</pre>
+      <pre>      %27 = arith.cmpf one, %cst_11, %26 : f64</pre>
+      <pre>      cf.cond_br %27, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %28 = sim.fmt.flt %cst_10 : f64</pre>
+      <pre>      %29 = sim.fmt.concat (%12, %28, %14)</pre>
+      <pre>      sim.proc.print %29</pre>
+      <pre>      %30 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %30, %cst_1 after %13 : f64</pre>
+      <pre>      %31 = llhd.sig %cst : f64</pre>
+      <pre>      %32 = llhd.prb %30 : f64</pre>
+      <pre>      %33 = arith.subf %32, %cst_0 : f64</pre>
+      <pre>      llhd.drv %30, %33 after %13 : f64</pre>
+      <pre>      %34 = llhd.prb %30 : f64</pre>
+      <pre>      llhd.drv %31, %34 after %13 : f64</pre>
+      <pre>      %35 = llhd.prb %31 : f64</pre>
+      <pre>      %36 = arith.cmpf one, %cst_10, %35 : f64</pre>
+      <pre>      cf.cond_br %36, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %37 = sim.fmt.concat (%11, %19, %14)</pre>
+      <pre>      sim.proc.print %37</pre>
+      <pre>      %38 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %38, %cst_1 after %13 : f64</pre>
+      <pre>      %39 = llhd.sig %cst : f64</pre>
+      <pre>      %40 = llhd.prb %38 : f64</pre>
+      <pre>      %41 = arith.addf %40, %cst_0 : f64</pre>
+      <pre>      llhd.drv %38, %41 after %13 : f64</pre>
+      <pre>      %42 = llhd.prb %38 : f64</pre>
+      <pre>      llhd.drv %39, %42 after %13 : f64</pre>
+      <pre>      %43 = llhd.prb %39 : f64</pre>
+      <pre>      %44 = arith.cmpf one, %cst_11, %43 : f64</pre>
+      <pre>      cf.cond_br %44, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb6</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %45 = sim.fmt.concat (%10, %28, %14)</pre>
+      <pre>      sim.proc.print %45</pre>
+      <pre>      %46 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %46, %cst_1 after %13 : f64</pre>
+      <pre>      %47 = llhd.sig %cst : f64</pre>
+      <pre>      %48 = llhd.prb %46 : f64</pre>
+      <pre>      %49 = arith.subf %48, %cst_0 : f64</pre>
+      <pre>      llhd.drv %46, %49 after %13 : f64</pre>
+      <pre>      %50 = llhd.prb %46 : f64</pre>
+      <pre>      llhd.drv %47, %50 after %13 : f64</pre>
+      <pre>      %51 = llhd.prb %47 : f64</pre>
+      <pre>      %52 = arith.cmpf one, %cst_10, %51 : f64</pre>
+      <pre>      cf.cond_br %52, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %53 = sim.fmt.flt %cst_9 : f64</pre>
+      <pre>      %54 = sim.fmt.concat (%9, %53, %14)</pre>
+      <pre>      sim.proc.print %54</pre>
+      <pre>      %55 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %55, %cst_1 after %13 : f64</pre>
+      <pre>      %56 = llhd.sig %cst : f64</pre>
+      <pre>      %57 = llhd.prb %55 : f64</pre>
+      <pre>      %58 = arith.addf %57, %cst_4 : f64</pre>
+      <pre>      llhd.drv %55, %58 after %13 : f64</pre>
+      <pre>      %59 = llhd.prb %55 : f64</pre>
+      <pre>      llhd.drv %56, %59 after %13 : f64</pre>
+      <pre>      %60 = llhd.prb %56 : f64</pre>
+      <pre>      %61 = arith.cmpf one, %cst_9, %60 : f64</pre>
+      <pre>      cf.cond_br %61, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %62 = sim.fmt.flt %cst_8 : f64</pre>
+      <pre>      %63 = sim.fmt.concat (%8, %62, %14)</pre>
+      <pre>      sim.proc.print %63</pre>
+      <pre>      %64 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %64, %cst_1 after %13 : f64</pre>
+      <pre>      %65 = llhd.sig %cst : f64</pre>
+      <pre>      %66 = llhd.prb %64 : f64</pre>
+      <pre>      %67 = arith.subf %66, %cst_4 : f64</pre>
+      <pre>      llhd.drv %64, %67 after %13 : f64</pre>
+      <pre>      %68 = llhd.prb %64 : f64</pre>
+      <pre>      llhd.drv %65, %68 after %13 : f64</pre>
+      <pre>      %69 = llhd.prb %65 : f64</pre>
+      <pre>      %70 = arith.cmpf one, %cst_8, %69 : f64</pre>
+      <pre>      cf.cond_br %70, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb10, ^bb11</pre>
+      <pre>      %71 = sim.fmt.flt %cst_7 : f64</pre>
+      <pre>      %72 = sim.fmt.concat (%7, %71, %14)</pre>
+      <pre>      sim.proc.print %72</pre>
+      <pre>      %73 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %73, %cst_1 after %13 : f64</pre>
+      <pre>      %74 = llhd.sig %cst : f64</pre>
+      <pre>      %75 = llhd.prb %73 : f64</pre>
+      <pre>      %76 = arith.mulf %75, %cst_4 : f64</pre>
+      <pre>      llhd.drv %73, %76 after %13 : f64</pre>
+      <pre>      %77 = llhd.prb %73 : f64</pre>
+      <pre>      llhd.drv %74, %77 after %13 : f64</pre>
+      <pre>      %78 = llhd.prb %74 : f64</pre>
+      <pre>      %79 = arith.cmpf one, %cst_7, %78 : f64</pre>
+      <pre>      cf.cond_br %79, ^bb13, ^bb14</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb14</pre>
+      <pre>    ^bb14:  // 2 preds: ^bb12, ^bb13</pre>
+      <pre>      %80 = sim.fmt.flt %cst_6 : f64</pre>
+      <pre>      %81 = sim.fmt.concat (%6, %80, %14)</pre>
+      <pre>      sim.proc.print %81</pre>
+      <pre>      %82 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %82, %cst_1 after %13 : f64</pre>
+      <pre>      %83 = llhd.sig %cst : f64</pre>
+      <pre>      %84 = llhd.prb %82 : f64</pre>
+      <pre>      %85 = arith.divf %84, %cst_4 : f64</pre>
+      <pre>      llhd.drv %82, %85 after %13 : f64</pre>
+      <pre>      %86 = llhd.prb %82 : f64</pre>
+      <pre>      llhd.drv %83, %86 after %13 : f64</pre>
+      <pre>      %87 = llhd.prb %83 : f64</pre>
+      <pre>      %88 = arith.cmpf one, %cst_6, %87 : f64</pre>
+      <pre>      cf.cond_br %88, ^bb15, ^bb16</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb16</pre>
+      <pre>    ^bb16:  // 2 preds: ^bb14, ^bb15</pre>
+      <pre>      %89 = sim.fmt.flt %cst_5 : f64</pre>
+      <pre>      %90 = sim.fmt.concat (%5, %89, %14)</pre>
+      <pre>      sim.proc.print %90</pre>
+      <pre>      %91 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %91, %cst_1 after %13 : f64</pre>
+      <pre>      %92 = llhd.prb %91 : f64</pre>
+      <pre>      %93 = arith.addf %92, %cst_8 : f64</pre>
+      <pre>      llhd.drv %91, %93 after %13 : f64</pre>
+      <pre>      %94 = llhd.prb %91 : f64</pre>
+      <pre>      %95 = arith.cmpf one, %cst_5, %94 : f64</pre>
+      <pre>      cf.cond_br %95, ^bb17, ^bb18</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb18</pre>
+      <pre>    ^bb18:  // 2 preds: ^bb16, ^bb17</pre>
+      <pre>      %96 = sim.fmt.flt %cst_4 : f64</pre>
+      <pre>      %97 = sim.fmt.concat (%4, %96, %14)</pre>
+      <pre>      sim.proc.print %97</pre>
+      <pre>      %98 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %98, %cst_1 after %13 : f64</pre>
+      <pre>      %99 = llhd.prb %98 : f64</pre>
+      <pre>      %100 = arith.subf %99, %cst_8 : f64</pre>
+      <pre>      llhd.drv %98, %100 after %13 : f64</pre>
+      <pre>      %101 = llhd.prb %98 : f64</pre>
+      <pre>      %102 = arith.cmpf one, %cst_4, %101 : f64</pre>
+      <pre>      cf.cond_br %102, ^bb19, ^bb20</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb20</pre>
+      <pre>    ^bb20:  // 2 preds: ^bb18, ^bb19</pre>
+      <pre>      %103 = sim.fmt.flt %cst_3 : f64</pre>
+      <pre>      %104 = sim.fmt.concat (%3, %103, %14)</pre>
+      <pre>      sim.proc.print %104</pre>
+      <pre>      %105 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %105, %cst_1 after %13 : f64</pre>
+      <pre>      %106 = llhd.prb %105 : f64</pre>
+      <pre>      %107 = arith.mulf %106, %cst_8 : f64</pre>
+      <pre>      llhd.drv %105, %107 after %13 : f64</pre>
+      <pre>      %108 = llhd.prb %105 : f64</pre>
+      <pre>      %109 = arith.cmpf one, %cst_3, %108 : f64</pre>
+      <pre>      cf.cond_br %109, ^bb21, ^bb22</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb22</pre>
+      <pre>    ^bb22:  // 2 preds: ^bb20, ^bb21</pre>
+      <pre>      %110 = sim.fmt.flt %cst_2 : f64</pre>
+      <pre>      %111 = sim.fmt.concat (%2, %110, %14)</pre>
+      <pre>      sim.proc.print %111</pre>
+      <pre>      %112 = llhd.sig %cst : f64</pre>
+      <pre>      llhd.drv %112, %cst_1 after %13 : f64</pre>
+      <pre>      %113 = llhd.prb %112 : f64</pre>
+      <pre>      %114 = arith.divf %113, %cst_10 : f64</pre>
+      <pre>      llhd.drv %112, %114 after %13 : f64</pre>
+      <pre>      %115 = llhd.prb %112 : f64</pre>
+      <pre>      %116 = arith.cmpf one, %cst_2, %115 : f64</pre>
+      <pre>      cf.cond_br %116, ^bb23, ^bb24</pre>
+      <pre>    ^bb23:  // pred: ^bb22</pre>
+      <pre>      llhd.drv %17, %true after %13 : i1</pre>
+      <pre>      llhd.drv %18, %false after %13 : i1</pre>
+      <pre>      cf.br ^bb24</pre>
+      <pre>    ^bb24:  // 2 preds: ^bb22, ^bb23</pre>
+      <pre>      %117 = llhd.prb %17 : i1</pre>
+      <pre>      %118 = llhd.prb %18 : i1</pre>
+      <pre>      %119 = comb.xor %118, %true : i1</pre>
+      <pre>      %120 = comb.and %117, %119 : i1</pre>
+      <pre>      cf.cond_br %120, ^bb25, ^bb26</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      cf.br ^bb27</pre>
+      <pre>    ^bb26:  // pred: ^bb24</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb27</pre>
+      <pre>    ^bb27:  // 2 preds: ^bb25, ^bb26</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

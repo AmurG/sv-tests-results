@@ -1,0 +1,56 @@
+name: regress-sv_enum_line_info_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.0967557430267334
+user_time: 0.020044
+system_time: 0.10518899999999999
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:46
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:8:10: error: redefinition of enum value 1'b0
+  A, B = A
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:8:3: note: previous definition here
+  A, B = A
+  ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:13:10: error: redefinition of enum value 1'b0
+  C, D = C
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:13:3: note: previous definition here
+  C, D = C
+  ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:18:10: error: redefinition of enum value 1'b0
+  E, F = E
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:18:3: note: previous definition here
+  E, F = E
+  ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:23:10: error: redefinition of enum value 1'b0
+  G, H = G
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/enum_line_info.v:23:3: note: previous definition here
+  G, H = G
+  ^
+Top level design units:
+    test
+
+
+Build failed: 4 errors, 0 warnings

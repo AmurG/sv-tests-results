@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>simple_module_scope</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/simple_module_scope.sv.html" target="file-frame">tests/generated/yosys/simple_module_scope.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/simple/module_scope.v.html" target="file-frame">third_party/tools/yosys/tests/simple/module_scope.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:48:05</dd></div>
+        <div><dt>time elapsed</dt><dd>0.034s</dd></div>
+        <div><dt>ram usage</dt><dd>15232 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=elaboration top=module_scope_top</pre>
+      <pre>[Arcilator] mode=elaboration top=module_scope_top</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=module_scope_top <a href="../../../../tests/generated/yosys/simple_module_scope.sv.html" target="file-frame">tests/generated/yosys/simple_module_scope.sv</a> <a href="../../../../third_party/tools/yosys/tests/simple/module_scope.v.html" target="file-frame">third_party/tools/yosys/tests/simple/module_scope.v</a></pre>
+      <pre>../../../third_party/tools/yosys/tests/simple/module_scope.v:7:37: error: unknown hierarchical name `v1`</pre>
+      <pre>   assign module_scope_Example.o1 = module_scope_Example.v1;</pre>
+      <pre>                                    ^</pre>
+      <pre>../../../third_party/tools/yosys/tests/simple/module_scope.v:4:21: note: no rvalue generated for Parameter</pre>
+      <pre>   parameter [31:0] v1 = 10;</pre>
+      <pre>                    ^</pre>
+      <pre>../../../third_party/tools/yosys/tests/simple/module_scope.v:7:11: error: failed to convert module `module_scope_Example` member (ContinuousAssign)</pre>
+      <pre>   assign module_scope_Example.o1 = module_scope_Example.v1;</pre>
+      <pre>          ^</pre>
+      <pre>&lt;unknown&gt;:0: error: import failed without diagnostics</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

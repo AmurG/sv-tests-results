@@ -1,0 +1,53 @@
+name: regress-vlg_br_gh62_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.12469768524169922
+user_time: 0.024588
+system_time: 0.126171
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:41
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:13:24: error: scalar type cannot be indexed
+  value = memory[0][0][3:0];
+          ~~~~~~~~~~~~ ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:14:24: error: scalar type cannot be indexed
+  value = memory[0][0][0 +: 4];
+          ~~~~~~~~~~~~ ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:15:24: error: scalar type cannot be indexed
+  value = memory[0][0][4 -: 4];
+          ~~~~~~~~~~~~ ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:16:21: error: scalar type cannot be indexed
+  value = vector[0][0];
+          ~~~~~~~~~ ^
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:17:21: error: scalar type cannot be indexed
+  value = vector[0][3:0];
+          ~~~~~~~~~ ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:18:21: error: scalar type cannot be indexed
+  value = vector[0][0 +: 4];
+          ~~~~~~~~~ ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh62.v:19:21: error: scalar type cannot be indexed
+  value = vector[0][4 -: 4];
+          ~~~~~~~~~ ^~~~~~
+Top level design units:
+    test
+
+
+Build failed: 7 errors, 0 warnings

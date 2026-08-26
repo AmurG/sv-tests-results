@@ -1,0 +1,41 @@
+name: wrong-identifiers
+description: Identifiers that should not be accepted
+should_fail_because: The first character of a simple identifier shall not be a digit or $
+tags: 5.6
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08870697021484375
+user_time: 0.014268999999999999
+system_time: 0.094694
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-5/5.6--wrong-identifiers.sv:17:7: error: expected a declaration name
+  reg $dollar;
+      ^
+../../../tests/chapter-5/5.6--wrong-identifiers.sv:18:7: error: expected a declaration name
+  reg 0number;
+      ^
+../../../tests/chapter-5/5.6--wrong-identifiers.sv:18:14: error: expected a declaration name
+  reg 0number;
+             ^
+Top level design units:
+    identifiers
+
+
+Build failed: 3 errors, 0 warnings

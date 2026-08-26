@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_pr1657307_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr1657307.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.030s</dd></div>
+        <div><dt>ram usage</dt><dd>15232 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr1657307.v</a></pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:28:21: error: cannot materialize captured value at call site; non-symbol source: moore.variable</pre>
+      <pre>   function integer get_index;</pre>
+      <pre>                    ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:28:21: note: see current operation: </pre>
+      <pre>&#34;func.func&#34;() &lt;{function_type = (!moore.l32, !moore.ref&lt;uarray&lt;3 x l32&gt;&gt;, !moore.ref&lt;uarray&lt;3 x l32&gt;&gt;) -&gt; !moore.l32, sym_name = &#34;get_index&#34;, sym_visibility = &#34;private&#34;}&gt; ({</pre>
+      <pre>^bb0(%arg0: !moore.l32, %arg1: !moore.ref&lt;uarray&lt;3 x l32&gt;&gt;, %arg2: !moore.ref&lt;uarray&lt;3 x l32&gt;&gt;):</pre>
+      <pre>  %0 = &#34;moore.variable&#34;() : () -&gt; !moore.ref&lt;l32&gt;</pre>
+      <pre>  %1 = &#34;moore.variable&#34;() &lt;{name = &#34;rank&#34;}&gt; : () -&gt; !moore.ref&lt;l32&gt;</pre>
+      <pre>  %2 = &#34;moore.variable&#34;() &lt;{name = &#34;i&#34;}&gt; : () -&gt; !moore.ref&lt;l32&gt;</pre>
+      <pre>  %3 = &#34;moore.variable&#34;() &lt;{name = &#34;sum&#34;}&gt; : () -&gt; !moore.ref&lt;l32&gt;</pre>
+      <pre>  %4 = &#34;moore.variable&#34;() &lt;{name = &#34;multiplier&#34;}&gt; : () -&gt; !moore.ref&lt;l32&gt;</pre>
+      <pre>  %5 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %6 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%4, %6) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  %7 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %8 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%3, %8) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  %9 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %10 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %11 = &#34;moore.sub&#34;(%arg0, %10) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%2, %11) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb1] : () -&gt; ()</pre>
+      <pre>^bb1:  // 2 preds: ^bb0, ^bb3</pre>
+      <pre>  %12 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %13 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %14 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %15 = &#34;moore.sge&#34;(%12, %14) : (!moore.l32, !moore.l32) -&gt; !moore.l1</pre>
+      <pre>  %16 = &#34;moore.logic_to_int&#34;(%15) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>  %17 = &#34;moore.to_builtin_int&#34;(%16) : (!moore.i1) -&gt; i1</pre>
+      <pre>  &#34;cf.cond_br&#34;(%17)[^bb2, ^bb4] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>^bb2:  // pred: ^bb1</pre>
+      <pre>  %18 = &#34;moore.read&#34;(%3) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %19 = &#34;moore.read&#34;(%arg1) : (!moore.ref&lt;uarray&lt;3 x l32&gt;&gt;) -&gt; !moore.uarray&lt;3 x l32&gt;</pre>
+      <pre>  %20 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %21 = &#34;moore.dyn_extract&#34;(%19, %20) : (!moore.uarray&lt;3 x l32&gt;, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  %22 = &#34;moore.read&#34;(%4) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %23 = &#34;moore.mul&#34;(%21, %22) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  %24 = &#34;moore.add&#34;(%18, %23) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%3, %24) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  %25 = &#34;moore.read&#34;(%arg2) : (!moore.ref&lt;uarray&lt;3 x l32&gt;&gt;) -&gt; !moore.uarray&lt;3 x l32&gt;</pre>
+      <pre>  %26 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %27 = &#34;moore.dyn_extract&#34;(%25, %26) : (!moore.uarray&lt;3 x l32&gt;, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  %28 = &#34;moore.read&#34;(%4) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %29 = &#34;moore.mul&#34;(%27, %28) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%4, %29) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb3] : () -&gt; ()</pre>
+      <pre>^bb3:  // pred: ^bb2</pre>
+      <pre>  %30 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %31 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %32 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %33 = &#34;moore.sub&#34;(%30, %32) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%2, %33) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb1] : () -&gt; ()</pre>
+      <pre>^bb4:  // pred: ^bb1</pre>
+      <pre>  %34 = &#34;moore.read&#34;(%3) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  %35 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %36 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %37 = &#34;moore.sub&#34;(%34, %36) : (!moore.l32, !moore.l32) -&gt; !moore.l32</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%0, %37) : (!moore.ref&lt;l32&gt;, !moore.l32) -&gt; ()</pre>
+      <pre>  %38 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l32&gt;) -&gt; !moore.l32</pre>
+      <pre>  &#34;func.return&#34;(%38) : (!moore.l32) -&gt; ()</pre>
+      <pre>}) : () -&gt; ()</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:19:3: error: failed to convert expression statement</pre>
+      <pre>         index = get_index(3);</pre>
+      <pre>         ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:19:3: note: expression kind: Assignment</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:19:3: error: failed to convert statement ExpressionStatement</pre>
+      <pre>         index = get_index(3);</pre>
+      <pre>         ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:10:7: error: failed to convert statement Block</pre>
+      <pre>      begin</pre>
+      <pre>      ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:6:6: error: failed to convert expression statement</pre>
+      <pre>     main;</pre>
+      <pre>     ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:6:6: note: expression kind: Call</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:6:6: note: call target: main</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/pr1657307.v:5:4: error: failed to convert module `test` member (ProceduralBlock)</pre>
+      <pre>   initial</pre>
+      <pre>   ^</pre>
+      <pre>&lt;unknown&gt;:0: error: import failed without diagnostics</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

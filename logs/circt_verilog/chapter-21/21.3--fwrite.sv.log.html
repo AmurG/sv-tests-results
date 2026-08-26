@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>fwrite_task</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>$fwrite test</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>uvm-req 21.3</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-21/21.3--fwrite.sv.html" target="file-frame">tests/chapter-21/21.3--fwrite.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-21/21.3--fwrite.sv.html" target="file-frame">tests/chapter-21/21.3--fwrite.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_fclose(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_fwrite(i32, !hw.string) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_string_format_int(!hw.string, i32, i32, i32) -&gt; !hw.string</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c10_i32 = hw.constant 10 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %fd = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %1 = llhd.prb %fd : i32</pre>
+      <pre>    %2 = sv.constantStr &#34;abc&#34;</pre>
+      <pre>    %str = llhd.sig %2 : !hw.string</pre>
+      <pre>    %3 = llhd.prb %str : !hw.string</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %fd, %c1_i32 after %0 : i32</pre>
+      <pre>      %4 = llhd.prb %fd : i32</pre>
+      <pre>      %5 = func.call @circt_sv_string_format_int(%3, %c10_i32, %c0_i32, %c0_i32) : (!hw.string, i32, i32, i32) -&gt; !hw.string</pre>
+      <pre>      %6 = func.call @circt_sv_fwrite(%4, %5) : (i32, !hw.string) -&gt; i32</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    llhd.final {</pre>
+      <pre>      %4 = func.call @circt_sv_fclose(%1) : (i32) -&gt; i32</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

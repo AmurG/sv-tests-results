@@ -1,0 +1,33 @@
+name: 22.7--timescale-basic-4
+description: Test
+should_fail_because: The time_precision argument shall be at least as precise as the time_unit argument; it cannot specify a longerunit of time than time_unit.
+tags: 22.7
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.07321953773498535
+user_time: 0.029561999999999998
+system_time: 0.130326
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-22/22.7--timescale-basic-4.sv:17:19: error: time precision must be at least as precise as the time unit (i.e. it cannot be a longer unit of time)
+`timescale 1 ns / 10 ns
+           ~~~~   ^~~~~
+warning: no top-level modules found in design [-Wmissing-top]
+
+Build failed: 1 error, 1 warning

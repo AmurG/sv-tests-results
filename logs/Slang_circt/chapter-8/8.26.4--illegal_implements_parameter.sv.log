@@ -1,0 +1,38 @@
+name: illegal_implements_parameter
+description: implementing parameter that resolves to an interface class is not allowed
+should_fail_because: implementing parameter that resolves to an interface class is not allowed
+tags: 8.26.4
+type: simulation elaboration
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08607125282287598
+user_time: 0.019931
+system_time: 0.084908
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv:24:51: error: cannot extend or implement a type parameter
+        class Hello #(type T = ihello) implements T;
+                                                  ^
+../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv:34:17: error: too few arguments for 'hello'; expected 1 but 0 were provided
+                obj.hello();
+                ^~~~~~~~~
+Top level design units:
+    class_tb
+
+
+Build failed: 2 errors, 0 warnings

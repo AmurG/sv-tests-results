@@ -1,0 +1,49 @@
+name: property_local_var_test_uvm
+description: property with local variables in UVM
+type: simulation elaboration parsing
+tags: uvm uvm-assertions
+timeout: 300
+unsynthesizable: 1
+files: <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.7641732692718506
+user_time: 0.6638339999999999
+system_time: 0.578707
+ram_usage: 142464
+date_completed: 2026-07-02 03:18:37
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path>
+../../../tests/chapter-16/16.10--property-local-var-uvm.sv:92:16: warning: port 'valid' has no connection [-Wunconnected-port]
+    clk_gen_if dif();
+               ^
+../../../tests/chapter-16/16.10--property-local-var-uvm.sv:92:16: warning: port 'clk' has no connection [-Wunconnected-port]
+    clk_gen_if dif();
+               ^
+../../../tests/chapter-16/16.10--property-local-var-uvm.sv:92:16: warning: port 'out' has no connection [-Wunconnected-port]
+    clk_gen_if dif();
+               ^
+../../../tests/chapter-16/16.10--property-local-var-uvm.sv:92:16: warning: port 'in' has no connection [-Wunconnected-port]
+    clk_gen_if dif();
+               ^
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 5 warnings

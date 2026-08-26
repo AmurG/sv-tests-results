@@ -1,0 +1,35 @@
+name: errors_syntax_err11
+description: Tests imported from yosys
+files: <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path>
+tags: yosys
+should_fail_because: this test imported from yosys repository contains intentional syntax error
+results_group: imported
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10740780830383301
+user_time: 0.023999
+system_time: 0.107652
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:48
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path>
+../../../third_party/tools/yosys/tests/errors/syntax_err11.v:2:19: error: expected a declaration name
+parameter integer real x=0;
+                  ^
+Top level design units:
+    a
+
+
+Build failed: 1 error, 0 warnings

@@ -1,0 +1,53 @@
+name: regress-vlg_br_gh1225c_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.18456053733825684
+user_time: 0.11087
+system_time: 0.11287499999999999
+ram_usage: 18816
+date_completed: 2026-07-02 03:18:41
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:3:15: error: loop generation value -1 repeats more than once
+  for (genvar gv1 = -1; gv1 <= 2; gv1 = -1);
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:6:15: error: loop generation value 0 repeats more than once
+  for (genvar gv2 = 0; gv2 >= 0; gv2 = gv2 === 1 ? gv2 - 1 : gv2 + 1);
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:9:15: error: value of 32'sb0x is invalid for loop generation value
+  for (genvar gv3 = 1'bx; gv3 <= 1; gv3 = gv3 + 1);
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:12:15: error: value of 32'sbxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx is invalid for loop generation value
+  for (genvar gv4 = 0; gv4 <= 1; gv4 = gv4 + 1'bx);
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:18:21: error: use of undeclared identifier 'gv6'
+  for (genvar gv6 = gv6 + 1; gv <= 1; gv6 = gv6 + 1);
+                    ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:21:3: error: generate loop hit maximum step limit; possible infinite loop?
+  for (genvar gv7 = 0; 1'b1; gv7 = gv7 + 1);
+  ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1225c.v:24:3: error: generate loop hit maximum step limit; possible infinite loop?
+  for (genvar gv8 = 0; gv8 >= 0; gv8 = gv8 + 1);
+  ^~~
+Top level design units:
+    test
+
+
+Build failed: 7 errors, 0 warnings

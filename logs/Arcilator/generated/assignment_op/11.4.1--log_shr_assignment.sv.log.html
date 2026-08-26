@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>log_shr_assignment</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>&gt;&gt;= assignment test</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>11.4.1</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:38:29</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>28672 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=elaboration top=top</pre>
+      <pre>[Arcilator] mode=elaboration top=top</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a></pre>
+      <pre>+ echo [Arcilator] Arcilator backend stage</pre>
+      <pre>[Arcilator] Arcilator backend stage</pre>
+      <pre>+ <redacted-local-path> <redacted-local-path> --disable-output</pre>
+      <pre><redacted-local-path> error: &#39;arc.execute&#39; op is on a combinational loop</pre>
+      <pre>    %0 = llhd.process -&gt; i32 {</pre>
+      <pre>         ^</pre>
+      <pre><redacted-local-path> note: see current operation: </pre>
+      <pre>%0 = &#34;arc.execute&#34;(%0) ({</pre>
+      <pre>^bb0(%arg0: i32):</pre>
+      <pre>  %1 = &#34;hw.constant&#34;() &lt;{value = 0 : i37}&gt; : () -&gt; i37</pre>
+      <pre>  %2 = &#34;hw.constant&#34;() &lt;{value = -1 : i32}&gt; : () -&gt; i32</pre>
+      <pre>  %3 = &#34;hw.constant&#34;() &lt;{value = 0 : i32}&gt; : () -&gt; i32</pre>
+      <pre>  %4 = &#34;func.call&#34;(%3) &lt;{callee = @__arcilator_get_pc}&gt; : (i32) -&gt; i32</pre>
+      <pre>  &#34;cf.switch&#34;(%4)[^bb2, ^bb1] &lt;{case_operand_segments = array&lt;i32: 0&gt;, case_values = dense&lt;0&gt; : vector&lt;1xi32&gt;, operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i32) -&gt; ()</pre>
+      <pre>^bb1:  // pred: ^bb0</pre>
+      <pre>  %5 = &#34;comb.extract&#34;(%arg0) &lt;{lowBit = 5 : i32}&gt; : (i32) -&gt; i27</pre>
+      <pre>  %6 = &#34;comb.concat&#34;(%1, %5) : (i37, i27) -&gt; i64</pre>
+      <pre>  &#34;func.call&#34;(%3, %3, %6) &lt;{callee = @__arcilator_frame_store_u64}&gt; : (i32, i32, i64) -&gt; ()</pre>
+      <pre>  &#34;func.call&#34;(%3, %2) &lt;{callee = @__arcilator_set_pc}&gt; : (i32, i32) -&gt; ()</pre>
+      <pre>  &#34;cf.br&#34;()[^bb2] : () -&gt; ()</pre>
+      <pre>^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>  %7 = &#34;func.call&#34;(%3, %3) &lt;{callee = @__arcilator_frame_load_u64}&gt; : (i32, i32) -&gt; i64</pre>
+      <pre>  %8 = &#34;comb.extract&#34;(%7) &lt;{lowBit = 0 : i32}&gt; : (i64) -&gt; i32</pre>
+      <pre>  &#34;arc.output&#34;(%8) : (i32) -&gt; ()</pre>
+      <pre>}) {arcilator.proc_id = 0 : i32} : (i32) -&gt; i32</pre>
+      <pre><redacted-local-path> remark: computing new phase here</pre>
+      <pre>    %0 = llhd.process -&gt; i32 {</pre>
+      <pre>         ^</pre>
+      <pre><redacted-local-path> note: see current operation: </pre>
+      <pre>%0 = arc.execute (%0 : i32) -&gt; (i32) attributes {arcilator.proc_id = 0 : i32} {</pre>
+      <pre>^bb0(%arg0: i32):</pre>
+      <pre>  %c0_i37 = hw.constant 0 : i37</pre>
+      <pre>  %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>  %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>  %0 = func.call @__arcilator_get_pc(%c0_i32) : (i32) -&gt; i32</pre>
+      <pre>  cf.switch %0 : i32, [</pre>
+      <pre>    default: ^bb2,</pre>
+      <pre>    0: ^bb1</pre>
+      <pre>  ]</pre>
+      <pre>^bb1:  // pred: ^bb0</pre>
+      <pre>  %1 = comb.extract %arg0 from 5 : (i32) -&gt; i27</pre>
+      <pre>  %2 = comb.concat %c0_i37, %1 : i37, i27</pre>
+      <pre>  func.call @__arcilator_frame_store_u64(%c0_i32, %c0_i32, %2) : (i32, i32, i64) -&gt; ()</pre>
+      <pre>  func.call @__arcilator_set_pc(%c0_i32, %c-1_i32) : (i32, i32) -&gt; ()</pre>
+      <pre>  cf.br ^bb2</pre>
+      <pre>^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>  %3 = func.call @__arcilator_frame_load_u64(%c0_i32, %c0_i32) : (i32, i32) -&gt; i64</pre>
+      <pre>  %4 = comb.extract %3 from 0 : (i64) -&gt; i32</pre>
+      <pre>  arc.output %4 : i32</pre>
+      <pre>}</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

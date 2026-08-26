@@ -1,0 +1,59 @@
+name: regress-sv_sv_queue_vec_fail_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.09277510643005371
+user_time: 0.019910999999999998
+system_time: 0.114925
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:43
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:4:17: error: value must be positive
+  int q_vec1 [$:-1];
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:5:17: error: value must not have any unknown bits
+  int q_vec2 [$:'X];
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:6:17: error: reference to non-constant variable 'bound' is not allowed in a constant expression
+  int q_vec3 [$:bound];
+                ^~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:2:7: note: declared here
+  int bound = 2;
+      ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:9:14: error: too many arguments for 'size'; expected 0 but 1 were provided
+    $display(q_vec.size(1));
+             ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:10:14: error: too many arguments for 'pop_front'; expected 0 but 1 were provided
+    $display(q_vec.pop_front(1));
+             ^~~~~~~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:11:14: error: too many arguments for 'pop_back'; expected 0 but 1 were provided
+    $display(q_vec.pop_back(1));
+             ^~~~~~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:12:22: error: too many arguments for 'push_front'; expected 1 but 2 were provided
+    q_vec.push_front(1, 2);
+                     ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_queue_vec_fail.v:13:21: error: too many arguments for 'push_back'; expected 1 but 2 were provided
+    q_vec.push_back(1, 2);
+                    ^
+Top level design units:
+    top
+
+
+Build failed: 8 errors, 0 warnings

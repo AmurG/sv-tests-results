@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_br_gh800_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh800.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh800.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.057s</dd></div>
+        <div><dt>ram usage</dt><dd>23296 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh800.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh800.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_strcmp(!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_string_getc(!hw.string, i32) -&gt; i8</pre>
+      <pre>  func.func private @circt_sv_string_len(!hw.string) -&gt; i32</pre>
+      <pre>  hw.module @AssignLiterals() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;5. len=&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;4. &#39;&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;3. len=&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;2. len=&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34; hex=&#34;</pre>
+      <pre>    %8 = sim.fmt.literal &#34;&#39; len=&#34;</pre>
+      <pre>    %9 = sim.fmt.literal &#34;1. &#39;&#34;</pre>
+      <pre>    %10 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c5_i32 = hw.constant 5 : i32</pre>
+      <pre>    %c121_i32 = hw.constant 121 : i32</pre>
+      <pre>    %c120_i32 = hw.constant 120 : i32</pre>
+      <pre>    %c10_i32 = hw.constant 10 : i32</pre>
+      <pre>    %c13_i32 = hw.constant 13 : i32</pre>
+      <pre>    %c4_i32 = hw.constant 4 : i32</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c66_i32 = hw.constant 66 : i32</pre>
+      <pre>    %c65_i32 = hw.constant 65 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %11 = sv.constantStr &#34;&#34;</pre>
+      <pre>      %s = llhd.sig %11 : !hw.string</pre>
+      <pre>      %12 = sv.constantStr &#34;AB&#34;</pre>
+      <pre>      llhd.drv %s, %12 after %10 : !hw.string</pre>
+      <pre>      %13 = llhd.prb %s : !hw.string</pre>
+      <pre>      %14 = sim.fmt.str %13</pre>
+      <pre>      %15 = func.call @circt_sv_string_len(%13) : (!hw.string) -&gt; i32</pre>
+      <pre>      %16 = sim.fmt.int 10 1 0 %15 : i32</pre>
+      <pre>      %17 = llhd.prb %s : !hw.string</pre>
+      <pre>      %18 = func.call @circt_sv_string_getc(%17, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %19 = sim.fmt.int 16 2 4 %18 : i8</pre>
+      <pre>      %20 = llhd.prb %s : !hw.string</pre>
+      <pre>      %21 = func.call @circt_sv_string_getc(%20, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %22 = sim.fmt.int 16 2 4 %21 : i8</pre>
+      <pre>      %23 = llhd.prb %s : !hw.string</pre>
+      <pre>      %24 = func.call @circt_sv_string_getc(%23, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %25 = sim.fmt.int 16 2 4 %24 : i8</pre>
+      <pre>      %26 = sim.fmt.concat (%9, %14, %8, %16, %7, %19, %22, %25, %6)</pre>
+      <pre>      sim.proc.print %26</pre>
+      <pre>      %27 = llhd.prb %s : !hw.string</pre>
+      <pre>      %28 = func.call @circt_sv_string_len(%27) : (!hw.string) -&gt; i32</pre>
+      <pre>      %29 = comb.icmp ne %28, %c2_i32 : i32</pre>
+      <pre>      %30 = llhd.prb %s : !hw.string</pre>
+      <pre>      %31 = func.call @circt_sv_strcmp(%30, %12) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %32 = comb.icmp ne %31, %c0_i32 : i32</pre>
+      <pre>      %33 = func.call @circt_sv_string_getc(%30, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %34 = comb.extract %33 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %35 = comb.replicate %34 : (i1) -&gt; i24</pre>
+      <pre>      %36 = comb.concat %35, %33 : i24, i8</pre>
+      <pre>      %37 = comb.icmp cne %36, %c65_i32 : i32</pre>
+      <pre>      %38 = llhd.prb %s : !hw.string</pre>
+      <pre>      %39 = func.call @circt_sv_string_getc(%38, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %40 = comb.extract %39 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %41 = comb.replicate %40 : (i1) -&gt; i24</pre>
+      <pre>      %42 = comb.concat %41, %39 : i24, i8</pre>
+      <pre>      %43 = comb.icmp cne %42, %c66_i32 : i32</pre>
+      <pre>      %44 = comb.or %29, %32, %37, %43 : i1</pre>
+      <pre>      cf.cond_br %44, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb2:  // pred: ^bb0</pre>
+      <pre>      %45 = sv.constantStr &#34;A\0D\0AB&#34;</pre>
+      <pre>      llhd.drv %s, %45 after %10 : !hw.string</pre>
+      <pre>      %46 = llhd.prb %s : !hw.string</pre>
+      <pre>      %47 = func.call @circt_sv_string_len(%46) : (!hw.string) -&gt; i32</pre>
+      <pre>      %48 = sim.fmt.int 10 1 0 %47 : i32</pre>
+      <pre>      %49 = llhd.prb %s : !hw.string</pre>
+      <pre>      %50 = func.call @circt_sv_string_getc(%49, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %51 = sim.fmt.int 16 2 4 %50 : i8</pre>
+      <pre>      %52 = llhd.prb %s : !hw.string</pre>
+      <pre>      %53 = func.call @circt_sv_string_getc(%52, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %54 = sim.fmt.int 16 2 4 %53 : i8</pre>
+      <pre>      %55 = llhd.prb %s : !hw.string</pre>
+      <pre>      %56 = func.call @circt_sv_string_getc(%55, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %57 = sim.fmt.int 16 2 4 %56 : i8</pre>
+      <pre>      %58 = llhd.prb %s : !hw.string</pre>
+      <pre>      %59 = func.call @circt_sv_string_getc(%58, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %60 = sim.fmt.int 16 2 4 %59 : i8</pre>
+      <pre>      %61 = sim.fmt.concat (%5, %48, %7, %51, %54, %57, %60, %6)</pre>
+      <pre>      sim.proc.print %61</pre>
+      <pre>      %62 = llhd.prb %s : !hw.string</pre>
+      <pre>      %63 = func.call @circt_sv_string_len(%62) : (!hw.string) -&gt; i32</pre>
+      <pre>      %64 = comb.icmp ne %63, %c4_i32 : i32</pre>
+      <pre>      %65 = llhd.prb %s : !hw.string</pre>
+      <pre>      %66 = func.call @circt_sv_string_getc(%65, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %67 = comb.extract %66 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %68 = comb.replicate %67 : (i1) -&gt; i24</pre>
+      <pre>      %69 = comb.concat %68, %66 : i24, i8</pre>
+      <pre>      %70 = comb.icmp cne %69, %c65_i32 : i32</pre>
+      <pre>      %71 = llhd.prb %s : !hw.string</pre>
+      <pre>      %72 = func.call @circt_sv_string_getc(%71, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %73 = comb.extract %72 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %74 = comb.replicate %73 : (i1) -&gt; i24</pre>
+      <pre>      %75 = comb.concat %74, %72 : i24, i8</pre>
+      <pre>      %76 = comb.icmp cne %75, %c13_i32 : i32</pre>
+      <pre>      %77 = llhd.prb %s : !hw.string</pre>
+      <pre>      %78 = func.call @circt_sv_string_getc(%77, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %79 = comb.extract %78 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %80 = comb.replicate %79 : (i1) -&gt; i24</pre>
+      <pre>      %81 = comb.concat %80, %78 : i24, i8</pre>
+      <pre>      %82 = comb.icmp cne %81, %c10_i32 : i32</pre>
+      <pre>      %83 = llhd.prb %s : !hw.string</pre>
+      <pre>      %84 = func.call @circt_sv_string_getc(%83, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %85 = comb.extract %84 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %86 = comb.replicate %85 : (i1) -&gt; i24</pre>
+      <pre>      %87 = comb.concat %86, %84 : i24, i8</pre>
+      <pre>      %88 = comb.icmp cne %87, %c66_i32 : i32</pre>
+      <pre>      %89 = comb.or %64, %70, %76, %82, %88 : i1</pre>
+      <pre>      cf.cond_br %89, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      llhd.drv %s, %11 after %10 : !hw.string</pre>
+      <pre>      %90 = llhd.prb %s : !hw.string</pre>
+      <pre>      %91 = func.call @circt_sv_string_len(%90) : (!hw.string) -&gt; i32</pre>
+      <pre>      %92 = sim.fmt.int 10 1 0 %91 : i32</pre>
+      <pre>      %93 = llhd.prb %s : !hw.string</pre>
+      <pre>      %94 = func.call @circt_sv_string_getc(%93, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %95 = sim.fmt.int 16 2 4 %94 : i8</pre>
+      <pre>      %96 = llhd.prb %s : !hw.string</pre>
+      <pre>      %97 = func.call @circt_sv_string_getc(%96, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %98 = sim.fmt.int 16 2 4 %97 : i8</pre>
+      <pre>      %99 = llhd.prb %s : !hw.string</pre>
+      <pre>      %100 = func.call @circt_sv_string_getc(%99, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %101 = sim.fmt.int 16 2 4 %100 : i8</pre>
+      <pre>      %102 = llhd.prb %s : !hw.string</pre>
+      <pre>      %103 = func.call @circt_sv_string_getc(%102, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %104 = sim.fmt.int 16 2 4 %103 : i8</pre>
+      <pre>      %105 = sim.fmt.concat (%4, %92, %7, %95, %98, %101, %104, %6)</pre>
+      <pre>      sim.proc.print %105</pre>
+      <pre>      %106 = llhd.prb %s : !hw.string</pre>
+      <pre>      %107 = func.call @circt_sv_string_len(%106) : (!hw.string) -&gt; i32</pre>
+      <pre>      %108 = comb.icmp ne %107, %c4_i32 : i32</pre>
+      <pre>      %109 = llhd.prb %s : !hw.string</pre>
+      <pre>      %110 = func.call @circt_sv_string_getc(%109, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %111 = comb.extract %110 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %112 = comb.replicate %111 : (i1) -&gt; i24</pre>
+      <pre>      %113 = comb.concat %112, %110 : i24, i8</pre>
+      <pre>      %114 = comb.icmp cne %113, %c65_i32 : i32</pre>
+      <pre>      %115 = llhd.prb %s : !hw.string</pre>
+      <pre>      %116 = func.call @circt_sv_string_getc(%115, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %117 = comb.extract %116 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %118 = comb.replicate %117 : (i1) -&gt; i24</pre>
+      <pre>      %119 = comb.concat %118, %116 : i24, i8</pre>
+      <pre>      %120 = comb.icmp cne %119, %c13_i32 : i32</pre>
+      <pre>      %121 = llhd.prb %s : !hw.string</pre>
+      <pre>      %122 = func.call @circt_sv_string_getc(%121, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %123 = comb.extract %122 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %124 = comb.replicate %123 : (i1) -&gt; i24</pre>
+      <pre>      %125 = comb.concat %124, %122 : i24, i8</pre>
+      <pre>      %126 = comb.icmp cne %125, %c10_i32 : i32</pre>
+      <pre>      %127 = llhd.prb %s : !hw.string</pre>
+      <pre>      %128 = func.call @circt_sv_string_getc(%127, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %129 = comb.extract %128 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %130 = comb.replicate %129 : (i1) -&gt; i24</pre>
+      <pre>      %131 = comb.concat %130, %128 : i24, i8</pre>
+      <pre>      %132 = comb.icmp cne %131, %c66_i32 : i32</pre>
+      <pre>      %133 = comb.or %108, %114, %120, %126, %132 : i1</pre>
+      <pre>      cf.cond_br %133, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb6:  // pred: ^bb4</pre>
+      <pre>      %134 = sv.constantStr &#34;AxyB&#34;</pre>
+      <pre>      llhd.drv %s, %134 after %10 : !hw.string</pre>
+      <pre>      %135 = llhd.prb %s : !hw.string</pre>
+      <pre>      %136 = sim.fmt.str %135</pre>
+      <pre>      %137 = func.call @circt_sv_string_len(%135) : (!hw.string) -&gt; i32</pre>
+      <pre>      %138 = sim.fmt.int 10 1 0 %137 : i32</pre>
+      <pre>      %139 = llhd.prb %s : !hw.string</pre>
+      <pre>      %140 = func.call @circt_sv_string_getc(%139, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %141 = sim.fmt.int 16 2 4 %140 : i8</pre>
+      <pre>      %142 = llhd.prb %s : !hw.string</pre>
+      <pre>      %143 = func.call @circt_sv_string_getc(%142, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %144 = sim.fmt.int 16 2 4 %143 : i8</pre>
+      <pre>      %145 = llhd.prb %s : !hw.string</pre>
+      <pre>      %146 = func.call @circt_sv_string_getc(%145, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %147 = sim.fmt.int 16 2 4 %146 : i8</pre>
+      <pre>      %148 = llhd.prb %s : !hw.string</pre>
+      <pre>      %149 = func.call @circt_sv_string_getc(%148, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %150 = sim.fmt.int 16 2 4 %149 : i8</pre>
+      <pre>      %151 = sim.fmt.concat (%3, %136, %8, %138, %7, %141, %144, %147, %150, %6)</pre>
+      <pre>      sim.proc.print %151</pre>
+      <pre>      %152 = llhd.prb %s : !hw.string</pre>
+      <pre>      %153 = func.call @circt_sv_string_len(%152) : (!hw.string) -&gt; i32</pre>
+      <pre>      %154 = comb.icmp ne %153, %c4_i32 : i32</pre>
+      <pre>      %155 = llhd.prb %s : !hw.string</pre>
+      <pre>      %156 = func.call @circt_sv_string_getc(%155, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %157 = comb.extract %156 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %158 = comb.replicate %157 : (i1) -&gt; i24</pre>
+      <pre>      %159 = comb.concat %158, %156 : i24, i8</pre>
+      <pre>      %160 = comb.icmp cne %159, %c65_i32 : i32</pre>
+      <pre>      %161 = llhd.prb %s : !hw.string</pre>
+      <pre>      %162 = func.call @circt_sv_string_getc(%161, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %163 = comb.extract %162 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %164 = comb.replicate %163 : (i1) -&gt; i24</pre>
+      <pre>      %165 = comb.concat %164, %162 : i24, i8</pre>
+      <pre>      %166 = comb.icmp cne %165, %c120_i32 : i32</pre>
+      <pre>      %167 = llhd.prb %s : !hw.string</pre>
+      <pre>      %168 = func.call @circt_sv_string_getc(%167, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %169 = comb.extract %168 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %170 = comb.replicate %169 : (i1) -&gt; i24</pre>
+      <pre>      %171 = comb.concat %170, %168 : i24, i8</pre>
+      <pre>      %172 = comb.icmp cne %171, %c121_i32 : i32</pre>
+      <pre>      %173 = llhd.prb %s : !hw.string</pre>
+      <pre>      %174 = func.call @circt_sv_string_getc(%173, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %175 = comb.extract %174 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %176 = comb.replicate %175 : (i1) -&gt; i24</pre>
+      <pre>      %177 = comb.concat %176, %174 : i24, i8</pre>
+      <pre>      %178 = comb.icmp cne %177, %c66_i32 : i32</pre>
+      <pre>      %179 = comb.or %154, %160, %166, %172, %178 : i1</pre>
+      <pre>      cf.cond_br %179, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb8:  // pred: ^bb6</pre>
+      <pre>      llhd.drv %s, %11 after %10 : !hw.string</pre>
+      <pre>      %180 = llhd.prb %s : !hw.string</pre>
+      <pre>      %181 = func.call @circt_sv_string_len(%180) : (!hw.string) -&gt; i32</pre>
+      <pre>      %182 = sim.fmt.int 10 1 0 %181 : i32</pre>
+      <pre>      %183 = llhd.prb %s : !hw.string</pre>
+      <pre>      %184 = func.call @circt_sv_string_getc(%183, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %185 = sim.fmt.int 16 2 4 %184 : i8</pre>
+      <pre>      %186 = llhd.prb %s : !hw.string</pre>
+      <pre>      %187 = func.call @circt_sv_string_getc(%186, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %188 = sim.fmt.int 16 2 4 %187 : i8</pre>
+      <pre>      %189 = llhd.prb %s : !hw.string</pre>
+      <pre>      %190 = func.call @circt_sv_string_getc(%189, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %191 = sim.fmt.int 16 2 4 %190 : i8</pre>
+      <pre>      %192 = llhd.prb %s : !hw.string</pre>
+      <pre>      %193 = func.call @circt_sv_string_getc(%192, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %194 = sim.fmt.int 16 2 4 %193 : i8</pre>
+      <pre>      %195 = llhd.prb %s : !hw.string</pre>
+      <pre>      %196 = func.call @circt_sv_string_getc(%195, %c4_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %197 = sim.fmt.int 16 2 4 %196 : i8</pre>
+      <pre>      %198 = sim.fmt.concat (%2, %182, %7, %185, %188, %191, %194, %197, %6)</pre>
+      <pre>      sim.proc.print %198</pre>
+      <pre>      %199 = llhd.prb %s : !hw.string</pre>
+      <pre>      %200 = func.call @circt_sv_string_len(%199) : (!hw.string) -&gt; i32</pre>
+      <pre>      %201 = comb.icmp ne %200, %c5_i32 : i32</pre>
+      <pre>      %202 = llhd.prb %s : !hw.string</pre>
+      <pre>      %203 = func.call @circt_sv_string_getc(%202, %c0_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %204 = comb.extract %203 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %205 = comb.replicate %204 : (i1) -&gt; i24</pre>
+      <pre>      %206 = comb.concat %205, %203 : i24, i8</pre>
+      <pre>      %207 = comb.icmp cne %206, %c65_i32 : i32</pre>
+      <pre>      %208 = llhd.prb %s : !hw.string</pre>
+      <pre>      %209 = func.call @circt_sv_string_getc(%208, %c1_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %210 = comb.extract %209 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %211 = comb.replicate %210 : (i1) -&gt; i24</pre>
+      <pre>      %212 = comb.concat %211, %209 : i24, i8</pre>
+      <pre>      %213 = comb.icmp cne %212, %c13_i32 : i32</pre>
+      <pre>      %214 = llhd.prb %s : !hw.string</pre>
+      <pre>      %215 = func.call @circt_sv_string_getc(%214, %c2_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %216 = comb.extract %215 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %217 = comb.replicate %216 : (i1) -&gt; i24</pre>
+      <pre>      %218 = comb.concat %217, %215 : i24, i8</pre>
+      <pre>      %219 = comb.icmp cne %218, %c10_i32 : i32</pre>
+      <pre>      %220 = llhd.prb %s : !hw.string</pre>
+      <pre>      %221 = func.call @circt_sv_string_getc(%220, %c3_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %222 = comb.extract %221 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %223 = comb.replicate %222 : (i1) -&gt; i24</pre>
+      <pre>      %224 = comb.concat %223, %221 : i24, i8</pre>
+      <pre>      %225 = comb.icmp cne %224, %c10_i32 : i32</pre>
+      <pre>      %226 = llhd.prb %s : !hw.string</pre>
+      <pre>      %227 = func.call @circt_sv_string_getc(%226, %c4_i32) : (!hw.string, i32) -&gt; i8</pre>
+      <pre>      %228 = comb.extract %227 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %229 = comb.replicate %228 : (i1) -&gt; i24</pre>
+      <pre>      %230 = comb.concat %229, %227 : i24, i8</pre>
+      <pre>      %231 = comb.icmp cne %230, %c66_i32 : i32</pre>
+      <pre>      %232 = comb.or %201, %207, %213, %219, %225, %231 : i1</pre>
+      <pre>      cf.cond_br %232, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb10:  // pred: ^bb8</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

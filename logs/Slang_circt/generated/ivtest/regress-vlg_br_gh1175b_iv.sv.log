@@ -1,0 +1,33 @@
+name: regress-vlg_br_gh1175b_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10110211372375488
+user_time: 0.015543
+system_time: 0.10210699999999999
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:45
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh1175b.v:3:5: error: incorrect number of input fields in table row; have 6 but expect 1
+    ? 1 ? 0 0 0 : 0 : 0;
+    ^~~~~~~~~~~
+warning: no top-level modules found in design [-Wmissing-top]
+
+Build failed: 1 error, 1 warning

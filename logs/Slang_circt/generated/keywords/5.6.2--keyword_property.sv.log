@@ -1,0 +1,41 @@
+name: keyword_property
+description: The 'property' keyword should be reserved
+should_fail_because: The 'property' keyword should be reserved
+tags: 5.6.2
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.12681341171264648
+user_time: 0.019296999999999998
+system_time: 0.11183399999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:34
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/generated/keywords/5.6.2--keyword_property.sv:8:9: error: expected a declaration name
+    bit property;
+        ^
+../../../tests/generated/keywords/5.6.2--keyword_property.sv:8:17: error: expected identifier
+    bit property;
+                ^
+../../../tests/generated/keywords/5.6.2--keyword_property.sv:9:1: error: expected expression
+endmodule
+^
+Top level design units:
+    top
+
+
+Build failed: 3 errors, 0 warnings

@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_test_inc_dec_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/test_inc_dec.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/test_inc_dec.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.108s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/test_inc_dec.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/test_inc_dec.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_random_i32() -&gt; i32</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %2 = hw.aggregate_constant [0 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %c0_i56 = hw.constant 0 : i56</pre>
+      <pre>    %c64_i64 = hw.constant 64 : i64</pre>
+      <pre>    %c0_i24 = hw.constant 0 : i24</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>    %c64_i32 = hw.constant 64 : i32</pre>
+      <pre>    %c256_i32 = hw.constant 256 : i32</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i64 = hw.constant 0 : i64</pre>
+      <pre>    %c0_i16 = hw.constant 0 : i16</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %4 = llhd.constant_time &lt;1000000fs, 0d, 0e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c0_i9 = hw.constant 0 : i9</pre>
+      <pre>    %5 = hw.aggregate_constant [0 : i9, -1 : i9] : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>    %a_reg = llhd.sig %5 : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %a_reg[&#34;value&#34;] : &lt;!hw.struct&lt;value: i9, unknown: i9&gt;&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %a_reg[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i9, unknown: i9&gt;&gt;</pre>
+      <pre>    %a_bit = llhd.sig %c0_i9 : i9</pre>
+      <pre>    %a_byte = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %a_short = llhd.sig %c0_i16 : i16</pre>
+      <pre>    %a_int = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %a_long = llhd.sig %c0_i64 : i64</pre>
+      <pre>    %amount = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %pos = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %temp = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %i = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %3 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb10</pre>
+      <pre>      %8 = llhd.prb %i : i32</pre>
+      <pre>      %9 = comb.icmp slt %8, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %9, ^bb2, ^bb11</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      %10 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %11 = comb.mods %10, %c64_i32 : i32</pre>
+      <pre>      %12 = comb.extract %11 from 0 : (i32) -&gt; i9</pre>
+      <pre>      llhd.drv %6, %12 after %3 : i9</pre>
+      <pre>      llhd.drv %7, %c0_i9 after %3 : i9</pre>
+      <pre>      %13 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %14 = comb.mods %13, %c3_i32 : i32</pre>
+      <pre>      %15 = comb.extract %14 from 0 : (i32) -&gt; i8</pre>
+      <pre>      llhd.drv %amount, %15 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb3</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %16 = llhd.prb %6 : i9</pre>
+      <pre>      %17 = llhd.prb %7 : i9</pre>
+      <pre>      %18 = comb.extract %16 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %19 = comb.replicate %18 : (i1) -&gt; i23</pre>
+      <pre>      %20 = comb.concat %19, %16 : i23, i9</pre>
+      <pre>      %21 = comb.extract %17 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %22 = comb.replicate %21 : (i1) -&gt; i23</pre>
+      <pre>      %23 = comb.concat %22, %17 : i23, i9</pre>
+      <pre>      %24 = llhd.prb %amount : i8</pre>
+      <pre>      %25 = comb.extract %24 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %26 = comb.replicate %25 : (i1) -&gt; i24</pre>
+      <pre>      %27 = comb.concat %26, %24 : i24, i8</pre>
+      <pre>      %28 = comb.icmp ne %23, %c0_i32 : i32</pre>
+      <pre>      %29 = comb.add %20, %27 : i32</pre>
+      <pre>      %30 = hw.struct_create (%29, %c0_i32) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %31 = comb.mux %28, %2, %30 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %value = hw.struct_extract %31[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %31[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %32 = comb.xor %unknown, %c-1_i32 : i32</pre>
+      <pre>      %33 = comb.and %value, %32 : i32</pre>
+      <pre>      llhd.drv %temp, %33 after %3 : i32</pre>
+      <pre>      %34 = llhd.prb %6 : i9</pre>
+      <pre>      %35 = llhd.prb %7 : i9</pre>
+      <pre>      %36 = llhd.prb %amount : i8</pre>
+      <pre>      %37 = comb.extract %36 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %38 = comb.concat %37, %36 : i1, i8</pre>
+      <pre>      %39 = comb.icmp ne %35, %c0_i9 : i9</pre>
+      <pre>      %40 = comb.add %34, %38 : i9</pre>
+      <pre>      %41 = hw.struct_create (%40, %c0_i9) : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      %42 = comb.mux %39, %5, %41 : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      %value_0 = hw.struct_extract %42[&#34;value&#34;] : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      %unknown_1 = hw.struct_extract %42[&#34;unknown&#34;] : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      llhd.drv %6, %value_0 after %3 : i9</pre>
+      <pre>      llhd.drv %7, %unknown_1 after %3 : i9</pre>
+      <pre>      llhd.wait delay %4, ^bb4</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      %43 = llhd.prb %temp : i32</pre>
+      <pre>      %44 = llhd.prb %6 : i9</pre>
+      <pre>      %45 = llhd.prb %7 : i9</pre>
+      <pre>      %46 = comb.extract %44 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %47 = comb.replicate %46 : (i1) -&gt; i23</pre>
+      <pre>      %48 = comb.concat %47, %44 : i23, i9</pre>
+      <pre>      %49 = comb.extract %45 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %50 = comb.replicate %49 : (i1) -&gt; i23</pre>
+      <pre>      %51 = comb.concat %50, %45 : i23, i9</pre>
+      <pre>      %52 = comb.icmp eq %43, %48 : i32</pre>
+      <pre>      %53 = comb.icmp eq %51, %c0_i32 : i32</pre>
+      <pre>      %54 = comb.and %52, %53 : i1</pre>
+      <pre>      %55 = comb.xor %54, %true : i1</pre>
+      <pre>      cf.cond_br %55, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb6:  // pred: ^bb4</pre>
+      <pre>      llhd.wait delay %4, ^bb7</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %56 = llhd.prb %6 : i9</pre>
+      <pre>      %57 = llhd.prb %7 : i9</pre>
+      <pre>      %58 = comb.extract %56 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %59 = comb.replicate %58 : (i1) -&gt; i23</pre>
+      <pre>      %60 = comb.concat %59, %56 : i23, i9</pre>
+      <pre>      %61 = comb.extract %57 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %62 = comb.replicate %61 : (i1) -&gt; i23</pre>
+      <pre>      %63 = comb.concat %62, %57 : i23, i9</pre>
+      <pre>      %64 = llhd.prb %amount : i8</pre>
+      <pre>      %65 = comb.extract %64 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %66 = comb.replicate %65 : (i1) -&gt; i24</pre>
+      <pre>      %67 = comb.concat %66, %64 : i24, i8</pre>
+      <pre>      %68 = comb.icmp ne %63, %c0_i32 : i32</pre>
+      <pre>      %69 = comb.sub %60, %67 : i32</pre>
+      <pre>      %70 = hw.struct_create (%69, %c0_i32) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %71 = comb.mux %68, %2, %70 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %value_2 = hw.struct_extract %71[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %unknown_3 = hw.struct_extract %71[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %72 = comb.xor %unknown_3, %c-1_i32 : i32</pre>
+      <pre>      %73 = comb.and %value_2, %72 : i32</pre>
+      <pre>      llhd.drv %temp, %73 after %3 : i32</pre>
+      <pre>      %74 = llhd.prb %6 : i9</pre>
+      <pre>      %75 = llhd.prb %7 : i9</pre>
+      <pre>      %76 = llhd.prb %amount : i8</pre>
+      <pre>      %77 = comb.extract %76 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %78 = comb.concat %77, %76 : i1, i8</pre>
+      <pre>      %79 = comb.icmp ne %75, %c0_i9 : i9</pre>
+      <pre>      %80 = comb.sub %74, %78 : i9</pre>
+      <pre>      %81 = hw.struct_create (%80, %c0_i9) : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      %82 = comb.mux %79, %5, %81 : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      %value_4 = hw.struct_extract %82[&#34;value&#34;] : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      %unknown_5 = hw.struct_extract %82[&#34;unknown&#34;] : !hw.struct&lt;value: i9, unknown: i9&gt;</pre>
+      <pre>      llhd.drv %6, %value_4 after %3 : i9</pre>
+      <pre>      llhd.drv %7, %unknown_5 after %3 : i9</pre>
+      <pre>      llhd.wait delay %4, ^bb8</pre>
+      <pre>    ^bb8:  // pred: ^bb7</pre>
+      <pre>      %83 = llhd.prb %temp : i32</pre>
+      <pre>      %84 = llhd.prb %6 : i9</pre>
+      <pre>      %85 = llhd.prb %7 : i9</pre>
+      <pre>      %86 = comb.extract %84 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %87 = comb.replicate %86 : (i1) -&gt; i23</pre>
+      <pre>      %88 = comb.concat %87, %84 : i23, i9</pre>
+      <pre>      %89 = comb.extract %85 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %90 = comb.replicate %89 : (i1) -&gt; i23</pre>
+      <pre>      %91 = comb.concat %90, %85 : i23, i9</pre>
+      <pre>      %92 = comb.icmp eq %83, %88 : i32</pre>
+      <pre>      %93 = comb.icmp eq %91, %c0_i32 : i32</pre>
+      <pre>      %94 = comb.and %92, %93 : i1</pre>
+      <pre>      %95 = comb.xor %94, %true : i1</pre>
+      <pre>      cf.cond_br %95, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb10:  // pred: ^bb8</pre>
+      <pre>      %96 = llhd.prb %i : i32</pre>
+      <pre>      %97 = comb.add %96, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %97 after %3 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb11:  // pred: ^bb1</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %3 : i32</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb11, ^bb21</pre>
+      <pre>      %98 = llhd.prb %i : i32</pre>
+      <pre>      %99 = comb.icmp slt %98, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %99, ^bb13, ^bb22</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      %100 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %101 = comb.mods %100, %c64_i32 : i32</pre>
+      <pre>      %102 = comb.extract %101 from 0 : (i32) -&gt; i9</pre>
+      <pre>      llhd.drv %a_bit, %102 after %3 : i9</pre>
+      <pre>      %103 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %104 = comb.mods %103, %c3_i32 : i32</pre>
+      <pre>      %105 = comb.extract %104 from 0 : (i32) -&gt; i8</pre>
+      <pre>      llhd.drv %amount, %105 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb14</pre>
+      <pre>    ^bb14:  // pred: ^bb13</pre>
+      <pre>      %106 = llhd.prb %a_bit : i9</pre>
+      <pre>      %107 = comb.extract %106 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %108 = comb.replicate %107 : (i1) -&gt; i23</pre>
+      <pre>      %109 = comb.concat %108, %106 : i23, i9</pre>
+      <pre>      %110 = llhd.prb %amount : i8</pre>
+      <pre>      %111 = comb.extract %110 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %112 = comb.replicate %111 : (i1) -&gt; i24</pre>
+      <pre>      %113 = comb.concat %112, %110 : i24, i8</pre>
+      <pre>      %114 = comb.add %109, %113 : i32</pre>
+      <pre>      llhd.drv %temp, %114 after %3 : i32</pre>
+      <pre>      %115 = llhd.prb %a_bit : i9</pre>
+      <pre>      %116 = llhd.prb %amount : i8</pre>
+      <pre>      %117 = comb.extract %116 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %118 = comb.concat %117, %116 : i1, i8</pre>
+      <pre>      %119 = comb.add %115, %118 : i9</pre>
+      <pre>      llhd.drv %a_bit, %119 after %3 : i9</pre>
+      <pre>      llhd.wait delay %4, ^bb15</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %120 = llhd.prb %temp : i32</pre>
+      <pre>      %121 = llhd.prb %a_bit : i9</pre>
+      <pre>      %122 = comb.extract %121 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %123 = comb.replicate %122 : (i1) -&gt; i23</pre>
+      <pre>      %124 = comb.concat %123, %121 : i23, i9</pre>
+      <pre>      %125 = comb.icmp cne %120, %124 : i32</pre>
+      <pre>      cf.cond_br %125, ^bb16, ^bb17</pre>
+      <pre>    ^bb16:  // pred: ^bb15</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb17:  // pred: ^bb15</pre>
+      <pre>      llhd.wait delay %4, ^bb18</pre>
+      <pre>    ^bb18:  // pred: ^bb17</pre>
+      <pre>      %126 = llhd.prb %a_bit : i9</pre>
+      <pre>      %127 = comb.extract %126 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %128 = comb.replicate %127 : (i1) -&gt; i23</pre>
+      <pre>      %129 = comb.concat %128, %126 : i23, i9</pre>
+      <pre>      %130 = llhd.prb %amount : i8</pre>
+      <pre>      %131 = comb.extract %130 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %132 = comb.replicate %131 : (i1) -&gt; i24</pre>
+      <pre>      %133 = comb.concat %132, %130 : i24, i8</pre>
+      <pre>      %134 = comb.sub %129, %133 : i32</pre>
+      <pre>      llhd.drv %temp, %134 after %3 : i32</pre>
+      <pre>      %135 = llhd.prb %a_bit : i9</pre>
+      <pre>      %136 = llhd.prb %amount : i8</pre>
+      <pre>      %137 = comb.extract %136 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %138 = comb.concat %137, %136 : i1, i8</pre>
+      <pre>      %139 = comb.sub %135, %138 : i9</pre>
+      <pre>      llhd.drv %a_bit, %139 after %3 : i9</pre>
+      <pre>      llhd.wait delay %4, ^bb19</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      %140 = llhd.prb %temp : i32</pre>
+      <pre>      %141 = llhd.prb %a_bit : i9</pre>
+      <pre>      %142 = comb.extract %141 from 8 : (i9) -&gt; i1</pre>
+      <pre>      %143 = comb.replicate %142 : (i1) -&gt; i23</pre>
+      <pre>      %144 = comb.concat %143, %141 : i23, i9</pre>
+      <pre>      %145 = comb.icmp cne %140, %144 : i32</pre>
+      <pre>      cf.cond_br %145, ^bb20, ^bb21</pre>
+      <pre>    ^bb20:  // pred: ^bb19</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb21:  // pred: ^bb19</pre>
+      <pre>      %146 = llhd.prb %i : i32</pre>
+      <pre>      %147 = comb.add %146, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %147 after %3 : i32</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb22:  // pred: ^bb12</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %3 : i32</pre>
+      <pre>      cf.br ^bb23</pre>
+      <pre>    ^bb23:  // 2 preds: ^bb22, ^bb32</pre>
+      <pre>      %148 = llhd.prb %i : i32</pre>
+      <pre>      %149 = comb.icmp slt %148, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %149, ^bb24, ^bb33</pre>
+      <pre>    ^bb24:  // pred: ^bb23</pre>
+      <pre>      %150 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %151 = comb.mods %150, %c64_i32 : i32</pre>
+      <pre>      %152 = comb.extract %151 from 0 : (i32) -&gt; i8</pre>
+      <pre>      llhd.drv %a_byte, %152 after %3 : i8</pre>
+      <pre>      %153 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %154 = comb.mods %153, %c3_i32 : i32</pre>
+      <pre>      %155 = comb.extract %154 from 0 : (i32) -&gt; i8</pre>
+      <pre>      llhd.drv %amount, %155 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb25</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      %156 = llhd.prb %a_byte : i8</pre>
+      <pre>      %157 = comb.extract %156 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %158 = comb.replicate %157 : (i1) -&gt; i24</pre>
+      <pre>      %159 = comb.concat %158, %156 : i24, i8</pre>
+      <pre>      %160 = llhd.prb %amount : i8</pre>
+      <pre>      %161 = comb.extract %160 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %162 = comb.replicate %161 : (i1) -&gt; i24</pre>
+      <pre>      %163 = comb.concat %162, %160 : i24, i8</pre>
+      <pre>      %164 = comb.add %159, %163 : i32</pre>
+      <pre>      llhd.drv %temp, %164 after %3 : i32</pre>
+      <pre>      %165 = llhd.prb %a_byte : i8</pre>
+      <pre>      %166 = llhd.prb %amount : i8</pre>
+      <pre>      %167 = comb.add %165, %166 : i8</pre>
+      <pre>      llhd.drv %a_byte, %167 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb26</pre>
+      <pre>    ^bb26:  // pred: ^bb25</pre>
+      <pre>      %168 = llhd.prb %temp : i32</pre>
+      <pre>      %169 = llhd.prb %a_byte : i8</pre>
+      <pre>      %170 = comb.extract %169 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %171 = comb.replicate %170 : (i1) -&gt; i24</pre>
+      <pre>      %172 = comb.concat %171, %169 : i24, i8</pre>
+      <pre>      %173 = comb.icmp cne %168, %172 : i32</pre>
+      <pre>      cf.cond_br %173, ^bb27, ^bb28</pre>
+      <pre>    ^bb27:  // pred: ^bb26</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb28:  // pred: ^bb26</pre>
+      <pre>      llhd.wait delay %4, ^bb29</pre>
+      <pre>    ^bb29:  // pred: ^bb28</pre>
+      <pre>      %174 = llhd.prb %a_byte : i8</pre>
+      <pre>      %175 = comb.extract %174 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %176 = comb.replicate %175 : (i1) -&gt; i24</pre>
+      <pre>      %177 = comb.concat %176, %174 : i24, i8</pre>
+      <pre>      %178 = llhd.prb %amount : i8</pre>
+      <pre>      %179 = comb.extract %178 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %180 = comb.replicate %179 : (i1) -&gt; i24</pre>
+      <pre>      %181 = comb.concat %180, %178 : i24, i8</pre>
+      <pre>      %182 = comb.sub %177, %181 : i32</pre>
+      <pre>      llhd.drv %temp, %182 after %3 : i32</pre>
+      <pre>      %183 = llhd.prb %a_byte : i8</pre>
+      <pre>      %184 = llhd.prb %amount : i8</pre>
+      <pre>      %185 = comb.sub %183, %184 : i8</pre>
+      <pre>      llhd.drv %a_byte, %185 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb30</pre>
+      <pre>    ^bb30:  // pred: ^bb29</pre>
+      <pre>      %186 = llhd.prb %temp : i32</pre>
+      <pre>      %187 = llhd.prb %a_byte : i8</pre>
+      <pre>      %188 = comb.extract %187 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %189 = comb.replicate %188 : (i1) -&gt; i24</pre>
+      <pre>      %190 = comb.concat %189, %187 : i24, i8</pre>
+      <pre>      %191 = comb.icmp cne %186, %190 : i32</pre>
+      <pre>      cf.cond_br %191, ^bb31, ^bb32</pre>
+      <pre>    ^bb31:  // pred: ^bb30</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb32:  // pred: ^bb30</pre>
+      <pre>      %192 = llhd.prb %i : i32</pre>
+      <pre>      %193 = comb.add %192, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %193 after %3 : i32</pre>
+      <pre>      cf.br ^bb23</pre>
+      <pre>    ^bb33:  // pred: ^bb23</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %3 : i32</pre>
+      <pre>      cf.br ^bb34</pre>
+      <pre>    ^bb34:  // 2 preds: ^bb33, ^bb83</pre>
+      <pre>      %194 = llhd.prb %i : i32</pre>
+      <pre>      %195 = comb.icmp slt %194, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %195, ^bb35, ^bb84</pre>
+      <pre>    ^bb35:  // pred: ^bb34</pre>
+      <pre>      %196 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %197 = comb.mods %196, %c64_i32 : i32</pre>
+      <pre>      %198 = comb.extract %197 from 0 : (i32) -&gt; i15</pre>
+      <pre>      %199 = comb.concat %198, %false : i15, i1</pre>
+      <pre>      llhd.drv %a_short, %199 after %3 : i16</pre>
+      <pre>      %200 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %201 = comb.mods %200, %c3_i32 : i32</pre>
+      <pre>      %202 = comb.extract %201 from 0 : (i32) -&gt; i7</pre>
+      <pre>      %203 = comb.concat %202, %false : i7, i1</pre>
+      <pre>      llhd.drv %amount, %203 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb36</pre>
+      <pre>    ^bb36:  // pred: ^bb35</pre>
+      <pre>      %204 = llhd.prb %a_short : i16</pre>
+      <pre>      %205 = comb.extract %204 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %206 = comb.replicate %205 : (i1) -&gt; i16</pre>
+      <pre>      %207 = comb.concat %206, %204 : i16, i16</pre>
+      <pre>      %208 = llhd.prb %amount : i8</pre>
+      <pre>      %209 = comb.extract %208 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %210 = comb.replicate %209 : (i1) -&gt; i24</pre>
+      <pre>      %211 = comb.concat %210, %208 : i24, i8</pre>
+      <pre>      %212 = comb.add %207, %211 : i32</pre>
+      <pre>      llhd.drv %temp, %212 after %3 : i32</pre>
+      <pre>      %213 = llhd.prb %a_short : i16</pre>
+      <pre>      %214 = llhd.prb %amount : i8</pre>
+      <pre>      %215 = comb.extract %214 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %216 = comb.replicate %215 : (i1) -&gt; i8</pre>
+      <pre>      %217 = comb.concat %216, %214 : i8, i8</pre>
+      <pre>      %218 = comb.add %213, %217 : i16</pre>
+      <pre>      llhd.drv %a_short, %218 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb37</pre>
+      <pre>    ^bb37:  // pred: ^bb36</pre>
+      <pre>      %219 = llhd.prb %temp : i32</pre>
+      <pre>      %220 = llhd.prb %a_short : i16</pre>
+      <pre>      %221 = comb.extract %220 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %222 = comb.replicate %221 : (i1) -&gt; i16</pre>
+      <pre>      %223 = comb.concat %222, %220 : i16, i16</pre>
+      <pre>      %224 = comb.icmp cne %219, %223 : i32</pre>
+      <pre>      cf.cond_br %224, ^bb38, ^bb39</pre>
+      <pre>    ^bb38:  // pred: ^bb37</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb39:  // pred: ^bb37</pre>
+      <pre>      llhd.wait delay %4, ^bb40</pre>
+      <pre>    ^bb40:  // pred: ^bb39</pre>
+      <pre>      %225 = llhd.prb %a_short : i16</pre>
+      <pre>      %226 = comb.extract %225 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %227 = comb.replicate %226 : (i1) -&gt; i16</pre>
+      <pre>      %228 = comb.concat %227, %225 : i16, i16</pre>
+      <pre>      %229 = llhd.prb %amount : i8</pre>
+      <pre>      %230 = comb.extract %229 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %231 = comb.replicate %230 : (i1) -&gt; i24</pre>
+      <pre>      %232 = comb.concat %231, %229 : i24, i8</pre>
+      <pre>      %233 = comb.sub %228, %232 : i32</pre>
+      <pre>      llhd.drv %temp, %233 after %3 : i32</pre>
+      <pre>      %234 = llhd.prb %a_short : i16</pre>
+      <pre>      %235 = llhd.prb %amount : i8</pre>
+      <pre>      %236 = comb.extract %235 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %237 = comb.replicate %236 : (i1) -&gt; i8</pre>
+      <pre>      %238 = comb.concat %237, %235 : i8, i8</pre>
+      <pre>      %239 = comb.sub %234, %238 : i16</pre>
+      <pre>      llhd.drv %a_short, %239 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb41</pre>
+      <pre>    ^bb41:  // pred: ^bb40</pre>
+      <pre>      %240 = llhd.prb %temp : i32</pre>
+      <pre>      %241 = llhd.prb %a_short : i16</pre>
+      <pre>      %242 = comb.extract %241 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %243 = comb.replicate %242 : (i1) -&gt; i16</pre>
+      <pre>      %244 = comb.concat %243, %241 : i16, i16</pre>
+      <pre>      %245 = comb.icmp cne %240, %244 : i32</pre>
+      <pre>      cf.cond_br %245, ^bb42, ^bb43</pre>
+      <pre>    ^bb42:  // pred: ^bb41</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb43:  // pred: ^bb41</pre>
+      <pre>      llhd.wait delay %4, ^bb44</pre>
+      <pre>    ^bb44:  // pred: ^bb43</pre>
+      <pre>      %246 = llhd.prb %a_short : i16</pre>
+      <pre>      %247 = comb.extract %246 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %248 = comb.replicate %247 : (i1) -&gt; i16</pre>
+      <pre>      %249 = comb.concat %248, %246 : i16, i16</pre>
+      <pre>      %250 = llhd.prb %amount : i8</pre>
+      <pre>      %251 = comb.extract %250 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %252 = comb.replicate %251 : (i1) -&gt; i24</pre>
+      <pre>      %253 = comb.concat %252, %250 : i24, i8</pre>
+      <pre>      %254 = comb.mul %249, %253 : i32</pre>
+      <pre>      llhd.drv %temp, %254 after %3 : i32</pre>
+      <pre>      %255 = llhd.prb %a_short : i16</pre>
+      <pre>      %256 = llhd.prb %amount : i8</pre>
+      <pre>      %257 = comb.extract %256 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %258 = comb.replicate %257 : (i1) -&gt; i8</pre>
+      <pre>      %259 = comb.concat %258, %256 : i8, i8</pre>
+      <pre>      %260 = comb.mul %255, %259 : i16</pre>
+      <pre>      llhd.drv %a_short, %260 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb45</pre>
+      <pre>    ^bb45:  // pred: ^bb44</pre>
+      <pre>      %261 = llhd.prb %temp : i32</pre>
+      <pre>      %262 = llhd.prb %a_short : i16</pre>
+      <pre>      %263 = comb.extract %262 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %264 = comb.replicate %263 : (i1) -&gt; i16</pre>
+      <pre>      %265 = comb.concat %264, %262 : i16, i16</pre>
+      <pre>      %266 = comb.icmp cne %261, %265 : i32</pre>
+      <pre>      cf.cond_br %266, ^bb46, ^bb47</pre>
+      <pre>    ^bb46:  // pred: ^bb45</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb47:  // pred: ^bb45</pre>
+      <pre>      llhd.wait delay %4, ^bb48</pre>
+      <pre>    ^bb48:  // pred: ^bb47</pre>
+      <pre>      %267 = llhd.prb %a_short : i16</pre>
+      <pre>      %268 = comb.extract %267 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %269 = comb.replicate %268 : (i1) -&gt; i16</pre>
+      <pre>      %270 = comb.concat %269, %267 : i16, i16</pre>
+      <pre>      %271 = llhd.prb %amount : i8</pre>
+      <pre>      %272 = comb.extract %271 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %273 = comb.replicate %272 : (i1) -&gt; i24</pre>
+      <pre>      %274 = comb.concat %273, %271 : i24, i8</pre>
+      <pre>      %275 = comb.divs %270, %274 : i32</pre>
+      <pre>      llhd.drv %temp, %275 after %3 : i32</pre>
+      <pre>      %276 = llhd.prb %a_short : i16</pre>
+      <pre>      %277 = llhd.prb %amount : i8</pre>
+      <pre>      %278 = comb.extract %277 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %279 = comb.replicate %278 : (i1) -&gt; i8</pre>
+      <pre>      %280 = comb.concat %279, %277 : i8, i8</pre>
+      <pre>      %281 = comb.divs %276, %280 : i16</pre>
+      <pre>      llhd.drv %a_short, %281 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb49</pre>
+      <pre>    ^bb49:  // pred: ^bb48</pre>
+      <pre>      %282 = llhd.prb %temp : i32</pre>
+      <pre>      %283 = llhd.prb %a_short : i16</pre>
+      <pre>      %284 = comb.extract %283 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %285 = comb.replicate %284 : (i1) -&gt; i16</pre>
+      <pre>      %286 = comb.concat %285, %283 : i16, i16</pre>
+      <pre>      %287 = comb.icmp cne %282, %286 : i32</pre>
+      <pre>      cf.cond_br %287, ^bb50, ^bb51</pre>
+      <pre>    ^bb50:  // pred: ^bb49</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb51:  // pred: ^bb49</pre>
+      <pre>      llhd.wait delay %4, ^bb52</pre>
+      <pre>    ^bb52:  // pred: ^bb51</pre>
+      <pre>      %288 = llhd.prb %a_short : i16</pre>
+      <pre>      %289 = comb.extract %288 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %290 = comb.replicate %289 : (i1) -&gt; i16</pre>
+      <pre>      %291 = comb.concat %290, %288 : i16, i16</pre>
+      <pre>      %292 = llhd.prb %amount : i8</pre>
+      <pre>      %293 = comb.extract %292 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %294 = comb.replicate %293 : (i1) -&gt; i24</pre>
+      <pre>      %295 = comb.concat %294, %292 : i24, i8</pre>
+      <pre>      %296 = comb.mods %291, %295 : i32</pre>
+      <pre>      llhd.drv %temp, %296 after %3 : i32</pre>
+      <pre>      %297 = llhd.prb %a_short : i16</pre>
+      <pre>      %298 = llhd.prb %amount : i8</pre>
+      <pre>      %299 = comb.extract %298 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %300 = comb.replicate %299 : (i1) -&gt; i8</pre>
+      <pre>      %301 = comb.concat %300, %298 : i8, i8</pre>
+      <pre>      %302 = comb.mods %297, %301 : i16</pre>
+      <pre>      llhd.drv %a_short, %302 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb53</pre>
+      <pre>    ^bb53:  // pred: ^bb52</pre>
+      <pre>      %303 = llhd.prb %temp : i32</pre>
+      <pre>      %304 = llhd.prb %a_short : i16</pre>
+      <pre>      %305 = comb.extract %304 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %306 = comb.replicate %305 : (i1) -&gt; i16</pre>
+      <pre>      %307 = comb.concat %306, %304 : i16, i16</pre>
+      <pre>      %308 = comb.icmp cne %303, %307 : i32</pre>
+      <pre>      cf.cond_br %308, ^bb54, ^bb55</pre>
+      <pre>    ^bb54:  // pred: ^bb53</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb55:  // pred: ^bb53</pre>
+      <pre>      llhd.wait delay %4, ^bb56</pre>
+      <pre>    ^bb56:  // pred: ^bb55</pre>
+      <pre>      %309 = llhd.prb %a_short : i16</pre>
+      <pre>      %310 = comb.extract %309 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %311 = comb.replicate %310 : (i1) -&gt; i16</pre>
+      <pre>      %312 = comb.concat %311, %309 : i16, i16</pre>
+      <pre>      %313 = llhd.prb %amount : i8</pre>
+      <pre>      %314 = comb.extract %313 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %315 = comb.replicate %314 : (i1) -&gt; i24</pre>
+      <pre>      %316 = comb.concat %315, %313 : i24, i8</pre>
+      <pre>      %317 = comb.and %312, %316 : i32</pre>
+      <pre>      llhd.drv %temp, %317 after %3 : i32</pre>
+      <pre>      %318 = llhd.prb %a_short : i16</pre>
+      <pre>      %319 = llhd.prb %amount : i8</pre>
+      <pre>      %320 = comb.extract %319 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %321 = comb.replicate %320 : (i1) -&gt; i8</pre>
+      <pre>      %322 = comb.concat %321, %319 : i8, i8</pre>
+      <pre>      %323 = comb.and %318, %322 : i16</pre>
+      <pre>      llhd.drv %a_short, %323 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb57</pre>
+      <pre>    ^bb57:  // pred: ^bb56</pre>
+      <pre>      %324 = llhd.prb %temp : i32</pre>
+      <pre>      %325 = llhd.prb %a_short : i16</pre>
+      <pre>      %326 = comb.extract %325 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %327 = comb.replicate %326 : (i1) -&gt; i16</pre>
+      <pre>      %328 = comb.concat %327, %325 : i16, i16</pre>
+      <pre>      %329 = comb.icmp cne %324, %328 : i32</pre>
+      <pre>      cf.cond_br %329, ^bb58, ^bb59</pre>
+      <pre>    ^bb58:  // pred: ^bb57</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb59:  // pred: ^bb57</pre>
+      <pre>      llhd.wait delay %4, ^bb60</pre>
+      <pre>    ^bb60:  // pred: ^bb59</pre>
+      <pre>      %330 = llhd.prb %a_short : i16</pre>
+      <pre>      %331 = comb.extract %330 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %332 = comb.replicate %331 : (i1) -&gt; i16</pre>
+      <pre>      %333 = comb.concat %332, %330 : i16, i16</pre>
+      <pre>      %334 = llhd.prb %amount : i8</pre>
+      <pre>      %335 = comb.extract %334 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %336 = comb.replicate %335 : (i1) -&gt; i24</pre>
+      <pre>      %337 = comb.concat %336, %334 : i24, i8</pre>
+      <pre>      %338 = comb.or %333, %337 : i32</pre>
+      <pre>      llhd.drv %temp, %338 after %3 : i32</pre>
+      <pre>      %339 = llhd.prb %a_short : i16</pre>
+      <pre>      %340 = llhd.prb %amount : i8</pre>
+      <pre>      %341 = comb.extract %340 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %342 = comb.replicate %341 : (i1) -&gt; i8</pre>
+      <pre>      %343 = comb.concat %342, %340 : i8, i8</pre>
+      <pre>      %344 = comb.or %339, %343 : i16</pre>
+      <pre>      llhd.drv %a_short, %344 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb61</pre>
+      <pre>    ^bb61:  // pred: ^bb60</pre>
+      <pre>      %345 = llhd.prb %temp : i32</pre>
+      <pre>      %346 = llhd.prb %a_short : i16</pre>
+      <pre>      %347 = comb.extract %346 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %348 = comb.replicate %347 : (i1) -&gt; i16</pre>
+      <pre>      %349 = comb.concat %348, %346 : i16, i16</pre>
+      <pre>      %350 = comb.icmp cne %345, %349 : i32</pre>
+      <pre>      cf.cond_br %350, ^bb62, ^bb63</pre>
+      <pre>    ^bb62:  // pred: ^bb61</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb63:  // pred: ^bb61</pre>
+      <pre>      llhd.wait delay %4, ^bb64</pre>
+      <pre>    ^bb64:  // pred: ^bb63</pre>
+      <pre>      %351 = llhd.prb %a_short : i16</pre>
+      <pre>      %352 = comb.extract %351 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %353 = comb.replicate %352 : (i1) -&gt; i16</pre>
+      <pre>      %354 = comb.concat %353, %351 : i16, i16</pre>
+      <pre>      %355 = llhd.prb %amount : i8</pre>
+      <pre>      %356 = comb.extract %355 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %357 = comb.replicate %356 : (i1) -&gt; i24</pre>
+      <pre>      %358 = comb.concat %357, %355 : i24, i8</pre>
+      <pre>      %359 = comb.xor %354, %358 : i32</pre>
+      <pre>      llhd.drv %temp, %359 after %3 : i32</pre>
+      <pre>      %360 = llhd.prb %a_short : i16</pre>
+      <pre>      %361 = llhd.prb %amount : i8</pre>
+      <pre>      %362 = comb.extract %361 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %363 = comb.replicate %362 : (i1) -&gt; i8</pre>
+      <pre>      %364 = comb.concat %363, %361 : i8, i8</pre>
+      <pre>      %365 = comb.xor %360, %364 : i16</pre>
+      <pre>      llhd.drv %a_short, %365 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb65</pre>
+      <pre>    ^bb65:  // pred: ^bb64</pre>
+      <pre>      %366 = llhd.prb %temp : i32</pre>
+      <pre>      %367 = llhd.prb %a_short : i16</pre>
+      <pre>      %368 = comb.extract %367 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %369 = comb.replicate %368 : (i1) -&gt; i16</pre>
+      <pre>      %370 = comb.concat %369, %367 : i16, i16</pre>
+      <pre>      %371 = comb.icmp cne %366, %370 : i32</pre>
+      <pre>      cf.cond_br %371, ^bb66, ^bb67</pre>
+      <pre>    ^bb66:  // pred: ^bb65</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb67:  // pred: ^bb65</pre>
+      <pre>      llhd.wait delay %4, ^bb68</pre>
+      <pre>    ^bb68:  // pred: ^bb67</pre>
+      <pre>      %372 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %373 = comb.modu %372, %c3_i32 : i32</pre>
+      <pre>      %374 = comb.extract %373 from 0 : (i32) -&gt; i7</pre>
+      <pre>      %375 = comb.concat %374, %false : i7, i1</pre>
+      <pre>      llhd.drv %pos, %375 after %3 : i8</pre>
+      <pre>      %376 = llhd.prb %a_short : i16</pre>
+      <pre>      %377 = comb.extract %376 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %378 = comb.replicate %377 : (i1) -&gt; i16</pre>
+      <pre>      %379 = comb.concat %378, %376 : i16, i16</pre>
+      <pre>      %380 = llhd.prb %pos : i8</pre>
+      <pre>      %381 = comb.concat %c0_i24, %380 : i24, i8</pre>
+      <pre>      %382 = comb.shl %379, %381 : i32</pre>
+      <pre>      llhd.drv %temp, %382 after %3 : i32</pre>
+      <pre>      %383 = llhd.prb %a_short : i16</pre>
+      <pre>      %384 = llhd.prb %pos : i8</pre>
+      <pre>      %385 = comb.concat %c0_i8, %384 : i8, i8</pre>
+      <pre>      %386 = comb.shl %383, %385 : i16</pre>
+      <pre>      llhd.drv %a_short, %386 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb69</pre>
+      <pre>    ^bb69:  // pred: ^bb68</pre>
+      <pre>      %387 = llhd.prb %temp : i32</pre>
+      <pre>      %388 = llhd.prb %a_short : i16</pre>
+      <pre>      %389 = comb.extract %388 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %390 = comb.replicate %389 : (i1) -&gt; i16</pre>
+      <pre>      %391 = comb.concat %390, %388 : i16, i16</pre>
+      <pre>      %392 = comb.icmp cne %387, %391 : i32</pre>
+      <pre>      cf.cond_br %392, ^bb70, ^bb71</pre>
+      <pre>    ^bb70:  // pred: ^bb69</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb71:  // pred: ^bb69</pre>
+      <pre>      llhd.wait delay %4, ^bb72</pre>
+      <pre>    ^bb72:  // pred: ^bb71</pre>
+      <pre>      %393 = llhd.prb %a_short : i16</pre>
+      <pre>      %394 = comb.extract %393 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %395 = comb.replicate %394 : (i1) -&gt; i16</pre>
+      <pre>      %396 = comb.concat %395, %393 : i16, i16</pre>
+      <pre>      %397 = llhd.prb %pos : i8</pre>
+      <pre>      %398 = comb.concat %c0_i24, %397 : i24, i8</pre>
+      <pre>      %399 = comb.shru %396, %398 : i32</pre>
+      <pre>      llhd.drv %temp, %399 after %3 : i32</pre>
+      <pre>      %400 = llhd.prb %a_short : i16</pre>
+      <pre>      %401 = llhd.prb %pos : i8</pre>
+      <pre>      %402 = comb.concat %c0_i8, %401 : i8, i8</pre>
+      <pre>      %403 = comb.shru %400, %402 : i16</pre>
+      <pre>      llhd.drv %a_short, %403 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb73</pre>
+      <pre>    ^bb73:  // pred: ^bb72</pre>
+      <pre>      %404 = llhd.prb %temp : i32</pre>
+      <pre>      %405 = llhd.prb %a_short : i16</pre>
+      <pre>      %406 = comb.extract %405 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %407 = comb.replicate %406 : (i1) -&gt; i16</pre>
+      <pre>      %408 = comb.concat %407, %405 : i16, i16</pre>
+      <pre>      %409 = comb.icmp cne %404, %408 : i32</pre>
+      <pre>      cf.cond_br %409, ^bb74, ^bb75</pre>
+      <pre>    ^bb74:  // pred: ^bb73</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb75:  // pred: ^bb73</pre>
+      <pre>      llhd.wait delay %4, ^bb76</pre>
+      <pre>    ^bb76:  // pred: ^bb75</pre>
+      <pre>      %410 = llhd.prb %a_short : i16</pre>
+      <pre>      %411 = comb.extract %410 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %412 = comb.replicate %411 : (i1) -&gt; i16</pre>
+      <pre>      %413 = comb.concat %412, %410 : i16, i16</pre>
+      <pre>      %414 = llhd.prb %pos : i8</pre>
+      <pre>      %415 = comb.concat %c0_i24, %414 : i24, i8</pre>
+      <pre>      %416 = comb.shl %413, %415 : i32</pre>
+      <pre>      llhd.drv %temp, %416 after %3 : i32</pre>
+      <pre>      %417 = llhd.prb %a_short : i16</pre>
+      <pre>      %418 = llhd.prb %pos : i8</pre>
+      <pre>      %419 = comb.concat %c0_i8, %418 : i8, i8</pre>
+      <pre>      %420 = comb.shl %417, %419 : i16</pre>
+      <pre>      llhd.drv %a_short, %420 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb77</pre>
+      <pre>    ^bb77:  // pred: ^bb76</pre>
+      <pre>      %421 = llhd.prb %temp : i32</pre>
+      <pre>      %422 = llhd.prb %a_short : i16</pre>
+      <pre>      %423 = comb.extract %422 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %424 = comb.replicate %423 : (i1) -&gt; i16</pre>
+      <pre>      %425 = comb.concat %424, %422 : i16, i16</pre>
+      <pre>      %426 = comb.icmp cne %421, %425 : i32</pre>
+      <pre>      cf.cond_br %426, ^bb78, ^bb79</pre>
+      <pre>    ^bb78:  // pred: ^bb77</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb79:  // pred: ^bb77</pre>
+      <pre>      llhd.wait delay %4, ^bb80</pre>
+      <pre>    ^bb80:  // pred: ^bb79</pre>
+      <pre>      %427 = llhd.prb %a_short : i16</pre>
+      <pre>      %428 = comb.extract %427 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %429 = comb.replicate %428 : (i1) -&gt; i16</pre>
+      <pre>      %430 = comb.concat %429, %427 : i16, i16</pre>
+      <pre>      %431 = llhd.prb %pos : i8</pre>
+      <pre>      %432 = comb.concat %c0_i24, %431 : i24, i8</pre>
+      <pre>      %433 = comb.shrs %430, %432 : i32</pre>
+      <pre>      llhd.drv %temp, %433 after %3 : i32</pre>
+      <pre>      %434 = llhd.prb %a_short : i16</pre>
+      <pre>      %435 = llhd.prb %pos : i8</pre>
+      <pre>      %436 = comb.concat %c0_i8, %435 : i8, i8</pre>
+      <pre>      %437 = comb.shrs %434, %436 : i16</pre>
+      <pre>      llhd.drv %a_short, %437 after %3 : i16</pre>
+      <pre>      llhd.wait delay %4, ^bb81</pre>
+      <pre>    ^bb81:  // pred: ^bb80</pre>
+      <pre>      %438 = llhd.prb %temp : i32</pre>
+      <pre>      %439 = llhd.prb %a_short : i16</pre>
+      <pre>      %440 = comb.extract %439 from 15 : (i16) -&gt; i1</pre>
+      <pre>      %441 = comb.replicate %440 : (i1) -&gt; i16</pre>
+      <pre>      %442 = comb.concat %441, %439 : i16, i16</pre>
+      <pre>      %443 = comb.icmp cne %438, %442 : i32</pre>
+      <pre>      cf.cond_br %443, ^bb82, ^bb83</pre>
+      <pre>    ^bb82:  // pred: ^bb81</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb83:  // pred: ^bb81</pre>
+      <pre>      %444 = llhd.prb %i : i32</pre>
+      <pre>      %445 = comb.add %444, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %445 after %3 : i32</pre>
+      <pre>      cf.br ^bb34</pre>
+      <pre>    ^bb84:  // pred: ^bb34</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %3 : i32</pre>
+      <pre>      cf.br ^bb85</pre>
+      <pre>    ^bb85:  // 2 preds: ^bb84, ^bb134</pre>
+      <pre>      %446 = llhd.prb %i : i32</pre>
+      <pre>      %447 = comb.icmp slt %446, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %447, ^bb86, ^bb135</pre>
+      <pre>    ^bb86:  // pred: ^bb85</pre>
+      <pre>      %448 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %449 = comb.mods %448, %c64_i32 : i32</pre>
+      <pre>      %450 = comb.extract %449 from 0 : (i32) -&gt; i30</pre>
+      <pre>      %451 = comb.concat %450, %c0_i2 : i30, i2</pre>
+      <pre>      llhd.drv %a_int, %451 after %3 : i32</pre>
+      <pre>      %452 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %453 = comb.mods %452, %c3_i32 : i32</pre>
+      <pre>      %454 = comb.extract %453 from 0 : (i32) -&gt; i6</pre>
+      <pre>      %455 = comb.concat %454, %c0_i2 : i6, i2</pre>
+      <pre>      llhd.drv %amount, %455 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb87</pre>
+      <pre>    ^bb87:  // pred: ^bb86</pre>
+      <pre>      %456 = llhd.prb %a_int : i32</pre>
+      <pre>      %457 = llhd.prb %amount : i8</pre>
+      <pre>      %458 = comb.extract %457 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %459 = comb.replicate %458 : (i1) -&gt; i24</pre>
+      <pre>      %460 = comb.concat %459, %457 : i24, i8</pre>
+      <pre>      %461 = comb.add %456, %460 : i32</pre>
+      <pre>      llhd.drv %temp, %461 after %3 : i32</pre>
+      <pre>      %462 = llhd.prb %a_int : i32</pre>
+      <pre>      %463 = llhd.prb %amount : i8</pre>
+      <pre>      %464 = comb.extract %463 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %465 = comb.replicate %464 : (i1) -&gt; i24</pre>
+      <pre>      %466 = comb.concat %465, %463 : i24, i8</pre>
+      <pre>      %467 = comb.add %462, %466 : i32</pre>
+      <pre>      llhd.drv %a_int, %467 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb88</pre>
+      <pre>    ^bb88:  // pred: ^bb87</pre>
+      <pre>      %468 = llhd.prb %temp : i32</pre>
+      <pre>      %469 = llhd.prb %a_int : i32</pre>
+      <pre>      %470 = comb.icmp cne %468, %469 : i32</pre>
+      <pre>      cf.cond_br %470, ^bb89, ^bb90</pre>
+      <pre>    ^bb89:  // pred: ^bb88</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb90:  // pred: ^bb88</pre>
+      <pre>      llhd.wait delay %4, ^bb91</pre>
+      <pre>    ^bb91:  // pred: ^bb90</pre>
+      <pre>      %471 = llhd.prb %a_int : i32</pre>
+      <pre>      %472 = llhd.prb %amount : i8</pre>
+      <pre>      %473 = comb.extract %472 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %474 = comb.replicate %473 : (i1) -&gt; i24</pre>
+      <pre>      %475 = comb.concat %474, %472 : i24, i8</pre>
+      <pre>      %476 = comb.sub %471, %475 : i32</pre>
+      <pre>      llhd.drv %temp, %476 after %3 : i32</pre>
+      <pre>      %477 = llhd.prb %a_int : i32</pre>
+      <pre>      %478 = llhd.prb %amount : i8</pre>
+      <pre>      %479 = comb.extract %478 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %480 = comb.replicate %479 : (i1) -&gt; i24</pre>
+      <pre>      %481 = comb.concat %480, %478 : i24, i8</pre>
+      <pre>      %482 = comb.sub %477, %481 : i32</pre>
+      <pre>      llhd.drv %a_int, %482 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb92</pre>
+      <pre>    ^bb92:  // pred: ^bb91</pre>
+      <pre>      %483 = llhd.prb %temp : i32</pre>
+      <pre>      %484 = llhd.prb %a_int : i32</pre>
+      <pre>      %485 = comb.icmp cne %483, %484 : i32</pre>
+      <pre>      cf.cond_br %485, ^bb93, ^bb94</pre>
+      <pre>    ^bb93:  // pred: ^bb92</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb94:  // pred: ^bb92</pre>
+      <pre>      llhd.wait delay %4, ^bb95</pre>
+      <pre>    ^bb95:  // pred: ^bb94</pre>
+      <pre>      %486 = llhd.prb %a_int : i32</pre>
+      <pre>      %487 = llhd.prb %amount : i8</pre>
+      <pre>      %488 = comb.extract %487 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %489 = comb.replicate %488 : (i1) -&gt; i24</pre>
+      <pre>      %490 = comb.concat %489, %487 : i24, i8</pre>
+      <pre>      %491 = comb.mul %486, %490 : i32</pre>
+      <pre>      llhd.drv %temp, %491 after %3 : i32</pre>
+      <pre>      %492 = llhd.prb %a_int : i32</pre>
+      <pre>      %493 = llhd.prb %amount : i8</pre>
+      <pre>      %494 = comb.extract %493 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %495 = comb.replicate %494 : (i1) -&gt; i24</pre>
+      <pre>      %496 = comb.concat %495, %493 : i24, i8</pre>
+      <pre>      %497 = comb.mul %492, %496 : i32</pre>
+      <pre>      llhd.drv %a_int, %497 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb96</pre>
+      <pre>    ^bb96:  // pred: ^bb95</pre>
+      <pre>      %498 = llhd.prb %temp : i32</pre>
+      <pre>      %499 = llhd.prb %a_int : i32</pre>
+      <pre>      %500 = comb.icmp cne %498, %499 : i32</pre>
+      <pre>      cf.cond_br %500, ^bb97, ^bb98</pre>
+      <pre>    ^bb97:  // pred: ^bb96</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb98:  // pred: ^bb96</pre>
+      <pre>      llhd.wait delay %4, ^bb99</pre>
+      <pre>    ^bb99:  // pred: ^bb98</pre>
+      <pre>      %501 = llhd.prb %a_int : i32</pre>
+      <pre>      %502 = llhd.prb %amount : i8</pre>
+      <pre>      %503 = comb.extract %502 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %504 = comb.replicate %503 : (i1) -&gt; i24</pre>
+      <pre>      %505 = comb.concat %504, %502 : i24, i8</pre>
+      <pre>      %506 = comb.divs %501, %505 : i32</pre>
+      <pre>      llhd.drv %temp, %506 after %3 : i32</pre>
+      <pre>      %507 = llhd.prb %a_int : i32</pre>
+      <pre>      %508 = llhd.prb %amount : i8</pre>
+      <pre>      %509 = comb.extract %508 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %510 = comb.replicate %509 : (i1) -&gt; i24</pre>
+      <pre>      %511 = comb.concat %510, %508 : i24, i8</pre>
+      <pre>      %512 = comb.divs %507, %511 : i32</pre>
+      <pre>      llhd.drv %a_int, %512 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb100</pre>
+      <pre>    ^bb100:  // pred: ^bb99</pre>
+      <pre>      %513 = llhd.prb %temp : i32</pre>
+      <pre>      %514 = llhd.prb %a_int : i32</pre>
+      <pre>      %515 = comb.icmp cne %513, %514 : i32</pre>
+      <pre>      cf.cond_br %515, ^bb101, ^bb102</pre>
+      <pre>    ^bb101:  // pred: ^bb100</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb102:  // pred: ^bb100</pre>
+      <pre>      llhd.wait delay %4, ^bb103</pre>
+      <pre>    ^bb103:  // pred: ^bb102</pre>
+      <pre>      %516 = llhd.prb %a_int : i32</pre>
+      <pre>      %517 = llhd.prb %amount : i8</pre>
+      <pre>      %518 = comb.extract %517 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %519 = comb.replicate %518 : (i1) -&gt; i24</pre>
+      <pre>      %520 = comb.concat %519, %517 : i24, i8</pre>
+      <pre>      %521 = comb.mods %516, %520 : i32</pre>
+      <pre>      llhd.drv %temp, %521 after %3 : i32</pre>
+      <pre>      %522 = llhd.prb %a_int : i32</pre>
+      <pre>      %523 = llhd.prb %amount : i8</pre>
+      <pre>      %524 = comb.extract %523 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %525 = comb.replicate %524 : (i1) -&gt; i24</pre>
+      <pre>      %526 = comb.concat %525, %523 : i24, i8</pre>
+      <pre>      %527 = comb.mods %522, %526 : i32</pre>
+      <pre>      llhd.drv %a_int, %527 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb104</pre>
+      <pre>    ^bb104:  // pred: ^bb103</pre>
+      <pre>      %528 = llhd.prb %temp : i32</pre>
+      <pre>      %529 = llhd.prb %a_int : i32</pre>
+      <pre>      %530 = comb.icmp cne %528, %529 : i32</pre>
+      <pre>      cf.cond_br %530, ^bb105, ^bb106</pre>
+      <pre>    ^bb105:  // pred: ^bb104</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb106:  // pred: ^bb104</pre>
+      <pre>      llhd.wait delay %4, ^bb107</pre>
+      <pre>    ^bb107:  // pred: ^bb106</pre>
+      <pre>      %531 = llhd.prb %a_int : i32</pre>
+      <pre>      %532 = llhd.prb %amount : i8</pre>
+      <pre>      %533 = comb.extract %532 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %534 = comb.replicate %533 : (i1) -&gt; i24</pre>
+      <pre>      %535 = comb.concat %534, %532 : i24, i8</pre>
+      <pre>      %536 = comb.and %531, %535 : i32</pre>
+      <pre>      llhd.drv %temp, %536 after %3 : i32</pre>
+      <pre>      %537 = llhd.prb %a_int : i32</pre>
+      <pre>      %538 = llhd.prb %amount : i8</pre>
+      <pre>      %539 = comb.extract %538 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %540 = comb.replicate %539 : (i1) -&gt; i24</pre>
+      <pre>      %541 = comb.concat %540, %538 : i24, i8</pre>
+      <pre>      %542 = comb.and %537, %541 : i32</pre>
+      <pre>      llhd.drv %a_int, %542 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb108</pre>
+      <pre>    ^bb108:  // pred: ^bb107</pre>
+      <pre>      %543 = llhd.prb %temp : i32</pre>
+      <pre>      %544 = llhd.prb %a_int : i32</pre>
+      <pre>      %545 = comb.icmp cne %543, %544 : i32</pre>
+      <pre>      cf.cond_br %545, ^bb109, ^bb110</pre>
+      <pre>    ^bb109:  // pred: ^bb108</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb110:  // pred: ^bb108</pre>
+      <pre>      llhd.wait delay %4, ^bb111</pre>
+      <pre>    ^bb111:  // pred: ^bb110</pre>
+      <pre>      %546 = llhd.prb %a_int : i32</pre>
+      <pre>      %547 = llhd.prb %amount : i8</pre>
+      <pre>      %548 = comb.extract %547 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %549 = comb.replicate %548 : (i1) -&gt; i24</pre>
+      <pre>      %550 = comb.concat %549, %547 : i24, i8</pre>
+      <pre>      %551 = comb.or %546, %550 : i32</pre>
+      <pre>      llhd.drv %temp, %551 after %3 : i32</pre>
+      <pre>      %552 = llhd.prb %a_int : i32</pre>
+      <pre>      %553 = llhd.prb %amount : i8</pre>
+      <pre>      %554 = comb.extract %553 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %555 = comb.replicate %554 : (i1) -&gt; i24</pre>
+      <pre>      %556 = comb.concat %555, %553 : i24, i8</pre>
+      <pre>      %557 = comb.or %552, %556 : i32</pre>
+      <pre>      llhd.drv %a_int, %557 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb112</pre>
+      <pre>    ^bb112:  // pred: ^bb111</pre>
+      <pre>      %558 = llhd.prb %temp : i32</pre>
+      <pre>      %559 = llhd.prb %a_int : i32</pre>
+      <pre>      %560 = comb.icmp cne %558, %559 : i32</pre>
+      <pre>      cf.cond_br %560, ^bb113, ^bb114</pre>
+      <pre>    ^bb113:  // pred: ^bb112</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb114:  // pred: ^bb112</pre>
+      <pre>      llhd.wait delay %4, ^bb115</pre>
+      <pre>    ^bb115:  // pred: ^bb114</pre>
+      <pre>      %561 = llhd.prb %a_int : i32</pre>
+      <pre>      %562 = llhd.prb %amount : i8</pre>
+      <pre>      %563 = comb.extract %562 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %564 = comb.replicate %563 : (i1) -&gt; i24</pre>
+      <pre>      %565 = comb.concat %564, %562 : i24, i8</pre>
+      <pre>      %566 = comb.xor %561, %565 : i32</pre>
+      <pre>      llhd.drv %temp, %566 after %3 : i32</pre>
+      <pre>      %567 = llhd.prb %a_int : i32</pre>
+      <pre>      %568 = llhd.prb %amount : i8</pre>
+      <pre>      %569 = comb.extract %568 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %570 = comb.replicate %569 : (i1) -&gt; i24</pre>
+      <pre>      %571 = comb.concat %570, %568 : i24, i8</pre>
+      <pre>      %572 = comb.xor %567, %571 : i32</pre>
+      <pre>      llhd.drv %a_int, %572 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb116</pre>
+      <pre>    ^bb116:  // pred: ^bb115</pre>
+      <pre>      %573 = llhd.prb %temp : i32</pre>
+      <pre>      %574 = llhd.prb %a_int : i32</pre>
+      <pre>      %575 = comb.icmp cne %573, %574 : i32</pre>
+      <pre>      cf.cond_br %575, ^bb117, ^bb118</pre>
+      <pre>    ^bb117:  // pred: ^bb116</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb118:  // pred: ^bb116</pre>
+      <pre>      llhd.wait delay %4, ^bb119</pre>
+      <pre>    ^bb119:  // pred: ^bb118</pre>
+      <pre>      %576 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %577 = comb.modu %576, %c3_i32 : i32</pre>
+      <pre>      %578 = comb.extract %577 from 0 : (i32) -&gt; i6</pre>
+      <pre>      %579 = comb.concat %578, %c0_i2 : i6, i2</pre>
+      <pre>      llhd.drv %pos, %579 after %3 : i8</pre>
+      <pre>      %580 = llhd.prb %a_int : i32</pre>
+      <pre>      %581 = llhd.prb %pos : i8</pre>
+      <pre>      %582 = comb.concat %c0_i24, %581 : i24, i8</pre>
+      <pre>      %583 = comb.shl %580, %582 : i32</pre>
+      <pre>      llhd.drv %temp, %583 after %3 : i32</pre>
+      <pre>      %584 = llhd.prb %a_int : i32</pre>
+      <pre>      %585 = llhd.prb %pos : i8</pre>
+      <pre>      %586 = comb.concat %c0_i24, %585 : i24, i8</pre>
+      <pre>      %587 = comb.shl %584, %586 : i32</pre>
+      <pre>      llhd.drv %a_int, %587 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb120</pre>
+      <pre>    ^bb120:  // pred: ^bb119</pre>
+      <pre>      %588 = llhd.prb %temp : i32</pre>
+      <pre>      %589 = llhd.prb %a_int : i32</pre>
+      <pre>      %590 = comb.icmp cne %588, %589 : i32</pre>
+      <pre>      cf.cond_br %590, ^bb121, ^bb122</pre>
+      <pre>    ^bb121:  // pred: ^bb120</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb122:  // pred: ^bb120</pre>
+      <pre>      llhd.wait delay %4, ^bb123</pre>
+      <pre>    ^bb123:  // pred: ^bb122</pre>
+      <pre>      %591 = llhd.prb %a_int : i32</pre>
+      <pre>      %592 = llhd.prb %pos : i8</pre>
+      <pre>      %593 = comb.concat %c0_i24, %592 : i24, i8</pre>
+      <pre>      %594 = comb.shru %591, %593 : i32</pre>
+      <pre>      llhd.drv %temp, %594 after %3 : i32</pre>
+      <pre>      %595 = llhd.prb %a_int : i32</pre>
+      <pre>      %596 = llhd.prb %pos : i8</pre>
+      <pre>      %597 = comb.concat %c0_i24, %596 : i24, i8</pre>
+      <pre>      %598 = comb.shru %595, %597 : i32</pre>
+      <pre>      llhd.drv %a_int, %598 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb124</pre>
+      <pre>    ^bb124:  // pred: ^bb123</pre>
+      <pre>      %599 = llhd.prb %temp : i32</pre>
+      <pre>      %600 = llhd.prb %a_int : i32</pre>
+      <pre>      %601 = comb.icmp cne %599, %600 : i32</pre>
+      <pre>      cf.cond_br %601, ^bb125, ^bb126</pre>
+      <pre>    ^bb125:  // pred: ^bb124</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb126:  // pred: ^bb124</pre>
+      <pre>      llhd.wait delay %4, ^bb127</pre>
+      <pre>    ^bb127:  // pred: ^bb126</pre>
+      <pre>      %602 = llhd.prb %a_int : i32</pre>
+      <pre>      %603 = llhd.prb %pos : i8</pre>
+      <pre>      %604 = comb.concat %c0_i24, %603 : i24, i8</pre>
+      <pre>      %605 = comb.shl %602, %604 : i32</pre>
+      <pre>      llhd.drv %temp, %605 after %3 : i32</pre>
+      <pre>      %606 = llhd.prb %a_int : i32</pre>
+      <pre>      %607 = llhd.prb %pos : i8</pre>
+      <pre>      %608 = comb.concat %c0_i24, %607 : i24, i8</pre>
+      <pre>      %609 = comb.shl %606, %608 : i32</pre>
+      <pre>      llhd.drv %a_int, %609 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb128</pre>
+      <pre>    ^bb128:  // pred: ^bb127</pre>
+      <pre>      %610 = llhd.prb %temp : i32</pre>
+      <pre>      %611 = llhd.prb %a_int : i32</pre>
+      <pre>      %612 = comb.icmp cne %610, %611 : i32</pre>
+      <pre>      cf.cond_br %612, ^bb129, ^bb130</pre>
+      <pre>    ^bb129:  // pred: ^bb128</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb130:  // pred: ^bb128</pre>
+      <pre>      llhd.wait delay %4, ^bb131</pre>
+      <pre>    ^bb131:  // pred: ^bb130</pre>
+      <pre>      %613 = llhd.prb %a_int : i32</pre>
+      <pre>      %614 = llhd.prb %pos : i8</pre>
+      <pre>      %615 = comb.concat %c0_i24, %614 : i24, i8</pre>
+      <pre>      %616 = comb.shrs %613, %615 : i32</pre>
+      <pre>      llhd.drv %temp, %616 after %3 : i32</pre>
+      <pre>      %617 = llhd.prb %a_int : i32</pre>
+      <pre>      %618 = llhd.prb %pos : i8</pre>
+      <pre>      %619 = comb.concat %c0_i24, %618 : i24, i8</pre>
+      <pre>      %620 = comb.shru %617, %619 : i32</pre>
+      <pre>      llhd.drv %a_int, %620 after %3 : i32</pre>
+      <pre>      llhd.wait delay %4, ^bb132</pre>
+      <pre>    ^bb132:  // pred: ^bb131</pre>
+      <pre>      %621 = llhd.prb %temp : i32</pre>
+      <pre>      %622 = llhd.prb %a_int : i32</pre>
+      <pre>      %623 = comb.icmp cne %621, %622 : i32</pre>
+      <pre>      cf.cond_br %623, ^bb133, ^bb134</pre>
+      <pre>    ^bb133:  // pred: ^bb132</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb134:  // pred: ^bb132</pre>
+      <pre>      %624 = llhd.prb %i : i32</pre>
+      <pre>      %625 = comb.add %624, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %625 after %3 : i32</pre>
+      <pre>      cf.br ^bb85</pre>
+      <pre>    ^bb135:  // pred: ^bb85</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %3 : i32</pre>
+      <pre>      cf.br ^bb136</pre>
+      <pre>    ^bb136:  // 2 preds: ^bb135, ^bb185</pre>
+      <pre>      %626 = llhd.prb %i : i32</pre>
+      <pre>      %627 = comb.icmp slt %626, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %627, ^bb137, ^bb186</pre>
+      <pre>    ^bb137:  // pred: ^bb136</pre>
+      <pre>      %628 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %629 = comb.extract %628 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %630 = comb.replicate %629 : (i1) -&gt; i32</pre>
+      <pre>      %631 = comb.concat %630, %628 : i32, i32</pre>
+      <pre>      %632 = comb.mods %631, %c64_i64 : i64</pre>
+      <pre>      %633 = comb.extract %632 from 0 : (i64) -&gt; i61</pre>
+      <pre>      %634 = comb.concat %633, %c0_i3 : i61, i3</pre>
+      <pre>      llhd.drv %a_long, %634 after %3 : i64</pre>
+      <pre>      %635 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %636 = comb.mods %635, %c3_i32 : i32</pre>
+      <pre>      %637 = comb.extract %636 from 0 : (i32) -&gt; i5</pre>
+      <pre>      %638 = comb.concat %637, %c0_i3 : i5, i3</pre>
+      <pre>      llhd.drv %amount, %638 after %3 : i8</pre>
+      <pre>      llhd.wait delay %4, ^bb138</pre>
+      <pre>    ^bb138:  // pred: ^bb137</pre>
+      <pre>      %639 = llhd.prb %a_long : i64</pre>
+      <pre>      %640 = llhd.prb %amount : i8</pre>
+      <pre>      %641 = comb.extract %640 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %642 = comb.extract %639 from 0 : (i64) -&gt; i32</pre>
+      <pre>      %643 = comb.replicate %641 : (i1) -&gt; i24</pre>
+      <pre>      %644 = comb.concat %643, %640 : i24, i8</pre>
+      <pre>      %645 = comb.add %642, %644 : i32</pre>
+      <pre>      llhd.drv %temp, %645 after %3 : i32</pre>
+      <pre>      %646 = llhd.prb %a_long : i64</pre>
+      <pre>      %647 = llhd.prb %amount : i8</pre>
+      <pre>      %648 = comb.extract %647 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %649 = comb.replicate %648 : (i1) -&gt; i56</pre>
+      <pre>      %650 = comb.concat %649, %647 : i56, i8</pre>
+      <pre>      %651 = comb.add %646, %650 : i64</pre>
+      <pre>      llhd.drv %a_long, %651 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb139</pre>
+      <pre>    ^bb139:  // pred: ^bb138</pre>
+      <pre>      %652 = llhd.prb %temp : i32</pre>
+      <pre>      %653 = comb.extract %652 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %654 = comb.replicate %653 : (i1) -&gt; i32</pre>
+      <pre>      %655 = comb.concat %654, %652 : i32, i32</pre>
+      <pre>      %656 = llhd.prb %a_long : i64</pre>
+      <pre>      %657 = comb.icmp cne %655, %656 : i64</pre>
+      <pre>      cf.cond_br %657, ^bb140, ^bb141</pre>
+      <pre>    ^bb140:  // pred: ^bb139</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb141:  // pred: ^bb139</pre>
+      <pre>      llhd.wait delay %4, ^bb142</pre>
+      <pre>    ^bb142:  // pred: ^bb141</pre>
+      <pre>      %658 = llhd.prb %a_long : i64</pre>
+      <pre>      %659 = llhd.prb %amount : i8</pre>
+      <pre>      %660 = comb.extract %659 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %661 = comb.extract %658 from 0 : (i64) -&gt; i32</pre>
+      <pre>      %662 = comb.replicate %660 : (i1) -&gt; i24</pre>
+      <pre>      %663 = comb.concat %662, %659 : i24, i8</pre>
+      <pre>      %664 = comb.sub %661, %663 : i32</pre>
+      <pre>      llhd.drv %temp, %664 after %3 : i32</pre>
+      <pre>      %665 = llhd.prb %a_long : i64</pre>
+      <pre>      %666 = llhd.prb %amount : i8</pre>
+      <pre>      %667 = comb.extract %666 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %668 = comb.replicate %667 : (i1) -&gt; i56</pre>
+      <pre>      %669 = comb.concat %668, %666 : i56, i8</pre>
+      <pre>      %670 = comb.sub %665, %669 : i64</pre>
+      <pre>      llhd.drv %a_long, %670 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb143</pre>
+      <pre>    ^bb143:  // pred: ^bb142</pre>
+      <pre>      %671 = llhd.prb %temp : i32</pre>
+      <pre>      %672 = comb.extract %671 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %673 = comb.replicate %672 : (i1) -&gt; i32</pre>
+      <pre>      %674 = comb.concat %673, %671 : i32, i32</pre>
+      <pre>      %675 = llhd.prb %a_long : i64</pre>
+      <pre>      %676 = comb.icmp cne %674, %675 : i64</pre>
+      <pre>      cf.cond_br %676, ^bb144, ^bb145</pre>
+      <pre>    ^bb144:  // pred: ^bb143</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb145:  // pred: ^bb143</pre>
+      <pre>      llhd.wait delay %4, ^bb146</pre>
+      <pre>    ^bb146:  // pred: ^bb145</pre>
+      <pre>      %677 = llhd.prb %a_long : i64</pre>
+      <pre>      %678 = llhd.prb %amount : i8</pre>
+      <pre>      %679 = comb.extract %678 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %680 = comb.extract %677 from 0 : (i64) -&gt; i32</pre>
+      <pre>      %681 = comb.replicate %679 : (i1) -&gt; i24</pre>
+      <pre>      %682 = comb.concat %681, %678 : i24, i8</pre>
+      <pre>      %683 = comb.mul %680, %682 : i32</pre>
+      <pre>      llhd.drv %temp, %683 after %3 : i32</pre>
+      <pre>      %684 = llhd.prb %a_long : i64</pre>
+      <pre>      %685 = llhd.prb %amount : i8</pre>
+      <pre>      %686 = comb.extract %685 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %687 = comb.replicate %686 : (i1) -&gt; i56</pre>
+      <pre>      %688 = comb.concat %687, %685 : i56, i8</pre>
+      <pre>      %689 = comb.mul %684, %688 : i64</pre>
+      <pre>      llhd.drv %a_long, %689 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb147</pre>
+      <pre>    ^bb147:  // pred: ^bb146</pre>
+      <pre>      %690 = llhd.prb %temp : i32</pre>
+      <pre>      %691 = comb.extract %690 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %692 = comb.replicate %691 : (i1) -&gt; i32</pre>
+      <pre>      %693 = comb.concat %692, %690 : i32, i32</pre>
+      <pre>      %694 = llhd.prb %a_long : i64</pre>
+      <pre>      %695 = comb.icmp cne %693, %694 : i64</pre>
+      <pre>      cf.cond_br %695, ^bb148, ^bb149</pre>
+      <pre>    ^bb148:  // pred: ^bb147</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb149:  // pred: ^bb147</pre>
+      <pre>      llhd.wait delay %4, ^bb150</pre>
+      <pre>    ^bb150:  // pred: ^bb149</pre>
+      <pre>      %696 = llhd.prb %a_long : i64</pre>
+      <pre>      %697 = llhd.prb %amount : i8</pre>
+      <pre>      %698 = comb.extract %697 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %699 = comb.replicate %698 : (i1) -&gt; i56</pre>
+      <pre>      %700 = comb.concat %699, %697 : i56, i8</pre>
+      <pre>      %701 = comb.divs %696, %700 : i64</pre>
+      <pre>      %702 = comb.extract %701 from 0 : (i64) -&gt; i32</pre>
+      <pre>      llhd.drv %temp, %702 after %3 : i32</pre>
+      <pre>      %703 = llhd.prb %a_long : i64</pre>
+      <pre>      %704 = llhd.prb %amount : i8</pre>
+      <pre>      %705 = comb.extract %704 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %706 = comb.replicate %705 : (i1) -&gt; i56</pre>
+      <pre>      %707 = comb.concat %706, %704 : i56, i8</pre>
+      <pre>      %708 = comb.divs %703, %707 : i64</pre>
+      <pre>      llhd.drv %a_long, %708 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb151</pre>
+      <pre>    ^bb151:  // pred: ^bb150</pre>
+      <pre>      %709 = llhd.prb %temp : i32</pre>
+      <pre>      %710 = comb.extract %709 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %711 = comb.replicate %710 : (i1) -&gt; i32</pre>
+      <pre>      %712 = comb.concat %711, %709 : i32, i32</pre>
+      <pre>      %713 = llhd.prb %a_long : i64</pre>
+      <pre>      %714 = comb.icmp cne %712, %713 : i64</pre>
+      <pre>      cf.cond_br %714, ^bb152, ^bb153</pre>
+      <pre>    ^bb152:  // pred: ^bb151</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb153:  // pred: ^bb151</pre>
+      <pre>      llhd.wait delay %4, ^bb154</pre>
+      <pre>    ^bb154:  // pred: ^bb153</pre>
+      <pre>      %715 = llhd.prb %a_long : i64</pre>
+      <pre>      %716 = llhd.prb %amount : i8</pre>
+      <pre>      %717 = comb.extract %716 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %718 = comb.replicate %717 : (i1) -&gt; i56</pre>
+      <pre>      %719 = comb.concat %718, %716 : i56, i8</pre>
+      <pre>      %720 = comb.mods %715, %719 : i64</pre>
+      <pre>      %721 = comb.extract %720 from 0 : (i64) -&gt; i32</pre>
+      <pre>      llhd.drv %temp, %721 after %3 : i32</pre>
+      <pre>      %722 = llhd.prb %a_long : i64</pre>
+      <pre>      %723 = llhd.prb %amount : i8</pre>
+      <pre>      %724 = comb.extract %723 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %725 = comb.replicate %724 : (i1) -&gt; i56</pre>
+      <pre>      %726 = comb.concat %725, %723 : i56, i8</pre>
+      <pre>      %727 = comb.mods %722, %726 : i64</pre>
+      <pre>      llhd.drv %a_long, %727 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb155</pre>
+      <pre>    ^bb155:  // pred: ^bb154</pre>
+      <pre>      %728 = llhd.prb %temp : i32</pre>
+      <pre>      %729 = comb.extract %728 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %730 = comb.replicate %729 : (i1) -&gt; i32</pre>
+      <pre>      %731 = comb.concat %730, %728 : i32, i32</pre>
+      <pre>      %732 = llhd.prb %a_long : i64</pre>
+      <pre>      %733 = comb.icmp cne %731, %732 : i64</pre>
+      <pre>      cf.cond_br %733, ^bb156, ^bb157</pre>
+      <pre>    ^bb156:  // pred: ^bb155</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb157:  // pred: ^bb155</pre>
+      <pre>      llhd.wait delay %4, ^bb158</pre>
+      <pre>    ^bb158:  // pred: ^bb157</pre>
+      <pre>      %734 = llhd.prb %a_long : i64</pre>
+      <pre>      %735 = llhd.prb %amount : i8</pre>
+      <pre>      %736 = comb.extract %735 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %737 = comb.extract %734 from 0 : (i64) -&gt; i32</pre>
+      <pre>      %738 = comb.replicate %736 : (i1) -&gt; i24</pre>
+      <pre>      %739 = comb.concat %738, %735 : i24, i8</pre>
+      <pre>      %740 = comb.and %737, %739 : i32</pre>
+      <pre>      llhd.drv %temp, %740 after %3 : i32</pre>
+      <pre>      %741 = llhd.prb %a_long : i64</pre>
+      <pre>      %742 = llhd.prb %amount : i8</pre>
+      <pre>      %743 = comb.extract %742 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %744 = comb.replicate %743 : (i1) -&gt; i56</pre>
+      <pre>      %745 = comb.concat %744, %742 : i56, i8</pre>
+      <pre>      %746 = comb.and %741, %745 : i64</pre>
+      <pre>      llhd.drv %a_long, %746 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb159</pre>
+      <pre>    ^bb159:  // pred: ^bb158</pre>
+      <pre>      %747 = llhd.prb %temp : i32</pre>
+      <pre>      %748 = comb.extract %747 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %749 = comb.replicate %748 : (i1) -&gt; i32</pre>
+      <pre>      %750 = comb.concat %749, %747 : i32, i32</pre>
+      <pre>      %751 = llhd.prb %a_long : i64</pre>
+      <pre>      %752 = comb.icmp cne %750, %751 : i64</pre>
+      <pre>      cf.cond_br %752, ^bb160, ^bb161</pre>
+      <pre>    ^bb160:  // pred: ^bb159</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb161:  // pred: ^bb159</pre>
+      <pre>      llhd.wait delay %4, ^bb162</pre>
+      <pre>    ^bb162:  // pred: ^bb161</pre>
+      <pre>      %753 = llhd.prb %a_long : i64</pre>
+      <pre>      %754 = llhd.prb %amount : i8</pre>
+      <pre>      %755 = comb.extract %754 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %756 = comb.extract %753 from 0 : (i64) -&gt; i32</pre>
+      <pre>      %757 = comb.replicate %755 : (i1) -&gt; i24</pre>
+      <pre>      %758 = comb.concat %757, %754 : i24, i8</pre>
+      <pre>      %759 = comb.or %756, %758 : i32</pre>
+      <pre>      llhd.drv %temp, %759 after %3 : i32</pre>
+      <pre>      %760 = llhd.prb %a_long : i64</pre>
+      <pre>      %761 = llhd.prb %amount : i8</pre>
+      <pre>      %762 = comb.extract %761 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %763 = comb.replicate %762 : (i1) -&gt; i56</pre>
+      <pre>      %764 = comb.concat %763, %761 : i56, i8</pre>
+      <pre>      %765 = comb.or %760, %764 : i64</pre>
+      <pre>      llhd.drv %a_long, %765 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb163</pre>
+      <pre>    ^bb163:  // pred: ^bb162</pre>
+      <pre>      %766 = llhd.prb %temp : i32</pre>
+      <pre>      %767 = comb.extract %766 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %768 = comb.replicate %767 : (i1) -&gt; i32</pre>
+      <pre>      %769 = comb.concat %768, %766 : i32, i32</pre>
+      <pre>      %770 = llhd.prb %a_long : i64</pre>
+      <pre>      %771 = comb.icmp cne %769, %770 : i64</pre>
+      <pre>      cf.cond_br %771, ^bb164, ^bb165</pre>
+      <pre>    ^bb164:  // pred: ^bb163</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb165:  // pred: ^bb163</pre>
+      <pre>      llhd.wait delay %4, ^bb166</pre>
+      <pre>    ^bb166:  // pred: ^bb165</pre>
+      <pre>      %772 = llhd.prb %a_long : i64</pre>
+      <pre>      %773 = llhd.prb %amount : i8</pre>
+      <pre>      %774 = comb.extract %773 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %775 = comb.extract %772 from 0 : (i64) -&gt; i32</pre>
+      <pre>      %776 = comb.replicate %774 : (i1) -&gt; i24</pre>
+      <pre>      %777 = comb.concat %776, %773 : i24, i8</pre>
+      <pre>      %778 = comb.xor %775, %777 : i32</pre>
+      <pre>      llhd.drv %temp, %778 after %3 : i32</pre>
+      <pre>      %779 = llhd.prb %a_long : i64</pre>
+      <pre>      %780 = llhd.prb %amount : i8</pre>
+      <pre>      %781 = comb.extract %780 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %782 = comb.replicate %781 : (i1) -&gt; i56</pre>
+      <pre>      %783 = comb.concat %782, %780 : i56, i8</pre>
+      <pre>      %784 = comb.xor %779, %783 : i64</pre>
+      <pre>      llhd.drv %a_long, %784 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb167</pre>
+      <pre>    ^bb167:  // pred: ^bb166</pre>
+      <pre>      %785 = llhd.prb %temp : i32</pre>
+      <pre>      %786 = comb.extract %785 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %787 = comb.replicate %786 : (i1) -&gt; i32</pre>
+      <pre>      %788 = comb.concat %787, %785 : i32, i32</pre>
+      <pre>      %789 = llhd.prb %a_long : i64</pre>
+      <pre>      %790 = comb.icmp cne %788, %789 : i64</pre>
+      <pre>      cf.cond_br %790, ^bb168, ^bb169</pre>
+      <pre>    ^bb168:  // pred: ^bb167</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb169:  // pred: ^bb167</pre>
+      <pre>      llhd.wait delay %4, ^bb170</pre>
+      <pre>    ^bb170:  // pred: ^bb169</pre>
+      <pre>      %791 = func.call @circt_sv_random_i32() : () -&gt; i32</pre>
+      <pre>      %792 = comb.modu %791, %c3_i32 : i32</pre>
+      <pre>      %793 = comb.extract %792 from 0 : (i32) -&gt; i5</pre>
+      <pre>      %794 = comb.concat %793, %c0_i3 : i5, i3</pre>
+      <pre>      llhd.drv %pos, %794 after %3 : i8</pre>
+      <pre>      %795 = llhd.prb %a_long : i64</pre>
+      <pre>      %796 = llhd.prb %pos : i8</pre>
+      <pre>      %797 = comb.concat %c0_i56, %796 : i56, i8</pre>
+      <pre>      %798 = comb.shl %795, %797 : i64</pre>
+      <pre>      %799 = comb.extract %798 from 0 : (i64) -&gt; i32</pre>
+      <pre>      llhd.drv %temp, %799 after %3 : i32</pre>
+      <pre>      %800 = llhd.prb %a_long : i64</pre>
+      <pre>      %801 = llhd.prb %pos : i8</pre>
+      <pre>      %802 = comb.concat %c0_i56, %801 : i56, i8</pre>
+      <pre>      %803 = comb.shl %800, %802 : i64</pre>
+      <pre>      llhd.drv %a_long, %803 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb171</pre>
+      <pre>    ^bb171:  // pred: ^bb170</pre>
+      <pre>      %804 = llhd.prb %temp : i32</pre>
+      <pre>      %805 = comb.extract %804 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %806 = comb.replicate %805 : (i1) -&gt; i32</pre>
+      <pre>      %807 = comb.concat %806, %804 : i32, i32</pre>
+      <pre>      %808 = llhd.prb %a_long : i64</pre>
+      <pre>      %809 = comb.icmp cne %807, %808 : i64</pre>
+      <pre>      cf.cond_br %809, ^bb172, ^bb173</pre>
+      <pre>    ^bb172:  // pred: ^bb171</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb173:  // pred: ^bb171</pre>
+      <pre>      llhd.wait delay %4, ^bb174</pre>
+      <pre>    ^bb174:  // pred: ^bb173</pre>
+      <pre>      %810 = llhd.prb %a_long : i64</pre>
+      <pre>      %811 = llhd.prb %pos : i8</pre>
+      <pre>      %812 = comb.concat %c0_i56, %811 : i56, i8</pre>
+      <pre>      %813 = comb.shru %810, %812 : i64</pre>
+      <pre>      %814 = comb.extract %813 from 0 : (i64) -&gt; i32</pre>
+      <pre>      llhd.drv %temp, %814 after %3 : i32</pre>
+      <pre>      %815 = llhd.prb %a_long : i64</pre>
+      <pre>      %816 = llhd.prb %pos : i8</pre>
+      <pre>      %817 = comb.concat %c0_i56, %816 : i56, i8</pre>
+      <pre>      %818 = comb.shru %815, %817 : i64</pre>
+      <pre>      llhd.drv %a_long, %818 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb175</pre>
+      <pre>    ^bb175:  // pred: ^bb174</pre>
+      <pre>      %819 = llhd.prb %temp : i32</pre>
+      <pre>      %820 = comb.extract %819 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %821 = comb.replicate %820 : (i1) -&gt; i32</pre>
+      <pre>      %822 = comb.concat %821, %819 : i32, i32</pre>
+      <pre>      %823 = llhd.prb %a_long : i64</pre>
+      <pre>      %824 = comb.icmp cne %822, %823 : i64</pre>
+      <pre>      cf.cond_br %824, ^bb176, ^bb177</pre>
+      <pre>    ^bb176:  // pred: ^bb175</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb177:  // pred: ^bb175</pre>
+      <pre>      llhd.wait delay %4, ^bb178</pre>
+      <pre>    ^bb178:  // pred: ^bb177</pre>
+      <pre>      %825 = llhd.prb %a_long : i64</pre>
+      <pre>      %826 = llhd.prb %pos : i8</pre>
+      <pre>      %827 = comb.concat %c0_i56, %826 : i56, i8</pre>
+      <pre>      %828 = comb.shl %825, %827 : i64</pre>
+      <pre>      %829 = comb.extract %828 from 0 : (i64) -&gt; i32</pre>
+      <pre>      llhd.drv %temp, %829 after %3 : i32</pre>
+      <pre>      %830 = llhd.prb %a_long : i64</pre>
+      <pre>      %831 = llhd.prb %pos : i8</pre>
+      <pre>      %832 = comb.concat %c0_i56, %831 : i56, i8</pre>
+      <pre>      %833 = comb.shl %830, %832 : i64</pre>
+      <pre>      llhd.drv %a_long, %833 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb179</pre>
+      <pre>    ^bb179:  // pred: ^bb178</pre>
+      <pre>      %834 = llhd.prb %temp : i32</pre>
+      <pre>      %835 = comb.extract %834 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %836 = comb.replicate %835 : (i1) -&gt; i32</pre>
+      <pre>      %837 = comb.concat %836, %834 : i32, i32</pre>
+      <pre>      %838 = llhd.prb %a_long : i64</pre>
+      <pre>      %839 = comb.icmp cne %837, %838 : i64</pre>
+      <pre>      cf.cond_br %839, ^bb180, ^bb181</pre>
+      <pre>    ^bb180:  // pred: ^bb179</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb181:  // pred: ^bb179</pre>
+      <pre>      llhd.wait delay %4, ^bb182</pre>
+      <pre>    ^bb182:  // pred: ^bb181</pre>
+      <pre>      %840 = llhd.prb %a_long : i64</pre>
+      <pre>      %841 = llhd.prb %pos : i8</pre>
+      <pre>      %842 = comb.concat %c0_i56, %841 : i56, i8</pre>
+      <pre>      %843 = comb.shrs %840, %842 : i64</pre>
+      <pre>      %844 = comb.extract %843 from 0 : (i64) -&gt; i32</pre>
+      <pre>      llhd.drv %temp, %844 after %3 : i32</pre>
+      <pre>      %845 = llhd.prb %a_long : i64</pre>
+      <pre>      %846 = llhd.prb %pos : i8</pre>
+      <pre>      %847 = comb.concat %c0_i56, %846 : i56, i8</pre>
+      <pre>      %848 = comb.shru %845, %847 : i64</pre>
+      <pre>      llhd.drv %a_long, %848 after %3 : i64</pre>
+      <pre>      llhd.wait delay %4, ^bb183</pre>
+      <pre>    ^bb183:  // pred: ^bb182</pre>
+      <pre>      %849 = llhd.prb %temp : i32</pre>
+      <pre>      %850 = comb.extract %849 from 31 : (i32) -&gt; i1</pre>
+      <pre>      %851 = comb.replicate %850 : (i1) -&gt; i32</pre>
+      <pre>      %852 = comb.concat %851, %849 : i32, i32</pre>
+      <pre>      %853 = llhd.prb %a_long : i64</pre>
+      <pre>      %854 = comb.icmp cne %852, %853 : i64</pre>
+      <pre>      cf.cond_br %854, ^bb184, ^bb185</pre>
+      <pre>    ^bb184:  // pred: ^bb183</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb185:  // pred: ^bb183</pre>
+      <pre>      %855 = llhd.prb %i : i32</pre>
+      <pre>      %856 = comb.add %855, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %856 after %3 : i32</pre>
+      <pre>      cf.br ^bb136</pre>
+      <pre>    ^bb186:  // pred: ^bb136</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

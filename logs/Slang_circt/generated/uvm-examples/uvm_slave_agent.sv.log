@@ -1,0 +1,47 @@
+name: uvm_slave_agent
+description: UVM example - uvm_slave_agent
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path> <redacted-local-path>
+tags: uvm-examples uvm
+type: simulation elaboration parsing
+timeout: 360
+unsynthesizable: 1
+simvariants:  
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.8592586517333984
+user_time: 0.7096359999999999
+system_time: 0.42557599999999995
+ram_usage: 151424
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+in file included from ../../../third_party/tests/uvm-examples/uvm_slave_agent/agents/apb_slave_agent/apb_slave_agent_pkg.sv:26:
+../../../third_party/tests/uvm-examples/uvm_slave_agent/agents/apb_slave_agent/apb_slave_seq_item.svh:22:9: warning: macro 'uvm_record_field' redefined [-Wredef-macro]
+`define uvm_record_field(NAME,VALUE)
+        ^~~~~~~~~~~~~~~~
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:37:
+in file included from ../../../third_party/tests/uvm/src/uvm_macros.svh:85:
+../../../third_party/tests/uvm/src/macros/uvm_recorder_defines.svh:191:9: note: previous definition here
+`define uvm_record_field(NAME,VALUE,RECORDER=recorder) \
+        ^
+Top level design units:
+    hdl_top
+    hvl_top
+
+
+Build succeeded: 0 errors, 2 warnings

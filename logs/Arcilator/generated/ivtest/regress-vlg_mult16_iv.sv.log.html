@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>regress-vlg_mult16_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/contrib/mult16.v.html" target="file-frame">third_party/tools/icarus/ivtest/contrib/mult16.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:47:35</dd></div>
+        <div><dt>time elapsed</dt><dd>9.226s</dd></div>
+        <div><dt>ram usage</dt><dd>205184 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=simulation top=</pre>
+      <pre>[Arcilator] mode=simulation top=</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/contrib/mult16.v.html" target="file-frame">third_party/tools/icarus/ivtest/contrib/mult16.v</a></pre>
+      <pre>+ echo [Arcilator] Arcilator backend stage</pre>
+      <pre>[Arcilator] Arcilator backend stage</pre>
+      <pre>+ echo [Arcilator] arc lower-to-llvm stage</pre>
+      <pre>[Arcilator] arc lower-to-llvm stage</pre>
+      <pre>+ <redacted-local-path> --observe-ports --observe-wires --observe-registers --observe-named-values --state-file <redacted-local-path> --emit-llvm <redacted-local-path> -o <redacted-local-path></pre>
+      <pre>+ echo [Arcilator] header-gen stage</pre>
+      <pre>[Arcilator] header-gen stage</pre>
+      <pre>+ python3 <redacted-local-path> <redacted-local-path></pre>
+      <pre>+ echo [Arcilator] gen-driver stage</pre>
+      <pre>[Arcilator] gen-driver stage</pre>
+      <pre>+ python3 <a href="../../../../tools/arcilator_gen_driver.py.html" target="file-frame">tools/arcilator_gen_driver.py</a> <redacted-local-path> <redacted-local-path>  128 2 1 10 regress-vlg_mult16_iv ivtest <redacted-local-path> [] 0</pre>
+      <pre>+ echo [Arcilator] llc stage</pre>
+      <pre>[Arcilator] llc stage</pre>
+      <pre>+ <redacted-local-path> -O0 --filetype=obj <redacted-local-path> -o <redacted-local-path></pre>
+      <pre>+ echo [Arcilator] driver link stage</pre>
+      <pre>[Arcilator] driver link stage</pre>
+      <pre>+ /usr/bin/clang++ -std=c++17 -O1 <redacted-local-path> <redacted-local-path> -I<redacted-local-path> -I<redacted-local-path> -o <redacted-local-path> -no-pie -latomic</pre>
+      <pre>+ echo [Arcilator] native run stage</pre>
+      <pre>[Arcilator] native run stage</pre>
+      <pre>+ <redacted-local-path> <redacted-local-path></pre>
+      <pre>a = 00005cc1, b = ec67, yout = 00000000</pre>
+      <pre>a = 0000b982, b = 7633, yout = 00005cc1</pre>
+      <pre>a = 00017304, b = 3b19, yout = 00011643</pre>
+      <pre>a = 0002e608, b = 1d8c, yout = 00028947</pre>
+      <pre>a = 0005cc10, b = 0ec6, yout = 00028947</pre>
+      <pre>a = 000b9820, b = 0763, yout = 00028947</pre>
+      <pre>a = 00173040, b = 03b1, yout = 000e2167</pre>
+      <pre>a = 002e6080, b = 01d8, yout = 002551a7</pre>
+      <pre>a = 005cc100, b = 00ec, yout = 002551a7</pre>
+      <pre>a = 00b98200, b = 0076, yout = 002551a7</pre>
+      <pre>a = 01730400, b = 003b, yout = 002551a7</pre>
+      <pre>a = 02e60800, b = 001d, yout = 019855a7</pre>
+      <pre>a = 05cc1000, b = 000e, yout = 047e5da7</pre>
+      <pre>a = 0b982000, b = 0007, yout = 047e5da7</pre>
+      <pre>a = 17304000, b = 0003, yout = 10167da7</pre>
+      <pre>a = 2e608000, b = 0001, yout = 2746bda7</pre>
+      <pre>23745 * 60519 = 55a73da7, Reality = 55a73da7</pre>
+      <pre>a = 0000555e, b = c90b, yout = 00000000</pre>
+      <pre>a = 0000aabc, b = 6485, yout = 0000555e</pre>
+      <pre>a = 00015578, b = 3242, yout = 0001001a</pre>
+      <pre>a = 0002aaf0, b = 1921, yout = 0001001a</pre>
+      <pre>a = 000555e0, b = 0c90, yout = 0003ab0a</pre>
+      <pre>a = 000aabc0, b = 0648, yout = 0003ab0a</pre>
+      <pre>a = 00155780, b = 0324, yout = 0003ab0a</pre>
+      <pre>a = 002aaf00, b = 0192, yout = 0003ab0a</pre>
+      <pre>a = 00555e00, b = 00c9, yout = 0003ab0a</pre>
+      <pre>a = 00aabc00, b = 0064, yout = 0059090a</pre>
+      <pre>a = 01557800, b = 0032, yout = 0059090a</pre>
+      <pre>a = 02aaf000, b = 0019, yout = 0059090a</pre>
+      <pre>a = 0555e000, b = 000c, yout = 0303f90a</pre>
+      <pre>a = 0aabc000, b = 0006, yout = 0303f90a</pre>
+      <pre>a = 15578000, b = 0003, yout = 0303f90a</pre>
+      <pre>a = 2aaf0000, b = 0001, yout = 185b790a</pre>
+      <pre>21854 * 51467 = 430a790a, Reality = 430a790a</pre>
+      <pre>a = 0000b5b9, b = 0280, yout = 00000000</pre>
+      <pre>a = 00016b72, b = 0140, yout = 00000000</pre>
+      <pre>a = 0002d6e4, b = 00a0, yout = 00000000</pre>
+      <pre>a = 0005adc8, b = 0050, yout = 00000000</pre>
+      <pre>a = 000b5b90, b = 0028, yout = 00000000</pre>
+      <pre>a = 0016b720, b = 0014, yout = 00000000</pre>
+      <pre>a = 002d6e40, b = 000a, yout = 00000000</pre>
+      <pre>a = 005adc80, b = 0005, yout = 00000000</pre>
+      <pre>a = 00b5b900, b = 0002, yout = 005adc80</pre>
+      <pre>a = 016b7200, b = 0001, yout = 005adc80</pre>
+      <pre>46521 * 640 = 1c64e80, Reality = 1c64e80</pre>
+      <pre>a = 00003ca5, b = 8575, yout = 00000000</pre>
+      <pre>a = 0000794a, b = 42ba, yout = 00003ca5</pre>
+      <pre>a = 0000f294, b = 215d, yout = 00003ca5</pre>
+      <pre>a = 0001e528, b = 10ae, yout = 00012f39</pre>
+      <pre>a = 0003ca50, b = 0857, yout = 00012f39</pre>
+      <pre>a = 000794a0, b = 042b, yout = 0004f989</pre>
+      <pre>a = 000f2940, b = 0215, yout = 000c8e29</pre>
+      <pre>a = 001e5280, b = 010a, yout = 001bb769</pre>
+      <pre>a = 003ca500, b = 0085, yout = 001bb769</pre>
+      <pre>a = 00794a00, b = 0042, yout = 00585c69</pre>
+      <pre>a = 00f29400, b = 0021, yout = 00585c69</pre>
+      <pre>a = 01e52800, b = 0010, yout = 014af069</pre>
+      <pre>a = 03ca5000, b = 0008, yout = 014af069</pre>
+      <pre>a = 0794a000, b = 0004, yout = 014af069</pre>
+      <pre>a = 0f294000, b = 0002, yout = 014af069</pre>
+      <pre>a = 1e528000, b = 0001, yout = 014af069</pre>
+      <pre>15525 * 34165 = 1f9d7069, Reality = 1f9d7069</pre>
+      <pre>a = 00003da8, b = 6796, yout = 00000000</pre>
+      <pre>a = 00007b50, b = 33cb, yout = 00000000</pre>
+      <pre>a = 0000f6a0, b = 19e5, yout = 00007b50</pre>
+      <pre>a = 0001ed40, b = 0cf2, yout = 000171f0</pre>
+      <pre>a = 0003da80, b = 0679, yout = 000171f0</pre>
+      <pre>a = 0007b500, b = 033c, yout = 00054c70</pre>
+      <pre>a = 000f6a00, b = 019e, yout = 00054c70</pre>
+      <pre>a = 001ed400, b = 00cf, yout = 00054c70</pre>
+      <pre>a = 003da800, b = 0067, yout = 00242070</pre>
+      <pre>a = 007b5000, b = 0033, yout = 0061c870</pre>
+      <pre>a = 00f6a000, b = 0019, yout = 00dd1870</pre>
+      <pre>a = 01ed4000, b = 000c, yout = 01d3b870</pre>
+      <pre>a = 03da8000, b = 0006, yout = 01d3b870</pre>
+      <pre>a = 07b50000, b = 0003, yout = 01d3b870</pre>
+      <pre>a = 0f6a0000, b = 0001, yout = 0988b870</pre>
+      <pre>15784 * 26518 = 18f2b870, Reality = 18f2b870</pre>
+      <pre>a = 00004f61, b = 8bfe, yout = 00000000</pre>
+      <pre>a = 00009ec2, b = 45ff, yout = 00000000</pre>
+      <pre>a = 00013d84, b = 22ff, yout = 00009ec2</pre>
+      <pre>a = 00027b08, b = 117f, yout = 0001dc46</pre>
+      <pre>a = 0004f610, b = 08bf, yout = 0004574e</pre>
+      <pre>a = 0009ec20, b = 045f, yout = 00094d5e</pre>
+      <pre>a = 0013d840, b = 022f, yout = 0013397e</pre>
+      <pre>a = 0027b080, b = 0117, yout = 002711be</pre>
+      <pre>a = 004f6100, b = 008b, yout = 004ec23e</pre>
+      <pre>a = 009ec200, b = 0045, yout = 009e233e</pre>
+      <pre>a = 013d8400, b = 0022, yout = 013ce53e</pre>
+      <pre>a = 027b0800, b = 0011, yout = 013ce53e</pre>
+      <pre>a = 04f61000, b = 0008, yout = 03b7ed3e</pre>
+      <pre>a = 09ec2000, b = 0004, yout = 03b7ed3e</pre>
+      <pre>a = 13d84000, b = 0002, yout = 03b7ed3e</pre>
+      <pre>a = 27b08000, b = 0001, yout = 03b7ed3e</pre>
+      <pre>20321 * 35838 = 2b686d3e, Reality = 2b686d3e</pre>
+      <pre>a = 00005dc0, b = a28a, yout = 00000000</pre>
+      <pre>a = 0000bb80, b = 5145, yout = 00000000</pre>
+      <pre>a = 00017700, b = 28a2, yout = 0000bb80</pre>
+      <pre>a = 0002ee00, b = 1451, yout = 0000bb80</pre>
+      <pre>a = 0005dc00, b = 0a28, yout = 0003a980</pre>
+      <pre>a = 000bb800, b = 0514, yout = 0003a980</pre>
+      <pre>a = 00177000, b = 028a, yout = 0003a980</pre>
+      <pre>a = 002ee000, b = 0145, yout = 0003a980</pre>
+      <pre>a = 005dc000, b = 00a2, yout = 00328980</pre>
+      <pre>a = 00bb8000, b = 0051, yout = 00328980</pre>
+      <pre>a = 01770000, b = 0028, yout = 00ee0980</pre>
+      <pre>a = 02ee0000, b = 0014, yout = 00ee0980</pre>
+      <pre>a = 05dc0000, b = 000a, yout = 00ee0980</pre>
+      <pre>a = 0bb80000, b = 0005, yout = 00ee0980</pre>
+      <pre>a = 17700000, b = 0002, yout = 0ca60980</pre>
+      <pre>a = 2ee00000, b = 0001, yout = 0ca60980</pre>
+      <pre>24000 * 41610 = 3b860980, Reality = 3b860980</pre>
+      <pre>a = 000057a8, b = 4a3b, yout = 00000000</pre>
+      <pre>a = 0000af50, b = 251d, yout = 000057a8</pre>
+      <pre>a = 00015ea0, b = 128e, yout = 000106f8</pre>
+      <pre>a = 0002bd40, b = 0947, yout = 000106f8</pre>
+      <pre>a = 00057a80, b = 04a3, yout = 0003c438</pre>
+      <pre>a = 000af500, b = 0251, yout = 00093eb8</pre>
+      <pre>a = 0015ea00, b = 0128, yout = 001433b8</pre>
+      <pre>a = 002bd400, b = 0094, yout = 001433b8</pre>
+      <pre>a = 0057a800, b = 004a, yout = 001433b8</pre>
+      <pre>a = 00af5000, b = 0025, yout = 001433b8</pre>
+      <pre>a = 015ea000, b = 0012, yout = 00c383b8</pre>
+      <pre>a = 02bd4000, b = 0009, yout = 00c383b8</pre>
+      <pre>a = 057a8000, b = 0004, yout = 0380c3b8</pre>
+      <pre>a = 0af50000, b = 0002, yout = 0380c3b8</pre>
+      <pre>a = 15ea0000, b = 0001, yout = 0380c3b8</pre>
+      <pre>22440 * 19003 = 196ac3b8, Reality = 196ac3b8</pre>
+      <pre>a = 00000b63, b = aaf1, yout = 00000000</pre>
+      <pre>a = 000016c6, b = 5578, yout = 00000b63</pre>
+      <pre>a = 00002d8c, b = 2abc, yout = 00000b63</pre>
+      <pre>a = 00005b18, b = 155e, yout = 00000b63</pre>
+      <pre>a = 0000b630, b = 0aaf, yout = 00000b63</pre>
+      <pre>a = 00016c60, b = 0557, yout = 0000c193</pre>
+      <pre>a = 0002d8c0, b = 02ab, yout = 00022df3</pre>
+      <pre>a = 0005b180, b = 0155, yout = 000506b3</pre>
+      <pre>a = 000b6300, b = 00aa, yout = 000ab833</pre>
+      <pre>a = 0016c600, b = 0055, yout = 000ab833</pre>
+      <pre>a = 002d8c00, b = 002a, yout = 00217e33</pre>
+      <pre>a = 005b1800, b = 0015, yout = 00217e33</pre>
+      <pre>a = 00b63000, b = 000a, yout = 007c9633</pre>
+      <pre>a = 016c6000, b = 0005, yout = 007c9633</pre>
+      <pre>a = 02d8c000, b = 0002, yout = 01e8f633</pre>
+      <pre>a = 05b18000, b = 0001, yout = 01e8f633</pre>
+      <pre>2915 * 43761 = 79a7633, Reality = 79a7633</pre>
+      <pre>a = 000089ee, b = 6508, yout = 00000000</pre>
+      <pre>a = 000113dc, b = 3284, yout = 00000000</pre>
+      <pre>a = 000227b8, b = 1942, yout = 00000000</pre>
+      <pre>a = 00044f70, b = 0ca1, yout = 00000000</pre>
+      <pre>a = 00089ee0, b = 0650, yout = 00044f70</pre>
+      <pre>a = 00113dc0, b = 0328, yout = 00044f70</pre>
+      <pre>a = 00227b80, b = 0194, yout = 00044f70</pre>
+      <pre>a = 0044f700, b = 00ca, yout = 00044f70</pre>
+      <pre>a = 0089ee00, b = 0065, yout = 00044f70</pre>
+      <pre>a = 0113dc00, b = 0032, yout = 008e3d70</pre>
+      <pre>a = 0227b800, b = 0019, yout = 008e3d70</pre>
+      <pre>a = 044f7000, b = 000c, yout = 02b5f570</pre>
+      <pre>a = 089ee000, b = 0006, yout = 02b5f570</pre>
+      <pre>a = 113dc000, b = 0003, yout = 02b5f570</pre>
+      <pre>a = 227b8000, b = 0001, yout = 13f3b570</pre>
+      <pre>35310 * 25864 = 366f3570, Reality = 366f3570</pre>
+      <pre>a = 00008746, b = 0001, yout = 00000000</pre>
+      <pre>34630 * 1 = 8746, Reality = 8746</pre>
+      <pre>a = 00000001, b = 449c, yout = 00000000</pre>
+      <pre>a = 00000002, b = 224e, yout = 00000000</pre>
+      <pre>a = 00000004, b = 1127, yout = 00000000</pre>
+      <pre>a = 00000008, b = 0893, yout = 00000004</pre>
+      <pre>a = 00000010, b = 0449, yout = 0000000c</pre>
+      <pre>a = 00000020, b = 0224, yout = 0000001c</pre>
+      <pre>a = 00000040, b = 0112, yout = 0000001c</pre>
+      <pre>a = 00000080, b = 0089, yout = 0000001c</pre>
+      <pre>a = 00000100, b = 0044, yout = 0000009c</pre>
+      <pre>a = 00000200, b = 0022, yout = 0000009c</pre>
+      <pre>a = 00000400, b = 0011, yout = 0000009c</pre>
+      <pre>a = 00000800, b = 0008, yout = 0000049c</pre>
+      <pre>a = 00001000, b = 0004, yout = 0000049c</pre>
+      <pre>a = 00002000, b = 0002, yout = 0000049c</pre>
+      <pre>a = 00004000, b = 0001, yout = 0000049c</pre>
+      <pre>1 * 17564 = 449c, Reality = 449c</pre>
+      <pre>36813 * 0 = 0, Reality = 0</pre>
+      <pre>a = 00000000, b = 06ac, yout = 00000000</pre>
+      <pre>a = 00000000, b = 0356, yout = 00000000</pre>
+      <pre>a = 00000000, b = 01ab, yout = 00000000</pre>
+      <pre>a = 00000000, b = 00d5, yout = 00000000</pre>
+      <pre>a = 00000000, b = 006a, yout = 00000000</pre>
+      <pre>a = 00000000, b = 0035, yout = 00000000</pre>
+      <pre>a = 00000000, b = 001a, yout = 00000000</pre>
+      <pre>a = 00000000, b = 000d, yout = 00000000</pre>
+      <pre>a = 00000000, b = 0006, yout = 00000000</pre>
+      <pre>a = 00000000, b = 0003, yout = 00000000</pre>
+      <pre>a = 00000000, b = 0001, yout = 00000000</pre>
+      <pre>0 * 1708 = 0, Reality = 0</pre>
+      <pre>Done.  0 Errors</pre>
+      <pre>PASSED</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

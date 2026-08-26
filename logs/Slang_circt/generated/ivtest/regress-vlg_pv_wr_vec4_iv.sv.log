@@ -1,0 +1,50 @@
+name: regress-vlg_pv_wr_vec4_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11075949668884277
+user_time: 0.027170999999999997
+system_time: 0.105531
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:41
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec4.v:27:7: warning: cannot select range of [4:-1] from 'reg[3:0]' [-Wrange-oob]
+    x[4:-1] = 6'b101010;
+      ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec4.v:32:7: warning: cannot select range of [0:-1] from 'reg[3:0]' [-Wrange-oob]
+    x[0:-1] = 2'b10;
+      ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec4.v:37:7: warning: cannot select range of [4:3] from 'reg[3:0]' [-Wrange-oob]
+    x[4:3] = 2'b01;
+      ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec4.v:42:7: warning: cannot select range of [-1:-2] from 'reg[3:0]' [-Wrange-oob]
+    x[-1:-2] = 2'b11;
+      ^~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec4.v:47:7: warning: cannot select range of [6:5] from 'reg[3:0]' [-Wrange-oob]
+    x[6:5] = 2'b11;
+      ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/pv_wr_vec4.v:61:10: warning: cannot select range of 6 elements from 'reg[3:0]' [-Wrange-width-oob]
+    x[i+:6] = 6'b101010;
+         ^
+Top level design units:
+    test
+
+
+Build succeeded: 0 errors, 6 warnings

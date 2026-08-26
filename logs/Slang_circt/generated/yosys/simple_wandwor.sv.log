@@ -1,0 +1,57 @@
+name: simple_wandwor
+description: Tests imported from yosys
+files: <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path>
+tags: yosys
+results_group: imported
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.1078941822052002
+user_time: 0.021478
+system_time: 0.10321799999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:47
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path>
+../../../third_party/tools/yosys/tests/simple/wandwor.v:8:34: warning: output net port 'X' coerced to 'inout' [-Wport-coercion]
+        wandwor_foo foo_0 (C, D, X);
+                                 ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:7:23: note: driven here
+        assign X = A, X = B, Y = C, Y = D;
+                      ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:9:34: warning: output net port 'Y' coerced to 'inout' [-Wport-coercion]
+        wandwor_foo foo_1 (A, B, Y);
+                                 ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:7:37: note: driven here
+        assign X = A, X = B, Y = C, Y = D;
+                                    ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:22:21: warning: output net port 'X' coerced to 'inout' [-Wport-coercion]
+                .O({X, Y})
+                    ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:25:16: note: driven here
+        assign X = C, X = D;
+               ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:22:24: warning: output net port 'Y' coerced to 'inout' [-Wport-coercion]
+                .O({X, Y})
+                       ^
+../../../third_party/tools/yosys/tests/simple/wandwor.v:26:16: note: driven here
+        assign Y = C, Y = D;
+               ^
+Top level design units:
+    wandwor_test0
+    wandwor_test1
+
+
+Build succeeded: 0 errors, 4 warnings

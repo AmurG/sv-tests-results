@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>delete</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test queues delete function support</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.10.2.3 7.10.2</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/chapter-7/queues/delete.sv.html" target="file-frame">tests/chapter-7/queues/delete.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.045s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../tests/chapter-7/queues/delete.sv.html" target="file-frame">tests/chapter-7/queues/delete.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_queue_clear_i32(i32)</pre>
+      <pre>  func.func private @circt_sv_queue_delete_i32(i32, i32)</pre>
+      <pre>  func.func private @circt_sv_queue_size_i32(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_queue_push_back_init_i32(i32, i32) -&gt; i32</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34; == 0)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34; == 2)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34; == 3)\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;:assert: (&#34;</pre>
+      <pre>    %4 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c4_i32 = hw.constant 4 : i32</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %q = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %5 = llhd.prb %q : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %6 = func.call @circt_sv_queue_push_back_init_i32(%5, %c2_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      llhd.drv %q, %6 after %4 : i32</pre>
+      <pre>      %7 = llhd.prb %q : i32</pre>
+      <pre>      %8 = func.call @circt_sv_queue_push_back_init_i32(%7, %c3_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      llhd.drv %q, %8 after %4 : i32</pre>
+      <pre>      %9 = llhd.prb %q : i32</pre>
+      <pre>      %10 = func.call @circt_sv_queue_push_back_init_i32(%9, %c4_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      llhd.drv %q, %10 after %4 : i32</pre>
+      <pre>      %11 = llhd.prb %q : i32</pre>
+      <pre>      %12 = func.call @circt_sv_queue_size_i32(%11) : (i32) -&gt; i32</pre>
+      <pre>      %13 = sim.fmt.int 10 0 0 %12 : i32</pre>
+      <pre>      %14 = sim.fmt.concat (%3, %13, %2)</pre>
+      <pre>      sim.proc.print %14</pre>
+      <pre>      %15 = llhd.prb %q : i32</pre>
+      <pre>      func.call @circt_sv_queue_delete_i32(%15, %c0_i32) : (i32, i32) -&gt; ()</pre>
+      <pre>      %16 = llhd.prb %q : i32</pre>
+      <pre>      %17 = func.call @circt_sv_queue_size_i32(%16) : (i32) -&gt; i32</pre>
+      <pre>      %18 = sim.fmt.int 10 0 0 %17 : i32</pre>
+      <pre>      %19 = sim.fmt.concat (%3, %18, %1)</pre>
+      <pre>      sim.proc.print %19</pre>
+      <pre>      %20 = llhd.prb %q : i32</pre>
+      <pre>      func.call @circt_sv_queue_clear_i32(%20) : (i32) -&gt; ()</pre>
+      <pre>      %21 = llhd.prb %q : i32</pre>
+      <pre>      %22 = func.call @circt_sv_queue_size_i32(%21) : (i32) -&gt; i32</pre>
+      <pre>      %23 = sim.fmt.int 10 0 0 %22 : i32</pre>
+      <pre>      %24 = sim.fmt.concat (%3, %23, %0)</pre>
+      <pre>      sim.proc.print %24</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

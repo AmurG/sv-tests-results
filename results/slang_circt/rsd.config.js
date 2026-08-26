@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["cores","rsd",1,"logs/Slang/generated/rsd/rsd.sv.log.html","tests/generated/rsd/rsd.sv.html"]]

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_sdw_function5_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sdw_function5.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sdw_function5.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.042s</dd></div>
+        <div><dt>ram usage</dt><dd>21504 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sdw_function5.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sdw_function5.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @main() {</pre>
+      <pre>    %0 = hw.aggregate_constant [0 : i4, 0 : i4] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %1 = sim.fmt.literal &#34;PASSED\0A\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED - function didn&#39;t function!\0A\0A&#34;</pre>
+      <pre>    %c4_i4 = hw.constant 4 : i4</pre>
+      <pre>    %c-1_i4 = hw.constant -1 : i4</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c2_i4 = hw.constant 2 : i4</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i4 = hw.constant 0 : i4</pre>
+      <pre>    %4 = hw.aggregate_constant [0 : i4, -1 : i4] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %global_var = llhd.sig %4 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %global_var[&#34;value&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %global_var[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %result = llhd.sig %4 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %result[&#34;value&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %result[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %5, %c2_i4 after %3 : i4</pre>
+      <pre>      llhd.drv %6, %c0_i4 after %3 : i4</pre>
+      <pre>      %9 = llhd.prb %5 : i4</pre>
+      <pre>      %10 = llhd.prb %6 : i4</pre>
+      <pre>      %11 = comb.icmp eq %9, %c0_i4 : i4</pre>
+      <pre>      %12 = comb.icmp eq %10, %c0_i4 : i4</pre>
+      <pre>      %13 = comb.and %11, %12 : i1</pre>
+      <pre>      cf.cond_br %13, ^bb2(%0 : !hw.struct&lt;value: i4, unknown: i4&gt;), ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %14 = comb.icmp ne %10, %c0_i4 : i4</pre>
+      <pre>      %15 = comb.extract %9 from 0 : (i4) -&gt; i3</pre>
+      <pre>      %16 = comb.concat %15, %false : i3, i1</pre>
+      <pre>      %17 = hw.struct_create (%16, %c0_i4) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %18 = comb.mux %14, %4, %17 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      cf.br ^bb2(%18 : !hw.struct&lt;value: i4, unknown: i4&gt;)</pre>
+      <pre>    ^bb2(%19: !hw.struct&lt;value: i4, unknown: i4&gt;):  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %value = hw.struct_extract %19[&#34;value&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %19[&#34;unknown&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      llhd.drv %7, %value after %3 : i4</pre>
+      <pre>      llhd.drv %8, %unknown after %3 : i4</pre>
+      <pre>      %20 = llhd.prb %7 : i4</pre>
+      <pre>      %21 = llhd.prb %8 : i4</pre>
+      <pre>      %22 = comb.icmp ne %21, %c0_i4 : i4</pre>
+      <pre>      %23 = comb.xor %21, %c-1_i4 : i4</pre>
+      <pre>      %24 = comb.xor %20, %c4_i4 : i4</pre>
+      <pre>      %25 = comb.and %24, %23 : i4</pre>
+      <pre>      %26 = comb.icmp ne %25, %c0_i4 : i4</pre>
+      <pre>      %27 = comb.xor %26, %true : i1</pre>
+      <pre>      %28 = comb.and %27, %22 : i1</pre>
+      <pre>      %29 = comb.xor %28, %true : i1</pre>
+      <pre>      %30 = comb.and %26, %29 : i1</pre>
+      <pre>      cf.cond_br %30, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %2</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

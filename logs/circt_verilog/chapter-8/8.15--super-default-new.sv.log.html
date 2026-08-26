@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>super-def-new</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Base class has no user-defined constructor, derived class accesses superclass new()</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>8.15 uvm-req</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-8/8.15--super-default-new.sv.html" target="file-frame">tests/chapter-8/8.15--super-default-new.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.048s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../tests/chapter-8/8.15--super-default-new.sv.html" target="file-frame">tests/chapter-8/8.15--super-default-new.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_class_alloc(i32) -&gt; i32</pre>
+      <pre>  hw.module @m() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;Print\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;Hello World\0A&#34;</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %2 = llhd.constant_time &lt;100000000fs, 0d, 0e&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.wait delay %2, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      %3 = func.call @circt_sv_class_alloc(%c2_i32) : (i32) -&gt; i32</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

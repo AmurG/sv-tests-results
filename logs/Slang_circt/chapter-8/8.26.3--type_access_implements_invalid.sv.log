@@ -1,0 +1,38 @@
+name: type_access_implements_invalid
+description: access types from implemented class
+should_fail_because: typedefs are not inherited by implements operator
+tags: 8.26.3
+type: simulation elaboration
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08175253868103027
+user_time: 0.014589
+system_time: 0.085689
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv:25:45: error: use of undeclared identifier 'int_t'
+                virtual function void hello(int_t val);
+                                            ^~~~~
+../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv:34:17: error: too few arguments for 'hello'; expected 1 but 0 were provided
+                obj.hello();
+                ^~~~~~~~~
+Top level design units:
+    class_tb
+
+
+Build failed: 2 errors, 0 warnings

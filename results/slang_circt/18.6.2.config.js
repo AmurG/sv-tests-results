@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","post_randomize_method_0",1,"logs/Slang/chapter-18/18.6.2--post-randomize_method_0.sv.log.html","tests/chapter-18/18.6.2--post-randomize_method_0.sv.html"],["","pre_randomize_method_0",1,"logs/Slang/chapter-18/18.6.2--pre-randomize-method_0.sv.log.html","tests/chapter-18/18.6.2--pre-randomize-method_0.sv.html"]]

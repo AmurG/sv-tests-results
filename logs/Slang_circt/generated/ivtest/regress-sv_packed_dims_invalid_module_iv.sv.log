@@ -1,0 +1,80 @@
+name: regress-sv_packed_dims_invalid_module_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.12702107429504395
+user_time: 0.027986999999999998
+system_time: 0.12074199999999999
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:47
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:4:15: error: dimension requires a constant range
+typedef logic [] T1;
+              ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:5:16: error: value must be positive
+typedef logic [0] T2;
+               ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:6:16: error: value must be positive
+typedef logic [-1] T3;
+               ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:7:15: error: dimension requires a constant range
+typedef logic [$] T4;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:10:9: error: dimension requires a constant range
+  input [] port_a,
+        ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:11:10: error: value must be positive
+  input [0] port_b,
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:12:11: error: value must be positive
+  output [-1] port_c,
+          ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:13:10: error: dimension requires a constant range
+  output [$] port_d
+         ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:15:15: error: dimension requires a constant range
+        logic [$] a;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:17:13: error: unbounded literal '$' not allowed here
+        T1 [$] c;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:19:16: error: value must be positive
+        logic [0] d;
+               ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:21:13: error: value must be positive
+        T2 [0] f;
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:23:16: error: value must be positive
+        logic [-1] g;
+               ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:25:13: error: value must be positive
+        T3 [-1] i;
+            ^~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:27:15: error: dimension requires a constant range
+        logic [$] j;
+              ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/packed_dims_invalid_module.v:29:13: error: unbounded literal '$' not allowed here
+        T4 [$] l;
+            ^
+Top level design units:
+    test
+
+
+Build failed: 16 errors, 0 warnings

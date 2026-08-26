@@ -1,0 +1,153 @@
+name: regress-vlg_pr1704726c_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10624885559082031
+user_time: 0.019717
+system_time: 0.114298
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:42
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:24:10: error: redefinition of 'name_v'
+  genvar name_v;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:4:13: note: previous definition here
+  parameter name_v = 1; // genvar
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:26:10: error: 'name_v' is not a genvar
+    for (name_v = 0; name_v < 2; name_v = name_v + 1) begin
+         ^~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:4:13: note: declared here
+  parameter name_v = 1; // genvar
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:32:10: error: redefinition of 'name_lpv'
+  genvar name_lpv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:5:14: note: previous definition here
+  localparam name_lpv = 0; // genvar
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:34:10: error: 'name_lpv' is not a genvar
+    for (name_lpv = 0; name_lpv < 2; name_lpv = name_lpv + 1) begin
+         ^~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:5:14: note: declared here
+  localparam name_lpv = 0; // genvar
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:46:8: error: redefinition of 'name_t'
+  task name_t;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:7:13: note: previous definition here
+  parameter name_t = 1; // task
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:60:8: error: redefinition of 'name_tv'
+  task name_tv;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:54:10: note: previous definition here
+  genvar name_tv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:68:12: error: redefinition of 'name_f'
+  function name_f;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:8:13: note: previous definition here
+  parameter name_f = 1; // function
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:77:12: error: redefinition of 'name_ft'
+  function name_ft;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:74:8: note: previous definition here
+  task name_ft;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:92:12: error: redefinition of 'name_fv'
+  function name_fv;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:86:10: note: previous definition here
+  genvar name_fv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:101:8: error: redefinition of 'name_i'
+  test name_i(out[0]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:9:13: note: previous definition here
+  parameter name_i = 1; // module instance
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:107:8: error: redefinition of 'name_it'
+  test name_it(out[0]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:104:8: note: previous definition here
+  task name_it;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:114:8: error: redefinition of 'name_if'
+  test name_if(out[0]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:110:12: note: previous definition here
+  function name_if;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:123:8: error: redefinition of 'name_iv'
+  test name_iv(out[1]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:117:10: note: previous definition here
+  genvar name_iv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:127:8: error: redefinition of 'name_ii'
+  test name_ii(out[1]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:126:8: note: previous definition here
+  test name_ii(out[0]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:133:18: error: redefinition of 'name_b'
+  initial begin: name_b
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:10:13: note: previous definition here
+  parameter name_b = 1; // named block
+            ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:141:18: error: redefinition of 'name_bt'
+  initial begin: name_bt
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:138:8: note: previous definition here
+  task name_bt;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:150:18: error: redefinition of 'name_bf'
+  initial begin: name_bf
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:146:12: note: previous definition here
+  function name_bf;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:161:18: error: redefinition of 'name_bv'
+  initial begin: name_bv
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:155:10: note: previous definition here
+  genvar name_bv;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:166:8: error: redefinition of 'name_bi'
+  test name_bi(out[0]);
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:167:18: note: previous definition here
+  initial begin: name_bi
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:175:18: error: redefinition of 'name_bb'
+  initial begin: name_bb
+                 ^
+../../../third_party/tools/icarus/ivtest/ivltests/pr1704726c.v:172:18: note: previous definition here
+  initial begin: name_bb
+                 ^
+fatal error: too many errors emitted, stopping now [--error-limit=]
+Top level design units:
+    top
+
+
+Build failed: 20 errors, 0 warnings

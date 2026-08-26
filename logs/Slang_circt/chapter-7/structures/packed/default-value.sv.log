@@ -1,0 +1,35 @@
+name: packed-structures-default-members-value
+description: Test packed structures default value support
+should_fail_because: members of packed structures shall not be assigned individual default member values.
+tags: 7.2.2
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.09625864028930664
+user_time: 0.026853
+system_time: 0.109484
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-7/structures/packed/default-value.sv:26:22: error: packed members can not have initializers
+        bit [3:0] lo = c;
+                     ^ ~
+Top level design units:
+    top
+
+
+Build failed: 1 error, 0 warnings

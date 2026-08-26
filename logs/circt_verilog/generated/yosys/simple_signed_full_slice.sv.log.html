@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>simple_signed_full_slice</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/simple_signed_full_slice.sv.html" target="file-frame">tests/generated/yosys/simple_signed_full_slice.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/simple/signed_full_slice.v.html" target="file-frame">third_party/tools/yosys/tests/simple/signed_full_slice.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.042s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/simple_signed_full_slice.sv.html" target="file-frame">tests/generated/yosys/simple_signed_full_slice.sv</a> <a href="../../../../third_party/tools/yosys/tests/simple/signed_full_slice.v.html" target="file-frame">third_party/tools/yosys/tests/simple/signed_full_slice.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module private @pass_through_a(in %inp : !hw.struct&lt;value: i32, unknown: i32&gt;, out out : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %out = llhd.sig %1 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %2 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %out, %2 after %0 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %out[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %out[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %value = hw.struct_extract %inp[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %inp[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %5 = llhd.prb %3 : i32</pre>
+      <pre>    %6 = llhd.prb %4 : i32</pre>
+      <pre>    %7 = hw.struct_create (%5, %6) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    hw.output %7 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>  }</pre>
+      <pre>  hw.module @top_a(in %inp : !hw.struct&lt;value: i32, unknown: i32&gt;, out out : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %out = llhd.sig %1 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %2 = hw.struct_create (%value_0, %unknown_1) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %out, %2 after %0 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %out[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %out[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %value = hw.struct_extract %inp[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %inp[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %5 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %pt.out = hw.instance &#34;pt&#34; @pass_through_a(inp: %5: !hw.struct&lt;value: i32, unknown: i32&gt;) -&gt; (out: !hw.struct&lt;value: i32, unknown: i32&gt;)</pre>
+      <pre>    %value_0 = hw.struct_extract %pt.out[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown_1 = hw.struct_extract %pt.out[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %6 = llhd.prb %3 : i32</pre>
+      <pre>    %7 = llhd.prb %4 : i32</pre>
+      <pre>    %8 = hw.struct_create (%6, %7) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    hw.output %8 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>  }</pre>
+      <pre>  hw.module @top_b(in %inp : !hw.struct&lt;value: i32, unknown: i32&gt;, out out : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %out = llhd.sig %1 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %2 = hw.struct_create (%value_0, %unknown_1) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %out, %2 after %0 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %out[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %out[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %value = hw.struct_extract %inp[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %inp[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %5 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %pt.out = hw.instance &#34;pt&#34; @pass_through_b(inp: %5: !hw.struct&lt;value: i32, unknown: i32&gt;) -&gt; (out: !hw.struct&lt;value: i32, unknown: i32&gt;)</pre>
+      <pre>    %value_0 = hw.struct_extract %pt.out[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown_1 = hw.struct_extract %pt.out[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %6 = llhd.prb %3 : i32</pre>
+      <pre>    %7 = llhd.prb %4 : i32</pre>
+      <pre>    %8 = hw.struct_create (%6, %7) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    hw.output %8 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>  }</pre>
+      <pre>  hw.module private @pass_through_b(in %inp : !hw.struct&lt;value: i32, unknown: i32&gt;, out out : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %out = llhd.sig %1 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %2 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    llhd.drv %out, %2 after %0 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %out[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %out[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %value = hw.struct_extract %inp[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %inp[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %5 = llhd.prb %3 : i32</pre>
+      <pre>    %6 = llhd.prb %4 : i32</pre>
+      <pre>    %7 = hw.struct_create (%5, %6) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    hw.output %7 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

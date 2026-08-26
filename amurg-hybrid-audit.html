@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AmurG Hybrid Dashboard Audit</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.45; color: #151922; }
+    main { max-width: 78rem; }
+    table { border-collapse: collapse; margin: 0.75rem 0 1.25rem 0; width: 100%; }
+    th, td { border: 1px solid #d6d8df; padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+    th { background: #f1f3f7; }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.92em; overflow-wrap: anywhere; }
+    .ok { color: #0f7b3b; font-weight: 700; }
+    .bad { color: #a51d2d; font-weight: 700; }
+    .links a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>AmurG Hybrid Dashboard Audit</h1>
+  <p class="links"><a href="index.html">dashboard</a> <a target="_blank" href="amurg-hybrid-validation.json">validation JSON</a> <a target="_blank" href="amurg-hybrid-metadata.json">run metadata</a> <a target="_blank" href="report.csv">CSV</a> <a target="_blank" href="artifacts/strict/Arcilator.strict_eval.json">strict eval JSON</a> <a target="_blank" href="artifacts/strict/Arcilator.strict_eval.tsv">strict eval TSV</a></p>
+  <p>
+    The dashboard imports non-UVM rows from the existing results checkout, then
+    replaces the exact UVM <code>circt_verilog</code> and <code>Arcilator</code>
+    rows with strict logs produced from the same selected CIRCT checkout:
+    a firewall-gated private lineage.
+  </p>
+  <p>
+    Validation <span class="ok">passed</span>:
+    Arcilator pass without circt_verilog pass = 0;
+    missing circt_verilog rows = 0;
+    strict changes = circt_verilog 0, Arcilator 0;
+    gate changes = 1.
+  </p>
+  <h2>Whole-Matrix Coverage</h2>
+  <p>Only the exact UVM rows are refreshed by this integration pass; non-UVM cells are preserved from the current results checkout.</p>
+  <table>
+    <thead><tr><th>Tool</th><th>All rows</th><th>Nonzero-exit pass</th></tr></thead>
+    <tbody>
+          <tr><td>circt_verilog</td><td>4454/5093</td><td>685</td></tr>
+          <tr><td>Arcilator</td><td>4019/5093</td><td>685</td></tr>
+          <tr><td>Verilator</td><td>4850/5093</td><td>666</td></tr>
+    </tbody>
+  </table>
+  <h2>Exact-UVM Summary</h2>
+  <table>
+    <thead><tr><th>Tool</th><th>Exact UVM</th><th>Nonzero-exit pass</th><th>Rowset SHA-256</th></tr></thead>
+    <tbody>
+          <tr><td>circt_verilog</td><td>158/169</td><td>3</td><td><code>d2fa2147d4b85a77f8825d94db3a0538104b9c487a86354cd01a02b62b4cbd26</code></td></tr>
+          <tr><td>Arcilator</td><td>153/169</td><td>3</td><td><code>d2fa2147d4b85a77f8825d94db3a0538104b9c487a86354cd01a02b62b4cbd26</code></td></tr>
+          <tr><td>Verilator</td><td>153/169</td><td>3</td><td><code>d2fa2147d4b85a77f8825d94db3a0538104b9c487a86354cd01a02b62b4cbd26</code></td></tr>
+    </tbody>
+  </table>
+  <h2>Nonzero-Exit Pass Rows</h2>
+  <p>These are expected-fail negative tests that count as sv-tests passes even though the tool exit code is nonzero.</p>
+  <table>
+    <thead><tr><th>Tool</th><th>Test</th><th>Group</th><th>Exit code</th></tr></thead>
+    <tbody>
+          <tr><td>Arcilator</td><td>behavior_of_randomization_methods_5</td><td></td><td>1</td></tr>
+          <tr><td>Arcilator</td><td>controlling-constraints-with-constraint_mode_2</td><td></td><td>1</td></tr>
+          <tr><td>Arcilator</td><td>disabling-random-variables-with-rand_mode_5</td><td></td><td>1</td></tr>
+          <tr><td>Verilator</td><td>behavior_of_randomization_methods_5</td><td></td><td>1</td></tr>
+          <tr><td>Verilator</td><td>controlling-constraints-with-constraint_mode_2</td><td></td><td>1</td></tr>
+          <tr><td>Verilator</td><td>disabling-random-variables-with-rand_mode_5</td><td></td><td>1</td></tr>
+          <tr><td>circt_verilog</td><td>behavior_of_randomization_methods_5</td><td></td><td>1</td></tr>
+          <tr><td>circt_verilog</td><td>controlling-constraints-with-constraint_mode_2</td><td></td><td>1</td></tr>
+          <tr><td>circt_verilog</td><td>disabling-random-variables-with-rand_mode_5</td><td></td><td>1</td></tr>
+    </tbody>
+  </table>
+  <h2>Provenance</h2>
+  <p>Scope: <code>exact UVM rows refreshed</code>; CIRCT ref: <code>firewall-gated-private-lineage</code>; CIRCT commit: <code>bfa4797cce284c271c6fbb9020001ec7997d17d0</code>; generated: <code>2026-07-03T08:55:17+00:00</code>.</p>
+  <p>The local build path is intentionally omitted from public artifacts; raw runner outputs retain it for private reproduction.</p>
+  <p>circt_verilog UVM rows and Arcilator UVM rows were recomputed from the same CIRCT bin/ref and then corrected through strict log auditing. Non-UVM rows are preserved from the baseline results checkout.</p>
+</main>
+</body>
+</html>

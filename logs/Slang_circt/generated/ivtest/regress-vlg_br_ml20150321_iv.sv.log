@@ -1,0 +1,59 @@
+name: regress-vlg_br_ml20150321_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11900997161865234
+user_time: 0.027136999999999998
+system_time: 0.103541
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:42
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:13:17: error: use of undeclared identifier 'undeclared'
+    array[i1] = undeclared;
+                ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:21:5: error: use of undeclared identifier 'undeclared'
+    undeclared = array[i2];
+    ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:28:13: error: use of undeclared identifier 'undeclared'
+  for (i3 = undeclared; i3 < 4; i3 = i3 + 1) begin
+            ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:36:21: error: use of undeclared identifier 'undeclared'
+  for (i4 = 0; i4 < undeclared; i4 = i4 + 1) begin
+                    ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:44:34: error: use of undeclared identifier 'undeclared'
+  for (i5 = 0; i5 < 4; i5 = i5 + undeclared) begin
+                                 ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:53:15: error: use of undeclared identifier 'undeclared'
+  while (i6 < undeclared) begin
+              ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:64:17: error: use of undeclared identifier 'undeclared'
+    array[i7] = undeclared;
+                ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:73:11: error: use of undeclared identifier 'undeclared'
+  repeat (undeclared) begin
+          ^~~~~~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_ml20150321.v:84:17: error: use of undeclared identifier 'undeclared'
+    array[i9] = undeclared;
+                ^~~~~~~~~~
+Top level design units:
+    test
+
+
+Build failed: 9 errors, 0 warnings

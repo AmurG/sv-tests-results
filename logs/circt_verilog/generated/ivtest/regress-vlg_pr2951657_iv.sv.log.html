@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_pr2951657_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr2951657.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr2951657.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.042s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr2951657.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr2951657.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @m() {</pre>
+      <pre>    %0 = hw.aggregate_constant [0 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34; (expect 1)\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34; (expect 6)\0A&#34;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %5 = sim.fmt.literal &#34;y = &#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;x = &#34;</pre>
+      <pre>    %c6_i16 = hw.constant 6 : i16</pre>
+      <pre>    %c5_i16 = hw.constant 5 : i16</pre>
+      <pre>    %c4_i16 = hw.constant 4 : i16</pre>
+      <pre>    %c3_i16 = hw.constant 3 : i16</pre>
+      <pre>    %c2_i16 = hw.constant 2 : i16</pre>
+      <pre>    %c1_i16 = hw.constant 1 : i16</pre>
+      <pre>    %7 = llhd.constant_time &lt;0ns, 1d, 0e&gt;</pre>
+      <pre>    %8 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %9 = llhd.constant_time &lt;10000000fs, 0d, 0e&gt;</pre>
+      <pre>    %c0_i16 = hw.constant 0 : i16</pre>
+      <pre>    %10 = hw.aggregate_constant [0 : i16, -1 : i16] : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %x = llhd.sig %10 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %x[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %x[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %y = llhd.sig %10 : !hw.struct&lt;value: i16, unknown: i16&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %y[&#34;value&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %y[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i16, unknown: i16&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %13, %c0_i16 after %8 : i16</pre>
+      <pre>      llhd.drv %14, %c0_i16 after %8 : i16</pre>
+      <pre>      llhd.drv %11, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %11, %c1_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %11, %c2_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %11, %c3_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %11, %c4_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %11, %c5_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %11, %c6_i16 after %7 : i16</pre>
+      <pre>      llhd.drv %12, %c0_i16 after %7 : i16</pre>
+      <pre>      llhd.wait delay %9, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %15 = llhd.prb %11 : i16</pre>
+      <pre>      %16 = llhd.prb %12 : i16</pre>
+      <pre>      %17 = sim.fmt.fvint 10 0 0 %15, %16 : i16</pre>
+      <pre>      %18 = sim.fmt.concat (%6, %17, %4)</pre>
+      <pre>      sim.proc.print %18</pre>
+      <pre>      %19 = llhd.prb %13 : i16</pre>
+      <pre>      %20 = llhd.prb %14 : i16</pre>
+      <pre>      %21 = sim.fmt.fvint 10 0 0 %19, %20 : i16</pre>
+      <pre>      %22 = sim.fmt.concat (%5, %21, %3)</pre>
+      <pre>      sim.proc.print %22</pre>
+      <pre>      %23 = llhd.prb %11 : i16</pre>
+      <pre>      %24 = llhd.prb %12 : i16</pre>
+      <pre>      %25 = comb.icmp eq %23, %c6_i16 : i16</pre>
+      <pre>      %26 = comb.icmp eq %24, %c0_i16 : i16</pre>
+      <pre>      %27 = comb.and %25, %26 : i1</pre>
+      <pre>      %28 = comb.xor %27, %true : i1</pre>
+      <pre>      cf.cond_br %28, ^bb2, ^bb3</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      sim.proc.print %2</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb3:  // pred: ^bb1</pre>
+      <pre>      %29 = llhd.prb %13 : i16</pre>
+      <pre>      %30 = llhd.prb %14 : i16</pre>
+      <pre>      %31 = comb.icmp eq %29, %c1_i16 : i16</pre>
+      <pre>      %32 = comb.icmp eq %30, %c0_i16 : i16</pre>
+      <pre>      %33 = comb.and %31, %32 : i1</pre>
+      <pre>      %34 = comb.xor %33, %true : i1</pre>
+      <pre>      cf.cond_br %34, ^bb4, ^bb5</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      sim.proc.print %2</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb5:  // pred: ^bb3</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb2</pre>
+      <pre>      %15 = llhd.prb %11 : i16</pre>
+      <pre>      %16 = llhd.prb %12 : i16</pre>
+      <pre>      %17 = comb.extract %15 from 0 : (i16) -&gt; i1</pre>
+      <pre>      %18 = comb.extract %16 from 0 : (i16) -&gt; i1</pre>
+      <pre>      %19 = hw.struct_create (%17, %18) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.wait (%19 : !hw.struct&lt;value: i1, unknown: i1&gt;), ^bb2(%19 : !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    ^bb2(%20: !hw.struct&lt;value: i1, unknown: i1&gt;):  // pred: ^bb1</pre>
+      <pre>      %21 = llhd.prb %13 : i16</pre>
+      <pre>      %22 = llhd.prb %14 : i16</pre>
+      <pre>      %23 = comb.concat %c0_i16, %21 : i16, i16</pre>
+      <pre>      %24 = comb.icmp ne %22, %c0_i16 : i16</pre>
+      <pre>      %25 = comb.add %23, %c1_i32 : i32</pre>
+      <pre>      %26 = hw.struct_create (%25, %c0_i32) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %27 = comb.mux %24, %0, %26 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %value = hw.struct_extract %27[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %27[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %28 = comb.extract %value from 0 : (i32) -&gt; i16</pre>
+      <pre>      %29 = comb.extract %unknown from 0 : (i32) -&gt; i16</pre>
+      <pre>      llhd.drv %13, %28 after %7 : i16</pre>
+      <pre>      llhd.drv %14, %29 after %7 : i16</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

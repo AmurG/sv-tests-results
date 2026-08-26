@@ -1,0 +1,36 @@
+name: distribution_2
+description: distribution test
+should_fail_because: distribution shall not be applied to randc variables
+tags: 18.5.4
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10564517974853516
+user_time: 0.021419
+system_time: 0.099758
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-18/18.5.4--distribution_2.sv:20:20: error: 'randc' variables cannot be used in 'dist' constraints
+    constraint c { b dist {3 := 0, 10 := 5}; }
+                   ^
+../../../tests/chapter-18/18.5.4--distribution_2.sv:20:20: error: 'dist' expression must reference at least one 'rand' variable
+    constraint c { b dist {3 := 0, 10 := 5}; }
+                   ^
+warning: no top-level modules found in design [-Wmissing-top]
+
+Build failed: 2 errors, 1 warning

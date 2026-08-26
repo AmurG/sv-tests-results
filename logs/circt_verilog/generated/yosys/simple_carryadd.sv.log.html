@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>simple_carryadd</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/simple_carryadd.sv.html" target="file-frame">tests/generated/yosys/simple_carryadd.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/simple/carryadd.v.html" target="file-frame">third_party/tools/yosys/tests/simple/carryadd.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.047s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/simple_carryadd.sv.html" target="file-frame">tests/generated/yosys/simple_carryadd.sv</a> <a href="../../../../third_party/tools/yosys/tests/simple/carryadd.v.html" target="file-frame">third_party/tools/yosys/tests/simple/carryadd.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @carryadd(in %a : !hw.struct&lt;value: i8, unknown: i8&gt;, in %b : !hw.struct&lt;value: i8, unknown: i8&gt;, out y : !hw.struct&lt;value: i8, unknown: i8&gt;) {</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i8, -1 : i8] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %y = llhd.sig %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %2 = hw.struct_create (%4, %6) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %y, %2 after %0 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %y[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %4 = comb.concat %269, %257, %218, %179, %140, %101, %62, %23 : i1, i1, i1, i1, i1, i1, i1, i1</pre>
+      <pre>    %5 = llhd.sig.struct_extract %y[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %6 = comb.concat %266, %254, %215, %176, %137, %98, %59, %20 : i1, i1, i1, i1, i1, i1, i1, i1</pre>
+      <pre>    %value = hw.struct_extract %a[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %a[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %7 = comb.extract %value from 0 : (i8) -&gt; i1</pre>
+      <pre>    %8 = comb.extract %unknown from 0 : (i8) -&gt; i1</pre>
+      <pre>    %value_0 = hw.struct_extract %b[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %unknown_1 = hw.struct_extract %b[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %9 = comb.extract %value_0 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %10 = comb.extract %unknown_1 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %11 = comb.xor %8, %true : i1</pre>
+      <pre>    %12 = comb.xor %10, %true : i1</pre>
+      <pre>    %13 = comb.xor %7, %true : i1</pre>
+      <pre>    %14 = comb.xor %9, %true : i1</pre>
+      <pre>    %15 = comb.and %11, %13 : i1</pre>
+      <pre>    %16 = comb.and %12, %14 : i1</pre>
+      <pre>    %17 = comb.and %11, %7, %12, %9 : i1</pre>
+      <pre>    %18 = comb.or %15, %16, %17 : i1</pre>
+      <pre>    %19 = comb.xor %18, %true : i1</pre>
+      <pre>    %20 = comb.or %8, %10 : i1</pre>
+      <pre>    %21 = comb.xor %7, %9 : i1</pre>
+      <pre>    %22 = comb.xor %20, %true : i1</pre>
+      <pre>    %23 = comb.and %21, %22 : i1</pre>
+      <pre>    %24 = comb.extract %value from 1 : (i8) -&gt; i1</pre>
+      <pre>    %25 = comb.extract %unknown from 1 : (i8) -&gt; i1</pre>
+      <pre>    %26 = comb.extract %value_0 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %27 = comb.extract %unknown_1 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %28 = comb.xor %25, %true : i1</pre>
+      <pre>    %29 = comb.xor %27, %true : i1</pre>
+      <pre>    %30 = comb.xor %24, %true : i1</pre>
+      <pre>    %31 = comb.xor %26, %true : i1</pre>
+      <pre>    %32 = comb.and %28, %30 : i1</pre>
+      <pre>    %33 = comb.and %29, %31 : i1</pre>
+      <pre>    %34 = comb.and %28, %24 : i1</pre>
+      <pre>    %35 = comb.and %29, %26 : i1</pre>
+      <pre>    %36 = comb.and %34, %35 : i1</pre>
+      <pre>    %37 = comb.or %32, %33, %36 : i1</pre>
+      <pre>    %38 = comb.and %32, %33 : i1</pre>
+      <pre>    %39 = comb.or %34, %35 : i1</pre>
+      <pre>    %40 = comb.or %38, %34, %35 : i1</pre>
+      <pre>    %41 = comb.xor %39, %true : i1</pre>
+      <pre>    %42 = comb.xor %17, %true : i1</pre>
+      <pre>    %43 = comb.and %40, %41 : i1</pre>
+      <pre>    %44 = comb.and %18, %42 : i1</pre>
+      <pre>    %45 = comb.and %40, %39, %18, %17 : i1</pre>
+      <pre>    %46 = comb.or %43, %44, %45 : i1</pre>
+      <pre>    %47 = comb.xor %36, %true : i1</pre>
+      <pre>    %48 = comb.xor %45, %true : i1</pre>
+      <pre>    %49 = comb.and %37, %36 : i1</pre>
+      <pre>    %50 = comb.and %46, %45 : i1</pre>
+      <pre>    %51 = comb.and %37, %47, %46, %48 : i1</pre>
+      <pre>    %52 = comb.or %49, %50 : i1</pre>
+      <pre>    %53 = comb.or %51, %49, %50 : i1</pre>
+      <pre>    %54 = comb.xor %53, %true : i1</pre>
+      <pre>    %55 = comb.or %25, %27 : i1</pre>
+      <pre>    %56 = comb.xor %24, %26 : i1</pre>
+      <pre>    %57 = comb.xor %55, %true : i1</pre>
+      <pre>    %58 = comb.and %56, %57 : i1</pre>
+      <pre>    %59 = comb.or %55, %19 : i1</pre>
+      <pre>    %60 = comb.xor %58, %17 : i1</pre>
+      <pre>    %61 = comb.xor %59, %true : i1</pre>
+      <pre>    %62 = comb.and %60, %61 : i1</pre>
+      <pre>    %63 = comb.extract %value from 2 : (i8) -&gt; i1</pre>
+      <pre>    %64 = comb.extract %unknown from 2 : (i8) -&gt; i1</pre>
+      <pre>    %65 = comb.extract %value_0 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %66 = comb.extract %unknown_1 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %67 = comb.xor %64, %true : i1</pre>
+      <pre>    %68 = comb.xor %66, %true : i1</pre>
+      <pre>    %69 = comb.xor %63, %true : i1</pre>
+      <pre>    %70 = comb.xor %65, %true : i1</pre>
+      <pre>    %71 = comb.and %67, %69 : i1</pre>
+      <pre>    %72 = comb.and %68, %70 : i1</pre>
+      <pre>    %73 = comb.and %67, %63 : i1</pre>
+      <pre>    %74 = comb.and %68, %65 : i1</pre>
+      <pre>    %75 = comb.and %73, %74 : i1</pre>
+      <pre>    %76 = comb.or %71, %72, %75 : i1</pre>
+      <pre>    %77 = comb.and %71, %72 : i1</pre>
+      <pre>    %78 = comb.or %73, %74 : i1</pre>
+      <pre>    %79 = comb.or %77, %73, %74 : i1</pre>
+      <pre>    %80 = comb.xor %78, %true : i1</pre>
+      <pre>    %81 = comb.xor %52, %true : i1</pre>
+      <pre>    %82 = comb.and %79, %80 : i1</pre>
+      <pre>    %83 = comb.and %53, %81 : i1</pre>
+      <pre>    %84 = comb.and %79, %78, %53, %52 : i1</pre>
+      <pre>    %85 = comb.or %82, %83, %84 : i1</pre>
+      <pre>    %86 = comb.xor %75, %true : i1</pre>
+      <pre>    %87 = comb.xor %84, %true : i1</pre>
+      <pre>    %88 = comb.and %76, %75 : i1</pre>
+      <pre>    %89 = comb.and %85, %84 : i1</pre>
+      <pre>    %90 = comb.and %76, %86, %85, %87 : i1</pre>
+      <pre>    %91 = comb.or %88, %89 : i1</pre>
+      <pre>    %92 = comb.or %90, %88, %89 : i1</pre>
+      <pre>    %93 = comb.xor %92, %true : i1</pre>
+      <pre>    %94 = comb.or %64, %66 : i1</pre>
+      <pre>    %95 = comb.xor %63, %65 : i1</pre>
+      <pre>    %96 = comb.xor %94, %true : i1</pre>
+      <pre>    %97 = comb.and %95, %96 : i1</pre>
+      <pre>    %98 = comb.or %94, %54 : i1</pre>
+      <pre>    %99 = comb.xor %97, %52 : i1</pre>
+      <pre>    %100 = comb.xor %98, %true : i1</pre>
+      <pre>    %101 = comb.and %99, %100 : i1</pre>
+      <pre>    %102 = comb.extract %value from 3 : (i8) -&gt; i1</pre>
+      <pre>    %103 = comb.extract %unknown from 3 : (i8) -&gt; i1</pre>
+      <pre>    %104 = comb.extract %value_0 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %105 = comb.extract %unknown_1 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %106 = comb.xor %103, %true : i1</pre>
+      <pre>    %107 = comb.xor %105, %true : i1</pre>
+      <pre>    %108 = comb.xor %102, %true : i1</pre>
+      <pre>    %109 = comb.xor %104, %true : i1</pre>
+      <pre>    %110 = comb.and %106, %108 : i1</pre>
+      <pre>    %111 = comb.and %107, %109 : i1</pre>
+      <pre>    %112 = comb.and %106, %102 : i1</pre>
+      <pre>    %113 = comb.and %107, %104 : i1</pre>
+      <pre>    %114 = comb.and %112, %113 : i1</pre>
+      <pre>    %115 = comb.or %110, %111, %114 : i1</pre>
+      <pre>    %116 = comb.and %110, %111 : i1</pre>
+      <pre>    %117 = comb.or %112, %113 : i1</pre>
+      <pre>    %118 = comb.or %116, %112, %113 : i1</pre>
+      <pre>    %119 = comb.xor %117, %true : i1</pre>
+      <pre>    %120 = comb.xor %91, %true : i1</pre>
+      <pre>    %121 = comb.and %118, %119 : i1</pre>
+      <pre>    %122 = comb.and %92, %120 : i1</pre>
+      <pre>    %123 = comb.and %118, %117, %92, %91 : i1</pre>
+      <pre>    %124 = comb.or %121, %122, %123 : i1</pre>
+      <pre>    %125 = comb.xor %114, %true : i1</pre>
+      <pre>    %126 = comb.xor %123, %true : i1</pre>
+      <pre>    %127 = comb.and %115, %114 : i1</pre>
+      <pre>    %128 = comb.and %124, %123 : i1</pre>
+      <pre>    %129 = comb.and %115, %125, %124, %126 : i1</pre>
+      <pre>    %130 = comb.or %127, %128 : i1</pre>
+      <pre>    %131 = comb.or %129, %127, %128 : i1</pre>
+      <pre>    %132 = comb.xor %131, %true : i1</pre>
+      <pre>    %133 = comb.or %103, %105 : i1</pre>
+      <pre>    %134 = comb.xor %102, %104 : i1</pre>
+      <pre>    %135 = comb.xor %133, %true : i1</pre>
+      <pre>    %136 = comb.and %134, %135 : i1</pre>
+      <pre>    %137 = comb.or %133, %93 : i1</pre>
+      <pre>    %138 = comb.xor %136, %91 : i1</pre>
+      <pre>    %139 = comb.xor %137, %true : i1</pre>
+      <pre>    %140 = comb.and %138, %139 : i1</pre>
+      <pre>    %141 = comb.extract %value from 4 : (i8) -&gt; i1</pre>
+      <pre>    %142 = comb.extract %unknown from 4 : (i8) -&gt; i1</pre>
+      <pre>    %143 = comb.extract %value_0 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %144 = comb.extract %unknown_1 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %145 = comb.xor %142, %true : i1</pre>
+      <pre>    %146 = comb.xor %144, %true : i1</pre>
+      <pre>    %147 = comb.xor %141, %true : i1</pre>
+      <pre>    %148 = comb.xor %143, %true : i1</pre>
+      <pre>    %149 = comb.and %145, %147 : i1</pre>
+      <pre>    %150 = comb.and %146, %148 : i1</pre>
+      <pre>    %151 = comb.and %145, %141 : i1</pre>
+      <pre>    %152 = comb.and %146, %143 : i1</pre>
+      <pre>    %153 = comb.and %151, %152 : i1</pre>
+      <pre>    %154 = comb.or %149, %150, %153 : i1</pre>
+      <pre>    %155 = comb.and %149, %150 : i1</pre>
+      <pre>    %156 = comb.or %151, %152 : i1</pre>
+      <pre>    %157 = comb.or %155, %151, %152 : i1</pre>
+      <pre>    %158 = comb.xor %156, %true : i1</pre>
+      <pre>    %159 = comb.xor %130, %true : i1</pre>
+      <pre>    %160 = comb.and %157, %158 : i1</pre>
+      <pre>    %161 = comb.and %131, %159 : i1</pre>
+      <pre>    %162 = comb.and %157, %156, %131, %130 : i1</pre>
+      <pre>    %163 = comb.or %160, %161, %162 : i1</pre>
+      <pre>    %164 = comb.xor %153, %true : i1</pre>
+      <pre>    %165 = comb.xor %162, %true : i1</pre>
+      <pre>    %166 = comb.and %154, %153 : i1</pre>
+      <pre>    %167 = comb.and %163, %162 : i1</pre>
+      <pre>    %168 = comb.and %154, %164, %163, %165 : i1</pre>
+      <pre>    %169 = comb.or %166, %167 : i1</pre>
+      <pre>    %170 = comb.or %168, %166, %167 : i1</pre>
+      <pre>    %171 = comb.xor %170, %true : i1</pre>
+      <pre>    %172 = comb.or %142, %144 : i1</pre>
+      <pre>    %173 = comb.xor %141, %143 : i1</pre>
+      <pre>    %174 = comb.xor %172, %true : i1</pre>
+      <pre>    %175 = comb.and %173, %174 : i1</pre>
+      <pre>    %176 = comb.or %172, %132 : i1</pre>
+      <pre>    %177 = comb.xor %175, %130 : i1</pre>
+      <pre>    %178 = comb.xor %176, %true : i1</pre>
+      <pre>    %179 = comb.and %177, %178 : i1</pre>
+      <pre>    %180 = comb.extract %value from 5 : (i8) -&gt; i1</pre>
+      <pre>    %181 = comb.extract %unknown from 5 : (i8) -&gt; i1</pre>
+      <pre>    %182 = comb.extract %value_0 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %183 = comb.extract %unknown_1 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %184 = comb.xor %181, %true : i1</pre>
+      <pre>    %185 = comb.xor %183, %true : i1</pre>
+      <pre>    %186 = comb.xor %180, %true : i1</pre>
+      <pre>    %187 = comb.xor %182, %true : i1</pre>
+      <pre>    %188 = comb.and %184, %186 : i1</pre>
+      <pre>    %189 = comb.and %185, %187 : i1</pre>
+      <pre>    %190 = comb.and %184, %180 : i1</pre>
+      <pre>    %191 = comb.and %185, %182 : i1</pre>
+      <pre>    %192 = comb.and %190, %191 : i1</pre>
+      <pre>    %193 = comb.or %188, %189, %192 : i1</pre>
+      <pre>    %194 = comb.and %188, %189 : i1</pre>
+      <pre>    %195 = comb.or %190, %191 : i1</pre>
+      <pre>    %196 = comb.or %194, %190, %191 : i1</pre>
+      <pre>    %197 = comb.xor %195, %true : i1</pre>
+      <pre>    %198 = comb.xor %169, %true : i1</pre>
+      <pre>    %199 = comb.and %196, %197 : i1</pre>
+      <pre>    %200 = comb.and %170, %198 : i1</pre>
+      <pre>    %201 = comb.and %196, %195, %170, %169 : i1</pre>
+      <pre>    %202 = comb.or %199, %200, %201 : i1</pre>
+      <pre>    %203 = comb.xor %192, %true : i1</pre>
+      <pre>    %204 = comb.xor %201, %true : i1</pre>
+      <pre>    %205 = comb.and %193, %192 : i1</pre>
+      <pre>    %206 = comb.and %202, %201 : i1</pre>
+      <pre>    %207 = comb.and %193, %203, %202, %204 : i1</pre>
+      <pre>    %208 = comb.or %205, %206 : i1</pre>
+      <pre>    %209 = comb.or %207, %205, %206 : i1</pre>
+      <pre>    %210 = comb.xor %209, %true : i1</pre>
+      <pre>    %211 = comb.or %181, %183 : i1</pre>
+      <pre>    %212 = comb.xor %180, %182 : i1</pre>
+      <pre>    %213 = comb.xor %211, %true : i1</pre>
+      <pre>    %214 = comb.and %212, %213 : i1</pre>
+      <pre>    %215 = comb.or %211, %171 : i1</pre>
+      <pre>    %216 = comb.xor %214, %169 : i1</pre>
+      <pre>    %217 = comb.xor %215, %true : i1</pre>
+      <pre>    %218 = comb.and %216, %217 : i1</pre>
+      <pre>    %219 = comb.extract %value from 6 : (i8) -&gt; i1</pre>
+      <pre>    %220 = comb.extract %unknown from 6 : (i8) -&gt; i1</pre>
+      <pre>    %221 = comb.extract %value_0 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %222 = comb.extract %unknown_1 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %223 = comb.xor %220, %true : i1</pre>
+      <pre>    %224 = comb.xor %222, %true : i1</pre>
+      <pre>    %225 = comb.xor %219, %true : i1</pre>
+      <pre>    %226 = comb.xor %221, %true : i1</pre>
+      <pre>    %227 = comb.and %223, %225 : i1</pre>
+      <pre>    %228 = comb.and %224, %226 : i1</pre>
+      <pre>    %229 = comb.and %223, %219 : i1</pre>
+      <pre>    %230 = comb.and %224, %221 : i1</pre>
+      <pre>    %231 = comb.and %229, %230 : i1</pre>
+      <pre>    %232 = comb.or %227, %228, %231 : i1</pre>
+      <pre>    %233 = comb.and %227, %228 : i1</pre>
+      <pre>    %234 = comb.or %229, %230 : i1</pre>
+      <pre>    %235 = comb.or %233, %229, %230 : i1</pre>
+      <pre>    %236 = comb.xor %234, %true : i1</pre>
+      <pre>    %237 = comb.xor %208, %true : i1</pre>
+      <pre>    %238 = comb.and %235, %236 : i1</pre>
+      <pre>    %239 = comb.and %209, %237 : i1</pre>
+      <pre>    %240 = comb.and %235, %234, %209, %208 : i1</pre>
+      <pre>    %241 = comb.or %238, %239, %240 : i1</pre>
+      <pre>    %242 = comb.xor %231, %true : i1</pre>
+      <pre>    %243 = comb.xor %240, %true : i1</pre>
+      <pre>    %244 = comb.and %232, %231 : i1</pre>
+      <pre>    %245 = comb.and %241, %240 : i1</pre>
+      <pre>    %246 = comb.and %232, %242, %241, %243 : i1</pre>
+      <pre>    %247 = comb.or %244, %245 : i1</pre>
+      <pre>    %248 = comb.or %246, %244, %245 : i1</pre>
+      <pre>    %249 = comb.xor %248, %true : i1</pre>
+      <pre>    %250 = comb.or %220, %222 : i1</pre>
+      <pre>    %251 = comb.xor %219, %221 : i1</pre>
+      <pre>    %252 = comb.xor %250, %true : i1</pre>
+      <pre>    %253 = comb.and %251, %252 : i1</pre>
+      <pre>    %254 = comb.or %250, %210 : i1</pre>
+      <pre>    %255 = comb.xor %253, %208 : i1</pre>
+      <pre>    %256 = comb.xor %254, %true : i1</pre>
+      <pre>    %257 = comb.and %255, %256 : i1</pre>
+      <pre>    %258 = comb.extract %value from 7 : (i8) -&gt; i1</pre>
+      <pre>    %259 = comb.extract %unknown from 7 : (i8) -&gt; i1</pre>
+      <pre>    %260 = comb.extract %value_0 from 7 : (i8) -&gt; i1</pre>
+      <pre>    %261 = comb.extract %unknown_1 from 7 : (i8) -&gt; i1</pre>
+      <pre>    %262 = comb.or %259, %261 : i1</pre>
+      <pre>    %263 = comb.xor %258, %260 : i1</pre>
+      <pre>    %264 = comb.xor %262, %true : i1</pre>
+      <pre>    %265 = comb.and %263, %264 : i1</pre>
+      <pre>    %266 = comb.or %262, %249 : i1</pre>
+      <pre>    %267 = comb.xor %265, %247 : i1</pre>
+      <pre>    %268 = comb.xor %266, %true : i1</pre>
+      <pre>    %269 = comb.and %267, %268 : i1</pre>
+      <pre>    %270 = llhd.prb %3 : i8</pre>
+      <pre>    %271 = llhd.prb %5 : i8</pre>
+      <pre>    %272 = hw.struct_create (%270, %271) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    hw.output %272 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","event",1,"logs/Slang/chapter-6/6.17--event.sv.log.html","tests/chapter-6/6.17--event.sv.html"]]

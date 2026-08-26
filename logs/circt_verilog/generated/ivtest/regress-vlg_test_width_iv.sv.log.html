@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_test_width_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/test_width.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/test_width.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:14</dd></div>
+        <div><dt>time elapsed</dt><dd>0.048s</dd></div>
+        <div><dt>ram usage</dt><dd>25088 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/test_width.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/test_width.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @main() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;*|0|\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;*|                   0|\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;============================ Print $time\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;&gt;|   A|\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;============================ Print \22   A\22\0A&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;*|A|\0A&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;*|   A|\0A&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;&gt;|00000000000000000000000001000001|\0A&#34;</pre>
+      <pre>    %8 = sim.fmt.literal &#34;&gt;|00000000101|\0A&#34;</pre>
+      <pre>    %9 = sim.fmt.literal &#34;&gt;|00000041|\0A&#34;</pre>
+      <pre>    %10 = sim.fmt.literal &#34;&gt;|         65|\0A&#34;</pre>
+      <pre>    %11 = sim.fmt.literal &#34;============================ myInt = 65\0A&#34;</pre>
+      <pre>    %12 = sim.fmt.literal &#34;&gt;|4294967286|\0A&#34;</pre>
+      <pre>    %13 = sim.fmt.literal &#34;============================ myReg32 = -10\0A&#34;</pre>
+      <pre>    %14 = sim.fmt.literal &#34;&gt;|11111111111111111111111111110110|\0A&#34;</pre>
+      <pre>    %15 = sim.fmt.literal &#34;&gt;|37777777766|\0A&#34;</pre>
+      <pre>    %16 = sim.fmt.literal &#34;&gt;|fffffff6|\0A&#34;</pre>
+      <pre>    %17 = sim.fmt.literal &#34;&gt;|-10|\0A&#34;</pre>
+      <pre>    %18 = sim.fmt.literal &#34;&gt;|        -10|\0A&#34;</pre>
+      <pre>    %19 = sim.fmt.literal &#34;============================ myInt = -10\0A&#34;</pre>
+      <pre>    %20 = sim.fmt.literal &#34;&gt;|A|\0A&#34;</pre>
+      <pre>    %21 = sim.fmt.literal &#34;&gt;| A|\0A&#34;</pre>
+      <pre>    %22 = sim.fmt.literal &#34;&gt;|1000001|\0A&#34;</pre>
+      <pre>    %23 = sim.fmt.literal &#34;&gt;|00000001000001|\0A&#34;</pre>
+      <pre>    %24 = sim.fmt.literal &#34;&gt;|101|\0A&#34;</pre>
+      <pre>    %25 = sim.fmt.literal &#34;&gt;|00101|\0A&#34;</pre>
+      <pre>    %26 = sim.fmt.literal &#34;&gt;|41|\0A&#34;</pre>
+      <pre>    %27 = sim.fmt.literal &#34;&gt;|0041|\0A&#34;</pre>
+      <pre>    %28 = sim.fmt.literal &#34;&gt;|65|\0A&#34;</pre>
+      <pre>    %29 = sim.fmt.literal &#34;&gt;|   65|\0A&#34;</pre>
+      <pre>    %30 = sim.fmt.literal &#34;============================ myReg14 = 65\0A&#34;</pre>
+      <pre>    %31 = sim.fmt.literal &#34;|\0A&#34;</pre>
+      <pre>    %32 = sim.fmt.literal &#34;&gt;|16374|\0A&#34;</pre>
+      <pre>    %33 = sim.fmt.literal &#34;============================ myReg14 = -10\0A&#34;</pre>
+      <pre>    %34 = hw.aggregate_constant [0 : i14, -1 : i14] : !hw.struct&lt;value: i14, unknown: i14&gt;</pre>
+      <pre>    %c1000000_i64 = hw.constant 1000000 : i64</pre>
+      <pre>    %35 = sim.fmt.literal &#34;&gt;|&#34;</pre>
+      <pre>    %c65_i32 = hw.constant 65 : i32</pre>
+      <pre>    %c65_i14 = hw.constant 65 : i14</pre>
+      <pre>    %36 = sim.fmt.literal &#34;*|&#34;</pre>
+      <pre>    %37 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-10_i14 = hw.constant -10 : i14</pre>
+      <pre>    %c-10_i32 = hw.constant -10 : i32</pre>
+      <pre>    %c0_i14 = hw.constant 0 : i14</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %38 = hw.aggregate_constant [0 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %myInt = llhd.sig %38 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %39 = llhd.sig.struct_extract %myInt[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %40 = llhd.sig.struct_extract %myInt[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %myReg14 = llhd.sig %34 : !hw.struct&lt;value: i14, unknown: i14&gt;</pre>
+      <pre>    %41 = llhd.sig.struct_extract %myReg14[&#34;value&#34;] : &lt;!hw.struct&lt;value: i14, unknown: i14&gt;&gt;</pre>
+      <pre>    %42 = llhd.sig.struct_extract %myReg14[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i14, unknown: i14&gt;&gt;</pre>
+      <pre>    %myReg32 = llhd.sig %38 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %43 = llhd.sig.struct_extract %myReg32[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %44 = llhd.sig.struct_extract %myReg32[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      sim.proc.print %33</pre>
+      <pre>      llhd.drv %41, %c-10_i14 after %37 : i14</pre>
+      <pre>      llhd.drv %42, %c0_i14 after %37 : i14</pre>
+      <pre>      sim.proc.print %32</pre>
+      <pre>      %45 = llhd.prb %41 : i14</pre>
+      <pre>      %46 = llhd.prb %42 : i14</pre>
+      <pre>      %47 = sim.fmt.fvint 10 0 0 %45, %46 : i14</pre>
+      <pre>      %48 = sim.fmt.concat (%36, %47, %31)</pre>
+      <pre>      sim.proc.print %48</pre>
+      <pre>      %49 = llhd.prb %41 : i14</pre>
+      <pre>      %50 = llhd.prb %42 : i14</pre>
+      <pre>      %51 = sim.fmt.fvint 10 0 0 %49, %50 : i14</pre>
+      <pre>      %52 = sim.fmt.concat (%36, %51, %31)</pre>
+      <pre>      sim.proc.print %52</pre>
+      <pre>      %53 = llhd.prb %41 : i14</pre>
+      <pre>      %54 = llhd.prb %42 : i14</pre>
+      <pre>      %55 = sim.fmt.fvint 10 0 0 %53, %54 : i14</pre>
+      <pre>      %56 = sim.fmt.concat (%36, %55, %31)</pre>
+      <pre>      sim.proc.print %56</pre>
+      <pre>      sim.proc.print %30</pre>
+      <pre>      llhd.drv %41, %c65_i14 after %37 : i14</pre>
+      <pre>      llhd.drv %42, %c0_i14 after %37 : i14</pre>
+      <pre>      sim.proc.print %29</pre>
+      <pre>      %57 = llhd.prb %41 : i14</pre>
+      <pre>      %58 = llhd.prb %42 : i14</pre>
+      <pre>      %59 = sim.fmt.fvint 10 0 0 %57, %58 : i14</pre>
+      <pre>      %60 = sim.fmt.concat (%36, %59, %31)</pre>
+      <pre>      sim.proc.print %60</pre>
+      <pre>      %61 = llhd.prb %41 : i14</pre>
+      <pre>      %62 = llhd.prb %42 : i14</pre>
+      <pre>      %63 = sim.fmt.fvint 10 0 0 %61, %62 : i14</pre>
+      <pre>      %64 = sim.fmt.concat (%36, %63, %31)</pre>
+      <pre>      sim.proc.print %64</pre>
+      <pre>      sim.proc.print %28</pre>
+      <pre>      %65 = llhd.prb %41 : i14</pre>
+      <pre>      %66 = llhd.prb %42 : i14</pre>
+      <pre>      %67 = sim.fmt.fvint 10 0 0 %65, %66 : i14</pre>
+      <pre>      %68 = sim.fmt.concat (%36, %67, %31)</pre>
+      <pre>      sim.proc.print %68</pre>
+      <pre>      sim.proc.print %27</pre>
+      <pre>      %69 = llhd.prb %41 : i14</pre>
+      <pre>      %70 = llhd.prb %42 : i14</pre>
+      <pre>      %71 = sim.fmt.fvint 16 4 4 %69, %70 : i14</pre>
+      <pre>      %72 = sim.fmt.concat (%36, %71, %31)</pre>
+      <pre>      sim.proc.print %72</pre>
+      <pre>      sim.proc.print %26</pre>
+      <pre>      %73 = llhd.prb %41 : i14</pre>
+      <pre>      %74 = llhd.prb %42 : i14</pre>
+      <pre>      %75 = sim.fmt.fvint 16 0 4 %73, %74 : i14</pre>
+      <pre>      %76 = sim.fmt.concat (%36, %75, %31)</pre>
+      <pre>      sim.proc.print %76</pre>
+      <pre>      sim.proc.print %25</pre>
+      <pre>      %77 = llhd.prb %41 : i14</pre>
+      <pre>      %78 = llhd.prb %42 : i14</pre>
+      <pre>      %79 = sim.fmt.fvint 8 5 4 %77, %78 : i14</pre>
+      <pre>      %80 = sim.fmt.concat (%36, %79, %31)</pre>
+      <pre>      sim.proc.print %80</pre>
+      <pre>      sim.proc.print %24</pre>
+      <pre>      %81 = llhd.prb %41 : i14</pre>
+      <pre>      %82 = llhd.prb %42 : i14</pre>
+      <pre>      %83 = sim.fmt.fvint 8 0 4 %81, %82 : i14</pre>
+      <pre>      %84 = sim.fmt.concat (%36, %83, %31)</pre>
+      <pre>      sim.proc.print %84</pre>
+      <pre>      sim.proc.print %23</pre>
+      <pre>      %85 = llhd.prb %41 : i14</pre>
+      <pre>      %86 = llhd.prb %42 : i14</pre>
+      <pre>      %87 = sim.fmt.fvint 2 14 4 %85, %86 : i14</pre>
+      <pre>      %88 = sim.fmt.concat (%36, %87, %31)</pre>
+      <pre>      sim.proc.print %88</pre>
+      <pre>      sim.proc.print %22</pre>
+      <pre>      %89 = llhd.prb %41 : i14</pre>
+      <pre>      %90 = llhd.prb %42 : i14</pre>
+      <pre>      %91 = sim.fmt.fvint 2 0 4 %89, %90 : i14</pre>
+      <pre>      %92 = sim.fmt.concat (%36, %91, %31)</pre>
+      <pre>      sim.proc.print %92</pre>
+      <pre>      sim.proc.print %21</pre>
+      <pre>      %93 = sv.constantStr &#34;&#34;</pre>
+      <pre>      %94 = sim.fmt.str %93</pre>
+      <pre>      %95 = sim.fmt.concat (%36, %94, %31)</pre>
+      <pre>      sim.proc.print %95</pre>
+      <pre>      sim.proc.print %20</pre>
+      <pre>      sim.proc.print %95</pre>
+      <pre>      sim.proc.print %19</pre>
+      <pre>      llhd.drv %39, %c-10_i32 after %37 : i32</pre>
+      <pre>      llhd.drv %40, %c0_i32 after %37 : i32</pre>
+      <pre>      sim.proc.print %18</pre>
+      <pre>      %96 = llhd.prb %39 : i32</pre>
+      <pre>      %97 = llhd.prb %40 : i32</pre>
+      <pre>      %98 = sim.fmt.fvint 10 0 0 %96, %97 : i32</pre>
+      <pre>      %99 = sim.fmt.concat (%36, %98, %31)</pre>
+      <pre>      sim.proc.print %99</pre>
+      <pre>      %100 = llhd.prb %39 : i32</pre>
+      <pre>      %101 = llhd.prb %40 : i32</pre>
+      <pre>      %102 = sim.fmt.fvint 10 0 0 %100, %101 : i32</pre>
+      <pre>      %103 = sim.fmt.concat (%36, %102, %31)</pre>
+      <pre>      sim.proc.print %103</pre>
+      <pre>      sim.proc.print %17</pre>
+      <pre>      %104 = llhd.prb %39 : i32</pre>
+      <pre>      %105 = llhd.prb %40 : i32</pre>
+      <pre>      %106 = sim.fmt.fvint 10 0 0 %104, %105 : i32</pre>
+      <pre>      %107 = sim.fmt.concat (%36, %106, %31)</pre>
+      <pre>      sim.proc.print %107</pre>
+      <pre>      sim.proc.print %16</pre>
+      <pre>      %108 = llhd.prb %39 : i32</pre>
+      <pre>      %109 = llhd.prb %40 : i32</pre>
+      <pre>      %110 = sim.fmt.fvint 16 8 4 %108, %109 : i32</pre>
+      <pre>      %111 = sim.fmt.concat (%36, %110, %31)</pre>
+      <pre>      sim.proc.print %111</pre>
+      <pre>      %112 = llhd.prb %39 : i32</pre>
+      <pre>      %113 = llhd.prb %40 : i32</pre>
+      <pre>      %114 = sim.fmt.fvint 16 0 4 %112, %113 : i32</pre>
+      <pre>      %115 = sim.fmt.concat (%36, %114, %31)</pre>
+      <pre>      sim.proc.print %115</pre>
+      <pre>      sim.proc.print %15</pre>
+      <pre>      %116 = llhd.prb %39 : i32</pre>
+      <pre>      %117 = llhd.prb %40 : i32</pre>
+      <pre>      %118 = sim.fmt.fvint 8 11 4 %116, %117 : i32</pre>
+      <pre>      %119 = sim.fmt.concat (%36, %118, %31)</pre>
+      <pre>      sim.proc.print %119</pre>
+      <pre>      %120 = llhd.prb %39 : i32</pre>
+      <pre>      %121 = llhd.prb %40 : i32</pre>
+      <pre>      %122 = sim.fmt.fvint 8 0 4 %120, %121 : i32</pre>
+      <pre>      %123 = sim.fmt.concat (%36, %122, %31)</pre>
+      <pre>      sim.proc.print %123</pre>
+      <pre>      sim.proc.print %14</pre>
+      <pre>      %124 = llhd.prb %39 : i32</pre>
+      <pre>      %125 = llhd.prb %40 : i32</pre>
+      <pre>      %126 = sim.fmt.fvint 2 32 4 %124, %125 : i32</pre>
+      <pre>      %127 = sim.fmt.concat (%36, %126, %31)</pre>
+      <pre>      sim.proc.print %127</pre>
+      <pre>      %128 = llhd.prb %39 : i32</pre>
+      <pre>      %129 = llhd.prb %40 : i32</pre>
+      <pre>      %130 = sim.fmt.fvint 2 0 4 %128, %129 : i32</pre>
+      <pre>      %131 = sim.fmt.concat (%36, %130, %31)</pre>
+      <pre>      sim.proc.print %131</pre>
+      <pre>      sim.proc.print %13</pre>
+      <pre>      llhd.drv %43, %c-10_i32 after %37 : i32</pre>
+      <pre>      llhd.drv %44, %c0_i32 after %37 : i32</pre>
+      <pre>      sim.proc.print %12</pre>
+      <pre>      %132 = llhd.prb %43 : i32</pre>
+      <pre>      %133 = llhd.prb %44 : i32</pre>
+      <pre>      %134 = sim.fmt.fvint 10 0 0 %132, %133 : i32</pre>
+      <pre>      %135 = sim.fmt.concat (%36, %134, %31)</pre>
+      <pre>      sim.proc.print %135</pre>
+      <pre>      %136 = llhd.prb %43 : i32</pre>
+      <pre>      %137 = llhd.prb %44 : i32</pre>
+      <pre>      %138 = sim.fmt.fvint 10 0 0 %136, %137 : i32</pre>
+      <pre>      %139 = sim.fmt.concat (%36, %138, %31)</pre>
+      <pre>      sim.proc.print %139</pre>
+      <pre>      %140 = llhd.prb %43 : i32</pre>
+      <pre>      %141 = llhd.prb %44 : i32</pre>
+      <pre>      %142 = sim.fmt.fvint 10 0 0 %140, %141 : i32</pre>
+      <pre>      %143 = sim.fmt.concat (%36, %142, %31)</pre>
+      <pre>      sim.proc.print %143</pre>
+      <pre>      sim.proc.print %16</pre>
+      <pre>      %144 = llhd.prb %43 : i32</pre>
+      <pre>      %145 = llhd.prb %44 : i32</pre>
+      <pre>      %146 = sim.fmt.fvint 16 8 4 %144, %145 : i32</pre>
+      <pre>      %147 = sim.fmt.concat (%36, %146, %31)</pre>
+      <pre>      sim.proc.print %147</pre>
+      <pre>      %148 = llhd.prb %43 : i32</pre>
+      <pre>      %149 = llhd.prb %44 : i32</pre>
+      <pre>      %150 = sim.fmt.fvint 16 0 4 %148, %149 : i32</pre>
+      <pre>      %151 = sim.fmt.concat (%36, %150, %31)</pre>
+      <pre>      sim.proc.print %151</pre>
+      <pre>      sim.proc.print %15</pre>
+      <pre>      %152 = llhd.prb %43 : i32</pre>
+      <pre>      %153 = llhd.prb %44 : i32</pre>
+      <pre>      %154 = sim.fmt.fvint 8 11 4 %152, %153 : i32</pre>
+      <pre>      %155 = sim.fmt.concat (%36, %154, %31)</pre>
+      <pre>      sim.proc.print %155</pre>
+      <pre>      %156 = llhd.prb %43 : i32</pre>
+      <pre>      %157 = llhd.prb %44 : i32</pre>
+      <pre>      %158 = sim.fmt.fvint 8 0 4 %156, %157 : i32</pre>
+      <pre>      %159 = sim.fmt.concat (%36, %158, %31)</pre>
+      <pre>      sim.proc.print %159</pre>
+      <pre>      sim.proc.print %11</pre>
+      <pre>      llhd.drv %39, %c65_i32 after %37 : i32</pre>
+      <pre>      llhd.drv %40, %c0_i32 after %37 : i32</pre>
+      <pre>      sim.proc.print %10</pre>
+      <pre>      %160 = llhd.prb %39 : i32</pre>
+      <pre>      %161 = llhd.prb %40 : i32</pre>
+      <pre>      %162 = sim.fmt.fvint 10 0 0 %160, %161 : i32</pre>
+      <pre>      %163 = sim.fmt.concat (%36, %162, %31)</pre>
+      <pre>      sim.proc.print %163</pre>
+      <pre>      %164 = llhd.prb %39 : i32</pre>
+      <pre>      %165 = llhd.prb %40 : i32</pre>
+      <pre>      %166 = sim.fmt.fvint 10 0 0 %164, %165 : i32</pre>
+      <pre>      %167 = sim.fmt.concat (%36, %166, %31)</pre>
+      <pre>      sim.proc.print %167</pre>
+      <pre>      sim.proc.print %28</pre>
+      <pre>      %168 = llhd.prb %39 : i32</pre>
+      <pre>      %169 = llhd.prb %40 : i32</pre>
+      <pre>      %170 = sim.fmt.fvint 10 0 0 %168, %169 : i32</pre>
+      <pre>      %171 = sim.fmt.concat (%36, %170, %31)</pre>
+      <pre>      sim.proc.print %171</pre>
+      <pre>      sim.proc.print %9</pre>
+      <pre>      %172 = llhd.prb %39 : i32</pre>
+      <pre>      %173 = llhd.prb %40 : i32</pre>
+      <pre>      %174 = sim.fmt.fvint 16 8 4 %172, %173 : i32</pre>
+      <pre>      %175 = sim.fmt.concat (%36, %174, %31)</pre>
+      <pre>      sim.proc.print %175</pre>
+      <pre>      sim.proc.print %26</pre>
+      <pre>      %176 = llhd.prb %39 : i32</pre>
+      <pre>      %177 = llhd.prb %40 : i32</pre>
+      <pre>      %178 = sim.fmt.fvint 16 0 4 %176, %177 : i32</pre>
+      <pre>      %179 = sim.fmt.concat (%36, %178, %31)</pre>
+      <pre>      sim.proc.print %179</pre>
+      <pre>      sim.proc.print %8</pre>
+      <pre>      %180 = llhd.prb %39 : i32</pre>
+      <pre>      %181 = llhd.prb %40 : i32</pre>
+      <pre>      %182 = sim.fmt.fvint 8 11 4 %180, %181 : i32</pre>
+      <pre>      %183 = sim.fmt.concat (%36, %182, %31)</pre>
+      <pre>      sim.proc.print %183</pre>
+      <pre>      sim.proc.print %24</pre>
+      <pre>      %184 = llhd.prb %39 : i32</pre>
+      <pre>      %185 = llhd.prb %40 : i32</pre>
+      <pre>      %186 = sim.fmt.fvint 8 0 4 %184, %185 : i32</pre>
+      <pre>      %187 = sim.fmt.concat (%36, %186, %31)</pre>
+      <pre>      sim.proc.print %187</pre>
+      <pre>      sim.proc.print %7</pre>
+      <pre>      %188 = llhd.prb %39 : i32</pre>
+      <pre>      %189 = llhd.prb %40 : i32</pre>
+      <pre>      %190 = sim.fmt.fvint 2 32 4 %188, %189 : i32</pre>
+      <pre>      %191 = sim.fmt.concat (%36, %190, %31)</pre>
+      <pre>      sim.proc.print %191</pre>
+      <pre>      sim.proc.print %22</pre>
+      <pre>      %192 = llhd.prb %39 : i32</pre>
+      <pre>      %193 = llhd.prb %40 : i32</pre>
+      <pre>      %194 = sim.fmt.fvint 2 0 4 %192, %193 : i32</pre>
+      <pre>      %195 = sim.fmt.concat (%36, %194, %31)</pre>
+      <pre>      sim.proc.print %195</pre>
+      <pre>      sim.proc.print %6</pre>
+      <pre>      %196 = sim.fmt.concat (%35, %94, %31)</pre>
+      <pre>      sim.proc.print %196</pre>
+      <pre>      sim.proc.print %5</pre>
+      <pre>      sim.proc.print %196</pre>
+      <pre>      sim.proc.print %4</pre>
+      <pre>      sim.proc.print %6</pre>
+      <pre>      sim.proc.print %3</pre>
+      <pre>      sim.proc.print %3</pre>
+      <pre>      sim.proc.print %2</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      %197 = llhd.current_time</pre>
+      <pre>      %198 = llhd.time_to_int %197</pre>
+      <pre>      %199 = comb.divu %198, %c1000000_i64 : i64</pre>
+      <pre>      %200 = sim.fmt.int 10 20 0 %199 : i64</pre>
+      <pre>      %201 = sim.fmt.concat (%35, %200, %31)</pre>
+      <pre>      sim.proc.print %201</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      %202 = llhd.current_time</pre>
+      <pre>      %203 = llhd.time_to_int %202</pre>
+      <pre>      %204 = comb.divu %203, %c1000000_i64 : i64</pre>
+      <pre>      %205 = sim.fmt.int 10 0 4 %204 : i64</pre>
+      <pre>      %206 = sim.fmt.concat (%35, %205, %31)</pre>
+      <pre>      sim.proc.print %206</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

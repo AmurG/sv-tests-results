@@ -1,0 +1,50 @@
+name: regress-vlg_no_if_statement_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11069846153259277
+user_time: 0.022234999999999998
+system_time: 0.112202
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:43
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/no_if_statement.v:2:7: error: expected a declaration name
+  reg var;
+      ^
+../../../third_party/tools/icarus/ivtest/ivltests/no_if_statement.v:2:10: error: expected a declaration name
+  reg var;
+         ^
+../../../third_party/tools/icarus/ivtest/ivltests/no_if_statement.v:4:14: error: expected expression
+  always if (var);
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/no_if_statement.v:4:14: error: expected statement
+  always if (var);
+             ^
+../../../third_party/tools/icarus/ivtest/ivltests/no_if_statement.v:4:17: error: expected a declaration name
+  always if (var);
+                ^
+../../../third_party/tools/icarus/ivtest/ivltests/no_if_statement.v:4:17: error: unexpected ')' delimiter
+  always if (var);
+                ^
+Top level design units:
+    top
+
+
+Build failed: 6 errors, 0 warnings

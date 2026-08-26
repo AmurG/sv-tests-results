@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>asicworld_code_verilog_tutorial_decoder</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/asicworld_code_verilog_tutorial_decoder.sv.html" target="file-frame">tests/generated/yosys/asicworld_code_verilog_tutorial_decoder.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_decoder.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_decoder.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.045s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/asicworld_code_verilog_tutorial_decoder.sv.html" target="file-frame">tests/generated/yosys/asicworld_code_verilog_tutorial_decoder.sv</a> <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_decoder.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_decoder.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @decoder(in %in : !hw.struct&lt;value: i3, unknown: i3&gt;, out out : !hw.struct&lt;value: i8, unknown: i8&gt;) {</pre>
+      <pre>    %c1_i8 = hw.constant 1 : i8</pre>
+      <pre>    %c2_i8 = hw.constant 2 : i8</pre>
+      <pre>    %c4_i8 = hw.constant 4 : i8</pre>
+      <pre>    %c8_i8 = hw.constant 8 : i8</pre>
+      <pre>    %c0_i4 = hw.constant 0 : i4</pre>
+      <pre>    %c16_i8 = hw.constant 16 : i8</pre>
+      <pre>    %c0_i5 = hw.constant 0 : i5</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %c32_i8 = hw.constant 32 : i8</pre>
+      <pre>    %c0_i6 = hw.constant 0 : i6</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %c64_i8 = hw.constant 64 : i8</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %c0_i7 = hw.constant 0 : i7</pre>
+      <pre>    %0 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-2_i3 = hw.constant -2 : i3</pre>
+      <pre>    %c-3_i3 = hw.constant -3 : i3</pre>
+      <pre>    %c-4_i3 = hw.constant -4 : i3</pre>
+      <pre>    %c3_i3 = hw.constant 3 : i3</pre>
+      <pre>    %c2_i3 = hw.constant 2 : i3</pre>
+      <pre>    %c1_i3 = hw.constant 1 : i3</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %c-1_i3 = hw.constant -1 : i3</pre>
+      <pre>    %1 = hw.aggregate_constant [-1 : i3, -1 : i3] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %in_0 = llhd.sig name &#34;in&#34; %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %2 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %in_0, %2 after %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %in_0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %in_0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %5 = llhd.prb %3 : i3</pre>
+      <pre>    %6 = llhd.prb %4 : i3</pre>
+      <pre>    %7 = comb.icmp ne %6, %c0_i3 : i3</pre>
+      <pre>    %8 = comb.xor %6, %c-1_i3 : i3</pre>
+      <pre>    %9 = comb.and %5, %8 : i3</pre>
+      <pre>    %10 = comb.icmp eq %9, %c0_i3 : i3</pre>
+      <pre>    %11 = comb.and %10, %7 : i1</pre>
+      <pre>    %12 = comb.xor %7, %true : i1</pre>
+      <pre>    %13 = comb.xor %11, %true : i1</pre>
+      <pre>    %14 = comb.and %10, %12, %13 : i1</pre>
+      <pre>    %15 = comb.xor %5, %c1_i3 : i3</pre>
+      <pre>    %16 = comb.and %15, %8 : i3</pre>
+      <pre>    %17 = comb.icmp eq %16, %c0_i3 : i3</pre>
+      <pre>    %18 = comb.and %17, %7 : i1</pre>
+      <pre>    %19 = comb.xor %18, %true : i1</pre>
+      <pre>    %20 = comb.and %17, %12, %19 : i1</pre>
+      <pre>    %21 = comb.xor %5, %c2_i3 : i3</pre>
+      <pre>    %22 = comb.and %21, %8 : i3</pre>
+      <pre>    %23 = comb.icmp eq %22, %c0_i3 : i3</pre>
+      <pre>    %24 = comb.and %23, %7 : i1</pre>
+      <pre>    %25 = comb.xor %24, %true : i1</pre>
+      <pre>    %26 = comb.and %23, %12, %25 : i1</pre>
+      <pre>    %27 = comb.xor %5, %c3_i3 : i3</pre>
+      <pre>    %28 = comb.and %27, %8 : i3</pre>
+      <pre>    %29 = comb.icmp eq %28, %c0_i3 : i3</pre>
+      <pre>    %30 = comb.and %29, %7 : i1</pre>
+      <pre>    %31 = comb.xor %30, %true : i1</pre>
+      <pre>    %32 = comb.and %29, %12, %31 : i1</pre>
+      <pre>    %33 = comb.xor %5, %c-4_i3 : i3</pre>
+      <pre>    %34 = comb.and %33, %8 : i3</pre>
+      <pre>    %35 = comb.icmp eq %34, %c0_i3 : i3</pre>
+      <pre>    %36 = comb.and %35, %7 : i1</pre>
+      <pre>    %37 = comb.xor %36, %true : i1</pre>
+      <pre>    %38 = comb.and %35, %12, %37 : i1</pre>
+      <pre>    %39 = comb.xor %5, %c-3_i3 : i3</pre>
+      <pre>    %40 = comb.and %39, %8 : i3</pre>
+      <pre>    %41 = comb.icmp eq %40, %c0_i3 : i3</pre>
+      <pre>    %42 = comb.and %41, %7 : i1</pre>
+      <pre>    %43 = comb.xor %42, %true : i1</pre>
+      <pre>    %44 = comb.and %41, %12, %43 : i1</pre>
+      <pre>    %45 = comb.xor %5, %c-2_i3 : i3</pre>
+      <pre>    %46 = comb.and %45, %8 : i3</pre>
+      <pre>    %47 = comb.icmp eq %46, %c0_i3 : i3</pre>
+      <pre>    %48 = comb.and %47, %7 : i1</pre>
+      <pre>    %49 = comb.xor %48, %true : i1</pre>
+      <pre>    %50 = comb.and %47, %12, %49 : i1</pre>
+      <pre>    %51 = comb.xor %5, %c-1_i3 : i3</pre>
+      <pre>    %52 = comb.and %51, %8 : i3</pre>
+      <pre>    %53 = comb.icmp eq %52, %c0_i3 : i3</pre>
+      <pre>    %54 = comb.and %53, %7 : i1</pre>
+      <pre>    %55 = comb.xor %54, %true : i1</pre>
+      <pre>    %56 = comb.and %53, %12, %55 : i1</pre>
+      <pre>    %57 = comb.concat %56, %c0_i7 : i1, i7</pre>
+      <pre>    %58 = comb.mux %54, %c0_i8, %57 : i8</pre>
+      <pre>    %59 = comb.concat %54, %c0_i7 : i1, i7</pre>
+      <pre>    %60 = comb.mux %50, %c64_i8, %58 : i8</pre>
+      <pre>    %61 = comb.mux %50, %c0_i8, %59 : i8</pre>
+      <pre>    %62 = comb.xor %58, %c64_i8 : i8</pre>
+      <pre>    %63 = comb.or %62, %59 : i8</pre>
+      <pre>    %64 = comb.extract %63 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %65 = comb.xor %64, %true : i1</pre>
+      <pre>    %66 = comb.concat %false, %65, %c0_i6 : i1, i1, i6</pre>
+      <pre>    %67 = comb.mux %48, %66, %60 : i8</pre>
+      <pre>    %68 = comb.mux %48, %63, %61 : i8</pre>
+      <pre>    %69 = comb.mux %44, %c32_i8, %67 : i8</pre>
+      <pre>    %70 = comb.mux %44, %c0_i8, %68 : i8</pre>
+      <pre>    %71 = comb.xor %67, %c32_i8 : i8</pre>
+      <pre>    %72 = comb.or %71, %68 : i8</pre>
+      <pre>    %73 = comb.extract %72 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %74 = comb.xor %73, %true : i1</pre>
+      <pre>    %75 = comb.concat %c0_i2, %74, %c0_i5 : i2, i1, i5</pre>
+      <pre>    %76 = comb.mux %42, %75, %69 : i8</pre>
+      <pre>    %77 = comb.mux %42, %72, %70 : i8</pre>
+      <pre>    %78 = comb.mux %38, %c16_i8, %76 : i8</pre>
+      <pre>    %79 = comb.mux %38, %c0_i8, %77 : i8</pre>
+      <pre>    %80 = comb.xor %76, %c16_i8 : i8</pre>
+      <pre>    %81 = comb.or %80, %77 : i8</pre>
+      <pre>    %82 = comb.extract %81 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %83 = comb.xor %82, %true : i1</pre>
+      <pre>    %84 = comb.concat %c0_i3, %83, %c0_i4 : i3, i1, i4</pre>
+      <pre>    %85 = comb.mux %36, %84, %78 : i8</pre>
+      <pre>    %86 = comb.mux %36, %81, %79 : i8</pre>
+      <pre>    %87 = comb.mux %32, %c8_i8, %85 : i8</pre>
+      <pre>    %88 = comb.mux %32, %c0_i8, %86 : i8</pre>
+      <pre>    %89 = comb.xor %85, %c8_i8 : i8</pre>
+      <pre>    %90 = comb.or %89, %86 : i8</pre>
+      <pre>    %91 = comb.extract %90 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %92 = comb.xor %91, %true : i1</pre>
+      <pre>    %93 = comb.concat %c0_i4, %92, %c0_i3 : i4, i1, i3</pre>
+      <pre>    %94 = comb.mux %30, %93, %87 : i8</pre>
+      <pre>    %95 = comb.mux %30, %90, %88 : i8</pre>
+      <pre>    %96 = comb.mux %26, %c4_i8, %94 : i8</pre>
+      <pre>    %97 = comb.mux %26, %c0_i8, %95 : i8</pre>
+      <pre>    %98 = comb.xor %94, %c4_i8 : i8</pre>
+      <pre>    %99 = comb.or %98, %95 : i8</pre>
+      <pre>    %100 = comb.extract %99 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %101 = comb.xor %100, %true : i1</pre>
+      <pre>    %102 = comb.concat %c0_i5, %101, %c0_i2 : i5, i1, i2</pre>
+      <pre>    %103 = comb.mux %24, %102, %96 : i8</pre>
+      <pre>    %104 = comb.mux %24, %99, %97 : i8</pre>
+      <pre>    %105 = comb.mux %20, %c2_i8, %103 : i8</pre>
+      <pre>    %106 = comb.mux %20, %c0_i8, %104 : i8</pre>
+      <pre>    %107 = comb.xor %103, %c2_i8 : i8</pre>
+      <pre>    %108 = comb.or %107, %104 : i8</pre>
+      <pre>    %109 = comb.extract %108 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %110 = comb.xor %109, %true : i1</pre>
+      <pre>    %111 = comb.concat %c0_i6, %110, %false : i6, i1, i1</pre>
+      <pre>    %112 = comb.mux %18, %111, %105 : i8</pre>
+      <pre>    %113 = comb.mux %18, %108, %106 : i8</pre>
+      <pre>    %114 = comb.mux %14, %c1_i8, %112 : i8</pre>
+      <pre>    %115 = comb.mux %14, %c0_i8, %113 : i8</pre>
+      <pre>    %116 = comb.xor %112, %c1_i8 : i8</pre>
+      <pre>    %117 = comb.or %116, %113 : i8</pre>
+      <pre>    %118 = comb.extract %117 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %119 = comb.xor %118, %true : i1</pre>
+      <pre>    %120 = comb.concat %c0_i7, %119 : i7, i1</pre>
+      <pre>    %121 = comb.mux %11, %120, %114 : i8</pre>
+      <pre>    %122 = comb.mux %11, %117, %115 : i8</pre>
+      <pre>    %123 = hw.struct_create (%121, %122) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %value = hw.struct_extract %in[&#34;value&#34;] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %in[&#34;unknown&#34;] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    hw.output %123 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

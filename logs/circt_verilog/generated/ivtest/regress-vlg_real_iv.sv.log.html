@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_real_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/real.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/real.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.040s</dd></div>
+        <div><dt>ram usage</dt><dd>25088 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/real.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/real.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @main() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %cst = arith.constant 2.000000e+00 : f64</pre>
+      <pre>    %cst_0 = arith.constant 1.099900e+00 : f64</pre>
+      <pre>    %cst_1 = arith.constant 1.100100e+00 : f64</pre>
+      <pre>    %2 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;, x = &#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;, a4 = &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;a3 = &#34;</pre>
+      <pre>    %cst_2 = arith.constant 1.000000e+06 : f64</pre>
+      <pre>    %cst_3 = arith.constant 4.000000e-01 : f64</pre>
+      <pre>    %6 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %cst_4 = arith.constant 3.000000e-01 : f64</pre>
+      <pre>    %cst_5 = arith.constant 0.000000e+00 : f64</pre>
+      <pre>    %7 = llhd.constant_time &lt;0ns, 0d, 0e&gt;</pre>
+      <pre>    %x = llhd.sig %7 : !llhd.time</pre>
+      <pre>    %8 = llhd.prb %x : !llhd.time</pre>
+      <pre>    %a3 = llhd.sig %cst_5 : f64</pre>
+      <pre>    %a4 = llhd.sig %cst_5 : f64</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %a3, %cst_4 after %6 : f64</pre>
+      <pre>      llhd.drv %a4, %cst_3 after %6 : f64</pre>
+      <pre>      %9 = llhd.prb %a4 : f64</pre>
+      <pre>      %10 = arith.mulf %9, %cst : f64</pre>
+      <pre>      %11 = llhd.prb %a3 : f64</pre>
+      <pre>      %12 = arith.addf %10, %11 : f64</pre>
+      <pre>      %13 = arith.mulf %12, %cst_2 : f64</pre>
+      <pre>      %14 = arith.fptosi %13 : f64 to i64</pre>
+      <pre>      %15 = llhd.int_to_time %14</pre>
+      <pre>      llhd.drv %x, %15 after %6 : !llhd.time</pre>
+      <pre>      %16 = llhd.prb %a3 : f64</pre>
+      <pre>      %17 = sim.fmt.flt %16 : f64</pre>
+      <pre>      %18 = llhd.prb %a4 : f64</pre>
+      <pre>      %19 = sim.fmt.flt %18 : f64</pre>
+      <pre>      %20 = llhd.prb %x : !llhd.time</pre>
+      <pre>      %21 = llhd.time_to_int %20</pre>
+      <pre>      %22 = arith.uitofp %21 : i64 to f64</pre>
+      <pre>      %23 = arith.divf %22, %cst_2 : f64</pre>
+      <pre>      %24 = sim.fmt.flt %23 : f64</pre>
+      <pre>      %25 = sim.fmt.concat (%5, %17, %4, %19, %3, %24, %2)</pre>
+      <pre>      sim.proc.print %25</pre>
+      <pre>      %26 = llhd.prb %x : !llhd.time</pre>
+      <pre>      %27 = llhd.time_to_int %26</pre>
+      <pre>      %28 = arith.uitofp %27 : i64 to f64</pre>
+      <pre>      %29 = arith.divf %28, %cst_2 : f64</pre>
+      <pre>      %30 = arith.cmpf ogt, %29, %cst_1 : f64</pre>
+      <pre>      cf.cond_br %30, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb2:  // pred: ^bb0</pre>
+      <pre>      %31 = llhd.time_to_int %8</pre>
+      <pre>      %32 = arith.uitofp %31 : i64 to f64</pre>
+      <pre>      %33 = arith.divf %32, %cst_2 : f64</pre>
+      <pre>      %34 = arith.cmpf olt, %33, %cst_0 : f64</pre>
+      <pre>      cf.cond_br %34, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

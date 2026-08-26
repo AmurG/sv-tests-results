@@ -1,0 +1,46 @@
+name: regress-vlg_br_gh956b_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08880329132080078
+user_time: 0.016347
+system_time: 0.09741799999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:45
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+  in instance: top.i1
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh956b.v:3:11: error: 'y' cannot be connected to 'inout' port (only nets are allowed)
+  tranif1(y, ctrl, x);
+          ^
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh956b.v:2:7: note: declared here
+  reg y, z, ctrl;
+      ^
+  in instance: top.i1
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh956b.v:3:14: error: 'ctrl' cannot be connected to 'inout' port (only nets are allowed)
+  tranif1(y, ctrl, x);
+             ^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh956b.v:2:13: note: declared here
+  reg y, z, ctrl;
+            ^
+Top level design units:
+    top
+
+
+Build failed: 2 errors, 0 warnings

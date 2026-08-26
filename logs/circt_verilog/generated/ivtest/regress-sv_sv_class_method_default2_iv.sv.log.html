@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_sv_class_method_default2_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_class_method_default2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_class_method_default2.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:16</dd></div>
+        <div><dt>time elapsed</dt><dd>0.059s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_class_method_default2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_class_method_default2.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_class_alloc(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_class_set_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_class_get_i32(i32, i32) -&gt; i32</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED. c.r, expected 11, got &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED. c.r, expected 15, got &#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;FAILED. c.r, expected 10, got &#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;FAILED. c.r, expected 18, got &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;FAILED. c.r, expected 14, got &#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;FAILED. c.r, expected 13, got &#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;FAILED. c.r, expected 9, got &#34;</pre>
+      <pre>    %8 = sim.fmt.literal &#34;FAILED. c.r, expected 6, got &#34;</pre>
+      <pre>    %c11_i32 = hw.constant 11 : i32</pre>
+      <pre>    %c15_i32 = hw.constant 15 : i32</pre>
+      <pre>    %c10_i32 = hw.constant 10 : i32</pre>
+      <pre>    %c18_i32 = hw.constant 18 : i32</pre>
+      <pre>    %c14_i32 = hw.constant 14 : i32</pre>
+      <pre>    %c13_i32 = hw.constant 13 : i32</pre>
+      <pre>    %c9_i32 = hw.constant 9 : i32</pre>
+      <pre>    %9 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %10 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %c6_i32 = hw.constant 6 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %11 = llhd.combinational -&gt; i32 {</pre>
+      <pre>      %13 = func.call @circt_sv_class_alloc(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      llhd.yield %13 : i32</pre>
+      <pre>    }</pre>
+      <pre>    %c = llhd.sig %11 : i32</pre>
+      <pre>    %12 = llhd.prb %c : i32</pre>
+      <pre>    %failed = llhd.sig %false : i1</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %13 = func.call @circt_sv_class_get_i32(%12, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%12, %c1_i32, %c6_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %14 = llhd.prb %c : i32</pre>
+      <pre>      %15 = func.call @circt_sv_class_get_i32(%14, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %16 = comb.icmp ne %15, %c6_i32 : i32</pre>
+      <pre>      cf.cond_br %16, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %17 = func.call @circt_sv_class_get_i32(%12, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %18 = sim.fmt.fvint 10 0 0 %17, %c0_i32 : i32</pre>
+      <pre>      %19 = sim.fmt.concat (%8, %18, %10)</pre>
+      <pre>      sim.proc.print %19</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %20 = llhd.prb %c : i32</pre>
+      <pre>      %21 = func.call @circt_sv_class_get_i32(%20, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%20, %c1_i32, %c9_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %22 = llhd.prb %c : i32</pre>
+      <pre>      %23 = func.call @circt_sv_class_get_i32(%22, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %24 = comb.icmp ne %23, %c9_i32 : i32</pre>
+      <pre>      cf.cond_br %24, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %25 = llhd.prb %c : i32</pre>
+      <pre>      %26 = func.call @circt_sv_class_get_i32(%25, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %27 = sim.fmt.fvint 10 0 0 %26, %c0_i32 : i32</pre>
+      <pre>      %28 = sim.fmt.concat (%7, %27, %10)</pre>
+      <pre>      sim.proc.print %28</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %29 = llhd.prb %c : i32</pre>
+      <pre>      %30 = func.call @circt_sv_class_get_i32(%29, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%29, %c1_i32, %c9_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %31 = llhd.prb %c : i32</pre>
+      <pre>      %32 = func.call @circt_sv_class_get_i32(%31, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %33 = comb.icmp ne %32, %c9_i32 : i32</pre>
+      <pre>      cf.cond_br %33, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %34 = llhd.prb %c : i32</pre>
+      <pre>      %35 = func.call @circt_sv_class_get_i32(%34, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %36 = sim.fmt.fvint 10 0 0 %35, %c0_i32 : i32</pre>
+      <pre>      %37 = sim.fmt.concat (%7, %36, %10)</pre>
+      <pre>      sim.proc.print %37</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb6</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %38 = llhd.prb %c : i32</pre>
+      <pre>      %39 = func.call @circt_sv_class_get_i32(%38, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%38, %c1_i32, %c9_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %40 = llhd.prb %c : i32</pre>
+      <pre>      %41 = func.call @circt_sv_class_get_i32(%40, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %42 = comb.icmp ne %41, %c9_i32 : i32</pre>
+      <pre>      cf.cond_br %42, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %43 = llhd.prb %c : i32</pre>
+      <pre>      %44 = func.call @circt_sv_class_get_i32(%43, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %45 = sim.fmt.fvint 10 0 0 %44, %c0_i32 : i32</pre>
+      <pre>      %46 = sim.fmt.concat (%7, %45, %10)</pre>
+      <pre>      sim.proc.print %46</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %47 = llhd.prb %c : i32</pre>
+      <pre>      %48 = func.call @circt_sv_class_get_i32(%47, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%47, %c1_i32, %c13_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %49 = llhd.prb %c : i32</pre>
+      <pre>      %50 = func.call @circt_sv_class_get_i32(%49, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %51 = comb.icmp ne %50, %c13_i32 : i32</pre>
+      <pre>      cf.cond_br %51, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      %52 = llhd.prb %c : i32</pre>
+      <pre>      %53 = func.call @circt_sv_class_get_i32(%52, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %54 = sim.fmt.fvint 10 0 0 %53, %c0_i32 : i32</pre>
+      <pre>      %55 = sim.fmt.concat (%6, %54, %10)</pre>
+      <pre>      sim.proc.print %55</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %56 = llhd.prb %c : i32</pre>
+      <pre>      %57 = func.call @circt_sv_class_get_i32(%56, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%56, %c1_i32, %c13_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %58 = llhd.prb %c : i32</pre>
+      <pre>      %59 = func.call @circt_sv_class_get_i32(%58, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %60 = comb.icmp ne %59, %c13_i32 : i32</pre>
+      <pre>      cf.cond_br %60, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      %61 = llhd.prb %c : i32</pre>
+      <pre>      %62 = func.call @circt_sv_class_get_i32(%61, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %63 = sim.fmt.fvint 10 0 0 %62, %c0_i32 : i32</pre>
+      <pre>      %64 = sim.fmt.concat (%6, %63, %10)</pre>
+      <pre>      sim.proc.print %64</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb10, ^bb11</pre>
+      <pre>      %65 = llhd.prb %c : i32</pre>
+      <pre>      %66 = func.call @circt_sv_class_get_i32(%65, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%65, %c1_i32, %c14_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %67 = llhd.prb %c : i32</pre>
+      <pre>      %68 = func.call @circt_sv_class_get_i32(%67, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %69 = comb.icmp ne %68, %c14_i32 : i32</pre>
+      <pre>      cf.cond_br %69, ^bb13, ^bb14</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      %70 = llhd.prb %c : i32</pre>
+      <pre>      %71 = func.call @circt_sv_class_get_i32(%70, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %72 = sim.fmt.fvint 10 0 0 %71, %c0_i32 : i32</pre>
+      <pre>      %73 = sim.fmt.concat (%5, %72, %10)</pre>
+      <pre>      sim.proc.print %73</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb14</pre>
+      <pre>    ^bb14:  // 2 preds: ^bb12, ^bb13</pre>
+      <pre>      %74 = llhd.prb %c : i32</pre>
+      <pre>      %75 = func.call @circt_sv_class_get_i32(%74, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%74, %c1_i32, %c18_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %76 = llhd.prb %c : i32</pre>
+      <pre>      %77 = func.call @circt_sv_class_get_i32(%76, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %78 = comb.icmp ne %77, %c18_i32 : i32</pre>
+      <pre>      cf.cond_br %78, ^bb15, ^bb16</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %79 = llhd.prb %c : i32</pre>
+      <pre>      %80 = func.call @circt_sv_class_get_i32(%79, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %81 = sim.fmt.fvint 10 0 0 %80, %c0_i32 : i32</pre>
+      <pre>      %82 = sim.fmt.concat (%4, %81, %10)</pre>
+      <pre>      sim.proc.print %82</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb16</pre>
+      <pre>    ^bb16:  // 2 preds: ^bb14, ^bb15</pre>
+      <pre>      %83 = llhd.prb %c : i32</pre>
+      <pre>      %84 = func.call @circt_sv_class_get_i32(%83, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%83, %c1_i32, %c10_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %85 = llhd.prb %c : i32</pre>
+      <pre>      %86 = func.call @circt_sv_class_get_i32(%85, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %87 = comb.icmp ne %86, %c10_i32 : i32</pre>
+      <pre>      cf.cond_br %87, ^bb17, ^bb18</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      %88 = llhd.prb %c : i32</pre>
+      <pre>      %89 = func.call @circt_sv_class_get_i32(%88, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %90 = sim.fmt.fvint 10 0 0 %89, %c0_i32 : i32</pre>
+      <pre>      %91 = sim.fmt.concat (%3, %90, %10)</pre>
+      <pre>      sim.proc.print %91</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb18</pre>
+      <pre>    ^bb18:  // 2 preds: ^bb16, ^bb17</pre>
+      <pre>      %92 = llhd.prb %c : i32</pre>
+      <pre>      %93 = func.call @circt_sv_class_get_i32(%92, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%92, %c1_i32, %c10_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %94 = llhd.prb %c : i32</pre>
+      <pre>      %95 = func.call @circt_sv_class_get_i32(%94, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %96 = comb.icmp ne %95, %c10_i32 : i32</pre>
+      <pre>      cf.cond_br %96, ^bb19, ^bb20</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      %97 = llhd.prb %c : i32</pre>
+      <pre>      %98 = func.call @circt_sv_class_get_i32(%97, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %99 = sim.fmt.fvint 10 0 0 %98, %c0_i32 : i32</pre>
+      <pre>      %100 = sim.fmt.concat (%3, %99, %10)</pre>
+      <pre>      sim.proc.print %100</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb20</pre>
+      <pre>    ^bb20:  // 2 preds: ^bb18, ^bb19</pre>
+      <pre>      %101 = llhd.prb %c : i32</pre>
+      <pre>      %102 = func.call @circt_sv_class_get_i32(%101, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%101, %c1_i32, %c15_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %103 = llhd.prb %c : i32</pre>
+      <pre>      %104 = func.call @circt_sv_class_get_i32(%103, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %105 = comb.icmp ne %104, %c15_i32 : i32</pre>
+      <pre>      cf.cond_br %105, ^bb21, ^bb22</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      %106 = llhd.prb %c : i32</pre>
+      <pre>      %107 = func.call @circt_sv_class_get_i32(%106, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %108 = sim.fmt.fvint 10 0 0 %107, %c0_i32 : i32</pre>
+      <pre>      %109 = sim.fmt.concat (%2, %108, %10)</pre>
+      <pre>      sim.proc.print %109</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb22</pre>
+      <pre>    ^bb22:  // 2 preds: ^bb20, ^bb21</pre>
+      <pre>      %110 = llhd.prb %c : i32</pre>
+      <pre>      %111 = func.call @circt_sv_class_get_i32(%110, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%110, %c1_i32, %c11_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %112 = llhd.prb %c : i32</pre>
+      <pre>      %113 = func.call @circt_sv_class_get_i32(%112, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %114 = comb.icmp ne %113, %c11_i32 : i32</pre>
+      <pre>      cf.cond_br %114, ^bb23, ^bb24</pre>
+      <pre>    ^bb23:  // pred: ^bb22</pre>
+      <pre>      %115 = llhd.prb %c : i32</pre>
+      <pre>      %116 = func.call @circt_sv_class_get_i32(%115, %c1_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %117 = sim.fmt.fvint 10 0 0 %116, %c0_i32 : i32</pre>
+      <pre>      %118 = sim.fmt.concat (%1, %117, %10)</pre>
+      <pre>      sim.proc.print %118</pre>
+      <pre>      llhd.drv %failed, %true after %9 : i1</pre>
+      <pre>      cf.br ^bb24</pre>
+      <pre>    ^bb24:  // 2 preds: ^bb22, ^bb23</pre>
+      <pre>      %119 = llhd.prb %failed : i1</pre>
+      <pre>      %120 = comb.xor %119, %true : i1</pre>
+      <pre>      cf.cond_br %120, ^bb25, ^bb26</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb26</pre>
+      <pre>    ^bb26:  // 2 preds: ^bb24, ^bb25</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

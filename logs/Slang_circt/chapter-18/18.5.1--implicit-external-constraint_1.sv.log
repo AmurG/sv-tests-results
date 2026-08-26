@@ -1,0 +1,33 @@
+name: implicit_external_constraint_1
+description: implicit external constraint test
+tags: 18.5.1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.07998418807983398
+user_time: 0.027944999999999998
+system_time: 0.099489
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-18/18.5.1--implicit-external-constraint_1.sv:18:16: warning: no body for implicit constraint block 'c' [-Wconstraint-missing]
+    constraint c;
+               ^
+warning: no top-level modules found in design [-Wmissing-top]
+
+Build succeeded: 0 errors, 2 warnings

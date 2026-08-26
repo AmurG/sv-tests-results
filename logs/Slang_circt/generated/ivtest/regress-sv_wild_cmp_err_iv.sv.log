@@ -1,0 +1,44 @@
+name: regress-sv_wild_cmp_err_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11394071578979492
+user_time: 0.014971
+system_time: 0.114341
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:44
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/wild_cmp_err.v:2:26: error: invalid operands to binary expression ('bit[1:0]' and 'real')
+  parameter weq1 = 2'b01 ==? 0.0;
+                   ~~~~~ ^~~ ~~~
+../../../third_party/tools/icarus/ivtest/ivltests/wild_cmp_err.v:3:24: error: invalid operands to binary expression ('real' and 'bit[1:0]')
+  parameter weq2 = 0.0 ==? 2'b01;
+                   ~~~ ^~~ ~~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/wild_cmp_err.v:4:27: error: invalid operands to binary expression ('bit[1:0]' and 'real')
+  parameter wneq1 = 2'b01 !=? 0.0;
+                    ~~~~~ ^~~ ~~~
+../../../third_party/tools/icarus/ivtest/ivltests/wild_cmp_err.v:5:25: error: invalid operands to binary expression ('real' and 'bit[1:0]')
+  parameter wneq2 = 0.0 !=? 2'b01;
+                    ~~~ ^~~ ~~~~~
+Top level design units:
+    top
+
+
+Build failed: 4 errors, 0 warnings

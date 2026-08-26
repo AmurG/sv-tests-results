@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["cores","veer-eh1",1,"logs/Slang/generated/fusesoc/veer-eh1-sim.sv.log.html","build/veer-eh1_sim/chipsalliance.org_cores_VeeR_EH1_1.8/sim-verilator/config/common_defines.vh.html"]]

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_fopen2_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/fopen2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/fopen2.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:14</dd></div>
+        <div><dt>time elapsed</dt><dd>0.056s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/fopen2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/fopen2.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_fclose(i32) -&gt; i32</pre>
+      <pre>  hw.module @fopen2() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %c-1_i31 = hw.constant -1 : i31</pre>
+      <pre>    %1 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;fp4=&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;fp3=&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;fp2=&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;fp1=&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;FAILED fopen fp=&#34;</pre>
+      <pre>    %c64_i32 = hw.constant 64 : i32</pre>
+      <pre>    %c32_i32 = hw.constant 32 : i32</pre>
+      <pre>    %c16_i32 = hw.constant 16 : i32</pre>
+      <pre>    %c8_i32 = hw.constant 8 : i32</pre>
+      <pre>    %c4_i32 = hw.constant 4 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %8 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>    %9 = hw.aggregate_constant [0 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %fp1 = llhd.sig %9 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %fp1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %fp1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %fp2 = llhd.sig %9 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %fp2[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %fp2[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %fp3 = llhd.sig %9 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %fp3[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %15 = llhd.sig.struct_extract %fp3[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %fp4 = llhd.sig %9 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %16 = llhd.sig.struct_extract %fp4[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %17 = llhd.sig.struct_extract %fp4[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %dfp = llhd.sig %9 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %18 = llhd.sig.struct_extract %dfp[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %19 = llhd.sig.struct_extract %dfp[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %error = llhd.sig %1 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %20 = llhd.sig.struct_extract %error[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %21 = llhd.sig.struct_extract %error[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %20, %false after %8 : i1</pre>
+      <pre>      llhd.drv %21, %false after %8 : i1</pre>
+      <pre>      llhd.drv %10, %c1_i32 after %8 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %8 : i32</pre>
+      <pre>      %22 = llhd.prb %10 : i32</pre>
+      <pre>      %23 = llhd.prb %11 : i32</pre>
+      <pre>      %24 = comb.icmp ne %23, %c0_i32 : i32</pre>
+      <pre>      %25 = comb.xor %23, %c-1_i32 : i32</pre>
+      <pre>      %26 = comb.xor %22, %c2_i32 : i32</pre>
+      <pre>      %27 = comb.and %26, %25 : i32</pre>
+      <pre>      %28 = comb.icmp ne %27, %c0_i32 : i32</pre>
+      <pre>      %29 = comb.xor %28, %true : i1</pre>
+      <pre>      %30 = comb.and %29, %24 : i1</pre>
+      <pre>      %31 = comb.xor %22, %c4_i32 : i32</pre>
+      <pre>      %32 = comb.and %31, %25 : i32</pre>
+      <pre>      %33 = comb.icmp ne %32, %c0_i32 : i32</pre>
+      <pre>      %34 = comb.xor %33, %true : i1</pre>
+      <pre>      %35 = comb.and %34, %24 : i1</pre>
+      <pre>      %36 = comb.xor %30, %true : i1</pre>
+      <pre>      %37 = comb.xor %35, %true : i1</pre>
+      <pre>      %38 = comb.and %36, %29 : i1</pre>
+      <pre>      %39 = comb.and %37, %34 : i1</pre>
+      <pre>      %40 = comb.and %36, %28, %37, %33 : i1</pre>
+      <pre>      %41 = comb.or %38, %39, %40 : i1</pre>
+      <pre>      %42 = comb.xor %22, %c8_i32 : i32</pre>
+      <pre>      %43 = comb.and %42, %25 : i32</pre>
+      <pre>      %44 = comb.icmp ne %43, %c0_i32 : i32</pre>
+      <pre>      %45 = comb.xor %44, %true : i1</pre>
+      <pre>      %46 = comb.and %45, %24 : i1</pre>
+      <pre>      %47 = comb.xor %46, %true : i1</pre>
+      <pre>      %48 = comb.xor %40, %true : i1</pre>
+      <pre>      %49 = comb.and %41, %48 : i1</pre>
+      <pre>      %50 = comb.and %47, %45 : i1</pre>
+      <pre>      %51 = comb.and %41, %40, %47, %44 : i1</pre>
+      <pre>      %52 = comb.or %49, %50, %51 : i1</pre>
+      <pre>      %53 = comb.xor %22, %c16_i32 : i32</pre>
+      <pre>      %54 = comb.and %53, %25 : i32</pre>
+      <pre>      %55 = comb.icmp ne %54, %c0_i32 : i32</pre>
+      <pre>      %56 = comb.xor %55, %true : i1</pre>
+      <pre>      %57 = comb.and %56, %24 : i1</pre>
+      <pre>      %58 = comb.xor %57, %true : i1</pre>
+      <pre>      %59 = comb.xor %51, %true : i1</pre>
+      <pre>      %60 = comb.and %52, %59 : i1</pre>
+      <pre>      %61 = comb.and %58, %56 : i1</pre>
+      <pre>      %62 = comb.and %52, %51, %58, %55 : i1</pre>
+      <pre>      %63 = comb.or %60, %61, %62 : i1</pre>
+      <pre>      %64 = comb.xor %22, %c32_i32 : i32</pre>
+      <pre>      %65 = comb.and %64, %25 : i32</pre>
+      <pre>      %66 = comb.icmp ne %65, %c0_i32 : i32</pre>
+      <pre>      %67 = comb.xor %66, %true : i1</pre>
+      <pre>      %68 = comb.and %67, %24 : i1</pre>
+      <pre>      %69 = comb.xor %68, %true : i1</pre>
+      <pre>      %70 = comb.xor %62, %true : i1</pre>
+      <pre>      %71 = comb.and %63, %70 : i1</pre>
+      <pre>      %72 = comb.and %69, %67 : i1</pre>
+      <pre>      %73 = comb.and %63, %62, %69, %66 : i1</pre>
+      <pre>      %74 = comb.or %71, %72, %73 : i1</pre>
+      <pre>      %75 = comb.xor %22, %c64_i32 : i32</pre>
+      <pre>      %76 = comb.and %75, %25 : i32</pre>
+      <pre>      %77 = comb.icmp ne %76, %c0_i32 : i32</pre>
+      <pre>      %78 = comb.xor %77, %true : i1</pre>
+      <pre>      %79 = comb.and %78, %24 : i1</pre>
+      <pre>      %80 = comb.xor %79, %true : i1</pre>
+      <pre>      %81 = comb.xor %73, %true : i1</pre>
+      <pre>      %82 = comb.and %74, %81 : i1</pre>
+      <pre>      %83 = comb.and %80, %78 : i1</pre>
+      <pre>      %84 = comb.and %74, %73, %80, %77 : i1</pre>
+      <pre>      %85 = comb.or %82, %83, %84 : i1</pre>
+      <pre>      %86 = comb.and %84, %85 : i1</pre>
+      <pre>      cf.cond_br %86, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %87 = sim.fmt.fvint 10 0 0 %22, %23 : i32</pre>
+      <pre>      %88 = sim.fmt.concat (%7, %87, %6)</pre>
+      <pre>      sim.proc.print %88</pre>
+      <pre>      llhd.drv %20, %true after %8 : i1</pre>
+      <pre>      llhd.drv %21, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %89 = llhd.prb %10 : i32</pre>
+      <pre>      %90 = llhd.prb %11 : i32</pre>
+      <pre>      %91 = comb.xor %90, %c-1_i32 : i32</pre>
+      <pre>      %92 = comb.extract %89 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %93 = comb.xor %92, %c-1_i31 : i31</pre>
+      <pre>      %94 = comb.and %91, %89 : i32</pre>
+      <pre>      %95 = comb.extract %91 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %96 = comb.and %95, %93 : i31</pre>
+      <pre>      %97 = comb.or %94, %c1_i32 : i32</pre>
+      <pre>      %98 = comb.concat %96, %true : i31, i1</pre>
+      <pre>      %99 = comb.or %94, %98 : i32</pre>
+      <pre>      %100 = comb.xor %99, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %18, %97 after %8 : i32</pre>
+      <pre>      llhd.drv %19, %100 after %8 : i32</pre>
+      <pre>      %101 = llhd.prb %10 : i32</pre>
+      <pre>      %102 = llhd.prb %11 : i32</pre>
+      <pre>      %103 = sim.fmt.fvint 10 0 0 %101, %102 : i32</pre>
+      <pre>      %104 = sim.fmt.concat (%5, %103, %6)</pre>
+      <pre>      sim.proc.print %104</pre>
+      <pre>      llhd.drv %12, %c1_i32 after %8 : i32</pre>
+      <pre>      llhd.drv %13, %c0_i32 after %8 : i32</pre>
+      <pre>      %105 = llhd.prb %12 : i32</pre>
+      <pre>      %106 = llhd.prb %13 : i32</pre>
+      <pre>      %107 = comb.icmp ne %106, %c0_i32 : i32</pre>
+      <pre>      %108 = comb.xor %106, %c-1_i32 : i32</pre>
+      <pre>      %109 = comb.xor %105, %c2_i32 : i32</pre>
+      <pre>      %110 = comb.and %109, %108 : i32</pre>
+      <pre>      %111 = comb.icmp ne %110, %c0_i32 : i32</pre>
+      <pre>      %112 = comb.xor %111, %true : i1</pre>
+      <pre>      %113 = comb.and %112, %107 : i1</pre>
+      <pre>      %114 = comb.xor %105, %c4_i32 : i32</pre>
+      <pre>      %115 = comb.and %114, %108 : i32</pre>
+      <pre>      %116 = comb.icmp ne %115, %c0_i32 : i32</pre>
+      <pre>      %117 = comb.xor %116, %true : i1</pre>
+      <pre>      %118 = comb.and %117, %107 : i1</pre>
+      <pre>      %119 = comb.xor %113, %true : i1</pre>
+      <pre>      %120 = comb.xor %118, %true : i1</pre>
+      <pre>      %121 = comb.and %119, %112 : i1</pre>
+      <pre>      %122 = comb.and %120, %117 : i1</pre>
+      <pre>      %123 = comb.and %119, %111, %120, %116 : i1</pre>
+      <pre>      %124 = comb.or %121, %122, %123 : i1</pre>
+      <pre>      %125 = comb.xor %105, %c8_i32 : i32</pre>
+      <pre>      %126 = comb.and %125, %108 : i32</pre>
+      <pre>      %127 = comb.icmp ne %126, %c0_i32 : i32</pre>
+      <pre>      %128 = comb.xor %127, %true : i1</pre>
+      <pre>      %129 = comb.and %128, %107 : i1</pre>
+      <pre>      %130 = comb.xor %129, %true : i1</pre>
+      <pre>      %131 = comb.xor %123, %true : i1</pre>
+      <pre>      %132 = comb.and %124, %131 : i1</pre>
+      <pre>      %133 = comb.and %130, %128 : i1</pre>
+      <pre>      %134 = comb.and %124, %123, %130, %127 : i1</pre>
+      <pre>      %135 = comb.or %132, %133, %134 : i1</pre>
+      <pre>      %136 = comb.xor %105, %c16_i32 : i32</pre>
+      <pre>      %137 = comb.and %136, %108 : i32</pre>
+      <pre>      %138 = comb.icmp ne %137, %c0_i32 : i32</pre>
+      <pre>      %139 = comb.xor %138, %true : i1</pre>
+      <pre>      %140 = comb.and %139, %107 : i1</pre>
+      <pre>      %141 = comb.xor %140, %true : i1</pre>
+      <pre>      %142 = comb.xor %134, %true : i1</pre>
+      <pre>      %143 = comb.and %135, %142 : i1</pre>
+      <pre>      %144 = comb.and %141, %139 : i1</pre>
+      <pre>      %145 = comb.and %135, %134, %141, %138 : i1</pre>
+      <pre>      %146 = comb.or %143, %144, %145 : i1</pre>
+      <pre>      %147 = comb.xor %105, %c32_i32 : i32</pre>
+      <pre>      %148 = comb.and %147, %108 : i32</pre>
+      <pre>      %149 = comb.icmp ne %148, %c0_i32 : i32</pre>
+      <pre>      %150 = comb.xor %149, %true : i1</pre>
+      <pre>      %151 = comb.and %150, %107 : i1</pre>
+      <pre>      %152 = comb.xor %151, %true : i1</pre>
+      <pre>      %153 = comb.xor %145, %true : i1</pre>
+      <pre>      %154 = comb.and %146, %153 : i1</pre>
+      <pre>      %155 = comb.and %152, %150 : i1</pre>
+      <pre>      %156 = comb.and %146, %145, %152, %149 : i1</pre>
+      <pre>      %157 = comb.or %154, %155, %156 : i1</pre>
+      <pre>      %158 = comb.xor %105, %c64_i32 : i32</pre>
+      <pre>      %159 = comb.and %158, %108 : i32</pre>
+      <pre>      %160 = comb.icmp ne %159, %c0_i32 : i32</pre>
+      <pre>      %161 = comb.xor %160, %true : i1</pre>
+      <pre>      %162 = comb.and %161, %107 : i1</pre>
+      <pre>      %163 = comb.xor %162, %true : i1</pre>
+      <pre>      %164 = comb.xor %156, %true : i1</pre>
+      <pre>      %165 = comb.and %157, %164 : i1</pre>
+      <pre>      %166 = comb.and %163, %161 : i1</pre>
+      <pre>      %167 = comb.and %157, %156, %163, %160 : i1</pre>
+      <pre>      %168 = comb.or %165, %166, %167 : i1</pre>
+      <pre>      %169 = comb.and %167, %168 : i1</pre>
+      <pre>      cf.cond_br %169, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %170 = sim.fmt.fvint 10 0 0 %105, %106 : i32</pre>
+      <pre>      %171 = sim.fmt.concat (%7, %170, %6)</pre>
+      <pre>      sim.proc.print %171</pre>
+      <pre>      llhd.drv %20, %true after %8 : i1</pre>
+      <pre>      llhd.drv %21, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %172 = llhd.prb %12 : i32</pre>
+      <pre>      %173 = llhd.prb %13 : i32</pre>
+      <pre>      %174 = comb.xor %173, %c-1_i32 : i32</pre>
+      <pre>      %175 = comb.extract %172 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %176 = comb.xor %175, %c-1_i31 : i31</pre>
+      <pre>      %177 = comb.and %174, %172 : i32</pre>
+      <pre>      %178 = comb.extract %174 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %179 = comb.and %178, %176 : i31</pre>
+      <pre>      %180 = comb.or %177, %c1_i32 : i32</pre>
+      <pre>      %181 = comb.concat %179, %true : i31, i1</pre>
+      <pre>      %182 = comb.or %177, %181 : i32</pre>
+      <pre>      %183 = comb.xor %182, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %18, %180 after %8 : i32</pre>
+      <pre>      llhd.drv %19, %183 after %8 : i32</pre>
+      <pre>      %184 = llhd.prb %12 : i32</pre>
+      <pre>      %185 = llhd.prb %13 : i32</pre>
+      <pre>      %186 = sim.fmt.fvint 10 0 0 %184, %185 : i32</pre>
+      <pre>      %187 = sim.fmt.concat (%4, %186, %6)</pre>
+      <pre>      sim.proc.print %187</pre>
+      <pre>      llhd.drv %14, %c1_i32 after %8 : i32</pre>
+      <pre>      llhd.drv %15, %c0_i32 after %8 : i32</pre>
+      <pre>      %188 = llhd.prb %14 : i32</pre>
+      <pre>      %189 = llhd.prb %15 : i32</pre>
+      <pre>      %190 = comb.icmp ne %189, %c0_i32 : i32</pre>
+      <pre>      %191 = comb.xor %189, %c-1_i32 : i32</pre>
+      <pre>      %192 = comb.xor %188, %c2_i32 : i32</pre>
+      <pre>      %193 = comb.and %192, %191 : i32</pre>
+      <pre>      %194 = comb.icmp ne %193, %c0_i32 : i32</pre>
+      <pre>      %195 = comb.xor %194, %true : i1</pre>
+      <pre>      %196 = comb.and %195, %190 : i1</pre>
+      <pre>      %197 = comb.xor %188, %c4_i32 : i32</pre>
+      <pre>      %198 = comb.and %197, %191 : i32</pre>
+      <pre>      %199 = comb.icmp ne %198, %c0_i32 : i32</pre>
+      <pre>      %200 = comb.xor %199, %true : i1</pre>
+      <pre>      %201 = comb.and %200, %190 : i1</pre>
+      <pre>      %202 = comb.xor %196, %true : i1</pre>
+      <pre>      %203 = comb.xor %201, %true : i1</pre>
+      <pre>      %204 = comb.and %202, %195 : i1</pre>
+      <pre>      %205 = comb.and %203, %200 : i1</pre>
+      <pre>      %206 = comb.and %202, %194, %203, %199 : i1</pre>
+      <pre>      %207 = comb.or %204, %205, %206 : i1</pre>
+      <pre>      %208 = comb.xor %188, %c8_i32 : i32</pre>
+      <pre>      %209 = comb.and %208, %191 : i32</pre>
+      <pre>      %210 = comb.icmp ne %209, %c0_i32 : i32</pre>
+      <pre>      %211 = comb.xor %210, %true : i1</pre>
+      <pre>      %212 = comb.and %211, %190 : i1</pre>
+      <pre>      %213 = comb.xor %212, %true : i1</pre>
+      <pre>      %214 = comb.xor %206, %true : i1</pre>
+      <pre>      %215 = comb.and %207, %214 : i1</pre>
+      <pre>      %216 = comb.and %213, %211 : i1</pre>
+      <pre>      %217 = comb.and %207, %206, %213, %210 : i1</pre>
+      <pre>      %218 = comb.or %215, %216, %217 : i1</pre>
+      <pre>      %219 = comb.xor %188, %c16_i32 : i32</pre>
+      <pre>      %220 = comb.and %219, %191 : i32</pre>
+      <pre>      %221 = comb.icmp ne %220, %c0_i32 : i32</pre>
+      <pre>      %222 = comb.xor %221, %true : i1</pre>
+      <pre>      %223 = comb.and %222, %190 : i1</pre>
+      <pre>      %224 = comb.xor %223, %true : i1</pre>
+      <pre>      %225 = comb.xor %217, %true : i1</pre>
+      <pre>      %226 = comb.and %218, %225 : i1</pre>
+      <pre>      %227 = comb.and %224, %222 : i1</pre>
+      <pre>      %228 = comb.and %218, %217, %224, %221 : i1</pre>
+      <pre>      %229 = comb.or %226, %227, %228 : i1</pre>
+      <pre>      %230 = comb.xor %188, %c32_i32 : i32</pre>
+      <pre>      %231 = comb.and %230, %191 : i32</pre>
+      <pre>      %232 = comb.icmp ne %231, %c0_i32 : i32</pre>
+      <pre>      %233 = comb.xor %232, %true : i1</pre>
+      <pre>      %234 = comb.and %233, %190 : i1</pre>
+      <pre>      %235 = comb.xor %234, %true : i1</pre>
+      <pre>      %236 = comb.xor %228, %true : i1</pre>
+      <pre>      %237 = comb.and %229, %236 : i1</pre>
+      <pre>      %238 = comb.and %235, %233 : i1</pre>
+      <pre>      %239 = comb.and %229, %228, %235, %232 : i1</pre>
+      <pre>      %240 = comb.or %237, %238, %239 : i1</pre>
+      <pre>      %241 = comb.xor %188, %c64_i32 : i32</pre>
+      <pre>      %242 = comb.and %241, %191 : i32</pre>
+      <pre>      %243 = comb.icmp ne %242, %c0_i32 : i32</pre>
+      <pre>      %244 = comb.xor %243, %true : i1</pre>
+      <pre>      %245 = comb.and %244, %190 : i1</pre>
+      <pre>      %246 = comb.xor %245, %true : i1</pre>
+      <pre>      %247 = comb.xor %239, %true : i1</pre>
+      <pre>      %248 = comb.and %240, %247 : i1</pre>
+      <pre>      %249 = comb.and %246, %244 : i1</pre>
+      <pre>      %250 = comb.and %240, %239, %246, %243 : i1</pre>
+      <pre>      %251 = comb.or %248, %249, %250 : i1</pre>
+      <pre>      %252 = comb.and %250, %251 : i1</pre>
+      <pre>      cf.cond_br %252, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %253 = sim.fmt.fvint 10 0 0 %188, %189 : i32</pre>
+      <pre>      %254 = sim.fmt.concat (%7, %253, %6)</pre>
+      <pre>      sim.proc.print %254</pre>
+      <pre>      llhd.drv %20, %true after %8 : i1</pre>
+      <pre>      llhd.drv %21, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb6</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %255 = llhd.prb %14 : i32</pre>
+      <pre>      %256 = llhd.prb %15 : i32</pre>
+      <pre>      %257 = comb.xor %256, %c-1_i32 : i32</pre>
+      <pre>      %258 = comb.extract %255 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %259 = comb.xor %258, %c-1_i31 : i31</pre>
+      <pre>      %260 = comb.and %257, %255 : i32</pre>
+      <pre>      %261 = comb.extract %257 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %262 = comb.and %261, %259 : i31</pre>
+      <pre>      %263 = comb.or %260, %c1_i32 : i32</pre>
+      <pre>      %264 = comb.concat %262, %true : i31, i1</pre>
+      <pre>      %265 = comb.or %260, %264 : i32</pre>
+      <pre>      %266 = comb.xor %265, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %18, %263 after %8 : i32</pre>
+      <pre>      llhd.drv %19, %266 after %8 : i32</pre>
+      <pre>      %267 = llhd.prb %14 : i32</pre>
+      <pre>      %268 = llhd.prb %15 : i32</pre>
+      <pre>      %269 = sim.fmt.fvint 10 0 0 %267, %268 : i32</pre>
+      <pre>      %270 = sim.fmt.concat (%3, %269, %6)</pre>
+      <pre>      sim.proc.print %270</pre>
+      <pre>      %271 = llhd.prb %12 : i32</pre>
+      <pre>      %272 = llhd.prb %13 : i32</pre>
+      <pre>      %273 = comb.xor %272, %c-1_i32 : i32</pre>
+      <pre>      %274 = comb.and %271, %273 : i32</pre>
+      <pre>      %275 = func.call @circt_sv_fclose(%274) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %16, %c1_i32 after %8 : i32</pre>
+      <pre>      llhd.drv %17, %c0_i32 after %8 : i32</pre>
+      <pre>      %276 = llhd.prb %16 : i32</pre>
+      <pre>      %277 = llhd.prb %17 : i32</pre>
+      <pre>      %278 = comb.icmp ne %277, %c0_i32 : i32</pre>
+      <pre>      %279 = comb.xor %277, %c-1_i32 : i32</pre>
+      <pre>      %280 = comb.xor %276, %c2_i32 : i32</pre>
+      <pre>      %281 = comb.and %280, %279 : i32</pre>
+      <pre>      %282 = comb.icmp ne %281, %c0_i32 : i32</pre>
+      <pre>      %283 = comb.xor %282, %true : i1</pre>
+      <pre>      %284 = comb.and %283, %278 : i1</pre>
+      <pre>      %285 = comb.xor %276, %c4_i32 : i32</pre>
+      <pre>      %286 = comb.and %285, %279 : i32</pre>
+      <pre>      %287 = comb.icmp ne %286, %c0_i32 : i32</pre>
+      <pre>      %288 = comb.xor %287, %true : i1</pre>
+      <pre>      %289 = comb.and %288, %278 : i1</pre>
+      <pre>      %290 = comb.xor %284, %true : i1</pre>
+      <pre>      %291 = comb.xor %289, %true : i1</pre>
+      <pre>      %292 = comb.and %290, %283 : i1</pre>
+      <pre>      %293 = comb.and %291, %288 : i1</pre>
+      <pre>      %294 = comb.and %290, %282, %291, %287 : i1</pre>
+      <pre>      %295 = comb.or %292, %293, %294 : i1</pre>
+      <pre>      %296 = comb.xor %276, %c8_i32 : i32</pre>
+      <pre>      %297 = comb.and %296, %279 : i32</pre>
+      <pre>      %298 = comb.icmp ne %297, %c0_i32 : i32</pre>
+      <pre>      %299 = comb.xor %298, %true : i1</pre>
+      <pre>      %300 = comb.and %299, %278 : i1</pre>
+      <pre>      %301 = comb.xor %300, %true : i1</pre>
+      <pre>      %302 = comb.xor %294, %true : i1</pre>
+      <pre>      %303 = comb.and %295, %302 : i1</pre>
+      <pre>      %304 = comb.and %301, %299 : i1</pre>
+      <pre>      %305 = comb.and %295, %294, %301, %298 : i1</pre>
+      <pre>      %306 = comb.or %303, %304, %305 : i1</pre>
+      <pre>      %307 = comb.xor %276, %c16_i32 : i32</pre>
+      <pre>      %308 = comb.and %307, %279 : i32</pre>
+      <pre>      %309 = comb.icmp ne %308, %c0_i32 : i32</pre>
+      <pre>      %310 = comb.xor %309, %true : i1</pre>
+      <pre>      %311 = comb.and %310, %278 : i1</pre>
+      <pre>      %312 = comb.xor %311, %true : i1</pre>
+      <pre>      %313 = comb.xor %305, %true : i1</pre>
+      <pre>      %314 = comb.and %306, %313 : i1</pre>
+      <pre>      %315 = comb.and %312, %310 : i1</pre>
+      <pre>      %316 = comb.and %306, %305, %312, %309 : i1</pre>
+      <pre>      %317 = comb.or %314, %315, %316 : i1</pre>
+      <pre>      %318 = comb.xor %276, %c32_i32 : i32</pre>
+      <pre>      %319 = comb.and %318, %279 : i32</pre>
+      <pre>      %320 = comb.icmp ne %319, %c0_i32 : i32</pre>
+      <pre>      %321 = comb.xor %320, %true : i1</pre>
+      <pre>      %322 = comb.and %321, %278 : i1</pre>
+      <pre>      %323 = comb.xor %322, %true : i1</pre>
+      <pre>      %324 = comb.xor %316, %true : i1</pre>
+      <pre>      %325 = comb.and %317, %324 : i1</pre>
+      <pre>      %326 = comb.and %323, %321 : i1</pre>
+      <pre>      %327 = comb.and %317, %316, %323, %320 : i1</pre>
+      <pre>      %328 = comb.or %325, %326, %327 : i1</pre>
+      <pre>      %329 = comb.xor %276, %c64_i32 : i32</pre>
+      <pre>      %330 = comb.and %329, %279 : i32</pre>
+      <pre>      %331 = comb.icmp ne %330, %c0_i32 : i32</pre>
+      <pre>      %332 = comb.xor %331, %true : i1</pre>
+      <pre>      %333 = comb.and %332, %278 : i1</pre>
+      <pre>      %334 = comb.xor %333, %true : i1</pre>
+      <pre>      %335 = comb.xor %327, %true : i1</pre>
+      <pre>      %336 = comb.and %328, %335 : i1</pre>
+      <pre>      %337 = comb.and %334, %332 : i1</pre>
+      <pre>      %338 = comb.and %328, %327, %334, %331 : i1</pre>
+      <pre>      %339 = comb.or %336, %337, %338 : i1</pre>
+      <pre>      %340 = comb.and %338, %339 : i1</pre>
+      <pre>      cf.cond_br %340, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %341 = sim.fmt.fvint 10 0 0 %276, %277 : i32</pre>
+      <pre>      %342 = sim.fmt.concat (%7, %341, %6)</pre>
+      <pre>      sim.proc.print %342</pre>
+      <pre>      llhd.drv %20, %true after %8 : i1</pre>
+      <pre>      llhd.drv %21, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %343 = llhd.prb %16 : i32</pre>
+      <pre>      %344 = llhd.prb %17 : i32</pre>
+      <pre>      %345 = comb.xor %344, %c-1_i32 : i32</pre>
+      <pre>      %346 = comb.extract %343 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %347 = comb.xor %346, %c-1_i31 : i31</pre>
+      <pre>      %348 = comb.and %345, %343 : i32</pre>
+      <pre>      %349 = comb.extract %345 from 1 : (i32) -&gt; i31</pre>
+      <pre>      %350 = comb.and %349, %347 : i31</pre>
+      <pre>      %351 = comb.or %348, %c1_i32 : i32</pre>
+      <pre>      %352 = comb.concat %350, %true : i31, i1</pre>
+      <pre>      %353 = comb.or %348, %352 : i32</pre>
+      <pre>      %354 = comb.xor %353, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %18, %351 after %8 : i32</pre>
+      <pre>      llhd.drv %19, %354 after %8 : i32</pre>
+      <pre>      %355 = llhd.prb %16 : i32</pre>
+      <pre>      %356 = llhd.prb %17 : i32</pre>
+      <pre>      %357 = sim.fmt.fvint 10 0 0 %355, %356 : i32</pre>
+      <pre>      %358 = sim.fmt.concat (%2, %357, %6)</pre>
+      <pre>      sim.proc.print %358</pre>
+      <pre>      %359 = llhd.prb %10 : i32</pre>
+      <pre>      %360 = llhd.prb %11 : i32</pre>
+      <pre>      %361 = comb.xor %360, %c-1_i32 : i32</pre>
+      <pre>      %362 = comb.and %359, %361 : i32</pre>
+      <pre>      %363 = func.call @circt_sv_fclose(%362) : (i32) -&gt; i32</pre>
+      <pre>      %364 = llhd.prb %12 : i32</pre>
+      <pre>      %365 = llhd.prb %13 : i32</pre>
+      <pre>      %366 = comb.xor %365, %c-1_i32 : i32</pre>
+      <pre>      %367 = comb.and %364, %366 : i32</pre>
+      <pre>      %368 = func.call @circt_sv_fclose(%367) : (i32) -&gt; i32</pre>
+      <pre>      %369 = llhd.prb %14 : i32</pre>
+      <pre>      %370 = llhd.prb %15 : i32</pre>
+      <pre>      %371 = comb.xor %370, %c-1_i32 : i32</pre>
+      <pre>      %372 = comb.and %369, %371 : i32</pre>
+      <pre>      %373 = func.call @circt_sv_fclose(%372) : (i32) -&gt; i32</pre>
+      <pre>      %374 = llhd.prb %16 : i32</pre>
+      <pre>      %375 = llhd.prb %17 : i32</pre>
+      <pre>      %376 = comb.xor %375, %c-1_i32 : i32</pre>
+      <pre>      %377 = comb.and %374, %376 : i32</pre>
+      <pre>      %378 = func.call @circt_sv_fclose(%377) : (i32) -&gt; i32</pre>
+      <pre>      %379 = llhd.prb %20 : i1</pre>
+      <pre>      %380 = llhd.prb %21 : i1</pre>
+      <pre>      %381 = comb.xor %380, %true : i1</pre>
+      <pre>      %382 = comb.and %379, %381 : i1</pre>
+      <pre>      %383 = comb.xor %382, %true : i1</pre>
+      <pre>      %384 = comb.and %383, %380 : i1</pre>
+      <pre>      %385 = comb.xor %384, %true : i1</pre>
+      <pre>      %386 = comb.and %383, %381, %385 : i1</pre>
+      <pre>      cf.cond_br %386, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

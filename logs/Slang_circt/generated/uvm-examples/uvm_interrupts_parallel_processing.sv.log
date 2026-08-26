@@ -1,0 +1,45 @@
+name: uvm_interrupts_parallel_processing
+description: UVM example - uvm_interrupts_parallel_processing
+files: <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path> <redacted-local-path>
+tags: uvm-examples uvm
+type: simulation elaboration parsing
+timeout: 360
+unsynthesizable: 1
+simvariants:  
+top_module: 
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.867194652557373
+user_time: 0.919006
+system_time: 0.760863
+ram_usage: 157696
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path> <redacted-local-path>
+../../../third_party/tests/uvm-examples/uvm_interrupts_parallel_processing/parallel_processing/dsp_con_driver_bfm.sv:47:15: error: use of undeclared identifier 'CONTROL'
+    @(posedge CONTROL.clk);
+              ^~~~~~~
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+in file included from ../../../third_party/tests/uvm-examples/uvm_interrupts_parallel_processing/utils/interrupt/interrupt_pkg.sv:24:
+../../../third_party/tests/uvm-examples/uvm_interrupts_parallel_processing/utils/interrupt/interrupt_util.svh:75:12: error: parentheses are required when invoking function 'get_status'
+    return bfm.get_status;
+           ^~~~~~~~~~~~~~
+Top level design units:
+    hdl_top
+    hvl_top
+
+
+Build failed: 2 errors, 1 warning

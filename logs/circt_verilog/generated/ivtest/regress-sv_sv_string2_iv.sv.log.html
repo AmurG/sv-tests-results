@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_sv_string2_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_string2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_string2.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.050s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_string2.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_string2.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_strcmp(!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>  hw.module @main() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;) (14)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;) (13)\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;) (12)\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34; (11)\0A&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34; (10)\0A&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34; (9)\0A&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34; (8)\0A&#34;</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %8 = sim.fmt.literal &#34; (7)\0A&#34;</pre>
+      <pre>    %9 = sim.fmt.literal &#34; (6)\0A&#34;</pre>
+      <pre>    %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>    %10 = sim.fmt.literal &#34; (5)\0A&#34;</pre>
+      <pre>    %11 = sim.fmt.literal &#34;) (4)\0A&#34;</pre>
+      <pre>    %12 = sim.fmt.literal &#34; (3)\0A&#34;</pre>
+      <pre>    %13 = sim.fmt.literal &#34; (2)\0A&#34;</pre>
+      <pre>    %14 = sim.fmt.literal &#34; (1)\0A&#34;</pre>
+      <pre>    %15 = sim.fmt.literal &#34; &lt;= &#34;</pre>
+      <pre>    %16 = sim.fmt.literal &#34; &lt; &#34;</pre>
+      <pre>    %17 = sim.fmt.literal &#34; &gt;= &#34;</pre>
+      <pre>    %18 = sim.fmt.literal &#34; &gt; &#34;</pre>
+      <pre>    %19 = sim.fmt.literal &#34; != &#34;</pre>
+      <pre>    %20 = sim.fmt.literal &#34;FAILED -- ! (&#34;</pre>
+      <pre>    %21 = sim.fmt.literal &#34; == &#34;</pre>
+      <pre>    %22 = sim.fmt.literal &#34;FAILED -- &#34;</pre>
+      <pre>    %23 = sim.fmt.literal &#34;FAILED -- bar=&#34;</pre>
+      <pre>    %24 = sim.fmt.literal &#34;FAILED -- foo=&#34;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %25 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %26 = sv.constantStr &#34;&#34;</pre>
+      <pre>    %foo = llhd.sig %26 : !hw.string</pre>
+      <pre>    %27 = llhd.prb %foo : !hw.string</pre>
+      <pre>    %bar = llhd.sig %26 : !hw.string</pre>
+      <pre>    %28 = llhd.prb %bar : !hw.string</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %29 = sv.constantStr &#34;foo&#34;</pre>
+      <pre>      llhd.drv %foo, %29 after %25 : !hw.string</pre>
+      <pre>      %30 = sv.constantStr &#34;bar&#34;</pre>
+      <pre>      llhd.drv %bar, %30 after %25 : !hw.string</pre>
+      <pre>      %31 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %32 = func.call @circt_sv_strcmp(%31, %29) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %33 = comb.icmp ne %32, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %33, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %34 = sim.fmt.str %27</pre>
+      <pre>      %35 = sim.fmt.concat (%24, %34, %14)</pre>
+      <pre>      sim.proc.print %35</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb2:  // pred: ^bb0</pre>
+      <pre>      %36 = func.call @circt_sv_strcmp(%28, %30) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %37 = comb.icmp ne %36, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %37, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %38 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %39 = sim.fmt.str %38</pre>
+      <pre>      %40 = sim.fmt.concat (%23, %39, %13)</pre>
+      <pre>      sim.proc.print %40</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      %41 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %42 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %43 = func.call @circt_sv_strcmp(%41, %42) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %44 = comb.icmp eq %43, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %44, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %45 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %46 = sim.fmt.str %45</pre>
+      <pre>      %47 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %48 = sim.fmt.str %47</pre>
+      <pre>      %49 = sim.fmt.concat (%22, %46, %21, %48, %12)</pre>
+      <pre>      sim.proc.print %49</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb6:  // pred: ^bb4</pre>
+      <pre>      %50 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %51 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %52 = func.call @circt_sv_strcmp(%50, %51) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %53 = comb.icmp eq %52, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %53, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %54 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %55 = sim.fmt.str %54</pre>
+      <pre>      %56 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %57 = sim.fmt.str %56</pre>
+      <pre>      %58 = sim.fmt.concat (%20, %55, %19, %57, %11)</pre>
+      <pre>      sim.proc.print %58</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb8:  // pred: ^bb6</pre>
+      <pre>      %59 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %60 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %61 = func.call @circt_sv_strcmp(%59, %60) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %62 = comb.icmp sgt %61, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %62, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      %63 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %64 = sim.fmt.str %63</pre>
+      <pre>      %65 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %66 = sim.fmt.str %65</pre>
+      <pre>      %67 = sim.fmt.concat (%22, %64, %18, %66, %10)</pre>
+      <pre>      sim.proc.print %67</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb10:  // pred: ^bb8</pre>
+      <pre>      %68 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %69 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %70 = func.call @circt_sv_strcmp(%68, %69) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %71 = comb.icmp sgt %70, %c-1_i32 : i32</pre>
+      <pre>      cf.cond_br %71, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      %72 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %73 = sim.fmt.str %72</pre>
+      <pre>      %74 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %75 = sim.fmt.str %74</pre>
+      <pre>      %76 = sim.fmt.concat (%22, %73, %17, %75, %9)</pre>
+      <pre>      sim.proc.print %76</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb12:  // pred: ^bb10</pre>
+      <pre>      %77 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %78 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %79 = func.call @circt_sv_strcmp(%77, %78) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %80 = comb.icmp slt %79, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %80, ^bb13, ^bb14</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      %81 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %82 = sim.fmt.str %81</pre>
+      <pre>      %83 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %84 = sim.fmt.str %83</pre>
+      <pre>      %85 = sim.fmt.concat (%22, %82, %16, %84, %8)</pre>
+      <pre>      sim.proc.print %85</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb14:  // pred: ^bb12</pre>
+      <pre>      %86 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %87 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %88 = func.call @circt_sv_strcmp(%86, %87) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %89 = comb.icmp slt %88, %c1_i32 : i32</pre>
+      <pre>      cf.cond_br %89, ^bb15, ^bb16</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %90 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %91 = sim.fmt.str %90</pre>
+      <pre>      %92 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %93 = sim.fmt.str %92</pre>
+      <pre>      %94 = sim.fmt.concat (%22, %91, %15, %93, %7)</pre>
+      <pre>      sim.proc.print %94</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb16:  // pred: ^bb14</pre>
+      <pre>      %95 = llhd.prb %foo : !hw.string</pre>
+      <pre>      llhd.drv %bar, %95 after %25 : !hw.string</pre>
+      <pre>      %96 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %97 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %98 = func.call @circt_sv_strcmp(%96, %97) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %99 = comb.icmp ne %98, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %99, ^bb17, ^bb18</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      %100 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %101 = sim.fmt.str %100</pre>
+      <pre>      %102 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %103 = sim.fmt.str %102</pre>
+      <pre>      %104 = sim.fmt.concat (%22, %101, %19, %103, %6)</pre>
+      <pre>      sim.proc.print %104</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb18:  // pred: ^bb16</pre>
+      <pre>      %105 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %106 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %107 = func.call @circt_sv_strcmp(%105, %106) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %108 = comb.icmp sgt %107, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %108, ^bb19, ^bb20</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      %109 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %110 = sim.fmt.str %109</pre>
+      <pre>      %111 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %112 = sim.fmt.str %111</pre>
+      <pre>      %113 = sim.fmt.concat (%22, %110, %18, %112, %5)</pre>
+      <pre>      sim.proc.print %113</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb20:  // pred: ^bb18</pre>
+      <pre>      %114 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %115 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %116 = func.call @circt_sv_strcmp(%114, %115) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %117 = comb.icmp slt %116, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %117, ^bb21, ^bb22</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      %118 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %119 = sim.fmt.str %118</pre>
+      <pre>      %120 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %121 = sim.fmt.str %120</pre>
+      <pre>      %122 = sim.fmt.concat (%22, %119, %16, %121, %4)</pre>
+      <pre>      sim.proc.print %122</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb22:  // pred: ^bb20</pre>
+      <pre>      %123 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %124 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %125 = func.call @circt_sv_strcmp(%123, %124) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %126 = comb.icmp ne %125, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %126, ^bb23, ^bb24</pre>
+      <pre>    ^bb23:  // pred: ^bb22</pre>
+      <pre>      %127 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %128 = sim.fmt.str %127</pre>
+      <pre>      %129 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %130 = sim.fmt.str %129</pre>
+      <pre>      %131 = sim.fmt.concat (%20, %128, %21, %130, %3)</pre>
+      <pre>      sim.proc.print %131</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb24:  // pred: ^bb22</pre>
+      <pre>      %132 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %133 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %134 = func.call @circt_sv_strcmp(%132, %133) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %135 = comb.icmp sgt %134, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %135, ^bb25, ^bb26</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      %136 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %137 = sim.fmt.str %136</pre>
+      <pre>      %138 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %139 = sim.fmt.str %138</pre>
+      <pre>      %140 = sim.fmt.concat (%20, %137, %15, %139, %2)</pre>
+      <pre>      sim.proc.print %140</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb26:  // pred: ^bb24</pre>
+      <pre>      %141 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %142 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %143 = func.call @circt_sv_strcmp(%141, %142) : (!hw.string, !hw.string) -&gt; i32</pre>
+      <pre>      %144 = comb.icmp slt %143, %c0_i32 : i32</pre>
+      <pre>      cf.cond_br %144, ^bb27, ^bb28</pre>
+      <pre>    ^bb27:  // pred: ^bb26</pre>
+      <pre>      %145 = llhd.prb %foo : !hw.string</pre>
+      <pre>      %146 = sim.fmt.str %145</pre>
+      <pre>      %147 = llhd.prb %bar : !hw.string</pre>
+      <pre>      %148 = sim.fmt.str %147</pre>
+      <pre>      %149 = sim.fmt.concat (%20, %146, %17, %148, %1)</pre>
+      <pre>      sim.proc.print %149</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb28:  // pred: ^bb26</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

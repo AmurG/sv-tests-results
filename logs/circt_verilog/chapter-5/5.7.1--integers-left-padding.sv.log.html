@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>integers-left-padding</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Automatic left padding of literal constant numbers</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>5.7.1</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:05</dd></div>
+        <div><dt>time elapsed</dt><dd>0.041s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = hw.aggregate_constant [0 : i85, -1 : i85] : !hw.struct&lt;value: i85, unknown: i85&gt;</pre>
+      <pre>    %c4294967295_i85 = hw.constant 4294967295 : i85</pre>
+      <pre>    %c5_i85 = hw.constant 5 : i85</pre>
+      <pre>    %c240_i12 = hw.constant 240 : i12</pre>
+      <pre>    %c243_i12 = hw.constant 243 : i12</pre>
+      <pre>    %c-16_i12 = hw.constant -16 : i12</pre>
+      <pre>    %c-13_i12 = hw.constant -13 : i12</pre>
+      <pre>    %c15_i12 = hw.constant 15 : i12</pre>
+      <pre>    %c48_i12 = hw.constant 48 : i12</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i85 = hw.constant 0 : i85</pre>
+      <pre>    %c0_i12 = hw.constant 0 : i12</pre>
+      <pre>    %c-1_i12 = hw.constant -1 : i12</pre>
+      <pre>    %2 = hw.aggregate_constant [0 : i12, -1 : i12] : !hw.struct&lt;value: i12, unknown: i12&gt;</pre>
+      <pre>    %a = llhd.sig %2 : !hw.struct&lt;value: i12, unknown: i12&gt;</pre>
+      <pre>    %3 = llhd.sig.struct_extract %a[&#34;value&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %a[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %b = llhd.sig %2 : !hw.struct&lt;value: i12, unknown: i12&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %b[&#34;value&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %b[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %c = llhd.sig %2 : !hw.struct&lt;value: i12, unknown: i12&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %c[&#34;value&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %c[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %d = llhd.sig %2 : !hw.struct&lt;value: i12, unknown: i12&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %d[&#34;value&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %d[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i12, unknown: i12&gt;&gt;</pre>
+      <pre>    %e = llhd.sig %0 : !hw.struct&lt;value: i85, unknown: i85&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %e[&#34;value&#34;] : &lt;!hw.struct&lt;value: i85, unknown: i85&gt;&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %e[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i85, unknown: i85&gt;&gt;</pre>
+      <pre>    %f = llhd.sig %0 : !hw.struct&lt;value: i85, unknown: i85&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %f[&#34;value&#34;] : &lt;!hw.struct&lt;value: i85, unknown: i85&gt;&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %f[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i85, unknown: i85&gt;&gt;</pre>
+      <pre>    %g = llhd.sig %0 : !hw.struct&lt;value: i85, unknown: i85&gt;</pre>
+      <pre>    %15 = llhd.sig.struct_extract %g[&#34;value&#34;] : &lt;!hw.struct&lt;value: i85, unknown: i85&gt;&gt;</pre>
+      <pre>    %16 = llhd.sig.struct_extract %g[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i85, unknown: i85&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %3, %c0_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %4, %c-1_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %5, %c48_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %6, %c15_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %7, %c-13_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %8, %c-16_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %9, %c243_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %10, %c240_i12 after %1 : i12</pre>
+      <pre>      llhd.drv %11, %c5_i85 after %1 : i85</pre>
+      <pre>      llhd.drv %12, %c0_i85 after %1 : i85</pre>
+      <pre>      llhd.drv %13, %c0_i85 after %1 : i85</pre>
+      <pre>      llhd.drv %14, %c4294967295_i85 after %1 : i85</pre>
+      <pre>      llhd.drv %15, %c4294967295_i85 after %1 : i85</pre>
+      <pre>      llhd.drv %16, %c4294967295_i85 after %1 : i85</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

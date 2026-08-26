@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_br_gh277b_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh277b.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh277b.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:14</dd></div>
+        <div><dt>time elapsed</dt><dd>0.046s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/br_gh277b.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/br_gh277b.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module private @dut(in %__hier_ref$a$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$a$unknown : !llhd.ref&lt;i1&gt;, in %__hier_ref$b$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$b$unknown : !llhd.ref&lt;i1&gt;, in %__hier_ref$c$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$c$unknown : !llhd.ref&lt;i1&gt;, in %__hier_ref$d$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$d$unknown : !llhd.ref&lt;i1&gt;) {</pre>
+      <pre>    %0 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %2 = llhd.prb %__hier_ref$a$value : i1</pre>
+      <pre>    %3 = llhd.prb %__hier_ref$b$value : i1</pre>
+      <pre>    %4 = llhd.prb %__hier_ref$c$value : i1</pre>
+      <pre>    %5 = llhd.prb %__hier_ref$d$value : i1</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %6 = llhd.prb %__hier_ref$a$value : i1</pre>
+      <pre>      %7 = llhd.prb %__hier_ref$a$unknown : i1</pre>
+      <pre>      %8 = llhd.prb %__hier_ref$b$value : i1</pre>
+      <pre>      %9 = llhd.prb %__hier_ref$b$unknown : i1</pre>
+      <pre>      %10 = comb.or %7, %9 : i1</pre>
+      <pre>      %11 = comb.add %6, %8 : i1</pre>
+      <pre>      %12 = hw.struct_create (%11, %false) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %13 = comb.mux %10, %0, %12 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %14 = llhd.prb %__hier_ref$c$value : i1</pre>
+      <pre>      %15 = llhd.prb %__hier_ref$c$unknown : i1</pre>
+      <pre>      %16 = comb.or %7, %15 : i1</pre>
+      <pre>      %17 = comb.add %6, %14 : i1</pre>
+      <pre>      %18 = hw.struct_create (%17, %false) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %19 = comb.mux %16, %0, %18 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %value = hw.struct_extract %13[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %13[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %value_0 = hw.struct_extract %19[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown_1 = hw.struct_extract %19[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %20 = comb.or %unknown, %unknown_1 : i1</pre>
+      <pre>      %21 = comb.add %value, %value_0 : i1</pre>
+      <pre>      %22 = hw.struct_create (%21, %false) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %23 = comb.mux %20, %0, %22 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %value_2 = hw.struct_extract %23[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown_3 = hw.struct_extract %23[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.drv %__hier_ref$d$value, %value_2 after %1 : i1</pre>
+      <pre>      llhd.drv %__hier_ref$d$unknown, %unknown_3 after %1 : i1</pre>
+      <pre>      llhd.wait (%2, %3, %4, %5 : i1, i1, i1, i1), ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>  hw.module @tb() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %4 = llhd.constant_time &lt;1000000fs, 0d, 0e&gt;</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %5 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %__hier_ref$a = llhd.sig %5 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %__hier_ref$a[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %__hier_ref$a[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %__hier_ref$b = llhd.sig %5 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %__hier_ref$b[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %__hier_ref$b[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %__hier_ref$c = llhd.sig %5 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %__hier_ref$c[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %__hier_ref$c[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %__hier_ref$d = llhd.sig %5 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %__hier_ref$d[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %__hier_ref$d[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    hw.instance &#34;dut&#34; @dut(__hier_ref$a$value: %6: !llhd.ref&lt;i1&gt;, __hier_ref$a$unknown: %7: !llhd.ref&lt;i1&gt;, __hier_ref$b$value: %8: !llhd.ref&lt;i1&gt;, __hier_ref$b$unknown: %9: !llhd.ref&lt;i1&gt;, __hier_ref$c$value: %10: !llhd.ref&lt;i1&gt;, __hier_ref$c$unknown: %11: !llhd.ref&lt;i1&gt;, __hier_ref$d$value: %12: !llhd.ref&lt;i1&gt;, __hier_ref$d$unknown: %13: !llhd.ref&lt;i1&gt;) -&gt; ()</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.wait delay %4, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      llhd.drv %6, %false after %3 : i1</pre>
+      <pre>      llhd.drv %7, %false after %3 : i1</pre>
+      <pre>      llhd.wait delay %4, ^bb2</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      llhd.drv %8, %false after %3 : i1</pre>
+      <pre>      llhd.drv %9, %false after %3 : i1</pre>
+      <pre>      llhd.wait delay %4, ^bb3</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      llhd.drv %10, %true after %3 : i1</pre>
+      <pre>      llhd.drv %11, %false after %3 : i1</pre>
+      <pre>      llhd.wait delay %4, ^bb4</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      %14 = llhd.prb %6 : i1</pre>
+      <pre>      %15 = llhd.prb %7 : i1</pre>
+      <pre>      %16 = sim.fmt.fvint 10 0 0 %14, %15 : i1</pre>
+      <pre>      %17 = llhd.prb %8 : i1</pre>
+      <pre>      %18 = llhd.prb %9 : i1</pre>
+      <pre>      %19 = sim.fmt.fvint 10 0 0 %17, %18 : i1</pre>
+      <pre>      %20 = llhd.prb %10 : i1</pre>
+      <pre>      %21 = llhd.prb %11 : i1</pre>
+      <pre>      %22 = sim.fmt.fvint 10 0 0 %20, %21 : i1</pre>
+      <pre>      %23 = llhd.prb %12 : i1</pre>
+      <pre>      %24 = llhd.prb %13 : i1</pre>
+      <pre>      %25 = sim.fmt.fvint 10 0 0 %23, %24 : i1</pre>
+      <pre>      %26 = sim.fmt.concat (%16, %19, %22, %25, %2)</pre>
+      <pre>      sim.proc.print %26</pre>
+      <pre>      %27 = llhd.prb %12 : i1</pre>
+      <pre>      %28 = llhd.prb %13 : i1</pre>
+      <pre>      %29 = comb.xor %28, %true : i1</pre>
+      <pre>      %30 = comb.and %27, %29 : i1</pre>
+      <pre>      cf.cond_br %30, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      cf.br ^bb7</pre>
+      <pre>    ^bb6:  // pred: ^bb4</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb7</pre>
+      <pre>    ^bb7:  // 2 preds: ^bb5, ^bb6</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

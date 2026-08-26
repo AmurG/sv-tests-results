@@ -1,0 +1,30 @@
+name: 22.12--line-illegal-5
+description: Missing filename 
+should_fail_because: Missing filename 
+tags: 22.12
+type: preprocessing
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: preprocessing
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.004357337951660156
+user_time: 0.001715
+system_time: 0.004755
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver -E --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-22/22.12--line-illegal-5.sv:17:8: error: expected string literal
+`line 1
+       ^

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>wildcard_const_operator_sim_5</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>wildcard operator with constant test in simulation</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>11.4.6</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/wildcard_const_operators_sim/11.4.6--wildcard_const_operator_5.sv.html" target="file-frame">tests/generated/wildcard_const_operators_sim/11.4.6--wildcard_const_operator_5.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:07</dd></div>
+        <div><dt>time elapsed</dt><dd>0.039s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../tests/generated/wildcard_const_operators_sim/11.4.6--wildcard_const_operator_5.sv.html" target="file-frame">tests/generated/wildcard_const_operators_sim/11.4.6--wildcard_const_operator_5.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;&#39;)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;:assert: (&#39;0&#39; == &#39;&#34;</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %c1_i3 = hw.constant 1 : i3</pre>
+      <pre>    %c-1_i3 = hw.constant -1 : i3</pre>
+      <pre>    %2 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %3 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %4 = hw.aggregate_constant [-7 : i4, 0 : i4] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %a = llhd.sig %4 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %a[&#34;value&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %6 = llhd.prb %5 : i4</pre>
+      <pre>    %7 = llhd.sig.struct_extract %a[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %8 = llhd.prb %7 : i4</pre>
+      <pre>    %c = llhd.sig %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %c[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %c[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %11 = comb.extract %8 from 0 : (i4) -&gt; i3</pre>
+      <pre>      %12 = comb.xor %11, %c-1_i3 : i3</pre>
+      <pre>      %13 = comb.extract %6 from 0 : (i4) -&gt; i3</pre>
+      <pre>      %14 = comb.xor %13, %c1_i3 : i3</pre>
+      <pre>      %15 = comb.and %14, %12 : i3</pre>
+      <pre>      %16 = comb.icmp ne %15, %c0_i3 : i3</pre>
+      <pre>      %17 = comb.icmp ne %11, %c0_i3 : i3</pre>
+      <pre>      %18 = comb.xor %16, %true : i1</pre>
+      <pre>      %19 = comb.and %18, %17 : i1</pre>
+      <pre>      llhd.drv %9, %16 after %3 : i1</pre>
+      <pre>      llhd.drv %10, %19 after %3 : i1</pre>
+      <pre>      %20 = llhd.prb %9 : i1</pre>
+      <pre>      %21 = llhd.prb %10 : i1</pre>
+      <pre>      %22 = sim.fmt.fvint 10 0 0 %20, %21 : i1</pre>
+      <pre>      %23 = sim.fmt.concat (%1, %22, %0)</pre>
+      <pre>      sim.proc.print %23</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

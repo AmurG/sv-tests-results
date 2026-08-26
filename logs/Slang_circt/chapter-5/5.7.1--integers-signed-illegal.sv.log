@@ -1,0 +1,35 @@
+name: integers-sized-illegal
+description: Integer literal constants
+should_fail_because: illegal negative decimal syntax, proper one is -8'd6
+tags: 5.7.1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10896730422973633
+user_time: 0.017912
+system_time: 0.110652
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-5/5.7.1--integers-signed-illegal.sv:20:12: error: expected vector literal digits
+    a = 8'd-6;
+           ^
+Top level design units:
+    top
+
+
+Build failed: 1 error, 0 warnings

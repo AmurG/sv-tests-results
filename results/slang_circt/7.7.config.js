@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","unpacked-arrays-as-arguments-to-subroutines",1,"logs/Slang/chapter-7/arrays/unpacked/subroutines.sv.log.html","tests/chapter-7/arrays/unpacked/subroutines.sv.html"]]

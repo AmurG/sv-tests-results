@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>simple_forgen02</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/simple_forgen02.sv.html" target="file-frame">tests/generated/yosys/simple_forgen02.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.054s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/simple_forgen02.sv.html" target="file-frame">tests/generated/yosys/simple_forgen02.sv</a> <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @uut_forgen02(in %a : !hw.struct&lt;value: i8, unknown: i8&gt;, in %b : !hw.struct&lt;value: i8, unknown: i8&gt;, in %cin : !hw.struct&lt;value: i1, unknown: i1&gt;, out y : !hw.struct&lt;value: i8, unknown: i8&gt;, out cout : !hw.struct&lt;value: i1, unknown: i1&gt;) {</pre>
+      <pre>    %0 = hw.aggregate_constant [-1 : i3, -1 : i3] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %c-1_i2 = hw.constant -1 : i2</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %2 = hw.aggregate_constant [-1 : i8, -1 : i8] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %y = llhd.sig %2 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %3 = hw.struct_create (%5, %7) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %y, %3 after %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %y[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %5 = comb.concat %358, %311, %264, %217, %170, %123, %76, %27 : i1, i1, i1, i1, i1, i1, i1, i1</pre>
+      <pre>    %6 = llhd.sig.struct_extract %y[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %7 = comb.concat %355, %308, %261, %214, %167, %120, %73, %24 : i1, i1, i1, i1, i1, i1, i1, i1</pre>
+      <pre>    %carry = llhd.sig %2 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %8 = hw.struct_create (%10, %12) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    llhd.drv %carry, %8 after %1 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %carry[&#34;value&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %10 = comb.concat %386, %339, %292, %245, %198, %151, %104, %55 : i1, i1, i1, i1, i1, i1, i1, i1</pre>
+      <pre>    %11 = llhd.sig.struct_extract %carry[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i8, unknown: i8&gt;&gt;</pre>
+      <pre>    %12 = comb.concat %388, %341, %294, %247, %200, %153, %106, %57 : i1, i1, i1, i1, i1, i1, i1, i1</pre>
+      <pre>    %adder_0.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %13 = hw.struct_create (%15, %17) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_0.D, %13 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %adder_0.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %15 = comb.concat %value_2, %18, %20 : i1, i1, i1</pre>
+      <pre>    %16 = llhd.sig.struct_extract %adder_0.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %17 = comb.concat %unknown_3, %19, %21 : i1, i1, i1</pre>
+      <pre>    %value = hw.struct_extract %a[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %a[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %18 = comb.extract %value from 0 : (i8) -&gt; i1</pre>
+      <pre>    %19 = comb.extract %unknown from 0 : (i8) -&gt; i1</pre>
+      <pre>    %value_0 = hw.struct_extract %b[&#34;value&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %unknown_1 = hw.struct_extract %b[&#34;unknown&#34;] : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    %20 = comb.extract %value_0 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %21 = comb.extract %unknown_1 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %value_2 = hw.struct_extract %cin[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_3 = hw.struct_extract %cin[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %22 = llhd.prb %14 : i3</pre>
+      <pre>    %23 = llhd.prb %16 : i3</pre>
+      <pre>    %24 = comb.icmp ne %23, %c0_i3 : i3</pre>
+      <pre>    %25 = comb.parity %22 : i3</pre>
+      <pre>    %26 = comb.xor %24, %true : i1</pre>
+      <pre>    %27 = comb.and %25, %26 : i1</pre>
+      <pre>    %28 = comb.extract %22 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %29 = comb.extract %23 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %30 = comb.xor %29, %c-1_i2 : i2</pre>
+      <pre>    %31 = comb.xor %28, %c-1_i2 : i2</pre>
+      <pre>    %32 = comb.and %30, %31 : i2</pre>
+      <pre>    %33 = comb.icmp ne %29, %c0_i2 : i2</pre>
+      <pre>    %34 = comb.icmp eq %32, %c0_i2 : i2</pre>
+      <pre>    %35 = comb.and %34, %33 : i1</pre>
+      <pre>    %36 = comb.xor %33, %true : i1</pre>
+      <pre>    %37 = comb.and %34, %36 : i1</pre>
+      <pre>    %38 = comb.parity %28 : i2</pre>
+      <pre>    %39 = comb.and %38, %36 : i1</pre>
+      <pre>    %40 = comb.extract %22 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %41 = comb.extract %23 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %42 = comb.xor %41, %true : i1</pre>
+      <pre>    %43 = comb.xor %39, %true : i1</pre>
+      <pre>    %44 = comb.xor %40, %true : i1</pre>
+      <pre>    %45 = comb.and %36, %43 : i1</pre>
+      <pre>    %46 = comb.and %42, %44 : i1</pre>
+      <pre>    %47 = comb.and %39, %42, %40 : i1</pre>
+      <pre>    %48 = comb.or %45, %46, %47 : i1</pre>
+      <pre>    %49 = comb.xor %35, %true : i1</pre>
+      <pre>    %50 = comb.xor %37, %true : i1</pre>
+      <pre>    %51 = comb.xor %47, %true : i1</pre>
+      <pre>    %52 = comb.and %49, %37 : i1</pre>
+      <pre>    %53 = comb.and %48, %47 : i1</pre>
+      <pre>    %54 = comb.and %49, %50, %48, %51 : i1</pre>
+      <pre>    %55 = comb.or %52, %53 : i1</pre>
+      <pre>    %56 = comb.or %54, %52, %53 : i1</pre>
+      <pre>    %57 = comb.xor %56, %true : i1</pre>
+      <pre>    %adder_1.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %58 = hw.struct_create (%60, %62) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_1.D, %58 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %59 = llhd.sig.struct_extract %adder_1.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %60 = comb.concat %69, %63, %65 : i1, i1, i1</pre>
+      <pre>    %61 = llhd.sig.struct_extract %adder_1.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %62 = comb.concat %70, %64, %66 : i1, i1, i1</pre>
+      <pre>    %63 = comb.extract %value from 1 : (i8) -&gt; i1</pre>
+      <pre>    %64 = comb.extract %unknown from 1 : (i8) -&gt; i1</pre>
+      <pre>    %65 = comb.extract %value_0 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %66 = comb.extract %unknown_1 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %67 = llhd.prb %9 : i8</pre>
+      <pre>    %68 = llhd.prb %11 : i8</pre>
+      <pre>    %69 = comb.extract %67 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %70 = comb.extract %68 from 0 : (i8) -&gt; i1</pre>
+      <pre>    %71 = llhd.prb %59 : i3</pre>
+      <pre>    %72 = llhd.prb %61 : i3</pre>
+      <pre>    %73 = comb.icmp ne %72, %c0_i3 : i3</pre>
+      <pre>    %74 = comb.parity %71 : i3</pre>
+      <pre>    %75 = comb.xor %73, %true : i1</pre>
+      <pre>    %76 = comb.and %74, %75 : i1</pre>
+      <pre>    %77 = comb.extract %71 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %78 = comb.extract %72 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %79 = comb.xor %78, %c-1_i2 : i2</pre>
+      <pre>    %80 = comb.xor %77, %c-1_i2 : i2</pre>
+      <pre>    %81 = comb.and %79, %80 : i2</pre>
+      <pre>    %82 = comb.icmp ne %78, %c0_i2 : i2</pre>
+      <pre>    %83 = comb.icmp eq %81, %c0_i2 : i2</pre>
+      <pre>    %84 = comb.and %83, %82 : i1</pre>
+      <pre>    %85 = comb.xor %82, %true : i1</pre>
+      <pre>    %86 = comb.and %83, %85 : i1</pre>
+      <pre>    %87 = comb.parity %77 : i2</pre>
+      <pre>    %88 = comb.and %87, %85 : i1</pre>
+      <pre>    %89 = comb.extract %71 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %90 = comb.extract %72 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %91 = comb.xor %90, %true : i1</pre>
+      <pre>    %92 = comb.xor %88, %true : i1</pre>
+      <pre>    %93 = comb.xor %89, %true : i1</pre>
+      <pre>    %94 = comb.and %85, %92 : i1</pre>
+      <pre>    %95 = comb.and %91, %93 : i1</pre>
+      <pre>    %96 = comb.and %88, %91, %89 : i1</pre>
+      <pre>    %97 = comb.or %94, %95, %96 : i1</pre>
+      <pre>    %98 = comb.xor %84, %true : i1</pre>
+      <pre>    %99 = comb.xor %86, %true : i1</pre>
+      <pre>    %100 = comb.xor %96, %true : i1</pre>
+      <pre>    %101 = comb.and %98, %86 : i1</pre>
+      <pre>    %102 = comb.and %97, %96 : i1</pre>
+      <pre>    %103 = comb.and %98, %99, %97, %100 : i1</pre>
+      <pre>    %104 = comb.or %101, %102 : i1</pre>
+      <pre>    %105 = comb.or %103, %101, %102 : i1</pre>
+      <pre>    %106 = comb.xor %105, %true : i1</pre>
+      <pre>    %adder_2.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %107 = hw.struct_create (%109, %111) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_2.D, %107 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %108 = llhd.sig.struct_extract %adder_2.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %109 = comb.concat %116, %112, %114 : i1, i1, i1</pre>
+      <pre>    %110 = llhd.sig.struct_extract %adder_2.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %111 = comb.concat %117, %113, %115 : i1, i1, i1</pre>
+      <pre>    %112 = comb.extract %value from 2 : (i8) -&gt; i1</pre>
+      <pre>    %113 = comb.extract %unknown from 2 : (i8) -&gt; i1</pre>
+      <pre>    %114 = comb.extract %value_0 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %115 = comb.extract %unknown_1 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %116 = comb.extract %67 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %117 = comb.extract %68 from 1 : (i8) -&gt; i1</pre>
+      <pre>    %118 = llhd.prb %108 : i3</pre>
+      <pre>    %119 = llhd.prb %110 : i3</pre>
+      <pre>    %120 = comb.icmp ne %119, %c0_i3 : i3</pre>
+      <pre>    %121 = comb.parity %118 : i3</pre>
+      <pre>    %122 = comb.xor %120, %true : i1</pre>
+      <pre>    %123 = comb.and %121, %122 : i1</pre>
+      <pre>    %124 = comb.extract %118 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %125 = comb.extract %119 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %126 = comb.xor %125, %c-1_i2 : i2</pre>
+      <pre>    %127 = comb.xor %124, %c-1_i2 : i2</pre>
+      <pre>    %128 = comb.and %126, %127 : i2</pre>
+      <pre>    %129 = comb.icmp ne %125, %c0_i2 : i2</pre>
+      <pre>    %130 = comb.icmp eq %128, %c0_i2 : i2</pre>
+      <pre>    %131 = comb.and %130, %129 : i1</pre>
+      <pre>    %132 = comb.xor %129, %true : i1</pre>
+      <pre>    %133 = comb.and %130, %132 : i1</pre>
+      <pre>    %134 = comb.parity %124 : i2</pre>
+      <pre>    %135 = comb.and %134, %132 : i1</pre>
+      <pre>    %136 = comb.extract %118 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %137 = comb.extract %119 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %138 = comb.xor %137, %true : i1</pre>
+      <pre>    %139 = comb.xor %135, %true : i1</pre>
+      <pre>    %140 = comb.xor %136, %true : i1</pre>
+      <pre>    %141 = comb.and %132, %139 : i1</pre>
+      <pre>    %142 = comb.and %138, %140 : i1</pre>
+      <pre>    %143 = comb.and %135, %138, %136 : i1</pre>
+      <pre>    %144 = comb.or %141, %142, %143 : i1</pre>
+      <pre>    %145 = comb.xor %131, %true : i1</pre>
+      <pre>    %146 = comb.xor %133, %true : i1</pre>
+      <pre>    %147 = comb.xor %143, %true : i1</pre>
+      <pre>    %148 = comb.and %145, %133 : i1</pre>
+      <pre>    %149 = comb.and %144, %143 : i1</pre>
+      <pre>    %150 = comb.and %145, %146, %144, %147 : i1</pre>
+      <pre>    %151 = comb.or %148, %149 : i1</pre>
+      <pre>    %152 = comb.or %150, %148, %149 : i1</pre>
+      <pre>    %153 = comb.xor %152, %true : i1</pre>
+      <pre>    %adder_3.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %154 = hw.struct_create (%156, %158) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_3.D, %154 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %155 = llhd.sig.struct_extract %adder_3.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %156 = comb.concat %163, %159, %161 : i1, i1, i1</pre>
+      <pre>    %157 = llhd.sig.struct_extract %adder_3.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %158 = comb.concat %164, %160, %162 : i1, i1, i1</pre>
+      <pre>    %159 = comb.extract %value from 3 : (i8) -&gt; i1</pre>
+      <pre>    %160 = comb.extract %unknown from 3 : (i8) -&gt; i1</pre>
+      <pre>    %161 = comb.extract %value_0 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %162 = comb.extract %unknown_1 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %163 = comb.extract %67 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %164 = comb.extract %68 from 2 : (i8) -&gt; i1</pre>
+      <pre>    %165 = llhd.prb %155 : i3</pre>
+      <pre>    %166 = llhd.prb %157 : i3</pre>
+      <pre>    %167 = comb.icmp ne %166, %c0_i3 : i3</pre>
+      <pre>    %168 = comb.parity %165 : i3</pre>
+      <pre>    %169 = comb.xor %167, %true : i1</pre>
+      <pre>    %170 = comb.and %168, %169 : i1</pre>
+      <pre>    %171 = comb.extract %165 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %172 = comb.extract %166 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %173 = comb.xor %172, %c-1_i2 : i2</pre>
+      <pre>    %174 = comb.xor %171, %c-1_i2 : i2</pre>
+      <pre>    %175 = comb.and %173, %174 : i2</pre>
+      <pre>    %176 = comb.icmp ne %172, %c0_i2 : i2</pre>
+      <pre>    %177 = comb.icmp eq %175, %c0_i2 : i2</pre>
+      <pre>    %178 = comb.and %177, %176 : i1</pre>
+      <pre>    %179 = comb.xor %176, %true : i1</pre>
+      <pre>    %180 = comb.and %177, %179 : i1</pre>
+      <pre>    %181 = comb.parity %171 : i2</pre>
+      <pre>    %182 = comb.and %181, %179 : i1</pre>
+      <pre>    %183 = comb.extract %165 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %184 = comb.extract %166 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %185 = comb.xor %184, %true : i1</pre>
+      <pre>    %186 = comb.xor %182, %true : i1</pre>
+      <pre>    %187 = comb.xor %183, %true : i1</pre>
+      <pre>    %188 = comb.and %179, %186 : i1</pre>
+      <pre>    %189 = comb.and %185, %187 : i1</pre>
+      <pre>    %190 = comb.and %182, %185, %183 : i1</pre>
+      <pre>    %191 = comb.or %188, %189, %190 : i1</pre>
+      <pre>    %192 = comb.xor %178, %true : i1</pre>
+      <pre>    %193 = comb.xor %180, %true : i1</pre>
+      <pre>    %194 = comb.xor %190, %true : i1</pre>
+      <pre>    %195 = comb.and %192, %180 : i1</pre>
+      <pre>    %196 = comb.and %191, %190 : i1</pre>
+      <pre>    %197 = comb.and %192, %193, %191, %194 : i1</pre>
+      <pre>    %198 = comb.or %195, %196 : i1</pre>
+      <pre>    %199 = comb.or %197, %195, %196 : i1</pre>
+      <pre>    %200 = comb.xor %199, %true : i1</pre>
+      <pre>    %adder_4.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %201 = hw.struct_create (%203, %205) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_4.D, %201 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %202 = llhd.sig.struct_extract %adder_4.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %203 = comb.concat %210, %206, %208 : i1, i1, i1</pre>
+      <pre>    %204 = llhd.sig.struct_extract %adder_4.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %205 = comb.concat %211, %207, %209 : i1, i1, i1</pre>
+      <pre>    %206 = comb.extract %value from 4 : (i8) -&gt; i1</pre>
+      <pre>    %207 = comb.extract %unknown from 4 : (i8) -&gt; i1</pre>
+      <pre>    %208 = comb.extract %value_0 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %209 = comb.extract %unknown_1 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %210 = comb.extract %67 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %211 = comb.extract %68 from 3 : (i8) -&gt; i1</pre>
+      <pre>    %212 = llhd.prb %202 : i3</pre>
+      <pre>    %213 = llhd.prb %204 : i3</pre>
+      <pre>    %214 = comb.icmp ne %213, %c0_i3 : i3</pre>
+      <pre>    %215 = comb.parity %212 : i3</pre>
+      <pre>    %216 = comb.xor %214, %true : i1</pre>
+      <pre>    %217 = comb.and %215, %216 : i1</pre>
+      <pre>    %218 = comb.extract %212 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %219 = comb.extract %213 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %220 = comb.xor %219, %c-1_i2 : i2</pre>
+      <pre>    %221 = comb.xor %218, %c-1_i2 : i2</pre>
+      <pre>    %222 = comb.and %220, %221 : i2</pre>
+      <pre>    %223 = comb.icmp ne %219, %c0_i2 : i2</pre>
+      <pre>    %224 = comb.icmp eq %222, %c0_i2 : i2</pre>
+      <pre>    %225 = comb.and %224, %223 : i1</pre>
+      <pre>    %226 = comb.xor %223, %true : i1</pre>
+      <pre>    %227 = comb.and %224, %226 : i1</pre>
+      <pre>    %228 = comb.parity %218 : i2</pre>
+      <pre>    %229 = comb.and %228, %226 : i1</pre>
+      <pre>    %230 = comb.extract %212 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %231 = comb.extract %213 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %232 = comb.xor %231, %true : i1</pre>
+      <pre>    %233 = comb.xor %229, %true : i1</pre>
+      <pre>    %234 = comb.xor %230, %true : i1</pre>
+      <pre>    %235 = comb.and %226, %233 : i1</pre>
+      <pre>    %236 = comb.and %232, %234 : i1</pre>
+      <pre>    %237 = comb.and %229, %232, %230 : i1</pre>
+      <pre>    %238 = comb.or %235, %236, %237 : i1</pre>
+      <pre>    %239 = comb.xor %225, %true : i1</pre>
+      <pre>    %240 = comb.xor %227, %true : i1</pre>
+      <pre>    %241 = comb.xor %237, %true : i1</pre>
+      <pre>    %242 = comb.and %239, %227 : i1</pre>
+      <pre>    %243 = comb.and %238, %237 : i1</pre>
+      <pre>    %244 = comb.and %239, %240, %238, %241 : i1</pre>
+      <pre>    %245 = comb.or %242, %243 : i1</pre>
+      <pre>    %246 = comb.or %244, %242, %243 : i1</pre>
+      <pre>    %247 = comb.xor %246, %true : i1</pre>
+      <pre>    %adder_5.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %248 = hw.struct_create (%250, %252) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_5.D, %248 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %249 = llhd.sig.struct_extract %adder_5.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %250 = comb.concat %257, %253, %255 : i1, i1, i1</pre>
+      <pre>    %251 = llhd.sig.struct_extract %adder_5.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %252 = comb.concat %258, %254, %256 : i1, i1, i1</pre>
+      <pre>    %253 = comb.extract %value from 5 : (i8) -&gt; i1</pre>
+      <pre>    %254 = comb.extract %unknown from 5 : (i8) -&gt; i1</pre>
+      <pre>    %255 = comb.extract %value_0 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %256 = comb.extract %unknown_1 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %257 = comb.extract %67 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %258 = comb.extract %68 from 4 : (i8) -&gt; i1</pre>
+      <pre>    %259 = llhd.prb %249 : i3</pre>
+      <pre>    %260 = llhd.prb %251 : i3</pre>
+      <pre>    %261 = comb.icmp ne %260, %c0_i3 : i3</pre>
+      <pre>    %262 = comb.parity %259 : i3</pre>
+      <pre>    %263 = comb.xor %261, %true : i1</pre>
+      <pre>    %264 = comb.and %262, %263 : i1</pre>
+      <pre>    %265 = comb.extract %259 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %266 = comb.extract %260 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %267 = comb.xor %266, %c-1_i2 : i2</pre>
+      <pre>    %268 = comb.xor %265, %c-1_i2 : i2</pre>
+      <pre>    %269 = comb.and %267, %268 : i2</pre>
+      <pre>    %270 = comb.icmp ne %266, %c0_i2 : i2</pre>
+      <pre>    %271 = comb.icmp eq %269, %c0_i2 : i2</pre>
+      <pre>    %272 = comb.and %271, %270 : i1</pre>
+      <pre>    %273 = comb.xor %270, %true : i1</pre>
+      <pre>    %274 = comb.and %271, %273 : i1</pre>
+      <pre>    %275 = comb.parity %265 : i2</pre>
+      <pre>    %276 = comb.and %275, %273 : i1</pre>
+      <pre>    %277 = comb.extract %259 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %278 = comb.extract %260 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %279 = comb.xor %278, %true : i1</pre>
+      <pre>    %280 = comb.xor %276, %true : i1</pre>
+      <pre>    %281 = comb.xor %277, %true : i1</pre>
+      <pre>    %282 = comb.and %273, %280 : i1</pre>
+      <pre>    %283 = comb.and %279, %281 : i1</pre>
+      <pre>    %284 = comb.and %276, %279, %277 : i1</pre>
+      <pre>    %285 = comb.or %282, %283, %284 : i1</pre>
+      <pre>    %286 = comb.xor %272, %true : i1</pre>
+      <pre>    %287 = comb.xor %274, %true : i1</pre>
+      <pre>    %288 = comb.xor %284, %true : i1</pre>
+      <pre>    %289 = comb.and %286, %274 : i1</pre>
+      <pre>    %290 = comb.and %285, %284 : i1</pre>
+      <pre>    %291 = comb.and %286, %287, %285, %288 : i1</pre>
+      <pre>    %292 = comb.or %289, %290 : i1</pre>
+      <pre>    %293 = comb.or %291, %289, %290 : i1</pre>
+      <pre>    %294 = comb.xor %293, %true : i1</pre>
+      <pre>    %adder_6.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %295 = hw.struct_create (%297, %299) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_6.D, %295 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %296 = llhd.sig.struct_extract %adder_6.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %297 = comb.concat %304, %300, %302 : i1, i1, i1</pre>
+      <pre>    %298 = llhd.sig.struct_extract %adder_6.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %299 = comb.concat %305, %301, %303 : i1, i1, i1</pre>
+      <pre>    %300 = comb.extract %value from 6 : (i8) -&gt; i1</pre>
+      <pre>    %301 = comb.extract %unknown from 6 : (i8) -&gt; i1</pre>
+      <pre>    %302 = comb.extract %value_0 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %303 = comb.extract %unknown_1 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %304 = comb.extract %67 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %305 = comb.extract %68 from 5 : (i8) -&gt; i1</pre>
+      <pre>    %306 = llhd.prb %296 : i3</pre>
+      <pre>    %307 = llhd.prb %298 : i3</pre>
+      <pre>    %308 = comb.icmp ne %307, %c0_i3 : i3</pre>
+      <pre>    %309 = comb.parity %306 : i3</pre>
+      <pre>    %310 = comb.xor %308, %true : i1</pre>
+      <pre>    %311 = comb.and %309, %310 : i1</pre>
+      <pre>    %312 = comb.extract %306 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %313 = comb.extract %307 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %314 = comb.xor %313, %c-1_i2 : i2</pre>
+      <pre>    %315 = comb.xor %312, %c-1_i2 : i2</pre>
+      <pre>    %316 = comb.and %314, %315 : i2</pre>
+      <pre>    %317 = comb.icmp ne %313, %c0_i2 : i2</pre>
+      <pre>    %318 = comb.icmp eq %316, %c0_i2 : i2</pre>
+      <pre>    %319 = comb.and %318, %317 : i1</pre>
+      <pre>    %320 = comb.xor %317, %true : i1</pre>
+      <pre>    %321 = comb.and %318, %320 : i1</pre>
+      <pre>    %322 = comb.parity %312 : i2</pre>
+      <pre>    %323 = comb.and %322, %320 : i1</pre>
+      <pre>    %324 = comb.extract %306 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %325 = comb.extract %307 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %326 = comb.xor %325, %true : i1</pre>
+      <pre>    %327 = comb.xor %323, %true : i1</pre>
+      <pre>    %328 = comb.xor %324, %true : i1</pre>
+      <pre>    %329 = comb.and %320, %327 : i1</pre>
+      <pre>    %330 = comb.and %326, %328 : i1</pre>
+      <pre>    %331 = comb.and %323, %326, %324 : i1</pre>
+      <pre>    %332 = comb.or %329, %330, %331 : i1</pre>
+      <pre>    %333 = comb.xor %319, %true : i1</pre>
+      <pre>    %334 = comb.xor %321, %true : i1</pre>
+      <pre>    %335 = comb.xor %331, %true : i1</pre>
+      <pre>    %336 = comb.and %333, %321 : i1</pre>
+      <pre>    %337 = comb.and %332, %331 : i1</pre>
+      <pre>    %338 = comb.and %333, %334, %332, %335 : i1</pre>
+      <pre>    %339 = comb.or %336, %337 : i1</pre>
+      <pre>    %340 = comb.or %338, %336, %337 : i1</pre>
+      <pre>    %341 = comb.xor %340, %true : i1</pre>
+      <pre>    %adder_7.D = llhd.sig %0 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %342 = hw.struct_create (%344, %346) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %adder_7.D, %342 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %343 = llhd.sig.struct_extract %adder_7.D[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %344 = comb.concat %351, %347, %349 : i1, i1, i1</pre>
+      <pre>    %345 = llhd.sig.struct_extract %adder_7.D[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %346 = comb.concat %352, %348, %350 : i1, i1, i1</pre>
+      <pre>    %347 = comb.extract %value from 7 : (i8) -&gt; i1</pre>
+      <pre>    %348 = comb.extract %unknown from 7 : (i8) -&gt; i1</pre>
+      <pre>    %349 = comb.extract %value_0 from 7 : (i8) -&gt; i1</pre>
+      <pre>    %350 = comb.extract %unknown_1 from 7 : (i8) -&gt; i1</pre>
+      <pre>    %351 = comb.extract %67 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %352 = comb.extract %68 from 6 : (i8) -&gt; i1</pre>
+      <pre>    %353 = llhd.prb %343 : i3</pre>
+      <pre>    %354 = llhd.prb %345 : i3</pre>
+      <pre>    %355 = comb.icmp ne %354, %c0_i3 : i3</pre>
+      <pre>    %356 = comb.parity %353 : i3</pre>
+      <pre>    %357 = comb.xor %355, %true : i1</pre>
+      <pre>    %358 = comb.and %356, %357 : i1</pre>
+      <pre>    %359 = comb.extract %353 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %360 = comb.extract %354 from 0 : (i3) -&gt; i2</pre>
+      <pre>    %361 = comb.xor %360, %c-1_i2 : i2</pre>
+      <pre>    %362 = comb.xor %359, %c-1_i2 : i2</pre>
+      <pre>    %363 = comb.and %361, %362 : i2</pre>
+      <pre>    %364 = comb.icmp ne %360, %c0_i2 : i2</pre>
+      <pre>    %365 = comb.icmp eq %363, %c0_i2 : i2</pre>
+      <pre>    %366 = comb.and %365, %364 : i1</pre>
+      <pre>    %367 = comb.xor %364, %true : i1</pre>
+      <pre>    %368 = comb.and %365, %367 : i1</pre>
+      <pre>    %369 = comb.parity %359 : i2</pre>
+      <pre>    %370 = comb.and %369, %367 : i1</pre>
+      <pre>    %371 = comb.extract %353 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %372 = comb.extract %354 from 2 : (i3) -&gt; i1</pre>
+      <pre>    %373 = comb.xor %372, %true : i1</pre>
+      <pre>    %374 = comb.xor %370, %true : i1</pre>
+      <pre>    %375 = comb.xor %371, %true : i1</pre>
+      <pre>    %376 = comb.and %367, %374 : i1</pre>
+      <pre>    %377 = comb.and %373, %375 : i1</pre>
+      <pre>    %378 = comb.and %370, %373, %371 : i1</pre>
+      <pre>    %379 = comb.or %376, %377, %378 : i1</pre>
+      <pre>    %380 = comb.xor %366, %true : i1</pre>
+      <pre>    %381 = comb.xor %368, %true : i1</pre>
+      <pre>    %382 = comb.xor %378, %true : i1</pre>
+      <pre>    %383 = comb.and %380, %368 : i1</pre>
+      <pre>    %384 = comb.and %379, %378 : i1</pre>
+      <pre>    %385 = comb.and %380, %381, %379, %382 : i1</pre>
+      <pre>    %386 = comb.or %383, %384 : i1</pre>
+      <pre>    %387 = comb.or %385, %383, %384 : i1</pre>
+      <pre>    %388 = comb.xor %387, %true : i1</pre>
+      <pre>    %389 = comb.extract %67 from 7 : (i8) -&gt; i1</pre>
+      <pre>    %390 = comb.extract %68 from 7 : (i8) -&gt; i1</pre>
+      <pre>    %391 = hw.struct_create (%389, %390) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %392 = llhd.prb %4 : i8</pre>
+      <pre>    %393 = llhd.prb %6 : i8</pre>
+      <pre>    %394 = hw.struct_create (%392, %393) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    hw.output %394, %391 : !hw.struct&lt;value: i8, unknown: i8&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_l_equiv_ca_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/l_equiv_ca.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/l_equiv_ca.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:16</dd></div>
+        <div><dt>time elapsed</dt><dd>0.030s</dd></div>
+        <div><dt>ram usage</dt><dd>17024 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../third_party/tools/icarus/ivtest/ivltests/l_equiv_ca.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/l_equiv_ca.v</a></pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/l_equiv_ca.v:12:17: error: &#39;moore.and&#39; op requires the same type for all operands and results</pre>
+      <pre>  assign ler0 = rval1 &lt;-&gt; val2;</pre>
+      <pre>                ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/ivltests/l_equiv_ca.v:12:17: note: see current operation: %46 = &#34;moore.and&#34;(%43, %42) : (!moore.i1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>&lt;unknown&gt;:0: error: imported module failed verification</pre>
+      <pre>&lt;unknown&gt;:0: note: see current operation: </pre>
+      <pre>&#34;builtin.module&#34;() ({</pre>
+      <pre>  &#34;moore.module&#34;() &lt;{module_type = !hw.modty&lt;&gt;, sym_name = &#34;top&#34;}&gt; ({</pre>
+      <pre>    %0 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;res&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %1 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;ler0&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %2 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;ler1&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %3 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;ler2&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %4 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;ler3&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %5 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;lew&#34;}&gt; : () -&gt; !moore.ref&lt;l2&gt;</pre>
+      <pre>    %6 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;lews&#34;}&gt; : () -&gt; !moore.ref&lt;l2&gt;</pre>
+      <pre>    %7 = &#34;moore.variable&#34;() &lt;{name = &#34;rval1&#34;}&gt; : () -&gt; !moore.ref&lt;f64&gt;</pre>
+      <pre>    %8 = &#34;moore.variable&#34;() &lt;{name = &#34;rval2&#34;}&gt; : () -&gt; !moore.ref&lt;f64&gt;</pre>
+      <pre>    %9 = &#34;moore.variable&#34;() &lt;{name = &#34;val1&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %10 = &#34;moore.variable&#34;() &lt;{name = &#34;val2&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %11 = &#34;moore.variable&#34;() &lt;{name = &#34;wval1&#34;}&gt; : () -&gt; !moore.ref&lt;l4&gt;</pre>
+      <pre>    %12 = &#34;moore.variable&#34;() &lt;{name = &#34;wval2&#34;}&gt; : () -&gt; !moore.ref&lt;l4&gt;</pre>
+      <pre>    %13 = &#34;moore.variable&#34;() &lt;{name = &#34;pass&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %14 = &#34;moore.read&#34;(%9) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    %15 = &#34;moore.read&#34;(%10) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    %16 = &#34;moore.not&#34;(%14) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %17 = &#34;moore.not&#34;(%15) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %18 = &#34;moore.and&#34;(%14, %15) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %19 = &#34;moore.and&#34;(%16, %17) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %20 = &#34;moore.or&#34;(%18, %19) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.assign&#34;(%0, %20) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>    %21 = &#34;moore.read&#34;(%11) : (!moore.ref&lt;l4&gt;) -&gt; !moore.l4</pre>
+      <pre>    %22 = &#34;moore.read&#34;(%12) : (!moore.ref&lt;l4&gt;) -&gt; !moore.l4</pre>
+      <pre>    %23 = &#34;moore.bool_cast&#34;(%21) : (!moore.l4) -&gt; !moore.l1</pre>
+      <pre>    %24 = &#34;moore.bool_cast&#34;(%22) : (!moore.l4) -&gt; !moore.l1</pre>
+      <pre>    %25 = &#34;moore.not&#34;(%23) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %26 = &#34;moore.not&#34;(%24) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %27 = &#34;moore.and&#34;(%23, %24) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %28 = &#34;moore.and&#34;(%25, %26) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %29 = &#34;moore.or&#34;(%27, %28) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %30 = &#34;moore.zext&#34;(%29) : (!moore.l1) -&gt; !moore.l2</pre>
+      <pre>    &#34;moore.assign&#34;(%5, %30) : (!moore.ref&lt;l2&gt;, !moore.l2) -&gt; ()</pre>
+      <pre>    %31 = &#34;moore.read&#34;(%11) : (!moore.ref&lt;l4&gt;) -&gt; !moore.l4</pre>
+      <pre>    %32 = &#34;moore.read&#34;(%12) : (!moore.ref&lt;l4&gt;) -&gt; !moore.l4</pre>
+      <pre>    %33 = &#34;moore.bool_cast&#34;(%31) : (!moore.l4) -&gt; !moore.l1</pre>
+      <pre>    %34 = &#34;moore.bool_cast&#34;(%32) : (!moore.l4) -&gt; !moore.l1</pre>
+      <pre>    %35 = &#34;moore.not&#34;(%33) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %36 = &#34;moore.not&#34;(%34) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %37 = &#34;moore.and&#34;(%33, %34) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %38 = &#34;moore.and&#34;(%35, %36) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %39 = &#34;moore.or&#34;(%37, %38) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %40 = &#34;moore.sext&#34;(%39) : (!moore.l1) -&gt; !moore.l2</pre>
+      <pre>    &#34;moore.assign&#34;(%6, %40) : (!moore.ref&lt;l2&gt;, !moore.l2) -&gt; ()</pre>
+      <pre>    %41 = &#34;moore.read&#34;(%7) : (!moore.ref&lt;f64&gt;) -&gt; !moore.f64</pre>
+      <pre>    %42 = &#34;moore.read&#34;(%10) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    %43 = &#34;moore.bool_cast&#34;(%41) : (!moore.f64) -&gt; !moore.i1</pre>
+      <pre>    %44 = &#34;moore.not&#34;(%43) : (!moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %45 = &#34;moore.not&#34;(%42) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %46 = &#34;moore.and&#34;(%43, %42) : (!moore.i1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %47 = &#34;moore.and&#34;(%44, %45) : (!moore.i1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %48 = &#34;moore.or&#34;(%46, %47) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %49 = &#34;moore.int_to_logic&#34;(%48) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.assign&#34;(%1, %49) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>    %50 = &#34;moore.read&#34;(%9) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    %51 = &#34;moore.read&#34;(%8) : (!moore.ref&lt;f64&gt;) -&gt; !moore.f64</pre>
+      <pre>    %52 = &#34;moore.bool_cast&#34;(%51) : (!moore.f64) -&gt; !moore.i1</pre>
+      <pre>    %53 = &#34;moore.not&#34;(%50) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %54 = &#34;moore.not&#34;(%52) : (!moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %55 = &#34;moore.and&#34;(%50, %52) : (!moore.l1, !moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %56 = &#34;moore.and&#34;(%53, %54) : (!moore.l1, !moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %57 = &#34;moore.or&#34;(%55, %56) : (!moore.l1, !moore.l1) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.assign&#34;(%2, %57) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>    %58 = &#34;moore.read&#34;(%7) : (!moore.ref&lt;f64&gt;) -&gt; !moore.f64</pre>
+      <pre>    %59 = &#34;moore.read&#34;(%10) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    %60 = &#34;moore.bool_cast&#34;(%58) : (!moore.f64) -&gt; !moore.i1</pre>
+      <pre>    %61 = &#34;moore.not&#34;(%60) : (!moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %62 = &#34;moore.not&#34;(%59) : (!moore.l1) -&gt; !moore.l1</pre>
+      <pre>    %63 = &#34;moore.and&#34;(%60, %59) : (!moore.i1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %64 = &#34;moore.and&#34;(%61, %62) : (!moore.i1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %65 = &#34;moore.or&#34;(%63, %64) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %66 = &#34;moore.int_to_logic&#34;(%65) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.assign&#34;(%3, %66) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>    %67 = &#34;moore.read&#34;(%7) : (!moore.ref&lt;f64&gt;) -&gt; !moore.f64</pre>
+      <pre>    %68 = &#34;moore.read&#34;(%8) : (!moore.ref&lt;f64&gt;) -&gt; !moore.f64</pre>
+      <pre>    %69 = &#34;moore.bool_cast&#34;(%67) : (!moore.f64) -&gt; !moore.i1</pre>
+      <pre>    %70 = &#34;moore.bool_cast&#34;(%68) : (!moore.f64) -&gt; !moore.i1</pre>
+      <pre>    %71 = &#34;moore.not&#34;(%69) : (!moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %72 = &#34;moore.not&#34;(%70) : (!moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %73 = &#34;moore.and&#34;(%69, %70) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %74 = &#34;moore.and&#34;(%71, %72) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %75 = &#34;moore.or&#34;(%73, %74) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %76 = &#34;moore.int_to_logic&#34;(%75) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.assign&#34;(%4, %76) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>    &#34;moore.procedure&#34;() &lt;{kind = 0 : i32}&gt; ({</pre>
+      <pre>      %77 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %78 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %78) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %79 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %80 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%9, %80) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %81 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %82 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %82) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %83 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %84 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %85 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %86 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %87 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %88 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%88) : (!moore.time) -&gt; ()</pre>
+      <pre>      %89 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %90 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %91 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %92 = &#34;moore.case_ne&#34;(%89, %91) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %93 = &#34;moore.to_builtin_int&#34;(%92) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%93)[^bb1, ^bb2] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %94 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b0 &lt;-&gt; 1&#39;b0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %95 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %96 = &#34;moore.fmt.int&#34;(%95) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %97 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b1&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %98 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %99 = &#34;moore.fmt.concat&#34;(%94, %96, %97, %98) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%99) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %100 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %101 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %101) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb2] : () -&gt; ()</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %102 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %103 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %103) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %104 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %105 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %106 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %107 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %108 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %109 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%109) : (!moore.time) -&gt; ()</pre>
+      <pre>      %110 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %111 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %112 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %113 = &#34;moore.case_ne&#34;(%110, %112) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %114 = &#34;moore.to_builtin_int&#34;(%113) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%114)[^bb3, ^bb4] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %115 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b0 &lt;-&gt; 1&#39;b1 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %116 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %117 = &#34;moore.fmt.int&#34;(%116) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %118 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b0&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %119 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %120 = &#34;moore.fmt.concat&#34;(%115, %117, %118, %119) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%120) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %121 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %122 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %122) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb4] : () -&gt; ()</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %123 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %123) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %124 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %125 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %126 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %127 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %128 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %129 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%129) : (!moore.time) -&gt; ()</pre>
+      <pre>      %130 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %131 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %132 = &#34;moore.case_ne&#34;(%130, %131) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %133 = &#34;moore.to_builtin_int&#34;(%132) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%133)[^bb5, ^bb6] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %134 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b0 &lt;-&gt; 1&#39;bx returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %135 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %136 = &#34;moore.fmt.int&#34;(%135) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %137 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %138 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %139 = &#34;moore.fmt.concat&#34;(%134, %136, %137, %138) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%139) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %140 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %141 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %141) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb6] : () -&gt; ()</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %142 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bZ : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %142) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %143 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %144 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %145 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %146 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %147 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %148 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%148) : (!moore.time) -&gt; ()</pre>
+      <pre>      %149 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %150 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %151 = &#34;moore.case_ne&#34;(%149, %150) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %152 = &#34;moore.to_builtin_int&#34;(%151) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%152)[^bb7, ^bb8] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %153 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b0 &lt;-&gt; 1&#39;bz returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %154 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %155 = &#34;moore.fmt.int&#34;(%154) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %156 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %157 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %158 = &#34;moore.fmt.concat&#34;(%153, %155, %156, %157) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%158) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %159 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %160 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %160) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb8] : () -&gt; ()</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %161 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %162 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%9, %162) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %163 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %164 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %164) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %165 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %166 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %167 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %168 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %169 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %170 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%170) : (!moore.time) -&gt; ()</pre>
+      <pre>      %171 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %172 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %173 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %174 = &#34;moore.case_ne&#34;(%171, %173) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %175 = &#34;moore.to_builtin_int&#34;(%174) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%175)[^bb9, ^bb10] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      %176 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b1 &lt;-&gt; 1&#39;b0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %177 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %178 = &#34;moore.fmt.int&#34;(%177) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %179 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b0&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %180 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %181 = &#34;moore.fmt.concat&#34;(%176, %178, %179, %180) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%181) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %182 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %183 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %183) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb10] : () -&gt; ()</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %184 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %185 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %185) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %186 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %187 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %188 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %189 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %190 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %191 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%191) : (!moore.time) -&gt; ()</pre>
+      <pre>      %192 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %193 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %194 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %195 = &#34;moore.case_ne&#34;(%192, %194) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %196 = &#34;moore.to_builtin_int&#34;(%195) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%196)[^bb11, ^bb12] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      %197 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b1 &lt;-&gt; 1&#39;b1 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %198 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %199 = &#34;moore.fmt.int&#34;(%198) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %200 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b1&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %201 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %202 = &#34;moore.fmt.concat&#34;(%197, %199, %200, %201) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%202) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %203 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %204 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %204) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb12] : () -&gt; ()</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb10, ^bb11</pre>
+      <pre>      %205 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %205) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %206 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %207 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %208 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %209 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %210 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %211 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%211) : (!moore.time) -&gt; ()</pre>
+      <pre>      %212 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %213 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %214 = &#34;moore.case_ne&#34;(%212, %213) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %215 = &#34;moore.to_builtin_int&#34;(%214) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%215)[^bb13, ^bb14] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      %216 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b1 &lt;-&gt; 1&#39;bx returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %217 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %218 = &#34;moore.fmt.int&#34;(%217) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %219 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %220 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %221 = &#34;moore.fmt.concat&#34;(%216, %218, %219, %220) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%221) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %222 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %223 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %223) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb14] : () -&gt; ()</pre>
+      <pre>    ^bb14:  // 2 preds: ^bb12, ^bb13</pre>
+      <pre>      %224 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bZ : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %224) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %225 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %226 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %227 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %228 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %229 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %230 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%230) : (!moore.time) -&gt; ()</pre>
+      <pre>      %231 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %232 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %233 = &#34;moore.case_ne&#34;(%231, %232) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %234 = &#34;moore.to_builtin_int&#34;(%233) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%234)[^bb15, ^bb16] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %235 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b1 &lt;-&gt; 1&#39;bz returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %236 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %237 = &#34;moore.fmt.int&#34;(%236) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %238 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %239 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %240 = &#34;moore.fmt.concat&#34;(%235, %237, %238, %239) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%240) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %241 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %242 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %242) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb16] : () -&gt; ()</pre>
+      <pre>    ^bb16:  // 2 preds: ^bb14, ^bb15</pre>
+      <pre>      %243 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%9, %243) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %244 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %245 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %245) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %246 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %247 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %248 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %249 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %250 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %251 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%251) : (!moore.time) -&gt; ()</pre>
+      <pre>      %252 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %253 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %254 = &#34;moore.case_ne&#34;(%252, %253) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %255 = &#34;moore.to_builtin_int&#34;(%254) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%255)[^bb17, ^bb18] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      %256 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bx &lt;-&gt; 1&#39;b0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %257 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %258 = &#34;moore.fmt.int&#34;(%257) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %259 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %260 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %261 = &#34;moore.fmt.concat&#34;(%256, %258, %259, %260) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%261) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %262 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %263 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %263) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb18] : () -&gt; ()</pre>
+      <pre>    ^bb18:  // 2 preds: ^bb16, ^bb17</pre>
+      <pre>      %264 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %265 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %265) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %266 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %267 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %268 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %269 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %270 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %271 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%271) : (!moore.time) -&gt; ()</pre>
+      <pre>      %272 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %273 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %274 = &#34;moore.case_ne&#34;(%272, %273) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %275 = &#34;moore.to_builtin_int&#34;(%274) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%275)[^bb19, ^bb20] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      %276 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bx &lt;-&gt; 1&#39;b1 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %277 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %278 = &#34;moore.fmt.int&#34;(%277) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %279 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %280 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %281 = &#34;moore.fmt.concat&#34;(%276, %278, %279, %280) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%281) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %282 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %283 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %283) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb20] : () -&gt; ()</pre>
+      <pre>    ^bb20:  // 2 preds: ^bb18, ^bb19</pre>
+      <pre>      %284 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %284) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %285 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %286 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %287 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %288 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %289 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %290 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%290) : (!moore.time) -&gt; ()</pre>
+      <pre>      %291 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %292 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %293 = &#34;moore.case_ne&#34;(%291, %292) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %294 = &#34;moore.to_builtin_int&#34;(%293) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%294)[^bb21, ^bb22] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      %295 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bx &lt;-&gt; 1&#39;bx returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %296 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %297 = &#34;moore.fmt.int&#34;(%296) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %298 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %299 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %300 = &#34;moore.fmt.concat&#34;(%295, %297, %298, %299) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%300) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %301 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %302 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %302) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb22] : () -&gt; ()</pre>
+      <pre>    ^bb22:  // 2 preds: ^bb20, ^bb21</pre>
+      <pre>      %303 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bZ : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %303) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %304 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %305 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %306 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %307 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %308 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %309 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%309) : (!moore.time) -&gt; ()</pre>
+      <pre>      %310 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %311 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %312 = &#34;moore.case_ne&#34;(%310, %311) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %313 = &#34;moore.to_builtin_int&#34;(%312) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%313)[^bb23, ^bb24] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb23:  // pred: ^bb22</pre>
+      <pre>      %314 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bx &lt;-&gt; 1&#39;bz returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %315 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %316 = &#34;moore.fmt.int&#34;(%315) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %317 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %318 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %319 = &#34;moore.fmt.concat&#34;(%314, %316, %317, %318) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%319) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %320 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %321 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %321) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb24] : () -&gt; ()</pre>
+      <pre>    ^bb24:  // 2 preds: ^bb22, ^bb23</pre>
+      <pre>      %322 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bZ : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%9, %322) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %323 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %324 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %324) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %325 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %326 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %327 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %328 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %329 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %330 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%330) : (!moore.time) -&gt; ()</pre>
+      <pre>      %331 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %332 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %333 = &#34;moore.case_ne&#34;(%331, %332) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %334 = &#34;moore.to_builtin_int&#34;(%333) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%334)[^bb25, ^bb26] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      %335 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bz &lt;-&gt; 1&#39;b0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %336 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %337 = &#34;moore.fmt.int&#34;(%336) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %338 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %339 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %340 = &#34;moore.fmt.concat&#34;(%335, %337, %338, %339) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%340) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %341 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %342 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %342) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb26] : () -&gt; ()</pre>
+      <pre>    ^bb26:  // 2 preds: ^bb24, ^bb25</pre>
+      <pre>      %343 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %344 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %344) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %345 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %346 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %347 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %348 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %349 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %350 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%350) : (!moore.time) -&gt; ()</pre>
+      <pre>      %351 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %352 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %353 = &#34;moore.case_ne&#34;(%351, %352) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %354 = &#34;moore.to_builtin_int&#34;(%353) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%354)[^bb27, ^bb28] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb27:  // pred: ^bb26</pre>
+      <pre>      %355 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bz &lt;-&gt; 1&#39;b1 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %356 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %357 = &#34;moore.fmt.int&#34;(%356) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %358 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %359 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %360 = &#34;moore.fmt.concat&#34;(%355, %357, %358, %359) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%360) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %361 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %362 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %362) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb28] : () -&gt; ()</pre>
+      <pre>    ^bb28:  // 2 preds: ^bb26, ^bb27</pre>
+      <pre>      %363 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %363) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %364 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %365 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %366 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %367 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %368 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %369 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%369) : (!moore.time) -&gt; ()</pre>
+      <pre>      %370 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %371 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %372 = &#34;moore.case_ne&#34;(%370, %371) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %373 = &#34;moore.to_builtin_int&#34;(%372) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%373)[^bb29, ^bb30] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb29:  // pred: ^bb28</pre>
+      <pre>      %374 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bz &lt;-&gt; 1&#39;bx returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %375 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %376 = &#34;moore.fmt.int&#34;(%375) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %377 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %378 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %379 = &#34;moore.fmt.concat&#34;(%374, %376, %377, %378) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%379) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %380 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %381 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %381) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb30] : () -&gt; ()</pre>
+      <pre>    ^bb30:  // 2 preds: ^bb28, ^bb29</pre>
+      <pre>      %382 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bZ : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %382) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %383 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %384 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %385 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %386 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %387 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %388 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%388) : (!moore.time) -&gt; ()</pre>
+      <pre>      %389 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %390 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %391 = &#34;moore.case_ne&#34;(%389, %390) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %392 = &#34;moore.to_builtin_int&#34;(%391) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%392)[^bb31, ^bb32] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb31:  // pred: ^bb30</pre>
+      <pre>      %393 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;bz &lt;-&gt; 1&#39;bz returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %394 = &#34;moore.read&#34;(%0) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %395 = &#34;moore.fmt.int&#34;(%394) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %396 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %397 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %398 = &#34;moore.fmt.concat&#34;(%393, %395, %396, %397) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%398) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %399 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %400 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %400) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb32] : () -&gt; ()</pre>
+      <pre>    ^bb32:  // 2 preds: ^bb30, ^bb31</pre>
+      <pre>      %401 = &#34;moore.constant_real&#34;() &lt;{value = 0.000000e+00 : f64}&gt; : () -&gt; !moore.f64</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%7, %401) : (!moore.ref&lt;f64&gt;, !moore.f64) -&gt; ()</pre>
+      <pre>      %402 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %403 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %403) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %404 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %405 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %406 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %407 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %408 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %409 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%409) : (!moore.time) -&gt; ()</pre>
+      <pre>      %410 = &#34;moore.read&#34;(%1) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %411 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %412 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %413 = &#34;moore.case_ne&#34;(%410, %412) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %414 = &#34;moore.to_builtin_int&#34;(%413) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%414)[^bb33, ^bb34] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb33:  // pred: ^bb32</pre>
+      <pre>      %415 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 0.0 &lt;-&gt; 1&#39;b0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %416 = &#34;moore.read&#34;(%1) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %417 = &#34;moore.fmt.int&#34;(%416) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %418 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b1&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %419 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %420 = &#34;moore.fmt.concat&#34;(%415, %417, %418, %419) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%420) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %421 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %422 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %422) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb34] : () -&gt; ()</pre>
+      <pre>    ^bb34:  // 2 preds: ^bb32, ^bb33</pre>
+      <pre>      %423 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %424 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%9, %424) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %425 = &#34;moore.constant_real&#34;() &lt;{value = 2.000000e+00 : f64}&gt; : () -&gt; !moore.f64</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%8, %425) : (!moore.ref&lt;f64&gt;, !moore.f64) -&gt; ()</pre>
+      <pre>      %426 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %427 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %428 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %429 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %430 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %431 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%431) : (!moore.time) -&gt; ()</pre>
+      <pre>      %432 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %433 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %434 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %435 = &#34;moore.case_ne&#34;(%432, %434) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %436 = &#34;moore.to_builtin_int&#34;(%435) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%436)[^bb35, ^bb36] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb35:  // pred: ^bb34</pre>
+      <pre>      %437 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 1&#39;b0 &lt;-&gt; 2.0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %438 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %439 = &#34;moore.fmt.int&#34;(%438) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %440 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b0&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %441 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %442 = &#34;moore.fmt.concat&#34;(%437, %439, %440, %441) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%442) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %443 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %444 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %444) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb36] : () -&gt; ()</pre>
+      <pre>    ^bb36:  // 2 preds: ^bb34, ^bb35</pre>
+      <pre>      %445 = &#34;moore.constant_real&#34;() &lt;{value = 2.000000e+00 : f64}&gt; : () -&gt; !moore.f64</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%7, %445) : (!moore.ref&lt;f64&gt;, !moore.f64) -&gt; ()</pre>
+      <pre>      %446 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%10, %446) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      %447 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %448 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %449 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %450 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %451 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %452 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%452) : (!moore.time) -&gt; ()</pre>
+      <pre>      %453 = &#34;moore.read&#34;(%3) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %454 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bX : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %455 = &#34;moore.case_ne&#34;(%453, %454) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %456 = &#34;moore.to_builtin_int&#34;(%455) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%456)[^bb37, ^bb38] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb37:  // pred: ^bb36</pre>
+      <pre>      %457 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 2.0 &lt;-&gt; 1&#39;bx returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %458 = &#34;moore.read&#34;(%3) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %459 = &#34;moore.fmt.int&#34;(%458) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %460 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;bx&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %461 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %462 = &#34;moore.fmt.concat&#34;(%457, %459, %460, %461) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%462) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %463 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %464 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %464) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb38] : () -&gt; ()</pre>
+      <pre>    ^bb38:  // 2 preds: ^bb36, ^bb37</pre>
+      <pre>      %465 = &#34;moore.constant_real&#34;() &lt;{value = 5.000000e+00 : f64}&gt; : () -&gt; !moore.f64</pre>
+      <pre>      %466 = &#34;moore.fneg&#34;(%465) : (!moore.f64) -&gt; !moore.f64</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%7, %466) : (!moore.ref&lt;f64&gt;, !moore.f64) -&gt; ()</pre>
+      <pre>      %467 = &#34;moore.constant_real&#34;() &lt;{value = 2.000000e+00 : f64}&gt; : () -&gt; !moore.f64</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%8, %467) : (!moore.ref&lt;f64&gt;, !moore.f64) -&gt; ()</pre>
+      <pre>      %468 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %469 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %470 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %471 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %472 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %473 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%473) : (!moore.time) -&gt; ()</pre>
+      <pre>      %474 = &#34;moore.read&#34;(%4) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %475 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %476 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      %477 = &#34;moore.case_ne&#34;(%474, %476) : (!moore.l1, !moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %478 = &#34;moore.to_builtin_int&#34;(%477) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%478)[^bb39, ^bb40] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb39:  // pred: ^bb38</pre>
+      <pre>      %479 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: -5.0 &lt;-&gt; -2.0 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %480 = &#34;moore.read&#34;(%4) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %481 = &#34;moore.fmt.int&#34;(%480) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 1 : i32}&gt; : (!moore.l1) -&gt; !moore.format_string</pre>
+      <pre>      %482 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 1&#39;b1&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %483 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %484 = &#34;moore.fmt.concat&#34;(%479, %481, %482, %483) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%484) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %485 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %486 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %486) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb40] : () -&gt; ()</pre>
+      <pre>    ^bb40:  // 2 preds: ^bb38, ^bb39</pre>
+      <pre>      %487 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;6 : 4&gt;}&gt; : () -&gt; !moore.i4</pre>
+      <pre>      %488 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;6 : 4&gt;}&gt; : () -&gt; !moore.l4</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%11, %488) : (!moore.ref&lt;l4&gt;, !moore.l4) -&gt; ()</pre>
+      <pre>      %489 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;-7 : 4&gt;}&gt; : () -&gt; !moore.i4</pre>
+      <pre>      %490 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;-7 : 4&gt;}&gt; : () -&gt; !moore.l4</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%12, %490) : (!moore.ref&lt;l4&gt;, !moore.l4) -&gt; ()</pre>
+      <pre>      %491 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>      %492 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>      %493 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %494 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %495 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>      %496 = &#34;moore.constant_time&#34;() &lt;{value = 1000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>      &#34;moore.wait_delay&#34;(%496) : (!moore.time) -&gt; ()</pre>
+      <pre>      %497 = &#34;moore.read&#34;(%5) : (!moore.ref&lt;l2&gt;) -&gt; !moore.l2</pre>
+      <pre>      %498 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 2&gt;}&gt; : () -&gt; !moore.i2</pre>
+      <pre>      %499 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 2&gt;}&gt; : () -&gt; !moore.l2</pre>
+      <pre>      %500 = &#34;moore.case_ne&#34;(%497, %499) : (!moore.l2, !moore.l2) -&gt; !moore.i1</pre>
+      <pre>      %501 = &#34;moore.to_builtin_int&#34;(%500) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%501)[^bb41, ^bb42] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb41:  // pred: ^bb40</pre>
+      <pre>      %502 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 4&#39;b0110 &lt;-&gt; 4&#39;b1001 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %503 = &#34;moore.read&#34;(%5) : (!moore.ref&lt;l2&gt;) -&gt; !moore.l2</pre>
+      <pre>      %504 = &#34;moore.fmt.int&#34;(%503) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 2 : i32}&gt; : (!moore.l2) -&gt; !moore.format_string</pre>
+      <pre>      %505 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 2&#39;b01&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %506 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %507 = &#34;moore.fmt.concat&#34;(%502, %504, %505, %506) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%507) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %508 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %509 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %509) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb42] : () -&gt; ()</pre>
+      <pre>    ^bb42:  // 2 preds: ^bb40, ^bb41</pre>
+      <pre>      %510 = &#34;moore.read&#34;(%6) : (!moore.ref&lt;l2&gt;) -&gt; !moore.l2</pre>
+      <pre>      %511 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;-1 : 2&gt;}&gt; : () -&gt; !moore.i2</pre>
+      <pre>      %512 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;-1 : 2&gt;}&gt; : () -&gt; !moore.l2</pre>
+      <pre>      %513 = &#34;moore.case_ne&#34;(%510, %512) : (!moore.l2, !moore.l2) -&gt; !moore.i1</pre>
+      <pre>      %514 = &#34;moore.to_builtin_int&#34;(%513) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%514)[^bb43, ^bb44] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb43:  // pred: ^bb42</pre>
+      <pre>      %515 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;FAILED: 4&#39;b0110 &lt;-&gt; 4&#39;b1001 returned &#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %516 = &#34;moore.read&#34;(%6) : (!moore.ref&lt;l2&gt;) -&gt; !moore.l2</pre>
+      <pre>      %517 = &#34;moore.fmt.int&#34;(%516) &lt;{alignment = 0 : i32, format = 1 : i32, padding = 1 : i32, specifierWidth = 2 : i32}&gt; : (!moore.l2) -&gt; !moore.format_string</pre>
+      <pre>      %518 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34; not 2&#39;b11&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %519 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %520 = &#34;moore.fmt.concat&#34;(%515, %517, %518, %519) : (!moore.format_string, !moore.format_string, !moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%520) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      %521 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.i1</pre>
+      <pre>      %522 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>      &#34;moore.blocking_assign&#34;(%13, %522) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb44] : () -&gt; ()</pre>
+      <pre>    ^bb44:  // 2 preds: ^bb42, ^bb43</pre>
+      <pre>      %523 = &#34;moore.read&#34;(%13) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>      %524 = &#34;moore.logic_to_int&#34;(%523) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>      %525 = &#34;moore.to_builtin_int&#34;(%524) : (!moore.i1) -&gt; i1</pre>
+      <pre>      &#34;cf.cond_br&#34;(%525)[^bb45, ^bb46] &lt;{operandSegmentSizes = array&lt;i32: 1, 0, 0&gt;}&gt; : (i1) -&gt; ()</pre>
+      <pre>    ^bb45:  // pred: ^bb44</pre>
+      <pre>      %526 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;PASSED&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %527 = &#34;moore.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !moore.format_string</pre>
+      <pre>      %528 = &#34;moore.fmt.concat&#34;(%526, %527) : (!moore.format_string, !moore.format_string) -&gt; !moore.format_string</pre>
+      <pre>      &#34;moore.builtin.display&#34;(%528) : (!moore.format_string) -&gt; ()</pre>
+      <pre>      &#34;cf.br&#34;()[^bb46] : () -&gt; ()</pre>
+      <pre>    ^bb46:  // 2 preds: ^bb44, ^bb45</pre>
+      <pre>      &#34;moore.return&#34;() : () -&gt; ()</pre>
+      <pre>    }) : () -&gt; ()</pre>
+      <pre>    &#34;moore.output&#34;() : () -&gt; ()</pre>
+      <pre>  }) : () -&gt; ()</pre>
+      <pre>}) : () -&gt; ()</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

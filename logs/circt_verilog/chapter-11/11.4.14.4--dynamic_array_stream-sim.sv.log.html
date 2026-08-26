@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>dynamic_array_unpack_stream_sim</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>stream unpack simulation test with dynamic array</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>11.4.14.4</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream-sim.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream-sim.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:09</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream-sim.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream-sim.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_dynarray_set_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_dynarray_alloc_i32(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_queue_alloc_i32() -&gt; i32</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;)\0A&#34;</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %1 = sim.fmt.literal &#34;:assert: (42 == &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (5 == &#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;:assert: (12 == &#34;</pre>
+      <pre>    %c-8_i5 = hw.constant -8 : i5</pre>
+      <pre>    %c-16_i5 = hw.constant -16 : i5</pre>
+      <pre>    %c8_i5 = hw.constant 8 : i5</pre>
+      <pre>    %c0_i5 = hw.constant 0 : i5</pre>
+      <pre>    %4 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c4_i32 = hw.constant 4 : i32</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c5_i32 = hw.constant 5 : i32</pre>
+      <pre>    %c12_i32 = hw.constant 12 : i32</pre>
+      <pre>    %i_header = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %i_data = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %o_header = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %o_len = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %o_data = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %o_crc = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %5 = func.call @circt_sv_queue_alloc_i32() : () -&gt; i32</pre>
+      <pre>      llhd.drv %i_header, %c12_i32 after %4 : i32</pre>
+      <pre>      %6 = func.call @circt_sv_dynarray_alloc_i32(%c5_i32) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %i_data, %6 after %4 : i32</pre>
+      <pre>      %7 = llhd.prb %i_data : i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%7, %c0_i32, %c1_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %8 = llhd.prb %i_data : i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%8, %c1_i32, %c2_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %9 = llhd.prb %i_data : i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%9, %c2_i32, %c3_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %10 = llhd.prb %i_data : i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%10, %c3_i32, %c4_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %11 = llhd.prb %i_data : i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%11, %c4_i32, %c5_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %12 = llhd.prb %i_header : i32</pre>
+      <pre>      %13 = comb.extract %12 from 0 : (i32) -&gt; i8</pre>
+      <pre>      %14 = comb.extract %12 from 8 : (i32) -&gt; i8</pre>
+      <pre>      %15 = comb.extract %12 from 16 : (i32) -&gt; i8</pre>
+      <pre>      %16 = comb.extract %12 from 24 : (i32) -&gt; i8</pre>
+      <pre>      %17 = llhd.sig.extract %o_data from %c0_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %18 = llhd.sig.extract %o_data from %c8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %19 = llhd.sig.extract %o_data from %c-16_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %20 = llhd.sig.extract %o_data from %c-8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %21 = llhd.sig.extract %o_crc from %c0_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %22 = llhd.sig.extract %o_crc from %c8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %23 = llhd.sig.extract %o_crc from %c-16_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %24 = llhd.sig.extract %o_crc from %c-8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %25 = llhd.sig.extract %o_len from %c0_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %26 = llhd.sig.extract %o_len from %c8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %27 = llhd.sig.extract %o_len from %c-16_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %28 = llhd.sig.extract %o_len from %c-8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %29 = llhd.sig.extract %o_header from %c0_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %30 = llhd.sig.extract %o_header from %c8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %31 = llhd.sig.extract %o_header from %c-16_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      %32 = llhd.sig.extract %o_header from %c-8_i5 : &lt;i32&gt; -&gt; &lt;i8&gt;</pre>
+      <pre>      llhd.drv %17, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %18, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %19, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %20, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %21, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %22, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %23, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %24, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %25, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %26, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %27, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %28, %c0_i8 after %4 : i8</pre>
+      <pre>      llhd.drv %29, %13 after %4 : i8</pre>
+      <pre>      llhd.drv %30, %14 after %4 : i8</pre>
+      <pre>      llhd.drv %31, %15 after %4 : i8</pre>
+      <pre>      llhd.drv %32, %16 after %4 : i8</pre>
+      <pre>      %33 = llhd.prb %o_header : i32</pre>
+      <pre>      %34 = sim.fmt.int 10 0 0 %33 : i32</pre>
+      <pre>      %35 = sim.fmt.concat (%3, %34, %0)</pre>
+      <pre>      sim.proc.print %35</pre>
+      <pre>      %36 = llhd.prb %o_len : i32</pre>
+      <pre>      %37 = sim.fmt.int 10 0 0 %36 : i32</pre>
+      <pre>      %38 = sim.fmt.concat (%2, %37, %0)</pre>
+      <pre>      sim.proc.print %38</pre>
+      <pre>      %39 = llhd.prb %o_crc : i32</pre>
+      <pre>      %40 = sim.fmt.int 10 0 0 %39 : i32</pre>
+      <pre>      %41 = sim.fmt.concat (%1, %40, %0)</pre>
+      <pre>      sim.proc.print %41</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

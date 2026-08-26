@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_sv_foreach5_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_foreach5.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_foreach5.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.056s</dd></div>
+        <div><dt>ram usage</dt><dd>25088 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_foreach5.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_foreach5.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED\0A&#34;</pre>
+      <pre>    %c4_i32 = hw.constant 4 : i32</pre>
+      <pre>    %2 = hw.aggregate_constant [0 : i4, -1 : i4] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;][0]=&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c-1_i2 = hw.constant -1 : i2</pre>
+      <pre>    %c0_i30 = hw.constant 0 : i30</pre>
+      <pre>    %c-2_i2 = hw.constant -2 : i2</pre>
+      <pre>    %c1_i2 = hw.constant 1 : i2</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %5 = sim.fmt.literal &#34;]=&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;][&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;Value of array[&#34;</pre>
+      <pre>    %8 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i28 = hw.constant 0 : i28</pre>
+      <pre>    %c12_i5 = hw.constant 12 : i5</pre>
+      <pre>    %c-1_i5 = hw.constant -1 : i5</pre>
+      <pre>    %c0_i27 = hw.constant 0 : i27</pre>
+      <pre>    %c-1_i4 = hw.constant -1 : i4</pre>
+      <pre>    %c0_i4 = hw.constant 0 : i4</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %9 = hw.aggregate_constant [false, false] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %10 = hw.aggregate_constant [0 : i24, -1 : i24] : !hw.struct&lt;value: i24, unknown: i24&gt;</pre>
+      <pre>    %array = llhd.sig %10 : !hw.struct&lt;value: i24, unknown: i24&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %array[&#34;value&#34;] : &lt;!hw.struct&lt;value: i24, unknown: i24&gt;&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %array[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i24, unknown: i24&gt;&gt;</pre>
+      <pre>    %expected = llhd.sig %2 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %expected[&#34;value&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %expected[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i4, unknown: i4&gt;&gt;</pre>
+      <pre>    %failed = llhd.sig %9 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %15 = llhd.sig.struct_extract %failed[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %16 = llhd.sig.struct_extract %failed[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1(%c0_i32 : i32)</pre>
+      <pre>    ^bb1(%17: i32):  // 2 preds: ^bb0, ^bb4</pre>
+      <pre>      %18 = comb.icmp slt %17, %c2_i32 : i32</pre>
+      <pre>      cf.cond_br %18, ^bb2(%c0_i32 : i32), ^bb5(%c0_i32 : i32)</pre>
+      <pre>    ^bb2(%19: i32):  // 2 preds: ^bb1, ^bb3</pre>
+      <pre>      %20 = comb.icmp slt %19, %c3_i32 : i32</pre>
+      <pre>      cf.cond_br %20, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %21 = comb.sub %c1_i32, %17 : i32</pre>
+      <pre>      %22 = comb.extract %21 from 5 : (i32) -&gt; i27</pre>
+      <pre>      %23 = comb.icmp eq %22, %c0_i27 : i27</pre>
+      <pre>      %24 = comb.extract %21 from 0 : (i32) -&gt; i5</pre>
+      <pre>      %25 = comb.mux %23, %24, %c-1_i5 : i5</pre>
+      <pre>      %26 = comb.mul %25, %c12_i5 : i5</pre>
+      <pre>      %27 = llhd.sig.extract %11 from %26 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %28 = llhd.sig.extract %12 from %26 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %29 = comb.sub %c2_i32, %19 : i32</pre>
+      <pre>      %30 = comb.extract %29 from 4 : (i32) -&gt; i28</pre>
+      <pre>      %31 = comb.icmp eq %30, %c0_i28 : i28</pre>
+      <pre>      %32 = comb.extract %29 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %33 = comb.mux %31, %32, %c-1_i2 : i2</pre>
+      <pre>      %34 = comb.concat %33, %c0_i2 : i2, i2</pre>
+      <pre>      %35 = llhd.sig.extract %27 from %34 : &lt;i12&gt; -&gt; &lt;i4&gt;</pre>
+      <pre>      %36 = llhd.sig.extract %28 from %34 : &lt;i12&gt; -&gt; &lt;i4&gt;</pre>
+      <pre>      %37 = comb.extract %17 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %38 = comb.concat %37, %c0_i2 : i2, i2</pre>
+      <pre>      %39 = comb.extract %19 from 0 : (i32) -&gt; i4</pre>
+      <pre>      %40 = comb.add %38, %39 : i4</pre>
+      <pre>      llhd.drv %35, %40 after %8 : i4</pre>
+      <pre>      llhd.drv %36, %c0_i4 after %8 : i4</pre>
+      <pre>      %41 = comb.add %19, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb2(%41 : i32)</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      %42 = comb.add %17, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb1(%42 : i32)</pre>
+      <pre>    ^bb5(%43: i32):  // 2 preds: ^bb1, ^bb12</pre>
+      <pre>      %44 = comb.icmp slt %43, %c2_i32 : i32</pre>
+      <pre>      cf.cond_br %44, ^bb6(%c0_i32 : i32), ^bb13(%c0_i32 : i32)</pre>
+      <pre>    ^bb6(%45: i32):  // 2 preds: ^bb5, ^bb11</pre>
+      <pre>      %46 = comb.icmp slt %45, %c3_i32 : i32</pre>
+      <pre>      cf.cond_br %46, ^bb7(%c0_i32 : i32), ^bb12</pre>
+      <pre>    ^bb7(%47: i32):  // 2 preds: ^bb6, ^bb10</pre>
+      <pre>      %48 = comb.icmp slt %47, %c4_i32 : i32</pre>
+      <pre>      cf.cond_br %48, ^bb8, ^bb11</pre>
+      <pre>    ^bb8:  // pred: ^bb7</pre>
+      <pre>      %49 = comb.extract %43 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %50 = comb.concat %49, %c0_i2 : i2, i2</pre>
+      <pre>      %51 = comb.extract %45 from 0 : (i32) -&gt; i4</pre>
+      <pre>      %52 = comb.add %50, %51 : i4</pre>
+      <pre>      llhd.drv %13, %52 after %8 : i4</pre>
+      <pre>      llhd.drv %14, %c0_i4 after %8 : i4</pre>
+      <pre>      %53 = sim.fmt.int 10 0 0 %43 : i32</pre>
+      <pre>      %54 = sim.fmt.int 10 0 0 %45 : i32</pre>
+      <pre>      %55 = sim.fmt.int 10 0 0 %47 : i32</pre>
+      <pre>      %56 = comb.sub %c1_i32, %43 : i32</pre>
+      <pre>      %57 = comb.extract %56 from 5 : (i32) -&gt; i27</pre>
+      <pre>      %58 = comb.icmp eq %57, %c0_i27 : i27</pre>
+      <pre>      %59 = comb.extract %56 from 0 : (i32) -&gt; i5</pre>
+      <pre>      %60 = comb.mux %58, %59, %c-1_i5 : i5</pre>
+      <pre>      %61 = comb.mul %60, %c12_i5 : i5</pre>
+      <pre>      %62 = llhd.sig.extract %11 from %61 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %63 = llhd.sig.extract %12 from %61 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %64 = llhd.prb %62 : i12</pre>
+      <pre>      %65 = llhd.prb %63 : i12</pre>
+      <pre>      %66 = hw.bitcast %64 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %67 = hw.bitcast %65 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %68 = hw.array_get %66[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %69 = hw.array_get %67[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %70 = hw.struct_create (%68, %69) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %71 = hw.array_get %66[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %72 = hw.array_get %67[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %73 = hw.struct_create (%71, %72) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %74 = hw.array_get %66[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %75 = hw.array_get %67[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %76 = hw.struct_create (%74, %75) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %77 = hw.array_create %76, %73, %70 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %78 = comb.sub %c2_i32, %45 : i32</pre>
+      <pre>      %79 = comb.extract %78 from 2 : (i32) -&gt; i30</pre>
+      <pre>      %80 = comb.icmp eq %79, %c0_i30 : i30</pre>
+      <pre>      %81 = comb.extract %78 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %82 = comb.mux %80, %81, %c-1_i2 : i2</pre>
+      <pre>      %83 = hw.array_get %77[%82] : !hw.array&lt;3xstruct&lt;value: i4, unknown: i4&gt;&gt;, i2</pre>
+      <pre>      %value = hw.struct_extract %83[&#34;value&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %83[&#34;unknown&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %84 = comb.extract %47 from 4 : (i32) -&gt; i28</pre>
+      <pre>      %85 = comb.icmp eq %84, %c0_i28 : i28</pre>
+      <pre>      %86 = comb.extract %47 from 0 : (i32) -&gt; i4</pre>
+      <pre>      %87 = comb.mux %85, %86, %c-1_i4 : i4</pre>
+      <pre>      %88 = comb.shru %value, %87 : i4</pre>
+      <pre>      %89 = comb.shru %unknown, %87 : i4</pre>
+      <pre>      %90 = comb.extract %88 from 0 : (i4) -&gt; i1</pre>
+      <pre>      %91 = comb.extract %89 from 0 : (i4) -&gt; i1</pre>
+      <pre>      %92 = sim.fmt.fvint 2 1 4 %90, %91 : i1</pre>
+      <pre>      %93 = sim.fmt.concat (%7, %53, %6, %54, %6, %55, %5, %92, %4)</pre>
+      <pre>      sim.proc.print %93</pre>
+      <pre>      %94 = llhd.prb %62 : i12</pre>
+      <pre>      %95 = llhd.prb %63 : i12</pre>
+      <pre>      %96 = hw.bitcast %94 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %97 = hw.bitcast %95 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %98 = hw.array_get %96[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %99 = hw.array_get %97[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %100 = hw.struct_create (%98, %99) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %101 = hw.array_get %96[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %102 = hw.array_get %97[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %103 = hw.struct_create (%101, %102) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %104 = hw.array_get %96[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %105 = hw.array_get %97[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %106 = hw.struct_create (%104, %105) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %107 = hw.array_create %106, %103, %100 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %108 = hw.array_get %107[%82] : !hw.array&lt;3xstruct&lt;value: i4, unknown: i4&gt;&gt;, i2</pre>
+      <pre>      %value_0 = hw.struct_extract %108[&#34;value&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %unknown_1 = hw.struct_extract %108[&#34;unknown&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %109 = comb.shru %value_0, %87 : i4</pre>
+      <pre>      %110 = comb.shru %unknown_1, %87 : i4</pre>
+      <pre>      %111 = comb.extract %109 from 0 : (i4) -&gt; i1</pre>
+      <pre>      %112 = comb.extract %110 from 0 : (i4) -&gt; i1</pre>
+      <pre>      %113 = llhd.prb %13 : i4</pre>
+      <pre>      %114 = llhd.prb %14 : i4</pre>
+      <pre>      %115 = comb.shru %113, %87 : i4</pre>
+      <pre>      %116 = comb.shru %114, %87 : i4</pre>
+      <pre>      %117 = comb.extract %115 from 0 : (i4) -&gt; i1</pre>
+      <pre>      %118 = comb.extract %116 from 0 : (i4) -&gt; i1</pre>
+      <pre>      %119 = comb.icmp eq %111, %117 : i1</pre>
+      <pre>      %120 = comb.icmp eq %112, %118 : i1</pre>
+      <pre>      %121 = comb.and %119, %120 : i1</pre>
+      <pre>      %122 = comb.xor %121, %true : i1</pre>
+      <pre>      cf.cond_br %122, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      llhd.drv %15, %true after %8 : i1</pre>
+      <pre>      llhd.drv %16, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %123 = comb.add %47, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb7(%123 : i32)</pre>
+      <pre>    ^bb11:  // pred: ^bb7</pre>
+      <pre>      %124 = comb.add %45, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb6(%124 : i32)</pre>
+      <pre>    ^bb12:  // pred: ^bb6</pre>
+      <pre>      %125 = comb.add %43, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb5(%125 : i32)</pre>
+      <pre>    ^bb13(%126: i32):  // 2 preds: ^bb5, ^bb18</pre>
+      <pre>      %127 = comb.icmp slt %126, %c2_i32 : i32</pre>
+      <pre>      cf.cond_br %127, ^bb14(%c0_i32 : i32), ^bb19(%c0_i32 : i32)</pre>
+      <pre>    ^bb14(%128: i32):  // 2 preds: ^bb13, ^bb17</pre>
+      <pre>      %129 = comb.icmp slt %128, %c3_i32 : i32</pre>
+      <pre>      cf.cond_br %129, ^bb15, ^bb18</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %130 = comb.extract %126 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %131 = comb.concat %130, %c0_i2 : i2, i2</pre>
+      <pre>      %132 = comb.extract %128 from 0 : (i32) -&gt; i4</pre>
+      <pre>      %133 = comb.add %131, %132 : i4</pre>
+      <pre>      llhd.drv %13, %133 after %8 : i4</pre>
+      <pre>      llhd.drv %14, %c0_i4 after %8 : i4</pre>
+      <pre>      %134 = sim.fmt.int 10 0 0 %126 : i32</pre>
+      <pre>      %135 = sim.fmt.int 10 0 0 %128 : i32</pre>
+      <pre>      %136 = comb.sub %c1_i32, %126 : i32</pre>
+      <pre>      %137 = comb.extract %136 from 5 : (i32) -&gt; i27</pre>
+      <pre>      %138 = comb.icmp eq %137, %c0_i27 : i27</pre>
+      <pre>      %139 = comb.extract %136 from 0 : (i32) -&gt; i5</pre>
+      <pre>      %140 = comb.mux %138, %139, %c-1_i5 : i5</pre>
+      <pre>      %141 = comb.mul %140, %c12_i5 : i5</pre>
+      <pre>      %142 = llhd.sig.extract %11 from %141 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %143 = llhd.sig.extract %12 from %141 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %144 = llhd.prb %142 : i12</pre>
+      <pre>      %145 = llhd.prb %143 : i12</pre>
+      <pre>      %146 = hw.bitcast %144 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %147 = hw.bitcast %145 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %148 = hw.array_get %146[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %149 = hw.array_get %147[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %150 = hw.struct_create (%148, %149) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %151 = hw.array_get %146[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %152 = hw.array_get %147[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %153 = hw.struct_create (%151, %152) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %154 = hw.array_get %146[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %155 = hw.array_get %147[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %156 = hw.struct_create (%154, %155) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %157 = hw.array_create %156, %153, %150 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %158 = comb.sub %c2_i32, %128 : i32</pre>
+      <pre>      %159 = comb.extract %158 from 2 : (i32) -&gt; i30</pre>
+      <pre>      %160 = comb.icmp eq %159, %c0_i30 : i30</pre>
+      <pre>      %161 = comb.extract %158 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %162 = comb.mux %160, %161, %c-1_i2 : i2</pre>
+      <pre>      %163 = hw.array_get %157[%162] : !hw.array&lt;3xstruct&lt;value: i4, unknown: i4&gt;&gt;, i2</pre>
+      <pre>      %value_2 = hw.struct_extract %163[&#34;value&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %unknown_3 = hw.struct_extract %163[&#34;unknown&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %164 = sim.fmt.fvint 16 1 4 %value_2, %unknown_3 : i4</pre>
+      <pre>      %165 = sim.fmt.concat (%7, %134, %6, %135, %5, %164, %4)</pre>
+      <pre>      sim.proc.print %165</pre>
+      <pre>      %166 = llhd.prb %142 : i12</pre>
+      <pre>      %167 = llhd.prb %143 : i12</pre>
+      <pre>      %168 = hw.bitcast %166 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %169 = hw.bitcast %167 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %170 = hw.array_get %168[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %171 = hw.array_get %169[%c0_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %172 = hw.struct_create (%170, %171) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %173 = hw.array_get %168[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %174 = hw.array_get %169[%c1_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %175 = hw.struct_create (%173, %174) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %176 = hw.array_get %168[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %177 = hw.array_get %169[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %178 = hw.struct_create (%176, %177) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %179 = hw.array_create %178, %175, %172 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %180 = hw.array_get %179[%162] : !hw.array&lt;3xstruct&lt;value: i4, unknown: i4&gt;&gt;, i2</pre>
+      <pre>      %181 = llhd.prb %13 : i4</pre>
+      <pre>      %182 = llhd.prb %14 : i4</pre>
+      <pre>      %value_4 = hw.struct_extract %180[&#34;value&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %unknown_5 = hw.struct_extract %180[&#34;unknown&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>      %183 = comb.icmp eq %value_4, %181 : i4</pre>
+      <pre>      %184 = comb.icmp eq %unknown_5, %182 : i4</pre>
+      <pre>      %185 = comb.and %183, %184 : i1</pre>
+      <pre>      %186 = comb.xor %185, %true : i1</pre>
+      <pre>      cf.cond_br %186, ^bb16, ^bb17</pre>
+      <pre>    ^bb16:  // pred: ^bb15</pre>
+      <pre>      llhd.drv %15, %true after %8 : i1</pre>
+      <pre>      llhd.drv %16, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb17</pre>
+      <pre>    ^bb17:  // 2 preds: ^bb15, ^bb16</pre>
+      <pre>      %187 = comb.add %128, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb14(%187 : i32)</pre>
+      <pre>    ^bb18:  // pred: ^bb14</pre>
+      <pre>      %188 = comb.add %126, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb13(%188 : i32)</pre>
+      <pre>    ^bb19(%189: i32):  // 2 preds: ^bb13, ^bb22</pre>
+      <pre>      %190 = comb.icmp slt %189, %c2_i32 : i32</pre>
+      <pre>      cf.cond_br %190, ^bb20, ^bb23</pre>
+      <pre>    ^bb20:  // pred: ^bb19</pre>
+      <pre>      %191 = comb.extract %189 from 0 : (i32) -&gt; i2</pre>
+      <pre>      %192 = comb.concat %191, %c0_i2 : i2, i2</pre>
+      <pre>      llhd.drv %13, %192 after %8 : i4</pre>
+      <pre>      llhd.drv %14, %c0_i4 after %8 : i4</pre>
+      <pre>      %193 = sim.fmt.int 10 0 0 %189 : i32</pre>
+      <pre>      %194 = comb.sub %c1_i32, %189 : i32</pre>
+      <pre>      %195 = comb.extract %194 from 5 : (i32) -&gt; i27</pre>
+      <pre>      %196 = comb.icmp eq %195, %c0_i27 : i27</pre>
+      <pre>      %197 = comb.extract %194 from 0 : (i32) -&gt; i5</pre>
+      <pre>      %198 = comb.mux %196, %197, %c-1_i5 : i5</pre>
+      <pre>      %199 = comb.mul %198, %c12_i5 : i5</pre>
+      <pre>      %200 = llhd.sig.extract %11 from %199 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %201 = llhd.sig.extract %12 from %199 : &lt;i24&gt; -&gt; &lt;i12&gt;</pre>
+      <pre>      %202 = llhd.prb %200 : i12</pre>
+      <pre>      %203 = llhd.prb %201 : i12</pre>
+      <pre>      %204 = hw.bitcast %202 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %205 = hw.bitcast %203 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %206 = hw.array_get %204[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %207 = hw.array_get %205[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %208 = sim.fmt.fvint 16 1 4 %206, %207 : i4</pre>
+      <pre>      %209 = sim.fmt.concat (%7, %193, %3, %208, %4)</pre>
+      <pre>      sim.proc.print %209</pre>
+      <pre>      %210 = llhd.prb %200 : i12</pre>
+      <pre>      %211 = llhd.prb %201 : i12</pre>
+      <pre>      %212 = hw.bitcast %210 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %213 = hw.bitcast %211 : (i12) -&gt; !hw.array&lt;3xi4&gt;</pre>
+      <pre>      %214 = hw.array_get %212[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %215 = hw.array_get %213[%c-2_i2] : !hw.array&lt;3xi4&gt;, i2</pre>
+      <pre>      %216 = llhd.prb %13 : i4</pre>
+      <pre>      %217 = llhd.prb %14 : i4</pre>
+      <pre>      %218 = comb.icmp eq %214, %216 : i4</pre>
+      <pre>      %219 = comb.icmp eq %215, %217 : i4</pre>
+      <pre>      %220 = comb.and %218, %219 : i1</pre>
+      <pre>      %221 = comb.xor %220, %true : i1</pre>
+      <pre>      cf.cond_br %221, ^bb21, ^bb22</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      llhd.drv %15, %true after %8 : i1</pre>
+      <pre>      llhd.drv %16, %false after %8 : i1</pre>
+      <pre>      cf.br ^bb22</pre>
+      <pre>    ^bb22:  // 2 preds: ^bb20, ^bb21</pre>
+      <pre>      %222 = comb.add %189, %c1_i32 : i32</pre>
+      <pre>      cf.br ^bb19(%222 : i32)</pre>
+      <pre>    ^bb23:  // pred: ^bb19</pre>
+      <pre>      %223 = llhd.prb %15 : i1</pre>
+      <pre>      %224 = llhd.prb %16 : i1</pre>
+      <pre>      %225 = comb.xor %224, %true : i1</pre>
+      <pre>      %226 = comb.and %223, %225 : i1</pre>
+      <pre>      cf.cond_br %226, ^bb24, ^bb25</pre>
+      <pre>    ^bb24:  // pred: ^bb23</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      cf.br ^bb26</pre>
+      <pre>    ^bb25:  // pred: ^bb23</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb26</pre>
+      <pre>    ^bb26:  // 2 preds: ^bb24, ^bb25</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

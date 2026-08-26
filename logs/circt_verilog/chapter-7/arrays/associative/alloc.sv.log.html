@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>associative-arrays-allocating-elements</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test associative arrays elements allocation</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.8 7.8.7 7.9.1</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../tests/chapter-7/arrays/associative/alloc.sv.html" target="file-frame">tests/chapter-7/arrays/associative/alloc.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.043s</dd></div>
+        <div><dt>ram usage</dt><dd>22400 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../tests/chapter-7/arrays/associative/alloc.sv.html" target="file-frame">tests/chapter-7/arrays/associative/alloc.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_assoc_set_i32_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_assoc_num_i32_i32(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_assoc_alloc_i32_i32() -&gt; i32</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34; == 1)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34; == 0)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (&#34;</pre>
+      <pre>    %c10_i32 = hw.constant 10 : i32</pre>
+      <pre>    %3 = llhd.combinational -&gt; i32 {</pre>
+      <pre>      %5 = func.call @circt_sv_assoc_alloc_i32_i32() : () -&gt; i32</pre>
+      <pre>      llhd.yield %5 : i32</pre>
+      <pre>    }</pre>
+      <pre>    %arr = llhd.sig %3 : i32</pre>
+      <pre>    %4 = llhd.prb %arr : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %5 = func.call @circt_sv_assoc_num_i32_i32(%4) : (i32) -&gt; i32</pre>
+      <pre>      %6 = sim.fmt.int 10 0 0 %5 : i32</pre>
+      <pre>      %7 = sim.fmt.concat (%2, %6, %1)</pre>
+      <pre>      sim.proc.print %7</pre>
+      <pre>      %8 = llhd.prb %arr : i32</pre>
+      <pre>      func.call @circt_sv_assoc_set_i32_i32(%8, %c10_i32, %c10_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      %9 = llhd.prb %arr : i32</pre>
+      <pre>      %10 = func.call @circt_sv_assoc_num_i32_i32(%9) : (i32) -&gt; i32</pre>
+      <pre>      %11 = sim.fmt.int 10 0 0 %10 : i32</pre>
+      <pre>      %12 = sim.fmt.concat (%2, %11, %0)</pre>
+      <pre>      sim.proc.print %12</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

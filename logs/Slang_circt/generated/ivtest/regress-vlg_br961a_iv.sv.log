@@ -1,0 +1,38 @@
+name: regress-vlg_br961a_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11122488975524902
+user_time: 0.019996
+system_time: 0.109636
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:47
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/br961a.v:4:11: error: use of undeclared identifier 'w'
+function [w-1:0] copy;
+          ^
+../../../third_party/tools/icarus/ivtest/ivltests/br961a.v:6:8: error: use of undeclared identifier 'w'
+input [w-1:0] z;
+       ^
+Top level design units:
+    test
+
+
+Build failed: 2 errors, 0 warnings

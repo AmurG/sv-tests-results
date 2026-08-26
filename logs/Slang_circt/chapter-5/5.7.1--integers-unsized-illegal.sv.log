@@ -1,0 +1,38 @@
+name: integers-unsized-illegal
+description: Integer literal constants
+should_fail_because: hexadecimal format requires 'h
+tags: 5.7.1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+type: parsing elaboration
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08324790000915527
+user_time: 0.015241
+system_time: 0.083606
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-5/5.7.1--integers-unsized-illegal.sv:20:10: error: expected ';'
+    a = 4af; // is illegal (hexadecimal format requires 'h)
+         ^
+../../../tests/chapter-5/5.7.1--integers-unsized-illegal.sv:20:10: error: use of undeclared identifier 'af'
+    a = 4af; // is illegal (hexadecimal format requires 'h)
+         ^~
+Top level design units:
+    top
+
+
+Build failed: 2 errors, 0 warnings

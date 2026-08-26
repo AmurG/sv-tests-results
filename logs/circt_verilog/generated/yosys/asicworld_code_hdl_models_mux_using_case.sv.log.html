@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>asicworld_code_hdl_models_mux_using_case</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/asicworld_code_hdl_models_mux_using_case.sv.html" target="file-frame">tests/generated/yosys/asicworld_code_hdl_models_mux_using_case.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_case.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_case.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.041s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/asicworld_code_hdl_models_mux_using_case.sv.html" target="file-frame">tests/generated/yosys/asicworld_code_hdl_models_mux_using_case.sv</a> <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_case.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_case.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @mux_using_case(in %din_0 : !hw.struct&lt;value: i1, unknown: i1&gt;, in %din_1 : !hw.struct&lt;value: i1, unknown: i1&gt;, in %sel : !hw.struct&lt;value: i1, unknown: i1&gt;, out mux_out : !hw.struct&lt;value: i1, unknown: i1&gt;) {</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %0 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %2 = hw.aggregate_constant [true, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %sel_0 = llhd.sig name &#34;sel&#34; %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %3 = hw.struct_create (%value_5, %unknown_6) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %sel_0, %3 after %1 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %sel_0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %sel_0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %din_1_1 = llhd.sig name &#34;din_1&#34; %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %6 = hw.struct_create (%value_3, %unknown_4) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %din_1_1, %6 after %1 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %din_1_1[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %din_1_1[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %din_0_2 = llhd.sig name &#34;din_0&#34; %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %9 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %din_0_2, %9 after %1 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %din_0_2[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %din_0_2[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %mux_out = llhd.sig %0 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %mux_out[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %mux_out[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 3 preds: ^bb0, ^bb3, ^bb4</pre>
+      <pre>      %17 = llhd.prb %4 : i1</pre>
+      <pre>      %18 = llhd.prb %5 : i1</pre>
+      <pre>      %19 = hw.struct_create (%17, %18) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %20 = llhd.prb %10 : i1</pre>
+      <pre>      %21 = llhd.prb %11 : i1</pre>
+      <pre>      %22 = hw.struct_create (%20, %21) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %23 = llhd.prb %7 : i1</pre>
+      <pre>      %24 = llhd.prb %8 : i1</pre>
+      <pre>      %25 = hw.struct_create (%23, %24) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.wait (%19, %22, %25 : !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;), ^bb2(%19, %22, %25 : !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;, !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    ^bb2(%26: !hw.struct&lt;value: i1, unknown: i1&gt;, %27: !hw.struct&lt;value: i1, unknown: i1&gt;, %28: !hw.struct&lt;value: i1, unknown: i1&gt;):  // pred: ^bb1</pre>
+      <pre>      %29 = llhd.prb %4 : i1</pre>
+      <pre>      %30 = llhd.prb %5 : i1</pre>
+      <pre>      %31 = comb.xor %29, %true : i1</pre>
+      <pre>      %32 = comb.xor %30, %true : i1</pre>
+      <pre>      %33 = comb.and %31, %32 : i1</pre>
+      <pre>      cf.cond_br %33, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %34 = llhd.prb %10 : i1</pre>
+      <pre>      %35 = llhd.prb %11 : i1</pre>
+      <pre>      llhd.drv %12, %34 after %1 : i1</pre>
+      <pre>      llhd.drv %13, %35 after %1 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb4:  // pred: ^bb2</pre>
+      <pre>      %36 = llhd.prb %7 : i1</pre>
+      <pre>      %37 = llhd.prb %8 : i1</pre>
+      <pre>      llhd.drv %12, %36 after %1 : i1</pre>
+      <pre>      llhd.drv %13, %37 after %1 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    %value = hw.struct_extract %din_0[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %din_0[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_3 = hw.struct_extract %din_1[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_4 = hw.struct_extract %din_1[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %value_5 = hw.struct_extract %sel[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown_6 = hw.struct_extract %sel[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %14 = llhd.prb %12 : i1</pre>
+      <pre>    %15 = llhd.prb %13 : i1</pre>
+      <pre>    %16 = hw.struct_create (%14, %15) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    hw.output %16 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

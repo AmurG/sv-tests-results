@@ -1,0 +1,38 @@
+name: clocking_block_signals_fail
+description: clocking block with signals test
+should_fail_because: assigning to net from procedural context
+type: simulation elaboration
+tags: 14.3
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.11410069465637207
+user_time: 0.017568999999999998
+system_time: 0.12283699999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:31
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-14/14.3--clocking-block-signals-error.sv:28:9: error: cannot assign to a net within a procedural context
+        b <= a;
+        ^
+../../../tests/chapter-14/14.3--clocking-block-signals-error.sv:29:9: error: cannot assign to a net within a procedural context
+        c <= a;
+        ^
+Top level design units:
+    top
+
+
+Build failed: 2 errors, 0 warnings

@@ -1,0 +1,35 @@
+name: specparam_inv
+description: specparam assignment to param should be invalid
+should_fail_because: specparam assignment to param should be invalid
+tags: 6.20.5
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08877062797546387
+user_time: 0.027226999999999998
+system_time: 0.09024
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:37
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-6/6.20.5--specparam_inv.sv:19:23: error: specparams cannot be used in general constant expressions
+        parameter p = delay + 2;
+                      ^~~~~
+Top level design units:
+    top
+
+
+Build failed: 1 error, 0 warnings

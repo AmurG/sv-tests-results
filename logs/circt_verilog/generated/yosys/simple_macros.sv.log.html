@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>simple_macros</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/simple_macros.sv.html" target="file-frame">tests/generated/yosys/simple_macros.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html" target="file-frame">third_party/tools/yosys/tests/simple/macros.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:18</dd></div>
+        <div><dt>time elapsed</dt><dd>0.056s</dd></div>
+        <div><dt>ram usage</dt><dd>23296 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../tests/generated/yosys/simple_macros.sv.html" target="file-frame">tests/generated/yosys/simple_macros.sv</a> <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html" target="file-frame">third_party/tools/yosys/tests/simple/macros.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @test_def(in %a : !hw.struct&lt;value: i32, unknown: i32&gt;, out y : !hw.struct&lt;value: i8, unknown: i8&gt;) {</pre>
+      <pre>    %value = hw.struct_extract %a[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %a[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %0 = comb.extract %value from 16 : (i32) -&gt; i8</pre>
+      <pre>    %1 = comb.extract %unknown from 16 : (i32) -&gt; i8</pre>
+      <pre>    %2 = hw.struct_create (%0, %1) : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>    hw.output %2 : !hw.struct&lt;value: i8, unknown: i8&gt;</pre>
+      <pre>  }</pre>
+      <pre>  hw.module @test_ifdef(in %a : !hw.struct&lt;value: i3, unknown: i3&gt;, out y : !hw.struct&lt;value: i32, unknown: i32&gt;) {</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c-1_i31 = hw.constant -1 : i31</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %0 = hw.aggregate_constant [0 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %c0_i31 = hw.constant 0 : i31</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %2 = hw.aggregate_constant [-1 : i3, -1 : i3] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %a_0 = llhd.sig name &#34;a&#34; %2 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %3 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    llhd.drv %a_0, %3 after %1 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %4 = llhd.sig.struct_extract %a_0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %a_0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %y = llhd.sig %0 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %y[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %y[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      llhd.drv %6, %c0_i32 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %c0_i32 after %1 : i32</pre>
+      <pre>      %11 = llhd.prb %6 : i32</pre>
+      <pre>      %12 = llhd.prb %7 : i32</pre>
+      <pre>      %13 = comb.extract %11 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %14 = comb.concat %13, %false : i31, i1</pre>
+      <pre>      %15 = comb.extract %12 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %16 = llhd.prb %4 : i3</pre>
+      <pre>      %17 = llhd.prb %5 : i3</pre>
+      <pre>      %18 = comb.extract %16 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %19 = comb.extract %17 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %20 = comb.concat %c0_i31, %18 : i31, i1</pre>
+      <pre>      %21 = comb.xor %15, %c-1_i31 : i31</pre>
+      <pre>      %22 = comb.concat %21, %true : i31, i1</pre>
+      <pre>      %23 = comb.xor %19, %true : i1</pre>
+      <pre>      %24 = comb.concat %c-1_i31, %23 : i31, i1</pre>
+      <pre>      %25 = comb.xor %13, %c-1_i31 : i31</pre>
+      <pre>      %26 = comb.concat %25, %true : i31, i1</pre>
+      <pre>      %27 = comb.xor %18, %true : i1</pre>
+      <pre>      %28 = comb.concat %c-1_i31, %27 : i31, i1</pre>
+      <pre>      %29 = comb.and %22, %14 : i32</pre>
+      <pre>      %30 = comb.and %24, %20 : i32</pre>
+      <pre>      %31 = comb.and %22, %26, %24, %28 : i32</pre>
+      <pre>      %32 = comb.or %29, %30 : i32</pre>
+      <pre>      %33 = comb.or %31, %29, %30 : i32</pre>
+      <pre>      %34 = comb.xor %33, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %32 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %34 after %1 : i32</pre>
+      <pre>      %35 = llhd.prb %6 : i32</pre>
+      <pre>      %36 = llhd.prb %7 : i32</pre>
+      <pre>      %37 = comb.extract %35 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %38 = comb.concat %37, %false : i31, i1</pre>
+      <pre>      %39 = comb.extract %36 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %40 = llhd.prb %4 : i3</pre>
+      <pre>      %41 = llhd.prb %5 : i3</pre>
+      <pre>      %42 = comb.extract %40 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %43 = comb.extract %41 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %44 = comb.concat %c0_i31, %42 : i31, i1</pre>
+      <pre>      %45 = comb.xor %39, %c-1_i31 : i31</pre>
+      <pre>      %46 = comb.concat %45, %true : i31, i1</pre>
+      <pre>      %47 = comb.xor %43, %true : i1</pre>
+      <pre>      %48 = comb.concat %c-1_i31, %47 : i31, i1</pre>
+      <pre>      %49 = comb.xor %37, %c-1_i31 : i31</pre>
+      <pre>      %50 = comb.concat %49, %true : i31, i1</pre>
+      <pre>      %51 = comb.xor %42, %true : i1</pre>
+      <pre>      %52 = comb.concat %c-1_i31, %51 : i31, i1</pre>
+      <pre>      %53 = comb.and %46, %38 : i32</pre>
+      <pre>      %54 = comb.and %48, %44 : i32</pre>
+      <pre>      %55 = comb.and %46, %50, %48, %52 : i32</pre>
+      <pre>      %56 = comb.or %53, %54 : i32</pre>
+      <pre>      %57 = comb.or %55, %53, %54 : i32</pre>
+      <pre>      %58 = comb.xor %57, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %56 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %58 after %1 : i32</pre>
+      <pre>      %59 = llhd.prb %6 : i32</pre>
+      <pre>      %60 = llhd.prb %7 : i32</pre>
+      <pre>      %61 = comb.extract %59 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %62 = comb.concat %61, %false : i31, i1</pre>
+      <pre>      %63 = comb.extract %60 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %64 = llhd.prb %4 : i3</pre>
+      <pre>      %65 = llhd.prb %5 : i3</pre>
+      <pre>      %66 = comb.extract %64 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %67 = comb.extract %65 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %68 = comb.concat %c0_i31, %66 : i31, i1</pre>
+      <pre>      %69 = comb.xor %63, %c-1_i31 : i31</pre>
+      <pre>      %70 = comb.concat %69, %true : i31, i1</pre>
+      <pre>      %71 = comb.xor %67, %true : i1</pre>
+      <pre>      %72 = comb.concat %c-1_i31, %71 : i31, i1</pre>
+      <pre>      %73 = comb.xor %61, %c-1_i31 : i31</pre>
+      <pre>      %74 = comb.concat %73, %true : i31, i1</pre>
+      <pre>      %75 = comb.xor %66, %true : i1</pre>
+      <pre>      %76 = comb.concat %c-1_i31, %75 : i31, i1</pre>
+      <pre>      %77 = comb.and %70, %62 : i32</pre>
+      <pre>      %78 = comb.and %72, %68 : i32</pre>
+      <pre>      %79 = comb.and %70, %74, %72, %76 : i32</pre>
+      <pre>      %80 = comb.or %77, %78 : i32</pre>
+      <pre>      %81 = comb.or %79, %77, %78 : i32</pre>
+      <pre>      %82 = comb.xor %81, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %80 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %82 after %1 : i32</pre>
+      <pre>      %83 = llhd.prb %6 : i32</pre>
+      <pre>      %84 = llhd.prb %7 : i32</pre>
+      <pre>      %85 = comb.extract %83 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %86 = comb.concat %85, %false : i31, i1</pre>
+      <pre>      %87 = comb.extract %84 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %88 = llhd.prb %4 : i3</pre>
+      <pre>      %89 = llhd.prb %5 : i3</pre>
+      <pre>      %90 = comb.extract %88 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %91 = comb.extract %89 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %92 = comb.concat %c0_i31, %90 : i31, i1</pre>
+      <pre>      %93 = comb.xor %87, %c-1_i31 : i31</pre>
+      <pre>      %94 = comb.concat %93, %true : i31, i1</pre>
+      <pre>      %95 = comb.xor %91, %true : i1</pre>
+      <pre>      %96 = comb.concat %c-1_i31, %95 : i31, i1</pre>
+      <pre>      %97 = comb.xor %85, %c-1_i31 : i31</pre>
+      <pre>      %98 = comb.concat %97, %true : i31, i1</pre>
+      <pre>      %99 = comb.xor %90, %true : i1</pre>
+      <pre>      %100 = comb.concat %c-1_i31, %99 : i31, i1</pre>
+      <pre>      %101 = comb.and %94, %86 : i32</pre>
+      <pre>      %102 = comb.and %96, %92 : i32</pre>
+      <pre>      %103 = comb.and %94, %98, %96, %100 : i32</pre>
+      <pre>      %104 = comb.or %101, %102 : i32</pre>
+      <pre>      %105 = comb.or %103, %101, %102 : i32</pre>
+      <pre>      %106 = comb.xor %105, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %104 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %106 after %1 : i32</pre>
+      <pre>      %107 = llhd.prb %6 : i32</pre>
+      <pre>      %108 = llhd.prb %7 : i32</pre>
+      <pre>      %109 = comb.extract %107 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %110 = comb.concat %109, %false : i31, i1</pre>
+      <pre>      %111 = comb.extract %108 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %112 = llhd.prb %4 : i3</pre>
+      <pre>      %113 = llhd.prb %5 : i3</pre>
+      <pre>      %114 = comb.extract %112 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %115 = comb.extract %113 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %116 = comb.concat %c0_i31, %114 : i31, i1</pre>
+      <pre>      %117 = comb.xor %111, %c-1_i31 : i31</pre>
+      <pre>      %118 = comb.concat %117, %true : i31, i1</pre>
+      <pre>      %119 = comb.xor %115, %true : i1</pre>
+      <pre>      %120 = comb.concat %c-1_i31, %119 : i31, i1</pre>
+      <pre>      %121 = comb.xor %109, %c-1_i31 : i31</pre>
+      <pre>      %122 = comb.concat %121, %true : i31, i1</pre>
+      <pre>      %123 = comb.xor %114, %true : i1</pre>
+      <pre>      %124 = comb.concat %c-1_i31, %123 : i31, i1</pre>
+      <pre>      %125 = comb.and %118, %110 : i32</pre>
+      <pre>      %126 = comb.and %120, %116 : i32</pre>
+      <pre>      %127 = comb.and %118, %122, %120, %124 : i32</pre>
+      <pre>      %128 = comb.or %125, %126 : i32</pre>
+      <pre>      %129 = comb.or %127, %125, %126 : i32</pre>
+      <pre>      %130 = comb.xor %129, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %128 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %130 after %1 : i32</pre>
+      <pre>      %131 = llhd.prb %6 : i32</pre>
+      <pre>      %132 = llhd.prb %7 : i32</pre>
+      <pre>      %133 = comb.extract %131 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %134 = comb.concat %133, %false : i31, i1</pre>
+      <pre>      %135 = comb.extract %132 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %136 = llhd.prb %4 : i3</pre>
+      <pre>      %137 = llhd.prb %5 : i3</pre>
+      <pre>      %138 = comb.extract %136 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %139 = comb.extract %137 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %140 = comb.concat %c0_i31, %138 : i31, i1</pre>
+      <pre>      %141 = comb.xor %135, %c-1_i31 : i31</pre>
+      <pre>      %142 = comb.concat %141, %true : i31, i1</pre>
+      <pre>      %143 = comb.xor %139, %true : i1</pre>
+      <pre>      %144 = comb.concat %c-1_i31, %143 : i31, i1</pre>
+      <pre>      %145 = comb.xor %133, %c-1_i31 : i31</pre>
+      <pre>      %146 = comb.concat %145, %true : i31, i1</pre>
+      <pre>      %147 = comb.xor %138, %true : i1</pre>
+      <pre>      %148 = comb.concat %c-1_i31, %147 : i31, i1</pre>
+      <pre>      %149 = comb.and %142, %134 : i32</pre>
+      <pre>      %150 = comb.and %144, %140 : i32</pre>
+      <pre>      %151 = comb.and %142, %146, %144, %148 : i32</pre>
+      <pre>      %152 = comb.or %149, %150 : i32</pre>
+      <pre>      %153 = comb.or %151, %149, %150 : i32</pre>
+      <pre>      %154 = comb.xor %153, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %152 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %154 after %1 : i32</pre>
+      <pre>      %155 = llhd.prb %6 : i32</pre>
+      <pre>      %156 = llhd.prb %7 : i32</pre>
+      <pre>      %157 = comb.extract %155 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %158 = comb.concat %157, %false : i31, i1</pre>
+      <pre>      %159 = comb.extract %156 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %160 = llhd.prb %4 : i3</pre>
+      <pre>      %161 = llhd.prb %5 : i3</pre>
+      <pre>      %162 = comb.extract %160 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %163 = comb.extract %161 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %164 = comb.concat %c0_i31, %162 : i31, i1</pre>
+      <pre>      %165 = comb.xor %159, %c-1_i31 : i31</pre>
+      <pre>      %166 = comb.concat %165, %true : i31, i1</pre>
+      <pre>      %167 = comb.xor %163, %true : i1</pre>
+      <pre>      %168 = comb.concat %c-1_i31, %167 : i31, i1</pre>
+      <pre>      %169 = comb.xor %157, %c-1_i31 : i31</pre>
+      <pre>      %170 = comb.concat %169, %true : i31, i1</pre>
+      <pre>      %171 = comb.xor %162, %true : i1</pre>
+      <pre>      %172 = comb.concat %c-1_i31, %171 : i31, i1</pre>
+      <pre>      %173 = comb.and %166, %158 : i32</pre>
+      <pre>      %174 = comb.and %168, %164 : i32</pre>
+      <pre>      %175 = comb.and %166, %170, %168, %172 : i32</pre>
+      <pre>      %176 = comb.or %173, %174 : i32</pre>
+      <pre>      %177 = comb.or %175, %173, %174 : i32</pre>
+      <pre>      %178 = comb.xor %177, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %176 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %178 after %1 : i32</pre>
+      <pre>      %179 = llhd.prb %6 : i32</pre>
+      <pre>      %180 = llhd.prb %7 : i32</pre>
+      <pre>      %181 = comb.extract %179 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %182 = comb.concat %181, %false : i31, i1</pre>
+      <pre>      %183 = comb.extract %180 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %184 = llhd.prb %4 : i3</pre>
+      <pre>      %185 = llhd.prb %5 : i3</pre>
+      <pre>      %186 = comb.extract %184 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %187 = comb.extract %185 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %188 = comb.concat %c0_i31, %186 : i31, i1</pre>
+      <pre>      %189 = comb.xor %183, %c-1_i31 : i31</pre>
+      <pre>      %190 = comb.concat %189, %true : i31, i1</pre>
+      <pre>      %191 = comb.xor %187, %true : i1</pre>
+      <pre>      %192 = comb.concat %c-1_i31, %191 : i31, i1</pre>
+      <pre>      %193 = comb.xor %181, %c-1_i31 : i31</pre>
+      <pre>      %194 = comb.concat %193, %true : i31, i1</pre>
+      <pre>      %195 = comb.xor %186, %true : i1</pre>
+      <pre>      %196 = comb.concat %c-1_i31, %195 : i31, i1</pre>
+      <pre>      %197 = comb.and %190, %182 : i32</pre>
+      <pre>      %198 = comb.and %192, %188 : i32</pre>
+      <pre>      %199 = comb.and %190, %194, %192, %196 : i32</pre>
+      <pre>      %200 = comb.or %197, %198 : i32</pre>
+      <pre>      %201 = comb.or %199, %197, %198 : i32</pre>
+      <pre>      %202 = comb.xor %201, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %200 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %202 after %1 : i32</pre>
+      <pre>      %203 = llhd.prb %6 : i32</pre>
+      <pre>      %204 = llhd.prb %7 : i32</pre>
+      <pre>      %205 = comb.extract %203 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %206 = comb.concat %205, %false : i31, i1</pre>
+      <pre>      %207 = comb.extract %204 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %208 = llhd.prb %4 : i3</pre>
+      <pre>      %209 = llhd.prb %5 : i3</pre>
+      <pre>      %210 = comb.extract %208 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %211 = comb.extract %209 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %212 = comb.concat %c0_i31, %210 : i31, i1</pre>
+      <pre>      %213 = comb.xor %207, %c-1_i31 : i31</pre>
+      <pre>      %214 = comb.concat %213, %true : i31, i1</pre>
+      <pre>      %215 = comb.xor %211, %true : i1</pre>
+      <pre>      %216 = comb.concat %c-1_i31, %215 : i31, i1</pre>
+      <pre>      %217 = comb.xor %205, %c-1_i31 : i31</pre>
+      <pre>      %218 = comb.concat %217, %true : i31, i1</pre>
+      <pre>      %219 = comb.xor %210, %true : i1</pre>
+      <pre>      %220 = comb.concat %c-1_i31, %219 : i31, i1</pre>
+      <pre>      %221 = comb.and %214, %206 : i32</pre>
+      <pre>      %222 = comb.and %216, %212 : i32</pre>
+      <pre>      %223 = comb.and %214, %218, %216, %220 : i32</pre>
+      <pre>      %224 = comb.or %221, %222 : i32</pre>
+      <pre>      %225 = comb.or %223, %221, %222 : i32</pre>
+      <pre>      %226 = comb.xor %225, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %224 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %226 after %1 : i32</pre>
+      <pre>      %227 = llhd.prb %6 : i32</pre>
+      <pre>      %228 = llhd.prb %7 : i32</pre>
+      <pre>      %229 = comb.extract %227 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %230 = comb.concat %229, %false : i31, i1</pre>
+      <pre>      %231 = comb.extract %228 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %232 = llhd.prb %4 : i3</pre>
+      <pre>      %233 = llhd.prb %5 : i3</pre>
+      <pre>      %234 = comb.extract %232 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %235 = comb.extract %233 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %236 = comb.concat %c0_i31, %234 : i31, i1</pre>
+      <pre>      %237 = comb.xor %231, %c-1_i31 : i31</pre>
+      <pre>      %238 = comb.concat %237, %true : i31, i1</pre>
+      <pre>      %239 = comb.xor %235, %true : i1</pre>
+      <pre>      %240 = comb.concat %c-1_i31, %239 : i31, i1</pre>
+      <pre>      %241 = comb.xor %229, %c-1_i31 : i31</pre>
+      <pre>      %242 = comb.concat %241, %true : i31, i1</pre>
+      <pre>      %243 = comb.xor %234, %true : i1</pre>
+      <pre>      %244 = comb.concat %c-1_i31, %243 : i31, i1</pre>
+      <pre>      %245 = comb.and %238, %230 : i32</pre>
+      <pre>      %246 = comb.and %240, %236 : i32</pre>
+      <pre>      %247 = comb.and %238, %242, %240, %244 : i32</pre>
+      <pre>      %248 = comb.or %245, %246 : i32</pre>
+      <pre>      %249 = comb.or %247, %245, %246 : i32</pre>
+      <pre>      %250 = comb.xor %249, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %248 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %250 after %1 : i32</pre>
+      <pre>      %251 = llhd.prb %6 : i32</pre>
+      <pre>      %252 = llhd.prb %7 : i32</pre>
+      <pre>      %253 = comb.extract %251 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %254 = comb.concat %253, %false : i31, i1</pre>
+      <pre>      %255 = comb.extract %252 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %256 = llhd.prb %4 : i3</pre>
+      <pre>      %257 = llhd.prb %5 : i3</pre>
+      <pre>      %258 = comb.extract %256 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %259 = comb.extract %257 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %260 = comb.concat %c0_i31, %258 : i31, i1</pre>
+      <pre>      %261 = comb.xor %255, %c-1_i31 : i31</pre>
+      <pre>      %262 = comb.concat %261, %true : i31, i1</pre>
+      <pre>      %263 = comb.xor %259, %true : i1</pre>
+      <pre>      %264 = comb.concat %c-1_i31, %263 : i31, i1</pre>
+      <pre>      %265 = comb.xor %253, %c-1_i31 : i31</pre>
+      <pre>      %266 = comb.concat %265, %true : i31, i1</pre>
+      <pre>      %267 = comb.xor %258, %true : i1</pre>
+      <pre>      %268 = comb.concat %c-1_i31, %267 : i31, i1</pre>
+      <pre>      %269 = comb.and %262, %254 : i32</pre>
+      <pre>      %270 = comb.and %264, %260 : i32</pre>
+      <pre>      %271 = comb.and %262, %266, %264, %268 : i32</pre>
+      <pre>      %272 = comb.or %269, %270 : i32</pre>
+      <pre>      %273 = comb.or %271, %269, %270 : i32</pre>
+      <pre>      %274 = comb.xor %273, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %272 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %274 after %1 : i32</pre>
+      <pre>      %275 = llhd.prb %6 : i32</pre>
+      <pre>      %276 = llhd.prb %7 : i32</pre>
+      <pre>      %277 = comb.extract %275 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %278 = comb.concat %277, %false : i31, i1</pre>
+      <pre>      %279 = comb.extract %276 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %280 = llhd.prb %4 : i3</pre>
+      <pre>      %281 = llhd.prb %5 : i3</pre>
+      <pre>      %282 = comb.extract %280 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %283 = comb.extract %281 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %284 = comb.concat %c0_i31, %282 : i31, i1</pre>
+      <pre>      %285 = comb.xor %279, %c-1_i31 : i31</pre>
+      <pre>      %286 = comb.concat %285, %true : i31, i1</pre>
+      <pre>      %287 = comb.xor %283, %true : i1</pre>
+      <pre>      %288 = comb.concat %c-1_i31, %287 : i31, i1</pre>
+      <pre>      %289 = comb.xor %277, %c-1_i31 : i31</pre>
+      <pre>      %290 = comb.concat %289, %true : i31, i1</pre>
+      <pre>      %291 = comb.xor %282, %true : i1</pre>
+      <pre>      %292 = comb.concat %c-1_i31, %291 : i31, i1</pre>
+      <pre>      %293 = comb.and %286, %278 : i32</pre>
+      <pre>      %294 = comb.and %288, %284 : i32</pre>
+      <pre>      %295 = comb.and %286, %290, %288, %292 : i32</pre>
+      <pre>      %296 = comb.or %293, %294 : i32</pre>
+      <pre>      %297 = comb.or %295, %293, %294 : i32</pre>
+      <pre>      %298 = comb.xor %297, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %296 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %298 after %1 : i32</pre>
+      <pre>      %299 = llhd.prb %6 : i32</pre>
+      <pre>      %300 = llhd.prb %7 : i32</pre>
+      <pre>      %301 = comb.extract %299 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %302 = comb.concat %301, %false : i31, i1</pre>
+      <pre>      %303 = comb.extract %300 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %304 = llhd.prb %4 : i3</pre>
+      <pre>      %305 = llhd.prb %5 : i3</pre>
+      <pre>      %306 = comb.extract %304 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %307 = comb.extract %305 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %308 = comb.concat %c0_i31, %306 : i31, i1</pre>
+      <pre>      %309 = comb.xor %303, %c-1_i31 : i31</pre>
+      <pre>      %310 = comb.concat %309, %true : i31, i1</pre>
+      <pre>      %311 = comb.xor %307, %true : i1</pre>
+      <pre>      %312 = comb.concat %c-1_i31, %311 : i31, i1</pre>
+      <pre>      %313 = comb.xor %301, %c-1_i31 : i31</pre>
+      <pre>      %314 = comb.concat %313, %true : i31, i1</pre>
+      <pre>      %315 = comb.xor %306, %true : i1</pre>
+      <pre>      %316 = comb.concat %c-1_i31, %315 : i31, i1</pre>
+      <pre>      %317 = comb.and %310, %302 : i32</pre>
+      <pre>      %318 = comb.and %312, %308 : i32</pre>
+      <pre>      %319 = comb.and %310, %314, %312, %316 : i32</pre>
+      <pre>      %320 = comb.or %317, %318 : i32</pre>
+      <pre>      %321 = comb.or %319, %317, %318 : i32</pre>
+      <pre>      %322 = comb.xor %321, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %320 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %322 after %1 : i32</pre>
+      <pre>      %323 = llhd.prb %6 : i32</pre>
+      <pre>      %324 = llhd.prb %7 : i32</pre>
+      <pre>      %325 = comb.extract %323 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %326 = comb.concat %325, %false : i31, i1</pre>
+      <pre>      %327 = comb.extract %324 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %328 = llhd.prb %4 : i3</pre>
+      <pre>      %329 = llhd.prb %5 : i3</pre>
+      <pre>      %330 = comb.extract %328 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %331 = comb.extract %329 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %332 = comb.concat %c0_i31, %330 : i31, i1</pre>
+      <pre>      %333 = comb.xor %327, %c-1_i31 : i31</pre>
+      <pre>      %334 = comb.concat %333, %true : i31, i1</pre>
+      <pre>      %335 = comb.xor %331, %true : i1</pre>
+      <pre>      %336 = comb.concat %c-1_i31, %335 : i31, i1</pre>
+      <pre>      %337 = comb.xor %325, %c-1_i31 : i31</pre>
+      <pre>      %338 = comb.concat %337, %true : i31, i1</pre>
+      <pre>      %339 = comb.xor %330, %true : i1</pre>
+      <pre>      %340 = comb.concat %c-1_i31, %339 : i31, i1</pre>
+      <pre>      %341 = comb.and %334, %326 : i32</pre>
+      <pre>      %342 = comb.and %336, %332 : i32</pre>
+      <pre>      %343 = comb.and %334, %338, %336, %340 : i32</pre>
+      <pre>      %344 = comb.or %341, %342 : i32</pre>
+      <pre>      %345 = comb.or %343, %341, %342 : i32</pre>
+      <pre>      %346 = comb.xor %345, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %344 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %346 after %1 : i32</pre>
+      <pre>      %347 = llhd.prb %6 : i32</pre>
+      <pre>      %348 = llhd.prb %7 : i32</pre>
+      <pre>      %349 = comb.extract %347 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %350 = comb.concat %349, %false : i31, i1</pre>
+      <pre>      %351 = comb.extract %348 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %352 = llhd.prb %4 : i3</pre>
+      <pre>      %353 = llhd.prb %5 : i3</pre>
+      <pre>      %354 = comb.extract %352 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %355 = comb.extract %353 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %356 = comb.concat %c0_i31, %354 : i31, i1</pre>
+      <pre>      %357 = comb.xor %351, %c-1_i31 : i31</pre>
+      <pre>      %358 = comb.concat %357, %true : i31, i1</pre>
+      <pre>      %359 = comb.xor %355, %true : i1</pre>
+      <pre>      %360 = comb.concat %c-1_i31, %359 : i31, i1</pre>
+      <pre>      %361 = comb.xor %349, %c-1_i31 : i31</pre>
+      <pre>      %362 = comb.concat %361, %true : i31, i1</pre>
+      <pre>      %363 = comb.xor %354, %true : i1</pre>
+      <pre>      %364 = comb.concat %c-1_i31, %363 : i31, i1</pre>
+      <pre>      %365 = comb.and %358, %350 : i32</pre>
+      <pre>      %366 = comb.and %360, %356 : i32</pre>
+      <pre>      %367 = comb.and %358, %362, %360, %364 : i32</pre>
+      <pre>      %368 = comb.or %365, %366 : i32</pre>
+      <pre>      %369 = comb.or %367, %365, %366 : i32</pre>
+      <pre>      %370 = comb.xor %369, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %368 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %370 after %1 : i32</pre>
+      <pre>      %371 = llhd.prb %6 : i32</pre>
+      <pre>      %372 = llhd.prb %7 : i32</pre>
+      <pre>      %373 = comb.extract %371 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %374 = comb.concat %373, %false : i31, i1</pre>
+      <pre>      %375 = comb.extract %372 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %376 = llhd.prb %4 : i3</pre>
+      <pre>      %377 = llhd.prb %5 : i3</pre>
+      <pre>      %378 = comb.extract %376 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %379 = comb.extract %377 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %380 = comb.concat %c0_i31, %378 : i31, i1</pre>
+      <pre>      %381 = comb.xor %375, %c-1_i31 : i31</pre>
+      <pre>      %382 = comb.concat %381, %true : i31, i1</pre>
+      <pre>      %383 = comb.xor %379, %true : i1</pre>
+      <pre>      %384 = comb.concat %c-1_i31, %383 : i31, i1</pre>
+      <pre>      %385 = comb.xor %373, %c-1_i31 : i31</pre>
+      <pre>      %386 = comb.concat %385, %true : i31, i1</pre>
+      <pre>      %387 = comb.xor %378, %true : i1</pre>
+      <pre>      %388 = comb.concat %c-1_i31, %387 : i31, i1</pre>
+      <pre>      %389 = comb.and %382, %374 : i32</pre>
+      <pre>      %390 = comb.and %384, %380 : i32</pre>
+      <pre>      %391 = comb.and %382, %386, %384, %388 : i32</pre>
+      <pre>      %392 = comb.or %389, %390 : i32</pre>
+      <pre>      %393 = comb.or %391, %389, %390 : i32</pre>
+      <pre>      %394 = comb.xor %393, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %392 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %394 after %1 : i32</pre>
+      <pre>      %395 = llhd.prb %6 : i32</pre>
+      <pre>      %396 = llhd.prb %7 : i32</pre>
+      <pre>      %397 = comb.extract %395 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %398 = comb.concat %397, %false : i31, i1</pre>
+      <pre>      %399 = comb.extract %396 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %400 = llhd.prb %4 : i3</pre>
+      <pre>      %401 = llhd.prb %5 : i3</pre>
+      <pre>      %402 = comb.extract %400 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %403 = comb.extract %401 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %404 = comb.concat %c0_i31, %402 : i31, i1</pre>
+      <pre>      %405 = comb.xor %399, %c-1_i31 : i31</pre>
+      <pre>      %406 = comb.concat %405, %true : i31, i1</pre>
+      <pre>      %407 = comb.xor %403, %true : i1</pre>
+      <pre>      %408 = comb.concat %c-1_i31, %407 : i31, i1</pre>
+      <pre>      %409 = comb.xor %397, %c-1_i31 : i31</pre>
+      <pre>      %410 = comb.concat %409, %true : i31, i1</pre>
+      <pre>      %411 = comb.xor %402, %true : i1</pre>
+      <pre>      %412 = comb.concat %c-1_i31, %411 : i31, i1</pre>
+      <pre>      %413 = comb.and %406, %398 : i32</pre>
+      <pre>      %414 = comb.and %408, %404 : i32</pre>
+      <pre>      %415 = comb.and %406, %410, %408, %412 : i32</pre>
+      <pre>      %416 = comb.or %413, %414 : i32</pre>
+      <pre>      %417 = comb.or %415, %413, %414 : i32</pre>
+      <pre>      %418 = comb.xor %417, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %416 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %418 after %1 : i32</pre>
+      <pre>      %419 = llhd.prb %6 : i32</pre>
+      <pre>      %420 = llhd.prb %7 : i32</pre>
+      <pre>      %421 = comb.extract %419 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %422 = comb.concat %421, %false : i31, i1</pre>
+      <pre>      %423 = comb.extract %420 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %424 = llhd.prb %4 : i3</pre>
+      <pre>      %425 = llhd.prb %5 : i3</pre>
+      <pre>      %426 = comb.extract %424 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %427 = comb.extract %425 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %428 = comb.concat %c0_i31, %426 : i31, i1</pre>
+      <pre>      %429 = comb.xor %423, %c-1_i31 : i31</pre>
+      <pre>      %430 = comb.concat %429, %true : i31, i1</pre>
+      <pre>      %431 = comb.xor %427, %true : i1</pre>
+      <pre>      %432 = comb.concat %c-1_i31, %431 : i31, i1</pre>
+      <pre>      %433 = comb.xor %421, %c-1_i31 : i31</pre>
+      <pre>      %434 = comb.concat %433, %true : i31, i1</pre>
+      <pre>      %435 = comb.xor %426, %true : i1</pre>
+      <pre>      %436 = comb.concat %c-1_i31, %435 : i31, i1</pre>
+      <pre>      %437 = comb.and %430, %422 : i32</pre>
+      <pre>      %438 = comb.and %432, %428 : i32</pre>
+      <pre>      %439 = comb.and %430, %434, %432, %436 : i32</pre>
+      <pre>      %440 = comb.or %437, %438 : i32</pre>
+      <pre>      %441 = comb.or %439, %437, %438 : i32</pre>
+      <pre>      %442 = comb.xor %441, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %440 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %442 after %1 : i32</pre>
+      <pre>      %443 = llhd.prb %6 : i32</pre>
+      <pre>      %444 = llhd.prb %7 : i32</pre>
+      <pre>      %445 = comb.extract %443 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %446 = comb.concat %445, %false : i31, i1</pre>
+      <pre>      %447 = comb.extract %444 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %448 = llhd.prb %4 : i3</pre>
+      <pre>      %449 = llhd.prb %5 : i3</pre>
+      <pre>      %450 = comb.extract %448 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %451 = comb.extract %449 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %452 = comb.concat %c0_i31, %450 : i31, i1</pre>
+      <pre>      %453 = comb.xor %447, %c-1_i31 : i31</pre>
+      <pre>      %454 = comb.concat %453, %true : i31, i1</pre>
+      <pre>      %455 = comb.xor %451, %true : i1</pre>
+      <pre>      %456 = comb.concat %c-1_i31, %455 : i31, i1</pre>
+      <pre>      %457 = comb.xor %445, %c-1_i31 : i31</pre>
+      <pre>      %458 = comb.concat %457, %true : i31, i1</pre>
+      <pre>      %459 = comb.xor %450, %true : i1</pre>
+      <pre>      %460 = comb.concat %c-1_i31, %459 : i31, i1</pre>
+      <pre>      %461 = comb.and %454, %446 : i32</pre>
+      <pre>      %462 = comb.and %456, %452 : i32</pre>
+      <pre>      %463 = comb.and %454, %458, %456, %460 : i32</pre>
+      <pre>      %464 = comb.or %461, %462 : i32</pre>
+      <pre>      %465 = comb.or %463, %461, %462 : i32</pre>
+      <pre>      %466 = comb.xor %465, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %464 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %466 after %1 : i32</pre>
+      <pre>      %467 = llhd.prb %6 : i32</pre>
+      <pre>      %468 = llhd.prb %7 : i32</pre>
+      <pre>      %469 = comb.extract %467 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %470 = comb.concat %469, %false : i31, i1</pre>
+      <pre>      %471 = comb.extract %468 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %472 = llhd.prb %4 : i3</pre>
+      <pre>      %473 = llhd.prb %5 : i3</pre>
+      <pre>      %474 = comb.extract %472 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %475 = comb.extract %473 from 1 : (i3) -&gt; i1</pre>
+      <pre>      %476 = comb.concat %c0_i31, %474 : i31, i1</pre>
+      <pre>      %477 = comb.xor %471, %c-1_i31 : i31</pre>
+      <pre>      %478 = comb.concat %477, %true : i31, i1</pre>
+      <pre>      %479 = comb.xor %475, %true : i1</pre>
+      <pre>      %480 = comb.concat %c-1_i31, %479 : i31, i1</pre>
+      <pre>      %481 = comb.xor %469, %c-1_i31 : i31</pre>
+      <pre>      %482 = comb.concat %481, %true : i31, i1</pre>
+      <pre>      %483 = comb.xor %474, %true : i1</pre>
+      <pre>      %484 = comb.concat %c-1_i31, %483 : i31, i1</pre>
+      <pre>      %485 = comb.and %478, %470 : i32</pre>
+      <pre>      %486 = comb.and %480, %476 : i32</pre>
+      <pre>      %487 = comb.and %478, %482, %480, %484 : i32</pre>
+      <pre>      %488 = comb.or %485, %486 : i32</pre>
+      <pre>      %489 = comb.or %487, %485, %486 : i32</pre>
+      <pre>      %490 = comb.xor %489, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %488 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %490 after %1 : i32</pre>
+      <pre>      %491 = llhd.prb %6 : i32</pre>
+      <pre>      %492 = llhd.prb %7 : i32</pre>
+      <pre>      %493 = comb.extract %491 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %494 = comb.concat %493, %false : i31, i1</pre>
+      <pre>      %495 = comb.extract %492 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %496 = llhd.prb %4 : i3</pre>
+      <pre>      %497 = llhd.prb %5 : i3</pre>
+      <pre>      %498 = comb.extract %496 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %499 = comb.extract %497 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %500 = comb.concat %c0_i31, %498 : i31, i1</pre>
+      <pre>      %501 = comb.xor %495, %c-1_i31 : i31</pre>
+      <pre>      %502 = comb.concat %501, %true : i31, i1</pre>
+      <pre>      %503 = comb.xor %499, %true : i1</pre>
+      <pre>      %504 = comb.concat %c-1_i31, %503 : i31, i1</pre>
+      <pre>      %505 = comb.xor %493, %c-1_i31 : i31</pre>
+      <pre>      %506 = comb.concat %505, %true : i31, i1</pre>
+      <pre>      %507 = comb.xor %498, %true : i1</pre>
+      <pre>      %508 = comb.concat %c-1_i31, %507 : i31, i1</pre>
+      <pre>      %509 = comb.and %502, %494 : i32</pre>
+      <pre>      %510 = comb.and %504, %500 : i32</pre>
+      <pre>      %511 = comb.and %502, %506, %504, %508 : i32</pre>
+      <pre>      %512 = comb.or %509, %510 : i32</pre>
+      <pre>      %513 = comb.or %511, %509, %510 : i32</pre>
+      <pre>      %514 = comb.xor %513, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %512 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %514 after %1 : i32</pre>
+      <pre>      %515 = llhd.prb %6 : i32</pre>
+      <pre>      %516 = llhd.prb %7 : i32</pre>
+      <pre>      %517 = comb.extract %515 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %518 = comb.concat %517, %false : i31, i1</pre>
+      <pre>      %519 = comb.extract %516 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %520 = llhd.prb %4 : i3</pre>
+      <pre>      %521 = llhd.prb %5 : i3</pre>
+      <pre>      %522 = comb.extract %520 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %523 = comb.extract %521 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %524 = comb.concat %c0_i31, %522 : i31, i1</pre>
+      <pre>      %525 = comb.xor %519, %c-1_i31 : i31</pre>
+      <pre>      %526 = comb.concat %525, %true : i31, i1</pre>
+      <pre>      %527 = comb.xor %523, %true : i1</pre>
+      <pre>      %528 = comb.concat %c-1_i31, %527 : i31, i1</pre>
+      <pre>      %529 = comb.xor %517, %c-1_i31 : i31</pre>
+      <pre>      %530 = comb.concat %529, %true : i31, i1</pre>
+      <pre>      %531 = comb.xor %522, %true : i1</pre>
+      <pre>      %532 = comb.concat %c-1_i31, %531 : i31, i1</pre>
+      <pre>      %533 = comb.and %526, %518 : i32</pre>
+      <pre>      %534 = comb.and %528, %524 : i32</pre>
+      <pre>      %535 = comb.and %526, %530, %528, %532 : i32</pre>
+      <pre>      %536 = comb.or %533, %534 : i32</pre>
+      <pre>      %537 = comb.or %535, %533, %534 : i32</pre>
+      <pre>      %538 = comb.xor %537, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %536 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %538 after %1 : i32</pre>
+      <pre>      %539 = llhd.prb %6 : i32</pre>
+      <pre>      %540 = llhd.prb %7 : i32</pre>
+      <pre>      %541 = comb.extract %539 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %542 = comb.concat %541, %false : i31, i1</pre>
+      <pre>      %543 = comb.extract %540 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %544 = llhd.prb %4 : i3</pre>
+      <pre>      %545 = llhd.prb %5 : i3</pre>
+      <pre>      %546 = comb.extract %544 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %547 = comb.extract %545 from 0 : (i3) -&gt; i1</pre>
+      <pre>      %548 = comb.concat %c0_i31, %546 : i31, i1</pre>
+      <pre>      %549 = comb.xor %543, %c-1_i31 : i31</pre>
+      <pre>      %550 = comb.concat %549, %true : i31, i1</pre>
+      <pre>      %551 = comb.xor %547, %true : i1</pre>
+      <pre>      %552 = comb.concat %c-1_i31, %551 : i31, i1</pre>
+      <pre>      %553 = comb.xor %541, %c-1_i31 : i31</pre>
+      <pre>      %554 = comb.concat %553, %true : i31, i1</pre>
+      <pre>      %555 = comb.xor %546, %true : i1</pre>
+      <pre>      %556 = comb.concat %c-1_i31, %555 : i31, i1</pre>
+      <pre>      %557 = comb.and %550, %542 : i32</pre>
+      <pre>      %558 = comb.and %552, %548 : i32</pre>
+      <pre>      %559 = comb.and %550, %554, %552, %556 : i32</pre>
+      <pre>      %560 = comb.or %557, %558 : i32</pre>
+      <pre>      %561 = comb.or %559, %557, %558 : i32</pre>
+      <pre>      %562 = comb.xor %561, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %560 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %562 after %1 : i32</pre>
+      <pre>      %563 = llhd.prb %6 : i32</pre>
+      <pre>      %564 = llhd.prb %7 : i32</pre>
+      <pre>      %565 = comb.extract %563 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %566 = comb.concat %565, %false : i31, i1</pre>
+      <pre>      %567 = comb.extract %564 from 0 : (i32) -&gt; i31</pre>
+      <pre>      %568 = llhd.prb %4 : i3</pre>
+      <pre>      %569 = llhd.prb %5 : i3</pre>
+      <pre>      %570 = comb.extract %568 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %571 = comb.extract %569 from 2 : (i3) -&gt; i1</pre>
+      <pre>      %572 = comb.concat %c0_i31, %570 : i31, i1</pre>
+      <pre>      %573 = comb.xor %567, %c-1_i31 : i31</pre>
+      <pre>      %574 = comb.concat %573, %true : i31, i1</pre>
+      <pre>      %575 = comb.xor %571, %true : i1</pre>
+      <pre>      %576 = comb.concat %c-1_i31, %575 : i31, i1</pre>
+      <pre>      %577 = comb.xor %565, %c-1_i31 : i31</pre>
+      <pre>      %578 = comb.concat %577, %true : i31, i1</pre>
+      <pre>      %579 = comb.xor %570, %true : i1</pre>
+      <pre>      %580 = comb.concat %c-1_i31, %579 : i31, i1</pre>
+      <pre>      %581 = comb.and %574, %566 : i32</pre>
+      <pre>      %582 = comb.and %576, %572 : i32</pre>
+      <pre>      %583 = comb.and %574, %578, %576, %580 : i32</pre>
+      <pre>      %584 = comb.or %581, %582 : i32</pre>
+      <pre>      %585 = comb.or %583, %581, %582 : i32</pre>
+      <pre>      %586 = comb.xor %585, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %6, %584 after %1 : i32</pre>
+      <pre>      llhd.drv %7, %586 after %1 : i32</pre>
+      <pre>      llhd.wait ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    %value = hw.struct_extract %a[&#34;value&#34;] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %a[&#34;unknown&#34;] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %8 = llhd.prb %6 : i32</pre>
+      <pre>    %9 = llhd.prb %7 : i32</pre>
+      <pre>    %10 = hw.struct_create (%8, %9) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    hw.output %10 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>  }</pre>
+      <pre>  hw.module @test_comment_in_macro(in %din_a : !hw.struct&lt;value: i4, unknown: i4&gt;, out dout_a : !hw.struct&lt;value: i4, unknown: i4&gt;) {</pre>
+      <pre>    %c2_i3 = hw.constant 2 : i3</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c-3_i3 = hw.constant -3 : i3</pre>
+      <pre>    %c-1_i3 = hw.constant -1 : i3</pre>
+      <pre>    %c-6_i4 = hw.constant -6 : i4</pre>
+      <pre>    %c-1_i4 = hw.constant -1 : i4</pre>
+      <pre>    %value = hw.struct_extract %din_a[&#34;value&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %din_a[&#34;unknown&#34;] : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    %0 = comb.xor %unknown, %c-1_i4 : i4</pre>
+      <pre>    %1 = comb.extract %value from 0 : (i4) -&gt; i3</pre>
+      <pre>    %2 = comb.xor %1, %c-1_i3 : i3</pre>
+      <pre>    %3 = comb.and %0, %value : i4</pre>
+      <pre>    %4 = comb.extract %0 from 0 : (i4) -&gt; i3</pre>
+      <pre>    %5 = comb.and %4, %2, %c-3_i3 : i3</pre>
+      <pre>    %6 = comb.or %3, %c-6_i4 : i4</pre>
+      <pre>    %7 = comb.or %5, %c2_i3 : i3</pre>
+      <pre>    %8 = comb.concat %true, %7 : i1, i3</pre>
+      <pre>    %9 = comb.or %3, %8 : i4</pre>
+      <pre>    %10 = comb.xor %9, %c-1_i4 : i4</pre>
+      <pre>    %11 = hw.struct_create (%6, %10) : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>    hw.output %11 : !hw.struct&lt;value: i4, unknown: i4&gt;</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

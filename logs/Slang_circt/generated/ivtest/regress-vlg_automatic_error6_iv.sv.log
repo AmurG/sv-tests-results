@@ -1,0 +1,44 @@
+name: regress-vlg_automatic_error6_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08944964408874512
+user_time: 0.03006
+system_time: 0.095007
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:41
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/automatic_error6.v:3:6: error: expected a declaration name
+reg  global;
+     ^
+../../../third_party/tools/icarus/ivtest/ivltests/automatic_error6.v:7:5: error: expected a declaration name
+reg local;
+    ^
+../../../third_party/tools/icarus/ivtest/ivltests/automatic_error6.v:10:12: error: 'local' qualifier not allowed here
+  deassign local;
+           ^~~~~
+../../../third_party/tools/icarus/ivtest/ivltests/automatic_error6.v:10:17: error: expected '::'
+  deassign local;
+                ^
+Top level design units:
+    automatic_error
+
+
+Build failed: 4 errors, 0 warnings

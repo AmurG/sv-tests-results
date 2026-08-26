@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_sv_assign_pattern_op_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_op.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_op.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.086s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_op.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/sv_assign_pattern_op.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_dynarray_get_i32(i32, i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_dynarray_set_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_dynarray_alloc_i32(i32) -&gt; i32</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED: `x ? x : y`, got &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED: `x || y`, got &#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;FAILED: `x &amp;&amp; y`, got &#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;FAILED: `x &gt;= y`, got &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;FAILED: `x &gt; y`, got &#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;FAILED: `x &lt;= y`, got &#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;FAILED: `x &lt; y`, got &#34;</pre>
+      <pre>    %8 = sim.fmt.literal &#34;FAILED: `x !== y`, got &#34;</pre>
+      <pre>    %9 = sim.fmt.literal &#34;FAILED: `x === y`, got &#34;</pre>
+      <pre>    %10 = sim.fmt.literal &#34;FAILED: `x != y`, got &#34;</pre>
+      <pre>    %11 = sim.fmt.literal &#34;FAILED: `x == y`, got &#34;</pre>
+      <pre>    %12 = sim.fmt.literal &#34;FAILED: `x &lt;&lt;&lt; y`, got &#34;</pre>
+      <pre>    %13 = sim.fmt.literal &#34;FAILED: `x &gt;&gt;&gt; y`, got &#34;</pre>
+      <pre>    %14 = sim.fmt.literal &#34;FAILED: `x &lt;&lt; y`, got &#34;</pre>
+      <pre>    %15 = sim.fmt.literal &#34;FAILED: `x &gt;&gt; y`, got &#34;</pre>
+      <pre>    %16 = sim.fmt.literal &#34;FAILED: `x ^~ y`, got &#34;</pre>
+      <pre>    %17 = sim.fmt.literal &#34;FAILED: `x ^ y`, got &#34;</pre>
+      <pre>    %18 = sim.fmt.literal &#34;FAILED: `x | y`, got &#34;</pre>
+      <pre>    %19 = sim.fmt.literal &#34;FAILED: `x &amp; y`, got &#34;</pre>
+      <pre>    %20 = sim.fmt.literal &#34;FAILED: `x ** y`, got &#34;</pre>
+      <pre>    %21 = sim.fmt.literal &#34;FAILED: `x % y`, got &#34;</pre>
+      <pre>    %22 = sim.fmt.literal &#34;FAILED: `x / y`, got &#34;</pre>
+      <pre>    %23 = sim.fmt.literal &#34;FAILED: `x * y`, got &#34;</pre>
+      <pre>    %24 = sim.fmt.literal &#34;FAILED: `x - y`, got &#34;</pre>
+      <pre>    %25 = sim.fmt.literal &#34;FAILED: `x + y`, got &#34;</pre>
+      <pre>    %26 = sim.fmt.literal &#34;FAILED: `~^x`, got &#34;</pre>
+      <pre>    %27 = sim.fmt.literal &#34;FAILED: `^x`, got &#34;</pre>
+      <pre>    %28 = sim.fmt.literal &#34;FAILED: `~|x`, got &#34;</pre>
+      <pre>    %29 = sim.fmt.literal &#34;FAILED: `|x`, got &#34;</pre>
+      <pre>    %30 = sim.fmt.literal &#34;FAILED: `~&amp;x`, got &#34;</pre>
+      <pre>    %31 = sim.fmt.literal &#34;FAILED: `&amp;x`, got &#34;</pre>
+      <pre>    %32 = sim.fmt.literal &#34;FAILED: `~x`, got &#34;</pre>
+      <pre>    %33 = sim.fmt.literal &#34;FAILED: `!x`, got &#34;</pre>
+      <pre>    %34 = sim.fmt.literal &#34;FAILED: `-x`, got &#34;</pre>
+      <pre>    %35 = sim.fmt.literal &#34;FAILED: `+x`, got &#34;</pre>
+      <pre>    %c-2_i32 = hw.constant -2 : i32</pre>
+      <pre>    %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>    %c0_i31 = hw.constant 0 : i31</pre>
+      <pre>    %36 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %37 = sim.fmt.literal &#34;, expected &#34;</pre>
+      <pre>    %38 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c5_i32 = hw.constant 5 : i32</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %d = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %39 = llhd.prb %d : i32</pre>
+      <pre>    %tmp = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %failed = llhd.sig %false : i1</pre>
+      <pre>    %x = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %y = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %x, %c-2_i32 after %38 : i32</pre>
+      <pre>      llhd.drv %y, %c5_i32 after %38 : i32</pre>
+      <pre>      %40 = llhd.prb %x : i32</pre>
+      <pre>      %41 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%41, %c0_i32, %40) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %41 after %38 : i32</pre>
+      <pre>      %42 = llhd.prb %x : i32</pre>
+      <pre>      llhd.drv %tmp, %42 after %38 : i32</pre>
+      <pre>      %43 = llhd.prb %d : i32</pre>
+      <pre>      %44 = func.call @circt_sv_dynarray_get_i32(%43, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %45 = llhd.prb %tmp : i32</pre>
+      <pre>      %46 = comb.icmp cne %44, %45 : i32</pre>
+      <pre>      cf.cond_br %46, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %47 = func.call @circt_sv_dynarray_get_i32(%39, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %48 = sim.fmt.int 10 0 0 %47 : i32</pre>
+      <pre>      %49 = llhd.prb %tmp : i32</pre>
+      <pre>      %50 = sim.fmt.int 10 0 0 %49 : i32</pre>
+      <pre>      %51 = sim.fmt.concat (%35, %48, %37, %50, %36)</pre>
+      <pre>      sim.proc.print %51</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %52 = llhd.prb %x : i32</pre>
+      <pre>      %53 = comb.sub %c0_i32, %52 : i32</pre>
+      <pre>      %54 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%54, %c0_i32, %53) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %54 after %38 : i32</pre>
+      <pre>      %55 = llhd.prb %x : i32</pre>
+      <pre>      %56 = comb.sub %c0_i32, %55 : i32</pre>
+      <pre>      llhd.drv %tmp, %56 after %38 : i32</pre>
+      <pre>      %57 = llhd.prb %d : i32</pre>
+      <pre>      %58 = func.call @circt_sv_dynarray_get_i32(%57, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %59 = llhd.prb %tmp : i32</pre>
+      <pre>      %60 = comb.icmp cne %58, %59 : i32</pre>
+      <pre>      cf.cond_br %60, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %61 = llhd.prb %d : i32</pre>
+      <pre>      %62 = func.call @circt_sv_dynarray_get_i32(%61, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %63 = sim.fmt.int 10 0 0 %62 : i32</pre>
+      <pre>      %64 = llhd.prb %tmp : i32</pre>
+      <pre>      %65 = sim.fmt.int 10 0 0 %64 : i32</pre>
+      <pre>      %66 = sim.fmt.concat (%34, %63, %37, %65, %36)</pre>
+      <pre>      sim.proc.print %66</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %67 = llhd.prb %x : i32</pre>
+      <pre>      %68 = comb.icmp eq %67, %c0_i32 : i32</pre>
+      <pre>      %69 = comb.concat %c0_i31, %68 : i31, i1</pre>
+      <pre>      %70 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%70, %c0_i32, %69) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %70 after %38 : i32</pre>
+      <pre>      %71 = llhd.prb %x : i32</pre>
+      <pre>      %72 = comb.icmp eq %71, %c0_i32 : i32</pre>
+      <pre>      %73 = comb.concat %c0_i31, %72 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %73 after %38 : i32</pre>
+      <pre>      %74 = llhd.prb %d : i32</pre>
+      <pre>      %75 = func.call @circt_sv_dynarray_get_i32(%74, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %76 = llhd.prb %tmp : i32</pre>
+      <pre>      %77 = comb.icmp cne %75, %76 : i32</pre>
+      <pre>      cf.cond_br %77, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %78 = llhd.prb %d : i32</pre>
+      <pre>      %79 = func.call @circt_sv_dynarray_get_i32(%78, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %80 = sim.fmt.int 10 0 0 %79 : i32</pre>
+      <pre>      %81 = llhd.prb %tmp : i32</pre>
+      <pre>      %82 = sim.fmt.int 10 0 0 %81 : i32</pre>
+      <pre>      %83 = sim.fmt.concat (%33, %80, %37, %82, %36)</pre>
+      <pre>      sim.proc.print %83</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb6</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %84 = llhd.prb %x : i32</pre>
+      <pre>      %85 = comb.xor %84, %c-1_i32 : i32</pre>
+      <pre>      %86 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%86, %c0_i32, %85) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %86 after %38 : i32</pre>
+      <pre>      %87 = llhd.prb %x : i32</pre>
+      <pre>      %88 = comb.xor %87, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %tmp, %88 after %38 : i32</pre>
+      <pre>      %89 = llhd.prb %d : i32</pre>
+      <pre>      %90 = func.call @circt_sv_dynarray_get_i32(%89, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %91 = llhd.prb %tmp : i32</pre>
+      <pre>      %92 = comb.icmp cne %90, %91 : i32</pre>
+      <pre>      cf.cond_br %92, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %93 = llhd.prb %d : i32</pre>
+      <pre>      %94 = func.call @circt_sv_dynarray_get_i32(%93, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %95 = sim.fmt.int 10 0 0 %94 : i32</pre>
+      <pre>      %96 = llhd.prb %tmp : i32</pre>
+      <pre>      %97 = sim.fmt.int 10 0 0 %96 : i32</pre>
+      <pre>      %98 = sim.fmt.concat (%32, %95, %37, %97, %36)</pre>
+      <pre>      sim.proc.print %98</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %99 = llhd.prb %x : i32</pre>
+      <pre>      %100 = comb.icmp eq %99, %c-1_i32 : i32</pre>
+      <pre>      %101 = comb.concat %c0_i31, %100 : i31, i1</pre>
+      <pre>      %102 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%102, %c0_i32, %101) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %102 after %38 : i32</pre>
+      <pre>      %103 = llhd.prb %x : i32</pre>
+      <pre>      %104 = comb.icmp eq %103, %c-1_i32 : i32</pre>
+      <pre>      %105 = comb.concat %c0_i31, %104 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %105 after %38 : i32</pre>
+      <pre>      %106 = llhd.prb %d : i32</pre>
+      <pre>      %107 = func.call @circt_sv_dynarray_get_i32(%106, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %108 = llhd.prb %tmp : i32</pre>
+      <pre>      %109 = comb.icmp cne %107, %108 : i32</pre>
+      <pre>      cf.cond_br %109, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      %110 = llhd.prb %d : i32</pre>
+      <pre>      %111 = func.call @circt_sv_dynarray_get_i32(%110, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %112 = sim.fmt.int 10 0 0 %111 : i32</pre>
+      <pre>      %113 = llhd.prb %tmp : i32</pre>
+      <pre>      %114 = sim.fmt.int 10 0 0 %113 : i32</pre>
+      <pre>      %115 = sim.fmt.concat (%31, %112, %37, %114, %36)</pre>
+      <pre>      sim.proc.print %115</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %116 = llhd.prb %x : i32</pre>
+      <pre>      %117 = comb.icmp ne %116, %c-1_i32 : i32</pre>
+      <pre>      %118 = comb.concat %c0_i31, %117 : i31, i1</pre>
+      <pre>      %119 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%119, %c0_i32, %118) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %119 after %38 : i32</pre>
+      <pre>      %120 = llhd.prb %x : i32</pre>
+      <pre>      %121 = comb.icmp ne %120, %c-1_i32 : i32</pre>
+      <pre>      %122 = comb.concat %c0_i31, %121 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %122 after %38 : i32</pre>
+      <pre>      %123 = llhd.prb %d : i32</pre>
+      <pre>      %124 = func.call @circt_sv_dynarray_get_i32(%123, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %125 = llhd.prb %tmp : i32</pre>
+      <pre>      %126 = comb.icmp cne %124, %125 : i32</pre>
+      <pre>      cf.cond_br %126, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      %127 = llhd.prb %d : i32</pre>
+      <pre>      %128 = func.call @circt_sv_dynarray_get_i32(%127, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %129 = sim.fmt.int 10 0 0 %128 : i32</pre>
+      <pre>      %130 = llhd.prb %tmp : i32</pre>
+      <pre>      %131 = sim.fmt.int 10 0 0 %130 : i32</pre>
+      <pre>      %132 = sim.fmt.concat (%30, %129, %37, %131, %36)</pre>
+      <pre>      sim.proc.print %132</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb10, ^bb11</pre>
+      <pre>      %133 = llhd.prb %x : i32</pre>
+      <pre>      %134 = comb.icmp ne %133, %c0_i32 : i32</pre>
+      <pre>      %135 = comb.concat %c0_i31, %134 : i31, i1</pre>
+      <pre>      %136 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%136, %c0_i32, %135) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %136 after %38 : i32</pre>
+      <pre>      %137 = llhd.prb %x : i32</pre>
+      <pre>      %138 = comb.icmp ne %137, %c0_i32 : i32</pre>
+      <pre>      %139 = comb.concat %c0_i31, %138 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %139 after %38 : i32</pre>
+      <pre>      %140 = llhd.prb %d : i32</pre>
+      <pre>      %141 = func.call @circt_sv_dynarray_get_i32(%140, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %142 = llhd.prb %tmp : i32</pre>
+      <pre>      %143 = comb.icmp cne %141, %142 : i32</pre>
+      <pre>      cf.cond_br %143, ^bb13, ^bb14</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      %144 = llhd.prb %d : i32</pre>
+      <pre>      %145 = func.call @circt_sv_dynarray_get_i32(%144, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %146 = sim.fmt.int 10 0 0 %145 : i32</pre>
+      <pre>      %147 = llhd.prb %tmp : i32</pre>
+      <pre>      %148 = sim.fmt.int 10 0 0 %147 : i32</pre>
+      <pre>      %149 = sim.fmt.concat (%29, %146, %37, %148, %36)</pre>
+      <pre>      sim.proc.print %149</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb14</pre>
+      <pre>    ^bb14:  // 2 preds: ^bb12, ^bb13</pre>
+      <pre>      %150 = llhd.prb %x : i32</pre>
+      <pre>      %151 = comb.icmp eq %150, %c0_i32 : i32</pre>
+      <pre>      %152 = comb.concat %c0_i31, %151 : i31, i1</pre>
+      <pre>      %153 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%153, %c0_i32, %152) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %153 after %38 : i32</pre>
+      <pre>      %154 = llhd.prb %x : i32</pre>
+      <pre>      %155 = comb.icmp eq %154, %c0_i32 : i32</pre>
+      <pre>      %156 = comb.concat %c0_i31, %155 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %156 after %38 : i32</pre>
+      <pre>      %157 = llhd.prb %d : i32</pre>
+      <pre>      %158 = func.call @circt_sv_dynarray_get_i32(%157, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %159 = llhd.prb %tmp : i32</pre>
+      <pre>      %160 = comb.icmp cne %158, %159 : i32</pre>
+      <pre>      cf.cond_br %160, ^bb15, ^bb16</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %161 = llhd.prb %d : i32</pre>
+      <pre>      %162 = func.call @circt_sv_dynarray_get_i32(%161, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %163 = sim.fmt.int 10 0 0 %162 : i32</pre>
+      <pre>      %164 = llhd.prb %tmp : i32</pre>
+      <pre>      %165 = sim.fmt.int 10 0 0 %164 : i32</pre>
+      <pre>      %166 = sim.fmt.concat (%28, %163, %37, %165, %36)</pre>
+      <pre>      sim.proc.print %166</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb16</pre>
+      <pre>    ^bb16:  // 2 preds: ^bb14, ^bb15</pre>
+      <pre>      %167 = llhd.prb %x : i32</pre>
+      <pre>      %168 = comb.parity %167 : i32</pre>
+      <pre>      %169 = comb.concat %c0_i31, %168 : i31, i1</pre>
+      <pre>      %170 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%170, %c0_i32, %169) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %170 after %38 : i32</pre>
+      <pre>      %171 = llhd.prb %x : i32</pre>
+      <pre>      %172 = comb.parity %171 : i32</pre>
+      <pre>      %173 = comb.concat %c0_i31, %172 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %173 after %38 : i32</pre>
+      <pre>      %174 = llhd.prb %d : i32</pre>
+      <pre>      %175 = func.call @circt_sv_dynarray_get_i32(%174, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %176 = llhd.prb %tmp : i32</pre>
+      <pre>      %177 = comb.icmp cne %175, %176 : i32</pre>
+      <pre>      cf.cond_br %177, ^bb17, ^bb18</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      %178 = llhd.prb %d : i32</pre>
+      <pre>      %179 = func.call @circt_sv_dynarray_get_i32(%178, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %180 = sim.fmt.int 10 0 0 %179 : i32</pre>
+      <pre>      %181 = llhd.prb %tmp : i32</pre>
+      <pre>      %182 = sim.fmt.int 10 0 0 %181 : i32</pre>
+      <pre>      %183 = sim.fmt.concat (%27, %180, %37, %182, %36)</pre>
+      <pre>      sim.proc.print %183</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb18</pre>
+      <pre>    ^bb18:  // 2 preds: ^bb16, ^bb17</pre>
+      <pre>      %184 = llhd.prb %x : i32</pre>
+      <pre>      %185 = comb.parity %184 : i32</pre>
+      <pre>      %186 = comb.xor %185, %true : i1</pre>
+      <pre>      %187 = comb.concat %c0_i31, %186 : i31, i1</pre>
+      <pre>      %188 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%188, %c0_i32, %187) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %188 after %38 : i32</pre>
+      <pre>      %189 = llhd.prb %x : i32</pre>
+      <pre>      %190 = comb.parity %189 : i32</pre>
+      <pre>      %191 = comb.xor %190, %true : i1</pre>
+      <pre>      %192 = comb.concat %c0_i31, %191 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %192 after %38 : i32</pre>
+      <pre>      %193 = llhd.prb %d : i32</pre>
+      <pre>      %194 = func.call @circt_sv_dynarray_get_i32(%193, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %195 = llhd.prb %tmp : i32</pre>
+      <pre>      %196 = comb.icmp cne %194, %195 : i32</pre>
+      <pre>      cf.cond_br %196, ^bb19, ^bb20</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      %197 = llhd.prb %d : i32</pre>
+      <pre>      %198 = func.call @circt_sv_dynarray_get_i32(%197, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %199 = sim.fmt.int 10 0 0 %198 : i32</pre>
+      <pre>      %200 = llhd.prb %tmp : i32</pre>
+      <pre>      %201 = sim.fmt.int 10 0 0 %200 : i32</pre>
+      <pre>      %202 = sim.fmt.concat (%26, %199, %37, %201, %36)</pre>
+      <pre>      sim.proc.print %202</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb20</pre>
+      <pre>    ^bb20:  // 2 preds: ^bb18, ^bb19</pre>
+      <pre>      %203 = llhd.prb %x : i32</pre>
+      <pre>      %204 = llhd.prb %y : i32</pre>
+      <pre>      %205 = comb.add %203, %204 : i32</pre>
+      <pre>      %206 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%206, %c0_i32, %205) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %206 after %38 : i32</pre>
+      <pre>      %207 = llhd.prb %x : i32</pre>
+      <pre>      %208 = llhd.prb %y : i32</pre>
+      <pre>      %209 = comb.add %207, %208 : i32</pre>
+      <pre>      llhd.drv %tmp, %209 after %38 : i32</pre>
+      <pre>      %210 = llhd.prb %d : i32</pre>
+      <pre>      %211 = func.call @circt_sv_dynarray_get_i32(%210, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %212 = llhd.prb %tmp : i32</pre>
+      <pre>      %213 = comb.icmp cne %211, %212 : i32</pre>
+      <pre>      cf.cond_br %213, ^bb21, ^bb22</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      %214 = llhd.prb %d : i32</pre>
+      <pre>      %215 = func.call @circt_sv_dynarray_get_i32(%214, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %216 = sim.fmt.int 10 0 0 %215 : i32</pre>
+      <pre>      %217 = llhd.prb %tmp : i32</pre>
+      <pre>      %218 = sim.fmt.int 10 0 0 %217 : i32</pre>
+      <pre>      %219 = sim.fmt.concat (%25, %216, %37, %218, %36)</pre>
+      <pre>      sim.proc.print %219</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb22</pre>
+      <pre>    ^bb22:  // 2 preds: ^bb20, ^bb21</pre>
+      <pre>      %220 = llhd.prb %x : i32</pre>
+      <pre>      %221 = llhd.prb %y : i32</pre>
+      <pre>      %222 = comb.sub %220, %221 : i32</pre>
+      <pre>      %223 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%223, %c0_i32, %222) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %223 after %38 : i32</pre>
+      <pre>      %224 = llhd.prb %x : i32</pre>
+      <pre>      %225 = llhd.prb %y : i32</pre>
+      <pre>      %226 = comb.sub %224, %225 : i32</pre>
+      <pre>      llhd.drv %tmp, %226 after %38 : i32</pre>
+      <pre>      %227 = llhd.prb %d : i32</pre>
+      <pre>      %228 = func.call @circt_sv_dynarray_get_i32(%227, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %229 = llhd.prb %tmp : i32</pre>
+      <pre>      %230 = comb.icmp cne %228, %229 : i32</pre>
+      <pre>      cf.cond_br %230, ^bb23, ^bb24</pre>
+      <pre>    ^bb23:  // pred: ^bb22</pre>
+      <pre>      %231 = llhd.prb %d : i32</pre>
+      <pre>      %232 = func.call @circt_sv_dynarray_get_i32(%231, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %233 = sim.fmt.int 10 0 0 %232 : i32</pre>
+      <pre>      %234 = llhd.prb %tmp : i32</pre>
+      <pre>      %235 = sim.fmt.int 10 0 0 %234 : i32</pre>
+      <pre>      %236 = sim.fmt.concat (%24, %233, %37, %235, %36)</pre>
+      <pre>      sim.proc.print %236</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb24</pre>
+      <pre>    ^bb24:  // 2 preds: ^bb22, ^bb23</pre>
+      <pre>      %237 = llhd.prb %x : i32</pre>
+      <pre>      %238 = llhd.prb %y : i32</pre>
+      <pre>      %239 = comb.mul %237, %238 : i32</pre>
+      <pre>      %240 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%240, %c0_i32, %239) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %240 after %38 : i32</pre>
+      <pre>      %241 = llhd.prb %x : i32</pre>
+      <pre>      %242 = llhd.prb %y : i32</pre>
+      <pre>      %243 = comb.mul %241, %242 : i32</pre>
+      <pre>      llhd.drv %tmp, %243 after %38 : i32</pre>
+      <pre>      %244 = llhd.prb %d : i32</pre>
+      <pre>      %245 = func.call @circt_sv_dynarray_get_i32(%244, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %246 = llhd.prb %tmp : i32</pre>
+      <pre>      %247 = comb.icmp cne %245, %246 : i32</pre>
+      <pre>      cf.cond_br %247, ^bb25, ^bb26</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      %248 = llhd.prb %d : i32</pre>
+      <pre>      %249 = func.call @circt_sv_dynarray_get_i32(%248, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %250 = sim.fmt.int 10 0 0 %249 : i32</pre>
+      <pre>      %251 = llhd.prb %tmp : i32</pre>
+      <pre>      %252 = sim.fmt.int 10 0 0 %251 : i32</pre>
+      <pre>      %253 = sim.fmt.concat (%23, %250, %37, %252, %36)</pre>
+      <pre>      sim.proc.print %253</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb26</pre>
+      <pre>    ^bb26:  // 2 preds: ^bb24, ^bb25</pre>
+      <pre>      %254 = llhd.prb %x : i32</pre>
+      <pre>      %255 = llhd.prb %y : i32</pre>
+      <pre>      %256 = comb.divs %254, %255 : i32</pre>
+      <pre>      %257 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%257, %c0_i32, %256) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %257 after %38 : i32</pre>
+      <pre>      %258 = llhd.prb %x : i32</pre>
+      <pre>      %259 = llhd.prb %y : i32</pre>
+      <pre>      %260 = comb.divs %258, %259 : i32</pre>
+      <pre>      llhd.drv %tmp, %260 after %38 : i32</pre>
+      <pre>      %261 = llhd.prb %d : i32</pre>
+      <pre>      %262 = func.call @circt_sv_dynarray_get_i32(%261, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %263 = llhd.prb %tmp : i32</pre>
+      <pre>      %264 = comb.icmp cne %262, %263 : i32</pre>
+      <pre>      cf.cond_br %264, ^bb27, ^bb28</pre>
+      <pre>    ^bb27:  // pred: ^bb26</pre>
+      <pre>      %265 = llhd.prb %d : i32</pre>
+      <pre>      %266 = func.call @circt_sv_dynarray_get_i32(%265, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %267 = sim.fmt.int 10 0 0 %266 : i32</pre>
+      <pre>      %268 = llhd.prb %tmp : i32</pre>
+      <pre>      %269 = sim.fmt.int 10 0 0 %268 : i32</pre>
+      <pre>      %270 = sim.fmt.concat (%22, %267, %37, %269, %36)</pre>
+      <pre>      sim.proc.print %270</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb28</pre>
+      <pre>    ^bb28:  // 2 preds: ^bb26, ^bb27</pre>
+      <pre>      %271 = llhd.prb %x : i32</pre>
+      <pre>      %272 = llhd.prb %y : i32</pre>
+      <pre>      %273 = comb.mods %271, %272 : i32</pre>
+      <pre>      %274 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%274, %c0_i32, %273) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %274 after %38 : i32</pre>
+      <pre>      %275 = llhd.prb %x : i32</pre>
+      <pre>      %276 = llhd.prb %y : i32</pre>
+      <pre>      %277 = comb.mods %275, %276 : i32</pre>
+      <pre>      llhd.drv %tmp, %277 after %38 : i32</pre>
+      <pre>      %278 = llhd.prb %d : i32</pre>
+      <pre>      %279 = func.call @circt_sv_dynarray_get_i32(%278, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %280 = llhd.prb %tmp : i32</pre>
+      <pre>      %281 = comb.icmp cne %279, %280 : i32</pre>
+      <pre>      cf.cond_br %281, ^bb29, ^bb30</pre>
+      <pre>    ^bb29:  // pred: ^bb28</pre>
+      <pre>      %282 = llhd.prb %d : i32</pre>
+      <pre>      %283 = func.call @circt_sv_dynarray_get_i32(%282, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %284 = sim.fmt.int 10 0 0 %283 : i32</pre>
+      <pre>      %285 = llhd.prb %tmp : i32</pre>
+      <pre>      %286 = sim.fmt.int 10 0 0 %285 : i32</pre>
+      <pre>      %287 = sim.fmt.concat (%21, %284, %37, %286, %36)</pre>
+      <pre>      sim.proc.print %287</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb30</pre>
+      <pre>    ^bb30:  // 2 preds: ^bb28, ^bb29</pre>
+      <pre>      %288 = llhd.prb %x : i32</pre>
+      <pre>      %289 = llhd.prb %y : i32</pre>
+      <pre>      %290 = math.ipowi %288, %289 : i32</pre>
+      <pre>      %291 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%291, %c0_i32, %290) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %291 after %38 : i32</pre>
+      <pre>      %292 = llhd.prb %x : i32</pre>
+      <pre>      %293 = llhd.prb %y : i32</pre>
+      <pre>      %294 = math.ipowi %292, %293 : i32</pre>
+      <pre>      llhd.drv %tmp, %294 after %38 : i32</pre>
+      <pre>      %295 = llhd.prb %d : i32</pre>
+      <pre>      %296 = func.call @circt_sv_dynarray_get_i32(%295, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %297 = llhd.prb %tmp : i32</pre>
+      <pre>      %298 = comb.icmp cne %296, %297 : i32</pre>
+      <pre>      cf.cond_br %298, ^bb31, ^bb32</pre>
+      <pre>    ^bb31:  // pred: ^bb30</pre>
+      <pre>      %299 = llhd.prb %d : i32</pre>
+      <pre>      %300 = func.call @circt_sv_dynarray_get_i32(%299, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %301 = sim.fmt.int 10 0 0 %300 : i32</pre>
+      <pre>      %302 = llhd.prb %tmp : i32</pre>
+      <pre>      %303 = sim.fmt.int 10 0 0 %302 : i32</pre>
+      <pre>      %304 = sim.fmt.concat (%20, %301, %37, %303, %36)</pre>
+      <pre>      sim.proc.print %304</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb32</pre>
+      <pre>    ^bb32:  // 2 preds: ^bb30, ^bb31</pre>
+      <pre>      %305 = llhd.prb %x : i32</pre>
+      <pre>      %306 = llhd.prb %y : i32</pre>
+      <pre>      %307 = comb.and %305, %306 : i32</pre>
+      <pre>      %308 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%308, %c0_i32, %307) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %308 after %38 : i32</pre>
+      <pre>      %309 = llhd.prb %x : i32</pre>
+      <pre>      %310 = llhd.prb %y : i32</pre>
+      <pre>      %311 = comb.and %309, %310 : i32</pre>
+      <pre>      llhd.drv %tmp, %311 after %38 : i32</pre>
+      <pre>      %312 = llhd.prb %d : i32</pre>
+      <pre>      %313 = func.call @circt_sv_dynarray_get_i32(%312, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %314 = llhd.prb %tmp : i32</pre>
+      <pre>      %315 = comb.icmp cne %313, %314 : i32</pre>
+      <pre>      cf.cond_br %315, ^bb33, ^bb34</pre>
+      <pre>    ^bb33:  // pred: ^bb32</pre>
+      <pre>      %316 = llhd.prb %d : i32</pre>
+      <pre>      %317 = func.call @circt_sv_dynarray_get_i32(%316, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %318 = sim.fmt.int 10 0 0 %317 : i32</pre>
+      <pre>      %319 = llhd.prb %tmp : i32</pre>
+      <pre>      %320 = sim.fmt.int 10 0 0 %319 : i32</pre>
+      <pre>      %321 = sim.fmt.concat (%19, %318, %37, %320, %36)</pre>
+      <pre>      sim.proc.print %321</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb34</pre>
+      <pre>    ^bb34:  // 2 preds: ^bb32, ^bb33</pre>
+      <pre>      %322 = llhd.prb %x : i32</pre>
+      <pre>      %323 = llhd.prb %y : i32</pre>
+      <pre>      %324 = comb.or %322, %323 : i32</pre>
+      <pre>      %325 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%325, %c0_i32, %324) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %325 after %38 : i32</pre>
+      <pre>      %326 = llhd.prb %x : i32</pre>
+      <pre>      %327 = llhd.prb %y : i32</pre>
+      <pre>      %328 = comb.or %326, %327 : i32</pre>
+      <pre>      llhd.drv %tmp, %328 after %38 : i32</pre>
+      <pre>      %329 = llhd.prb %d : i32</pre>
+      <pre>      %330 = func.call @circt_sv_dynarray_get_i32(%329, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %331 = llhd.prb %tmp : i32</pre>
+      <pre>      %332 = comb.icmp cne %330, %331 : i32</pre>
+      <pre>      cf.cond_br %332, ^bb35, ^bb36</pre>
+      <pre>    ^bb35:  // pred: ^bb34</pre>
+      <pre>      %333 = llhd.prb %d : i32</pre>
+      <pre>      %334 = func.call @circt_sv_dynarray_get_i32(%333, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %335 = sim.fmt.int 10 0 0 %334 : i32</pre>
+      <pre>      %336 = llhd.prb %tmp : i32</pre>
+      <pre>      %337 = sim.fmt.int 10 0 0 %336 : i32</pre>
+      <pre>      %338 = sim.fmt.concat (%18, %335, %37, %337, %36)</pre>
+      <pre>      sim.proc.print %338</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb36</pre>
+      <pre>    ^bb36:  // 2 preds: ^bb34, ^bb35</pre>
+      <pre>      %339 = llhd.prb %x : i32</pre>
+      <pre>      %340 = llhd.prb %y : i32</pre>
+      <pre>      %341 = comb.xor %339, %340 : i32</pre>
+      <pre>      %342 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%342, %c0_i32, %341) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %342 after %38 : i32</pre>
+      <pre>      %343 = llhd.prb %x : i32</pre>
+      <pre>      %344 = llhd.prb %y : i32</pre>
+      <pre>      %345 = comb.xor %343, %344 : i32</pre>
+      <pre>      llhd.drv %tmp, %345 after %38 : i32</pre>
+      <pre>      %346 = llhd.prb %d : i32</pre>
+      <pre>      %347 = func.call @circt_sv_dynarray_get_i32(%346, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %348 = llhd.prb %tmp : i32</pre>
+      <pre>      %349 = comb.icmp cne %347, %348 : i32</pre>
+      <pre>      cf.cond_br %349, ^bb37, ^bb38</pre>
+      <pre>    ^bb37:  // pred: ^bb36</pre>
+      <pre>      %350 = llhd.prb %d : i32</pre>
+      <pre>      %351 = func.call @circt_sv_dynarray_get_i32(%350, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %352 = sim.fmt.int 10 0 0 %351 : i32</pre>
+      <pre>      %353 = llhd.prb %tmp : i32</pre>
+      <pre>      %354 = sim.fmt.int 10 0 0 %353 : i32</pre>
+      <pre>      %355 = sim.fmt.concat (%17, %352, %37, %354, %36)</pre>
+      <pre>      sim.proc.print %355</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb38</pre>
+      <pre>    ^bb38:  // 2 preds: ^bb36, ^bb37</pre>
+      <pre>      %356 = llhd.prb %x : i32</pre>
+      <pre>      %357 = llhd.prb %y : i32</pre>
+      <pre>      %358 = comb.xor %356, %357, %c-1_i32 : i32</pre>
+      <pre>      %359 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%359, %c0_i32, %358) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %359 after %38 : i32</pre>
+      <pre>      %360 = llhd.prb %x : i32</pre>
+      <pre>      %361 = llhd.prb %y : i32</pre>
+      <pre>      %362 = comb.xor %360, %361, %c-1_i32 : i32</pre>
+      <pre>      llhd.drv %tmp, %362 after %38 : i32</pre>
+      <pre>      %363 = llhd.prb %d : i32</pre>
+      <pre>      %364 = func.call @circt_sv_dynarray_get_i32(%363, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %365 = llhd.prb %tmp : i32</pre>
+      <pre>      %366 = comb.icmp cne %364, %365 : i32</pre>
+      <pre>      cf.cond_br %366, ^bb39, ^bb40</pre>
+      <pre>    ^bb39:  // pred: ^bb38</pre>
+      <pre>      %367 = llhd.prb %d : i32</pre>
+      <pre>      %368 = func.call @circt_sv_dynarray_get_i32(%367, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %369 = sim.fmt.int 10 0 0 %368 : i32</pre>
+      <pre>      %370 = llhd.prb %tmp : i32</pre>
+      <pre>      %371 = sim.fmt.int 10 0 0 %370 : i32</pre>
+      <pre>      %372 = sim.fmt.concat (%16, %369, %37, %371, %36)</pre>
+      <pre>      sim.proc.print %372</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb40</pre>
+      <pre>    ^bb40:  // 2 preds: ^bb38, ^bb39</pre>
+      <pre>      %373 = llhd.prb %x : i32</pre>
+      <pre>      %374 = llhd.prb %y : i32</pre>
+      <pre>      %375 = comb.shru %373, %374 : i32</pre>
+      <pre>      %376 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%376, %c0_i32, %375) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %376 after %38 : i32</pre>
+      <pre>      %377 = llhd.prb %x : i32</pre>
+      <pre>      %378 = llhd.prb %y : i32</pre>
+      <pre>      %379 = comb.shru %377, %378 : i32</pre>
+      <pre>      llhd.drv %tmp, %379 after %38 : i32</pre>
+      <pre>      %380 = llhd.prb %d : i32</pre>
+      <pre>      %381 = func.call @circt_sv_dynarray_get_i32(%380, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %382 = llhd.prb %tmp : i32</pre>
+      <pre>      %383 = comb.icmp cne %381, %382 : i32</pre>
+      <pre>      cf.cond_br %383, ^bb41, ^bb42</pre>
+      <pre>    ^bb41:  // pred: ^bb40</pre>
+      <pre>      %384 = llhd.prb %d : i32</pre>
+      <pre>      %385 = func.call @circt_sv_dynarray_get_i32(%384, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %386 = sim.fmt.int 10 0 0 %385 : i32</pre>
+      <pre>      %387 = llhd.prb %tmp : i32</pre>
+      <pre>      %388 = sim.fmt.int 10 0 0 %387 : i32</pre>
+      <pre>      %389 = sim.fmt.concat (%15, %386, %37, %388, %36)</pre>
+      <pre>      sim.proc.print %389</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb42</pre>
+      <pre>    ^bb42:  // 2 preds: ^bb40, ^bb41</pre>
+      <pre>      %390 = llhd.prb %x : i32</pre>
+      <pre>      %391 = llhd.prb %y : i32</pre>
+      <pre>      %392 = comb.shl %390, %391 : i32</pre>
+      <pre>      %393 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%393, %c0_i32, %392) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %393 after %38 : i32</pre>
+      <pre>      %394 = llhd.prb %x : i32</pre>
+      <pre>      %395 = llhd.prb %y : i32</pre>
+      <pre>      %396 = comb.shl %394, %395 : i32</pre>
+      <pre>      llhd.drv %tmp, %396 after %38 : i32</pre>
+      <pre>      %397 = llhd.prb %d : i32</pre>
+      <pre>      %398 = func.call @circt_sv_dynarray_get_i32(%397, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %399 = llhd.prb %tmp : i32</pre>
+      <pre>      %400 = comb.icmp cne %398, %399 : i32</pre>
+      <pre>      cf.cond_br %400, ^bb43, ^bb44</pre>
+      <pre>    ^bb43:  // pred: ^bb42</pre>
+      <pre>      %401 = llhd.prb %d : i32</pre>
+      <pre>      %402 = func.call @circt_sv_dynarray_get_i32(%401, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %403 = sim.fmt.int 10 0 0 %402 : i32</pre>
+      <pre>      %404 = llhd.prb %tmp : i32</pre>
+      <pre>      %405 = sim.fmt.int 10 0 0 %404 : i32</pre>
+      <pre>      %406 = sim.fmt.concat (%14, %403, %37, %405, %36)</pre>
+      <pre>      sim.proc.print %406</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb44</pre>
+      <pre>    ^bb44:  // 2 preds: ^bb42, ^bb43</pre>
+      <pre>      %407 = llhd.prb %x : i32</pre>
+      <pre>      %408 = llhd.prb %y : i32</pre>
+      <pre>      %409 = comb.shrs %407, %408 : i32</pre>
+      <pre>      %410 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%410, %c0_i32, %409) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %410 after %38 : i32</pre>
+      <pre>      %411 = llhd.prb %x : i32</pre>
+      <pre>      %412 = llhd.prb %y : i32</pre>
+      <pre>      %413 = comb.shrs %411, %412 : i32</pre>
+      <pre>      llhd.drv %tmp, %413 after %38 : i32</pre>
+      <pre>      %414 = llhd.prb %d : i32</pre>
+      <pre>      %415 = func.call @circt_sv_dynarray_get_i32(%414, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %416 = llhd.prb %tmp : i32</pre>
+      <pre>      %417 = comb.icmp cne %415, %416 : i32</pre>
+      <pre>      cf.cond_br %417, ^bb45, ^bb46</pre>
+      <pre>    ^bb45:  // pred: ^bb44</pre>
+      <pre>      %418 = llhd.prb %d : i32</pre>
+      <pre>      %419 = func.call @circt_sv_dynarray_get_i32(%418, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %420 = sim.fmt.int 10 0 0 %419 : i32</pre>
+      <pre>      %421 = llhd.prb %tmp : i32</pre>
+      <pre>      %422 = sim.fmt.int 10 0 0 %421 : i32</pre>
+      <pre>      %423 = sim.fmt.concat (%13, %420, %37, %422, %36)</pre>
+      <pre>      sim.proc.print %423</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb46</pre>
+      <pre>    ^bb46:  // 2 preds: ^bb44, ^bb45</pre>
+      <pre>      %424 = llhd.prb %x : i32</pre>
+      <pre>      %425 = llhd.prb %y : i32</pre>
+      <pre>      %426 = comb.shl %424, %425 : i32</pre>
+      <pre>      %427 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%427, %c0_i32, %426) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %427 after %38 : i32</pre>
+      <pre>      %428 = llhd.prb %x : i32</pre>
+      <pre>      %429 = llhd.prb %y : i32</pre>
+      <pre>      %430 = comb.shl %428, %429 : i32</pre>
+      <pre>      llhd.drv %tmp, %430 after %38 : i32</pre>
+      <pre>      %431 = llhd.prb %d : i32</pre>
+      <pre>      %432 = func.call @circt_sv_dynarray_get_i32(%431, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %433 = llhd.prb %tmp : i32</pre>
+      <pre>      %434 = comb.icmp cne %432, %433 : i32</pre>
+      <pre>      cf.cond_br %434, ^bb47, ^bb48</pre>
+      <pre>    ^bb47:  // pred: ^bb46</pre>
+      <pre>      %435 = llhd.prb %d : i32</pre>
+      <pre>      %436 = func.call @circt_sv_dynarray_get_i32(%435, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %437 = sim.fmt.int 10 0 0 %436 : i32</pre>
+      <pre>      %438 = llhd.prb %tmp : i32</pre>
+      <pre>      %439 = sim.fmt.int 10 0 0 %438 : i32</pre>
+      <pre>      %440 = sim.fmt.concat (%12, %437, %37, %439, %36)</pre>
+      <pre>      sim.proc.print %440</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb48</pre>
+      <pre>    ^bb48:  // 2 preds: ^bb46, ^bb47</pre>
+      <pre>      %441 = llhd.prb %x : i32</pre>
+      <pre>      %442 = llhd.prb %y : i32</pre>
+      <pre>      %443 = comb.icmp eq %441, %442 : i32</pre>
+      <pre>      %444 = comb.concat %c0_i31, %443 : i31, i1</pre>
+      <pre>      %445 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%445, %c0_i32, %444) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %445 after %38 : i32</pre>
+      <pre>      %446 = llhd.prb %x : i32</pre>
+      <pre>      %447 = llhd.prb %y : i32</pre>
+      <pre>      %448 = comb.icmp eq %446, %447 : i32</pre>
+      <pre>      %449 = comb.concat %c0_i31, %448 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %449 after %38 : i32</pre>
+      <pre>      %450 = llhd.prb %d : i32</pre>
+      <pre>      %451 = func.call @circt_sv_dynarray_get_i32(%450, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %452 = llhd.prb %tmp : i32</pre>
+      <pre>      %453 = comb.icmp cne %451, %452 : i32</pre>
+      <pre>      cf.cond_br %453, ^bb49, ^bb50</pre>
+      <pre>    ^bb49:  // pred: ^bb48</pre>
+      <pre>      %454 = llhd.prb %d : i32</pre>
+      <pre>      %455 = func.call @circt_sv_dynarray_get_i32(%454, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %456 = sim.fmt.int 10 0 0 %455 : i32</pre>
+      <pre>      %457 = llhd.prb %tmp : i32</pre>
+      <pre>      %458 = sim.fmt.int 10 0 0 %457 : i32</pre>
+      <pre>      %459 = sim.fmt.concat (%11, %456, %37, %458, %36)</pre>
+      <pre>      sim.proc.print %459</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb50</pre>
+      <pre>    ^bb50:  // 2 preds: ^bb48, ^bb49</pre>
+      <pre>      %460 = llhd.prb %x : i32</pre>
+      <pre>      %461 = llhd.prb %y : i32</pre>
+      <pre>      %462 = comb.icmp ne %460, %461 : i32</pre>
+      <pre>      %463 = comb.concat %c0_i31, %462 : i31, i1</pre>
+      <pre>      %464 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%464, %c0_i32, %463) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %464 after %38 : i32</pre>
+      <pre>      %465 = llhd.prb %x : i32</pre>
+      <pre>      %466 = llhd.prb %y : i32</pre>
+      <pre>      %467 = comb.icmp ne %465, %466 : i32</pre>
+      <pre>      %468 = comb.concat %c0_i31, %467 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %468 after %38 : i32</pre>
+      <pre>      %469 = llhd.prb %d : i32</pre>
+      <pre>      %470 = func.call @circt_sv_dynarray_get_i32(%469, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %471 = llhd.prb %tmp : i32</pre>
+      <pre>      %472 = comb.icmp cne %470, %471 : i32</pre>
+      <pre>      cf.cond_br %472, ^bb51, ^bb52</pre>
+      <pre>    ^bb51:  // pred: ^bb50</pre>
+      <pre>      %473 = llhd.prb %d : i32</pre>
+      <pre>      %474 = func.call @circt_sv_dynarray_get_i32(%473, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %475 = sim.fmt.int 10 0 0 %474 : i32</pre>
+      <pre>      %476 = llhd.prb %tmp : i32</pre>
+      <pre>      %477 = sim.fmt.int 10 0 0 %476 : i32</pre>
+      <pre>      %478 = sim.fmt.concat (%10, %475, %37, %477, %36)</pre>
+      <pre>      sim.proc.print %478</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb52</pre>
+      <pre>    ^bb52:  // 2 preds: ^bb50, ^bb51</pre>
+      <pre>      %479 = llhd.prb %x : i32</pre>
+      <pre>      %480 = llhd.prb %y : i32</pre>
+      <pre>      %481 = comb.icmp ceq %479, %480 : i32</pre>
+      <pre>      %482 = comb.concat %c0_i31, %481 : i31, i1</pre>
+      <pre>      %483 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%483, %c0_i32, %482) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %483 after %38 : i32</pre>
+      <pre>      %484 = llhd.prb %x : i32</pre>
+      <pre>      %485 = llhd.prb %y : i32</pre>
+      <pre>      %486 = comb.icmp ceq %484, %485 : i32</pre>
+      <pre>      %487 = comb.concat %c0_i31, %486 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %487 after %38 : i32</pre>
+      <pre>      %488 = llhd.prb %d : i32</pre>
+      <pre>      %489 = func.call @circt_sv_dynarray_get_i32(%488, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %490 = llhd.prb %tmp : i32</pre>
+      <pre>      %491 = comb.icmp cne %489, %490 : i32</pre>
+      <pre>      cf.cond_br %491, ^bb53, ^bb54</pre>
+      <pre>    ^bb53:  // pred: ^bb52</pre>
+      <pre>      %492 = llhd.prb %d : i32</pre>
+      <pre>      %493 = func.call @circt_sv_dynarray_get_i32(%492, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %494 = sim.fmt.int 10 0 0 %493 : i32</pre>
+      <pre>      %495 = llhd.prb %tmp : i32</pre>
+      <pre>      %496 = sim.fmt.int 10 0 0 %495 : i32</pre>
+      <pre>      %497 = sim.fmt.concat (%9, %494, %37, %496, %36)</pre>
+      <pre>      sim.proc.print %497</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb54</pre>
+      <pre>    ^bb54:  // 2 preds: ^bb52, ^bb53</pre>
+      <pre>      %498 = llhd.prb %x : i32</pre>
+      <pre>      %499 = llhd.prb %y : i32</pre>
+      <pre>      %500 = comb.icmp cne %498, %499 : i32</pre>
+      <pre>      %501 = comb.concat %c0_i31, %500 : i31, i1</pre>
+      <pre>      %502 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%502, %c0_i32, %501) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %502 after %38 : i32</pre>
+      <pre>      %503 = llhd.prb %x : i32</pre>
+      <pre>      %504 = llhd.prb %y : i32</pre>
+      <pre>      %505 = comb.icmp cne %503, %504 : i32</pre>
+      <pre>      %506 = comb.concat %c0_i31, %505 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %506 after %38 : i32</pre>
+      <pre>      %507 = llhd.prb %d : i32</pre>
+      <pre>      %508 = func.call @circt_sv_dynarray_get_i32(%507, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %509 = llhd.prb %tmp : i32</pre>
+      <pre>      %510 = comb.icmp cne %508, %509 : i32</pre>
+      <pre>      cf.cond_br %510, ^bb55, ^bb56</pre>
+      <pre>    ^bb55:  // pred: ^bb54</pre>
+      <pre>      %511 = llhd.prb %d : i32</pre>
+      <pre>      %512 = func.call @circt_sv_dynarray_get_i32(%511, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %513 = sim.fmt.int 10 0 0 %512 : i32</pre>
+      <pre>      %514 = llhd.prb %tmp : i32</pre>
+      <pre>      %515 = sim.fmt.int 10 0 0 %514 : i32</pre>
+      <pre>      %516 = sim.fmt.concat (%8, %513, %37, %515, %36)</pre>
+      <pre>      sim.proc.print %516</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb56</pre>
+      <pre>    ^bb56:  // 2 preds: ^bb54, ^bb55</pre>
+      <pre>      %517 = llhd.prb %x : i32</pre>
+      <pre>      %518 = llhd.prb %y : i32</pre>
+      <pre>      %519 = comb.icmp slt %517, %518 : i32</pre>
+      <pre>      %520 = comb.concat %c0_i31, %519 : i31, i1</pre>
+      <pre>      %521 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%521, %c0_i32, %520) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %521 after %38 : i32</pre>
+      <pre>      %522 = llhd.prb %x : i32</pre>
+      <pre>      %523 = llhd.prb %y : i32</pre>
+      <pre>      %524 = comb.icmp slt %522, %523 : i32</pre>
+      <pre>      %525 = comb.concat %c0_i31, %524 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %525 after %38 : i32</pre>
+      <pre>      %526 = llhd.prb %d : i32</pre>
+      <pre>      %527 = func.call @circt_sv_dynarray_get_i32(%526, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %528 = llhd.prb %tmp : i32</pre>
+      <pre>      %529 = comb.icmp cne %527, %528 : i32</pre>
+      <pre>      cf.cond_br %529, ^bb57, ^bb58</pre>
+      <pre>    ^bb57:  // pred: ^bb56</pre>
+      <pre>      %530 = llhd.prb %d : i32</pre>
+      <pre>      %531 = func.call @circt_sv_dynarray_get_i32(%530, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %532 = sim.fmt.int 10 0 0 %531 : i32</pre>
+      <pre>      %533 = llhd.prb %tmp : i32</pre>
+      <pre>      %534 = sim.fmt.int 10 0 0 %533 : i32</pre>
+      <pre>      %535 = sim.fmt.concat (%7, %532, %37, %534, %36)</pre>
+      <pre>      sim.proc.print %535</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb58</pre>
+      <pre>    ^bb58:  // 2 preds: ^bb56, ^bb57</pre>
+      <pre>      %536 = llhd.prb %x : i32</pre>
+      <pre>      %537 = llhd.prb %y : i32</pre>
+      <pre>      %538 = comb.icmp sle %536, %537 : i32</pre>
+      <pre>      %539 = comb.concat %c0_i31, %538 : i31, i1</pre>
+      <pre>      %540 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%540, %c0_i32, %539) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %540 after %38 : i32</pre>
+      <pre>      %541 = llhd.prb %x : i32</pre>
+      <pre>      %542 = llhd.prb %y : i32</pre>
+      <pre>      %543 = comb.icmp sle %541, %542 : i32</pre>
+      <pre>      %544 = comb.concat %c0_i31, %543 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %544 after %38 : i32</pre>
+      <pre>      %545 = llhd.prb %d : i32</pre>
+      <pre>      %546 = func.call @circt_sv_dynarray_get_i32(%545, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %547 = llhd.prb %tmp : i32</pre>
+      <pre>      %548 = comb.icmp cne %546, %547 : i32</pre>
+      <pre>      cf.cond_br %548, ^bb59, ^bb60</pre>
+      <pre>    ^bb59:  // pred: ^bb58</pre>
+      <pre>      %549 = llhd.prb %d : i32</pre>
+      <pre>      %550 = func.call @circt_sv_dynarray_get_i32(%549, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %551 = sim.fmt.int 10 0 0 %550 : i32</pre>
+      <pre>      %552 = llhd.prb %tmp : i32</pre>
+      <pre>      %553 = sim.fmt.int 10 0 0 %552 : i32</pre>
+      <pre>      %554 = sim.fmt.concat (%6, %551, %37, %553, %36)</pre>
+      <pre>      sim.proc.print %554</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb60</pre>
+      <pre>    ^bb60:  // 2 preds: ^bb58, ^bb59</pre>
+      <pre>      %555 = llhd.prb %x : i32</pre>
+      <pre>      %556 = llhd.prb %y : i32</pre>
+      <pre>      %557 = comb.icmp sgt %555, %556 : i32</pre>
+      <pre>      %558 = comb.concat %c0_i31, %557 : i31, i1</pre>
+      <pre>      %559 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%559, %c0_i32, %558) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %559 after %38 : i32</pre>
+      <pre>      %560 = llhd.prb %x : i32</pre>
+      <pre>      %561 = llhd.prb %y : i32</pre>
+      <pre>      %562 = comb.icmp sgt %560, %561 : i32</pre>
+      <pre>      %563 = comb.concat %c0_i31, %562 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %563 after %38 : i32</pre>
+      <pre>      %564 = llhd.prb %d : i32</pre>
+      <pre>      %565 = func.call @circt_sv_dynarray_get_i32(%564, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %566 = llhd.prb %tmp : i32</pre>
+      <pre>      %567 = comb.icmp cne %565, %566 : i32</pre>
+      <pre>      cf.cond_br %567, ^bb61, ^bb62</pre>
+      <pre>    ^bb61:  // pred: ^bb60</pre>
+      <pre>      %568 = llhd.prb %d : i32</pre>
+      <pre>      %569 = func.call @circt_sv_dynarray_get_i32(%568, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %570 = sim.fmt.int 10 0 0 %569 : i32</pre>
+      <pre>      %571 = llhd.prb %tmp : i32</pre>
+      <pre>      %572 = sim.fmt.int 10 0 0 %571 : i32</pre>
+      <pre>      %573 = sim.fmt.concat (%5, %570, %37, %572, %36)</pre>
+      <pre>      sim.proc.print %573</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb62</pre>
+      <pre>    ^bb62:  // 2 preds: ^bb60, ^bb61</pre>
+      <pre>      %574 = llhd.prb %x : i32</pre>
+      <pre>      %575 = llhd.prb %y : i32</pre>
+      <pre>      %576 = comb.icmp sge %574, %575 : i32</pre>
+      <pre>      %577 = comb.concat %c0_i31, %576 : i31, i1</pre>
+      <pre>      %578 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%578, %c0_i32, %577) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %578 after %38 : i32</pre>
+      <pre>      %579 = llhd.prb %x : i32</pre>
+      <pre>      %580 = llhd.prb %y : i32</pre>
+      <pre>      %581 = comb.icmp sge %579, %580 : i32</pre>
+      <pre>      %582 = comb.concat %c0_i31, %581 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %582 after %38 : i32</pre>
+      <pre>      %583 = llhd.prb %d : i32</pre>
+      <pre>      %584 = func.call @circt_sv_dynarray_get_i32(%583, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %585 = llhd.prb %tmp : i32</pre>
+      <pre>      %586 = comb.icmp cne %584, %585 : i32</pre>
+      <pre>      cf.cond_br %586, ^bb63, ^bb64</pre>
+      <pre>    ^bb63:  // pred: ^bb62</pre>
+      <pre>      %587 = llhd.prb %d : i32</pre>
+      <pre>      %588 = func.call @circt_sv_dynarray_get_i32(%587, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %589 = sim.fmt.int 10 0 0 %588 : i32</pre>
+      <pre>      %590 = llhd.prb %tmp : i32</pre>
+      <pre>      %591 = sim.fmt.int 10 0 0 %590 : i32</pre>
+      <pre>      %592 = sim.fmt.concat (%4, %589, %37, %591, %36)</pre>
+      <pre>      sim.proc.print %592</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb64</pre>
+      <pre>    ^bb64:  // 2 preds: ^bb62, ^bb63</pre>
+      <pre>      %593 = llhd.prb %x : i32</pre>
+      <pre>      %594 = llhd.prb %y : i32</pre>
+      <pre>      %595 = comb.icmp ne %593, %c0_i32 : i32</pre>
+      <pre>      %596 = comb.icmp ne %594, %c0_i32 : i32</pre>
+      <pre>      %597 = comb.and %595, %596 : i1</pre>
+      <pre>      %598 = comb.concat %c0_i31, %597 : i31, i1</pre>
+      <pre>      %599 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%599, %c0_i32, %598) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %599 after %38 : i32</pre>
+      <pre>      %600 = llhd.prb %x : i32</pre>
+      <pre>      %601 = llhd.prb %y : i32</pre>
+      <pre>      %602 = comb.icmp ne %600, %c0_i32 : i32</pre>
+      <pre>      %603 = comb.icmp ne %601, %c0_i32 : i32</pre>
+      <pre>      %604 = comb.and %602, %603 : i1</pre>
+      <pre>      %605 = comb.concat %c0_i31, %604 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %605 after %38 : i32</pre>
+      <pre>      %606 = llhd.prb %d : i32</pre>
+      <pre>      %607 = func.call @circt_sv_dynarray_get_i32(%606, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %608 = llhd.prb %tmp : i32</pre>
+      <pre>      %609 = comb.icmp cne %607, %608 : i32</pre>
+      <pre>      cf.cond_br %609, ^bb65, ^bb66</pre>
+      <pre>    ^bb65:  // pred: ^bb64</pre>
+      <pre>      %610 = llhd.prb %d : i32</pre>
+      <pre>      %611 = func.call @circt_sv_dynarray_get_i32(%610, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %612 = sim.fmt.int 10 0 0 %611 : i32</pre>
+      <pre>      %613 = llhd.prb %tmp : i32</pre>
+      <pre>      %614 = sim.fmt.int 10 0 0 %613 : i32</pre>
+      <pre>      %615 = sim.fmt.concat (%3, %612, %37, %614, %36)</pre>
+      <pre>      sim.proc.print %615</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb66</pre>
+      <pre>    ^bb66:  // 2 preds: ^bb64, ^bb65</pre>
+      <pre>      %616 = llhd.prb %x : i32</pre>
+      <pre>      %617 = llhd.prb %y : i32</pre>
+      <pre>      %618 = comb.icmp ne %616, %c0_i32 : i32</pre>
+      <pre>      %619 = comb.icmp ne %617, %c0_i32 : i32</pre>
+      <pre>      %620 = comb.or %618, %619 : i1</pre>
+      <pre>      %621 = comb.concat %c0_i31, %620 : i31, i1</pre>
+      <pre>      %622 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%622, %c0_i32, %621) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %622 after %38 : i32</pre>
+      <pre>      %623 = llhd.prb %x : i32</pre>
+      <pre>      %624 = llhd.prb %y : i32</pre>
+      <pre>      %625 = comb.icmp ne %623, %c0_i32 : i32</pre>
+      <pre>      %626 = comb.icmp ne %624, %c0_i32 : i32</pre>
+      <pre>      %627 = comb.or %625, %626 : i1</pre>
+      <pre>      %628 = comb.concat %c0_i31, %627 : i31, i1</pre>
+      <pre>      llhd.drv %tmp, %628 after %38 : i32</pre>
+      <pre>      %629 = llhd.prb %d : i32</pre>
+      <pre>      %630 = func.call @circt_sv_dynarray_get_i32(%629, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %631 = llhd.prb %tmp : i32</pre>
+      <pre>      %632 = comb.icmp cne %630, %631 : i32</pre>
+      <pre>      cf.cond_br %632, ^bb67, ^bb68</pre>
+      <pre>    ^bb67:  // pred: ^bb66</pre>
+      <pre>      %633 = llhd.prb %d : i32</pre>
+      <pre>      %634 = func.call @circt_sv_dynarray_get_i32(%633, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %635 = sim.fmt.int 10 0 0 %634 : i32</pre>
+      <pre>      %636 = llhd.prb %tmp : i32</pre>
+      <pre>      %637 = sim.fmt.int 10 0 0 %636 : i32</pre>
+      <pre>      %638 = sim.fmt.concat (%2, %635, %37, %637, %36)</pre>
+      <pre>      sim.proc.print %638</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb68</pre>
+      <pre>    ^bb68:  // 2 preds: ^bb66, ^bb67</pre>
+      <pre>      %639 = llhd.prb %x : i32</pre>
+      <pre>      %640 = comb.icmp ne %639, %c0_i32 : i32</pre>
+      <pre>      %641 = llhd.prb %y : i32</pre>
+      <pre>      %642 = comb.mux %640, %639, %641 : i32</pre>
+      <pre>      %643 = func.call @circt_sv_dynarray_alloc_i32(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_dynarray_set_i32(%643, %c0_i32, %642) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %d, %643 after %38 : i32</pre>
+      <pre>      %644 = llhd.prb %x : i32</pre>
+      <pre>      %645 = comb.icmp ne %644, %c0_i32 : i32</pre>
+      <pre>      %646 = llhd.prb %y : i32</pre>
+      <pre>      %647 = comb.mux %645, %644, %646 : i32</pre>
+      <pre>      llhd.drv %tmp, %647 after %38 : i32</pre>
+      <pre>      %648 = llhd.prb %d : i32</pre>
+      <pre>      %649 = func.call @circt_sv_dynarray_get_i32(%648, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %650 = llhd.prb %tmp : i32</pre>
+      <pre>      %651 = comb.icmp cne %649, %650 : i32</pre>
+      <pre>      cf.cond_br %651, ^bb69, ^bb70</pre>
+      <pre>    ^bb69:  // pred: ^bb68</pre>
+      <pre>      %652 = llhd.prb %d : i32</pre>
+      <pre>      %653 = func.call @circt_sv_dynarray_get_i32(%652, %c0_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %654 = sim.fmt.int 10 0 0 %653 : i32</pre>
+      <pre>      %655 = llhd.prb %tmp : i32</pre>
+      <pre>      %656 = sim.fmt.int 10 0 0 %655 : i32</pre>
+      <pre>      %657 = sim.fmt.concat (%1, %654, %37, %656, %36)</pre>
+      <pre>      sim.proc.print %657</pre>
+      <pre>      llhd.drv %failed, %true after %38 : i1</pre>
+      <pre>      cf.br ^bb70</pre>
+      <pre>    ^bb70:  // 2 preds: ^bb68, ^bb69</pre>
+      <pre>      %658 = llhd.prb %failed : i1</pre>
+      <pre>      %659 = comb.xor %658, %true : i1</pre>
+      <pre>      cf.cond_br %659, ^bb71, ^bb72</pre>
+      <pre>    ^bb71:  // pred: ^bb70</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb72</pre>
+      <pre>    ^bb72:  // 2 preds: ^bb70, ^bb71</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>event_control_simulation</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test event invocation</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>9.4.2</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../tests/chapter-9/9.4.2--event_control_sim.sv.html" target="file-frame">tests/chapter-9/9.4.2--event_control_sim.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.042s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../tests/chapter-9/9.4.2--event_control_sim.sv.html" target="file-frame">tests/chapter-9/9.4.2--event_control_sim.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;:assert: (15 == &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;:assert: (3 == &#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;:assert: (12 == &#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;:assert: (10 == &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;:assert: (2 == &#34;</pre>
+      <pre>    %c1000000_i64 = hw.constant 1000000 : i64</pre>
+      <pre>    %c0_i64 = hw.constant 0 : i64</pre>
+      <pre>    %6 = sim.fmt.literal &#34;:assert: (5 == &#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;:assert: (1 == &#34;</pre>
+      <pre>    %8 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %9 = llhd.constant_time &lt;3000000fs, 0d, 0e&gt;</pre>
+      <pre>    %10 = llhd.constant_time &lt;2000000fs, 0d, 0e&gt;</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %11 = llhd.constant_time &lt;5000000fs, 0d, 0e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %e = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %12 = llhd.prb %e : i32</pre>
+      <pre>    %i = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.wait delay %11, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %13 = llhd.prb %i : i32</pre>
+      <pre>      %14 = comb.add %13, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %14 after %8 : i32</pre>
+      <pre>      %15 = llhd.prb %i : i32</pre>
+      <pre>      %16 = sim.fmt.int 10 0 0 %15 : i32</pre>
+      <pre>      %17 = sim.fmt.concat (%7, %16, %0)</pre>
+      <pre>      sim.proc.print %17</pre>
+      <pre>      %18 = llhd.current_time</pre>
+      <pre>      %19 = llhd.time_to_int %18</pre>
+      <pre>      %20 = comb.divu %19, %c1000000_i64 : i64</pre>
+      <pre>      %21 = sim.fmt.fvint 10 0 0 %20, %c0_i64 : i64</pre>
+      <pre>      %22 = sim.fmt.concat (%6, %21, %0)</pre>
+      <pre>      sim.proc.print %22</pre>
+      <pre>      llhd.wait delay %11, ^bb2</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      %23 = llhd.prb %i : i32</pre>
+      <pre>      %24 = comb.add %23, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %24 after %8 : i32</pre>
+      <pre>      %25 = llhd.prb %i : i32</pre>
+      <pre>      %26 = sim.fmt.int 10 0 0 %25 : i32</pre>
+      <pre>      %27 = sim.fmt.concat (%5, %26, %0)</pre>
+      <pre>      sim.proc.print %27</pre>
+      <pre>      %28 = llhd.current_time</pre>
+      <pre>      %29 = llhd.time_to_int %28</pre>
+      <pre>      %30 = comb.divu %29, %c1000000_i64 : i64</pre>
+      <pre>      %31 = sim.fmt.fvint 10 0 0 %30, %c0_i64 : i64</pre>
+      <pre>      %32 = sim.fmt.concat (%4, %31, %0)</pre>
+      <pre>      sim.proc.print %32</pre>
+      <pre>      llhd.wait delay %10, ^bb3</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %33 = llhd.prb %e : i32</pre>
+      <pre>      %34 = comb.add %33, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %e, %34 after %8 : i32</pre>
+      <pre>      %35 = llhd.prb %i : i32</pre>
+      <pre>      %36 = sim.fmt.int 10 0 0 %35 : i32</pre>
+      <pre>      %37 = sim.fmt.concat (%5, %36, %0)</pre>
+      <pre>      sim.proc.print %37</pre>
+      <pre>      %38 = llhd.current_time</pre>
+      <pre>      %39 = llhd.time_to_int %38</pre>
+      <pre>      %40 = comb.divu %39, %c1000000_i64 : i64</pre>
+      <pre>      %41 = sim.fmt.fvint 10 0 0 %40, %c0_i64 : i64</pre>
+      <pre>      %42 = sim.fmt.concat (%3, %41, %0)</pre>
+      <pre>      sim.proc.print %42</pre>
+      <pre>      llhd.wait delay %9, ^bb4</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      %43 = llhd.prb %i : i32</pre>
+      <pre>      %44 = sim.fmt.int 10 0 0 %43 : i32</pre>
+      <pre>      %45 = sim.fmt.concat (%2, %44, %0)</pre>
+      <pre>      sim.proc.print %45</pre>
+      <pre>      %46 = llhd.current_time</pre>
+      <pre>      %47 = llhd.time_to_int %46</pre>
+      <pre>      %48 = comb.divu %47, %c1000000_i64 : i64</pre>
+      <pre>      %49 = sim.fmt.fvint 10 0 0 %48, %c0_i64 : i64</pre>
+      <pre>      %50 = sim.fmt.concat (%1, %49, %0)</pre>
+      <pre>      sim.proc.print %50</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb2</pre>
+      <pre>      %13 = llhd.prb %e : i32</pre>
+      <pre>      llhd.wait (%12, %13 : i32, i32), ^bb2(%13 : i32)</pre>
+      <pre>    ^bb2(%14: i32):  // pred: ^bb1</pre>
+      <pre>      %15 = llhd.prb %i : i32</pre>
+      <pre>      %16 = comb.add %15, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %16 after %8 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

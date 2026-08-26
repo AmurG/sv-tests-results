@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>sva_sva_value_change_changed_wide</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Tests imported from yosys</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>yosys</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>parsing elaboration</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>elaboration</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/yosys/sva_sva_value_change_changed_wide.sv.html" target="file-frame">tests/generated/yosys/sva_sva_value_change_changed_wide.sv</a><li>
+            <li><a href="../../../../third_party/tools/yosys/tests/sva/sva_value_change_changed_wide.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/sva_value_change_changed_wide.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:48:03</dd></div>
+        <div><dt>time elapsed</dt><dd>0.036s</dd></div>
+        <div><dt>ram usage</dt><dd>16128 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=elaboration top=top</pre>
+      <pre>[Arcilator] mode=elaboration top=top</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../tests/generated/yosys/sva_sva_value_change_changed_wide.sv.html" target="file-frame">tests/generated/yosys/sva_sva_value_change_changed_wide.sv</a> <a href="../../../../third_party/tools/yosys/tests/sva/sva_value_change_changed_wide.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/sva_value_change_changed_wide.sv</a></pre>
+      <pre>../../../third_party/tools/yosys/tests/sva/sva_value_change_changed_wide.sv:13:9: error: &#39;moore.eq&#39; op requires all operands to have the same type</pre>
+      <pre>        $changed(b) == ($changed(b[0]) || $changed(b[1]) || $changed(b[2]))</pre>
+      <pre>        ^</pre>
+      <pre>../../../third_party/tools/yosys/tests/sva/sva_value_change_changed_wide.sv:13:9: note: see current operation: %45 = &#34;moore.eq&#34;(%18, %44) : (!moore.l1, !moore.i1) -&gt; !moore.l1</pre>
+      <pre>&lt;unknown&gt;:0: error: imported module failed verification</pre>
+      <pre>&lt;unknown&gt;:0: note: see current operation: </pre>
+      <pre>&#34;builtin.module&#34;() ({</pre>
+      <pre>  &#34;moore.module&#34;() &lt;{module_type = !hw.modty&lt;input clk : !moore.l1, input a : !moore.l3, input b : !moore.l3&gt;, sym_name = &#34;top&#34;}&gt; ({</pre>
+      <pre>  ^bb0(%arg0: !moore.l1, %arg1: !moore.l3, %arg2: !moore.l3):</pre>
+      <pre>    %0 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;clk&#34;}&gt; : () -&gt; !moore.ref&lt;l1&gt;</pre>
+      <pre>    %1 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;a&#34;}&gt; : () -&gt; !moore.ref&lt;l3&gt;</pre>
+      <pre>    %2 = &#34;moore.net&#34;() &lt;{kind = 9 : i32, name = &#34;b&#34;}&gt; : () -&gt; !moore.ref&lt;l3&gt;</pre>
+      <pre>    %3 = &#34;moore.read&#34;(%1) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %4 = &#34;moore.logic_to_int&#34;(%3) : (!moore.l3) -&gt; !moore.i3</pre>
+      <pre>    %5 = &#34;moore.to_builtin_int&#34;(%4) : (!moore.i3) -&gt; i3</pre>
+      <pre>    %6 = &#34;ltl.past&#34;(%5) &lt;{delay = 1 : i64}&gt; : (i3) -&gt; i3</pre>
+      <pre>    %7 = &#34;comb.icmp&#34;(%6, %5) &lt;{predicate = 1 : i64}&gt; : (i3, i3) -&gt; i1</pre>
+      <pre>    %8 = &#34;moore.from_builtin_int&#34;(%7) : (i1) -&gt; !moore.i1</pre>
+      <pre>    %9 = &#34;moore.int_to_logic&#34;(%8) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %10 = &#34;moore.logic_to_int&#34;(%9) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %11 = &#34;moore.to_builtin_int&#34;(%10) : (!moore.i1) -&gt; i1</pre>
+      <pre>    &#34;verif.assert&#34;(%11) : (i1) -&gt; ()</pre>
+      <pre>    %12 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %13 = &#34;moore.logic_to_int&#34;(%12) : (!moore.l3) -&gt; !moore.i3</pre>
+      <pre>    %14 = &#34;moore.to_builtin_int&#34;(%13) : (!moore.i3) -&gt; i3</pre>
+      <pre>    %15 = &#34;ltl.past&#34;(%14) &lt;{delay = 1 : i64}&gt; : (i3) -&gt; i3</pre>
+      <pre>    %16 = &#34;comb.icmp&#34;(%15, %14) &lt;{predicate = 1 : i64}&gt; : (i3, i3) -&gt; i1</pre>
+      <pre>    %17 = &#34;moore.from_builtin_int&#34;(%16) : (i1) -&gt; !moore.i1</pre>
+      <pre>    %18 = &#34;moore.int_to_logic&#34;(%17) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %19 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %20 = &#34;moore.extract&#34;(%19) &lt;{lowBit = 0 : i32}&gt; : (!moore.l3) -&gt; !moore.l1</pre>
+      <pre>    %21 = &#34;moore.logic_to_int&#34;(%20) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %22 = &#34;moore.to_builtin_int&#34;(%21) : (!moore.i1) -&gt; i1</pre>
+      <pre>    %23 = &#34;ltl.past&#34;(%22) &lt;{delay = 1 : i64}&gt; : (i1) -&gt; i1</pre>
+      <pre>    %24 = &#34;comb.icmp&#34;(%23, %22) &lt;{predicate = 1 : i64}&gt; : (i1, i1) -&gt; i1</pre>
+      <pre>    %25 = &#34;moore.from_builtin_int&#34;(%24) : (i1) -&gt; !moore.i1</pre>
+      <pre>    %26 = &#34;moore.int_to_logic&#34;(%25) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %27 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %28 = &#34;moore.extract&#34;(%27) &lt;{lowBit = 1 : i32}&gt; : (!moore.l3) -&gt; !moore.l1</pre>
+      <pre>    %29 = &#34;moore.logic_to_int&#34;(%28) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %30 = &#34;moore.to_builtin_int&#34;(%29) : (!moore.i1) -&gt; i1</pre>
+      <pre>    %31 = &#34;ltl.past&#34;(%30) &lt;{delay = 1 : i64}&gt; : (i1) -&gt; i1</pre>
+      <pre>    %32 = &#34;comb.icmp&#34;(%31, %30) &lt;{predicate = 1 : i64}&gt; : (i1, i1) -&gt; i1</pre>
+      <pre>    %33 = &#34;moore.from_builtin_int&#34;(%32) : (i1) -&gt; !moore.i1</pre>
+      <pre>    %34 = &#34;moore.int_to_logic&#34;(%33) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %35 = &#34;moore.or&#34;(%25, %33) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %36 = &#34;moore.read&#34;(%2) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %37 = &#34;moore.extract&#34;(%36) &lt;{lowBit = 2 : i32}&gt; : (!moore.l3) -&gt; !moore.l1</pre>
+      <pre>    %38 = &#34;moore.logic_to_int&#34;(%37) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %39 = &#34;moore.to_builtin_int&#34;(%38) : (!moore.i1) -&gt; i1</pre>
+      <pre>    %40 = &#34;ltl.past&#34;(%39) &lt;{delay = 1 : i64}&gt; : (i1) -&gt; i1</pre>
+      <pre>    %41 = &#34;comb.icmp&#34;(%40, %39) &lt;{predicate = 1 : i64}&gt; : (i1, i1) -&gt; i1</pre>
+      <pre>    %42 = &#34;moore.from_builtin_int&#34;(%41) : (i1) -&gt; !moore.i1</pre>
+      <pre>    %43 = &#34;moore.int_to_logic&#34;(%42) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %44 = &#34;moore.or&#34;(%35, %42) : (!moore.i1, !moore.i1) -&gt; !moore.i1</pre>
+      <pre>    %45 = &#34;moore.eq&#34;(%18, %44) : (!moore.l1, !moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %46 = &#34;moore.logic_to_int&#34;(%45) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %47 = &#34;moore.to_builtin_int&#34;(%46) : (!moore.i1) -&gt; i1</pre>
+      <pre>    &#34;verif.assert&#34;(%47) : (i1) -&gt; ()</pre>
+      <pre>    %48 = &#34;moore.read&#34;(%1) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %49 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;bXXX : 3&gt;}&gt; : () -&gt; !moore.l3</pre>
+      <pre>    %50 = &#34;moore.case_ne&#34;(%48, %49) : (!moore.l3, !moore.l3) -&gt; !moore.i1</pre>
+      <pre>    %51 = &#34;moore.to_builtin_int&#34;(%50) : (!moore.i1) -&gt; i1</pre>
+      <pre>    %52 = &#34;ltl.delay&#34;(%51) &lt;{delay = 0 : i64, length = 0 : i64}&gt; : (i1) -&gt; !ltl.sequence</pre>
+      <pre>    %53 = &#34;moore.read&#34;(%1) : (!moore.ref&lt;l3&gt;) -&gt; !moore.l3</pre>
+      <pre>    %54 = &#34;moore.logic_to_int&#34;(%53) : (!moore.l3) -&gt; !moore.i3</pre>
+      <pre>    %55 = &#34;moore.to_builtin_int&#34;(%54) : (!moore.i3) -&gt; i3</pre>
+      <pre>    %56 = &#34;ltl.past&#34;(%55) &lt;{delay = 1 : i64}&gt; : (i3) -&gt; i3</pre>
+      <pre>    %57 = &#34;comb.icmp&#34;(%56, %55) &lt;{predicate = 1 : i64}&gt; : (i3, i3) -&gt; i1</pre>
+      <pre>    %58 = &#34;moore.from_builtin_int&#34;(%57) : (i1) -&gt; !moore.i1</pre>
+      <pre>    %59 = &#34;moore.int_to_logic&#34;(%58) : (!moore.i1) -&gt; !moore.l1</pre>
+      <pre>    %60 = &#34;moore.logic_to_int&#34;(%59) : (!moore.l1) -&gt; !moore.i1</pre>
+      <pre>    %61 = &#34;moore.to_builtin_int&#34;(%60) : (!moore.i1) -&gt; i1</pre>
+      <pre>    %62 = &#34;ltl.delay&#34;(%61) &lt;{delay = 1 : i64, length = 0 : i64}&gt; : (i1) -&gt; !ltl.sequence</pre>
+      <pre>    %63 = &#34;ltl.concat&#34;(%52, %62) : (!ltl.sequence, !ltl.sequence) -&gt; !ltl.sequence</pre>
+      <pre>    &#34;verif.assume&#34;(%63) : (!ltl.sequence) -&gt; ()</pre>
+      <pre>    &#34;moore.assign&#34;(%0, %arg0) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>    &#34;moore.assign&#34;(%1, %arg1) : (!moore.ref&lt;l3&gt;, !moore.l3) -&gt; ()</pre>
+      <pre>    &#34;moore.assign&#34;(%2, %arg2) : (!moore.ref&lt;l3&gt;, !moore.l3) -&gt; ()</pre>
+      <pre>    &#34;moore.output&#34;() : () -&gt; ()</pre>
+      <pre>  }) : () -&gt; ()</pre>
+      <pre>}) : () -&gt; ()</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

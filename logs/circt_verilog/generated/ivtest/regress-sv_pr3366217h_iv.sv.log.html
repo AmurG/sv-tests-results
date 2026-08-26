@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_pr3366217h_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr3366217h.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr3366217h.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.047s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr3366217h.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr3366217h.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED: prev(2), expected 1, got &#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED: prev(1), expected 3, got &#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;FAILED: prev(0), expected 4, got &#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;FAILED: prev(), expected 4, got &#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;FAILED: next(2), expected 1, got &#34;</pre>
+      <pre>    %c0_i6 = hw.constant 0 : i6</pre>
+      <pre>    %6 = sim.fmt.literal &#34;FAILED: next(1), expected 3, got &#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;FAILED: next(0), expected 2, got &#34;</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %c0_i5 = hw.constant 0 : i5</pre>
+      <pre>    %8 = sim.fmt.literal &#34;FAILED: next(), expected 2, got &#34;</pre>
+      <pre>    %c0_i7 = hw.constant 0 : i7</pre>
+      <pre>    %9 = sim.fmt.literal &#34;FAILED: initialization, expected 1, got &#34;</pre>
+      <pre>    %10 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %11 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c2_i8 = hw.constant 2 : i8</pre>
+      <pre>    %c3_i8 = hw.constant 3 : i8</pre>
+      <pre>    %c4_i8 = hw.constant 4 : i8</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %c1_i8 = hw.constant 1 : i8</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %12 = hw.aggregate_constant [false, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %pass = llhd.sig %12 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %13 = llhd.sig.struct_extract %pass[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %14 = llhd.sig.struct_extract %pass[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %enum_var = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %15 = llhd.prb %enum_var : i8</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %13, %true after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      llhd.drv %enum_var, %c1_i8 after %11 : i8</pre>
+      <pre>      %16 = llhd.prb %enum_var : i8</pre>
+      <pre>      %17 = comb.icmp cne %16, %c1_i8 : i8</pre>
+      <pre>      cf.cond_br %17, ^bb1, ^bb2</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      %18 = sim.fmt.int 10 0 0 %15 : i8</pre>
+      <pre>      %19 = sim.fmt.concat (%9, %18, %10)</pre>
+      <pre>      sim.proc.print %19</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb0, ^bb1</pre>
+      <pre>      %20 = llhd.prb %enum_var : i8</pre>
+      <pre>      %21 = comb.icmp eq %20, %c4_i8 : i8</pre>
+      <pre>      %22 = comb.concat %c0_i7, %21 : i7, i1</pre>
+      <pre>      %23 = comb.icmp eq %20, %c3_i8 : i8</pre>
+      <pre>      %24 = comb.mux %23, %c4_i8, %22 : i8</pre>
+      <pre>      %25 = comb.icmp eq %20, %c2_i8 : i8</pre>
+      <pre>      %26 = comb.mux %25, %c3_i8, %24 : i8</pre>
+      <pre>      %27 = comb.icmp eq %20, %c1_i8 : i8</pre>
+      <pre>      %28 = comb.mux %27, %c2_i8, %26 : i8</pre>
+      <pre>      llhd.drv %enum_var, %28 after %11 : i8</pre>
+      <pre>      %29 = llhd.prb %enum_var : i8</pre>
+      <pre>      %30 = comb.icmp eq %29, %c4_i8 : i8</pre>
+      <pre>      %31 = comb.mux %30, %c3_i8, %c0_i8 : i8</pre>
+      <pre>      %32 = comb.icmp eq %29, %c3_i8 : i8</pre>
+      <pre>      %33 = comb.mux %32, %c2_i8, %31 : i8</pre>
+      <pre>      %34 = comb.icmp eq %29, %c2_i8 : i8</pre>
+      <pre>      %35 = comb.mux %34, %c1_i8, %33 : i8</pre>
+      <pre>      %36 = comb.icmp eq %29, %c1_i8 : i8</pre>
+      <pre>      %37 = comb.mux %36, %c4_i8, %35 : i8</pre>
+      <pre>      llhd.drv %enum_var, %37 after %11 : i8</pre>
+      <pre>      %38 = llhd.prb %enum_var : i8</pre>
+      <pre>      %39 = comb.icmp eq %38, %c4_i8 : i8</pre>
+      <pre>      %40 = comb.concat %c0_i7, %39 : i7, i1</pre>
+      <pre>      %41 = comb.icmp eq %38, %c3_i8 : i8</pre>
+      <pre>      %42 = comb.mux %41, %c4_i8, %40 : i8</pre>
+      <pre>      %43 = comb.icmp eq %38, %c2_i8 : i8</pre>
+      <pre>      %44 = comb.mux %43, %c3_i8, %42 : i8</pre>
+      <pre>      %45 = comb.icmp eq %38, %c1_i8 : i8</pre>
+      <pre>      %46 = comb.mux %45, %c2_i8, %44 : i8</pre>
+      <pre>      llhd.drv %enum_var, %46 after %11 : i8</pre>
+      <pre>      %47 = llhd.prb %enum_var : i8</pre>
+      <pre>      %48 = comb.icmp cne %47, %c2_i8 : i8</pre>
+      <pre>      cf.cond_br %48, ^bb3, ^bb4</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %49 = llhd.prb %enum_var : i8</pre>
+      <pre>      %50 = sim.fmt.int 10 0 0 %49 : i8</pre>
+      <pre>      %51 = sim.fmt.concat (%8, %50, %10)</pre>
+      <pre>      sim.proc.print %51</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb2, ^bb3</pre>
+      <pre>      %52 = llhd.prb %enum_var : i8</pre>
+      <pre>      %53 = comb.icmp eq %52, %c4_i8 : i8</pre>
+      <pre>      %54 = comb.concat %c0_i5, %53, %c0_i2 : i5, i1, i2</pre>
+      <pre>      %55 = comb.icmp eq %52, %c3_i8 : i8</pre>
+      <pre>      %56 = comb.mux %55, %c3_i8, %54 : i8</pre>
+      <pre>      %57 = comb.icmp eq %52, %c2_i8 : i8</pre>
+      <pre>      %58 = comb.mux %57, %c2_i8, %56 : i8</pre>
+      <pre>      %59 = comb.icmp eq %52, %c1_i8 : i8</pre>
+      <pre>      %60 = comb.mux %59, %c1_i8, %58 : i8</pre>
+      <pre>      llhd.drv %enum_var, %60 after %11 : i8</pre>
+      <pre>      %61 = llhd.prb %enum_var : i8</pre>
+      <pre>      %62 = comb.icmp cne %61, %c2_i8 : i8</pre>
+      <pre>      cf.cond_br %62, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %63 = llhd.prb %enum_var : i8</pre>
+      <pre>      %64 = sim.fmt.int 10 0 0 %63 : i8</pre>
+      <pre>      %65 = sim.fmt.concat (%7, %64, %10)</pre>
+      <pre>      sim.proc.print %65</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb6</pre>
+      <pre>    ^bb6:  // 2 preds: ^bb4, ^bb5</pre>
+      <pre>      %66 = llhd.prb %enum_var : i8</pre>
+      <pre>      %67 = comb.icmp eq %66, %c4_i8 : i8</pre>
+      <pre>      %68 = comb.concat %c0_i7, %67 : i7, i1</pre>
+      <pre>      %69 = comb.icmp eq %66, %c3_i8 : i8</pre>
+      <pre>      %70 = comb.mux %69, %c4_i8, %68 : i8</pre>
+      <pre>      %71 = comb.icmp eq %66, %c2_i8 : i8</pre>
+      <pre>      %72 = comb.mux %71, %c3_i8, %70 : i8</pre>
+      <pre>      %73 = comb.icmp eq %66, %c1_i8 : i8</pre>
+      <pre>      %74 = comb.mux %73, %c2_i8, %72 : i8</pre>
+      <pre>      llhd.drv %enum_var, %74 after %11 : i8</pre>
+      <pre>      %75 = llhd.prb %enum_var : i8</pre>
+      <pre>      %76 = comb.icmp cne %75, %c3_i8 : i8</pre>
+      <pre>      cf.cond_br %76, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %77 = llhd.prb %enum_var : i8</pre>
+      <pre>      %78 = sim.fmt.int 10 0 0 %77 : i8</pre>
+      <pre>      %79 = sim.fmt.concat (%6, %78, %10)</pre>
+      <pre>      sim.proc.print %79</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      %80 = llhd.prb %enum_var : i8</pre>
+      <pre>      %81 = comb.icmp eq %80, %c4_i8 : i8</pre>
+      <pre>      %82 = comb.concat %c0_i6, %81, %false : i6, i1, i1</pre>
+      <pre>      %83 = comb.icmp eq %80, %c3_i8 : i8</pre>
+      <pre>      %84 = comb.mux %83, %c1_i8, %82 : i8</pre>
+      <pre>      %85 = comb.icmp eq %80, %c2_i8 : i8</pre>
+      <pre>      %86 = comb.mux %85, %c4_i8, %84 : i8</pre>
+      <pre>      %87 = comb.icmp eq %80, %c1_i8 : i8</pre>
+      <pre>      %88 = comb.mux %87, %c3_i8, %86 : i8</pre>
+      <pre>      llhd.drv %enum_var, %88 after %11 : i8</pre>
+      <pre>      %89 = llhd.prb %enum_var : i8</pre>
+      <pre>      %90 = comb.icmp cne %89, %c1_i8 : i8</pre>
+      <pre>      cf.cond_br %90, ^bb9, ^bb10</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      %91 = llhd.prb %enum_var : i8</pre>
+      <pre>      %92 = sim.fmt.int 10 0 0 %91 : i8</pre>
+      <pre>      %93 = sim.fmt.concat (%5, %92, %10)</pre>
+      <pre>      sim.proc.print %93</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb10</pre>
+      <pre>    ^bb10:  // 2 preds: ^bb8, ^bb9</pre>
+      <pre>      %94 = llhd.prb %enum_var : i8</pre>
+      <pre>      %95 = comb.icmp eq %94, %c4_i8 : i8</pre>
+      <pre>      %96 = comb.mux %95, %c3_i8, %c0_i8 : i8</pre>
+      <pre>      %97 = comb.icmp eq %94, %c3_i8 : i8</pre>
+      <pre>      %98 = comb.mux %97, %c2_i8, %96 : i8</pre>
+      <pre>      %99 = comb.icmp eq %94, %c2_i8 : i8</pre>
+      <pre>      %100 = comb.mux %99, %c1_i8, %98 : i8</pre>
+      <pre>      %101 = comb.icmp eq %94, %c1_i8 : i8</pre>
+      <pre>      %102 = comb.mux %101, %c4_i8, %100 : i8</pre>
+      <pre>      llhd.drv %enum_var, %102 after %11 : i8</pre>
+      <pre>      %103 = llhd.prb %enum_var : i8</pre>
+      <pre>      %104 = comb.icmp cne %103, %c4_i8 : i8</pre>
+      <pre>      cf.cond_br %104, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      %105 = llhd.prb %enum_var : i8</pre>
+      <pre>      %106 = sim.fmt.int 10 0 0 %105 : i8</pre>
+      <pre>      %107 = sim.fmt.concat (%4, %106, %10)</pre>
+      <pre>      sim.proc.print %107</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb12</pre>
+      <pre>    ^bb12:  // 2 preds: ^bb10, ^bb11</pre>
+      <pre>      %108 = llhd.prb %enum_var : i8</pre>
+      <pre>      %109 = comb.icmp eq %108, %c4_i8 : i8</pre>
+      <pre>      %110 = comb.concat %c0_i5, %109, %c0_i2 : i5, i1, i2</pre>
+      <pre>      %111 = comb.icmp eq %108, %c3_i8 : i8</pre>
+      <pre>      %112 = comb.mux %111, %c3_i8, %110 : i8</pre>
+      <pre>      %113 = comb.icmp eq %108, %c2_i8 : i8</pre>
+      <pre>      %114 = comb.mux %113, %c2_i8, %112 : i8</pre>
+      <pre>      %115 = comb.icmp eq %108, %c1_i8 : i8</pre>
+      <pre>      %116 = comb.mux %115, %c1_i8, %114 : i8</pre>
+      <pre>      llhd.drv %enum_var, %116 after %11 : i8</pre>
+      <pre>      %117 = llhd.prb %enum_var : i8</pre>
+      <pre>      %118 = comb.icmp cne %117, %c4_i8 : i8</pre>
+      <pre>      cf.cond_br %118, ^bb13, ^bb14</pre>
+      <pre>    ^bb13:  // pred: ^bb12</pre>
+      <pre>      %119 = llhd.prb %enum_var : i8</pre>
+      <pre>      %120 = sim.fmt.int 10 0 0 %119 : i8</pre>
+      <pre>      %121 = sim.fmt.concat (%3, %120, %10)</pre>
+      <pre>      sim.proc.print %121</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb14</pre>
+      <pre>    ^bb14:  // 2 preds: ^bb12, ^bb13</pre>
+      <pre>      %122 = llhd.prb %enum_var : i8</pre>
+      <pre>      %123 = comb.icmp eq %122, %c4_i8 : i8</pre>
+      <pre>      %124 = comb.mux %123, %c3_i8, %c0_i8 : i8</pre>
+      <pre>      %125 = comb.icmp eq %122, %c3_i8 : i8</pre>
+      <pre>      %126 = comb.mux %125, %c2_i8, %124 : i8</pre>
+      <pre>      %127 = comb.icmp eq %122, %c2_i8 : i8</pre>
+      <pre>      %128 = comb.mux %127, %c1_i8, %126 : i8</pre>
+      <pre>      %129 = comb.icmp eq %122, %c1_i8 : i8</pre>
+      <pre>      %130 = comb.mux %129, %c4_i8, %128 : i8</pre>
+      <pre>      llhd.drv %enum_var, %130 after %11 : i8</pre>
+      <pre>      %131 = llhd.prb %enum_var : i8</pre>
+      <pre>      %132 = comb.icmp cne %131, %c3_i8 : i8</pre>
+      <pre>      cf.cond_br %132, ^bb15, ^bb16</pre>
+      <pre>    ^bb15:  // pred: ^bb14</pre>
+      <pre>      %133 = llhd.prb %enum_var : i8</pre>
+      <pre>      %134 = sim.fmt.int 10 0 0 %133 : i8</pre>
+      <pre>      %135 = sim.fmt.concat (%2, %134, %10)</pre>
+      <pre>      sim.proc.print %135</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb16</pre>
+      <pre>    ^bb16:  // 2 preds: ^bb14, ^bb15</pre>
+      <pre>      %136 = llhd.prb %enum_var : i8</pre>
+      <pre>      %137 = comb.icmp eq %136, %c4_i8 : i8</pre>
+      <pre>      %138 = comb.concat %c0_i6, %137, %false : i6, i1, i1</pre>
+      <pre>      %139 = comb.icmp eq %136, %c3_i8 : i8</pre>
+      <pre>      %140 = comb.mux %139, %c1_i8, %138 : i8</pre>
+      <pre>      %141 = comb.icmp eq %136, %c2_i8 : i8</pre>
+      <pre>      %142 = comb.mux %141, %c4_i8, %140 : i8</pre>
+      <pre>      %143 = comb.icmp eq %136, %c1_i8 : i8</pre>
+      <pre>      %144 = comb.mux %143, %c3_i8, %142 : i8</pre>
+      <pre>      llhd.drv %enum_var, %144 after %11 : i8</pre>
+      <pre>      %145 = llhd.prb %enum_var : i8</pre>
+      <pre>      %146 = comb.icmp cne %145, %c1_i8 : i8</pre>
+      <pre>      cf.cond_br %146, ^bb17, ^bb18</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      %147 = llhd.prb %enum_var : i8</pre>
+      <pre>      %148 = sim.fmt.int 10 0 0 %147 : i8</pre>
+      <pre>      %149 = sim.fmt.concat (%1, %148, %10)</pre>
+      <pre>      sim.proc.print %149</pre>
+      <pre>      llhd.drv %13, %false after %11 : i1</pre>
+      <pre>      llhd.drv %14, %false after %11 : i1</pre>
+      <pre>      cf.br ^bb18</pre>
+      <pre>    ^bb18:  // 2 preds: ^bb16, ^bb17</pre>
+      <pre>      %150 = llhd.prb %13 : i1</pre>
+      <pre>      %151 = llhd.prb %14 : i1</pre>
+      <pre>      %152 = comb.xor %151, %true : i1</pre>
+      <pre>      %153 = comb.and %150, %152 : i1</pre>
+      <pre>      cf.cond_br %153, ^bb19, ^bb20</pre>
+      <pre>    ^bb19:  // pred: ^bb18</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      cf.br ^bb20</pre>
+      <pre>    ^bb20:  // 2 preds: ^bb18, ^bb19</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

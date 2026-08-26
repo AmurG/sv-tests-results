@@ -1,0 +1,122 @@
+name: regress-sv_sv_wildcard_import5_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.13137578964233398
+user_time: 0.021991999999999998
+system_time: 0.126098
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:43
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:50:1: error: multiple imports found for identifier 'word'
+word my_v;
+^~~~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:47:21: note: imported from here
+import my_package1::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:6:21: note: declared here
+typedef logic [1:0] word;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:48:21: note: imported from here
+import my_package2::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:28:21: note: declared here
+typedef logic [1:0] word;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:53:5: error: multiple imports found for identifier 'e'
+  @(e) v = p1 + p2;
+    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:47:21: note: imported from here
+import my_package1::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:10:7: note: declared here
+event e;
+      ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:48:21: note: imported from here
+import my_package2::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:32:7: note: declared here
+event e;
+      ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:53:8: error: multiple imports found for identifier 'v'
+  @(e) v = p1 + p2;
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:47:21: note: imported from here
+import my_package1::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:8:6: note: declared here
+word v;
+     ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:48:21: note: imported from here
+import my_package2::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:30:6: note: declared here
+word v;
+     ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:53:12: error: multiple imports found for identifier 'p1'
+  @(e) v = p1 + p2;
+           ^~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:47:21: note: imported from here
+import my_package1::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:3:12: note: declared here
+parameter  p1 = 1;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:48:21: note: imported from here
+import my_package2::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:25:12: note: declared here
+parameter  p1 = 1;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:53:17: error: multiple imports found for identifier 'p2'
+  @(e) v = p1 + p2;
+                ^~
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:47:21: note: imported from here
+import my_package1::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:4:12: note: declared here
+localparam p2 = 2;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:48:21: note: imported from here
+import my_package2::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:26:12: note: declared here
+localparam p2 = 2;
+           ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:54:3: error: multiple imports found for identifier 'h'
+  h(f(1));
+  ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:47:21: note: imported from here
+import my_package1::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:16:6: note: declared here
+task h(word i);
+     ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:48:21: note: imported from here
+import my_package2::*;
+                    ^
+../../../third_party/tools/icarus/ivtest/ivltests/sv_wildcard_import5.v:38:6: note: declared here
+task h(word i);
+     ^
+Top level design units:
+    test
+
+
+Build failed: 6 errors, 0 warnings

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-sv_enum_test1_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/enum_test1.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/enum_test1.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:14</dd></div>
+        <div><dt>time elapsed</dt><dd>0.105s</dd></div>
+        <div><dt>ram usage</dt><dd>25984 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/enum_test1.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/enum_test1.v</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @test() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;PASSED\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;FAILED - The next method did not wrap to the first element for bin_enum\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for bin_enum\0A&#34;</pre>
+      <pre>    %c-1_i29 = hw.constant -1 : i29</pre>
+      <pre>    %c8_i32 = hw.constant 8 : i32</pre>
+      <pre>    %3 = sim.fmt.literal &#34;FAILED - The next method did not wrap to the first element for vr\0A&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for vr in element REGISTER4\0A&#34;</pre>
+      <pre>    %5 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for vr in element REGISTER3\0A&#34;</pre>
+      <pre>    %6 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for vr in element REGISTER2\0A&#34;</pre>
+      <pre>    %7 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for vr in element REGISTER1\0A&#34;</pre>
+      <pre>    %c0_i31 = hw.constant 0 : i31</pre>
+      <pre>    %8 = sim.fmt.literal &#34;FAILED - The next method did not wrap to the first element for E1\0A&#34;</pre>
+      <pre>    %9 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for E1\0A&#34;</pre>
+      <pre>    %c19_i32 = hw.constant 19 : i32</pre>
+      <pre>    %10 = sim.fmt.literal &#34;FAILED - The next method did not wrap to the first element for signedbyte_enum\0A&#34;</pre>
+      <pre>    %11 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for signedbyte_enum\0A&#34;</pre>
+      <pre>    %12 = sim.fmt.literal &#34;FAILED - The next method did not wrap to the first element for unsignedbyte_enum\0A&#34;</pre>
+      <pre>    %13 = sim.fmt.literal &#34;FAILED - The next method does not report as expected for unsignedbyte_enum\0A&#34;</pre>
+      <pre>    %c256_i32 = hw.constant 256 : i32</pre>
+      <pre>    %14 = hw.aggregate_constant [0 : i3, -1 : i3] : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %c1_i3 = hw.constant 1 : i3</pre>
+      <pre>    %c2_i3 = hw.constant 2 : i3</pre>
+      <pre>    %c3_i3 = hw.constant 3 : i3</pre>
+      <pre>    %c-4_i3 = hw.constant -4 : i3</pre>
+      <pre>    %c-3_i3 = hw.constant -3 : i3</pre>
+      <pre>    %c-2_i3 = hw.constant -2 : i3</pre>
+      <pre>    %c0_i29 = hw.constant 0 : i29</pre>
+      <pre>    %c0_i24 = hw.constant 0 : i24</pre>
+      <pre>    %15 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c-1_i3 = hw.constant -1 : i3</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %c1_i8 = hw.constant 1 : i8</pre>
+      <pre>    %c2_i8 = hw.constant 2 : i8</pre>
+      <pre>    %c3_i8 = hw.constant 3 : i8</pre>
+      <pre>    %c4_i8 = hw.constant 4 : i8</pre>
+      <pre>    %c5_i8 = hw.constant 5 : i8</pre>
+      <pre>    %c6_i8 = hw.constant 6 : i8</pre>
+      <pre>    %c8_i8 = hw.constant 8 : i8</pre>
+      <pre>    %c9_i8 = hw.constant 9 : i8</pre>
+      <pre>    %c10_i8 = hw.constant 10 : i8</pre>
+      <pre>    %c11_i8 = hw.constant 11 : i8</pre>
+      <pre>    %c12_i8 = hw.constant 12 : i8</pre>
+      <pre>    %c13_i8 = hw.constant 13 : i8</pre>
+      <pre>    %c14_i8 = hw.constant 14 : i8</pre>
+      <pre>    %c15_i8 = hw.constant 15 : i8</pre>
+      <pre>    %c16_i8 = hw.constant 16 : i8</pre>
+      <pre>    %c17_i8 = hw.constant 17 : i8</pre>
+      <pre>    %c18_i8 = hw.constant 18 : i8</pre>
+      <pre>    %c20_i8 = hw.constant 20 : i8</pre>
+      <pre>    %c21_i8 = hw.constant 21 : i8</pre>
+      <pre>    %c22_i8 = hw.constant 22 : i8</pre>
+      <pre>    %c24_i8 = hw.constant 24 : i8</pre>
+      <pre>    %c25_i8 = hw.constant 25 : i8</pre>
+      <pre>    %c26_i8 = hw.constant 26 : i8</pre>
+      <pre>    %c27_i8 = hw.constant 27 : i8</pre>
+      <pre>    %c28_i8 = hw.constant 28 : i8</pre>
+      <pre>    %c29_i8 = hw.constant 29 : i8</pre>
+      <pre>    %c30_i8 = hw.constant 30 : i8</pre>
+      <pre>    %c31_i8 = hw.constant 31 : i8</pre>
+      <pre>    %c32_i8 = hw.constant 32 : i8</pre>
+      <pre>    %c33_i8 = hw.constant 33 : i8</pre>
+      <pre>    %c34_i8 = hw.constant 34 : i8</pre>
+      <pre>    %c35_i8 = hw.constant 35 : i8</pre>
+      <pre>    %c36_i8 = hw.constant 36 : i8</pre>
+      <pre>    %c37_i8 = hw.constant 37 : i8</pre>
+      <pre>    %c38_i8 = hw.constant 38 : i8</pre>
+      <pre>    %c39_i8 = hw.constant 39 : i8</pre>
+      <pre>    %c40_i8 = hw.constant 40 : i8</pre>
+      <pre>    %c41_i8 = hw.constant 41 : i8</pre>
+      <pre>    %c42_i8 = hw.constant 42 : i8</pre>
+      <pre>    %c43_i8 = hw.constant 43 : i8</pre>
+      <pre>    %c44_i8 = hw.constant 44 : i8</pre>
+      <pre>    %c45_i8 = hw.constant 45 : i8</pre>
+      <pre>    %c46_i8 = hw.constant 46 : i8</pre>
+      <pre>    %c47_i8 = hw.constant 47 : i8</pre>
+      <pre>    %c48_i8 = hw.constant 48 : i8</pre>
+      <pre>    %c49_i8 = hw.constant 49 : i8</pre>
+      <pre>    %c50_i8 = hw.constant 50 : i8</pre>
+      <pre>    %c51_i8 = hw.constant 51 : i8</pre>
+      <pre>    %c52_i8 = hw.constant 52 : i8</pre>
+      <pre>    %c53_i8 = hw.constant 53 : i8</pre>
+      <pre>    %c54_i8 = hw.constant 54 : i8</pre>
+      <pre>    %c55_i8 = hw.constant 55 : i8</pre>
+      <pre>    %c56_i8 = hw.constant 56 : i8</pre>
+      <pre>    %c57_i8 = hw.constant 57 : i8</pre>
+      <pre>    %c58_i8 = hw.constant 58 : i8</pre>
+      <pre>    %c59_i8 = hw.constant 59 : i8</pre>
+      <pre>    %c60_i8 = hw.constant 60 : i8</pre>
+      <pre>    %c61_i8 = hw.constant 61 : i8</pre>
+      <pre>    %c62_i8 = hw.constant 62 : i8</pre>
+      <pre>    %c63_i8 = hw.constant 63 : i8</pre>
+      <pre>    %c64_i8 = hw.constant 64 : i8</pre>
+      <pre>    %c65_i8 = hw.constant 65 : i8</pre>
+      <pre>    %c66_i8 = hw.constant 66 : i8</pre>
+      <pre>    %c67_i8 = hw.constant 67 : i8</pre>
+      <pre>    %c68_i8 = hw.constant 68 : i8</pre>
+      <pre>    %c69_i8 = hw.constant 69 : i8</pre>
+      <pre>    %c70_i8 = hw.constant 70 : i8</pre>
+      <pre>    %c71_i8 = hw.constant 71 : i8</pre>
+      <pre>    %c72_i8 = hw.constant 72 : i8</pre>
+      <pre>    %c73_i8 = hw.constant 73 : i8</pre>
+      <pre>    %c74_i8 = hw.constant 74 : i8</pre>
+      <pre>    %c75_i8 = hw.constant 75 : i8</pre>
+      <pre>    %c76_i8 = hw.constant 76 : i8</pre>
+      <pre>    %c77_i8 = hw.constant 77 : i8</pre>
+      <pre>    %c78_i8 = hw.constant 78 : i8</pre>
+      <pre>    %c79_i8 = hw.constant 79 : i8</pre>
+      <pre>    %c80_i8 = hw.constant 80 : i8</pre>
+      <pre>    %c81_i8 = hw.constant 81 : i8</pre>
+      <pre>    %c82_i8 = hw.constant 82 : i8</pre>
+      <pre>    %c83_i8 = hw.constant 83 : i8</pre>
+      <pre>    %c84_i8 = hw.constant 84 : i8</pre>
+      <pre>    %c85_i8 = hw.constant 85 : i8</pre>
+      <pre>    %c86_i8 = hw.constant 86 : i8</pre>
+      <pre>    %c88_i8 = hw.constant 88 : i8</pre>
+      <pre>    %c89_i8 = hw.constant 89 : i8</pre>
+      <pre>    %c90_i8 = hw.constant 90 : i8</pre>
+      <pre>    %c92_i8 = hw.constant 92 : i8</pre>
+      <pre>    %c93_i8 = hw.constant 93 : i8</pre>
+      <pre>    %c94_i8 = hw.constant 94 : i8</pre>
+      <pre>    %c95_i8 = hw.constant 95 : i8</pre>
+      <pre>    %c96_i8 = hw.constant 96 : i8</pre>
+      <pre>    %c97_i8 = hw.constant 97 : i8</pre>
+      <pre>    %c98_i8 = hw.constant 98 : i8</pre>
+      <pre>    %c100_i8 = hw.constant 100 : i8</pre>
+      <pre>    %c101_i8 = hw.constant 101 : i8</pre>
+      <pre>    %c102_i8 = hw.constant 102 : i8</pre>
+      <pre>    %c103_i8 = hw.constant 103 : i8</pre>
+      <pre>    %c104_i8 = hw.constant 104 : i8</pre>
+      <pre>    %c105_i8 = hw.constant 105 : i8</pre>
+      <pre>    %c106_i8 = hw.constant 106 : i8</pre>
+      <pre>    %c107_i8 = hw.constant 107 : i8</pre>
+      <pre>    %c108_i8 = hw.constant 108 : i8</pre>
+      <pre>    %c109_i8 = hw.constant 109 : i8</pre>
+      <pre>    %c110_i8 = hw.constant 110 : i8</pre>
+      <pre>    %c111_i8 = hw.constant 111 : i8</pre>
+      <pre>    %c112_i8 = hw.constant 112 : i8</pre>
+      <pre>    %c113_i8 = hw.constant 113 : i8</pre>
+      <pre>    %c114_i8 = hw.constant 114 : i8</pre>
+      <pre>    %c115_i8 = hw.constant 115 : i8</pre>
+      <pre>    %c116_i8 = hw.constant 116 : i8</pre>
+      <pre>    %c117_i8 = hw.constant 117 : i8</pre>
+      <pre>    %c118_i8 = hw.constant 118 : i8</pre>
+      <pre>    %c119_i8 = hw.constant 119 : i8</pre>
+      <pre>    %c120_i8 = hw.constant 120 : i8</pre>
+      <pre>    %c121_i8 = hw.constant 121 : i8</pre>
+      <pre>    %c122_i8 = hw.constant 122 : i8</pre>
+      <pre>    %c123_i8 = hw.constant 123 : i8</pre>
+      <pre>    %c124_i8 = hw.constant 124 : i8</pre>
+      <pre>    %c125_i8 = hw.constant 125 : i8</pre>
+      <pre>    %c126_i8 = hw.constant 126 : i8</pre>
+      <pre>    %c127_i8 = hw.constant 127 : i8</pre>
+      <pre>    %c-128_i8 = hw.constant -128 : i8</pre>
+      <pre>    %c-127_i8 = hw.constant -127 : i8</pre>
+      <pre>    %c-126_i8 = hw.constant -126 : i8</pre>
+      <pre>    %c-125_i8 = hw.constant -125 : i8</pre>
+      <pre>    %c-124_i8 = hw.constant -124 : i8</pre>
+      <pre>    %c-123_i8 = hw.constant -123 : i8</pre>
+      <pre>    %c-122_i8 = hw.constant -122 : i8</pre>
+      <pre>    %c-121_i8 = hw.constant -121 : i8</pre>
+      <pre>    %c-120_i8 = hw.constant -120 : i8</pre>
+      <pre>    %c-119_i8 = hw.constant -119 : i8</pre>
+      <pre>    %c-117_i8 = hw.constant -117 : i8</pre>
+      <pre>    %c-116_i8 = hw.constant -116 : i8</pre>
+      <pre>    %c-115_i8 = hw.constant -115 : i8</pre>
+      <pre>    %c-114_i8 = hw.constant -114 : i8</pre>
+      <pre>    %c-113_i8 = hw.constant -113 : i8</pre>
+      <pre>    %c-112_i8 = hw.constant -112 : i8</pre>
+      <pre>    %c-111_i8 = hw.constant -111 : i8</pre>
+      <pre>    %c-110_i8 = hw.constant -110 : i8</pre>
+      <pre>    %c-109_i8 = hw.constant -109 : i8</pre>
+      <pre>    %c-108_i8 = hw.constant -108 : i8</pre>
+      <pre>    %c-107_i8 = hw.constant -107 : i8</pre>
+      <pre>    %c-106_i8 = hw.constant -106 : i8</pre>
+      <pre>    %c-105_i8 = hw.constant -105 : i8</pre>
+      <pre>    %c-104_i8 = hw.constant -104 : i8</pre>
+      <pre>    %c-103_i8 = hw.constant -103 : i8</pre>
+      <pre>    %c-102_i8 = hw.constant -102 : i8</pre>
+      <pre>    %c-101_i8 = hw.constant -101 : i8</pre>
+      <pre>    %c-100_i8 = hw.constant -100 : i8</pre>
+      <pre>    %c-99_i8 = hw.constant -99 : i8</pre>
+      <pre>    %c-98_i8 = hw.constant -98 : i8</pre>
+      <pre>    %c-97_i8 = hw.constant -97 : i8</pre>
+      <pre>    %c-96_i8 = hw.constant -96 : i8</pre>
+      <pre>    %c-95_i8 = hw.constant -95 : i8</pre>
+      <pre>    %c-94_i8 = hw.constant -94 : i8</pre>
+      <pre>    %c-93_i8 = hw.constant -93 : i8</pre>
+      <pre>    %c-92_i8 = hw.constant -92 : i8</pre>
+      <pre>    %c-91_i8 = hw.constant -91 : i8</pre>
+      <pre>    %c-90_i8 = hw.constant -90 : i8</pre>
+      <pre>    %c-89_i8 = hw.constant -89 : i8</pre>
+      <pre>    %c-88_i8 = hw.constant -88 : i8</pre>
+      <pre>    %c-87_i8 = hw.constant -87 : i8</pre>
+      <pre>    %c-86_i8 = hw.constant -86 : i8</pre>
+      <pre>    %c-85_i8 = hw.constant -85 : i8</pre>
+      <pre>    %c-84_i8 = hw.constant -84 : i8</pre>
+      <pre>    %c-83_i8 = hw.constant -83 : i8</pre>
+      <pre>    %c-82_i8 = hw.constant -82 : i8</pre>
+      <pre>    %c-81_i8 = hw.constant -81 : i8</pre>
+      <pre>    %c-80_i8 = hw.constant -80 : i8</pre>
+      <pre>    %c-79_i8 = hw.constant -79 : i8</pre>
+      <pre>    %c-78_i8 = hw.constant -78 : i8</pre>
+      <pre>    %c-77_i8 = hw.constant -77 : i8</pre>
+      <pre>    %c-76_i8 = hw.constant -76 : i8</pre>
+      <pre>    %c-75_i8 = hw.constant -75 : i8</pre>
+      <pre>    %c-74_i8 = hw.constant -74 : i8</pre>
+      <pre>    %c-73_i8 = hw.constant -73 : i8</pre>
+      <pre>    %c-72_i8 = hw.constant -72 : i8</pre>
+      <pre>    %c-71_i8 = hw.constant -71 : i8</pre>
+      <pre>    %c-70_i8 = hw.constant -70 : i8</pre>
+      <pre>    %c-69_i8 = hw.constant -69 : i8</pre>
+      <pre>    %c-68_i8 = hw.constant -68 : i8</pre>
+      <pre>    %c-67_i8 = hw.constant -67 : i8</pre>
+      <pre>    %c-66_i8 = hw.constant -66 : i8</pre>
+      <pre>    %c-65_i8 = hw.constant -65 : i8</pre>
+      <pre>    %c-64_i8 = hw.constant -64 : i8</pre>
+      <pre>    %c-63_i8 = hw.constant -63 : i8</pre>
+      <pre>    %c-62_i8 = hw.constant -62 : i8</pre>
+      <pre>    %c-61_i8 = hw.constant -61 : i8</pre>
+      <pre>    %c-60_i8 = hw.constant -60 : i8</pre>
+      <pre>    %c-59_i8 = hw.constant -59 : i8</pre>
+      <pre>    %c-58_i8 = hw.constant -58 : i8</pre>
+      <pre>    %c-57_i8 = hw.constant -57 : i8</pre>
+      <pre>    %c-56_i8 = hw.constant -56 : i8</pre>
+      <pre>    %c-55_i8 = hw.constant -55 : i8</pre>
+      <pre>    %c-54_i8 = hw.constant -54 : i8</pre>
+      <pre>    %c-53_i8 = hw.constant -53 : i8</pre>
+      <pre>    %c-52_i8 = hw.constant -52 : i8</pre>
+      <pre>    %c-51_i8 = hw.constant -51 : i8</pre>
+      <pre>    %c-50_i8 = hw.constant -50 : i8</pre>
+      <pre>    %c-48_i8 = hw.constant -48 : i8</pre>
+      <pre>    %c-47_i8 = hw.constant -47 : i8</pre>
+      <pre>    %c-46_i8 = hw.constant -46 : i8</pre>
+      <pre>    %c-45_i8 = hw.constant -45 : i8</pre>
+      <pre>    %c-44_i8 = hw.constant -44 : i8</pre>
+      <pre>    %c-43_i8 = hw.constant -43 : i8</pre>
+      <pre>    %c-42_i8 = hw.constant -42 : i8</pre>
+      <pre>    %c-41_i8 = hw.constant -41 : i8</pre>
+      <pre>    %c-40_i8 = hw.constant -40 : i8</pre>
+      <pre>    %c-39_i8 = hw.constant -39 : i8</pre>
+      <pre>    %c-38_i8 = hw.constant -38 : i8</pre>
+      <pre>    %c-37_i8 = hw.constant -37 : i8</pre>
+      <pre>    %c-36_i8 = hw.constant -36 : i8</pre>
+      <pre>    %c-35_i8 = hw.constant -35 : i8</pre>
+      <pre>    %c-34_i8 = hw.constant -34 : i8</pre>
+      <pre>    %c-33_i8 = hw.constant -33 : i8</pre>
+      <pre>    %c-32_i8 = hw.constant -32 : i8</pre>
+      <pre>    %c-31_i8 = hw.constant -31 : i8</pre>
+      <pre>    %c-30_i8 = hw.constant -30 : i8</pre>
+      <pre>    %c-29_i8 = hw.constant -29 : i8</pre>
+      <pre>    %c-28_i8 = hw.constant -28 : i8</pre>
+      <pre>    %c-27_i8 = hw.constant -27 : i8</pre>
+      <pre>    %c-26_i8 = hw.constant -26 : i8</pre>
+      <pre>    %c-25_i8 = hw.constant -25 : i8</pre>
+      <pre>    %c-24_i8 = hw.constant -24 : i8</pre>
+      <pre>    %c-23_i8 = hw.constant -23 : i8</pre>
+      <pre>    %c-22_i8 = hw.constant -22 : i8</pre>
+      <pre>    %c-21_i8 = hw.constant -21 : i8</pre>
+      <pre>    %c-20_i8 = hw.constant -20 : i8</pre>
+      <pre>    %c-19_i8 = hw.constant -19 : i8</pre>
+      <pre>    %c-18_i8 = hw.constant -18 : i8</pre>
+      <pre>    %c-17_i8 = hw.constant -17 : i8</pre>
+      <pre>    %c-16_i8 = hw.constant -16 : i8</pre>
+      <pre>    %c-15_i8 = hw.constant -15 : i8</pre>
+      <pre>    %c-14_i8 = hw.constant -14 : i8</pre>
+      <pre>    %c-13_i8 = hw.constant -13 : i8</pre>
+      <pre>    %c-12_i8 = hw.constant -12 : i8</pre>
+      <pre>    %c-11_i8 = hw.constant -11 : i8</pre>
+      <pre>    %c-10_i8 = hw.constant -10 : i8</pre>
+      <pre>    %c-9_i8 = hw.constant -9 : i8</pre>
+      <pre>    %c-8_i8 = hw.constant -8 : i8</pre>
+      <pre>    %c-7_i8 = hw.constant -7 : i8</pre>
+      <pre>    %c-6_i8 = hw.constant -6 : i8</pre>
+      <pre>    %c-5_i8 = hw.constant -5 : i8</pre>
+      <pre>    %c-4_i8 = hw.constant -4 : i8</pre>
+      <pre>    %c-3_i8 = hw.constant -3 : i8</pre>
+      <pre>    %c-2_i8 = hw.constant -2 : i8</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c100_i32 = hw.constant 100 : i32</pre>
+      <pre>    %16 = llhd.constant_time &lt;1000000fs, 0d, 0e&gt;</pre>
+      <pre>    %c99_i8 = hw.constant 99 : i8</pre>
+      <pre>    %c87_i8 = hw.constant 87 : i8</pre>
+      <pre>    %c19_i8 = hw.constant 19 : i8</pre>
+      <pre>    %c7_i8 = hw.constant 7 : i8</pre>
+      <pre>    %c-49_i8 = hw.constant -49 : i8</pre>
+      <pre>    %c-118_i8 = hw.constant -118 : i8</pre>
+      <pre>    %c91_i8 = hw.constant 91 : i8</pre>
+      <pre>    %c23_i8 = hw.constant 23 : i8</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c18_i32 = hw.constant 18 : i32</pre>
+      <pre>    %c17_i32 = hw.constant 17 : i32</pre>
+      <pre>    %c16_i32 = hw.constant 16 : i32</pre>
+      <pre>    %c15_i32 = hw.constant 15 : i32</pre>
+      <pre>    %c14_i32 = hw.constant 14 : i32</pre>
+      <pre>    %c13_i32 = hw.constant 13 : i32</pre>
+      <pre>    %c12_i32 = hw.constant 12 : i32</pre>
+      <pre>    %c11_i32 = hw.constant 11 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c10_i32 = hw.constant 10 : i32</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %unsignedbyte_enum = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %signedbyte_enum = llhd.sig %c0_i8 : i8</pre>
+      <pre>    %E1 = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %vr = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %bin_enum = llhd.sig %14 : !hw.struct&lt;value: i3, unknown: i3&gt;</pre>
+      <pre>    %17 = llhd.sig.struct_extract %bin_enum[&#34;value&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %18 = llhd.sig.struct_extract %bin_enum[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i3, unknown: i3&gt;&gt;</pre>
+      <pre>    %i = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.wait delay %16, ^bb1</pre>
+      <pre>    ^bb1:  // pred: ^bb0</pre>
+      <pre>      llhd.drv %unsignedbyte_enum, %c0_i8 after %15 : i8</pre>
+      <pre>      llhd.drv %i, %c1_i32 after %15 : i32</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb2:  // 2 preds: ^bb1, ^bb5</pre>
+      <pre>      %19 = llhd.prb %i : i32</pre>
+      <pre>      %20 = comb.icmp slt %19, %c256_i32 : i32</pre>
+      <pre>      cf.cond_br %20, ^bb3, ^bb6</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %21 = llhd.prb %unsignedbyte_enum : i8</pre>
+      <pre>      %22 = comb.icmp eq %21, %c-2_i8 : i8</pre>
+      <pre>      %23 = comb.replicate %22 : (i1) -&gt; i8</pre>
+      <pre>      %24 = hw.array_create %23, %23, %c-2_i8, %c-3_i8, %c-4_i8, %c-5_i8, %c-6_i8, %c-7_i8, %c-8_i8, %c-9_i8, %c-10_i8, %c-11_i8, %c-12_i8, %c-13_i8, %c-14_i8, %c-15_i8, %c-16_i8, %c-17_i8, %c-18_i8, %c-19_i8, %c-20_i8, %c-21_i8, %c-22_i8, %c-23_i8, %c-24_i8, %c-25_i8, %c-26_i8, %c-27_i8, %c-28_i8, %c-29_i8, %c-30_i8, %c-31_i8, %c-32_i8, %c-33_i8, %c-34_i8, %c-35_i8, %c-36_i8, %c-37_i8, %c-38_i8, %c-39_i8, %c-40_i8, %c-41_i8, %c-42_i8, %c-43_i8, %c-44_i8, %c-45_i8, %c-46_i8, %c-47_i8, %c-48_i8, %c-49_i8, %c-50_i8, %c-51_i8, %c-52_i8, %c-53_i8, %c-54_i8, %c-55_i8, %c-56_i8, %c-57_i8, %c-58_i8, %c-59_i8, %c-60_i8, %c-61_i8, %c-62_i8, %c-63_i8, %c-64_i8, %c-65_i8, %c-66_i8, %c-67_i8, %c-68_i8, %c-69_i8, %c-70_i8, %c-71_i8, %c-72_i8, %c-73_i8, %c-74_i8, %c-75_i8, %c-76_i8, %c-77_i8, %c-78_i8, %c-79_i8, %c-80_i8, %c-81_i8, %c-82_i8, %c-83_i8, %c-84_i8, %c-85_i8, %c-86_i8, %c-87_i8, %c-88_i8, %c-89_i8, %c-90_i8, %c-91_i8, %c-92_i8, %c-93_i8, %c-94_i8, %c-95_i8, %c-96_i8, %c-97_i8, %c-98_i8, %c-99_i8, %c-100_i8, %c-101_i8, %c-102_i8, %c-103_i8, %c-104_i8, %c-105_i8, %c-106_i8, %c-107_i8, %c-108_i8, %c-109_i8, %c-110_i8, %c-111_i8, %c-112_i8, %c-113_i8, %c-114_i8, %c-115_i8, %c-116_i8, %c-117_i8, %c-118_i8, %c-119_i8, %c-120_i8, %c-121_i8, %c-122_i8, %c-123_i8, %c-124_i8, %c-125_i8, %c-126_i8, %c-127_i8, %c-128_i8, %c127_i8, %c126_i8, %c125_i8, %c124_i8, %c123_i8, %c122_i8, %c121_i8, %c120_i8, %c119_i8, %c118_i8, %c117_i8, %c116_i8, %c115_i8, %c114_i8, %c113_i8, %c112_i8, %c111_i8, %c110_i8, %c109_i8, %c108_i8, %c107_i8, %c106_i8, %c105_i8, %c104_i8, %c103_i8, %c102_i8, %c101_i8, %c100_i8, %c99_i8, %c98_i8, %c97_i8, %c96_i8, %c95_i8, %c94_i8, %c93_i8, %c92_i8, %c91_i8, %c90_i8, %c89_i8, %c88_i8, %c87_i8, %c86_i8, %c85_i8, %c84_i8, %c83_i8, %c82_i8, %c81_i8, %c80_i8, %c79_i8, %c78_i8, %c77_i8, %c76_i8, %c75_i8, %c74_i8, %c73_i8, %c72_i8, %c71_i8, %c70_i8, %c69_i8, %c68_i8, %c67_i8, %c66_i8, %c65_i8, %c64_i8, %c63_i8, %c62_i8, %c61_i8, %c60_i8, %c59_i8, %c58_i8, %c57_i8, %c56_i8, %c55_i8, %c54_i8, %c53_i8, %c52_i8, %c51_i8, %c50_i8, %c49_i8, %c48_i8, %c47_i8, %c46_i8, %c45_i8, %c44_i8, %c43_i8, %c42_i8, %c41_i8, %c40_i8, %c39_i8, %c38_i8, %c37_i8, %c36_i8, %c35_i8, %c34_i8, %c33_i8, %c32_i8, %c31_i8, %c30_i8, %c29_i8, %c28_i8, %c27_i8, %c26_i8, %c25_i8, %c24_i8, %c23_i8, %c22_i8, %c21_i8, %c20_i8, %c19_i8, %c18_i8, %c17_i8, %c16_i8, %c15_i8, %c14_i8, %c13_i8, %c12_i8, %c11_i8, %c10_i8, %c9_i8, %c8_i8, %c7_i8, %c6_i8, %c5_i8, %c4_i8, %c3_i8, %c2_i8, %c1_i8 : i8</pre>
+      <pre>      %25 = hw.array_get %24[%21] : !hw.array&lt;256xi8&gt;, i8</pre>
+      <pre>      llhd.drv %unsignedbyte_enum, %25 after %15 : i8</pre>
+      <pre>      %26 = llhd.prb %unsignedbyte_enum : i8</pre>
+      <pre>      %27 = comb.concat %c0_i24, %26 : i24, i8</pre>
+      <pre>      %28 = llhd.prb %i : i32</pre>
+      <pre>      %29 = comb.icmp ne %27, %28 : i32</pre>
+      <pre>      cf.cond_br %29, ^bb4, ^bb5</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      sim.proc.print %13</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb5:  // pred: ^bb3</pre>
+      <pre>      %30 = llhd.prb %i : i32</pre>
+      <pre>      %31 = comb.add %30, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %31 after %15 : i32</pre>
+      <pre>      cf.br ^bb2</pre>
+      <pre>    ^bb6:  // pred: ^bb2</pre>
+      <pre>      %32 = llhd.prb %unsignedbyte_enum : i8</pre>
+      <pre>      %33 = comb.icmp eq %32, %c-2_i8 : i8</pre>
+      <pre>      %34 = comb.replicate %33 : (i1) -&gt; i8</pre>
+      <pre>      %35 = hw.array_create %34, %34, %c-2_i8, %c-3_i8, %c-4_i8, %c-5_i8, %c-6_i8, %c-7_i8, %c-8_i8, %c-9_i8, %c-10_i8, %c-11_i8, %c-12_i8, %c-13_i8, %c-14_i8, %c-15_i8, %c-16_i8, %c-17_i8, %c-18_i8, %c-19_i8, %c-20_i8, %c-21_i8, %c-22_i8, %c-23_i8, %c-24_i8, %c-25_i8, %c-26_i8, %c-27_i8, %c-28_i8, %c-29_i8, %c-30_i8, %c-31_i8, %c-32_i8, %c-33_i8, %c-34_i8, %c-35_i8, %c-36_i8, %c-37_i8, %c-38_i8, %c-39_i8, %c-40_i8, %c-41_i8, %c-42_i8, %c-43_i8, %c-44_i8, %c-45_i8, %c-46_i8, %c-47_i8, %c-48_i8, %c-49_i8, %c-50_i8, %c-51_i8, %c-52_i8, %c-53_i8, %c-54_i8, %c-55_i8, %c-56_i8, %c-57_i8, %c-58_i8, %c-59_i8, %c-60_i8, %c-61_i8, %c-62_i8, %c-63_i8, %c-64_i8, %c-65_i8, %c-66_i8, %c-67_i8, %c-68_i8, %c-69_i8, %c-70_i8, %c-71_i8, %c-72_i8, %c-73_i8, %c-74_i8, %c-75_i8, %c-76_i8, %c-77_i8, %c-78_i8, %c-79_i8, %c-80_i8, %c-81_i8, %c-82_i8, %c-83_i8, %c-84_i8, %c-85_i8, %c-86_i8, %c-87_i8, %c-88_i8, %c-89_i8, %c-90_i8, %c-91_i8, %c-92_i8, %c-93_i8, %c-94_i8, %c-95_i8, %c-96_i8, %c-97_i8, %c-98_i8, %c-99_i8, %c-100_i8, %c-101_i8, %c-102_i8, %c-103_i8, %c-104_i8, %c-105_i8, %c-106_i8, %c-107_i8, %c-108_i8, %c-109_i8, %c-110_i8, %c-111_i8, %c-112_i8, %c-113_i8, %c-114_i8, %c-115_i8, %c-116_i8, %c-117_i8, %c-118_i8, %c-119_i8, %c-120_i8, %c-121_i8, %c-122_i8, %c-123_i8, %c-124_i8, %c-125_i8, %c-126_i8, %c-127_i8, %c-128_i8, %c127_i8, %c126_i8, %c125_i8, %c124_i8, %c123_i8, %c122_i8, %c121_i8, %c120_i8, %c119_i8, %c118_i8, %c117_i8, %c116_i8, %c115_i8, %c114_i8, %c113_i8, %c112_i8, %c111_i8, %c110_i8, %c109_i8, %c108_i8, %c107_i8, %c106_i8, %c105_i8, %c104_i8, %c103_i8, %c102_i8, %c101_i8, %c100_i8, %c99_i8, %c98_i8, %c97_i8, %c96_i8, %c95_i8, %c94_i8, %c93_i8, %c92_i8, %c91_i8, %c90_i8, %c89_i8, %c88_i8, %c87_i8, %c86_i8, %c85_i8, %c84_i8, %c83_i8, %c82_i8, %c81_i8, %c80_i8, %c79_i8, %c78_i8, %c77_i8, %c76_i8, %c75_i8, %c74_i8, %c73_i8, %c72_i8, %c71_i8, %c70_i8, %c69_i8, %c68_i8, %c67_i8, %c66_i8, %c65_i8, %c64_i8, %c63_i8, %c62_i8, %c61_i8, %c60_i8, %c59_i8, %c58_i8, %c57_i8, %c56_i8, %c55_i8, %c54_i8, %c53_i8, %c52_i8, %c51_i8, %c50_i8, %c49_i8, %c48_i8, %c47_i8, %c46_i8, %c45_i8, %c44_i8, %c43_i8, %c42_i8, %c41_i8, %c40_i8, %c39_i8, %c38_i8, %c37_i8, %c36_i8, %c35_i8, %c34_i8, %c33_i8, %c32_i8, %c31_i8, %c30_i8, %c29_i8, %c28_i8, %c27_i8, %c26_i8, %c25_i8, %c24_i8, %c23_i8, %c22_i8, %c21_i8, %c20_i8, %c19_i8, %c18_i8, %c17_i8, %c16_i8, %c15_i8, %c14_i8, %c13_i8, %c12_i8, %c11_i8, %c10_i8, %c9_i8, %c8_i8, %c7_i8, %c6_i8, %c5_i8, %c4_i8, %c3_i8, %c2_i8, %c1_i8 : i8</pre>
+      <pre>      %36 = hw.array_get %35[%32] : !hw.array&lt;256xi8&gt;, i8</pre>
+      <pre>      llhd.drv %unsignedbyte_enum, %36 after %15 : i8</pre>
+      <pre>      %37 = llhd.prb %unsignedbyte_enum : i8</pre>
+      <pre>      %38 = comb.icmp ne %37, %c0_i8 : i8</pre>
+      <pre>      cf.cond_br %38, ^bb7, ^bb8</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      sim.proc.print %12</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb8:  // pred: ^bb6</pre>
+      <pre>      llhd.drv %signedbyte_enum, %c0_i8 after %15 : i8</pre>
+      <pre>      llhd.drv %i, %c1_i32 after %15 : i32</pre>
+      <pre>      cf.br ^bb9</pre>
+      <pre>    ^bb9:  // 2 preds: ^bb8, ^bb12</pre>
+      <pre>      %39 = llhd.prb %i : i32</pre>
+      <pre>      %40 = comb.icmp slt %39, %c100_i32 : i32</pre>
+      <pre>      cf.cond_br %40, ^bb10, ^bb13</pre>
+      <pre>    ^bb10:  // pred: ^bb9</pre>
+      <pre>      %41 = llhd.prb %signedbyte_enum : i8</pre>
+      <pre>      %42 = comb.icmp eq %41, %c98_i8 : i8</pre>
+      <pre>      %43 = comb.mux %42, %c99_i8, %c0_i8 : i8</pre>
+      <pre>      %44 = comb.icmp eq %41, %c97_i8 : i8</pre>
+      <pre>      %45 = comb.mux %44, %c98_i8, %43 : i8</pre>
+      <pre>      %46 = comb.icmp eq %41, %c96_i8 : i8</pre>
+      <pre>      %47 = comb.mux %46, %c97_i8, %45 : i8</pre>
+      <pre>      %48 = comb.icmp eq %41, %c95_i8 : i8</pre>
+      <pre>      %49 = comb.mux %48, %c96_i8, %47 : i8</pre>
+      <pre>      %50 = comb.icmp eq %41, %c94_i8 : i8</pre>
+      <pre>      %51 = comb.mux %50, %c95_i8, %49 : i8</pre>
+      <pre>      %52 = comb.icmp eq %41, %c93_i8 : i8</pre>
+      <pre>      %53 = comb.mux %52, %c94_i8, %51 : i8</pre>
+      <pre>      %54 = comb.icmp eq %41, %c92_i8 : i8</pre>
+      <pre>      %55 = comb.mux %54, %c93_i8, %53 : i8</pre>
+      <pre>      %56 = comb.icmp eq %41, %c91_i8 : i8</pre>
+      <pre>      %57 = comb.mux %56, %c92_i8, %55 : i8</pre>
+      <pre>      %58 = comb.icmp eq %41, %c90_i8 : i8</pre>
+      <pre>      %59 = comb.mux %58, %c91_i8, %57 : i8</pre>
+      <pre>      %60 = comb.icmp eq %41, %c89_i8 : i8</pre>
+      <pre>      %61 = comb.mux %60, %c90_i8, %59 : i8</pre>
+      <pre>      %62 = comb.icmp eq %41, %c88_i8 : i8</pre>
+      <pre>      %63 = comb.mux %62, %c89_i8, %61 : i8</pre>
+      <pre>      %64 = comb.icmp eq %41, %c87_i8 : i8</pre>
+      <pre>      %65 = comb.mux %64, %c88_i8, %63 : i8</pre>
+      <pre>      %66 = comb.icmp eq %41, %c86_i8 : i8</pre>
+      <pre>      %67 = comb.mux %66, %c87_i8, %65 : i8</pre>
+      <pre>      %68 = comb.icmp eq %41, %c85_i8 : i8</pre>
+      <pre>      %69 = comb.mux %68, %c86_i8, %67 : i8</pre>
+      <pre>      %70 = comb.icmp eq %41, %c84_i8 : i8</pre>
+      <pre>      %71 = comb.mux %70, %c85_i8, %69 : i8</pre>
+      <pre>      %72 = comb.icmp eq %41, %c83_i8 : i8</pre>
+      <pre>      %73 = comb.mux %72, %c84_i8, %71 : i8</pre>
+      <pre>      %74 = comb.icmp eq %41, %c82_i8 : i8</pre>
+      <pre>      %75 = comb.mux %74, %c83_i8, %73 : i8</pre>
+      <pre>      %76 = comb.icmp eq %41, %c81_i8 : i8</pre>
+      <pre>      %77 = comb.mux %76, %c82_i8, %75 : i8</pre>
+      <pre>      %78 = comb.icmp eq %41, %c80_i8 : i8</pre>
+      <pre>      %79 = comb.mux %78, %c81_i8, %77 : i8</pre>
+      <pre>      %80 = comb.icmp eq %41, %c79_i8 : i8</pre>
+      <pre>      %81 = comb.mux %80, %c80_i8, %79 : i8</pre>
+      <pre>      %82 = comb.icmp eq %41, %c78_i8 : i8</pre>
+      <pre>      %83 = comb.mux %82, %c79_i8, %81 : i8</pre>
+      <pre>      %84 = comb.icmp eq %41, %c77_i8 : i8</pre>
+      <pre>      %85 = comb.mux %84, %c78_i8, %83 : i8</pre>
+      <pre>      %86 = comb.icmp eq %41, %c76_i8 : i8</pre>
+      <pre>      %87 = comb.mux %86, %c77_i8, %85 : i8</pre>
+      <pre>      %88 = comb.icmp eq %41, %c75_i8 : i8</pre>
+      <pre>      %89 = comb.mux %88, %c76_i8, %87 : i8</pre>
+      <pre>      %90 = comb.icmp eq %41, %c74_i8 : i8</pre>
+      <pre>      %91 = comb.mux %90, %c75_i8, %89 : i8</pre>
+      <pre>      %92 = comb.icmp eq %41, %c73_i8 : i8</pre>
+      <pre>      %93 = comb.mux %92, %c74_i8, %91 : i8</pre>
+      <pre>      %94 = comb.icmp eq %41, %c72_i8 : i8</pre>
+      <pre>      %95 = comb.mux %94, %c73_i8, %93 : i8</pre>
+      <pre>      %96 = comb.icmp eq %41, %c71_i8 : i8</pre>
+      <pre>      %97 = comb.mux %96, %c72_i8, %95 : i8</pre>
+      <pre>      %98 = comb.icmp eq %41, %c70_i8 : i8</pre>
+      <pre>      %99 = comb.mux %98, %c71_i8, %97 : i8</pre>
+      <pre>      %100 = comb.icmp eq %41, %c69_i8 : i8</pre>
+      <pre>      %101 = comb.mux %100, %c70_i8, %99 : i8</pre>
+      <pre>      %102 = comb.icmp eq %41, %c68_i8 : i8</pre>
+      <pre>      %103 = comb.mux %102, %c69_i8, %101 : i8</pre>
+      <pre>      %104 = comb.icmp eq %41, %c67_i8 : i8</pre>
+      <pre>      %105 = comb.mux %104, %c68_i8, %103 : i8</pre>
+      <pre>      %106 = comb.icmp eq %41, %c66_i8 : i8</pre>
+      <pre>      %107 = comb.mux %106, %c67_i8, %105 : i8</pre>
+      <pre>      %108 = comb.icmp eq %41, %c65_i8 : i8</pre>
+      <pre>      %109 = comb.mux %108, %c66_i8, %107 : i8</pre>
+      <pre>      %110 = comb.icmp eq %41, %c64_i8 : i8</pre>
+      <pre>      %111 = comb.mux %110, %c65_i8, %109 : i8</pre>
+      <pre>      %112 = comb.icmp eq %41, %c63_i8 : i8</pre>
+      <pre>      %113 = comb.mux %112, %c64_i8, %111 : i8</pre>
+      <pre>      %114 = comb.icmp eq %41, %c62_i8 : i8</pre>
+      <pre>      %115 = comb.mux %114, %c63_i8, %113 : i8</pre>
+      <pre>      %116 = comb.icmp eq %41, %c61_i8 : i8</pre>
+      <pre>      %117 = comb.mux %116, %c62_i8, %115 : i8</pre>
+      <pre>      %118 = comb.icmp eq %41, %c60_i8 : i8</pre>
+      <pre>      %119 = comb.mux %118, %c61_i8, %117 : i8</pre>
+      <pre>      %120 = comb.icmp eq %41, %c59_i8 : i8</pre>
+      <pre>      %121 = comb.mux %120, %c60_i8, %119 : i8</pre>
+      <pre>      %122 = comb.icmp eq %41, %c58_i8 : i8</pre>
+      <pre>      %123 = comb.mux %122, %c59_i8, %121 : i8</pre>
+      <pre>      %124 = comb.icmp eq %41, %c57_i8 : i8</pre>
+      <pre>      %125 = comb.mux %124, %c58_i8, %123 : i8</pre>
+      <pre>      %126 = comb.icmp eq %41, %c56_i8 : i8</pre>
+      <pre>      %127 = comb.mux %126, %c57_i8, %125 : i8</pre>
+      <pre>      %128 = comb.icmp eq %41, %c55_i8 : i8</pre>
+      <pre>      %129 = comb.mux %128, %c56_i8, %127 : i8</pre>
+      <pre>      %130 = comb.icmp eq %41, %c54_i8 : i8</pre>
+      <pre>      %131 = comb.mux %130, %c55_i8, %129 : i8</pre>
+      <pre>      %132 = comb.icmp eq %41, %c53_i8 : i8</pre>
+      <pre>      %133 = comb.mux %132, %c54_i8, %131 : i8</pre>
+      <pre>      %134 = comb.icmp eq %41, %c52_i8 : i8</pre>
+      <pre>      %135 = comb.mux %134, %c53_i8, %133 : i8</pre>
+      <pre>      %136 = comb.icmp eq %41, %c51_i8 : i8</pre>
+      <pre>      %137 = comb.mux %136, %c52_i8, %135 : i8</pre>
+      <pre>      %138 = comb.icmp eq %41, %c50_i8 : i8</pre>
+      <pre>      %139 = comb.mux %138, %c51_i8, %137 : i8</pre>
+      <pre>      %140 = comb.icmp eq %41, %c49_i8 : i8</pre>
+      <pre>      %141 = comb.mux %140, %c50_i8, %139 : i8</pre>
+      <pre>      %142 = comb.icmp eq %41, %c48_i8 : i8</pre>
+      <pre>      %143 = comb.mux %142, %c49_i8, %141 : i8</pre>
+      <pre>      %144 = comb.icmp eq %41, %c47_i8 : i8</pre>
+      <pre>      %145 = comb.mux %144, %c48_i8, %143 : i8</pre>
+      <pre>      %146 = comb.icmp eq %41, %c46_i8 : i8</pre>
+      <pre>      %147 = comb.mux %146, %c47_i8, %145 : i8</pre>
+      <pre>      %148 = comb.icmp eq %41, %c45_i8 : i8</pre>
+      <pre>      %149 = comb.mux %148, %c46_i8, %147 : i8</pre>
+      <pre>      %150 = comb.icmp eq %41, %c44_i8 : i8</pre>
+      <pre>      %151 = comb.mux %150, %c45_i8, %149 : i8</pre>
+      <pre>      %152 = comb.icmp eq %41, %c43_i8 : i8</pre>
+      <pre>      %153 = comb.mux %152, %c44_i8, %151 : i8</pre>
+      <pre>      %154 = comb.icmp eq %41, %c42_i8 : i8</pre>
+      <pre>      %155 = comb.mux %154, %c43_i8, %153 : i8</pre>
+      <pre>      %156 = comb.icmp eq %41, %c41_i8 : i8</pre>
+      <pre>      %157 = comb.mux %156, %c42_i8, %155 : i8</pre>
+      <pre>      %158 = comb.icmp eq %41, %c40_i8 : i8</pre>
+      <pre>      %159 = comb.mux %158, %c41_i8, %157 : i8</pre>
+      <pre>      %160 = comb.icmp eq %41, %c39_i8 : i8</pre>
+      <pre>      %161 = comb.mux %160, %c40_i8, %159 : i8</pre>
+      <pre>      %162 = comb.icmp eq %41, %c38_i8 : i8</pre>
+      <pre>      %163 = comb.mux %162, %c39_i8, %161 : i8</pre>
+      <pre>      %164 = comb.icmp eq %41, %c37_i8 : i8</pre>
+      <pre>      %165 = comb.mux %164, %c38_i8, %163 : i8</pre>
+      <pre>      %166 = comb.icmp eq %41, %c36_i8 : i8</pre>
+      <pre>      %167 = comb.mux %166, %c37_i8, %165 : i8</pre>
+      <pre>      %168 = comb.icmp eq %41, %c35_i8 : i8</pre>
+      <pre>      %169 = comb.mux %168, %c36_i8, %167 : i8</pre>
+      <pre>      %170 = comb.icmp eq %41, %c34_i8 : i8</pre>
+      <pre>      %171 = comb.mux %170, %c35_i8, %169 : i8</pre>
+      <pre>      %172 = comb.icmp eq %41, %c33_i8 : i8</pre>
+      <pre>      %173 = comb.mux %172, %c34_i8, %171 : i8</pre>
+      <pre>      %174 = comb.icmp eq %41, %c32_i8 : i8</pre>
+      <pre>      %175 = comb.mux %174, %c33_i8, %173 : i8</pre>
+      <pre>      %176 = comb.icmp eq %41, %c31_i8 : i8</pre>
+      <pre>      %177 = comb.mux %176, %c32_i8, %175 : i8</pre>
+      <pre>      %178 = comb.icmp eq %41, %c30_i8 : i8</pre>
+      <pre>      %179 = comb.mux %178, %c31_i8, %177 : i8</pre>
+      <pre>      %180 = comb.icmp eq %41, %c29_i8 : i8</pre>
+      <pre>      %181 = comb.mux %180, %c30_i8, %179 : i8</pre>
+      <pre>      %182 = comb.icmp eq %41, %c28_i8 : i8</pre>
+      <pre>      %183 = comb.mux %182, %c29_i8, %181 : i8</pre>
+      <pre>      %184 = comb.icmp eq %41, %c27_i8 : i8</pre>
+      <pre>      %185 = comb.mux %184, %c28_i8, %183 : i8</pre>
+      <pre>      %186 = comb.icmp eq %41, %c26_i8 : i8</pre>
+      <pre>      %187 = comb.mux %186, %c27_i8, %185 : i8</pre>
+      <pre>      %188 = comb.icmp eq %41, %c25_i8 : i8</pre>
+      <pre>      %189 = comb.mux %188, %c26_i8, %187 : i8</pre>
+      <pre>      %190 = comb.icmp eq %41, %c24_i8 : i8</pre>
+      <pre>      %191 = comb.mux %190, %c25_i8, %189 : i8</pre>
+      <pre>      %192 = comb.icmp eq %41, %c23_i8 : i8</pre>
+      <pre>      %193 = comb.mux %192, %c24_i8, %191 : i8</pre>
+      <pre>      %194 = comb.icmp eq %41, %c22_i8 : i8</pre>
+      <pre>      %195 = comb.mux %194, %c23_i8, %193 : i8</pre>
+      <pre>      %196 = comb.icmp eq %41, %c21_i8 : i8</pre>
+      <pre>      %197 = comb.mux %196, %c22_i8, %195 : i8</pre>
+      <pre>      %198 = comb.icmp eq %41, %c20_i8 : i8</pre>
+      <pre>      %199 = comb.mux %198, %c21_i8, %197 : i8</pre>
+      <pre>      %200 = comb.icmp eq %41, %c19_i8 : i8</pre>
+      <pre>      %201 = comb.mux %200, %c20_i8, %199 : i8</pre>
+      <pre>      %202 = comb.icmp eq %41, %c18_i8 : i8</pre>
+      <pre>      %203 = comb.mux %202, %c19_i8, %201 : i8</pre>
+      <pre>      %204 = comb.icmp eq %41, %c17_i8 : i8</pre>
+      <pre>      %205 = comb.mux %204, %c18_i8, %203 : i8</pre>
+      <pre>      %206 = comb.icmp eq %41, %c16_i8 : i8</pre>
+      <pre>      %207 = comb.mux %206, %c17_i8, %205 : i8</pre>
+      <pre>      %208 = comb.icmp eq %41, %c15_i8 : i8</pre>
+      <pre>      %209 = comb.mux %208, %c16_i8, %207 : i8</pre>
+      <pre>      %210 = comb.icmp eq %41, %c14_i8 : i8</pre>
+      <pre>      %211 = comb.mux %210, %c15_i8, %209 : i8</pre>
+      <pre>      %212 = comb.icmp eq %41, %c13_i8 : i8</pre>
+      <pre>      %213 = comb.mux %212, %c14_i8, %211 : i8</pre>
+      <pre>      %214 = comb.icmp eq %41, %c12_i8 : i8</pre>
+      <pre>      %215 = comb.mux %214, %c13_i8, %213 : i8</pre>
+      <pre>      %216 = comb.icmp eq %41, %c11_i8 : i8</pre>
+      <pre>      %217 = comb.mux %216, %c12_i8, %215 : i8</pre>
+      <pre>      %218 = comb.icmp eq %41, %c10_i8 : i8</pre>
+      <pre>      %219 = comb.mux %218, %c11_i8, %217 : i8</pre>
+      <pre>      %220 = comb.icmp eq %41, %c9_i8 : i8</pre>
+      <pre>      %221 = comb.mux %220, %c10_i8, %219 : i8</pre>
+      <pre>      %222 = comb.icmp eq %41, %c8_i8 : i8</pre>
+      <pre>      %223 = comb.mux %222, %c9_i8, %221 : i8</pre>
+      <pre>      %224 = comb.icmp eq %41, %c7_i8 : i8</pre>
+      <pre>      %225 = comb.mux %224, %c8_i8, %223 : i8</pre>
+      <pre>      %226 = comb.icmp eq %41, %c6_i8 : i8</pre>
+      <pre>      %227 = comb.mux %226, %c7_i8, %225 : i8</pre>
+      <pre>      %228 = comb.icmp eq %41, %c5_i8 : i8</pre>
+      <pre>      %229 = comb.mux %228, %c6_i8, %227 : i8</pre>
+      <pre>      %230 = comb.icmp eq %41, %c4_i8 : i8</pre>
+      <pre>      %231 = comb.mux %230, %c5_i8, %229 : i8</pre>
+      <pre>      %232 = comb.icmp eq %41, %c3_i8 : i8</pre>
+      <pre>      %233 = comb.mux %232, %c4_i8, %231 : i8</pre>
+      <pre>      %234 = comb.icmp eq %41, %c2_i8 : i8</pre>
+      <pre>      %235 = comb.mux %234, %c3_i8, %233 : i8</pre>
+      <pre>      %236 = comb.icmp eq %41, %c1_i8 : i8</pre>
+      <pre>      %237 = comb.mux %236, %c2_i8, %235 : i8</pre>
+      <pre>      %238 = comb.icmp eq %41, %c0_i8 : i8</pre>
+      <pre>      %239 = comb.mux %238, %c1_i8, %237 : i8</pre>
+      <pre>      llhd.drv %signedbyte_enum, %239 after %15 : i8</pre>
+      <pre>      %240 = llhd.prb %signedbyte_enum : i8</pre>
+      <pre>      %241 = comb.extract %240 from 7 : (i8) -&gt; i1</pre>
+      <pre>      %242 = comb.replicate %241 : (i1) -&gt; i24</pre>
+      <pre>      %243 = comb.concat %242, %240 : i24, i8</pre>
+      <pre>      %244 = llhd.prb %i : i32</pre>
+      <pre>      %245 = comb.icmp ne %243, %244 : i32</pre>
+      <pre>      cf.cond_br %245, ^bb11, ^bb12</pre>
+      <pre>    ^bb11:  // pred: ^bb10</pre>
+      <pre>      sim.proc.print %11</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb12:  // pred: ^bb10</pre>
+      <pre>      %246 = llhd.prb %i : i32</pre>
+      <pre>      %247 = comb.add %246, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %247 after %15 : i32</pre>
+      <pre>      cf.br ^bb9</pre>
+      <pre>    ^bb13:  // pred: ^bb9</pre>
+      <pre>      %248 = llhd.prb %signedbyte_enum : i8</pre>
+      <pre>      %249 = comb.icmp eq %248, %c98_i8 : i8</pre>
+      <pre>      %250 = comb.mux %249, %c99_i8, %c0_i8 : i8</pre>
+      <pre>      %251 = comb.icmp eq %248, %c97_i8 : i8</pre>
+      <pre>      %252 = comb.mux %251, %c98_i8, %250 : i8</pre>
+      <pre>      %253 = comb.icmp eq %248, %c96_i8 : i8</pre>
+      <pre>      %254 = comb.mux %253, %c97_i8, %252 : i8</pre>
+      <pre>      %255 = comb.icmp eq %248, %c95_i8 : i8</pre>
+      <pre>      %256 = comb.mux %255, %c96_i8, %254 : i8</pre>
+      <pre>      %257 = comb.icmp eq %248, %c94_i8 : i8</pre>
+      <pre>      %258 = comb.mux %257, %c95_i8, %256 : i8</pre>
+      <pre>      %259 = comb.icmp eq %248, %c93_i8 : i8</pre>
+      <pre>      %260 = comb.mux %259, %c94_i8, %258 : i8</pre>
+      <pre>      %261 = comb.icmp eq %248, %c92_i8 : i8</pre>
+      <pre>      %262 = comb.mux %261, %c93_i8, %260 : i8</pre>
+      <pre>      %263 = comb.icmp eq %248, %c91_i8 : i8</pre>
+      <pre>      %264 = comb.mux %263, %c92_i8, %262 : i8</pre>
+      <pre>      %265 = comb.icmp eq %248, %c90_i8 : i8</pre>
+      <pre>      %266 = comb.mux %265, %c91_i8, %264 : i8</pre>
+      <pre>      %267 = comb.icmp eq %248, %c89_i8 : i8</pre>
+      <pre>      %268 = comb.mux %267, %c90_i8, %266 : i8</pre>
+      <pre>      %269 = comb.icmp eq %248, %c88_i8 : i8</pre>
+      <pre>      %270 = comb.mux %269, %c89_i8, %268 : i8</pre>
+      <pre>      %271 = comb.icmp eq %248, %c87_i8 : i8</pre>
+      <pre>      %272 = comb.mux %271, %c88_i8, %270 : i8</pre>
+      <pre>      %273 = comb.icmp eq %248, %c86_i8 : i8</pre>
+      <pre>      %274 = comb.mux %273, %c87_i8, %272 : i8</pre>
+      <pre>      %275 = comb.icmp eq %248, %c85_i8 : i8</pre>
+      <pre>      %276 = comb.mux %275, %c86_i8, %274 : i8</pre>
+      <pre>      %277 = comb.icmp eq %248, %c84_i8 : i8</pre>
+      <pre>      %278 = comb.mux %277, %c85_i8, %276 : i8</pre>
+      <pre>      %279 = comb.icmp eq %248, %c83_i8 : i8</pre>
+      <pre>      %280 = comb.mux %279, %c84_i8, %278 : i8</pre>
+      <pre>      %281 = comb.icmp eq %248, %c82_i8 : i8</pre>
+      <pre>      %282 = comb.mux %281, %c83_i8, %280 : i8</pre>
+      <pre>      %283 = comb.icmp eq %248, %c81_i8 : i8</pre>
+      <pre>      %284 = comb.mux %283, %c82_i8, %282 : i8</pre>
+      <pre>      %285 = comb.icmp eq %248, %c80_i8 : i8</pre>
+      <pre>      %286 = comb.mux %285, %c81_i8, %284 : i8</pre>
+      <pre>      %287 = comb.icmp eq %248, %c79_i8 : i8</pre>
+      <pre>      %288 = comb.mux %287, %c80_i8, %286 : i8</pre>
+      <pre>      %289 = comb.icmp eq %248, %c78_i8 : i8</pre>
+      <pre>      %290 = comb.mux %289, %c79_i8, %288 : i8</pre>
+      <pre>      %291 = comb.icmp eq %248, %c77_i8 : i8</pre>
+      <pre>      %292 = comb.mux %291, %c78_i8, %290 : i8</pre>
+      <pre>      %293 = comb.icmp eq %248, %c76_i8 : i8</pre>
+      <pre>      %294 = comb.mux %293, %c77_i8, %292 : i8</pre>
+      <pre>      %295 = comb.icmp eq %248, %c75_i8 : i8</pre>
+      <pre>      %296 = comb.mux %295, %c76_i8, %294 : i8</pre>
+      <pre>      %297 = comb.icmp eq %248, %c74_i8 : i8</pre>
+      <pre>      %298 = comb.mux %297, %c75_i8, %296 : i8</pre>
+      <pre>      %299 = comb.icmp eq %248, %c73_i8 : i8</pre>
+      <pre>      %300 = comb.mux %299, %c74_i8, %298 : i8</pre>
+      <pre>      %301 = comb.icmp eq %248, %c72_i8 : i8</pre>
+      <pre>      %302 = comb.mux %301, %c73_i8, %300 : i8</pre>
+      <pre>      %303 = comb.icmp eq %248, %c71_i8 : i8</pre>
+      <pre>      %304 = comb.mux %303, %c72_i8, %302 : i8</pre>
+      <pre>      %305 = comb.icmp eq %248, %c70_i8 : i8</pre>
+      <pre>      %306 = comb.mux %305, %c71_i8, %304 : i8</pre>
+      <pre>      %307 = comb.icmp eq %248, %c69_i8 : i8</pre>
+      <pre>      %308 = comb.mux %307, %c70_i8, %306 : i8</pre>
+      <pre>      %309 = comb.icmp eq %248, %c68_i8 : i8</pre>
+      <pre>      %310 = comb.mux %309, %c69_i8, %308 : i8</pre>
+      <pre>      %311 = comb.icmp eq %248, %c67_i8 : i8</pre>
+      <pre>      %312 = comb.mux %311, %c68_i8, %310 : i8</pre>
+      <pre>      %313 = comb.icmp eq %248, %c66_i8 : i8</pre>
+      <pre>      %314 = comb.mux %313, %c67_i8, %312 : i8</pre>
+      <pre>      %315 = comb.icmp eq %248, %c65_i8 : i8</pre>
+      <pre>      %316 = comb.mux %315, %c66_i8, %314 : i8</pre>
+      <pre>      %317 = comb.icmp eq %248, %c64_i8 : i8</pre>
+      <pre>      %318 = comb.mux %317, %c65_i8, %316 : i8</pre>
+      <pre>      %319 = comb.icmp eq %248, %c63_i8 : i8</pre>
+      <pre>      %320 = comb.mux %319, %c64_i8, %318 : i8</pre>
+      <pre>      %321 = comb.icmp eq %248, %c62_i8 : i8</pre>
+      <pre>      %322 = comb.mux %321, %c63_i8, %320 : i8</pre>
+      <pre>      %323 = comb.icmp eq %248, %c61_i8 : i8</pre>
+      <pre>      %324 = comb.mux %323, %c62_i8, %322 : i8</pre>
+      <pre>      %325 = comb.icmp eq %248, %c60_i8 : i8</pre>
+      <pre>      %326 = comb.mux %325, %c61_i8, %324 : i8</pre>
+      <pre>      %327 = comb.icmp eq %248, %c59_i8 : i8</pre>
+      <pre>      %328 = comb.mux %327, %c60_i8, %326 : i8</pre>
+      <pre>      %329 = comb.icmp eq %248, %c58_i8 : i8</pre>
+      <pre>      %330 = comb.mux %329, %c59_i8, %328 : i8</pre>
+      <pre>      %331 = comb.icmp eq %248, %c57_i8 : i8</pre>
+      <pre>      %332 = comb.mux %331, %c58_i8, %330 : i8</pre>
+      <pre>      %333 = comb.icmp eq %248, %c56_i8 : i8</pre>
+      <pre>      %334 = comb.mux %333, %c57_i8, %332 : i8</pre>
+      <pre>      %335 = comb.icmp eq %248, %c55_i8 : i8</pre>
+      <pre>      %336 = comb.mux %335, %c56_i8, %334 : i8</pre>
+      <pre>      %337 = comb.icmp eq %248, %c54_i8 : i8</pre>
+      <pre>      %338 = comb.mux %337, %c55_i8, %336 : i8</pre>
+      <pre>      %339 = comb.icmp eq %248, %c53_i8 : i8</pre>
+      <pre>      %340 = comb.mux %339, %c54_i8, %338 : i8</pre>
+      <pre>      %341 = comb.icmp eq %248, %c52_i8 : i8</pre>
+      <pre>      %342 = comb.mux %341, %c53_i8, %340 : i8</pre>
+      <pre>      %343 = comb.icmp eq %248, %c51_i8 : i8</pre>
+      <pre>      %344 = comb.mux %343, %c52_i8, %342 : i8</pre>
+      <pre>      %345 = comb.icmp eq %248, %c50_i8 : i8</pre>
+      <pre>      %346 = comb.mux %345, %c51_i8, %344 : i8</pre>
+      <pre>      %347 = comb.icmp eq %248, %c49_i8 : i8</pre>
+      <pre>      %348 = comb.mux %347, %c50_i8, %346 : i8</pre>
+      <pre>      %349 = comb.icmp eq %248, %c48_i8 : i8</pre>
+      <pre>      %350 = comb.mux %349, %c49_i8, %348 : i8</pre>
+      <pre>      %351 = comb.icmp eq %248, %c47_i8 : i8</pre>
+      <pre>      %352 = comb.mux %351, %c48_i8, %350 : i8</pre>
+      <pre>      %353 = comb.icmp eq %248, %c46_i8 : i8</pre>
+      <pre>      %354 = comb.mux %353, %c47_i8, %352 : i8</pre>
+      <pre>      %355 = comb.icmp eq %248, %c45_i8 : i8</pre>
+      <pre>      %356 = comb.mux %355, %c46_i8, %354 : i8</pre>
+      <pre>      %357 = comb.icmp eq %248, %c44_i8 : i8</pre>
+      <pre>      %358 = comb.mux %357, %c45_i8, %356 : i8</pre>
+      <pre>      %359 = comb.icmp eq %248, %c43_i8 : i8</pre>
+      <pre>      %360 = comb.mux %359, %c44_i8, %358 : i8</pre>
+      <pre>      %361 = comb.icmp eq %248, %c42_i8 : i8</pre>
+      <pre>      %362 = comb.mux %361, %c43_i8, %360 : i8</pre>
+      <pre>      %363 = comb.icmp eq %248, %c41_i8 : i8</pre>
+      <pre>      %364 = comb.mux %363, %c42_i8, %362 : i8</pre>
+      <pre>      %365 = comb.icmp eq %248, %c40_i8 : i8</pre>
+      <pre>      %366 = comb.mux %365, %c41_i8, %364 : i8</pre>
+      <pre>      %367 = comb.icmp eq %248, %c39_i8 : i8</pre>
+      <pre>      %368 = comb.mux %367, %c40_i8, %366 : i8</pre>
+      <pre>      %369 = comb.icmp eq %248, %c38_i8 : i8</pre>
+      <pre>      %370 = comb.mux %369, %c39_i8, %368 : i8</pre>
+      <pre>      %371 = comb.icmp eq %248, %c37_i8 : i8</pre>
+      <pre>      %372 = comb.mux %371, %c38_i8, %370 : i8</pre>
+      <pre>      %373 = comb.icmp eq %248, %c36_i8 : i8</pre>
+      <pre>      %374 = comb.mux %373, %c37_i8, %372 : i8</pre>
+      <pre>      %375 = comb.icmp eq %248, %c35_i8 : i8</pre>
+      <pre>      %376 = comb.mux %375, %c36_i8, %374 : i8</pre>
+      <pre>      %377 = comb.icmp eq %248, %c34_i8 : i8</pre>
+      <pre>      %378 = comb.mux %377, %c35_i8, %376 : i8</pre>
+      <pre>      %379 = comb.icmp eq %248, %c33_i8 : i8</pre>
+      <pre>      %380 = comb.mux %379, %c34_i8, %378 : i8</pre>
+      <pre>      %381 = comb.icmp eq %248, %c32_i8 : i8</pre>
+      <pre>      %382 = comb.mux %381, %c33_i8, %380 : i8</pre>
+      <pre>      %383 = comb.icmp eq %248, %c31_i8 : i8</pre>
+      <pre>      %384 = comb.mux %383, %c32_i8, %382 : i8</pre>
+      <pre>      %385 = comb.icmp eq %248, %c30_i8 : i8</pre>
+      <pre>      %386 = comb.mux %385, %c31_i8, %384 : i8</pre>
+      <pre>      %387 = comb.icmp eq %248, %c29_i8 : i8</pre>
+      <pre>      %388 = comb.mux %387, %c30_i8, %386 : i8</pre>
+      <pre>      %389 = comb.icmp eq %248, %c28_i8 : i8</pre>
+      <pre>      %390 = comb.mux %389, %c29_i8, %388 : i8</pre>
+      <pre>      %391 = comb.icmp eq %248, %c27_i8 : i8</pre>
+      <pre>      %392 = comb.mux %391, %c28_i8, %390 : i8</pre>
+      <pre>      %393 = comb.icmp eq %248, %c26_i8 : i8</pre>
+      <pre>      %394 = comb.mux %393, %c27_i8, %392 : i8</pre>
+      <pre>      %395 = comb.icmp eq %248, %c25_i8 : i8</pre>
+      <pre>      %396 = comb.mux %395, %c26_i8, %394 : i8</pre>
+      <pre>      %397 = comb.icmp eq %248, %c24_i8 : i8</pre>
+      <pre>      %398 = comb.mux %397, %c25_i8, %396 : i8</pre>
+      <pre>      %399 = comb.icmp eq %248, %c23_i8 : i8</pre>
+      <pre>      %400 = comb.mux %399, %c24_i8, %398 : i8</pre>
+      <pre>      %401 = comb.icmp eq %248, %c22_i8 : i8</pre>
+      <pre>      %402 = comb.mux %401, %c23_i8, %400 : i8</pre>
+      <pre>      %403 = comb.icmp eq %248, %c21_i8 : i8</pre>
+      <pre>      %404 = comb.mux %403, %c22_i8, %402 : i8</pre>
+      <pre>      %405 = comb.icmp eq %248, %c20_i8 : i8</pre>
+      <pre>      %406 = comb.mux %405, %c21_i8, %404 : i8</pre>
+      <pre>      %407 = comb.icmp eq %248, %c19_i8 : i8</pre>
+      <pre>      %408 = comb.mux %407, %c20_i8, %406 : i8</pre>
+      <pre>      %409 = comb.icmp eq %248, %c18_i8 : i8</pre>
+      <pre>      %410 = comb.mux %409, %c19_i8, %408 : i8</pre>
+      <pre>      %411 = comb.icmp eq %248, %c17_i8 : i8</pre>
+      <pre>      %412 = comb.mux %411, %c18_i8, %410 : i8</pre>
+      <pre>      %413 = comb.icmp eq %248, %c16_i8 : i8</pre>
+      <pre>      %414 = comb.mux %413, %c17_i8, %412 : i8</pre>
+      <pre>      %415 = comb.icmp eq %248, %c15_i8 : i8</pre>
+      <pre>      %416 = comb.mux %415, %c16_i8, %414 : i8</pre>
+      <pre>      %417 = comb.icmp eq %248, %c14_i8 : i8</pre>
+      <pre>      %418 = comb.mux %417, %c15_i8, %416 : i8</pre>
+      <pre>      %419 = comb.icmp eq %248, %c13_i8 : i8</pre>
+      <pre>      %420 = comb.mux %419, %c14_i8, %418 : i8</pre>
+      <pre>      %421 = comb.icmp eq %248, %c12_i8 : i8</pre>
+      <pre>      %422 = comb.mux %421, %c13_i8, %420 : i8</pre>
+      <pre>      %423 = comb.icmp eq %248, %c11_i8 : i8</pre>
+      <pre>      %424 = comb.mux %423, %c12_i8, %422 : i8</pre>
+      <pre>      %425 = comb.icmp eq %248, %c10_i8 : i8</pre>
+      <pre>      %426 = comb.mux %425, %c11_i8, %424 : i8</pre>
+      <pre>      %427 = comb.icmp eq %248, %c9_i8 : i8</pre>
+      <pre>      %428 = comb.mux %427, %c10_i8, %426 : i8</pre>
+      <pre>      %429 = comb.icmp eq %248, %c8_i8 : i8</pre>
+      <pre>      %430 = comb.mux %429, %c9_i8, %428 : i8</pre>
+      <pre>      %431 = comb.icmp eq %248, %c7_i8 : i8</pre>
+      <pre>      %432 = comb.mux %431, %c8_i8, %430 : i8</pre>
+      <pre>      %433 = comb.icmp eq %248, %c6_i8 : i8</pre>
+      <pre>      %434 = comb.mux %433, %c7_i8, %432 : i8</pre>
+      <pre>      %435 = comb.icmp eq %248, %c5_i8 : i8</pre>
+      <pre>      %436 = comb.mux %435, %c6_i8, %434 : i8</pre>
+      <pre>      %437 = comb.icmp eq %248, %c4_i8 : i8</pre>
+      <pre>      %438 = comb.mux %437, %c5_i8, %436 : i8</pre>
+      <pre>      %439 = comb.icmp eq %248, %c3_i8 : i8</pre>
+      <pre>      %440 = comb.mux %439, %c4_i8, %438 : i8</pre>
+      <pre>      %441 = comb.icmp eq %248, %c2_i8 : i8</pre>
+      <pre>      %442 = comb.mux %441, %c3_i8, %440 : i8</pre>
+      <pre>      %443 = comb.icmp eq %248, %c1_i8 : i8</pre>
+      <pre>      %444 = comb.mux %443, %c2_i8, %442 : i8</pre>
+      <pre>      %445 = comb.icmp eq %248, %c0_i8 : i8</pre>
+      <pre>      %446 = comb.mux %445, %c1_i8, %444 : i8</pre>
+      <pre>      llhd.drv %signedbyte_enum, %446 after %15 : i8</pre>
+      <pre>      %447 = llhd.prb %signedbyte_enum : i8</pre>
+      <pre>      %448 = comb.icmp ne %447, %c0_i8 : i8</pre>
+      <pre>      cf.cond_br %448, ^bb14, ^bb15</pre>
+      <pre>    ^bb14:  // pred: ^bb13</pre>
+      <pre>      sim.proc.print %10</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb15:  // pred: ^bb13</pre>
+      <pre>      llhd.drv %E1, %c10_i32 after %15 : i32</pre>
+      <pre>      llhd.drv %i, %c10_i32 after %15 : i32</pre>
+      <pre>      cf.br ^bb16</pre>
+      <pre>    ^bb16:  // 2 preds: ^bb15, ^bb19</pre>
+      <pre>      %449 = llhd.prb %i : i32</pre>
+      <pre>      %450 = comb.icmp slt %449, %c19_i32 : i32</pre>
+      <pre>      cf.cond_br %450, ^bb17, ^bb20</pre>
+      <pre>    ^bb17:  // pred: ^bb16</pre>
+      <pre>      %451 = llhd.prb %E1 : i32</pre>
+      <pre>      %452 = llhd.prb %i : i32</pre>
+      <pre>      %453 = comb.icmp ne %451, %452 : i32</pre>
+      <pre>      cf.cond_br %453, ^bb18, ^bb19</pre>
+      <pre>    ^bb18:  // pred: ^bb17</pre>
+      <pre>      sim.proc.print %9</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb19:  // pred: ^bb17</pre>
+      <pre>      %454 = llhd.prb %E1 : i32</pre>
+      <pre>      %455 = comb.icmp eq %454, %c18_i32 : i32</pre>
+      <pre>      %456 = comb.mux %455, %c10_i32, %c0_i32 : i32</pre>
+      <pre>      %457 = comb.icmp eq %454, %c17_i32 : i32</pre>
+      <pre>      %458 = comb.mux %457, %c18_i32, %456 : i32</pre>
+      <pre>      %459 = comb.icmp eq %454, %c16_i32 : i32</pre>
+      <pre>      %460 = comb.mux %459, %c17_i32, %458 : i32</pre>
+      <pre>      %461 = comb.icmp eq %454, %c15_i32 : i32</pre>
+      <pre>      %462 = comb.mux %461, %c16_i32, %460 : i32</pre>
+      <pre>      %463 = comb.icmp eq %454, %c14_i32 : i32</pre>
+      <pre>      %464 = comb.mux %463, %c15_i32, %462 : i32</pre>
+      <pre>      %465 = comb.icmp eq %454, %c13_i32 : i32</pre>
+      <pre>      %466 = comb.mux %465, %c14_i32, %464 : i32</pre>
+      <pre>      %467 = comb.icmp eq %454, %c12_i32 : i32</pre>
+      <pre>      %468 = comb.mux %467, %c13_i32, %466 : i32</pre>
+      <pre>      %469 = comb.icmp eq %454, %c11_i32 : i32</pre>
+      <pre>      %470 = comb.mux %469, %c12_i32, %468 : i32</pre>
+      <pre>      %471 = comb.icmp eq %454, %c10_i32 : i32</pre>
+      <pre>      %472 = comb.mux %471, %c11_i32, %470 : i32</pre>
+      <pre>      llhd.drv %E1, %472 after %15 : i32</pre>
+      <pre>      %473 = llhd.prb %i : i32</pre>
+      <pre>      %474 = comb.add %473, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %474 after %15 : i32</pre>
+      <pre>      cf.br ^bb16</pre>
+      <pre>    ^bb20:  // pred: ^bb16</pre>
+      <pre>      %475 = llhd.prb %E1 : i32</pre>
+      <pre>      %476 = comb.icmp ne %475, %c10_i32 : i32</pre>
+      <pre>      cf.cond_br %476, ^bb21, ^bb22</pre>
+      <pre>    ^bb21:  // pred: ^bb20</pre>
+      <pre>      sim.proc.print %8</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb22:  // pred: ^bb20</pre>
+      <pre>      llhd.drv %vr, %c1_i32 after %15 : i32</pre>
+      <pre>      %477 = llhd.prb %vr : i32</pre>
+      <pre>      %478 = comb.icmp eq %477, %c12_i32 : i32</pre>
+      <pre>      %479 = comb.concat %c0_i31, %478 : i31, i1</pre>
+      <pre>      %480 = comb.icmp eq %477, %c11_i32 : i32</pre>
+      <pre>      %481 = comb.mux %480, %c12_i32, %479 : i32</pre>
+      <pre>      %482 = comb.icmp eq %477, %c10_i32 : i32</pre>
+      <pre>      %483 = comb.mux %482, %c11_i32, %481 : i32</pre>
+      <pre>      %484 = comb.icmp eq %477, %c2_i32 : i32</pre>
+      <pre>      %485 = comb.mux %484, %c10_i32, %483 : i32</pre>
+      <pre>      %486 = comb.icmp eq %477, %c1_i32 : i32</pre>
+      <pre>      %487 = comb.mux %486, %c2_i32, %485 : i32</pre>
+      <pre>      llhd.drv %vr, %487 after %15 : i32</pre>
+      <pre>      %488 = llhd.prb %vr : i32</pre>
+      <pre>      %489 = comb.icmp ne %488, %c2_i32 : i32</pre>
+      <pre>      cf.cond_br %489, ^bb23, ^bb24</pre>
+      <pre>    ^bb23:  // pred: ^bb22</pre>
+      <pre>      sim.proc.print %7</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb24:  // pred: ^bb22</pre>
+      <pre>      %490 = llhd.prb %vr : i32</pre>
+      <pre>      %491 = comb.icmp eq %490, %c12_i32 : i32</pre>
+      <pre>      %492 = comb.concat %c0_i31, %491 : i31, i1</pre>
+      <pre>      %493 = comb.icmp eq %490, %c11_i32 : i32</pre>
+      <pre>      %494 = comb.mux %493, %c12_i32, %492 : i32</pre>
+      <pre>      %495 = comb.icmp eq %490, %c10_i32 : i32</pre>
+      <pre>      %496 = comb.mux %495, %c11_i32, %494 : i32</pre>
+      <pre>      %497 = comb.icmp eq %490, %c2_i32 : i32</pre>
+      <pre>      %498 = comb.mux %497, %c10_i32, %496 : i32</pre>
+      <pre>      %499 = comb.icmp eq %490, %c1_i32 : i32</pre>
+      <pre>      %500 = comb.mux %499, %c2_i32, %498 : i32</pre>
+      <pre>      llhd.drv %vr, %500 after %15 : i32</pre>
+      <pre>      %501 = llhd.prb %vr : i32</pre>
+      <pre>      %502 = comb.icmp ne %501, %c10_i32 : i32</pre>
+      <pre>      cf.cond_br %502, ^bb25, ^bb26</pre>
+      <pre>    ^bb25:  // pred: ^bb24</pre>
+      <pre>      sim.proc.print %6</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb26:  // pred: ^bb24</pre>
+      <pre>      %503 = llhd.prb %vr : i32</pre>
+      <pre>      %504 = comb.icmp eq %503, %c12_i32 : i32</pre>
+      <pre>      %505 = comb.concat %c0_i31, %504 : i31, i1</pre>
+      <pre>      %506 = comb.icmp eq %503, %c11_i32 : i32</pre>
+      <pre>      %507 = comb.mux %506, %c12_i32, %505 : i32</pre>
+      <pre>      %508 = comb.icmp eq %503, %c10_i32 : i32</pre>
+      <pre>      %509 = comb.mux %508, %c11_i32, %507 : i32</pre>
+      <pre>      %510 = comb.icmp eq %503, %c2_i32 : i32</pre>
+      <pre>      %511 = comb.mux %510, %c10_i32, %509 : i32</pre>
+      <pre>      %512 = comb.icmp eq %503, %c1_i32 : i32</pre>
+      <pre>      %513 = comb.mux %512, %c2_i32, %511 : i32</pre>
+      <pre>      llhd.drv %vr, %513 after %15 : i32</pre>
+      <pre>      %514 = llhd.prb %vr : i32</pre>
+      <pre>      %515 = comb.icmp ne %514, %c11_i32 : i32</pre>
+      <pre>      cf.cond_br %515, ^bb27, ^bb28</pre>
+      <pre>    ^bb27:  // pred: ^bb26</pre>
+      <pre>      sim.proc.print %5</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb28:  // pred: ^bb26</pre>
+      <pre>      %516 = llhd.prb %vr : i32</pre>
+      <pre>      %517 = comb.icmp eq %516, %c12_i32 : i32</pre>
+      <pre>      %518 = comb.concat %c0_i31, %517 : i31, i1</pre>
+      <pre>      %519 = comb.icmp eq %516, %c11_i32 : i32</pre>
+      <pre>      %520 = comb.mux %519, %c12_i32, %518 : i32</pre>
+      <pre>      %521 = comb.icmp eq %516, %c10_i32 : i32</pre>
+      <pre>      %522 = comb.mux %521, %c11_i32, %520 : i32</pre>
+      <pre>      %523 = comb.icmp eq %516, %c2_i32 : i32</pre>
+      <pre>      %524 = comb.mux %523, %c10_i32, %522 : i32</pre>
+      <pre>      %525 = comb.icmp eq %516, %c1_i32 : i32</pre>
+      <pre>      %526 = comb.mux %525, %c2_i32, %524 : i32</pre>
+      <pre>      llhd.drv %vr, %526 after %15 : i32</pre>
+      <pre>      %527 = llhd.prb %vr : i32</pre>
+      <pre>      %528 = comb.icmp ne %527, %c12_i32 : i32</pre>
+      <pre>      cf.cond_br %528, ^bb29, ^bb30</pre>
+      <pre>    ^bb29:  // pred: ^bb28</pre>
+      <pre>      sim.proc.print %4</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb30:  // pred: ^bb28</pre>
+      <pre>      %529 = llhd.prb %vr : i32</pre>
+      <pre>      %530 = comb.icmp eq %529, %c12_i32 : i32</pre>
+      <pre>      %531 = comb.concat %c0_i31, %530 : i31, i1</pre>
+      <pre>      %532 = comb.icmp eq %529, %c11_i32 : i32</pre>
+      <pre>      %533 = comb.mux %532, %c12_i32, %531 : i32</pre>
+      <pre>      %534 = comb.icmp eq %529, %c10_i32 : i32</pre>
+      <pre>      %535 = comb.mux %534, %c11_i32, %533 : i32</pre>
+      <pre>      %536 = comb.icmp eq %529, %c2_i32 : i32</pre>
+      <pre>      %537 = comb.mux %536, %c10_i32, %535 : i32</pre>
+      <pre>      %538 = comb.icmp eq %529, %c1_i32 : i32</pre>
+      <pre>      %539 = comb.mux %538, %c2_i32, %537 : i32</pre>
+      <pre>      llhd.drv %vr, %539 after %15 : i32</pre>
+      <pre>      %540 = llhd.prb %vr : i32</pre>
+      <pre>      %541 = comb.icmp ne %540, %c1_i32 : i32</pre>
+      <pre>      cf.cond_br %541, ^bb31, ^bb32</pre>
+      <pre>    ^bb31:  // pred: ^bb30</pre>
+      <pre>      sim.proc.print %3</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb32:  // pred: ^bb30</pre>
+      <pre>      llhd.drv %17, %c0_i3 after %15 : i3</pre>
+      <pre>      llhd.drv %18, %c0_i3 after %15 : i3</pre>
+      <pre>      llhd.drv %i, %c0_i32 after %15 : i32</pre>
+      <pre>      cf.br ^bb33</pre>
+      <pre>    ^bb33:  // 2 preds: ^bb32, ^bb36</pre>
+      <pre>      %542 = llhd.prb %i : i32</pre>
+      <pre>      %543 = comb.icmp ult %542, %c8_i32 : i32</pre>
+      <pre>      cf.cond_br %543, ^bb34, ^bb37</pre>
+      <pre>    ^bb34:  // pred: ^bb33</pre>
+      <pre>      %544 = llhd.prb %17 : i3</pre>
+      <pre>      %545 = llhd.prb %18 : i3</pre>
+      <pre>      %546 = comb.concat %c0_i29, %544 : i29, i3</pre>
+      <pre>      %547 = llhd.prb %i : i32</pre>
+      <pre>      %548 = comb.icmp ne %545, %c0_i3 : i3</pre>
+      <pre>      %549 = comb.xor %545, %c-1_i3 : i3</pre>
+      <pre>      %550 = comb.concat %c-1_i29, %549 : i29, i3</pre>
+      <pre>      %551 = comb.xor %546, %547 : i32</pre>
+      <pre>      %552 = comb.and %551, %550 : i32</pre>
+      <pre>      %553 = comb.icmp ne %552, %c0_i32 : i32</pre>
+      <pre>      %554 = comb.xor %553, %true : i1</pre>
+      <pre>      %555 = comb.and %554, %548 : i1</pre>
+      <pre>      %556 = comb.xor %555, %true : i1</pre>
+      <pre>      %557 = comb.and %553, %556 : i1</pre>
+      <pre>      cf.cond_br %557, ^bb35, ^bb36</pre>
+      <pre>    ^bb35:  // pred: ^bb34</pre>
+      <pre>      sim.proc.print %2</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb36:  // pred: ^bb34</pre>
+      <pre>      %558 = llhd.prb %17 : i3</pre>
+      <pre>      %559 = llhd.prb %18 : i3</pre>
+      <pre>      %560 = comb.icmp ne %559, %c0_i3 : i3</pre>
+      <pre>      %561 = comb.xor %559, %c-1_i3 : i3</pre>
+      <pre>      %562 = comb.xor %558, %c-1_i3 : i3</pre>
+      <pre>      %563 = comb.and %562, %561 : i3</pre>
+      <pre>      %564 = comb.icmp eq %563, %c0_i3 : i3</pre>
+      <pre>      %565 = comb.and %564, %560 : i1</pre>
+      <pre>      %566 = comb.xor %560, %true : i1</pre>
+      <pre>      %567 = comb.xor %565, %true : i1</pre>
+      <pre>      %568 = comb.and %564, %566, %567 : i1</pre>
+      <pre>      %569 = comb.xor %558, %c-2_i3 : i3</pre>
+      <pre>      %570 = comb.and %569, %561 : i3</pre>
+      <pre>      %571 = comb.icmp eq %570, %c0_i3 : i3</pre>
+      <pre>      %572 = comb.and %571, %560 : i1</pre>
+      <pre>      %573 = comb.xor %572, %true : i1</pre>
+      <pre>      %574 = comb.and %571, %566, %573 : i1</pre>
+      <pre>      %575 = comb.replicate %574 : (i1) -&gt; i3</pre>
+      <pre>      %576 = comb.xor %558, %c-3_i3 : i3</pre>
+      <pre>      %577 = comb.and %576, %561 : i3</pre>
+      <pre>      %578 = comb.icmp eq %577, %c0_i3 : i3</pre>
+      <pre>      %579 = comb.and %578, %560 : i1</pre>
+      <pre>      %580 = comb.xor %579, %true : i1</pre>
+      <pre>      %581 = comb.and %578, %566, %580 : i1</pre>
+      <pre>      %582 = comb.mux %581, %c-2_i3, %575 : i3</pre>
+      <pre>      %583 = comb.xor %558, %c-4_i3 : i3</pre>
+      <pre>      %584 = comb.and %583, %561 : i3</pre>
+      <pre>      %585 = comb.icmp eq %584, %c0_i3 : i3</pre>
+      <pre>      %586 = comb.and %585, %560 : i1</pre>
+      <pre>      %587 = comb.xor %586, %true : i1</pre>
+      <pre>      %588 = comb.and %585, %566, %587 : i1</pre>
+      <pre>      %589 = comb.mux %588, %c-3_i3, %582 : i3</pre>
+      <pre>      %590 = comb.xor %558, %c3_i3 : i3</pre>
+      <pre>      %591 = comb.and %590, %561 : i3</pre>
+      <pre>      %592 = comb.icmp eq %591, %c0_i3 : i3</pre>
+      <pre>      %593 = comb.and %592, %560 : i1</pre>
+      <pre>      %594 = comb.xor %593, %true : i1</pre>
+      <pre>      %595 = comb.and %592, %566, %594 : i1</pre>
+      <pre>      %596 = comb.mux %595, %c-4_i3, %589 : i3</pre>
+      <pre>      %597 = comb.xor %558, %c2_i3 : i3</pre>
+      <pre>      %598 = comb.and %597, %561 : i3</pre>
+      <pre>      %599 = comb.icmp eq %598, %c0_i3 : i3</pre>
+      <pre>      %600 = comb.and %599, %560 : i1</pre>
+      <pre>      %601 = comb.xor %600, %true : i1</pre>
+      <pre>      %602 = comb.and %599, %566, %601 : i1</pre>
+      <pre>      %603 = comb.mux %602, %c3_i3, %596 : i3</pre>
+      <pre>      %604 = comb.xor %558, %c1_i3 : i3</pre>
+      <pre>      %605 = comb.and %604, %561 : i3</pre>
+      <pre>      %606 = comb.icmp eq %605, %c0_i3 : i3</pre>
+      <pre>      %607 = comb.and %606, %560 : i1</pre>
+      <pre>      %608 = comb.xor %607, %true : i1</pre>
+      <pre>      %609 = comb.and %606, %566, %608 : i1</pre>
+      <pre>      %610 = comb.mux %609, %c2_i3, %603 : i3</pre>
+      <pre>      %611 = comb.and %558, %561 : i3</pre>
+      <pre>      %612 = comb.icmp eq %611, %c0_i3 : i3</pre>
+      <pre>      %613 = comb.and %612, %560 : i1</pre>
+      <pre>      %614 = comb.xor %613, %true : i1</pre>
+      <pre>      %615 = comb.and %612, %566, %614 : i1</pre>
+      <pre>      %616 = comb.mux %615, %c1_i3, %610 : i3</pre>
+      <pre>      %617 = comb.or %615, %609, %602, %595, %588, %581, %574, %568 : i1</pre>
+      <pre>      %618 = comb.mux %617, %c0_i3, %c-1_i3 : i3</pre>
+      <pre>      llhd.drv %17, %616 after %15 : i3</pre>
+      <pre>      llhd.drv %18, %618 after %15 : i3</pre>
+      <pre>      %619 = llhd.prb %i : i32</pre>
+      <pre>      %620 = comb.add %619, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %i, %620 after %15 : i32</pre>
+      <pre>      cf.br ^bb33</pre>
+      <pre>    ^bb37:  // pred: ^bb33</pre>
+      <pre>      %621 = llhd.prb %17 : i3</pre>
+      <pre>      %622 = llhd.prb %18 : i3</pre>
+      <pre>      %623 = comb.icmp ne %622, %c0_i3 : i3</pre>
+      <pre>      %624 = comb.xor %622, %c-1_i3 : i3</pre>
+      <pre>      %625 = comb.and %621, %624 : i3</pre>
+      <pre>      %626 = comb.icmp ne %625, %c0_i3 : i3</pre>
+      <pre>      %627 = comb.xor %626, %true : i1</pre>
+      <pre>      %628 = comb.and %627, %623 : i1</pre>
+      <pre>      %629 = comb.xor %628, %true : i1</pre>
+      <pre>      %630 = comb.and %626, %629 : i1</pre>
+      <pre>      cf.cond_br %630, ^bb38, ^bb39</pre>
+      <pre>    ^bb38:  // pred: ^bb37</pre>
+      <pre>      sim.proc.print %1</pre>
+      <pre>      sim.terminate success, quiet</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    ^bb39:  // pred: ^bb37</pre>
+      <pre>      sim.proc.print %0</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

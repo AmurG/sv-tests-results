@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>sequence_changed_test_uvm</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>sequence with &#34;changed&#34; task in UVM</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>uvm-assertions uvm</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../third_party/tests/uvm/src/uvm_pkg.sv.html" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv</a><li>
+            <li><a href="../../../tests/chapter-16/16.9--sequence-changed-uvm.sv.html" target="file-frame">tests/chapter-16/16.9--sequence-changed-uvm.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:09</dd></div>
+        <div><dt>time elapsed</dt><dd>0.379s</dd></div>
+        <div><dt>ram usage</dt><dd>123536 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../third_party/tests/uvm/src/uvm_pkg.sv.html" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv</a> <a href="../../../tests/chapter-16/16.9--sequence-changed-uvm.sv.html" target="file-frame">tests/chapter-16/16.9--sequence-changed-uvm.sv</a></pre>
+      <pre>../../../tests/chapter-16/16.9--sequence-changed-uvm.sv:87:16: warning: port &#39;clk&#39; has no connection [-Wunconnected-port]</pre>
+      <pre>    clk_gen_if dif();</pre>
+      <pre>               ^</pre>
+      <pre>../../../tests/chapter-16/16.9--sequence-changed-uvm.sv:87:16: warning: port &#39;out&#39; has no connection [-Wunconnected-port]</pre>
+      <pre>    clk_gen_if dif();</pre>
+      <pre>               ^</pre>
+      <pre>../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence &#39;\.&#39; [-Wunknown-escape-code]</pre>
+      <pre>            separator = &#34;\.(&#34; ;</pre>
+      <pre>                         ^</pre>
+      <pre>../../../third_party/tests/uvm/src/uvm_pkg.sv:57:2: note: included from here</pre>
+      <pre> `include &#34;base/uvm_base.svh&#34;</pre>
+      <pre> ^</pre>
+      <pre>../../../third_party/tests/uvm/src/base/uvm_base.svh:77:3: note: included from here</pre>
+      <pre>  `include &#34;base/uvm_config_db_implementation.svh&#34;</pre>
+      <pre>  ^</pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_uvm_run_test(!hw.string)</pre>
+      <pre>  func.func private @circt_uvm_resource_db_set_ptr(!hw.string, !hw.string, i64)</pre>
+      <pre>  func.func private @circt_sv_class_alloc(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_uvm_report(i32, i32, !hw.string, !hw.string)</pre>
+      <pre>  func.func private @circt_uvm_component_register(i32, i32)</pre>
+      <pre>  func.func private @circt_uvm_component_set_name(i32, !hw.string)</pre>
+      <pre>  %c28335575491688373664001366547199773988429_i136 = hw.constant 28335575491688373664001366547199773988429 : i136</pre>
+      <pre>  hw.module private @clk_gen(in %clk : !hw.struct&lt;value: i1, unknown: i1&gt;, out out : !hw.struct&lt;value: i1, unknown: i1&gt;) {</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 1d, 0e&gt;</pre>
+      <pre>    %2 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %c5_i32 = hw.constant 5 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %3 = hw.aggregate_constant [true, true] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %clk_0 = llhd.sig name &#34;clk&#34; %3 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %4 = hw.struct_create (%value, %unknown) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %clk_0, %4 after %2 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %5 = llhd.sig.struct_extract %clk_0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %clk_0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %cnt = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %clk_reg = llhd.sig %false : i1</pre>
+      <pre>    %7 = llhd.prb %clk_reg : i1</pre>
+      <pre>    %8 = hw.struct_create (%7, %false) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.drv %cnt, %c0_i32 after %2 : i32</pre>
+      <pre>    llhd.drv %clk_reg, %false after %2 : i1</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 4 preds: ^bb0, ^bb2, ^bb3, ^bb4</pre>
+      <pre>      %9 = llhd.prb %5 : i1</pre>
+      <pre>      %10 = llhd.prb %6 : i1</pre>
+      <pre>      %11 = hw.struct_create (%9, %10) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      llhd.wait (%11 : !hw.struct&lt;value: i1, unknown: i1&gt;), ^bb2(%11 : !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    ^bb2(%12: !hw.struct&lt;value: i1, unknown: i1&gt;):  // pred: ^bb1</pre>
+      <pre>      %13 = llhd.prb %5 : i1</pre>
+      <pre>      %14 = llhd.prb %6 : i1</pre>
+      <pre>      %value_1 = hw.struct_extract %12[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown_2 = hw.struct_extract %12[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %15 = comb.xor bin %14, %true : i1</pre>
+      <pre>      %16 = comb.xor bin %value_1, %true : i1</pre>
+      <pre>      %17 = comb.or bin %unknown_2, %16 : i1</pre>
+      <pre>      %18 = comb.and bin %15, %13, %17 : i1</pre>
+      <pre>      cf.cond_br %18, ^bb3, ^bb1</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %19 = llhd.prb %cnt : i32</pre>
+      <pre>      %20 = comb.add %19, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %cnt, %20 after %1 : i32</pre>
+      <pre>      %21 = llhd.prb %cnt : i32</pre>
+      <pre>      %22 = comb.icmp sgt %21, %c5_i32 : i32</pre>
+      <pre>      cf.cond_br %22, ^bb4, ^bb1</pre>
+      <pre>    ^bb4:  // pred: ^bb3</pre>
+      <pre>      llhd.drv %clk_reg, %true after %2 : i1</pre>
+      <pre>      llhd.drv %cnt, %c5_i32 after %2 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    %value = hw.struct_extract %clk[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %unknown = hw.struct_extract %clk[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    hw.output %8 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>  }</pre>
+      <pre>  sv.interface @clk_gen_if {</pre>
+      <pre>    sv.interface.signal @clk : i1</pre>
+      <pre>    sv.interface.signal @out : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>  }</pre>
+      <pre>  %0 = sv.constantStr &#34;SEQUENCE_FUNC_UVM&#34;</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 0e&gt;</pre>
+      <pre>    %c1_i64 = hw.constant 1 : i64</pre>
+      <pre>    %2 = llhd.constant_time &lt;0ns, 1d, 0e&gt;</pre>
+      <pre>    %3 = sim.fmt.literal &#34; != 8)&#34;</pre>
+      <pre>    %4 = sim.fmt.literal &#34;$changed(dif.out) failed :assert: (&#34;</pre>
+      <pre>    %5 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %6 = llhd.constant_time &lt;50000000fs, 0d, 0e&gt;</pre>
+      <pre>    %true = hw.constant true</pre>
+      <pre>    %7 = llhd.constant_time &lt;1fs, 0d, 0e&gt;</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %false = hw.constant false</pre>
+      <pre>    %8 = hw.aggregate_constant [false, false] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %__svtests_ca1_prev0 = llhd.sig %8 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %__svtests_ca1_prev0[&#34;value&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %__svtests_ca1_prev0[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %__svtests_ca1_has_past = llhd.sig %false : i1</pre>
+      <pre>    %cycle = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %11 = hw.struct_create (%false, %8) : !hw.struct&lt;clk: i1, out: !hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %dif = llhd.sig %11 {arcilator.sig_id = 1 : i32} : !hw.struct&lt;clk: i1, out: !hw.struct&lt;value: i1, unknown: i1&gt;&gt;</pre>
+      <pre>    %12 = llhd.sig.struct_extract %dif[&#34;clk&#34;] : &lt;!hw.struct&lt;clk: i1, out: !hw.struct&lt;value: i1, unknown: i1&gt;&gt;&gt;</pre>
+      <pre>    %13 = llhd.prb %12 : i1</pre>
+      <pre>    %14 = hw.struct_create (%13, %false) : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    %dut.out = hw.instance &#34;dut&#34; @clk_gen(clk: %14: !hw.struct&lt;value: i1, unknown: i1&gt;) -&gt; (out: !hw.struct&lt;value: i1, unknown: i1&gt;)</pre>
+      <pre>    %15 = llhd.sig.struct_extract %dif[&#34;out&#34;] : &lt;!hw.struct&lt;clk: i1, out: !hw.struct&lt;value: i1, unknown: i1&gt;&gt;&gt;</pre>
+      <pre>    llhd.drv %15, %dut.out after %5 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %16 = func.call @circt_sv_class_alloc(%c1_i32) : (i32) -&gt; i32</pre>
+      <pre>      %17 = sv.constantStr &#34;env&#34;</pre>
+      <pre>      func.call @circt_uvm_component_set_name(%16, %17) : (i32, !hw.string) -&gt; ()</pre>
+      <pre>      func.call @circt_uvm_component_register(%16, %c0_i32) : (i32, i32) -&gt; ()</pre>
+      <pre>      %18 = sv.constantStr &#34;clk_gen_if&#34;</pre>
+      <pre>      func.call @circt_uvm_resource_db_set_ptr(%17, %18, %c1_i64) : (!hw.string, !hw.string, i64) -&gt; ()</pre>
+      <pre>      llhd.drv %12, %false after %1 : i1</pre>
+      <pre>      %19 = sv.constantStr &#34;&#34;</pre>
+      <pre>      func.call @circt_uvm_run_test(%19) : (!hw.string) -&gt; ()</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb9</pre>
+      <pre>      llhd.wait delay %7, ^bb2</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      %16 = llhd.prb %15 : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %17 = llhd.prb %__svtests_ca1_has_past : i1</pre>
+      <pre>      %18 = llhd.prb %9 : i1</pre>
+      <pre>      %19 = llhd.prb %10 : i1</pre>
+      <pre>      %value = hw.struct_extract %16[&#34;value&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %16[&#34;unknown&#34;] : !hw.struct&lt;value: i1, unknown: i1&gt;</pre>
+      <pre>      %20 = comb.or %unknown, %19 : i1</pre>
+      <pre>      %21 = comb.xor %20, %true : i1</pre>
+      <pre>      %22 = comb.xor %value, %18 : i1</pre>
+      <pre>      %23 = comb.and %22, %21 : i1</pre>
+      <pre>      %24 = comb.xor %23, %true : i1</pre>
+      <pre>      %25 = comb.and %24, %20 : i1</pre>
+      <pre>      %26 = comb.and %24, %21 : i1</pre>
+      <pre>      %27 = comb.xor %25, %true : i1</pre>
+      <pre>      %28 = comb.xor %17, %true : i1</pre>
+      <pre>      %29 = comb.xor %26, %true : i1</pre>
+      <pre>      %30 = comb.and %27, %29 : i1</pre>
+      <pre>      %31 = comb.and %17, %27, %26 : i1</pre>
+      <pre>      %32 = comb.or %28, %30, %31 : i1</pre>
+      <pre>      %33 = comb.xor %31, %true : i1</pre>
+      <pre>      %34 = comb.and %33, %32 : i1</pre>
+      <pre>      cf.br ^bb3</pre>
+      <pre>    ^bb3:  // 2 preds: ^bb2, ^bb4</pre>
+      <pre>      %35 = llhd.prb %12 : i1</pre>
+      <pre>      llhd.wait (%35 : i1), ^bb4(%35 : i1)</pre>
+      <pre>    ^bb4(%36: i1):  // pred: ^bb3</pre>
+      <pre>      %37 = llhd.prb %12 : i1</pre>
+      <pre>      %38 = comb.xor bin %36, %true : i1</pre>
+      <pre>      %39 = comb.and bin %38, %37 : i1</pre>
+      <pre>      cf.cond_br %39, ^bb5, ^bb3</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      llhd.wait delay %7, ^bb6</pre>
+      <pre>    ^bb6:  // pred: ^bb5</pre>
+      <pre>      %40 = comb.and %34, %32 : i1</pre>
+      <pre>      cf.cond_br %40, ^bb8, ^bb7</pre>
+      <pre>    ^bb7:  // pred: ^bb6</pre>
+      <pre>      %41 = sv.constantStr &#34;SEQUENCE_FUNC_UVM&#34;</pre>
+      <pre>      %42 = llhd.prb %cycle : i32</pre>
+      <pre>      %43 = sim.fmt.int 10 0 0 %42 : i32</pre>
+      <pre>      %44 = sim.fmt.concat (%4, %43, %3)</pre>
+      <pre>      %45 = sim.fmt.to_string %44</pre>
+      <pre>      func.call @circt_uvm_report(%c0_i32, %c0_i32, %41, %45) : (i32, i32, !hw.string, !hw.string) -&gt; ()</pre>
+      <pre>      cf.br ^bb8</pre>
+      <pre>    ^bb8:  // 2 preds: ^bb6, ^bb7</pre>
+      <pre>      llhd.drv %9, %value after %5 : i1</pre>
+      <pre>      llhd.drv %10, %unknown after %5 : i1</pre>
+      <pre>      llhd.drv %__svtests_ca1_has_past, %true after %5 : i1</pre>
+      <pre>      llhd.wait delay %7, ^bb9</pre>
+      <pre>    ^bb9:  // pred: ^bb8</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 3 preds: ^bb0, ^bb2, ^bb3</pre>
+      <pre>      %16 = llhd.prb %12 : i1</pre>
+      <pre>      llhd.wait (%16 : i1), ^bb2(%16 : i1)</pre>
+      <pre>    ^bb2(%17: i1):  // pred: ^bb1</pre>
+      <pre>      %18 = llhd.prb %12 : i1</pre>
+      <pre>      %19 = comb.xor bin %17, %true : i1</pre>
+      <pre>      %20 = comb.and bin %19, %18 : i1</pre>
+      <pre>      cf.cond_br %20, ^bb3, ^bb1</pre>
+      <pre>    ^bb3:  // pred: ^bb2</pre>
+      <pre>      %21 = llhd.prb %cycle : i32</pre>
+      <pre>      %22 = comb.add %21, %c1_i32 : i32</pre>
+      <pre>      llhd.drv %cycle, %22 after %2 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb2</pre>
+      <pre>      llhd.wait delay %6, ^bb2</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      %16 = llhd.prb %12 : i1</pre>
+      <pre>      %17 = comb.xor %16, %true : i1</pre>
+      <pre>      llhd.drv %12, %17 after %1 : i1</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>  llhd.global_signal @&#34;uvm_pkg::uvm_top&#34; : i32</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

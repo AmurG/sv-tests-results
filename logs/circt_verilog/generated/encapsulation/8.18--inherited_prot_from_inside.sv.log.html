@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>inherited_prot_from_inside</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>encapsulation test</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>8.18</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../tests/generated/encapsulation/8.18--inherited_prot_from_inside.sv.html" target="file-frame">tests/generated/encapsulation/8.18--inherited_prot_from_inside.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:08</dd></div>
+        <div><dt>time elapsed</dt><dd>0.047s</dd></div>
+        <div><dt>ram usage</dt><dd>21504 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../tests/generated/encapsulation/8.18--inherited_prot_from_inside.sv.html" target="file-frame">tests/generated/encapsulation/8.18--inherited_prot_from_inside.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_class_set_i32(i32, i32, i32)</pre>
+      <pre>  func.func private @circt_sv_class_alloc(i32) -&gt; i32</pre>
+      <pre>  func.func private @circt_sv_class_get_i32(i32, i32) -&gt; i32</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %1 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c33_i32 = hw.constant 33 : i32</pre>
+      <pre>    %c6_i32 = hw.constant 6 : i32</pre>
+      <pre>    %c32_i32 = hw.constant 32 : i32</pre>
+      <pre>    %c5_i32 = hw.constant 5 : i32</pre>
+      <pre>    %c31_i32 = hw.constant 31 : i32</pre>
+      <pre>    %c4_i32 = hw.constant 4 : i32</pre>
+      <pre>    %c23_i32 = hw.constant 23 : i32</pre>
+      <pre>    %c3_i32 = hw.constant 3 : i32</pre>
+      <pre>    %c22_i32 = hw.constant 22 : i32</pre>
+      <pre>    %c21_i32 = hw.constant 21 : i32</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %b_obj = llhd.sig %c0_i32 : i32</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      %2 = func.call @circt_sv_class_alloc(%c2_i32) : (i32) -&gt; i32</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%2, %c1_i32, %c21_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%2, %c2_i32, %c22_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%2, %c3_i32, %c23_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%2, %c4_i32, %c31_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%2, %c5_i32, %c32_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      func.call @circt_sv_class_set_i32(%2, %c6_i32, %c33_i32) : (i32, i32, i32) -&gt; ()</pre>
+      <pre>      llhd.drv %b_obj, %2 after %1 : i32</pre>
+      <pre>      %3 = llhd.prb %b_obj : i32</pre>
+      <pre>      %4 = func.call @circt_sv_class_get_i32(%3, %c6_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %5 = sim.fmt.int 10 0 0 %4 : i32</pre>
+      <pre>      %6 = sim.fmt.concat (%5, %0)</pre>
+      <pre>      sim.proc.print %6</pre>
+      <pre>      %7 = llhd.prb %b_obj : i32</pre>
+      <pre>      %8 = func.call @circt_sv_class_get_i32(%7, %c2_i32) : (i32, i32) -&gt; i32</pre>
+      <pre>      %9 = sim.fmt.int 10 0 0 %8 : i32</pre>
+      <pre>      %10 = sim.fmt.concat (%9, %0)</pre>
+      <pre>      sim.proc.print %10</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

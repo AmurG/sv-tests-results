@@ -1,0 +1,1 @@
+config_loader_data['slang_circt'] = [["","delete",1,"logs/Slang/chapter-7/queues/delete.sv.log.html","tests/chapter-7/queues/delete.sv.html"]]

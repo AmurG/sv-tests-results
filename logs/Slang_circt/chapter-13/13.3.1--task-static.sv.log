@@ -1,0 +1,35 @@
+name: task_static
+description: static task test
+tags: 13.3.1
+type: simulation elaboration parsing
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10583710670471191
+user_time: 0.023298
+system_time: 0.10471699999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-13/13.3.1--task-static.sv:20:13: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+        int a = 0;
+            ^
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 1 warning

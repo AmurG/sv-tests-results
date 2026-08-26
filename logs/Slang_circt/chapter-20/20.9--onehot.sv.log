@@ -1,0 +1,41 @@
+name: onehot_function
+description: $onehot test
+tags: 20.9
+type: simulation elaboration parsing
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.073486328125
+user_time: 0.015801
+system_time: 0.074881
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:36
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-20/20.9--onehot.sv:20:22: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+        logic [31:0] val0 = 32'h00010000;
+                     ^~~~
+../../../tests/chapter-20/20.9--onehot.sv:21:22: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+        logic [31:0] val1 = 32'h00010100;
+                     ^~~~
+../../../tests/chapter-20/20.9--onehot.sv:22:22: warning: initializing a static variable in a procedural context requires an explicit 'static' keyword [-Wexplicit-static]
+        logic [31:0] val2 = 32'h00000000;
+                     ^~~~
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 3 warnings

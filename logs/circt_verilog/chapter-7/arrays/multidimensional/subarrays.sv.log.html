@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>subarrays</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test multidimensional subarrays assignments</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.4.5</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../tests/chapter-7/arrays/multidimensional/subarrays.sv.html" target="file-frame">tests/chapter-7/arrays/multidimensional/subarrays.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.045s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../tests/chapter-7/arrays/multidimensional/subarrays.sv.html" target="file-frame">tests/chapter-7/arrays/multidimensional/subarrays.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34; == 8))\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34; == 7) and (&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34; == 6) and (&#34;</pre>
+      <pre>    %c-2_i2 = hw.constant -2 : i2</pre>
+      <pre>    %3 = sim.fmt.literal &#34; == 5) and (&#34;</pre>
+      <pre>    %c-1_i2 = hw.constant -1 : i2</pre>
+      <pre>    %c1_i2 = hw.constant 1 : i2</pre>
+      <pre>    %4 = sim.fmt.literal &#34;:assert: ((&#34;</pre>
+      <pre>    %c0_i2 = hw.constant 0 : i2</pre>
+      <pre>    %5 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i128 = hw.constant 0 : i128</pre>
+      <pre>    %c8_i32 = hw.constant 8 : i32</pre>
+      <pre>    %c7_i32 = hw.constant 7 : i32</pre>
+      <pre>    %c6_i32 = hw.constant 6 : i32</pre>
+      <pre>    %c5_i32 = hw.constant 5 : i32</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %A.1.0.3 = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %A.1.0.2 = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %A.1.0.1 = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %A.1.0.0 = llhd.sig %c0_i32 : i32</pre>
+      <pre>    %6 = hw.bitcast %c0_i128 : (i128) -&gt; !hw.array&lt;4xi32&gt;</pre>
+      <pre>    %B.0.1 = llhd.sig %6 : !hw.array&lt;4xi32&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %A.1.0.3, %c5_i32 after %5 : i32</pre>
+      <pre>      llhd.drv %A.1.0.2, %c6_i32 after %5 : i32</pre>
+      <pre>      llhd.drv %A.1.0.1, %c7_i32 after %5 : i32</pre>
+      <pre>      llhd.drv %A.1.0.0, %c8_i32 after %5 : i32</pre>
+      <pre>      %7 = llhd.prb %A.1.0.0 : i32</pre>
+      <pre>      %8 = llhd.prb %A.1.0.1 : i32</pre>
+      <pre>      %9 = llhd.prb %A.1.0.2 : i32</pre>
+      <pre>      %10 = llhd.prb %A.1.0.3 : i32</pre>
+      <pre>      %11 = hw.array_create %10, %9, %8, %7 : i32</pre>
+      <pre>      llhd.drv %B.0.1, %11 after %5 : !hw.array&lt;4xi32&gt;</pre>
+      <pre>      %12 = llhd.prb %B.0.1 : !hw.array&lt;4xi32&gt;</pre>
+      <pre>      %13 = hw.array_get %12[%c-1_i2] : !hw.array&lt;4xi32&gt;, i2</pre>
+      <pre>      %14 = sim.fmt.int 10 0 0 %13 : i32</pre>
+      <pre>      %15 = hw.array_get %12[%c-2_i2] : !hw.array&lt;4xi32&gt;, i2</pre>
+      <pre>      %16 = sim.fmt.int 10 0 0 %15 : i32</pre>
+      <pre>      %17 = hw.array_get %12[%c1_i2] : !hw.array&lt;4xi32&gt;, i2</pre>
+      <pre>      %18 = sim.fmt.int 10 0 0 %17 : i32</pre>
+      <pre>      %19 = hw.array_get %12[%c0_i2] : !hw.array&lt;4xi32&gt;, i2</pre>
+      <pre>      %20 = sim.fmt.int 10 0 0 %19 : i32</pre>
+      <pre>      %21 = sim.fmt.concat (%4, %14, %3, %16, %2, %18, %1, %20, %0)</pre>
+      <pre>      sim.proc.print %21</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

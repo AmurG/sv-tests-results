@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>regress-sv_timeliteral_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/timeliteral.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/timeliteral.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:44:50</dd></div>
+        <div><dt>time elapsed</dt><dd>0.077s</dd></div>
+        <div><dt>ram usage</dt><dd>28672 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=simulation top=</pre>
+      <pre>[Arcilator] mode=simulation top=</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/timeliteral.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/timeliteral.v</a></pre>
+      <pre>+ echo [Arcilator] Arcilator backend stage</pre>
+      <pre>[Arcilator] Arcilator backend stage</pre>
+      <pre>+ echo [Arcilator] arc lower-to-llvm stage</pre>
+      <pre>[Arcilator] arc lower-to-llvm stage</pre>
+      <pre>+ <redacted-local-path> --observe-ports --observe-wires --observe-registers --observe-named-values --state-file <redacted-local-path> --emit-llvm <redacted-local-path> -o <redacted-local-path></pre>
+      <pre><redacted-local-path> error: &#39;llhd.prb&#39; op unsupported probe source for runtime lowering</pre>
+      <pre>  hw.module @top(in %__hier_ref$max.passed : !llhd.ref&lt;i1&gt;, in %__hier_ref$same.passed$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$same.passed$unknown : !llhd.ref&lt;i1&gt;) {</pre>
+      <pre>                                                                                                                 ^</pre>
+      <pre><redacted-local-path> note: see current operation: %0 = &#34;llhd.prb&#34;(%arg2) : (!llhd.ref&lt;i1&gt;) -&gt; i1</pre>
+      <pre><redacted-local-path> error: &#39;llhd.prb&#39; op unsupported probe source for runtime lowering</pre>
+      <pre>  hw.module @top(in %__hier_ref$max.passed : !llhd.ref&lt;i1&gt;, in %__hier_ref$same.passed$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$same.passed$unknown : !llhd.ref&lt;i1&gt;) {</pre>
+      <pre>                                                               ^</pre>
+      <pre><redacted-local-path> note: see current operation: %1 = &#34;llhd.prb&#34;(%arg1) : (!llhd.ref&lt;i1&gt;) -&gt; i1</pre>
+      <pre><redacted-local-path> error: &#39;llhd.prb&#39; op unsupported probe source for runtime lowering</pre>
+      <pre>  hw.module @top(in %__hier_ref$max.passed : !llhd.ref&lt;i1&gt;, in %__hier_ref$same.passed$value : !llhd.ref&lt;i1&gt;, in %__hier_ref$same.passed$unknown : !llhd.ref&lt;i1&gt;) {</pre>
+      <pre>                    ^</pre>
+      <pre><redacted-local-path> note: see current operation: %2 = &#34;llhd.prb&#34;(%arg0) : (!llhd.ref&lt;i1&gt;) -&gt; i1</pre>
+      <pre><redacted-local-path> error: &#39;llhd.prb&#39; op unsupported probe source for runtime lowering</pre>
+      <pre>      %120 = llhd.prb %__hier_ref$same.passed$unknown : i1</pre>
+      <pre>             ^</pre>
+      <pre><redacted-local-path> note: see current operation: %0 = &#34;llhd.prb&#34;(%arg2) : (!llhd.ref&lt;i1&gt;) -&gt; i1</pre>
+      <pre><redacted-local-path> error: &#39;llhd.prb&#39; op unsupported probe source for runtime lowering</pre>
+      <pre>      %119 = llhd.prb %__hier_ref$same.passed$value : i1</pre>
+      <pre>             ^</pre>
+      <pre><redacted-local-path> note: see current operation: %1 = &#34;llhd.prb&#34;(%arg1) : (!llhd.ref&lt;i1&gt;) -&gt; i1</pre>
+      <pre><redacted-local-path> error: &#39;llhd.prb&#39; op unsupported probe source for runtime lowering</pre>
+      <pre>      %112 = llhd.prb %__hier_ref$max.passed : i1</pre>
+      <pre>             ^</pre>
+      <pre><redacted-local-path> note: see current operation: %2 = &#34;llhd.prb&#34;(%arg0) : (!llhd.ref&lt;i1&gt;) -&gt; i1</pre>
+      <pre><redacted-local-path> error: failed to lower LLHD probes after arc conversion</pre>
+      <pre>module {</pre>
+      <pre>^</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

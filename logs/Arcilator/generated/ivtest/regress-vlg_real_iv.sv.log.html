@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>Arcilator</h1></a>
+        <h2>regress-vlg_real_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/real.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/real.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:44:30</dd></div>
+        <div><dt>time elapsed</dt><dd>0.046s</dd></div>
+        <div><dt>ram usage</dt><dd>29568 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre>sh scr.sh</pre>
+      <pre>+ printf %s\n [Arcilator] mode=simulation top=</pre>
+      <pre>[Arcilator] mode=simulation top=</pre>
+      <pre>+ echo [Arcilator] CIRCT frontend stage</pre>
+      <pre>[Arcilator] CIRCT frontend stage</pre>
+      <pre>+ <redacted-local-path> -o <redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> -D UVM_NO_DPI --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/real.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/real.v</a></pre>
+      <pre>+ echo [Arcilator] Arcilator backend stage</pre>
+      <pre>[Arcilator] Arcilator backend stage</pre>
+      <pre>+ echo [Arcilator] arc lower-to-llvm stage</pre>
+      <pre>[Arcilator] arc lower-to-llvm stage</pre>
+      <pre>+ <redacted-local-path> --observe-ports --observe-wires --observe-registers --observe-named-values --state-file <redacted-local-path> --emit-llvm <redacted-local-path> -o <redacted-local-path></pre>
+      <pre><redacted-local-path> error: &#39;arc.execute&#39; op cannot lower scheduled process with block argument of type &#39;!llhd.time&#39;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>    ^</pre>
+      <pre><redacted-local-path> note: see current operation: </pre>
+      <pre>&#34;arc.execute&#34;() ({</pre>
+      <pre>  %0 = &#34;hw.constant&#34;() &lt;{value = 0 : i32}&gt; : () -&gt; i32</pre>
+      <pre>^bb1:  // no predecessors</pre>
+      <pre>  %1 = &#34;arith.constant&#34;() &lt;{value = 4.000000e-01 : f64}&gt; : () -&gt; f64</pre>
+      <pre>  %2 = &#34;arith.constant&#34;() &lt;{value = 2.000000e+00 : f64}&gt; : () -&gt; f64</pre>
+      <pre>  %3 = &#34;arith.constant&#34;() &lt;{value = 3.000000e-01 : f64}&gt; : () -&gt; f64</pre>
+      <pre>  %4 = &#34;arith.constant&#34;() &lt;{value = 1.000000e+06 : f64}&gt; : () -&gt; f64</pre>
+      <pre>  %5 = &#34;sim.fmt.literal&#34;() &lt;{literal = &#34;a3 = &#34;}&gt; : () -&gt; !sim.fstring</pre>
+      <pre>  %6 = &#34;sim.fmt.literal&#34;() &lt;{literal = &#34;, a4 = &#34;}&gt; : () -&gt; !sim.fstring</pre>
+      <pre>  %7 = &#34;sim.fmt.literal&#34;() &lt;{literal = &#34;, x = &#34;}&gt; : () -&gt; !sim.fstring</pre>
+      <pre>  %8 = &#34;sim.fmt.literal&#34;() &lt;{literal = &#34;\0A&#34;}&gt; : () -&gt; !sim.fstring</pre>
+      <pre>  %9 = &#34;arith.constant&#34;() &lt;{value = 1.100100e+00 : f64}&gt; : () -&gt; f64</pre>
+      <pre>  %10 = &#34;sim.fmt.literal&#34;() &lt;{literal = &#34;FAILED\0A&#34;}&gt; : () -&gt; !sim.fstring</pre>
+      <pre>  %11 = &#34;arith.constant&#34;() &lt;{value = 1.099900e+00 : f64}&gt; : () -&gt; f64</pre>
+      <pre>  %12 = &#34;sim.fmt.literal&#34;() &lt;{literal = &#34;PASSED\0A&#34;}&gt; : () -&gt; !sim.fstring</pre>
+      <pre>  %13 = &#34;arith.mulf&#34;(%1, %2) &lt;{fastmath = #arith.fastmath&lt;none&gt;}&gt; : (f64, f64) -&gt; f64</pre>
+      <pre>  %14 = &#34;arith.addf&#34;(%13, %3) &lt;{fastmath = #arith.fastmath&lt;none&gt;}&gt; : (f64, f64) -&gt; f64</pre>
+      <pre>  %15 = &#34;arith.mulf&#34;(%14, %4) &lt;{fastmath = #arith.fastmath&lt;none&gt;}&gt; : (f64, f64) -&gt; f64</pre>
+      <pre>  %16 = &#34;arith.fptosi&#34;(%15) : (f64) -&gt; i64</pre>
+      <pre>  %17 = &#34;llhd.int_to_time&#34;(%16) : (i64) -&gt; !llhd.time</pre>
+      <pre>  %18 = &#34;sim.fmt.flt&#34;(%3) &lt;{fracDigits = 6 : i32, isLeftAligned = false}&gt; : (f64) -&gt; !sim.fstring</pre>
+      <pre>  %19 = &#34;sim.fmt.flt&#34;(%1) &lt;{fracDigits = 6 : i32, isLeftAligned = false}&gt; : (f64) -&gt; !sim.fstring</pre>
+      <pre>  %20 = &#34;llhd.time_to_int&#34;(%17) : (!llhd.time) -&gt; i64</pre>
+      <pre>  %21 = &#34;arith.uitofp&#34;(%20) : (i64) -&gt; f64</pre>
+      <pre>  %22 = &#34;arith.divf&#34;(%21, %4) &lt;{fastmath = #arith.fastmath&lt;none&gt;}&gt; : (f64, f64) -&gt; f64</pre>
+      <pre>  %23 = &#34;sim.fmt.flt&#34;(%22) &lt;{fracDigits = 6 : i32, isLeftAligned = false}&gt; : (f64) -&gt; !sim.fstring</pre>
+      <pre>  %24 = &#34;sim.fmt.concat&#34;(%5, %18, %6, %19, %7, %23, %8) : (!sim.fstring, !sim.fstring, !sim.fstring, !sim.fstring, !sim.fstring, !sim.fstring, !sim.fstring) -&gt; !sim.fstring</pre>
+      <pre>  &#34;sim.proc.print&#34;(%24) : (!sim.fstring) -&gt; ()</pre>
+      <pre>  %25 = &#34;llhd.time_to_int&#34;(%17) : (!llhd.time) -&gt; i64</pre>
+      <pre>  %26 = &#34;arith.uitofp&#34;(%25) : (i64) -&gt; f64</pre>
+      <pre>  %27 = &#34;arith.divf&#34;(%26, %4) &lt;{fastmath = #arith.fastmath&lt;none&gt;}&gt; : (f64, f64) -&gt; f64</pre>
+      <pre>  %28 = &#34;arith.cmpf&#34;(%27, %9) &lt;{fastmath = #arith.fastmath&lt;none&gt;, predicate = 2 : i64}&gt; : (f64, f64) -&gt; i1</pre>
+      <pre>  &#34;cf.cond_br&#34;(%28, %17, %3, %1, %17, %3, %1)[^bb2, ^bb3] &lt;{operandSegmentSizes = array&lt;i32: 1, 3, 3&gt;}&gt; : (i1, !llhd.time, f64, f64, !llhd.time, f64, f64) -&gt; ()</pre>
+      <pre>^bb2(%29: !llhd.time, %30: f64, %31: f64):  // pred: ^bb1</pre>
+      <pre>  &#34;sim.proc.print&#34;(%10) : (!sim.fstring) -&gt; ()</pre>
+      <pre>  &#34;sim.terminate&#34;() &lt;{success = true, verbose = false}&gt; : () -&gt; ()</pre>
+      <pre>  &#34;llhd.halt&#34;() : () -&gt; ()</pre>
+      <pre>^bb3(%32: !llhd.time, %33: f64, %34: f64):  // pred: ^bb1</pre>
+      <pre>  %35 = &#34;llhd.time_to_int&#34;(%32) : (!llhd.time) -&gt; i64</pre>
+      <pre>  %36 = &#34;arith.uitofp&#34;(%35) : (i64) -&gt; f64</pre>
+      <pre>  %37 = &#34;arith.divf&#34;(%36, %4) &lt;{fastmath = #arith.fastmath&lt;none&gt;}&gt; : (f64, f64) -&gt; f64</pre>
+      <pre>  %38 = &#34;arith.cmpf&#34;(%37, %11) &lt;{fastmath = #arith.fastmath&lt;none&gt;, predicate = 4 : i64}&gt; : (f64, f64) -&gt; i1</pre>
+      <pre>  &#34;cf.cond_br&#34;(%38, %32, %33, %34, %32, %33, %34)[^bb4, ^bb5] &lt;{operandSegmentSizes = array&lt;i32: 1, 3, 3&gt;}&gt; : (i1, !llhd.time, f64, f64, !llhd.time, f64, f64) -&gt; ()</pre>
+      <pre>^bb4(%39: !llhd.time, %40: f64, %41: f64):  // pred: ^bb3</pre>
+      <pre>  &#34;sim.proc.print&#34;(%10) : (!sim.fstring) -&gt; ()</pre>
+      <pre>  &#34;sim.terminate&#34;() &lt;{success = true, verbose = false}&gt; : () -&gt; ()</pre>
+      <pre>  &#34;llhd.halt&#34;() : () -&gt; ()</pre>
+      <pre>^bb5(%42: !llhd.time, %43: f64, %44: f64):  // pred: ^bb3</pre>
+      <pre>  &#34;sim.proc.print&#34;(%12) : (!sim.fstring) -&gt; ()</pre>
+      <pre>  &#34;llhd.halt&#34;() : () -&gt; ()</pre>
+      <pre>^bb6:  // no predecessors</pre>
+      <pre>  &#34;arc.output&#34;() : () -&gt; ()</pre>
+      <pre>}) {arcilator.proc_id = 0 : i32} : () -&gt; ()</pre>
+      <pre><redacted-local-path> error: &#39;llhd.process&#39; op failed to lower scheduled process</pre>
+      <pre>    llhd.process {</pre>
+      <pre>    ^</pre>
+      <pre><redacted-local-path> note: see current operation: </pre>
+      <pre>&#34;llhd.process&#34;() ({</pre>
+      <pre>}) {arcilator.needs_scheduler, arcilator.proc_id = 0 : i32} : () -&gt; ()</pre>
+      <pre><redacted-local-path> error: failed to pre-lower scheduled LLHD processes</pre>
+      <pre>module {</pre>
+      <pre>^</pre>
+      <pre>+ exit 1</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

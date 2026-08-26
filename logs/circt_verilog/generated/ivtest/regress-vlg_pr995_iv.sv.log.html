@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-passed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_pr995_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr995.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr995.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:15</dd></div>
+        <div><dt>time elapsed</dt><dd>0.056s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/ivltests/pr995.v.html" target="file-frame">third_party/tools/icarus/ivtest/ivltests/pr995.v</a></pre>
+      <pre>module {</pre>
+      <pre>  func.func private @circt_sv_random_seed_i32(i32) -&gt; i32</pre>
+      <pre>  hw.module @pr995() {</pre>
+      <pre>    %c2_i32 = hw.constant 2 : i32</pre>
+      <pre>    %c30_i32 = hw.constant 30 : i32</pre>
+      <pre>    %0 = sim.fmt.literal &#34; result=&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;seed=&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;\0A&#34;</pre>
+      <pre>    %3 = sim.fmt.literal &#34;Start sequence: seed=&#34;</pre>
+      <pre>    %c1_i32 = hw.constant 1 : i32</pre>
+      <pre>    %4 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i32 = hw.constant 0 : i32</pre>
+      <pre>    %c-1_i32 = hw.constant -1 : i32</pre>
+      <pre>    %5 = hw.aggregate_constant [0 : i32, -1 : i32] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %seed = llhd.sig %5 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %6 = llhd.sig.struct_extract %seed[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %7 = llhd.sig.struct_extract %seed[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %i = llhd.sig %5 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %8 = llhd.sig.struct_extract %i[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %9 = llhd.sig.struct_extract %i[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %result = llhd.sig %5 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>    %10 = llhd.sig.struct_extract %result[&#34;value&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    %11 = llhd.sig.struct_extract %result[&#34;unknown&#34;] : &lt;!hw.struct&lt;value: i32, unknown: i32&gt;&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %6, %c1_i32 after %4 : i32</pre>
+      <pre>      llhd.drv %7, %c0_i32 after %4 : i32</pre>
+      <pre>      %12 = llhd.prb %6 : i32</pre>
+      <pre>      %13 = llhd.prb %7 : i32</pre>
+      <pre>      %14 = sim.fmt.fvint 16 8 4 %12, %13 : i32</pre>
+      <pre>      %15 = sim.fmt.concat (%3, %14, %2)</pre>
+      <pre>      sim.proc.print %15</pre>
+      <pre>      %16 = llhd.prb %6 : i32</pre>
+      <pre>      %17 = llhd.prb %7 : i32</pre>
+      <pre>      %18 = comb.xor %17, %c-1_i32 : i32</pre>
+      <pre>      %19 = comb.and %16, %18 : i32</pre>
+      <pre>      %20 = func.call @circt_sv_random_seed_i32(%19) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %10, %20 after %4 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %4 : i32</pre>
+      <pre>      %21 = llhd.prb %6 : i32</pre>
+      <pre>      %22 = llhd.prb %7 : i32</pre>
+      <pre>      %23 = sim.fmt.fvint 16 8 4 %21, %22 : i32</pre>
+      <pre>      %24 = llhd.prb %10 : i32</pre>
+      <pre>      %25 = llhd.prb %11 : i32</pre>
+      <pre>      %26 = sim.fmt.fvint 16 8 4 %24, %25 : i32</pre>
+      <pre>      %27 = sim.fmt.concat (%1, %23, %0, %26, %2)</pre>
+      <pre>      sim.proc.print %27</pre>
+      <pre>      llhd.drv %8, %c0_i32 after %4 : i32</pre>
+      <pre>      llhd.drv %9, %c0_i32 after %4 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb1:  // 2 preds: ^bb0, ^bb2</pre>
+      <pre>      %28 = llhd.prb %8 : i32</pre>
+      <pre>      %29 = llhd.prb %9 : i32</pre>
+      <pre>      %30 = comb.icmp slt %28, %c30_i32 : i32</pre>
+      <pre>      %31 = comb.icmp eq %29, %c0_i32 : i32</pre>
+      <pre>      %32 = comb.and %31, %30 : i1</pre>
+      <pre>      cf.cond_br %32, ^bb2, ^bb3</pre>
+      <pre>    ^bb2:  // pred: ^bb1</pre>
+      <pre>      %33 = llhd.prb %6 : i32</pre>
+      <pre>      %34 = llhd.prb %7 : i32</pre>
+      <pre>      %35 = comb.xor %34, %c-1_i32 : i32</pre>
+      <pre>      %36 = comb.and %33, %35 : i32</pre>
+      <pre>      %37 = func.call @circt_sv_random_seed_i32(%36) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %10, %37 after %4 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %4 : i32</pre>
+      <pre>      %38 = llhd.prb %6 : i32</pre>
+      <pre>      %39 = llhd.prb %7 : i32</pre>
+      <pre>      %40 = sim.fmt.fvint 16 8 4 %38, %39 : i32</pre>
+      <pre>      %41 = llhd.prb %10 : i32</pre>
+      <pre>      %42 = llhd.prb %11 : i32</pre>
+      <pre>      %43 = sim.fmt.fvint 16 8 4 %41, %42 : i32</pre>
+      <pre>      %44 = sim.fmt.concat (%1, %40, %0, %43, %2)</pre>
+      <pre>      sim.proc.print %44</pre>
+      <pre>      %45 = llhd.prb %8 : i32</pre>
+      <pre>      %46 = llhd.prb %9 : i32</pre>
+      <pre>      %47 = comb.icmp ne %46, %c0_i32 : i32</pre>
+      <pre>      %48 = comb.add %45, %c1_i32 : i32</pre>
+      <pre>      %49 = hw.struct_create (%48, %c0_i32) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %50 = comb.mux %47, %5, %49 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %value = hw.struct_extract %50[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %unknown = hw.struct_extract %50[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      llhd.drv %8, %value after %4 : i32</pre>
+      <pre>      llhd.drv %9, %unknown after %4 : i32</pre>
+      <pre>      cf.br ^bb1</pre>
+      <pre>    ^bb3:  // pred: ^bb1</pre>
+      <pre>      llhd.drv %6, %c2_i32 after %4 : i32</pre>
+      <pre>      llhd.drv %7, %c0_i32 after %4 : i32</pre>
+      <pre>      %51 = llhd.prb %6 : i32</pre>
+      <pre>      %52 = llhd.prb %7 : i32</pre>
+      <pre>      %53 = sim.fmt.fvint 16 8 4 %51, %52 : i32</pre>
+      <pre>      %54 = sim.fmt.concat (%3, %53, %2)</pre>
+      <pre>      sim.proc.print %54</pre>
+      <pre>      %55 = llhd.prb %6 : i32</pre>
+      <pre>      %56 = llhd.prb %7 : i32</pre>
+      <pre>      %57 = comb.xor %56, %c-1_i32 : i32</pre>
+      <pre>      %58 = comb.and %55, %57 : i32</pre>
+      <pre>      %59 = func.call @circt_sv_random_seed_i32(%58) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %10, %59 after %4 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %4 : i32</pre>
+      <pre>      %60 = llhd.prb %6 : i32</pre>
+      <pre>      %61 = llhd.prb %7 : i32</pre>
+      <pre>      %62 = sim.fmt.fvint 16 8 4 %60, %61 : i32</pre>
+      <pre>      %63 = llhd.prb %10 : i32</pre>
+      <pre>      %64 = llhd.prb %11 : i32</pre>
+      <pre>      %65 = sim.fmt.fvint 16 8 4 %63, %64 : i32</pre>
+      <pre>      %66 = sim.fmt.concat (%1, %62, %0, %65, %2)</pre>
+      <pre>      sim.proc.print %66</pre>
+      <pre>      llhd.drv %8, %c0_i32 after %4 : i32</pre>
+      <pre>      llhd.drv %9, %c0_i32 after %4 : i32</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb4:  // 2 preds: ^bb3, ^bb5</pre>
+      <pre>      %67 = llhd.prb %8 : i32</pre>
+      <pre>      %68 = llhd.prb %9 : i32</pre>
+      <pre>      %69 = comb.icmp slt %67, %c30_i32 : i32</pre>
+      <pre>      %70 = comb.icmp eq %68, %c0_i32 : i32</pre>
+      <pre>      %71 = comb.and %70, %69 : i1</pre>
+      <pre>      cf.cond_br %71, ^bb5, ^bb6</pre>
+      <pre>    ^bb5:  // pred: ^bb4</pre>
+      <pre>      %72 = llhd.prb %6 : i32</pre>
+      <pre>      %73 = llhd.prb %7 : i32</pre>
+      <pre>      %74 = comb.xor %73, %c-1_i32 : i32</pre>
+      <pre>      %75 = comb.and %72, %74 : i32</pre>
+      <pre>      %76 = func.call @circt_sv_random_seed_i32(%75) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %10, %76 after %4 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %4 : i32</pre>
+      <pre>      %77 = llhd.prb %6 : i32</pre>
+      <pre>      %78 = llhd.prb %7 : i32</pre>
+      <pre>      %79 = sim.fmt.fvint 16 8 4 %77, %78 : i32</pre>
+      <pre>      %80 = llhd.prb %10 : i32</pre>
+      <pre>      %81 = llhd.prb %11 : i32</pre>
+      <pre>      %82 = sim.fmt.fvint 16 8 4 %80, %81 : i32</pre>
+      <pre>      %83 = sim.fmt.concat (%1, %79, %0, %82, %2)</pre>
+      <pre>      sim.proc.print %83</pre>
+      <pre>      %84 = llhd.prb %8 : i32</pre>
+      <pre>      %85 = llhd.prb %9 : i32</pre>
+      <pre>      %86 = comb.icmp ne %85, %c0_i32 : i32</pre>
+      <pre>      %87 = comb.add %84, %c1_i32 : i32</pre>
+      <pre>      %88 = hw.struct_create (%87, %c0_i32) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %89 = comb.mux %86, %5, %88 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %value_0 = hw.struct_extract %89[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %unknown_1 = hw.struct_extract %89[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      llhd.drv %8, %value_0 after %4 : i32</pre>
+      <pre>      llhd.drv %9, %unknown_1 after %4 : i32</pre>
+      <pre>      cf.br ^bb4</pre>
+      <pre>    ^bb6:  // pred: ^bb4</pre>
+      <pre>      llhd.drv %6, %c1_i32 after %4 : i32</pre>
+      <pre>      llhd.drv %7, %c0_i32 after %4 : i32</pre>
+      <pre>      %90 = llhd.prb %6 : i32</pre>
+      <pre>      %91 = llhd.prb %7 : i32</pre>
+      <pre>      %92 = sim.fmt.fvint 16 8 4 %90, %91 : i32</pre>
+      <pre>      %93 = sim.fmt.concat (%3, %92, %2)</pre>
+      <pre>      sim.proc.print %93</pre>
+      <pre>      %94 = llhd.prb %6 : i32</pre>
+      <pre>      %95 = llhd.prb %7 : i32</pre>
+      <pre>      %96 = comb.xor %95, %c-1_i32 : i32</pre>
+      <pre>      %97 = comb.and %94, %96 : i32</pre>
+      <pre>      %98 = func.call @circt_sv_random_seed_i32(%97) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %10, %98 after %4 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %4 : i32</pre>
+      <pre>      %99 = llhd.prb %6 : i32</pre>
+      <pre>      %100 = llhd.prb %7 : i32</pre>
+      <pre>      %101 = sim.fmt.fvint 16 8 4 %99, %100 : i32</pre>
+      <pre>      %102 = llhd.prb %10 : i32</pre>
+      <pre>      %103 = llhd.prb %11 : i32</pre>
+      <pre>      %104 = sim.fmt.fvint 16 8 4 %102, %103 : i32</pre>
+      <pre>      %105 = sim.fmt.concat (%1, %101, %0, %104, %2)</pre>
+      <pre>      sim.proc.print %105</pre>
+      <pre>      llhd.drv %8, %c0_i32 after %4 : i32</pre>
+      <pre>      llhd.drv %9, %c0_i32 after %4 : i32</pre>
+      <pre>      cf.br ^bb7</pre>
+      <pre>    ^bb7:  // 2 preds: ^bb6, ^bb8</pre>
+      <pre>      %106 = llhd.prb %8 : i32</pre>
+      <pre>      %107 = llhd.prb %9 : i32</pre>
+      <pre>      %108 = comb.icmp slt %106, %c30_i32 : i32</pre>
+      <pre>      %109 = comb.icmp eq %107, %c0_i32 : i32</pre>
+      <pre>      %110 = comb.and %109, %108 : i1</pre>
+      <pre>      cf.cond_br %110, ^bb8, ^bb9</pre>
+      <pre>    ^bb8:  // pred: ^bb7</pre>
+      <pre>      %111 = llhd.prb %6 : i32</pre>
+      <pre>      %112 = llhd.prb %7 : i32</pre>
+      <pre>      %113 = comb.xor %112, %c-1_i32 : i32</pre>
+      <pre>      %114 = comb.and %111, %113 : i32</pre>
+      <pre>      %115 = func.call @circt_sv_random_seed_i32(%114) : (i32) -&gt; i32</pre>
+      <pre>      llhd.drv %10, %115 after %4 : i32</pre>
+      <pre>      llhd.drv %11, %c0_i32 after %4 : i32</pre>
+      <pre>      %116 = llhd.prb %6 : i32</pre>
+      <pre>      %117 = llhd.prb %7 : i32</pre>
+      <pre>      %118 = sim.fmt.fvint 16 8 4 %116, %117 : i32</pre>
+      <pre>      %119 = llhd.prb %10 : i32</pre>
+      <pre>      %120 = llhd.prb %11 : i32</pre>
+      <pre>      %121 = sim.fmt.fvint 16 8 4 %119, %120 : i32</pre>
+      <pre>      %122 = sim.fmt.concat (%1, %118, %0, %121, %2)</pre>
+      <pre>      sim.proc.print %122</pre>
+      <pre>      %123 = llhd.prb %8 : i32</pre>
+      <pre>      %124 = llhd.prb %9 : i32</pre>
+      <pre>      %125 = comb.icmp ne %124, %c0_i32 : i32</pre>
+      <pre>      %126 = comb.add %123, %c1_i32 : i32</pre>
+      <pre>      %127 = hw.struct_create (%126, %c0_i32) : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %128 = comb.mux %125, %5, %127 : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %value_2 = hw.struct_extract %128[&#34;value&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      %unknown_3 = hw.struct_extract %128[&#34;unknown&#34;] : !hw.struct&lt;value: i32, unknown: i32&gt;</pre>
+      <pre>      llhd.drv %8, %value_2 after %4 : i32</pre>
+      <pre>      llhd.drv %9, %unknown_3 after %4 : i32</pre>
+      <pre>      cf.br ^bb7</pre>
+      <pre>    ^bb9:  // pred: ^bb7</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

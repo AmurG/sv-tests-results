@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>operations-on-unpacked-arrays-variable-slice-rw</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test packed arrays operations support (Variable slice)</dd></div>
+        <div><dt>rc</dt><dd>0 (means success: 1)</dd></div>
+        <div><dt>tags</dt><dd>7.4.3 7.4.6</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd><em></em></dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:06</dd></div>
+        <div><dt>time elapsed</dt><dd>0.046s</dd></div>
+        <div><dt>ram usage</dt><dd>24192 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false --top=top <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a></pre>
+      <pre>module {</pre>
+      <pre>  hw.module @top() {</pre>
+      <pre>    %0 = sim.fmt.literal &#34;&#39; == &#39;0111_0000&#39;)\0A&#34;</pre>
+      <pre>    %1 = sim.fmt.literal &#34;&#39; == &#39;0000_0000&#39;)\0A&#34;</pre>
+      <pre>    %2 = sim.fmt.literal &#34;&#39; == &#39;1111_1111&#39;)\0A&#34;</pre>
+      <pre>    %3 = hw.aggregate_constant [false, false, false, false, false, false, false, false] : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %4 = hw.aggregate_constant [true, true, true, true, true, true, true, true] : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %c0_i3 = hw.constant 0 : i3</pre>
+      <pre>    %c1_i3 = hw.constant 1 : i3</pre>
+      <pre>    %c2_i3 = hw.constant 2 : i3</pre>
+      <pre>    %c3_i3 = hw.constant 3 : i3</pre>
+      <pre>    %5 = sim.fmt.literal &#34;_&#34;</pre>
+      <pre>    %c-4_i3 = hw.constant -4 : i3</pre>
+      <pre>    %c-3_i3 = hw.constant -3 : i3</pre>
+      <pre>    %c-2_i3 = hw.constant -2 : i3</pre>
+      <pre>    %c-1_i3 = hw.constant -1 : i3</pre>
+      <pre>    %6 = sim.fmt.literal &#34;:assert: (&#39;&#34;</pre>
+      <pre>    %7 = llhd.constant_time &lt;0ns, 0d, 1e&gt;</pre>
+      <pre>    %c0_i8 = hw.constant 0 : i8</pre>
+      <pre>    %8 = hw.bitcast %c0_i8 : (i8) -&gt; !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %arr_a = llhd.sig %8 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    %arr_b = llhd.sig %8 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>    llhd.process {</pre>
+      <pre>      llhd.drv %arr_a, %4 after %7 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      llhd.drv %arr_b, %3 after %7 : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %9 = llhd.prb %arr_a : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %10 = hw.array_get %9[%c-1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %11 = sim.fmt.int 2 1 4 %10 : i1</pre>
+      <pre>      %12 = hw.array_get %9[%c-2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %13 = sim.fmt.int 2 1 4 %12 : i1</pre>
+      <pre>      %14 = hw.array_get %9[%c-3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %15 = sim.fmt.int 2 1 4 %14 : i1</pre>
+      <pre>      %16 = hw.array_get %9[%c-4_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %17 = sim.fmt.int 2 1 4 %16 : i1</pre>
+      <pre>      %18 = hw.array_get %9[%c3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %19 = sim.fmt.int 2 1 4 %18 : i1</pre>
+      <pre>      %20 = hw.array_get %9[%c2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %21 = sim.fmt.int 2 1 4 %20 : i1</pre>
+      <pre>      %22 = hw.array_get %9[%c1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %23 = sim.fmt.int 2 1 4 %22 : i1</pre>
+      <pre>      %24 = hw.array_get %9[%c0_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %25 = sim.fmt.int 2 1 4 %24 : i1</pre>
+      <pre>      %26 = sim.fmt.concat (%6, %11, %13, %15, %17, %5, %19, %21, %23, %25, %2)</pre>
+      <pre>      sim.proc.print %26</pre>
+      <pre>      %27 = llhd.prb %arr_b : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %28 = hw.array_get %27[%c-1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %29 = sim.fmt.int 2 1 4 %28 : i1</pre>
+      <pre>      %30 = hw.array_get %27[%c-2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %31 = sim.fmt.int 2 1 4 %30 : i1</pre>
+      <pre>      %32 = hw.array_get %27[%c-3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %33 = sim.fmt.int 2 1 4 %32 : i1</pre>
+      <pre>      %34 = hw.array_get %27[%c-4_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %35 = sim.fmt.int 2 1 4 %34 : i1</pre>
+      <pre>      %36 = hw.array_get %27[%c3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %37 = sim.fmt.int 2 1 4 %36 : i1</pre>
+      <pre>      %38 = hw.array_get %27[%c2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %39 = sim.fmt.int 2 1 4 %38 : i1</pre>
+      <pre>      %40 = hw.array_get %27[%c1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %41 = sim.fmt.int 2 1 4 %40 : i1</pre>
+      <pre>      %42 = hw.array_get %27[%c0_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %43 = sim.fmt.int 2 1 4 %42 : i1</pre>
+      <pre>      %44 = sim.fmt.concat (%6, %29, %31, %33, %35, %5, %37, %39, %41, %43, %1)</pre>
+      <pre>      sim.proc.print %44</pre>
+      <pre>      %45 = llhd.sig.array_slice %arr_b at %c-4_i3 : &lt;!hw.array&lt;8xi1&gt;&gt; -&gt; &lt;!hw.array&lt;3xi1&gt;&gt;</pre>
+      <pre>      %46 = llhd.prb %arr_a : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %47 = hw.array_slice %46[%c1_i3] : (!hw.array&lt;8xi1&gt;) -&gt; !hw.array&lt;3xi1&gt;</pre>
+      <pre>      llhd.drv %45, %47 after %7 : !hw.array&lt;3xi1&gt;</pre>
+      <pre>      %48 = llhd.prb %arr_b : !hw.array&lt;8xi1&gt;</pre>
+      <pre>      %49 = hw.array_get %48[%c-1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %50 = sim.fmt.int 2 1 4 %49 : i1</pre>
+      <pre>      %51 = hw.array_get %48[%c-2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %52 = sim.fmt.int 2 1 4 %51 : i1</pre>
+      <pre>      %53 = hw.array_get %48[%c-3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %54 = sim.fmt.int 2 1 4 %53 : i1</pre>
+      <pre>      %55 = hw.array_get %48[%c-4_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %56 = sim.fmt.int 2 1 4 %55 : i1</pre>
+      <pre>      %57 = hw.array_get %48[%c3_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %58 = sim.fmt.int 2 1 4 %57 : i1</pre>
+      <pre>      %59 = hw.array_get %48[%c2_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %60 = sim.fmt.int 2 1 4 %59 : i1</pre>
+      <pre>      %61 = hw.array_get %48[%c1_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %62 = sim.fmt.int 2 1 4 %61 : i1</pre>
+      <pre>      %63 = hw.array_get %48[%c0_i3] : !hw.array&lt;8xi1&gt;, i3</pre>
+      <pre>      %64 = sim.fmt.int 2 1 4 %63 : i1</pre>
+      <pre>      %65 = sim.fmt.concat (%6, %50, %52, %54, %56, %5, %58, %60, %62, %64, %0)</pre>
+      <pre>      sim.proc.print %65</pre>
+      <pre>      llhd.halt</pre>
+      <pre>    }</pre>
+      <pre>    hw.output</pre>
+      <pre>  }</pre>
+      <pre>}</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>

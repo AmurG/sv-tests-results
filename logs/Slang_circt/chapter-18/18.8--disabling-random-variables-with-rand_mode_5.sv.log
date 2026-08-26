@@ -1,0 +1,40 @@
+name: disabling-random-variables-with-rand_mode_5
+description: rand_mode() test
+should_fail_because: The rand_mode() method is built-in and cannot be overridden.
+tags: uvm-random uvm
+type: simulation elaboration
+timeout: 300
+unsynthesizable: 1
+files: <redacted-local-path> <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+top_module: 
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.6476426124572754
+user_time: 0.467952
+system_time: 0.305235
+ram_usage: 142464
+date_completed: 2026-07-02 03:18:33
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path> <redacted-local-path>
+../../../tests/chapter-18/18.8--disabling-random-variables-with-rand_mode_5.sv:25:18: error: cannot override built-in method 'rand_mode'
+    function int rand_mode();
+                 ^
+in file included from ../../../third_party/tests/uvm/src/uvm_pkg.sv:57:
+in file included from ../../../third_party/tests/uvm/src/base/uvm_base.svh:77:
+../../../third_party/tests/uvm/src/base/uvm_config_db_implementation.svh:375:26: warning: unknown character escape sequence '\.' [-Wunknown-escape-code]
+            separator = "\.(" ;
+                         ^
+Top level design units:
+    top
+
+
+Build failed: 1 error, 1 warning

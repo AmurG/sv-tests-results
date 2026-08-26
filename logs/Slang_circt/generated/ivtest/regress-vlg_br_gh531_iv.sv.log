@@ -1,0 +1,65 @@
+name: regress-vlg_br_gh531_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+top_module: 
+timeout: 30
+should_fail: 0
+should_fail_because: 
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 0
+tool_success: 1
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.1142723560333252
+user_time: 0.027323999999999998
+system_time: 0.10729999999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:46
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:5:8: warning: cannot refer to element 0 of 'logic[2:1]' [-Windex-oob]
+    f1[0] = i[0];
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:8:8: warning: cannot refer to element 3 of 'logic[2:1]' [-Windex-oob]
+    f1[3] = i[3];
+       ^
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:14:15: warning: cannot refer to element 0 of 'logic[2:1]' [-Windex-oob]
+    f2[0] = i[0];
+              ^
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:17:15: warning: cannot refer to element 3 of 'logic[2:1]' [-Windex-oob]
+    f2[3] = i[3];
+              ^
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:23:8: warning: cannot select range of [1:0] from 'logic[2:1]' [-Wrange-oob]
+    f3[1:0] = i[1:0];
+       ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:24:8: warning: cannot select range of [3:2] from 'logic[2:1]' [-Wrange-oob]
+    f3[3:2] = i[3:2];
+       ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:30:17: warning: cannot select range of [1:0] from 'logic[2:1]' [-Wrange-oob]
+    f4[1:0] = i[1:0];
+                ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:31:17: warning: cannot select range of [3:2] from 'logic[2:1]' [-Wrange-oob]
+    f4[3:2] = i[3:2];
+                ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:38:9: warning: cannot select range of [3:0] from 'reg[2:1]' [-Wrange-oob]
+    tmp[3:0]  = 4'b0000;
+        ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:39:9: warning: cannot select range of [3:0] from 'reg[2:1]' [-Wrange-oob]
+    tmp[3:0] |= i[3:0];
+        ^~~
+../../../third_party/tools/icarus/ivtest/ivltests/br_gh531.v:48:19: warning: cannot select range of [3:0] from 'logic[2:1]' [-Wrange-oob]
+    tmp[3:0] |= i[3:0];
+                  ^~~
+Top level design units:
+    top
+
+
+Build succeeded: 0 errors, 11 warnings

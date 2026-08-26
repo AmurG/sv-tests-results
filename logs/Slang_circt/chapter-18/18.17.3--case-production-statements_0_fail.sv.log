@@ -1,0 +1,36 @@
+name: case_production_statements_0_fail
+description: randcase case statement test
+should_fail_because: switch variable not declared
+type: elaboration
+tags: 18.17.3
+unsynthesizable: 1
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10880637168884277
+user_time: 0.025927
+system_time: 0.144986
+ram_usage: 12544
+date_completed: 2026-07-02 03:18:32
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-18/18.17.3--case-production-statements_0_fail.sv:22:20: error: use of undeclared identifier 'switch'
+      main : case (switch)
+                   ^~~~~~
+../../../tests/chapter-18/18.17.3--case-production-statements_0_fail.sv:23:15: error: use of undeclared identifier 'zero'
+          0 : zero;
+              ^~~~
+warning: no top-level modules found in design [-Wmissing-top]
+
+Build failed: 2 errors, 1 warning

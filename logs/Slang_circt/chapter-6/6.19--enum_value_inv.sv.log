@@ -1,0 +1,39 @@
+name: enum_value_inv
+description: Tests that tools diagnose invalid enum value assignments
+should_fail_because: If the integer value expression is a sized literal constant, it shall be an error if the size is different from the enum base type, even if the value is within the representable range.
+tags: 6.19
+runner_verilator_flags: -Werror-WIDTH
+type: simulation elaboration
+files: <redacted-local-path>
+incdirs: <redacted-local-path>
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+results_group: 
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.08257794380187988
+user_time: 0.01884
+system_time: 0.08000199999999999
+ram_usage: 11648
+date_completed: 2026-07-02 03:18:37
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../tests/chapter-6/6.19--enum_value_inv.sv:24:20: error: expression width of 4 does not exactly match declared enum type width of 3
+          Global = 4'h2,
+                   ^~~~
+../../../tests/chapter-6/6.19--enum_value_inv.sv:25:19: error: expression width of 4 does not exactly match declared enum type width of 3
+          Local = 4'h3
+                  ^~~~
+Top level design units:
+    top
+
+
+Build failed: 2 errors, 0 warnings

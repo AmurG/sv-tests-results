@@ -1,0 +1,35 @@
+name: regress-sv_enum_compatibility_fail6_iv
+description: Test imported from ivtest
+files: <redacted-local-path>
+incdirs: <redacted-local-path> <redacted-local-path>
+tags: ivtest
+results_group: imported
+type: simulation elaboration parsing
+should_fail_because: this test was imported from ivtest and is designed to fail
+top_module: 
+timeout: 30
+should_fail: 1
+defines: 
+compatible-runners: all
+unsynthesizable: 0
+simvariants: 
+mode: elaboration
+rc: 5
+tool_success: 0
+runner: slang
+runner_url: https://github.com/MikePopoloski/slang/tree/f357dec19224c828b7b5e97b79779980a075f70a
+time_elapsed: 0.10891556739807129
+user_time: 0.017374999999999998
+system_time: 0.12188199999999999
+ram_usage: 13440
+date_completed: 2026-07-02 03:18:42
+
+slang-driver --single-unit --timescale=1ns/1ns -I <redacted-local-path> -I <redacted-local-path> -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob <redacted-local-path>
+../../../third_party/tools/icarus/ivtest/ivltests/enum_compatibility_fail6.v:15:9: error: no implicit conversion from 'int' to 'E'; explicit conversion exists, are you missing a cast?
+    s.e = 10; // This should fail. Implicit cast to enum.
+    ~~~ ^ ~~
+Top level design units:
+    test
+
+
+Build failed: 1 error, 0 warnings

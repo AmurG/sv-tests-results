@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../log.css">
+  </head>
+  <body>
+    <header class="test-failed">
+        <a href="https://amurg.github.io/sv-tests-results/fork-eval/PERUSAL_20260702.md" target="_blank"><h1>circt-verilog</h1></a>
+        <h2>regress-vlg_fifo_iv</h2>
+    </header>
+    <section class="property-list">
+      <dl>
+        <div><dt>description</dt><dd>Test imported from ivtest</dd></div>
+        <div><dt>rc</dt><dd>1 (means success: 0)</dd></div>
+        <div><dt>tags</dt><dd>ivtest</dd></div>
+        <div>
+          <dt>incdirs</dt>
+          <dd><ul>
+            <li><redacted-local-path><li>
+            <li><redacted-local-path><li>
+          </ul></dd>
+        </div>
+        <div><dt>top module</dt><dd></dd></div>
+        <div><dt>type</dt><dd>simulation elaboration parsing</dd></div>
+        <div><dt>results group</dt><dd>imported</dd></div>
+        <div><dt>mode</dt><dd>simulation</dd></div>
+        <div>
+          <dt>files</dt>
+          <dd><ul>
+            <li><a href="../../../../third_party/tools/icarus/ivtest/contrib/fifo.v.html" target="file-frame">third_party/tools/icarus/ivtest/contrib/fifo.v</a><li>
+          </ul></dd>
+        </div>
+        <div><dt>defines</dt><dd><code></code></dd></div>
+        <div><dt>completed</dt><dd>2026-07-03 03:36:17</dd></div>
+        <div><dt>time elapsed</dt><dd>0.030s</dd></div>
+        <div><dt>ram usage</dt><dd>17024 KB</dd></div>
+      </dl>
+    </section>
+    <section class="log">
+      <pre></pre>
+      <pre><redacted-local-path> -I <redacted-local-path> -I <redacted-local-path> --timescale=1ns/1ns --single-unit -Wno-implicit-conv -Wno-error=index-oob -Wno-error=range-oob -Wno-error=range-width-oob --allow-class-stubs=false <a href="../../../../third_party/tools/icarus/ivtest/contrib/fifo.v.html" target="file-frame">third_party/tools/icarus/ivtest/contrib/fifo.v</a></pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:209:6: error: cannot materialize captured value at call site; non-symbol source: moore.variable</pre>
+      <pre>task write_word;</pre>
+      <pre>     ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:209:6: note: see current operation: </pre>
+      <pre>&#34;func.func&#34;() &lt;{function_type = (!moore.l16, !moore.ref&lt;l16&gt;, !moore.ref&lt;l1&gt;, !moore.ref&lt;l1&gt;) -&gt; (), sym_name = &#34;write_word&#34;, sym_visibility = &#34;private&#34;}&gt; ({</pre>
+      <pre>^bb0(%arg0: !moore.l16, %arg1: !moore.ref&lt;l16&gt;, %arg2: !moore.ref&lt;l1&gt;, %arg3: !moore.ref&lt;l1&gt;):</pre>
+      <pre>  &#34;moore.wait_event&#34;() ({</pre>
+      <pre>    %14 = &#34;moore.read&#34;(%arg3) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.detect_event&#34;(%14) &lt;{edge = 2 : i32}&gt; : (!moore.l1) -&gt; ()</pre>
+      <pre>  }) : () -&gt; ()</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%arg1, %arg0) : (!moore.ref&lt;l16&gt;, !moore.l16) -&gt; ()</pre>
+      <pre>  %0 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %1 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %2 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%arg2, %2) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>  &#34;moore.wait_event&#34;() ({</pre>
+      <pre>    %13 = &#34;moore.read&#34;(%arg3) : (!moore.ref&lt;l1&gt;) -&gt; !moore.l1</pre>
+      <pre>    &#34;moore.detect_event&#34;(%13) &lt;{edge = 1 : i32}&gt; : (!moore.l1) -&gt; ()</pre>
+      <pre>  }) : () -&gt; ()</pre>
+      <pre>  %3 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;5 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %4 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;5 : 64&gt;}&gt; : () -&gt; !moore.i64</pre>
+      <pre>  %5 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;5 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>  %6 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;1000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>  %7 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;5000000 : 64&gt;}&gt; : () -&gt; !moore.l64</pre>
+      <pre>  %8 = &#34;moore.constant_time&#34;() &lt;{value = 5000000 : ui64}&gt; : () -&gt; !moore.time</pre>
+      <pre>  &#34;moore.wait_delay&#34;(%8) : (!moore.time) -&gt; ()</pre>
+      <pre>  %9 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;hZZZZ : 16&gt;}&gt; : () -&gt; !moore.l16</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%arg1, %9) : (!moore.ref&lt;l16&gt;, !moore.l16) -&gt; ()</pre>
+      <pre>  %10 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.i32</pre>
+      <pre>  %11 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 32&gt;}&gt; : () -&gt; !moore.l32</pre>
+      <pre>  %12 = &#34;moore.constant&#34;() &lt;{value = #moore.fvint&lt;0 : 1&gt;}&gt; : () -&gt; !moore.l1</pre>
+      <pre>  &#34;moore.blocking_assign&#34;(%arg2, %12) : (!moore.ref&lt;l1&gt;, !moore.l1) -&gt; ()</pre>
+      <pre>  &#34;func.return&#34;() : () -&gt; ()</pre>
+      <pre>}) : () -&gt; ()</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:260:4: error: failed to convert expression statement</pre>
+      <pre>   write_word (16&#39;h1111);</pre>
+      <pre>   ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:260:4: note: expression kind: Call</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:260:4: note: call target: write_word</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:260:4: error: failed to convert statement ExpressionStatement</pre>
+      <pre>   write_word (16&#39;h1111);</pre>
+      <pre>   ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:239:4: error: failed to convert expression statement</pre>
+      <pre>   test1;</pre>
+      <pre>   ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:239:4: note: expression kind: Call</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:239:4: note: call target: test1</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:239:4: error: failed to convert statement ExpressionStatement</pre>
+      <pre>   test1;</pre>
+      <pre>   ^</pre>
+      <pre>../../../third_party/tools/icarus/ivtest/contrib/fifo.v:233:1: error: failed to convert module `test_fifo` member (ProceduralBlock)</pre>
+      <pre>initial begin</pre>
+      <pre>^</pre>
+      <pre>&lt;unknown&gt;:0: error: import failed without diagnostics</pre>
+      <pre></pre>
+    </section>
+  </body>
+</html>
